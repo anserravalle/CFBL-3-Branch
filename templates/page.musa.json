@@ -1,21 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "hero-brand",
       "settings": {
         "eyebrow": "MUSA",
-        "heading": "Writing on psychology, memory, identity, and being human",
+        "heading": "Writing on psychology, meaning making, identity, and being human",
         "subheading": "<p>Books and essays by Dr. Angela (Niki) Serravalle.</p>",
         "use_h1": true,
         "primary_label": "Read the Essays",
         "primary_link": "/blogs/essays",
         "secondary_label": "",
         "secondary_link": "",
-        "image": "",
+        "image": "shopify://shop_images/musa_inverse.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#C5A572",
+        "frame_color": "#c5a572",
         "show_shape": false,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 96,
         "padding_bottom": 96
@@ -33,8 +45,12 @@
         "heading": "Dr. Angela (Niki) Serravalle",
         "body": "<p>Dr. Niki Serravalle is a licensed clinical psychologist, author, and the founder of the Center for Balanced Living. Her clinical work centers on trauma-informed care, psychological evaluation, and the integration of nature-based and somatic approaches into therapeutic practice. She writes MUSA from her practice in Delaware, where the clinical and the personal continually meet. Her first book, The Stories We Told: The Dance of Codependency, is forthcoming.</p>",
         "text_align": "left",
+        "phone": "",
+        "email": "",
         "primary_label": "",
         "primary_link": "",
+        "secondary_label": "",
+        "secondary_link": "",
         "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 24
@@ -48,7 +64,7 @@
           "settings": {
             "quote": "<p>In Latin and Italian, Musa is the muse, the figure who animates writing, thinking, and creative work. To write in the company of a muse was to listen carefully and give shape to what mattered most. It was writing with intention. MUSA is where I house my writing, a space where the clinical, the literary, and the personal meet on the page.</p>",
             "author": "Dr. Angela (Niki) Serravalle",
-            "role": "Why I Write",
+            "role": "",
             "rating": 0
           }
         }
@@ -57,7 +73,7 @@
         "q"
       ],
       "settings": {
-        "eyebrow": "",
+        "eyebrow": "Why I Write",
         "heading": "",
         "subheading": "",
         "columns": 1,
@@ -90,6 +106,7 @@
         "eyebrow": "Stay in Touch",
         "heading": "New essays, now and then",
         "body": "<p>Subscribe to receive new writing as it is published. No noise, just the work.</p>",
+        "placeholder": "Email address",
         "button_label": "Subscribe",
         "success_text": "Thank you for subscribing.",
         "fine_print": "Your email is never shared.",
