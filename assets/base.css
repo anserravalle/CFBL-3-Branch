@@ -766,14 +766,32 @@ a.card:hover {
   flex-direction: column;
 }
 .testimonial__quote {
+  /* Reset the global blockquote styling (border/padding/italic) since this is a
+     <blockquote> element used as a styled pull quote. */
+  margin: 0 0 var(--space-24);
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  position: relative;
+  padding-top: var(--space-16);
   font-family: var(--font-heading);
   font-size: var(--fs-lg);
   color: var(--color-heading);
   line-height: 1.4;
-  margin-bottom: var(--space-24);
 }
-.testimonial__quote::before { content: "\201C"; }
-.testimonial__quote::after { content: "\201D"; }
+/* Decorative opening quote mark that does not disrupt text flow. */
+.testimonial__quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.35em;
+  left: -0.06em;
+  font-size: 2.4em;
+  line-height: 1;
+  color: color-mix(in srgb, var(--color-terracotta) 45%, transparent);
+  pointer-events: none;
+}
+.testimonial__quote > :first-child { margin-top: 0; }
+.testimonial__quote > :last-child { margin-bottom: 0; }
 .testimonial__meta { display: flex; align-items: center; gap: var(--space-12); margin-top: auto; }
 .testimonial__avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex: none; }
 .testimonial__name { font-weight: 600; font-size: var(--fs-sm); color: var(--color-text); }
