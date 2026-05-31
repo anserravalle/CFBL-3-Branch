@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -11,11 +20,14 @@
         "primary_link": "/pages/contact",
         "secondary_label": "Join Our Team",
         "secondary_link": "/pages/join-our-team",
-        "image": "",
+        "image": "shopify://shop_images/group.png",
+        "image_alt": "CFBL team",
+        "image_ratio": "1-1",
         "image_frame": true,
-        "frame_color": "#6F8F7A",
+        "frame_color": "#6f8f7a",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 88,
         "padding_bottom": 88
@@ -30,6 +42,10 @@
             "title": "Clinical Supervision",
             "heading": "Clinical Supervision",
             "content": "<p>Supervision offers a space to deepen clinical skill, strengthen case conceptualization, and support thoughtful professional growth, grounded in reflection and clinical integrity. Available for LPC associates and PsyD trainees working toward licensure.</p>",
+            "image": "shopify://shop_images/supervision_2.png",
+            "image_alt": "clinical supervision",
+            "video_url": "",
+            "page": "",
             "link": "/pages/clinical-supervision",
             "link_label": "Learn about supervision"
           }
@@ -40,6 +56,10 @@
             "title": "EMDR Consultation",
             "heading": "EMDR Consultation",
             "content": "<p>As a Certified EMDR Therapist and EMDRIA Approved Consultant, Dr. Serravalle provides consultation that strengthens EMDR case conceptualization and supports clinicians working toward EMDRIA certification.</p>",
+            "image": "shopify://shop_images/of-a-psychologist-supervisor-consulting-with-a-student-about-emdr-practice.png",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/emdr-consultation",
             "link_label": "Learn about EMDR consultation"
           }
@@ -50,6 +70,10 @@
             "title": "Join Our Team",
             "heading": "Join Our Team",
             "content": "<p>We are always interested in connecting with clinicians who share our commitment to trauma-informed, relationally grounded care. Learn about current openings and what it is like to work at Center for Balanced Living.</p>",
+            "image": "shopify://shop_images/34E13667-1EEB-471C-B1BB-0C8F94575923.jpg",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/join-our-team",
             "link_label": "See opportunities"
           }
@@ -65,27 +89,10 @@
         "heading": "Ways to Grow With Us",
         "subheading": "Select a path to read more, then open its full page for details.",
         "text_align": "left",
-        "image_ratio": "4-3",
+        "image_ratio": "16-9",
         "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
-      }
-    },
-    "cta": {
-      "type": "contact-cta",
-      "settings": {
-        "eyebrow": "For Clinicians",
-        "heading": "Let's talk about your growth",
-        "body": "<p>Reach out to discuss supervision, consultation, or joining our team.</p>",
-        "primary_label": "Start the Conversation",
-        "primary_link": "/pages/contact",
-        "secondary_label": "Join Our Team",
-        "secondary_link": "/pages/join-our-team",
-        "phone": "",
-        "disclaimer": "",
-        "bg_scheme": "navy",
-        "padding_top": 88,
-        "padding_bottom": 88
       }
     },
     "contact": {
@@ -96,6 +103,8 @@
         "use_h1": false,
         "intro": "<p>Reach out about clinical supervision, EMDR consultation, or joining our team. Tell us where you are in your training and what you are hoping to build.</p>",
         "phone": "(302) 608-3780",
+        "email": "",
+        "address": "",
         "hours": "By appointment",
         "phone_required": false,
         "reason_label": "What are you reaching out about?",
@@ -111,6 +120,24 @@
         "bg_scheme": "sand",
         "padding_top": 80,
         "padding_bottom": 80
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "disabled": true,
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Let's talk about your growth",
+        "body": "<p>Reach out to discuss supervision, consultation, or joining our team.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Join Our Team",
+        "secondary_link": "/pages/join-our-team",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
