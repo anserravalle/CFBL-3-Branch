@@ -291,6 +291,8 @@ strong, b { font-weight: 600; }
   --color-heading: var(--color-on-dark);
   --color-muted: color-mix(in srgb, var(--color-on-dark) 78%, transparent);
   --color-border: color-mix(in srgb, var(--color-on-dark) 22%, transparent);
+  /* Terracotta eyebrow fails contrast on navy; use sand so it stays visible. */
+  --color-eyebrow: var(--color-sand);
   color: var(--color-on-dark);
 }
 .bg--navy a { color: var(--color-sand); }
