@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -5,17 +14,20 @@
       "settings": {
         "eyebrow": "ADHD & Executive Functioning",
         "heading": "ADHD and Executive Functioning Evaluations",
-        "subheading": "<p>ADHD and executive functioning evaluations are designed to provide diagnostic clarity when there are questions about attention, impulsivity, hyperactivity, organization, working memory, emotional regulation, task completion, academic functioning, or daily life demands. At Center for Balanced Living, ADHD evaluations are completed with clinical care and attention to the whole person. The goal is not simply to determine whether someone meets criteria for ADHD, but to understand how attention, executive functioning, learning, emotional regulation, anxiety, sleep, trauma, and environmental demands may be interacting.</p>",
+        "subheading": "<p>ADHD and executive functioning evaluations are designed to provide diagnostic clarity when there are questions about attention, impulsivity, hyperactivity, organization, working memory, emotional regulation, task completion, academic functioning, or daily life demands. </p><p>At Center for Balanced Living, ADHD evaluations are completed with clinical care and attention to the whole person. The goal is not simply to determine whether someone meets criteria for ADHD, but to understand how attention, executive functioning, learning, emotional regulation, anxiety, sleep, trauma, and environmental demands may be interacting.</p>",
         "use_h1": true,
         "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "All Evaluations",
         "secondary_link": "/pages/psychological-evaluations",
-        "image": "",
+        "image": "shopify://shop_images/adhd_evaluation.png",
+        "image_alt": "adhd executive functioning evaluation",
+        "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "#9d654e",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 88,
         "padding_bottom": 88
@@ -29,7 +41,8 @@
           "settings": {
             "icon": "check",
             "title": "Individuals struggling with focus, organization, time management, or task completion",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b1": {
@@ -37,7 +50,8 @@
           "settings": {
             "icon": "check",
             "title": "Students experiencing academic difficulties despite real effort",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b2": {
@@ -45,7 +59,8 @@
           "settings": {
             "icon": "check",
             "title": "Adults seeking clarity about lifelong patterns of inattention or disorganization",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b3": {
@@ -53,7 +68,8 @@
           "settings": {
             "icon": "check",
             "title": "Families wanting to understand a child's attention and behavior",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         }
       },
@@ -81,29 +97,37 @@
         "p0": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Intake & History",
-            "text": "We begin with careful listening and a thorough history."
+            "text": "We begin with careful listening and a thorough history.",
+            "link": ""
           }
         },
         "p1": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Standardized Assessment",
-            "text": "Evidence-based measures tailored to the referral question."
+            "text": "Evidence-based measures tailored to the referral question.",
+            "link": ""
           }
         },
         "p2": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Feedback Session",
-            "text": "We review findings together, in plain language."
+            "text": "We review findings together, in plain language.",
+            "link": ""
           }
         },
         "p3": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Written Summary",
-            "text": "A clear report with recommendations and next steps."
+            "text": "A clear report with recommendations and next steps.",
+            "link": ""
           }
         }
       },
