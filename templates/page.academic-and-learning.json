@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -5,17 +14,20 @@
       "settings": {
         "eyebrow": "Academic & Learning",
         "heading": "Academic and Learning Evaluations",
-        "subheading": "<p>Academic and learning evaluations are designed to provide diagnostic clarity when there are questions about reading, writing, math, memory, processing speed, attention, executive functioning, language, or school performance. At Center for Balanced Living, learning evaluations are completed with care and attention to the whole student. The goal is not simply to identify whether a learning disorder is present, but to understand how cognitive, academic, emotional, behavioral, developmental, and environmental factors may be affecting school performance and daily learning demands.</p>",
+        "subheading": "<p>Academic and learning evaluations are designed to provide diagnostic clarity when there are questions about reading, writing, math, memory, processing speed, attention, executive functioning, language, or school performance. </p><p>At Center for Balanced Living, learning evaluations are completed with care and attention to the whole student. </p><p>The goal is not simply to identify whether a learning disorder is present, but to understand how cognitive, academic, emotional, behavioral, developmental, and environmental factors may be affecting school performance and daily learning demands.</p>",
         "use_h1": true,
         "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "All Evaluations",
         "secondary_link": "/pages/psychological-evaluations",
-        "image": "",
+        "image": "shopify://shop_images/not-game-puzzles-or-game-blocks-more-like-psychological-assessment.png",
+        "image_alt": "psychological evaluation",
+        "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "#2b5275",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 88,
         "padding_bottom": 88
@@ -24,12 +36,22 @@
     "benefits": {
       "type": "featured-services",
       "blocks": {
+        "item_PhfqUh": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Children who may be gifted, twice-exceptional, or not fully understood by traditional measures",
+            "text": "",
+            "link": ""
+          }
+        },
         "b0": {
           "type": "item",
           "settings": {
             "icon": "check",
             "title": "Students struggling with reading, writing, or math",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b1": {
@@ -37,7 +59,8 @@
           "settings": {
             "icon": "check",
             "title": "Children whose effort is not matching their results",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b2": {
@@ -45,7 +68,17 @@
           "settings": {
             "icon": "check",
             "title": "Families seeking accommodations or an IEP/504 plan",
-            "text": ""
+            "text": "",
+            "link": ""
+          }
+        },
+        "item_xCVfLh": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Students whose abilities may be masking learning, attention, or emotional challenges",
+            "text": "",
+            "link": ""
           }
         },
         "b3": {
@@ -53,14 +86,17 @@
           "settings": {
             "icon": "check",
             "title": "Anyone wanting to understand how they learn best",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         }
       },
       "block_order": [
+        "item_PhfqUh",
         "b0",
         "b1",
         "b2",
+        "item_xCVfLh",
         "b3"
       ],
       "settings": {
@@ -81,29 +117,37 @@
         "p0": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Intake & History",
-            "text": "We begin with careful listening and a thorough history."
+            "text": "We begin with careful listening and a thorough history.",
+            "link": ""
           }
         },
         "p1": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Standardized Assessment",
-            "text": "Evidence-based measures tailored to the referral question."
+            "text": "Evidence-based measures tailored to the referral question.",
+            "link": ""
           }
         },
         "p2": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Feedback Session",
-            "text": "We review findings together, in plain language."
+            "text": "We review findings together, in plain language.",
+            "link": ""
           }
         },
         "p3": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Written Summary",
-            "text": "A clear report with recommendations and next steps."
+            "text": "A clear report with recommendations and next steps.",
+            "link": ""
           }
         }
       },
