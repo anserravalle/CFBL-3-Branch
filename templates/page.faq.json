@@ -1,8 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header": {
       "type": "main-page",
       "settings": {
+        "show_title": true,
         "eyebrow": "Questions, Answered",
         "text_align": "center",
         "bg_scheme": "default",
@@ -93,6 +103,7 @@
         "heading": "Psychological Evaluations",
         "subheading": "",
         "cta_label": "",
+        "cta_link": "",
         "bg_scheme": "sand",
         "padding_top": 56,
         "padding_bottom": 56
@@ -165,7 +176,8 @@
         "heading": "Therapy",
         "subheading": "",
         "cta_label": "",
-        "bg_scheme": "default",
+        "cta_link": "",
+        "bg_scheme": "surface",
         "padding_top": 56,
         "padding_bottom": 56
       }
@@ -205,6 +217,7 @@
         "heading": "Clinical Supervision",
         "subheading": "",
         "cta_label": "",
+        "cta_link": "",
         "bg_scheme": "sand",
         "padding_top": 56,
         "padding_bottom": 56
@@ -245,6 +258,7 @@
         "heading": "EMDR Consultation",
         "subheading": "",
         "cta_label": "",
+        "cta_link": "",
         "bg_scheme": "default",
         "padding_top": 56,
         "padding_bottom": 56
@@ -285,6 +299,7 @@
         "heading": "Wellness Groups",
         "subheading": "",
         "cta_label": "",
+        "cta_link": "",
         "bg_scheme": "sand",
         "padding_top": 56,
         "padding_bottom": 56
