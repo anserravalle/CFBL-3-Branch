@@ -56,17 +56,21 @@ brand scope (Institute = Forest, MUSA = Oxblood).
 | credentials                | `page` (or `service`)   | CFBL        |
 | faq                        | `faq`                   | CFBL        |
 | contact                    | `contact`               | CFBL        |
-| individual-therapy         | `service`               | CFBL        |
+| individual-therapy         | `individual-therapy`    | CFBL        |
 | psychological-evaluations  | `evaluations`           | CFBL        |
-| wellness-groups            | `service`               | CFBL        |
+| wellness-groups            | `wellness-groups`       | CFBL        |
 | workshops                  | `workshops`             | CFBL        |
 | cfbl-institute             | `cfbl-institute`        | Institute   |
 | professional-trainings     | `professional-trainings`| Institute   |
 | courses-certification      | `service`               | Institute¹  |
-| clinical-supervision       | `service`               | Institute¹  |
-| emdr-consultation          | `service`               | Institute¹  |
+| clinical-supervision       | `clinical-supervision`  | Institute¹  |
+| emdr-consultation          | `emdr-consultation`     | Institute¹  |
 | musa                       | `musa`                  | MUSA        |
-| niki-serravalle (+ team)   | `service` or `page`     | CFBL        |
+| niki-serravalle (+ team)   | `team-member`           | CFBL        |
+
+> Team bios: assign **`team-member`** to each clinician's page (niki-serravalle,
+> amanda-foxwell, kirsten-lowe, brianna-patton, etc.). Edit each page's content
+> for the long bio; set the hero image/heading and specialties in the editor.
 
 ¹ These handles auto-resolve to the Institute scope via `brand-scope`. If you
 use a different handle, either assign an Institute template or set the page's

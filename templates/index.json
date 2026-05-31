@@ -266,18 +266,19 @@
     "resources": {
       "type": "blog-feature",
       "settings": {
-        "eyebrow": "Resources",
-        "heading": "Notes From Our Practice",
-        "subheading": "Grounded, research-informed writing on therapy, evaluation, and care.",
+        "eyebrow": "From the Blog",
+        "heading": "Make It Make Sense",
+        "subheading": "Grounded, research-informed writing on therapy, evaluation, and the cultural moment.",
         "post_limit": 3,
         "columns": "3",
         "show_excerpt": true,
         "show_tags": true,
-        "view_all_label": "View all resources",
+        "view_all_label": "Read the blog",
         "text_align": "left",
         "bg_scheme": "default",
         "padding_top": 80,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "blog": "make-it-make-sense"
       }
     },
     "faq": {
@@ -345,6 +346,22 @@
         "padding_top": 96,
         "padding_bottom": 96
       }
+    },
+    "newsletter_feature": {
+      "type": "featured-post",
+      "settings": {
+        "eyebrow": "Letters From the Practice",
+        "heading": "From Our Newsletter",
+        "heading_tag": "h2",
+        "blog": "newsletter",
+        "current_label": "Current issue",
+        "read_label": "Read this issue",
+        "archive_label": "Browse past letters",
+        "image_position": "right",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
@@ -357,6 +374,7 @@
     "philosophy",
     "local_seo",
     "resources",
+    "newsletter_feature",
     "faq",
     "contact_cta"
   ]

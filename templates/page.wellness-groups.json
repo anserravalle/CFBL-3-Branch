@@ -1,0 +1,210 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Wellness Groups",
+        "heading": "Healing happens in connection",
+        "subheading": "<p>Therapy and skills groups that combine clinical structure with the support of shared experience, for connection, regulation, and growth.</p>",
+        "use_h1": true,
+        "primary_label": "Request a Consultation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Services",
+        "secondary_link": "/pages/services",
+        "image": "",
+        "image_frame": true,
+        "frame_color": "#9D654E",
+        "show_shape": true,
+        "layout": "split",
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "focus": {
+      "type": "featured-services",
+      "blocks": {
+        "i0": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma Skills Group",
+            "text": "Regulation and coping skills in a supported setting."
+          }
+        },
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Stress",
+            "text": "Practical tools for managing anxiety."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Connection & Support",
+            "text": "Process groups for shared experience."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Mindfulness & Body",
+            "text": "Nervous-system-aware practices."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "compass",
+            "title": "Teens & Young Adults",
+            "text": "Developmentally tailored groups."
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "title": "Parenting Support",
+            "text": "Support for caregivers."
+          }
+        }
+      },
+      "block_order": [
+        "i0",
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "settings": {
+        "eyebrow": "Our Groups",
+        "heading": "Current & Upcoming Groups",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "p0": {
+          "type": "item",
+          "settings": {
+            "title": "Reach Out",
+            "text": "Call (302) 608-3780 or send a message."
+          }
+        },
+        "p1": {
+          "type": "item",
+          "settings": {
+            "title": "Talk With Us",
+            "text": "A first conversation to understand your goals and fit."
+          }
+        },
+        "p2": {
+          "type": "item",
+          "settings": {
+            "title": "Make a Plan",
+            "text": "Together we outline a thoughtful path forward."
+          }
+        },
+        "p3": {
+          "type": "item",
+          "settings": {
+            "title": "Begin",
+            "text": "We move at a pace that respects you."
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "A Clear First Step",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "f0": {
+          "type": "item",
+          "settings": {
+            "question": "How do groups work?",
+            "answer": "<p>Groups run for a set number of weeks with a consistent membership and a clinician facilitator.</p>"
+          }
+        },
+        "f1": {
+          "type": "item",
+          "settings": {
+            "question": "How do I join?",
+            "answer": "<p>Contact us and we'll discuss current openings and fit before you enroll.</p>"
+          }
+        },
+        "f2": {
+          "type": "item",
+          "settings": {
+            "question": "Is a screening required?",
+            "answer": "<p>A brief conversation helps ensure the group is a good fit for you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f0",
+        "f1",
+        "f2"
+      ],
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "heading": "Common Questions",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Take the Next Step",
+        "heading": "Join a group",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24–48 hours.</p>",
+        "primary_label": "Request a Consultation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "focus",
+    "process",
+    "faq",
+    "cta"
+  ]
+}
