@@ -767,17 +767,20 @@ a.card:hover {
   align-items: center;
   text-align: center;
 }
-/* A flowing serif quote mark that sits above the text and breathes. */
+/* A flowing serif quote mark that sits centered, just above the text. The
+   glyph renders near the top of its line box, so we use a fixed-height block
+   with the glyph nudged down to optically center it and close the gap. */
 .testimonial::before {
   content: "\201C";
+  display: block;
+  height: 0.5em;
   font-family: "Cormorant", Georgia, serif;
   font-style: italic;
-  font-weight: 500;
-  font-size: 4rem;
-  line-height: 0.5;
+  font-weight: 600;
+  font-size: 3.25rem;
+  line-height: 0.9;
   color: color-mix(in srgb, var(--color-terracotta) 55%, transparent);
-  margin-bottom: var(--space-16);
-  display: block;
+  margin-bottom: var(--space-12);
 }
 .testimonial__quote {
   /* Reset the global blockquote styling so this reads as a clean pull quote. */
