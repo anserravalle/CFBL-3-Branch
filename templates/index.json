@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -15,9 +24,10 @@
         "image_alt": "The Center for Balanced Living tree, formed from many colored leaves",
         "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "#9d654e",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 96,
         "padding_bottom": 96
@@ -29,7 +39,9 @@
         "clinical": {
           "type": "card",
           "settings": {
+            "logo_alt": "",
             "eyebrow": "For Clients",
+            "icon": "heart",
             "image": "shopify://shop_images/IMG_6162.jpg",
             "image_alt": "A calm, welcoming clinical space",
             "image_ratio": "4-3",
@@ -42,7 +54,9 @@
         "institute": {
           "type": "card",
           "settings": {
+            "logo_alt": "",
             "eyebrow": "For Professionals",
+            "icon": "heart",
             "image": "shopify://shop_images/B1BB9BB8-0F0E-4315-AD7B-C4C07154FDDF.jpg",
             "image_alt": "Clinicians in a training session",
             "image_ratio": "4-3",
@@ -55,12 +69,14 @@
         "musa": {
           "type": "card",
           "settings": {
+            "logo_alt": "",
             "eyebrow": "Reading & Essays",
-            "image": "",
+            "icon": "heart",
+            "image": "shopify://shop_images/IMG_2622.jpg",
             "image_alt": "",
             "image_ratio": "4-3",
             "title": "CFBL Writing (MUSA)",
-            "body": "<p>Books and essays on psychology, memory, identity, and being human.</p>",
+            "body": "<p>Books and essays on psychology, relationships, identity, and being human.</p>",
             "link_label": "Read MUSA",
             "link": "/pages/musa"
           }
@@ -74,31 +90,77 @@
       "settings": {
         "eyebrow": "One Practice, Three Paths",
         "heading": "Choose Your Path",
-        "subheading": "Center for Balanced Living brings together clinical care, professional education, and writing - each with its own focus.",
+        "subheading": "Center for Balanced Living brings together clinical care, professional education, and writing,  each with its own focus.",
         "text_align": "center",
         "columns": "3",
         "mobile_two_up": false,
-        "card_style": "overlay",
-        "bg_scheme": "default",
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "sand",
         "padding_top": 80,
         "padding_bottom": 80
       }
     },
+    "17802271632b8f6a37": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5679a62_HGV864": {
+          "type": "ai_gen_block_5679a62",
+          "settings": {
+            "image": "shopify://shop_images/homepage.png",
+            "image_border_radius": 0,
+            "show_overlay": true,
+            "heading": "Our Approach To Care",
+            "text": "Our approach to care is relational, clinically grounded, and informed by a holistic understanding of development. We integrate evidence-based practice with thoughtful conceptualization to support healing, diagnostic clarity, and sustainable growth.",
+            "text_alignment": "center",
+            "text_vertical_alignment": "center",
+            "text_horizontal_alignment": "center",
+            "text_max_width": 600,
+            "heading_size": 48,
+            "text_size": 16,
+            "text_spacing": 16,
+            "overlay_padding": 40,
+            "heading_color": "#2b5275",
+            "text_color": "#2b5275",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 1,
+            "show_frame": false,
+            "frame_offset": 20,
+            "frame_thickness": 10,
+            "frame_style": "double",
+            "frame_padding": 10,
+            "frame_border_radius": 0,
+            "frame_color": "#2b5275",
+            "frame_background": "#2b5275"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5679a62_HGV864"
+      ],
+      "settings": {}
+    },
     "approach": {
       "type": "text-image",
+      "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/homepage.png",
         "image_alt": "A calm, welcoming clinical space",
-        "image_ratio": "4-3",
+        "image_ratio": "16-9",
         "image_position": "left",
-        "mobile_stack": "image",
+        "mobile_stack": "text",
         "eyebrow": "Our Approach",
-        "heading": "Care that honors the complexity of the person, not just the symptom",
+        "heading": "Care that honors the complexity of the person, not just the symptoms",
         "body": "<p>Our approach to care is relational, clinically grounded, and informed by a holistic understanding of development. We integrate evidence-based practice with thoughtful conceptualization to support healing, diagnostic clarity, and sustainable growth.</p>",
-        "text_align": "left",
+        "text_align": "center",
+        "phone": "",
+        "email": "",
         "primary_label": "About Our Practice",
         "primary_link": "/pages/about-us",
-        "bg_scheme": "sand",
+        "secondary_label": "",
+        "secondary_link": "",
+        "bg_scheme": "surface",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -111,7 +173,8 @@
           "settings": {
             "icon": "shield",
             "title": "Trauma & PTSD",
-            "text": "Attuned, nervous-system-aware care for trauma and its lasting effects."
+            "text": "Attuned, nervous-system-aware care for trauma and its lasting effects.",
+            "link": ""
           }
         },
         "assessment": {
@@ -119,7 +182,8 @@
           "settings": {
             "icon": "compass",
             "title": "Assessment & Diagnosis",
-            "text": "ADHD, autism, and diagnostic clarification for children, teens, and adults."
+            "text": "ADHD, autism, and diagnostic clarification for children, teens, and adults.",
+            "link": ""
           }
         },
         "lifespan": {
@@ -127,7 +191,8 @@
           "settings": {
             "icon": "users",
             "title": "Children, Teens & Adults",
-            "text": "Developmentally informed support across the lifespan and for families."
+            "text": "Developmentally informed support across the lifespan and for families.",
+            "link": ""
           }
         },
         "mood": {
@@ -135,7 +200,8 @@
           "settings": {
             "icon": "heart",
             "title": "Anxiety, Mood & Life Change",
-            "text": "Evidence-based care for anxiety, depression, grief, and transitions."
+            "text": "Evidence-based care for anxiety, depression, grief, and transitions.",
+            "link": ""
           }
         }
       },
@@ -148,6 +214,7 @@
       "settings": {
         "eyebrow": "Areas of Focus",
         "heading": "Specialized Support for the Whole Person",
+        "subheading": "",
         "text_align": "center",
         "numbered": false,
         "columns": "4",
@@ -159,17 +226,21 @@
     "clinician": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/CBL_Mark_Color_2x_aff8397e-285d-4a37-b86a-79c4e2e8014b.png",
+        "image": "shopify://shop_images/Untitled_Email_Signature.jpg",
         "image_alt": "Dr. Angela (Niki) Serravalle",
-        "image_ratio": "1-1",
+        "image_ratio": "16-9",
         "image_position": "right",
-        "mobile_stack": "image",
+        "mobile_stack": "text",
         "eyebrow": "Meet the Practice",
-        "heading": "Led by an experienced, licensed psychologist",
-        "body": "<p>“My approach to care begins with the understanding that each person is unique. Treatment should be thoughtful, responsive, and grounded in both clinical depth and the needs of the individual.”</p><p><strong>Dr. Angela (Niki) Serravalle</strong>, PsyD, LPCMH, NCC</p>",
+        "heading": "Led by an experienced, licensed clinical psychologist",
+        "body": "<p>“My approach to care begins with the understanding that each person is unique. Treatment should be thoughtful, responsive, and grounded in both clinical depth and the needs of the individual.”</p><p><strong>Angela (Niki) Serravalle</strong>, PsyD, LPCMH, NCC</p>",
         "text_align": "left",
+        "phone": "",
+        "email": "",
         "primary_label": "Our Credentials",
         "primary_link": "/pages/credentials",
+        "secondary_label": "",
+        "secondary_link": "shopify://pages/team-introductions",
         "bg_scheme": "surface",
         "padding_top": 80,
         "padding_bottom": 80
@@ -181,29 +252,37 @@
         "reach": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Reach Out",
-            "text": "Call (302) 608-3780 or send a message. We respond within 24-48 hours."
+            "text": "Call (302) 608-3780 or send a message. We respond within 24-48 hours.",
+            "link": ""
           }
         },
         "consult": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Talk With Us",
-            "text": "A first conversation to understand your goals and determine fit."
+            "text": "A first conversation to understand your goals and determine fit.",
+            "link": ""
           }
         },
         "plan": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Make a Plan",
-            "text": "Together we outline a thoughtful, individualized path forward."
+            "text": "Together we outline a thoughtful, individualized path forward.",
+            "link": ""
           }
         },
         "begin": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Begin Care",
-            "text": "Therapy, evaluation, or consultation, at a pace that respects you."
+            "text": "Therapy, evaluation, or consultation, at a pace that respects you.",
+            "link": ""
           }
         }
       },
@@ -244,8 +323,9 @@
       "settings": {
         "eyebrow": "Our Philosophy of Care",
         "heading": "Healing happens in relationship",
+        "subheading": "",
         "columns": 1,
-        "bg_scheme": "navy",
+        "bg_scheme": "default",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -253,11 +333,15 @@
     "local_seo": {
       "type": "rich-text-brand",
       "settings": {
+        "eyebrow": "",
         "heading": "Serving the MOT Area and Delaware",
         "heading_tag": "h2",
         "content": "<p>Center for Balanced Living provides trauma-informed therapy and psychological evaluation to Middletown, Townsend, Odessa, and the greater MOT area, with clients across New Castle County and Delaware including Wilmington, Newark, and Dover.</p>",
         "text_align": "center",
         "content_width": 760,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
         "bg_scheme": "default",
         "padding_top": 56,
         "padding_bottom": 56
@@ -269,6 +353,7 @@
         "eyebrow": "From the Blog",
         "heading": "Make It Make Sense",
         "subheading": "Grounded, research-informed writing on therapy, evaluation, and the cultural moment.",
+        "blog": "make-it-make-sense",
         "post_limit": 3,
         "columns": "3",
         "show_excerpt": true,
@@ -277,8 +362,24 @@
         "text_align": "left",
         "bg_scheme": "default",
         "padding_top": 80,
-        "padding_bottom": 80,
-        "blog": "make-it-make-sense"
+        "padding_bottom": 80
+      }
+    },
+    "newsletter_feature": {
+      "type": "featured-post",
+      "settings": {
+        "eyebrow": "Letters From the Practice",
+        "heading": "From Our Newsletter",
+        "heading_tag": "h2",
+        "blog": "newsletter",
+        "article": "",
+        "current_label": "Current issue",
+        "read_label": "Read this issue",
+        "archive_label": "Browse past letters",
+        "image_position": "right",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "faq": {
@@ -346,27 +447,12 @@
         "padding_top": 96,
         "padding_bottom": 96
       }
-    },
-    "newsletter_feature": {
-      "type": "featured-post",
-      "settings": {
-        "eyebrow": "Letters From the Practice",
-        "heading": "From Our Newsletter",
-        "heading_tag": "h2",
-        "blog": "newsletter",
-        "current_label": "Current issue",
-        "read_label": "Read this issue",
-        "archive_label": "Browse past letters",
-        "image_position": "right",
-        "bg_scheme": "sand",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
     }
   },
   "order": [
     "hero",
     "pathways",
+    "17802271632b8f6a37",
     "approach",
     "specialties",
     "clinician",
