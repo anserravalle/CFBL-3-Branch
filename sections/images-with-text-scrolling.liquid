@@ -47,6 +47,19 @@
               {%- if block.settings.title != blank -%}<h3 class="scroller__title">{{ block.settings.title }}</h3>{%- endif -%}
               {%- if block.settings.role != blank -%}<p class="scroller__role">{{ block.settings.role }}</p>{%- endif -%}
               {%- if block.settings.content != blank -%}<div class="rte scroller__content">{{ block.settings.content }}</div>{%- endif -%}
+              {%- if block.settings.phone != blank or block.settings.email != blank -%}
+                <ul class="person-contact">
+                  {%- if block.settings.phone != blank -%}
+                    <li><a href="tel:{{ block.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{%- render 'icon', name: 'phone', size: 15 -%} {{ block.settings.phone }}</a></li>
+                  {%- endif -%}
+                  {%- if block.settings.email != blank -%}
+                    <li><a href="mailto:{{ block.settings.email }}">{%- render 'icon', name: 'mail', size: 15 -%} {{ block.settings.email }}</a></li>
+                  {%- endif -%}
+                </ul>
+              {%- endif -%}
+              {%- if block.settings.bio_link != blank -%}
+                <p class="scroller__cta">{%- render 'button', label: block.settings.bio_link_label | default: 'View full bio', href: block.settings.bio_link, style: 'tertiary', aria: 'View full bio: ' | append: block.settings.title -%}</p>
+              {%- endif -%}
             </article>
           {%- endfor -%}
         </div>
@@ -85,7 +98,11 @@
       { "type": "image_picker", "id": "image", "label": "Image" },
       { "type": "text", "id": "title", "label": "Name / title", "default": "Team member" },
       { "type": "text", "id": "role", "label": "Role / credentials" },
-      { "type": "richtext", "id": "content", "label": "Bio / content" }
+      { "type": "richtext", "id": "content", "label": "Bio / content" },
+      { "type": "text", "id": "phone", "label": "Phone" },
+      { "type": "text", "id": "email", "label": "Email" },
+      { "type": "url", "id": "bio_link", "label": "Full bio link" },
+      { "type": "text", "id": "bio_link_label", "label": "Full bio link label", "default": "View full bio" }
     ]}
   ],
   "max_blocks": 20,

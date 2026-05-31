@@ -1057,6 +1057,29 @@ textarea { min-height: 140px; resize: vertical; }
   letter-spacing: 0.04em; text-transform: uppercase;
   color: var(--color-terracotta); margin-bottom: var(--space-16);
 }
+.scroller__cta { margin-top: var(--space-16); }
+
+/* Per-person contact row (phone / email) — used in team scroller & bio pages */
+.person-contact {
+  list-style: none;
+  margin: var(--space-16) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-24);
+}
+.person-contact li { margin: 0; }
+.person-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.person-contact a:hover { color: var(--color-navy); }
+.person-contact .icon { color: var(--color-terracotta); flex: none; }
 
 @media (min-width: 750px) {
   .scroller {

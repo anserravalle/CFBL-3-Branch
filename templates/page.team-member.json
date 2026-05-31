@@ -18,7 +18,9 @@
         "secondary_link": "/pages/about-us",
         "bg_scheme": "default",
         "padding_top": 80,
-        "padding_bottom": 48
+        "padding_bottom": 48,
+        "phone": "",
+        "email": ""
       }
     },
     "bio_body": {
@@ -34,11 +36,36 @@
     "specialties": {
       "type": "featured-services",
       "blocks": {
-        "s1": { "type": "item", "settings": { "icon": "shield", "title": "Trauma & PTSD", "text": "Attuned, nervous-system-aware care." } },
-        "s2": { "type": "item", "settings": { "icon": "heart", "title": "Anxiety & Mood", "text": "Evidence-based support for anxiety and depression." } },
-        "s3": { "type": "item", "settings": { "icon": "users", "title": "Teens & Adults", "text": "Developmentally informed care." } }
+        "s1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Attuned, nervous-system-aware care."
+          }
+        },
+        "s2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Mood",
+            "text": "Evidence-based support for anxiety and depression."
+          }
+        },
+        "s3": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Teens & Adults",
+            "text": "Developmentally informed care."
+          }
+        }
       },
-      "block_order": ["s1", "s2", "s3"],
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
       "settings": {
         "eyebrow": "Areas of Focus",
         "heading": "Specialties",
@@ -69,5 +96,10 @@
       }
     }
   },
-  "order": ["bio_hero", "bio_body", "specialties", "cta"]
+  "order": [
+    "bio_hero",
+    "bio_body",
+    "specialties",
+    "cta"
+  ]
 }

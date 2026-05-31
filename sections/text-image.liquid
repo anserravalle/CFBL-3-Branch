@@ -28,6 +28,16 @@
         {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
         {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
         {%- if section.settings.body != blank -%}<div class="rte">{{ section.settings.body }}</div>{%- endif -%}
+        {%- if section.settings.phone != blank or section.settings.email != blank -%}
+          <ul class="person-contact"{% if section.settings.text_align == 'center' %} style="justify-content:center;"{% endif %}>
+            {%- if section.settings.phone != blank -%}
+              <li><a href="tel:{{ section.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{%- render 'icon', name: 'phone', size: 15 -%} {{ section.settings.phone }}</a></li>
+            {%- endif -%}
+            {%- if section.settings.email != blank -%}
+              <li><a href="mailto:{{ section.settings.email }}">{%- render 'icon', name: 'mail', size: 15 -%} {{ section.settings.email }}</a></li>
+            {%- endif -%}
+          </ul>
+        {%- endif -%}
         {%- if section.settings.primary_label != blank or section.settings.secondary_label != blank -%}
           <div class="btn-row {% if section.settings.text_align == 'center' %}is-center{% endif %}">
             {%- render 'button', label: section.settings.primary_label, href: section.settings.primary_link, style: 'primary' -%}
@@ -63,6 +73,9 @@
     { "type": "select", "id": "text_align", "label": "Text alignment", "options": [
       { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
     ], "default": "left" },
+    { "type": "header", "content": "Contact (optional — e.g. team bios)" },
+    { "type": "text", "id": "phone", "label": "Phone" },
+    { "type": "text", "id": "email", "label": "Email" },
     { "type": "header", "content": "Buttons" },
     { "type": "text", "id": "primary_label", "label": "Primary button label", "default": "Learn About Our Practice" },
     { "type": "url", "id": "primary_link", "label": "Primary button link" },
