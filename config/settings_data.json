@@ -24,9 +24,9 @@
     "business_name": "Center for Balanced Living",
     "schema_business_type": "Psychologist",
     "business_phone": "(302) 608-3780",
-    "business_city": "Middletown",
+    "business_city": "Townsend",
     "business_region": "DE",
-    "business_areas": "Middletown, Townsend, Odessa, MOT, New Castle County, Delaware, Wilmington, Newark, Dover",
+    "business_areas": "Townsend, Middletown, Odessa, MOT, New Castle County, Delaware, Wilmington, Newark, Dover",
     "social_instagram": "https://www.instagram.com/centerforbalancedlivingde",
     "social_facebook": "https://www.facebook.com/Dr.Serravalle",
     "social_linkedin": "https://www.linkedin.com/in/dr-niki-serravalle-87103376",
@@ -34,7 +34,9 @@
     "primary_cta_link": "/pages/contact",
     "secondary_cta_label": "Explore Services",
     "secondary_cta_link": "/pages/services",
-    "enable_animations": true
+    "enable_animations": true,
+    "business_street": "5879 Summit Bridge Road",
+    "business_zip": "19734"
   },
   "presets": {
     "Center for Balanced Living": {

@@ -84,10 +84,10 @@
       { "type": "text", "id": "business_phone", "label": "Phone" },
       { "type": "text", "id": "business_email", "label": "Email" },
       { "type": "text", "id": "business_street", "label": "Street address" },
-      { "type": "text", "id": "business_city", "label": "City", "default": "Middletown" },
+      { "type": "text", "id": "business_city", "label": "City", "default": "Townsend" },
       { "type": "text", "id": "business_region", "label": "State/Region", "default": "DE" },
       { "type": "text", "id": "business_zip", "label": "ZIP / postal code" },
-      { "type": "text", "id": "business_areas", "label": "Areas served (comma-separated)", "default": "Middletown, Townsend, Odessa, MOT, New Castle County, Delaware" }
+      { "type": "text", "id": "business_areas", "label": "Areas served (comma-separated)", "default": "Townsend, Middletown, Odessa, MOT, New Castle County, Delaware" }
     ]
   },
   {

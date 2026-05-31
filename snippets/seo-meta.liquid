@@ -56,7 +56,7 @@
   "address": {
     "@type": "PostalAddress",
     "streetAddress": {{ settings.business_street | json }},
-    "addressLocality": {{ settings.business_city | default: 'Middletown' | json }},
+    "addressLocality": {{ settings.business_city | default: 'Townsend' | json }},
     "addressRegion": {{ settings.business_region | default: 'DE' | json }},
     "postalCode": {{ settings.business_zip | json }},
     "addressCountry": "US"
