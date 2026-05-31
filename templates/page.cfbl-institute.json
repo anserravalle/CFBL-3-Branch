@@ -1,31 +1,59 @@
 {
   "sections": {
-    "intro": {
-      "type": "main-page",
+    "hero": {
+      "type": "hero-brand",
       "settings": {
-        "eyebrow": "CFBL Institute · Continuing Education",
-        "text_align": "left",
+        "eyebrow": "CFBL Institute",
+        "heading": "Continuing education for clinicians who carry a caseload",
+        "subheading": "<p>Clinically rigorous training in trauma-informed practice, psychological assessment, and applied clinical reasoning — taught by a practicing psychologist.</p>",
+        "use_h1": true,
+        "primary_label": "View Trainings",
+        "primary_link": "/pages/professional-trainings",
+        "secondary_label": "About the Trainer",
+        "secondary_link": "#about-the-trainer",
+        "image": "",
+        "image_frame": true,
+        "frame_color": "#6F8F7A",
+        "show_shape": true,
+        "layout": "split",
         "bg_scheme": "default",
-        "padding_top": 80,
-        "padding_bottom": 48
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "trainer": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/angela.jpg",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
+        "image_ratio": "4-3",
+        "image_position": "right",
+        "eyebrow": "About the Trainer",
+        "heading": "Taught by a practicing psychologist",
+        "body": "<p>The Institute teaches what gets practiced at Center for Balanced Living: trauma-informed care delivered with diagnostic precision. Trainings are led by Dr. Angela (Niki) Serravalle, PsyD, LPCMH, NCC, whose work integrates psychological assessment with somatic and nervous-system-informed approaches.</p>",
+        "text_align": "left",
+        "primary_label": "Full Bio",
+        "primary_link": "/pages/niki-serravalle",
+        "bg_scheme": "default",
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
     "offerings": {
       "type": "service-card-grid",
       "blocks": {
-        "assessment": { "type": "card", "settings": { "icon": "compass", "title": "Psychological Assessment", "body": "<p>Integrating assessment psychology with applied clinical reasoning.</p>", "link_label": "View trainings", "link": "/pages/professional-trainings" } },
-        "trauma": { "type": "card", "settings": { "icon": "shield", "title": "Trauma & Somatic Practice", "body": "<p>Nervous-system-informed intervention grounded in current evidence.</p>", "link_label": "View trainings", "link": "/pages/professional-trainings" } },
-        "supervision": { "type": "card", "settings": { "icon": "users", "title": "Supervision & Consultation", "body": "<p>Clinical supervision and EMDR consultation for licensed clinicians.</p>", "link_label": "Learn more", "link": "/pages/clinical-supervision" } },
-        "reasoning": { "type": "card", "settings": { "icon": "book", "title": "Applied Clinical Reasoning", "body": "<p>Case conceptualization and diagnostic precision in practice.</p>", "link_label": "View trainings", "link": "/pages/courses-certification" } }
+        "trainings": { "type": "card", "settings": { "icon": "award", "title": "Professional Trainings", "body": "<p>CE workshops and intensives for licensed clinicians.</p>", "link_label": "Learn more", "link": "/pages/professional-trainings" } },
+        "supervision": { "type": "card", "settings": { "icon": "users", "title": "Clinical Supervision", "body": "<p>Individual and group supervision toward licensure.</p>", "link_label": "Learn more", "link": "/pages/clinical-supervision" } },
+        "emdr": { "type": "card", "settings": { "icon": "compass", "title": "EMDR Consultation", "body": "<p>Consultation toward EMDR certification.</p>", "link_label": "Learn more", "link": "/pages/emdr-consultation" } }
       },
-      "block_order": ["assessment", "trauma", "supervision", "reasoning"],
+      "block_order": ["trainings", "supervision", "emdr"],
       "settings": {
-        "eyebrow": "Areas of Study",
-        "heading": "Training That Integrates Assessment, Trauma, and Clinical Reasoning",
-        "subheading": "Continuing education taught by a practicing psychologist who carries a clinical caseload.",
-        "text_align": "left",
-        "columns": "4",
-        "mobile_two_up": true,
+        "eyebrow": "Current Offerings",
+        "heading": "Professional Development",
+        "subheading": "",
+        "text_align": "center",
+        "columns": "3",
+        "card_style": "elevated",
         "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
@@ -34,11 +62,11 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
-        "ce": { "type": "item", "settings": { "question": "Are CE credits offered?", "answer": "<p>Continuing education credit details are listed with each individual training. Eligibility varies by license type and jurisdiction.</p>" } },
-        "audience": { "type": "item", "settings": { "question": "Who should attend?", "answer": "<p>Licensed mental health clinicians, graduate students in clinical and counseling psychology, and supervisees and consultees.</p>" } },
-        "register": { "type": "item", "settings": { "question": "How do I register?", "answer": "<p>Registration is available on each training's page. For supervision and consultation, apply directly through the contact form.</p>" } }
+        "ce": { "type": "item", "settings": { "question": "Is CE credit available?", "answer": "<p>CE credit details and eligibility are listed with each training and vary by license type and jurisdiction.</p>" } },
+        "who": { "type": "item", "settings": { "question": "Who are the trainings for?", "answer": "<p>Licensed mental health clinicians — psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, MDs — and graduate students in clinical and counseling psychology.</p>" } },
+        "format": { "type": "item", "settings": { "question": "What is the format?", "answer": "<p>Trainings are delivered live online unless otherwise noted, with materials provided to registrants.</p>" } }
       },
-      "block_order": ["ce", "audience", "register"],
+      "block_order": ["ce", "who", "format"],
       "settings": {
         "eyebrow": "Details",
         "heading": "Registration & CE Credit",
@@ -52,12 +80,12 @@
     "cta": {
       "type": "contact-cta",
       "settings": {
-        "eyebrow": "For Clinicians",
-        "heading": "Register or Apply for Consultation",
-        "body": "<p>Review upcoming trainings, or apply for clinical supervision and EMDR consultation.</p>",
+        "eyebrow": "For Professionals",
+        "heading": "Train with us",
+        "body": "<p>Join a cohort or inquire about supervision and consultation.</p>",
         "primary_label": "View Trainings",
         "primary_link": "/pages/professional-trainings",
-        "secondary_label": "Apply for Consultation",
+        "secondary_label": "Contact the Institute",
         "secondary_link": "/pages/contact",
         "phone": "",
         "disclaimer": "",
@@ -67,5 +95,5 @@
       }
     }
   },
-  "order": ["intro", "offerings", "faq", "cta"]
+  "order": ["hero", "trainer", "offerings", "faq", "cta"]
 }

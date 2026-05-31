@@ -1,0 +1,99 @@
+{%- comment -%}
+  Featured post — spotlights the current publication (a chosen article, or the
+  latest from a blog) as a large two-column feature, with a link to the full
+  archive. Reused for "Make It Make Sense" (latest essay) and the Newsletter
+  ("Letters from the Practice" — current issue + archive).
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign current_blog = blog
+  assign blog = blogs[section.settings.blog]
+  if blog == blank
+    assign blog = current_blog
+  endif
+  assign article = section.settings.article
+  if article == blank and blog != blank
+    assign article = blog.articles.first
+  endif
+  assign img_order = 'left'
+  if section.settings.image_position == 'right'
+    assign img_order = 'right'
+  endif
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.heading != blank or section.settings.eyebrow != blank -%}
+        <div class="section__header reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:var(--space-24);flex-wrap:wrap;max-width:none;">
+          <div>
+            {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+            {%- if section.settings.heading != blank -%}<{{ section.settings.heading_tag | default: 'h2' }} style="margin-bottom:0;">{{ section.settings.heading }}</{{ section.settings.heading_tag | default: 'h2' }}>{%- endif -%}
+          </div>
+          {%- if section.settings.archive_label != blank and blog != blank -%}
+            {%- render 'button', label: section.settings.archive_label, href: blog.url, style: 'tertiary' -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if article != blank -%}
+        <div class="text-image__grid text-image--image-{{ img_order }} reveal" style="align-items:center;">
+          <a href="{{ article.url }}" class="text-image__media" tabindex="-1" aria-hidden="true" style="display:block;">
+            {%- if article.image -%}
+              {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '4-3', sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}
+            {%- else -%}
+              <div class="media media--4-3" style="background:var(--color-bg-sand);"></div>
+            {%- endif -%}
+          </a>
+          <div class="text-image__content">
+            <p class="article-card__meta">
+              {%- if section.settings.current_label != blank -%}{{ section.settings.current_label }} &middot; {% endif -%}
+              <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%B %-d, %Y' }}</time>
+              {%- if article.tags.size > 0 %} &middot; {{ article.tags.first }}{% endif -%}
+            </p>
+            <h3 style="font-size:var(--fs-2xl);"><a href="{{ article.url }}" style="text-decoration:none;">{{ article.title }}</a></h3>
+            <div class="rte">{{ article.excerpt_or_content | strip_html | truncatewords: 40 }}</div>
+            <div class="btn-row">
+              {%- render 'button', label: section.settings.read_label | default: 'Read it', href: article.url, style: 'primary' -%}
+              {%- if blog != blank and section.settings.archive_label != blank -%}
+                {%- render 'button', label: section.settings.archive_label, href: blog.url, style: 'secondary' -%}
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- else -%}
+        <p class="section__subheading">Choose a blog (and optionally a specific post) in this section's settings to feature the current publication.</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured post",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Current Issue" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Letters From the Practice" },
+    { "type": "select", "id": "heading_tag", "label": "Heading level (SEO)", "options": [
+      { "value": "h1", "label": "H1 (page title)" }, { "value": "h2", "label": "H2" }
+    ], "default": "h2", "info": "Use H1 only if this is the page's main title and no other section is H1." },
+    { "type": "blog", "id": "blog", "label": "Blog", "info": "Leave empty inside a blog template to use the current blog." },
+    { "type": "article", "id": "article", "label": "Featured post", "info": "Leave empty to feature the most recent post automatically." },
+    { "type": "text", "id": "current_label", "label": "Badge before date", "default": "Latest" },
+    { "type": "text", "id": "read_label", "label": "Read button label", "default": "Read it" },
+    { "type": "text", "id": "archive_label", "label": "Archive link label", "default": "Browse the archive" },
+    { "type": "select", "id": "image_position", "label": "Image position", "options": [
+      { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }
+    ], "default": "left" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" },
+      { "value": "surface", "label": "White" }, { "value": "navy", "label": "Navy" }
+    ], "default": "surface" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "presets": [{ "name": "Featured post" }]
+}
+{% endschema %}

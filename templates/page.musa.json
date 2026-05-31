@@ -1,32 +1,83 @@
 {
   "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "MUSA",
+        "heading": "Writing on psychology, memory, identity, and being human",
+        "subheading": "<p>Books and essays by Dr. Angela (Niki) Serravalle.</p>",
+        "use_h1": true,
+        "primary_label": "Read the Essays",
+        "primary_link": "/blogs/essays",
+        "secondary_label": "",
+        "secondary_link": "",
+        "image": "",
+        "image_frame": true,
+        "frame_color": "#C5A572",
+        "show_shape": false,
+        "layout": "split",
+        "bg_scheme": "default",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
     "intro": {
       "type": "main-page",
       "settings": {
-        "eyebrow": "MUSA · Writing & Essays by Dr. Niki Serravalle",
+        "eyebrow": "",
         "text_align": "left",
         "bg_scheme": "default",
-        "padding_top": 88,
-        "padding_bottom": 56
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "why": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "Why I Write",
+        "heading": "The writing is its own credential",
+        "heading_tag": "h2",
+        "content": "<p>I write as a psychologist who reads — analytical, direct, and unafraid of the harder questions underneath the clinical ones. These essays are a place to think in public about memory, identity, culture, and what it means to be human, without the constraints of the consulting room.</p>",
+        "text_align": "center",
+        "content_width": 680,
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "essays": {
       "type": "blog-feature",
       "settings": {
-        "eyebrow": "",
-        "heading": "Recent Essays",
-        "subheading": "Longer-form writing on psychology, memory, identity, and being human.",
-        "post_limit": 6,
-        "columns": "2",
+        "eyebrow": "Recent Essays",
+        "heading": "From the Desk",
+        "subheading": "",
+        "blog": "essays",
+        "post_limit": 3,
+        "columns": "3",
         "show_excerpt": true,
         "show_tags": false,
         "view_all_label": "All essays",
         "text_align": "left",
         "bg_scheme": "default",
-        "padding_top": 32,
-        "padding_bottom": 96
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "subscribe": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in Touch",
+        "heading": "New essays, now and then",
+        "body": "<p>Subscribe to receive new writing as it is published. No noise — just the work.</p>",
+        "button_label": "Subscribe",
+        "success_text": "Thank you for subscribing.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 88
       }
     }
   },
-  "order": ["intro", "essays"]
+  "order": ["hero", "intro", "why", "essays", "subscribe"]
 }

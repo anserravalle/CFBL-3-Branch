@@ -3,11 +3,21 @@
 <div class="section bg--default" style="--section-pt: 72px; --section-pb: 80px;">
   <div class="page-width">
     <div class="section__inner">
-      <header class="section__header is-center reveal">
-        {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
-        <h1>{{ blog.title }}</h1>
-        {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
-      </header>
+      {%- if section.settings.show_title or section.settings.subheading != blank or current_tags -%}
+        <header class="section__header is-center reveal">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if current_tags -%}
+            {%- comment -%} Tag-filtered view (e.g. a "Make It Make Sense" theme) {%- endcomment -%}
+            {%- if section.settings.show_title -%}<h1>{{ blog.title }}: {{ current_tags | join: ', ' }}</h1>{%- else -%}<h2>{{ current_tags | join: ', ' }}</h2>{%- endif -%}
+            <p class="section__subheading"><a href="{{ blog.url }}">&larr; All of {{ blog.title }}</a></p>
+          {%- elsif section.settings.show_title -%}
+            <h1>{{ blog.title }}</h1>
+            {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+          {%- elsif section.settings.subheading != blank -%}
+            <p class="section__subheading">{{ section.settings.subheading }}</p>
+          {%- endif -%}
+        </header>
+      {%- endif -%}
 
       {%- if blog.articles.size > 0 -%}
         <div class="grid grid--3">
@@ -48,6 +58,7 @@
 {
   "name": "Blog posts",
   "settings": [
+    { "type": "checkbox", "id": "show_title", "label": "Show blog title (H1)", "default": true, "info": "Turn off when another section above provides the page H1." },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Resources" },
     { "type": "text", "id": "subheading", "label": "Subheading", "default": "Grounded, research-informed writing on therapy, evaluation, and care." },
     { "type": "range", "id": "per_page", "label": "Posts per page", "min": 6, "max": 24, "step": 3, "default": 9 }

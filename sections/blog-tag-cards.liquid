@@ -1,0 +1,130 @@
+{%- comment -%}
+  Blog tag cards — clickable "category markers" that link to a tag-filtered view
+  of a blog (e.g. The Field, On Therapy, On Diagnostics, The Cultural Moment,
+  Being Human). Each card links to {blog.url}/tagged/{tag-handle}, which Shopify
+  renders as that blog filtered to the tag. Card style + colors are editable.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign cols = section.settings.columns
+  assign card_style = section.settings.card_style | default: 'framed'
+  assign current_blog = blog
+  assign blog = blogs[section.settings.blog]
+  if blog == blank
+    assign blog = current_blog
+  endif
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.heading != blank or section.settings.eyebrow != blank -%}
+        <div class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="grid grid--{{ cols }} mobile-2 cards--{{ card_style }}">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign tag_handle = block.settings.tag | handle
+            if block.settings.link != blank
+              assign href = block.settings.link
+            elsif blog != blank and block.settings.tag != blank
+              assign href = blog.url | append: '/tagged/' | append: tag_handle
+            else
+              assign href = '#'
+            endif
+          -%}
+          {%- if card_style == 'overlay' -%}
+            <a href="{{ href }}" class="card card--overlay is-linked reveal" aria-label="{{ block.settings.title | escape }}" {{ block.shopify_attributes }}>
+              <div class="card__overlay-media">
+                {%- if block.settings.image != blank -%}
+                  {%- render 'responsive-image', image: block.settings.image, alt: block.settings.title, ratio: '4-3', sizes: '(min-width:990px) 360px, 50vw', widths: '300,450,600,800' -%}
+                {%- else -%}
+                  <div class="media media--4-3" style="background:var(--color-navy);width:100%;height:100%;"></div>
+                {%- endif -%}
+              </div>
+              <div class="card__overlay-content">
+                <h3 class="card__title">{{ block.settings.title }}</h3>
+                {%- if block.settings.description != blank -%}<div class="card__body rte">{{ block.settings.description }}</div>{%- endif -%}
+                <span class="card__overlay-cta">Read this series <span aria-hidden="true">&rarr;</span></span>
+              </div>
+            </a>
+          {%- else -%}
+            <a href="{{ href }}" class="card is-linked reveal" style="text-decoration:none;" {{ block.shopify_attributes }}>
+              {%- if block.settings.image != blank -%}
+                <div class="card__media">{%- render 'responsive-image', image: block.settings.image, alt: block.settings.title, ratio: '3-2', sizes: '(min-width:990px) 340px, 50vw', widths: '300,450,600' -%}</div>
+              {%- elsif block.settings.icon != blank -%}
+                <span class="card__icon">{%- render 'icon', name: block.settings.icon, size: 24 -%}</span>
+              {%- endif -%}
+              <h3 class="card__title">{{ block.settings.title }}</h3>
+              {%- if block.settings.description != blank -%}<div class="card__body rte">{{ block.settings.description }}</div>{%- endif -%}
+              <span class="card__cta btn btn--tertiary" style="padding-inline:0;">Read this series <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Blog tag cards",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Explore by Theme" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Make It Make Sense" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Choose a thread to follow. Each card opens every piece tagged with that theme." },
+    { "type": "blog", "id": "blog", "label": "Blog to filter", "info": "Cards link to this blog filtered by each card's tag." },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "center" },
+    { "type": "select", "id": "columns", "label": "Columns (desktop)", "options": [
+      { "value": "2", "label": "2" }, { "value": "3", "label": "3" }, { "value": "4", "label": "4" }, { "value": "5", "label": "5" }
+    ], "default": "3" },
+    { "type": "select", "id": "card_style", "label": "Card style", "options": [
+      { "value": "framed", "label": "Framed (accent bar)" },
+      { "value": "elevated", "label": "Elevated" },
+      { "value": "soft", "label": "Soft" },
+      { "value": "outline", "label": "Outlined" },
+      { "value": "overlay", "label": "Image overlay" }
+    ], "default": "framed" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "surface", "label": "White" }
+    ], "default": "sand" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    { "type": "tag", "name": "Theme / tag", "settings": [
+      { "type": "text", "id": "title", "label": "Card title", "default": "On Therapy" },
+      { "type": "text", "id": "tag", "label": "Blog tag", "info": "Must match the tag used on posts (e.g. On Therapy).", "default": "On Therapy" },
+      { "type": "richtext", "id": "description", "label": "Description" },
+      { "type": "image_picker", "id": "image", "label": "Image (optional)" },
+      { "type": "select", "id": "icon", "label": "Icon (if no image)", "options": [
+        { "value": "compass", "label": "Compass" }, { "value": "heart", "label": "Heart" },
+        { "value": "book", "label": "Book" }, { "value": "leaf", "label": "Leaf" },
+        { "value": "users", "label": "Users" }, { "value": "star", "label": "Star" },
+        { "value": "shield", "label": "Shield" }
+      ], "default": "book" },
+      { "type": "url", "id": "link", "label": "Override link (optional)", "info": "Leave blank to auto-link to the tag-filtered blog." }
+    ]}
+  ],
+  "max_blocks": 8,
+  "presets": [{
+    "name": "Blog tag cards",
+    "blocks": [
+      { "type": "tag", "settings": { "title": "The Field", "tag": "The Field", "icon": "compass" } },
+      { "type": "tag", "settings": { "title": "On Therapy", "tag": "On Therapy", "icon": "heart" } },
+      { "type": "tag", "settings": { "title": "On Diagnostics", "tag": "On Diagnostics", "icon": "shield" } },
+      { "type": "tag", "settings": { "title": "The Cultural Moment", "tag": "The Cultural Moment", "icon": "star" } },
+      { "type": "tag", "settings": { "title": "Being Human", "tag": "Being Human", "icon": "leaf" } }
+    ]
+  }]
+}
+{% endschema %}

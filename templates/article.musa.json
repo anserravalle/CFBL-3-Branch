@@ -3,7 +3,22 @@
     "main": {
       "type": "main-article",
       "settings": { "show_image": true, "show_author": true, "show_tags": false }
+    },
+    "subscribe": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "MUSA",
+        "heading": "Read more, now and then",
+        "body": "<p>Subscribe to receive new essays as they are published.</p>",
+        "button_label": "Subscribe",
+        "success_text": "Thank you for subscribing.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
     }
   },
-  "order": ["main"]
+  "order": ["main", "subscribe"]
 }
