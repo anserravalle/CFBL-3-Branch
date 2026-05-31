@@ -46,6 +46,7 @@
             "title": "EMDR Basic Training",
             "heading": "12-Week EMDR Basic Training",
             "content": "<p>A 12-week EMDR Basic Training for licensed clinicians and advanced graduate students integrating EMDR into clinical practice. The curriculum follows the standardized EMDRIA model and covers the eight phases of EMDR, the adaptive information processing framework, and the clinical skills required to safely and effectively treat trauma. This program is currently undergoing EMDRIA review; registration opens to waitlist members first once approval is granted.</p>",
+            "image": "shopify://shop_images/EMDR_Basic_training.png",
             "image_alt": "",
             "video_url": "",
             "page": "",
@@ -56,9 +57,10 @@
         "eco": {
           "type": "tab",
           "settings": {
-            "title": "Nature-Based Clinical Specialist",
+            "title": "Nature-Based Foundations",
             "heading": "Foundations of Nature-Based Clinical Practice",
             "content": "<p>A 12-week course exploring the integration of nature-based interventions into trauma-informed clinical practice, built around ecological theory, nervous system science, and applied psychological work. For licensed clinicians, advanced graduate students, and helping professionals. Foundations serves as the entry course for the forthcoming CFBL Institute certification in nature-based clinical practice.</p>",
+            "image": "shopify://shop_images/nature-based-clinical-specialist-course.png",
             "image_alt": "",
             "video_url": "",
             "page": "",
