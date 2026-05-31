@@ -152,3 +152,38 @@ Already correct: NPI 1962179689 + Psychologist taxonomy; phone (302) 608-3780.
   correct stale addresses quietly.
 - Don't build thin, hidden city pages. Real reviews + consistent NAP + Google
   Business Profile do far more.
+
+---
+
+## CFBL Institute & MUSA visibility (do NOT make separate Google profiles yet)
+
+Keep ONE Google Business Profile = the clinical practice, primary category
+**Psychologist**. Do not add training/education categories to it (that dilutes
+your "psychologist near me" ranking), and do not create a second profile for the
+Institute or MUSA while they share the practice address - same-address duplicates
+can be flagged as spam and hurt both.
+
+Why a separate GBP would not help the Institute: Google Business Profiles win
+*local "near me"* searches. Clinicians looking for CE/EMDR/supervision search by
+**topic**, not by map - they find you through professional directories and your
+website, not a local pin.
+
+### Where Institute growth actually comes from
+- **EMDRIA "Find a Consultant" directory** - list yourself as an Approved
+  Consultant. This is the #1 source for EMDR consultation inquiries.
+- **CE listing platforms / professional networks** for trainings and courses.
+- **Your website** - the Forest-scoped Institute pages (already built):
+  /pages/cfbl-institute, /pages/professional-trainings,
+  /pages/courses-certification, /pages/clinical-supervision,
+  /pages/emdr-consultation. Keep these strong; this is the Institute's home.
+- **Your email list / newsletter** to past attendees and supervisees.
+
+### MUSA
+MUSA is a writer/author identity, not a local business at all - no GBP. It grows
+through the writing itself, the essays blog, the newsletter, and (eventually)
+book retailers. No Google Business Profile, no local SEO.
+
+### The one exception
+If the Institute ever operates from a **separate physical address** (a different
+building/suite), a second GBP at that address is legitimate. Same address as the
+practice = keep it to one profile.
