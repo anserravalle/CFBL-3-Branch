@@ -4,45 +4,74 @@
   Accepts:
     block        {Object}  the section block (settings used below)
     heading_tag  {String}  'h3' (default) | 'h2' — keep one H1/page
+    style        {String}  'soft' | 'elevated' | 'framed' | 'overlay'
   Block settings used:
     icon, image, image_alt, title, body, link, link_label, image_ratio
 {%- endcomment -%}
 {%- liquid
   assign tag = heading_tag | default: 'h3'
+  assign style = style | default: 'soft'
   assign ratio = block.settings.image_ratio | default: '1-1'
   assign has_link = false
   if block.settings.link != blank
     assign has_link = true
   endif
+  assign cta_label = block.settings.link_label | default: 'Learn more'
 -%}
-<article class="card{% if has_link %} is-linked{% endif %}" {{ block.shopify_attributes }}>
-  {%- if block.settings.image != blank -%}
-    <div class="card__media">
-      {%- render 'responsive-image',
-        image: block.settings.image,
-        alt: block.settings.image_alt,
-        ratio: ratio,
-        sizes: '(min-width: 990px) 360px, 100vw',
-        widths: '300, 450, 600, 900' -%}
+
+{%- if style == 'overlay' -%}
+  {%- comment -%} Image-background card; entire card is the link. {%- endcomment -%}
+  {%- assign overlay_tag = 'div' -%}
+  {%- if has_link -%}{%- assign overlay_tag = 'a' -%}{%- endif -%}
+  <{{ overlay_tag }} {% if has_link %}href="{{ block.settings.link }}"{% endif %}
+      class="card card--overlay{% if has_link %} is-linked{% endif %}"
+      {% if has_link %}aria-label="{{ block.settings.title | escape }}"{% endif %}
+      {{ block.shopify_attributes }}>
+    <div class="card__overlay-media">
+      {%- if block.settings.image != blank -%}
+        {%- render 'responsive-image', image: block.settings.image, alt: block.settings.image_alt, ratio: block.settings.image_ratio | default: '4-3', sizes: '(min-width:990px) 420px, 100vw', widths: '400,600,800,1000' -%}
+      {%- else -%}
+        <div class="media media--4-3" style="background:var(--color-navy);width:100%;height:100%;"></div>
+      {%- endif -%}
     </div>
-  {%- elsif block.settings.icon != blank -%}
-    <span class="card__icon">{%- render 'icon', name: block.settings.icon, size: 26 -%}</span>
-  {%- endif -%}
+    <div class="card__overlay-content">
+      {%- if block.settings.eyebrow != blank -%}<p class="eyebrow" style="color:var(--color-sand);">{{ block.settings.eyebrow }}</p>{%- endif -%}
+      <{{ tag }} class="card__title">{{ block.settings.title | escape }}</{{ tag }}>
+      {%- if block.settings.body != blank -%}<div class="card__body rte">{{ block.settings.body }}</div>{%- endif -%}
+      {%- if has_link -%}<span class="card__overlay-cta">{{ cta_label }} <span aria-hidden="true">&rarr;</span></span>{%- endif -%}
+    </div>
+  </{{ overlay_tag }}>
 
-  <{{ tag }} class="card__title">{{ block.settings.title | escape }}</{{ tag }}>
+{%- else -%}
+  <article class="card card--{{ style }}{% if has_link %} is-linked{% endif %}" {{ block.shopify_attributes }}>
+    {%- if block.settings.image != blank -%}
+      <div class="card__media">
+        {%- render 'responsive-image',
+          image: block.settings.image,
+          alt: block.settings.image_alt,
+          ratio: ratio,
+          sizes: '(min-width: 990px) 360px, 100vw',
+          widths: '300, 450, 600, 900' -%}
+      </div>
+    {%- elsif block.settings.icon != blank -%}
+      <span class="card__icon">{%- render 'icon', name: block.settings.icon, size: 26 -%}</span>
+    {%- endif -%}
 
-  {%- if block.settings.body != blank -%}
-    <div class="card__body rte">{{ block.settings.body }}</div>
-  {%- endif -%}
+    {%- if block.settings.eyebrow != blank -%}<p class="eyebrow">{{ block.settings.eyebrow }}</p>{%- endif -%}
+    <{{ tag }} class="card__title">{{ block.settings.title | escape }}</{{ tag }}>
 
-  {%- if has_link -%}
-    <p class="card__cta">
-      {%- assign cta_label = block.settings.link_label | default: 'Learn more' -%}
-      {%- render 'button',
-        label: cta_label,
-        href: block.settings.link,
-        style: 'tertiary',
-        aria: cta_label | append: ' — ' | append: block.settings.title -%}
-    </p>
-  {%- endif -%}
-</article>
+    {%- if block.settings.body != blank -%}
+      <div class="card__body rte">{{ block.settings.body }}</div>
+    {%- endif -%}
+
+    {%- if has_link -%}
+      <p class="card__cta">
+        {%- render 'button',
+          label: cta_label,
+          href: block.settings.link,
+          style: 'tertiary',
+          aria: cta_label | append: ' — ' | append: block.settings.title -%}
+      </p>
+    {%- endif -%}
+  </article>
+{%- endif -%}

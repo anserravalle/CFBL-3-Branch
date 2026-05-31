@@ -26,55 +26,59 @@
     "pathways": {
       "type": "service-card-grid",
       "blocks": {
-        "therapy": {
+        "clinical": {
           "type": "card",
           "settings": {
-            "icon": "heart",
-            "title": "Begin Therapy",
-            "body": "<p>Support for healing and change, grounded in evidence-based, trauma-informed care.</p>",
-            "link_label": "Explore Therapy",
-            "link": "/pages/individual-therapy"
+            "eyebrow": "For Clients",
+            "image": "shopify://shop_images/IMG_6162.jpg",
+            "image_alt": "A calm, welcoming clinical space",
+            "image_ratio": "4-3",
+            "title": "CFBL Clinical Services",
+            "body": "<p>Therapy, psychological evaluation, groups, and workshops for children, teens, adults, and families.</p>",
+            "link_label": "Explore Clinical Services",
+            "link": "/pages/services"
           }
         },
-        "evaluation": {
+        "institute": {
           "type": "card",
           "settings": {
-            "icon": "compass",
-            "title": "Get an Evaluation",
-            "body": "<p>Clarity for diagnosis and next steps through thorough psychological evaluation.</p>",
-            "link_label": "Explore Evaluations",
-            "link": "/pages/psychological-evaluations"
-          }
-        },
-        "groups": {
-          "type": "card",
-          "settings": {
-            "icon": "users",
-            "title": "Join a Group or Workshop",
-            "body": "<p>Therapy groups, workshops, and community education for connection and skill-building.</p>",
-            "link_label": "See Groups & Workshops",
-            "link": "/pages/workshops"
-          }
-        },
-        "consultation": {
-          "type": "card",
-          "settings": {
-            "icon": "book",
-            "title": "Consultation & Training",
-            "body": "<p>Clinical supervision, EMDR consultation, and continuing education for professionals.</p>",
-            "link_label": "Learn With Us",
+            "eyebrow": "For Professionals",
+            "image": "shopify://shop_images/B1BB9BB8-0F0E-4315-AD7B-C4C07154FDDF.jpg",
+            "image_alt": "Clinicians in a training session",
+            "image_ratio": "4-3",
+            "title": "CFBL Institute",
+            "body": "<p>Continuing education, clinical supervision, and consultation for licensed professionals.</p>",
+            "link_label": "Visit the Institute",
             "link": "/pages/cfbl-institute"
+          }
+        },
+        "musa": {
+          "type": "card",
+          "settings": {
+            "eyebrow": "Reading & Essays",
+            "image": "",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "CFBL Writing (MUSA)",
+            "body": "<p>Books and essays on psychology, memory, identity, and being human.</p>",
+            "link_label": "Read MUSA",
+            "link": "/pages/musa"
           }
         }
       },
-      "block_order": ["therapy", "evaluation", "groups", "consultation"],
+      "block_order": [
+        "clinical",
+        "institute",
+        "musa"
+      ],
       "settings": {
-        "eyebrow": "How We Help",
+        "eyebrow": "One Practice, Three Paths",
         "heading": "Choose Your Path",
-        "subheading": "Therapy, evaluations, and professional training each begin with careful listening, clinical clarity, and respect for the whole person.",
+        "subheading": "Center for Balanced Living brings together clinical care, professional education, and writing — each with its own focus.",
         "text_align": "center",
-        "columns": "4",
-        "mobile_two_up": true,
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "overlay",
         "bg_scheme": "default",
         "padding_top": 80,
         "padding_bottom": 80
@@ -102,12 +106,45 @@
     "specialties": {
       "type": "featured-services",
       "blocks": {
-        "trauma": { "type": "item", "settings": { "icon": "shield", "title": "Trauma & PTSD", "text": "Attuned, nervous-system-aware care for trauma and its lasting effects." } },
-        "assessment": { "type": "item", "settings": { "icon": "compass", "title": "Assessment & Diagnosis", "text": "ADHD, autism, and diagnostic clarification for children, teens, and adults." } },
-        "lifespan": { "type": "item", "settings": { "icon": "users", "title": "Children, Teens & Adults", "text": "Developmentally informed support across the lifespan and for families." } },
-        "mood": { "type": "item", "settings": { "icon": "heart", "title": "Anxiety, Mood & Life Change", "text": "Evidence-based care for anxiety, depression, grief, and transitions." } }
+        "trauma": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Attuned, nervous-system-aware care for trauma and its lasting effects."
+          }
+        },
+        "assessment": {
+          "type": "item",
+          "settings": {
+            "icon": "compass",
+            "title": "Assessment & Diagnosis",
+            "text": "ADHD, autism, and diagnostic clarification for children, teens, and adults."
+          }
+        },
+        "lifespan": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Children, Teens & Adults",
+            "text": "Developmentally informed support across the lifespan and for families."
+          }
+        },
+        "mood": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety, Mood & Life Change",
+            "text": "Evidence-based care for anxiety, depression, grief, and transitions."
+          }
+        }
       },
-      "block_order": ["trauma", "assessment", "lifespan", "mood"],
+      "block_order": [
+        "trauma",
+        "assessment",
+        "lifespan",
+        "mood"
+      ],
       "settings": {
         "eyebrow": "Areas of Focus",
         "heading": "Specialized Support for the Whole Person",
@@ -141,12 +178,41 @@
     "process": {
       "type": "featured-services",
       "blocks": {
-        "reach": { "type": "item", "settings": { "title": "Reach Out", "text": "Call (302) 608-3780 or send a message. We respond within 24–48 hours." } },
-        "consult": { "type": "item", "settings": { "title": "Talk With Us", "text": "A first conversation to understand your goals and determine fit." } },
-        "plan": { "type": "item", "settings": { "title": "Make a Plan", "text": "Together we outline a thoughtful, individualized path forward." } },
-        "begin": { "type": "item", "settings": { "title": "Begin Care", "text": "Therapy, evaluation, or consultation, at a pace that respects you." } }
+        "reach": {
+          "type": "item",
+          "settings": {
+            "title": "Reach Out",
+            "text": "Call (302) 608-3780 or send a message. We respond within 24–48 hours."
+          }
+        },
+        "consult": {
+          "type": "item",
+          "settings": {
+            "title": "Talk With Us",
+            "text": "A first conversation to understand your goals and determine fit."
+          }
+        },
+        "plan": {
+          "type": "item",
+          "settings": {
+            "title": "Make a Plan",
+            "text": "Together we outline a thoughtful, individualized path forward."
+          }
+        },
+        "begin": {
+          "type": "item",
+          "settings": {
+            "title": "Begin Care",
+            "text": "Therapy, evaluation, or consultation, at a pace that respects you."
+          }
+        }
       },
-      "block_order": ["reach", "consult", "plan", "begin"],
+      "block_order": [
+        "reach",
+        "consult",
+        "plan",
+        "begin"
+      ],
       "settings": {
         "eyebrow": "What Happens Next",
         "heading": "A Clear, Unhurried First Step",
@@ -172,7 +238,9 @@
           }
         }
       },
-      "block_order": ["quote1"],
+      "block_order": [
+        "quote1"
+      ],
       "settings": {
         "eyebrow": "Our Philosophy of Care",
         "heading": "Healing happens in relationship",
@@ -215,12 +283,41 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
-        "f1": { "type": "item", "settings": { "question": "How do I schedule a first appointment?", "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24–48 hours to find a time that works.</p>" } },
-        "f2": { "type": "item", "settings": { "question": "Do you accept insurance?", "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>" } },
-        "f3": { "type": "item", "settings": { "question": "What happens during a psychological evaluation?", "answer": "<p>Evaluations begin with careful listening and history, followed by standardized assessment and a clear written summary with recommendations and next steps.</p>" } },
-        "f4": { "type": "item", "settings": { "question": "How do I know if we are a good fit?", "answer": "<p>Fit matters. Our first conversation is a chance to understand your goals and determine whether our services are right for you, or to offer a referral if another setting would serve you better.</p>" } }
+        "f1": {
+          "type": "item",
+          "settings": {
+            "question": "How do I schedule a first appointment?",
+            "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24–48 hours to find a time that works.</p>"
+          }
+        },
+        "f2": {
+          "type": "item",
+          "settings": {
+            "question": "Do you accept insurance?",
+            "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>"
+          }
+        },
+        "f3": {
+          "type": "item",
+          "settings": {
+            "question": "What happens during a psychological evaluation?",
+            "answer": "<p>Evaluations begin with careful listening and history, followed by standardized assessment and a clear written summary with recommendations and next steps.</p>"
+          }
+        },
+        "f4": {
+          "type": "item",
+          "settings": {
+            "question": "How do I know if we are a good fit?",
+            "answer": "<p>Fit matters. Our first conversation is a chance to understand your goals and determine whether our services are right for you, or to offer a referral if another setting would serve you better.</p>"
+          }
+        }
       },
-      "block_order": ["f1", "f2", "f3", "f4"],
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
       "settings": {
         "eyebrow": "Questions, Answered",
         "heading": "Frequently Asked Questions",

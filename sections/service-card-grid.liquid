@@ -1,6 +1,7 @@
 {%- comment -%}
   Service card grid — the homepage "pathway" cards and any service listing.
   Cards are blocks: addable, removable, reorderable, each fully editable.
+  Card style (soft / elevated / framed / outline / overlay) is editor-controlled.
 {%- endcomment -%}
 {%- liquid
   assign bg = section.settings.bg_scheme
@@ -13,6 +14,7 @@
   if section.settings.text_align == 'center'
     assign align_class = 'is-center'
   endif
+  assign card_style = section.settings.card_style | default: 'soft'
 -%}
 <section class="section bg--{{ bg }}"
   style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
@@ -26,10 +28,10 @@
         </div>
       {%- endif -%}
 
-      <div class="grid grid--{{ cols }} {{ mobile_class }}">
+      <div class="grid grid--{{ cols }} {{ mobile_class }} cards--{{ card_style }}">
         {%- for block in section.blocks -%}
           <div class="reveal" {{ block.shopify_attributes }}>
-            {%- render 'card-service', block: block -%}
+            {%- render 'card-service', block: block, style: card_style -%}
           </div>
         {%- endfor -%}
       </div>
@@ -59,6 +61,13 @@
       { "value": "2", "label": "2" }, { "value": "3", "label": "3" }, { "value": "4", "label": "4" }
     ], "default": "3" },
     { "type": "checkbox", "id": "mobile_two_up", "label": "Two columns on mobile", "default": false },
+    { "type": "select", "id": "card_style", "label": "Card style", "options": [
+      { "value": "soft", "label": "Soft (subtle border)" },
+      { "value": "elevated", "label": "Elevated (shadow)" },
+      { "value": "framed", "label": "Framed (accent bar)" },
+      { "value": "outline", "label": "Outlined" },
+      { "value": "overlay", "label": "Image overlay" }
+    ], "default": "elevated", "info": "Overlay uses each card's image as a full background with the text on top — great for the brand/division chooser." },
     { "type": "header", "content": "Section footer button" },
     { "type": "text", "id": "footer_label", "label": "Button label" },
     { "type": "url", "id": "footer_link", "label": "Button link" },
@@ -75,6 +84,7 @@
       "type": "card",
       "name": "Service card",
       "settings": [
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow (optional)" },
         { "type": "select", "id": "icon", "label": "Icon (used if no image)", "options": [
           { "value": "", "label": "None" }, { "value": "heart", "label": "Heart" },
           { "value": "compass", "label": "Compass" }, { "value": "shield", "label": "Shield" },
@@ -82,7 +92,7 @@
           { "value": "leaf", "label": "Leaf" }, { "value": "award", "label": "Award" },
           { "value": "star", "label": "Star" }
         ], "default": "heart" },
-        { "type": "image_picker", "id": "image", "label": "Image (optional)" },
+        { "type": "image_picker", "id": "image", "label": "Image (used for overlay style)" },
         { "type": "text", "id": "image_alt", "label": "Image alt text" },
         { "type": "select", "id": "image_ratio", "label": "Image ratio", "options": [
           { "value": "1-1", "label": "Square" }, { "value": "3-2", "label": "3:2" }, { "value": "4-3", "label": "4:3" }
