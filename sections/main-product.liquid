@@ -1,0 +1,68 @@
+{%- comment -%}
+  Main product — for digital offerings (courses, programs, paid workshops).
+  Gallery + details + add-to-cart. Calm, content-forward layout.
+{%- endcomment -%}
+<section class="section bg--default" style="--section-pt: 64px; --section-pb: 80px;">
+  <div class="page-width">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ routes.root_url }}">Home</a> <span aria-hidden="true">/</span>
+      {%- if collection %}<a href="{{ collection.url }}">{{ collection.title }}</a> <span aria-hidden="true">/</span> {% endif -%}
+      {{ product.title }}
+    </nav>
+
+    <div class="text-image__grid" style="align-items:start;">
+      <div class="text-image__media reveal">
+        {%- if product.featured_image -%}
+          {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt | default: product.title, ratio: '4-3', loading: 'eager', fetchpriority: 'high', sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}
+        {%- else -%}
+          <div class="media media--4-3">{{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+        {%- endif -%}
+        {%- if product.images.size > 1 -%}
+          <div class="grid grid--4 mobile-2" style="margin-top:var(--space-16);gap:var(--space-12);">
+            {%- for image in product.images offset: 1 limit: 4 -%}
+              {%- render 'responsive-image', image: image, alt: image.alt | default: product.title, ratio: '1-1', sizes: '120px', widths: '120,240' -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="product-info reveal">
+        {%- if product.type != blank -%}<p class="eyebrow">{{ product.type }}</p>{%- endif -%}
+        <h1>{{ product.title }}</h1>
+        <p style="font-size:var(--fs-xl);font-family:var(--font-heading);color:var(--color-navy);margin-bottom:var(--space-24);">
+          {%- if product.price > 0 -%}{{ product.price | money }}{%- else -%}Free{%- endif -%}
+        </p>
+
+        {%- form 'product', product -%}
+          {%- unless product.has_only_default_variant -%}
+            {%- for option in product.options_with_values -%}
+              <div class="field" style="margin-bottom:var(--space-16);">
+                <label for="Option-{{ option.position }}">{{ option.name }}</label>
+                <select id="Option-{{ option.position }}" name="options[{{ option.name | escape }}]">
+                  {%- for value in option.values -%}<option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>{%- endfor -%}
+                </select>
+              </div>
+            {%- endfor -%}
+          {%- endunless -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button type="submit" name="add" class="btn btn--primary btn--lg btn--full" {% unless product.available %}disabled{% endunless %}>
+            {%- if product.available -%}{{ section.settings.button_label | default: 'Add to Cart' }}{%- else -%}Sold Out{%- endif -%}
+          </button>
+        {%- endform -%}
+
+        {%- if product.description != blank -%}
+          <div class="rte" style="margin-top:var(--space-32);">{{ product.description }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": [
+    { "type": "text", "id": "button_label", "label": "Add-to-cart label", "default": "Add to Cart" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,54 @@
+{%- comment -%} Main article — single post with editorial reading layout. {%- endcomment -%}
+<article class="section bg--default" style="--section-pt: 64px; --section-pb: 80px;">
+  <div class="page-width">
+    <div class="article-body">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ blog.url }}">{{ blog.title }}</a> <span aria-hidden="true">/</span> {{ article.title }}
+      </nav>
+
+      <header class="reveal" style="margin-bottom:var(--space-40);">
+        {%- if section.settings.show_tags and article.tags.size > 0 -%}
+          <p class="eyebrow">{{ article.tags.first }}</p>
+        {%- endif -%}
+        <h1>{{ article.title }}</h1>
+        <p class="article-hero__meta">
+          {%- if section.settings.show_author -%}{{ article.author }} &middot; {% endif -%}
+          <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%B %-d, %Y' }}</time>
+        </p>
+      </header>
+
+      {%- if article.image and section.settings.show_image -%}
+        <div class="reveal" style="margin-bottom:var(--space-40);">
+          {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '16-9', loading: 'eager', sizes: '(min-width:768px) 760px, 100vw', widths: '480,768,1000,1300' -%}
+        </div>
+      {%- endif -%}
+
+      <div class="rte reveal">{{ article.content }}</div>
+
+      {%- if blog.comments_enabled? -%}
+        <div style="margin-top:var(--space-64);">
+          <h2>{{ article.comments_count }} {% if article.comments_count == 1 %}comment{% else %}comments{% endif %}</h2>
+          {%- if article.comments.size > 0 -%}
+            {%- for comment in article.comments -%}
+              <div style="padding:var(--space-24) 0;border-bottom:1px solid var(--color-border);">
+                <p style="margin-bottom:var(--space-8);">{{ comment.content }}</p>
+                <p class="article-card__meta">{{ comment.author }} &middot; {{ comment.created_at | date: '%b %-d, %Y' }}</p>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Article",
+  "settings": [
+    { "type": "checkbox", "id": "show_image", "label": "Show featured image", "default": true },
+    { "type": "checkbox", "id": "show_author", "label": "Show author", "default": true },
+    { "type": "checkbox", "id": "show_tags", "label": "Show first tag", "default": true }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "intro": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/homepage.png",
+        "image_alt": "Center for Balanced Living",
+        "image_ratio": "4-3",
+        "image_position": "right",
+        "eyebrow": "About Us",
+        "heading": "A trauma-informed practice grounded in relationship",
+        "body": "<p>Center for Balanced Living is a clinician-owned psychology practice serving the MOT area of Delaware. We provide therapy, psychological evaluation, groups, workshops, and consultation, integrating evidence-based practice with warmth, attunement, and clinical depth.</p>",
+        "text_align": "left",
+        "primary_label": "Our Credentials",
+        "primary_link": "/pages/credentials",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "values": {
+      "type": "credentials-section",
+      "blocks": {
+        "c1": { "type": "credential", "settings": { "icon": "shield", "title": "Trauma-Informed", "text": "Calm, regulated, and grounded in nervous-system-aware practice." } },
+        "c2": { "type": "credential", "settings": { "icon": "compass", "title": "Diagnostically Precise", "text": "Thorough evaluation that brings clarity and direction." } },
+        "c3": { "type": "credential", "settings": { "icon": "heart", "title": "Relational & Warm", "text": "Care that honors the whole person, not just the symptom." } }
+      },
+      "block_order": ["c1", "c2", "c3"],
+      "settings": {
+        "eyebrow": "What Guides Us",
+        "heading": "Our values in practice",
+        "text_align": "center",
+        "columns": "3",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "body": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "heading": "Let's talk about how we can help",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24–48 hours.</p>",
+        "primary_label": "Request a Consultation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Explore Services",
+        "secondary_link": "/pages/services",
+        "phone": "(302) 608-3780",
+        "bg_scheme": "navy",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": ["intro", "values", "body", "cta"]
+}

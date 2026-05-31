@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "Groups & Workshops",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "events": {
+      "type": "workshop-event-grid",
+      "blocks": {
+        "e1": { "type": "event", "settings": { "month": "JUN", "day": "12", "title": "Trauma-Informed Skills Group", "time": "6:00–7:30 PM", "location": "Middletown, DE", "description": "An eight-week group for building regulation and coping skills.", "link_label": "Register" } },
+        "e2": { "type": "event", "settings": { "month": "JUL", "day": "09", "title": "Parenting & Nervous-System Workshop", "time": "10:00–12:00 PM", "location": "Online", "description": "A practical workshop for parents and caregivers.", "link_label": "Register" } }
+      },
+      "block_order": ["e1", "e2"],
+      "settings": {
+        "eyebrow": "Upcoming",
+        "heading": "Upcoming Offerings",
+        "subheading": "Therapy groups, workshops, and community education.",
+        "text_align": "center",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 80
+      }
+    },
+    "newsletter": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay Informed",
+        "heading": "Hear About New Groups & Workshops",
+        "body": "<p>We'll let you know when new offerings open for registration.</p>",
+        "button_label": "Subscribe",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": ["header", "events", "newsletter"]
+}

@@ -384,7 +384,14 @@ a.card:hover {
 .media { position: relative; overflow: hidden; }
 .media > img,
 .media > video,
-.media > iframe { width: 100%; height: 100%; object-fit: cover; }
+.media > iframe,
+.media > svg { width: 100%; height: 100%; object-fit: cover; }
+.media > .placeholder-svg {
+  background: color-mix(in srgb, var(--color-sand) 65%, #fff);
+  fill: color-mix(in srgb, var(--color-navy) 28%, transparent);
+  object-fit: contain;
+  padding: 12%;
+}
 .media--1-1 { aspect-ratio: 1 / 1; }
 .media--3-2 { aspect-ratio: 3 / 2; }
 .media--4-3 { aspect-ratio: 4 / 3; }
@@ -537,7 +544,31 @@ a.card:hover {
 .hero__eyebrow { margin-bottom: var(--space-16); }
 .hero__title { font-size: calc(var(--fs-3xl) * var(--heading-scale)); margin-bottom: var(--space-20); }
 .hero__lead { font-size: var(--fs-md); color: var(--color-muted); max-width: 54ch; }
-.hero__media { border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-md); }
+.hero__media { position: relative; }
+.hero__media .media {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+/* Offset "frame / holder" behind the image — a darker panel that peeks out
+   bottom-right. Color is editable (defaults to terracotta/brown). */
+.hero__media--framed {
+  --frame-offset: 18px;
+  padding: 0 var(--frame-offset) var(--frame-offset) 0;
+}
+.hero__media--framed::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: var(--frame-offset);
+  left: var(--frame-offset);
+  right: 0;
+  bottom: 0;
+  background: var(--frame-color, var(--color-terracotta));
+  border-radius: var(--radius-card);
+}
 .hero--center .hero__grid { grid-template-columns: 1fr; text-align: center; justify-items: center; }
 .hero--center .hero__lead { margin-inline: auto; }
 

@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "contact": {
+      "type": "contact-form",
+      "blocks": {
+        "help": { "type": "dropdown", "settings": { "title": "How can we help?", "values": "Individual Therapy, Psychological Evaluation, Clinical Supervision, EMDR Consultation, Professional Training, Something Else" } },
+        "phone": { "type": "text", "settings": { "title": "Phone Number", "input_type": "tel", "required": false } },
+        "method": { "type": "dropdown", "settings": { "title": "Preferred Method Of Contact", "values": "Email, Phone, Either" } }
+      },
+      "block_order": ["help", "phone", "method"],
+      "settings": {
+        "eyebrow": "Get in Touch",
+        "heading": "Start the Conversation",
+        "intro": "<p>Whether you are seeking therapy, evaluations, consultation, supervision, or training, our team is here to help you take the next step. To speak with us directly, please call our office. We typically respond to messages within 24–48 hours.</p>",
+        "phone": "(302) 608-3780",
+        "hours": "By appointment",
+        "button_label": "Send Message",
+        "success_text": "Thank you. We typically respond within 24–48 hours.",
+        "disclaimer": "<p>This form is not for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 988 or 911, or go to your nearest emergency room.</p>",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "map_cta": {
+      "type": "rich-text-brand",
+      "settings": {
+        "heading": "Serving Middletown, Townsend & the MOT Area",
+        "heading_tag": "h2",
+        "content": "<p>Center for Balanced Living serves clients across the MOT area and throughout Delaware, including Wilmington, Newark, and Dover.</p>",
+        "text_align": "center",
+        "content_width": 700,
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": ["contact", "map_cta"]
+}

@@ -5,13 +5,13 @@
 {%- endcomment -%}
 {%- liquid
   assign bg = section.settings.bg_scheme
-  assign has_media = false
-  if section.settings.image != blank
-    assign has_media = true
+  assign is_split = false
+  if section.settings.layout != 'center'
+    assign is_split = true
   endif
-  assign layout_class = 'hero--split'
-  if section.settings.layout == 'center' or has_media == false
-    assign layout_class = 'hero--center'
+  assign layout_class = 'hero--center'
+  if is_split
+    assign layout_class = 'hero--split'
   endif
   assign heading_tag = 'h1'
   if section.settings.use_h1 == false
@@ -32,7 +32,7 @@
   {%- endif -%}
 
   <div class="page-width">
-    <div class="hero__grid {% if has_media %}has-media{% endif %}">
+    <div class="hero__grid {% if is_split %}has-media{% endif %}">
       <div class="hero__content reveal">
         {%- if section.settings.eyebrow != blank -%}
           <p class="eyebrow hero__eyebrow">{{ section.settings.eyebrow }}</p>
@@ -49,8 +49,11 @@
         {%- endif -%}
       </div>
 
-      {%- if has_media -%}
-        <div class="hero__media reveal" style="order: {{ mobile_order }};">
+      {%- if section.settings.layout != 'center' -%}
+        {%- comment -%} Image column. Renders a framed placeholder even when no
+            image is set, so the layout reads as intended in the editor. {%- endcomment -%}
+        <div class="hero__media reveal {% if section.settings.image_frame %}hero__media--framed{% endif %}"
+             style="order: {{ mobile_order }}; --frame-color: {{ section.settings.frame_color }};">
           {%- render 'responsive-image',
             image: section.settings.image,
             alt: section.settings.image_alt,
@@ -86,6 +89,8 @@
       { "value": "4-3", "label": "4:3" }, { "value": "1-1", "label": "Square" },
       { "value": "3-2", "label": "3:2" }, { "value": "16-9", "label": "16:9" }
     ], "default": "4-3" },
+    { "type": "checkbox", "id": "image_frame", "label": "Show offset frame behind image", "default": true, "info": "A darker panel that sits behind the image (a brown 'holder' on a tan background)." },
+    { "type": "color", "id": "frame_color", "label": "Frame color", "default": "#9D654E" },
     { "type": "checkbox", "id": "show_shape", "label": "Show soft brand-shape accent", "default": true },
     { "type": "header", "content": "Layout & appearance" },
     { "type": "select", "id": "layout", "label": "Layout", "options": [

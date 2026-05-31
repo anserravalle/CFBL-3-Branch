@@ -1,0 +1,67 @@
+{%- comment -%}
+  Newsletter signup — uses Shopify's customer form (email marketing consent).
+  Accessible labels, success/error states. Fully editable copy.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign center = section.settings.text_align
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner section__header {% if center == 'center' %}is-center{% endif %} reveal" style="margin-bottom:0;">
+      {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.body != blank -%}<div class="rte section__subheading">{{ section.settings.body }}</div>{%- endif -%}
+
+      {%- form 'customer', class: 'newsletter__form' -%}
+        {%- if center == 'center' -%}<style>#newsletter-{{ section.id }} .newsletter__form{margin-inline:auto;justify-content:center;}</style>{%- endif -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="field newsletter__inline">
+          <label class="visually-hidden" for="NewsletterEmail-{{ section.id }}">{{ section.settings.placeholder | default: 'Email address' }}</label>
+          <input id="NewsletterEmail-{{ section.id }}" type="email" name="contact[email]"
+            class="input" placeholder="{{ section.settings.placeholder | default: 'Email address' }}"
+            required autocomplete="email" aria-required="true">
+        </div>
+        <button type="submit" class="btn btn--primary">{{ section.settings.button_label }}</button>
+        {%- if form.posted_successfully? -%}
+          <p class="form-note form-note--success" role="status">{{ section.settings.success_text | default: 'Thank you for subscribing.' }}</p>
+        {%- elsif form.errors -%}
+          <p class="form-note form-note--error" role="alert">{{ form.errors | default_errors }}</p>
+        {%- endif -%}
+      {%- endform -%}
+
+      {%- if section.settings.fine_print != blank -%}
+        <p class="form-note" style="opacity:.8;">{{ section.settings.fine_print }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+<span id="newsletter-{{ section.id }}" hidden></span>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Stay Connected" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Thoughtful Notes, Now and Then" },
+    { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Occasional resources on trauma-informed care, evaluations, and upcoming workshops. No noise.</p>" },
+    { "type": "text", "id": "placeholder", "label": "Input placeholder", "default": "Email address" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Subscribe" },
+    { "type": "text", "id": "success_text", "label": "Success message", "default": "Thank you for subscribing." },
+    { "type": "text", "id": "fine_print", "label": "Fine print", "default": "We respect your privacy and never share your information." },
+    { "type": "select", "id": "text_align", "label": "Alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "center" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "sand", "label": "Sand" }, { "value": "navy", "label": "Navy" },
+      { "value": "default", "label": "Page background" }, { "value": "surface", "label": "White" }
+    ], "default": "sand" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "presets": [{ "name": "Newsletter" }]
+}
+{% endschema %}

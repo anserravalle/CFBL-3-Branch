@@ -1,0 +1,266 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Trauma-Informed Psychological Care",
+        "heading": "Your Path To Healing Begins Here",
+        "subheading": "<p>Center for Balanced Living offers therapy, psychological evaluations, consultation, supervision, and educational services grounded in trauma-informed, research-based care. We support children, adolescents, adults, families, and professionals.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Explore Services",
+        "secondary_link": "/pages/services",
+        "image": "shopify://shop_images/treefpo.png",
+        "image_alt": "The Center for Balanced Living tree, formed from many colored leaves",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#9D654E",
+        "show_shape": true,
+        "layout": "split",
+        "bg_scheme": "default",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "pathways": {
+      "type": "service-card-grid",
+      "blocks": {
+        "therapy": {
+          "type": "card",
+          "settings": {
+            "icon": "heart",
+            "title": "Begin Therapy",
+            "body": "<p>Support for healing and change, grounded in evidence-based, trauma-informed care.</p>",
+            "link_label": "Explore Therapy",
+            "link": "/pages/individual-therapy"
+          }
+        },
+        "evaluation": {
+          "type": "card",
+          "settings": {
+            "icon": "compass",
+            "title": "Get an Evaluation",
+            "body": "<p>Clarity for diagnosis and next steps through thorough psychological evaluation.</p>",
+            "link_label": "Explore Evaluations",
+            "link": "/pages/psychological-evaluations"
+          }
+        },
+        "groups": {
+          "type": "card",
+          "settings": {
+            "icon": "users",
+            "title": "Join a Group or Workshop",
+            "body": "<p>Therapy groups, workshops, and community education for connection and skill-building.</p>",
+            "link_label": "See Groups & Workshops",
+            "link": "/pages/workshops"
+          }
+        },
+        "consultation": {
+          "type": "card",
+          "settings": {
+            "icon": "book",
+            "title": "Consultation & Training",
+            "body": "<p>Clinical supervision, EMDR consultation, and continuing education for professionals.</p>",
+            "link_label": "Learn With Us",
+            "link": "/pages/cfbl-institute"
+          }
+        }
+      },
+      "block_order": ["therapy", "evaluation", "groups", "consultation"],
+      "settings": {
+        "eyebrow": "How We Help",
+        "heading": "Choose Your Path",
+        "subheading": "Therapy, evaluations, and professional training each begin with careful listening, clinical clarity, and respect for the whole person.",
+        "text_align": "center",
+        "columns": "4",
+        "mobile_two_up": true,
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "approach": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/homepage.png",
+        "image_alt": "A calm, welcoming clinical space",
+        "image_ratio": "4-3",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Our Approach",
+        "heading": "Care that honors the complexity of the person, not just the symptom",
+        "body": "<p>Our approach to care is relational, clinically grounded, and informed by a holistic understanding of development. We integrate evidence-based practice with thoughtful conceptualization to support healing, diagnostic clarity, and sustainable growth.</p>",
+        "text_align": "left",
+        "primary_label": "About Our Practice",
+        "primary_link": "/pages/about-us",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "specialties": {
+      "type": "featured-services",
+      "blocks": {
+        "trauma": { "type": "item", "settings": { "icon": "shield", "title": "Trauma & PTSD", "text": "Attuned, nervous-system-aware care for trauma and its lasting effects." } },
+        "assessment": { "type": "item", "settings": { "icon": "compass", "title": "Assessment & Diagnosis", "text": "ADHD, autism, and diagnostic clarification for children, teens, and adults." } },
+        "lifespan": { "type": "item", "settings": { "icon": "users", "title": "Children, Teens & Adults", "text": "Developmentally informed support across the lifespan and for families." } },
+        "mood": { "type": "item", "settings": { "icon": "heart", "title": "Anxiety, Mood & Life Change", "text": "Evidence-based care for anxiety, depression, grief, and transitions." } }
+      },
+      "block_order": ["trauma", "assessment", "lifespan", "mood"],
+      "settings": {
+        "eyebrow": "Areas of Focus",
+        "heading": "Specialized Support for the Whole Person",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "4",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "clinician": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/CBL_Mark_Color_2x_aff8397e-285d-4a37-b86a-79c4e2e8014b.png",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
+        "image_ratio": "1-1",
+        "image_position": "right",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Practice",
+        "heading": "Led by an experienced, licensed psychologist",
+        "body": "<p>“My approach to care begins with the understanding that each person is unique. Treatment should be thoughtful, responsive, and grounded in both clinical depth and the needs of the individual.”</p><p><strong>Dr. Angela (Niki) Serravalle</strong>, PsyD, LPCMH, NCC</p>",
+        "text_align": "left",
+        "primary_label": "Our Credentials",
+        "primary_link": "/pages/credentials",
+        "bg_scheme": "surface",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "reach": { "type": "item", "settings": { "title": "Reach Out", "text": "Call (302) 608-3780 or send a message. We respond within 24–48 hours." } },
+        "consult": { "type": "item", "settings": { "title": "Talk With Us", "text": "A first conversation to understand your goals and determine fit." } },
+        "plan": { "type": "item", "settings": { "title": "Make a Plan", "text": "Together we outline a thoughtful, individualized path forward." } },
+        "begin": { "type": "item", "settings": { "title": "Begin Care", "text": "Therapy, evaluation, or consultation, at a pace that respects you." } }
+      },
+      "block_order": ["reach", "consult", "plan", "begin"],
+      "settings": {
+        "eyebrow": "What Happens Next",
+        "heading": "A Clear, Unhurried First Step",
+        "subheading": "We make the path from first contact to care simple and transparent.",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "philosophy": {
+      "type": "testimonial-section",
+      "blocks": {
+        "quote1": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>We pair evidence-based care with warmth, attunement, and a holistic approach to mind, body, and spirit.</p>",
+            "author": "Center for Balanced Living",
+            "role": "Our commitment to every client",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": ["quote1"],
+      "settings": {
+        "eyebrow": "Our Philosophy of Care",
+        "heading": "Healing happens in relationship",
+        "columns": 1,
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "local_seo": {
+      "type": "rich-text-brand",
+      "settings": {
+        "heading": "Serving the MOT Area and Delaware",
+        "heading_tag": "h2",
+        "content": "<p>Center for Balanced Living provides trauma-informed therapy and psychological evaluation to Middletown, Townsend, Odessa, and the greater MOT area, with clients across New Castle County and Delaware including Wilmington, Newark, and Dover.</p>",
+        "text_align": "center",
+        "content_width": 760,
+        "bg_scheme": "default",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "resources": {
+      "type": "blog-feature",
+      "settings": {
+        "eyebrow": "Resources",
+        "heading": "Notes From Our Practice",
+        "subheading": "Grounded, research-informed writing on therapy, evaluation, and care.",
+        "post_limit": 3,
+        "columns": "3",
+        "show_excerpt": true,
+        "show_tags": true,
+        "view_all_label": "View all resources",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "f1": { "type": "item", "settings": { "question": "How do I schedule a first appointment?", "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24–48 hours to find a time that works.</p>" } },
+        "f2": { "type": "item", "settings": { "question": "Do you accept insurance?", "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>" } },
+        "f3": { "type": "item", "settings": { "question": "What happens during a psychological evaluation?", "answer": "<p>Evaluations begin with careful listening and history, followed by standardized assessment and a clear written summary with recommendations and next steps.</p>" } },
+        "f4": { "type": "item", "settings": { "question": "How do I know if we are a good fit?", "answer": "<p>Fit matters. Our first conversation is a chance to understand your goals and determine whether our services are right for you, or to offer a referral if another setting would serve you better.</p>" } }
+      },
+      "block_order": ["f1", "f2", "f3", "f4"],
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "heading": "Frequently Asked Questions",
+        "subheading": "Practical answers about scheduling, insurance, evaluations, and finding the right fit.",
+        "cta_label": "See all FAQs",
+        "cta_link": "/pages/faq",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "contact_cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Take the Next Step",
+        "heading": "Start the Conversation",
+        "body": "<p>Whether you are seeking therapy, an evaluation, consultation, or training, we are here to help you take a clear next step.</p>",
+        "primary_label": "Request a Consultation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "pathways",
+    "approach",
+    "specialties",
+    "clinician",
+    "process",
+    "philosophy",
+    "local_seo",
+    "resources",
+    "faq",
+    "contact_cta"
+  ]
+}

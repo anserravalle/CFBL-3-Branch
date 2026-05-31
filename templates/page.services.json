@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "Our Services",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 32
+      }
+    },
+    "pathways": {
+      "type": "service-card-grid",
+      "blocks": {
+        "therapy": { "type": "card", "settings": { "icon": "heart", "title": "Individual Therapy", "body": "<p>Trauma-informed therapy for children, teens, and adults.</p>", "link_label": "Learn more", "link": "/pages/individual-therapy" } },
+        "evals": { "type": "card", "settings": { "icon": "compass", "title": "Psychological Evaluations", "body": "<p>ADHD, autism, diagnostic clarification, and more.</p>", "link_label": "Learn more", "link": "/pages/psychological-evaluations" } },
+        "groups": { "type": "card", "settings": { "icon": "users", "title": "Groups & Workshops", "body": "<p>Therapy groups, workshops, and community education.</p>", "link_label": "Learn more", "link": "/pages/workshops" } },
+        "supervision": { "type": "card", "settings": { "icon": "book", "title": "Clinical Supervision", "body": "<p>Supervision and consultation for licensed clinicians.</p>", "link_label": "Learn more", "link": "/pages/clinical-supervision" } },
+        "emdr": { "type": "card", "settings": { "icon": "compass", "title": "EMDR Consultation", "body": "<p>Consultation toward EMDR certification and skill refinement.</p>", "link_label": "Learn more", "link": "/pages/emdr-consultation" } },
+        "training": { "type": "card", "settings": { "icon": "award", "title": "Professional Training", "body": "<p>Continuing education through the CFBL Institute.</p>", "link_label": "Learn more", "link": "/pages/cfbl-institute" } }
+      },
+      "block_order": ["therapy", "evals", "groups", "supervision", "emdr", "training"],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 80
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Not Sure Where to Start?",
+        "heading": "We'll help you find the right fit",
+        "body": "<p>Tell us a little about what you're looking for, and we'll point you toward the service, or the referral, that serves you best.</p>",
+        "primary_label": "Request a Consultation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "bg_scheme": "navy",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": ["header", "pathways", "cta"]
+}
