@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -11,11 +20,14 @@
         "primary_link": "/pages/professional-trainings",
         "secondary_label": "Meet the Trainer",
         "secondary_link": "#trainer",
-        "image": "",
+        "image": "shopify://shop_images/primary.svg",
+        "image_alt": "",
+        "image_ratio": "1-1",
         "image_frame": true,
-        "frame_color": "#6F8F7A",
+        "frame_color": "#6f8f7a",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 88,
         "padding_bottom": 88
@@ -33,8 +45,12 @@
         "heading": "Dr. Angela (Niki) Serravalle, PsyD, LPCMH, NCC",
         "body": "<p>Founded and led by Dr. Niki Serravalle, licensed clinical psychologist and founder of the Center for Balanced Living. CFBL Institute exists to bridge the gap between clinical theory and applied practice. Our work is grounded in trauma-informed science, nervous system awareness, cultural humility, and the lived complexity of real clinical work.</p>",
         "text_align": "left",
+        "phone": "",
+        "email": "",
         "primary_label": "Full Bio",
         "primary_link": "/pages/niki-serravalle",
+        "secondary_label": "",
+        "secondary_link": "",
         "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 24
@@ -48,7 +64,7 @@
           "settings": {
             "quote": "<p>Training is how clinical knowledge moves from one clinician to the next. I teach because the best of what I learned came from clinicians who showed me how they thought, not just what to do. That is the kind of training I try to offer now.</p>",
             "author": "Dr. Angela (Niki) Serravalle",
-            "role": "Why I Teach",
+            "role": "",
             "rating": 0
           }
         }
@@ -75,6 +91,9 @@
             "title": "Professional Trainings",
             "heading": "Professional Trainings",
             "content": "<p>Advanced clinical trainings for licensed clinicians and graduate students ready to deepen their work in trauma, evaluation, and nervous system informed care. Built to translate directly into how you assess, conceptualize, and treat.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/professional-trainings",
             "link_label": "View trainings"
           }
@@ -85,6 +104,9 @@
             "title": "Courses & Certification",
             "heading": "Courses & Certification",
             "content": "<p>Multi-session courses that build clinical knowledge sequentially, with time to integrate between sessions. For clinicians strengthening their foundation and students building it for the first time.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/courses-certification",
             "link_label": "View courses"
           }
@@ -95,6 +117,9 @@
             "title": "Workshops",
             "heading": "Workshops",
             "content": "<p>Workshops designed to bring trauma-informed, ecologically grounded, and meaningful learning into accessible, practical conversation.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/workshops",
             "link_label": "View workshops"
           }
@@ -105,6 +130,9 @@
             "title": "Supervision & Consultation",
             "heading": "Supervision & Consultation",
             "content": "<p>Individual and group clinical supervision toward licensure, plus EMDR consultation toward EMDRIA certification.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/clinical-supervision",
             "link_label": "Learn more"
           }
@@ -162,9 +190,37 @@
         "heading": "Registration & CE Credit",
         "subheading": "",
         "cta_label": "",
+        "cta_link": "",
         "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
+      }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Register or inquire",
+        "use_h1": false,
+        "intro": "<p>Reach out about an upcoming training, course, or workshop, or to ask about CE credit and group rates. We respond to professional inquiries directly.</p>",
+        "phone": "(302) 608-3780",
+        "email": "",
+        "address": "",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Professional Training, Course or Certification, Workshop, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "cta": {
@@ -182,31 +238,6 @@
         "bg_scheme": "navy",
         "padding_top": 88,
         "padding_bottom": 88
-      }
-    },
-    "contact": {
-      "type": "contact-form",
-      "settings": {
-        "eyebrow": "For Clinicians",
-        "heading": "Register or inquire",
-        "use_h1": false,
-        "intro": "<p>Reach out about an upcoming training, course, or workshop, or to ask about CE credit and group rates. We respond to professional inquiries directly.</p>",
-        "phone": "(302) 608-3780",
-        "hours": "By appointment",
-        "phone_required": false,
-        "reason_label": "What are you reaching out about?",
-        "reason_options": "Professional Training, Course or Certification, Workshop, Something Else",
-        "method_label": "Preferred method of contact",
-        "method_options": "Email, Phone, Either",
-        "message_label": "How can we help?",
-        "message_required": true,
-        "button_label": "Send Message",
-        "success_text": "Thank you. We usually reach out within 24-48 hours.",
-        "response_note": "We usually reach out within 24-48 hours.",
-        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
-        "bg_scheme": "sand",
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     }
   },
