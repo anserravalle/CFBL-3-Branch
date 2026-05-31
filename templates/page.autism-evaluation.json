@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -5,17 +14,20 @@
       "settings": {
         "eyebrow": "Autism Evaluation",
         "heading": "Autism Evaluations for Clarity and Deeper Understanding",
-        "subheading": "<p>Autism evaluations are designed to provide diagnostic clarity when there are questions about social communication, sensory differences, restricted or repetitive patterns of behavior, emotional regulation, executive functioning, developmental history, or differences in how a person experiences and responds to the world. At Center for Balanced Living, autism evaluations are completed with clinical care, developmental context, and respect for the whole person. The goal is not to reduce someone to a label, but to better understand patterns of functioning, clarify diagnosis when appropriate, and provide recommendations that support daily life, treatment planning, school supports, workplace needs, and self-understanding.</p>",
+        "subheading": "<p>Autism evaluations are designed to provide diagnostic clarity when there are questions about social communication, sensory differences, restricted or repetitive patterns of behavior, emotional regulation, executive functioning, developmental history, or differences in how a person experiences and responds to the world. </p><p>At Center for Balanced Living, autism evaluations are completed with clinical care, developmental context, and respect for the whole person. </p><p>The goal is not to reduce someone to a label, but to better understand patterns of functioning, clarify diagnosis when appropriate, and provide recommendations that support daily life, treatment planning, school supports, workplace needs, and self-understanding.</p>",
         "use_h1": true,
         "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "All Evaluations",
         "secondary_link": "/pages/psychological-evaluations",
-        "image": "",
+        "image": "shopify://shop_images/an-adult-giving-an-ados-to-a-child.png",
+        "image_alt": "autism evaluation",
+        "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "#2b5275",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 88,
         "padding_bottom": 88
@@ -29,7 +41,8 @@
           "settings": {
             "icon": "check",
             "title": "Children, teens, and adults seeking an affirming autism evaluation",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b1": {
@@ -37,7 +50,8 @@
           "settings": {
             "icon": "check",
             "title": "People who suspect their experiences may have been missed or misunderstood",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b2": {
@@ -45,7 +59,8 @@
           "settings": {
             "icon": "check",
             "title": "Those who have learned to mask and want a clearer self-understanding",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b3": {
@@ -53,7 +68,8 @@
           "settings": {
             "icon": "check",
             "title": "Families seeking access to services and support",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         }
       },
@@ -81,29 +97,37 @@
         "p0": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Clinical Interview",
-            "text": "We begin with listening and developmental history."
+            "text": "We begin with listening and developmental history.",
+            "link": ""
           }
         },
         "p1": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Standardized Measures",
-            "text": "Affirming, evidence-based assessment."
+            "text": "Affirming, evidence-based assessment.",
+            "link": ""
           }
         },
         "p2": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Observation",
-            "text": "Careful, respectful observation across contexts."
+            "text": "Careful, respectful observation across contexts.",
+            "link": ""
           }
         },
         "p3": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Findings & Support",
-            "text": "Clear results and individualized recommendations."
+            "text": "Clear results and individualized recommendations.",
+            "link": ""
           }
         }
       },
