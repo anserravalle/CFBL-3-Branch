@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "CFBL Institute · Professional Trainings",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "catalog": {
+      "type": "workshop-event-grid",
+      "blocks": {
+        "t1": { "type": "event", "settings": { "month": "SEP", "day": "18", "title": "Assessment-Informed Trauma Treatment", "time": "9:00 AM–4:00 PM", "location": "Live, online", "description": "Integrating psychological assessment with somatic and trauma work. CE credit available.", "link_label": "Register" } },
+        "t2": { "type": "event", "settings": { "month": "OCT", "day": "23", "title": "Applied Clinical Reasoning Intensive", "time": "9:00 AM–1:00 PM", "location": "Live, online", "description": "Case conceptualization and diagnostic precision for practicing clinicians.", "link_label": "Register" } }
+      },
+      "block_order": ["t1", "t2"],
+      "settings": {
+        "eyebrow": "Upcoming",
+        "heading": "Trainings & Continuing Education",
+        "subheading": "Taught by a practicing psychologist who carries a clinical caseload.",
+        "text_align": "left",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "ce": { "type": "item", "settings": { "question": "Is CE credit available?", "answer": "<p>CE credit details and eligibility are listed with each training and vary by license type and jurisdiction.</p>" } },
+        "format": { "type": "item", "settings": { "question": "What is the format?", "answer": "<p>Trainings are delivered live online unless otherwise noted, with materials provided to registrants.</p>" } }
+      },
+      "block_order": ["ce", "format"],
+      "settings": {
+        "eyebrow": "Details",
+        "heading": "Registration & CE Credit",
+        "cta_label": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Register or Inquire",
+        "body": "<p>Reserve a seat in an upcoming training, or contact us with questions about CE credit and group rates.</p>",
+        "primary_label": "View All Trainings",
+        "primary_link": "/pages/courses-certification",
+        "secondary_label": "Contact the Institute",
+        "secondary_link": "/pages/contact",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": ["header", "catalog", "faq", "cta"]
+}

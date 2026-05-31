@@ -179,12 +179,31 @@ tags and JSON-LD automatically.
 ---
 
 ## 6. Brand family (CFBL · CFBL Institute · MUSA)
-This is the **parent CFBL** theme (Navy/Sand, Cormorant SC + Montserrat). The
-brand kit defines two sub-brands with deliberately separate identities that must
-not visually mix with the parent: **CFBL Institute** (Forest/Cream, Cormorant SC
-+ Lora) and **MUSA** (Oxblood/Bone, DM Serif Display + EB Garamond). If/when the
-Institute and MUSA pages need their own palette + typography within this store,
-the theme supports a per-page **brand scope** (see `docs/DESIGN_SYSTEM.md`).
+
+One theme renders all three brands, each in its own palette + typography +
+logo — and they never mix on a page. The active look is decided **per page** by
+the template you assign it (or a `custom.brand_scope` page metafield). See
+`docs/DESIGN_SYSTEM.md` §13b.
+
+| Brand | Palette / fonts | Landing | Assign these templates to pages |
+| ----- | --------------- | ------- | ------------------------------- |
+| **CFBL** | Navy/Sand · Cormorant SC + Montserrat | Home, `about`, `services` | `service` → therapy/supervision/EMDR/etc.; `evaluations` → psychological-evaluations; `workshops`; default `page` for the rest |
+| **CFBL Institute** | Forest/Cream · Cormorant SC + Lora | `cfbl-institute` | `professional-trainings`; and assign Institute pages (courses-certification, clinical-supervision, emdr-consultation, professionals) the relevant template or set their `brand_scope` metafield to `institute` |
+| **MUSA** | Oxblood/Bone · DM Serif + EB Garamond | `musa` | `author-page`; blog template `essays`; article template `musa` |
+
+**How to assign a template to a page** (no code): in Shopify admin open the
+page (or blog/article), and in the **Theme template** dropdown choose the
+template (e.g. `service`, `evaluations`, `cfbl-institute`). The brand scope,
+colors, fonts, and logo switch automatically.
+
+**Make more service landing pages:** in the theme editor, duplicate the
+`service` template (or any template) to create page-specific versions with their
+own FAQ/CTA copy — e.g. one per high-value service.
+
+**Reminder:** sections defined in a JSON template are **shared** by every page
+using that template. A page's unique prose comes from the page's own content
+(rendered by the page header section); the surrounding process/FAQ/CTA bands are
+the shared shell. Duplicate the template when a page needs unique band copy.
 
 ---
 

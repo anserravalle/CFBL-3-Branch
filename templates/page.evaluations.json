@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "Psychological Evaluations",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "types": {
+      "type": "service-card-grid",
+      "blocks": {
+        "adhd": { "type": "card", "settings": { "icon": "compass", "title": "ADHD Evaluation", "body": "<p>Comprehensive assessment for attention and executive functioning.</p>", "link_label": "Learn more", "link": "/pages/adhd-evaluation" } },
+        "autism": { "type": "card", "settings": { "icon": "users", "title": "Autism Evaluation", "body": "<p>Developmentally informed evaluation for children, teens, and adults.</p>", "link_label": "Learn more", "link": "/pages/autism-evaluation" } },
+        "diagnostic": { "type": "card", "settings": { "icon": "shield", "title": "Diagnostic Clarification", "body": "<p>Clarity when the picture is complex or prior answers conflict.</p>", "link_label": "Learn more", "link": "/pages/diagnostic-clarification" } },
+        "personality": { "type": "card", "settings": { "icon": "heart", "title": "Personality & Emotional", "body": "<p>Understanding emotional functioning and personality dynamics.</p>", "link_label": "Learn more", "link": "/pages/personality-and-emotional" } },
+        "academic": { "type": "card", "settings": { "icon": "book", "title": "Academic & Learning", "body": "<p>Evaluation of learning differences to guide support and accommodations.</p>", "link_label": "Learn more", "link": "/pages/academic-and-learning" } }
+      },
+      "block_order": ["adhd", "autism", "diagnostic", "personality", "academic"],
+      "settings": {
+        "eyebrow": "Types of Evaluation",
+        "heading": "Clarity for Diagnosis and Next Steps",
+        "subheading": "Thorough psychological evaluation that brings direction, not just a label.",
+        "text_align": "left",
+        "columns": "3",
+        "mobile_two_up": true,
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "intake": { "type": "item", "settings": { "title": "Intake & History", "text": "We begin with careful listening and a thorough history." } },
+        "assessment": { "type": "item", "settings": { "title": "Standardized Assessment", "text": "Evidence-based measures tailored to the referral question." } },
+        "feedback": { "type": "item", "settings": { "title": "Feedback Session", "text": "We review findings together, in plain language." } },
+        "report": { "type": "item", "settings": { "title": "Written Summary", "text": "A clear report with recommendations and next steps." } }
+      },
+      "block_order": ["intake", "assessment", "feedback", "report"],
+      "settings": {
+        "eyebrow": "What Happens",
+        "heading": "The Evaluation Process",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Get Started",
+        "heading": "Request an Evaluation",
+        "body": "<p>Tell us a little about what you're seeking clarity on, and we'll guide you through the next step.</p>",
+        "primary_label": "Request a Consultation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": ["header", "types", "process", "cta"]
+}
