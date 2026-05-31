@@ -1,0 +1,97 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Career Development",
+        "heading": "Grow your clinical practice with us",
+        "subheading": "<p>Clinical supervision toward licensure, EMDR consultation toward EMDRIA certification, and opportunities to join our team.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Join Our Team",
+        "secondary_link": "/pages/join-our-team",
+        "image": "",
+        "image_frame": true,
+        "frame_color": "#6F8F7A",
+        "show_shape": true,
+        "layout": "split",
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "paths": {
+      "type": "tabs",
+      "blocks": {
+        "supervision": {
+          "type": "tab",
+          "settings": {
+            "title": "Clinical Supervision",
+            "heading": "Clinical Supervision",
+            "content": "<p>Supervision offers a space to deepen clinical skill, strengthen case conceptualization, and support thoughtful professional growth, grounded in reflection and clinical integrity. Available for LPC associates and PsyD trainees working toward licensure.</p>",
+            "link": "/pages/clinical-supervision",
+            "link_label": "Learn about supervision"
+          }
+        },
+        "emdr": {
+          "type": "tab",
+          "settings": {
+            "title": "EMDR Consultation",
+            "heading": "EMDR Consultation",
+            "content": "<p>As a Certified EMDR Therapist and EMDRIA Approved Consultant, Dr. Serravalle provides consultation that strengthens EMDR case conceptualization and supports clinicians working toward EMDRIA certification.</p>",
+            "link": "/pages/emdr-consultation",
+            "link_label": "Learn about EMDR consultation"
+          }
+        },
+        "team": {
+          "type": "tab",
+          "settings": {
+            "title": "Join Our Team",
+            "heading": "Join Our Team",
+            "content": "<p>We are always interested in connecting with clinicians who share our commitment to trauma-informed, relationally grounded care. Learn about current openings and what it is like to work at Center for Balanced Living.</p>",
+            "link": "/pages/join-our-team",
+            "link_label": "See opportunities"
+          }
+        }
+      },
+      "block_order": [
+        "supervision",
+        "emdr",
+        "team"
+      ],
+      "settings": {
+        "eyebrow": "Pathways",
+        "heading": "Ways to Grow With Us",
+        "subheading": "Select a path to read more, then open its full page for details.",
+        "text_align": "left",
+        "image_ratio": "4-3",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Let's talk about your growth",
+        "body": "<p>Reach out to discuss supervision, consultation, or joining our team.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Join Our Team",
+        "secondary_link": "/pages/join-our-team",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "paths",
+    "cta"
+  ]
+}

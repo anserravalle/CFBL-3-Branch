@@ -9,20 +9,23 @@
           "type": "menu",
           "settings": { "title": "Explore", "menu": "footer" }
         },
-        "services": {
+        "clients": {
           "type": "menu",
-          "settings": { "title": "Services", "menu": "main-menu" }
+          "settings": { "title": "For Clients", "menu": "footer-for-clients" }
         },
-        "contact": {
-          "type": "contact",
+        "professionals": {
+          "type": "menu",
+          "settings": { "title": "For Professionals", "menu": "footer-for-professionals" }
+        },
+        "hours": {
+          "type": "text",
           "settings": {
-            "title": "Contact",
-            "phone": "(302) 608-3780",
-            "hours": "By appointment"
+            "title": "Office Hours",
+            "content": "<p>Monday: 10 am-6 pm<br>Tuesday: 10 am-6 pm<br>Wednesday: 10 am-6 pm<br>Thursday: 10 am-6 pm<br>Friday: 10 am-4 pm<br>Saturday / Sunday: Closed</p>"
           }
         }
       },
-      "block_order": ["explore", "services", "contact"],
+      "block_order": ["explore", "clients", "professionals", "hours"],
       "settings": {}
     }
   },
