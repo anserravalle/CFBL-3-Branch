@@ -71,6 +71,50 @@
 }
 
 /* ---------------------------------------------------------------------------
+   1b. Sub-brand scopes — applied as a class on <body> by layout/theme.liquid.
+   The CFBL Brand Kit requires these identities stay visually separate, so each
+   scope re-maps the palette + fonts. Components reference tokens only, so the
+   entire page (header, sections, footer) adopts the scope automatically.
+   --------------------------------------------------------------------------- */
+
+/* CFBL Institute — Forest / Sage / Cream, Cormorant SC + Lora */
+.brand--institute {
+  --color-navy: #3D5A52;        /* Forest — anchor: buttons, dark bands, links */
+  --color-sky: #6F8F7A;         /* Sage */
+  --color-sand: #B8C9BC;        /* Sage Mist for soft fields */
+  --color-terracotta: #6F8F7A;  /* keep accents in-family (no parent terracotta) */
+  --color-bg: #F0EAE0;          /* Paper */
+  --color-bg-sand: #EAE2D0;     /* Cream */
+  --color-text: #2A3530;        /* Deep Ink (never pure black) */
+  --color-heading: #3D5A52;     /* Forest */
+  --color-navy-dark: #2A3530;
+  --color-border: #D8D2C4;
+  --color-on-dark: #F0EAE0;
+  --font-body: "Lora", Georgia, "Times New Roman", serif;
+  /* heading stays Cormorant SC — the family resemblance with the parent */
+}
+
+/* MUSA — Oxblood / Bone, DM Serif Display + EB Garamond */
+.brand--musa {
+  --color-navy: #6E1F23;        /* Oxblood — signature accent / dark bands */
+  --color-sky: #C5A572;         /* Ochre */
+  --color-sand: #EDE0C8;        /* Parchment */
+  --color-terracotta: #C5A572;  /* Ochre, used sparingly */
+  --color-bg: #F1E8D8;          /* Bone */
+  --color-bg-sand: #EDE0C8;     /* Parchment */
+  --color-text: #1F1A16;        /* Ink (never pure black) */
+  --color-heading: #4A4036;     /* Walnut headers/bylines */
+  --color-navy-dark: #4A4036;   /* Walnut */
+  --color-border: #DDD2BE;
+  --color-on-dark: #F1E8D8;
+  --font-heading: "DM Serif Display", Georgia, serif;
+  --font-body: "EB Garamond", Georgia, "Times New Roman", serif;
+}
+/* MUSA reads as long-form: slightly larger, airier body */
+.brand--musa { --lh-body: 1.7; }
+.brand--musa .rte { font-size: 1.12rem; }
+
+/* ---------------------------------------------------------------------------
    2. Reset & base elements
    --------------------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }

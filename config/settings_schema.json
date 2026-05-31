@@ -51,9 +51,13 @@
         { "value": "navy", "label": "Navy" }
       ], "default": "light" },
       { "type": "checkbox", "id": "header_sticky", "label": "Sticky header on scroll", "default": true },
-      { "type": "image_picker", "id": "logo", "label": "Logo image" },
+      { "type": "image_picker", "id": "logo", "label": "Logo image (CFBL — rainbow tree)" },
       { "type": "range", "id": "logo_height", "label": "Logo height", "min": 24, "max": 96, "step": 2, "unit": "px", "default": 48 },
-      { "type": "image_picker", "id": "logo_mobile", "label": "Mobile logo image (optional)" }
+      { "type": "image_picker", "id": "logo_mobile", "label": "Mobile logo image (optional)" },
+      { "type": "header", "content": "Sub-brand logos" },
+      { "type": "paragraph", "content": "Used automatically on pages scoped to each sub-brand (CFBL Institute / MUSA)." },
+      { "type": "image_picker", "id": "logo_institute", "label": "CFBL Institute logo" },
+      { "type": "image_picker", "id": "logo_musa", "label": "MUSA logo" }
     ]
   },
   {

@@ -16,18 +16,26 @@
 
     <title>{{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
 
-    {%- comment -%} Fonts: brand defaults (Cormorant SC + Montserrat) load via
-        Google Fonts; if the owner opts into Shopify fonts, those load instead. {%- endcomment -%}
+    {%- comment -%} Resolve the per-page brand scope (cfbl | institute | musa). {%- endcomment -%}
+    {%- capture brand_scope %}{% render 'brand-scope' %}{% endcapture -%}
+    {%- assign brand_scope = brand_scope | strip -%}
+
+    {%- comment -%} Fonts per scope. Brand fonts (default on) load the right
+        families for the active sub-brand; otherwise the owner's Shopify fonts. {%- endcomment -%}
     {%- if settings.use_brand_fonts -%}
-      <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
-      <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-        media="print" onload="this.media='all'">
-      <noscript>
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
-      </noscript>
+      {%- liquid
+        case brand_scope
+          when 'institute'
+            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600'
+          when 'musa'
+            assign font_query = 'family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500'
+          else
+            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Montserrat:wght@300;400;500;600'
+        endcase
+      -%}
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?{{ font_query }}&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{ font_query }}&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{ font_query }}&display=swap"></noscript>
     {%- else -%}
       {{ settings.heading_font | font_face: font_display: 'swap' }}
       {{ settings.body_font | font_face: font_display: 'swap' }}
@@ -78,7 +86,7 @@
     <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
   </head>
 
-  <body class="template-{{ request.page_type | handleize }}{% if settings.enable_animations %} animations-on{% endif %}">
+  <body class="template-{{ request.page_type | handleize }} brand--{{ brand_scope }}{% if settings.enable_animations %} animations-on{% endif %}">
     <a class="skip-to-content" href="#MainContent">{{ 'accessibility.skip_to_content' | t | default: 'Skip to content' }}</a>
 
     {%- sections 'announcement-group' -%}

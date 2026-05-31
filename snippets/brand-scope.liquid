@@ -1,0 +1,45 @@
+{%- comment -%}
+  Brand scope resolver. Echoes one of: cfbl | institute | musa
+  Used to apply the correct sub-brand palette, fonts, and logo per page while
+  keeping the brand boundaries separate (per the CFBL Brand Kit).
+
+  How scope is decided (in priority order):
+    1. Page metafield `custom.brand_scope` = "institute" | "musa" | "cfbl"
+       (lets the owner override per page with no code).
+    2. The page template suffix (owner-controlled by assigning a template):
+       e.g. a page using template "page.cfbl-institute" → institute.
+    3. Default → cfbl (parent brand).
+
+  Capture it where needed:
+    {% capture brand_scope %}{% render 'brand-scope' %}{% endcapture %}
+    {% assign brand_scope = brand_scope | strip %}
+{%- endcomment -%}
+{%- liquid
+  assign scope = 'cfbl'
+  assign suffix = template.suffix | default: '' | downcase
+
+  assign institute_suffixes = 'cfbl-institute,institute,professional-trainings,courses-certification,clinical-supervision,emdr-consultation,professionals,educational-program,professional-development'
+  assign musa_suffixes = 'musa,author-page,author,essays'
+
+  assign list = institute_suffixes | split: ','
+  for item in list
+    if suffix == item
+      assign scope = 'institute'
+    endif
+  endfor
+  assign mlist = musa_suffixes | split: ','
+  for item in mlist
+    if suffix == item
+      assign scope = 'musa'
+    endif
+  endfor
+
+  if page.metafields.custom.brand_scope != blank
+    assign mf = page.metafields.custom.brand_scope.value | default: page.metafields.custom.brand_scope | downcase
+    if mf == 'institute' or mf == 'musa' or mf == 'cfbl'
+      assign scope = mf
+    endif
+  endif
+
+  echo scope
+-%}

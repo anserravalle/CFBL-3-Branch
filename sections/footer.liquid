@@ -5,11 +5,26 @@
 <footer class="site-footer" role="contentinfo">
   <div class="page-width">
     <div class="footer__grid">
+      {%- liquid
+        capture brand_scope
+          render 'brand-scope'
+        endcapture
+        assign brand_scope = brand_scope | strip
+        assign active_logo = settings.logo
+        assign brand_label = section.settings.footer_title | default: shop.name
+        if brand_scope == 'institute' and settings.logo_institute != blank
+          assign active_logo = settings.logo_institute
+          assign brand_label = 'CFBL Institute'
+        elsif brand_scope == 'musa' and settings.logo_musa != blank
+          assign active_logo = settings.logo_musa
+          assign brand_label = 'MUSA'
+        endif
+      -%}
       <div class="footer__about">
-        {%- if settings.logo != blank -%}
-          <img class="footer__logo-img" src="{{ settings.logo | image_url: width: 320 }}" alt="{{ shop.name | escape }}" width="160" loading="lazy">
+        {%- if active_logo != blank -%}
+          <img class="footer__logo-img" src="{{ active_logo | image_url: width: 320 }}" alt="{{ brand_label | escape }}" width="160" loading="lazy">
         {%- else -%}
-          <span class="footer__logo">{{ section.settings.footer_title | default: shop.name }}</span>
+          <span class="footer__logo">{{ brand_label }}</span>
         {%- endif -%}
         {%- if section.settings.about_text != blank -%}
           <div class="rte">{{ section.settings.about_text }}</div>

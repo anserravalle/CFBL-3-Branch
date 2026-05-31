@@ -222,6 +222,30 @@ graphic accent per section.
 
 ---
 
+## 13b. Sub-brand scopes (CFBL · Institute · MUSA)
+
+The brand family shares an author and a clinical sensibility but **must not mix
+palettes, fonts, or voice within a single page**. The theme supports three
+scopes via a `body` class set by `layout/theme.liquid` (resolved in
+`snippets/brand-scope.liquid`):
+
+| Scope         | Primary anchor | Ground         | Headline           | Body          |
+| ------------- | -------------- | -------------- | ------------------ | ------------- |
+| `cfbl` (default) | Deep Navy `#2B5275` | Sand `#EED9C5` | Cormorant SC | Montserrat |
+| `institute`   | Forest `#3D5A52` | Cream `#EAE2D0` | Cormorant SC | Lora |
+| `musa`        | Oxblood `#6E1F23` | Bone `#F1E8D8` | DM Serif Display | EB Garamond |
+
+**How scope is chosen** (priority): page metafield `custom.brand_scope` →
+page template suffix (e.g. a page using template `page.cfbl-institute` →
+`institute`; `page.musa` / `page.author-page` → `musa`) → default `cfbl`.
+
+Because every component references design tokens only, applying `.brand--*`
+re-maps the entire page (header, sections, footer) automatically. The header
+and footer also swap to the matching logo (CFBL rainbow tree / Institute /
+MUSA) from theme settings. Fonts for the active scope are the only ones loaded,
+keeping each page lean. Voice differences (warm vs. peer-to-peer vs. literary,
+and the absence of marketing CTAs on MUSA) live in each scoped template's copy.
+
 ## 14. Performance commitments
 
 - System/Google fonts with `swap`; preconnect.

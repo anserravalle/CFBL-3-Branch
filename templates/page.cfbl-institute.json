@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "intro": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "CFBL Institute · Continuing Education",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "offerings": {
+      "type": "service-card-grid",
+      "blocks": {
+        "assessment": { "type": "card", "settings": { "icon": "compass", "title": "Psychological Assessment", "body": "<p>Integrating assessment psychology with applied clinical reasoning.</p>", "link_label": "View trainings", "link": "/pages/professional-trainings" } },
+        "trauma": { "type": "card", "settings": { "icon": "shield", "title": "Trauma & Somatic Practice", "body": "<p>Nervous-system-informed intervention grounded in current evidence.</p>", "link_label": "View trainings", "link": "/pages/professional-trainings" } },
+        "supervision": { "type": "card", "settings": { "icon": "users", "title": "Supervision & Consultation", "body": "<p>Clinical supervision and EMDR consultation for licensed clinicians.</p>", "link_label": "Learn more", "link": "/pages/clinical-supervision" } },
+        "reasoning": { "type": "card", "settings": { "icon": "book", "title": "Applied Clinical Reasoning", "body": "<p>Case conceptualization and diagnostic precision in practice.</p>", "link_label": "View trainings", "link": "/pages/courses-certification" } }
+      },
+      "block_order": ["assessment", "trauma", "supervision", "reasoning"],
+      "settings": {
+        "eyebrow": "Areas of Study",
+        "heading": "Training That Integrates Assessment, Trauma, and Clinical Reasoning",
+        "subheading": "Continuing education taught by a practicing psychologist who carries a clinical caseload.",
+        "text_align": "left",
+        "columns": "4",
+        "mobile_two_up": true,
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "ce": { "type": "item", "settings": { "question": "Are CE credits offered?", "answer": "<p>Continuing education credit details are listed with each individual training. Eligibility varies by license type and jurisdiction.</p>" } },
+        "audience": { "type": "item", "settings": { "question": "Who should attend?", "answer": "<p>Licensed mental health clinicians, graduate students in clinical and counseling psychology, and supervisees and consultees.</p>" } },
+        "register": { "type": "item", "settings": { "question": "How do I register?", "answer": "<p>Registration is available on each training's page. For supervision and consultation, apply directly through the contact form.</p>" } }
+      },
+      "block_order": ["ce", "audience", "register"],
+      "settings": {
+        "eyebrow": "Details",
+        "heading": "Registration & CE Credit",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Register or Apply for Consultation",
+        "body": "<p>Review upcoming trainings, or apply for clinical supervision and EMDR consultation.</p>",
+        "primary_label": "View Trainings",
+        "primary_link": "/pages/professional-trainings",
+        "secondary_label": "Apply for Consultation",
+        "secondary_link": "/pages/contact",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": ["intro", "offerings", "faq", "cta"]
+}

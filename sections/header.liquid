@@ -8,20 +8,33 @@
   if settings.header_sticky
     assign sticky_class = 'is-sticky'
   endif
+  capture brand_scope
+    render 'brand-scope'
+  endcapture
+  assign brand_scope = brand_scope | strip
+  assign active_logo = settings.logo
+  assign brand_label = shop.name
+  if brand_scope == 'institute' and settings.logo_institute != blank
+    assign active_logo = settings.logo_institute
+    assign brand_label = 'CFBL Institute'
+  elsif brand_scope == 'musa' and settings.logo_musa != blank
+    assign active_logo = settings.logo_musa
+    assign brand_label = 'MUSA'
+  endif
 -%}
 <header class="site-header {{ sticky_class }}" style="--logo-height: {{ settings.logo_height }}px;">
   <div class="page-width">
     <div class="site-header__inner">
       {%- comment -%} Logo {%- endcomment -%}
-      <a href="{{ routes.root_url }}" class="site-header__logo" aria-label="{{ shop.name }} — home">
-        {%- if settings.logo != blank -%}
-          {%- assign logo_alt = settings.logo.alt | default: shop.name -%}
-          <img src="{{ settings.logo | image_url: width: 400 }}"
-               srcset="{{ settings.logo | image_url: width: 200 }} 1x, {{ settings.logo | image_url: width: 400 }} 2x"
-               alt="{{ logo_alt | escape }}" width="{{ settings.logo.width }}" height="{{ settings.logo.height }}"
+      <a href="{{ routes.root_url }}" class="site-header__logo" aria-label="{{ brand_label }} — home">
+        {%- if active_logo != blank -%}
+          {%- assign logo_alt = active_logo.alt | default: brand_label -%}
+          <img src="{{ active_logo | image_url: width: 400 }}"
+               srcset="{{ active_logo | image_url: width: 200 }} 1x, {{ active_logo | image_url: width: 400 }} 2x"
+               alt="{{ logo_alt | escape }}" width="{{ active_logo.width }}" height="{{ active_logo.height }}"
                fetchpriority="high">
         {%- else -%}
-          <span class="site-header__logo-text">{{ shop.name }}</span>
+          <span class="site-header__logo-text">{{ brand_label }}</span>
         {%- endif -%}
       </a>
 
@@ -55,7 +68,7 @@
 <div class="drawer-overlay" data-drawer-overlay hidden></div>
 <aside class="drawer" id="MobileDrawer" aria-label="Mobile menu" aria-hidden="true" tabindex="-1">
   <div class="drawer__header">
-    <span class="site-header__logo-text">{{ shop.name }}</span>
+    <span class="site-header__logo-text">{{ brand_label }}</span>
     <button type="button" class="drawer__close" aria-label="Close menu" data-drawer-close>&times;</button>
   </div>
   {%- if menu != blank -%}

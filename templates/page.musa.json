@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "intro": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "MUSA · Writing & Essays by Dr. Niki Serravalle",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 56
+      }
+    },
+    "essays": {
+      "type": "blog-feature",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Recent Essays",
+        "subheading": "Longer-form writing on psychology, memory, identity, and being human.",
+        "post_limit": 6,
+        "columns": "2",
+        "show_excerpt": true,
+        "show_tags": false,
+        "view_all_label": "All essays",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 32,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": ["intro", "essays"]
+}
