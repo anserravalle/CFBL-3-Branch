@@ -1,0 +1,41 @@
+{%- comment -%}
+  Announcement bar — editable message strip above the header.
+  Supports an optional inline link. Fully editor-controlled.
+{%- endcomment -%}
+{%- if section.settings.text != blank -%}
+  <div class="announcement" style="--announcement-bg: {{ section.settings.bg_color }}; --announcement-color: {{ section.settings.text_color }};">
+    <div class="page-width">
+      <p class="announcement__inner">
+        {%- if section.settings.icon != blank -%}
+          {%- render 'icon', name: section.settings.icon, size: 16 -%}
+        {%- endif -%}
+        <span>{{ section.settings.text }}</span>
+        {%- if section.settings.link != blank and section.settings.link_label != blank -%}
+          <a href="{{ section.settings.link }}">{{ section.settings.link_label }}</a>
+        {%- endif -%}
+      </p>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    { "type": "text", "id": "text", "label": "Message", "default": "Now accepting new clients across the MOT area and throughout Delaware." },
+    { "type": "select", "id": "icon", "label": "Leading icon", "options": [
+      { "value": "", "label": "None" },
+      { "value": "heart", "label": "Heart" },
+      { "value": "calendar", "label": "Calendar" },
+      { "value": "pin", "label": "Location" }
+    ], "default": "heart" },
+    { "type": "url", "id": "link", "label": "Link" },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "Request a consultation" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#2B5275" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#FBF6F0" }
+  ],
+  "presets": [{ "name": "Announcement bar" }],
+  "enabled_on": { "groups": ["announcement"] }
+}
+{% endschema %}

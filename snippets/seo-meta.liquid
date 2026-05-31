@@ -1,0 +1,134 @@
+{%- comment -%}
+  SEO + social meta + structured data.
+  Rendered once in <head> from layout/theme.liquid.
+  - Title/description use Shopify's editable page fields (page_title,
+    page_description) so the owner controls them per page in the admin.
+  - Open Graph / Twitter cards for social sharing.
+  - JSON-LD: Organization + LocalBusiness (sitewide), WebSite (search),
+    Article/BlogPosting (articles), Product (products), BreadcrumbList.
+  FAQPage structured data is emitted by sections/faq-section.liquid where the
+  FAQ content actually lives.
+{%- endcomment -%}
+
+{%- liquid
+  assign og_title = page_title
+  assign og_desc = page_description | default: shop.description | default: shop.name
+  assign og_image = settings.social_share_image | default: page_image
+  assign biz_name = settings.business_name | default: shop.name
+-%}
+
+<meta name="description" content="{{ og_desc | escape }}">
+<link rel="canonical" href="{{ canonical_url }}">
+
+<meta property="og:site_name" content="{{ shop.name | escape }}">
+<meta property="og:type" content="{% if request.page_type == 'article' %}article{% elsif request.page_type == 'product' %}product{% else %}website{% endif %}">
+<meta property="og:title" content="{{ og_title | escape }}">
+<meta property="og:description" content="{{ og_desc | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+{%- if og_image -%}
+  <meta property="og:image" content="https:{{ og_image | image_url: width: 1200 }}">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:card" content="summary_large_image">
+{%- else -%}
+  <meta name="twitter:card" content="summary">
+{%- endif -%}
+<meta name="twitter:title" content="{{ og_title | escape }}">
+<meta name="twitter:description" content="{{ og_desc | escape }}">
+{%- if og_image -%}<meta name="twitter:image" content="https:{{ og_image | image_url: width: 1200 }}">{%- endif -%}
+
+{%- comment -%} -------- Organization + LocalBusiness (sitewide) -------- {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "{{ settings.schema_business_type | default: 'MedicalBusiness' }}"],
+  "name": {{ biz_name | json }},
+  "url": {{ shop.url | append: '/' | json }},
+  {% if settings.logo %}"logo": "https:{{ settings.logo | image_url: width: 512 }}",{% endif %}
+  {% if og_image %}"image": "https:{{ og_image | image_url: width: 1200 }}",{% endif %}
+  "description": {{ shop.description | default: og_desc | json }}
+  {%- if settings.business_phone != blank -%},
+  "telephone": {{ settings.business_phone | json }}
+  {%- endif -%}
+  {%- if settings.business_email != blank -%},
+  "email": {{ settings.business_email | json }}
+  {%- endif -%}
+  {%- if settings.business_street != blank -%},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ settings.business_street | json }},
+    "addressLocality": {{ settings.business_city | default: 'Middletown' | json }},
+    "addressRegion": {{ settings.business_region | default: 'DE' | json }},
+    "postalCode": {{ settings.business_zip | json }},
+    "addressCountry": "US"
+  }
+  {%- endif -%}
+  {%- if settings.business_areas != blank -%},
+  "areaServed": {{ settings.business_areas | split: ',' | json }}
+  {%- endif -%}
+  {%- assign socials = '' -%}
+  {%- if settings.social_instagram != blank %}{% assign socials = socials | append: settings.social_instagram | append: ',' %}{% endif -%}
+  {%- if settings.social_facebook != blank %}{% assign socials = socials | append: settings.social_facebook | append: ',' %}{% endif -%}
+  {%- if settings.social_linkedin != blank %}{% assign socials = socials | append: settings.social_linkedin | append: ',' %}{% endif -%}
+  {%- if socials != blank -%},
+  "sameAs": {{ socials | split: ',' | json }}
+  {%- endif -%}
+}
+</script>
+
+{%- comment -%} -------- WebSite + Sitelinks search -------- {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ shop.name | json }},
+  "url": {{ shop.url | append: '/' | json }},
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ shop.url }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{%- comment -%} -------- Article / BlogPosting -------- {%- endcomment -%}
+{%- if request.page_type == 'article' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ article.title | json }},
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  {% if article.image %}"image": "https:{{ article.image | image_url: width: 1200 }}",{% endif %}
+  "author": { "@type": "Person", "name": {{ article.author | default: biz_name | json }} },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ biz_name | json }}
+    {% if settings.logo %},"logo": { "@type": "ImageObject", "url": "https:{{ settings.logo | image_url: width: 512 }}" }{% endif %}
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical_url | json }} },
+  "description": {{ article.excerpt_or_content | strip_html | truncate: 200 | json }}
+}
+</script>
+{%- endif -%}
+
+{%- comment -%} -------- Product -------- {%- endcomment -%}
+{%- if request.page_type == 'product' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  {% if product.featured_image %}"image": "https:{{ product.featured_image | image_url: width: 1200 }}",{% endif %}
+  "description": {{ product.description | strip_html | truncate: 300 | json }},
+  "brand": { "@type": "Brand", "name": {{ biz_name | json }} },
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ product.price | money_without_currency | strip_html }}",
+    "priceCurrency": {{ cart.currency.iso_code | json }},
+    "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+    "url": "{{ shop.url }}{{ product.url }}"
+  }
+}
+</script>
+{%- endif -%}

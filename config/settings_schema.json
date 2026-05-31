@@ -1,0 +1,111 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Center for Balanced Living",
+    "theme_version": "1.0.0",
+    "theme_author": "Center for Balanced Living",
+    "theme_documentation_url": "https://code.claude.com/docs",
+    "theme_support_url": "https://code.claude.com/docs"
+  },
+  {
+    "name": "Brand colors",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Core brand palette. Defaults match the CFBL Brand Kit (Deep Navy, Sky Blue, Sand, Terracotta)."
+      },
+      { "type": "color", "id": "color_primary", "label": "Primary color (headings, primary buttons)", "default": "#2B5275" },
+      { "type": "color", "id": "color_secondary", "label": "Secondary color (links, accents)", "default": "#4E9FBF" },
+      { "type": "color", "id": "color_sand", "label": "Sand (warm fields, sand backgrounds)", "default": "#EED9C5" },
+      { "type": "color", "id": "color_accent", "label": "Accent color (terracotta, use sparingly)", "default": "#9D654E" },
+      { "type": "color", "id": "color_background", "label": "Page background", "default": "#FBF6F0" },
+      { "type": "color", "id": "color_text", "label": "Body text color", "default": "#2A2724" }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      { "type": "font_picker", "id": "heading_font", "label": "Heading font", "default": "assistant_n4", "info": "Brand default is Cormorant SC (loaded via the theme). Use this to override." },
+      { "type": "font_picker", "id": "body_font", "label": "Body font", "default": "assistant_n4", "info": "Brand default is Montserrat (loaded via the theme). Use this to override." },
+      { "type": "range", "id": "base_font_size", "label": "Base font size", "min": 15, "max": 20, "step": 1, "unit": "px", "default": 16 },
+      { "type": "range", "id": "heading_scale", "label": "Heading scale", "min": 80, "max": 130, "step": 5, "unit": "%", "default": 100, "info": "Scales all headings up or down together." }
+    ]
+  },
+  {
+    "name": "Layout & spacing",
+    "settings": [
+      { "type": "range", "id": "page_max_width", "label": "Page max width", "min": 1100, "max": 1600, "step": 20, "unit": "px", "default": 1280 },
+      { "type": "range", "id": "section_max_width", "label": "Content max width", "min": 900, "max": 1400, "step": 20, "unit": "px", "default": 1100 },
+      { "type": "range", "id": "section_spacing", "label": "Global vertical section spacing", "min": 32, "max": 160, "step": 4, "unit": "px", "default": 80, "info": "Default top/bottom padding for sections; each section can override." },
+      { "type": "range", "id": "button_radius", "label": "Button corner radius", "min": 0, "max": 999, "step": 1, "unit": "px", "default": 999 },
+      { "type": "range", "id": "card_radius", "label": "Card & image corner radius", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 16 }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      { "type": "select", "id": "header_style", "label": "Header style", "options": [
+        { "value": "light", "label": "Light (warm background)" },
+        { "value": "navy", "label": "Navy" }
+      ], "default": "light" },
+      { "type": "checkbox", "id": "header_sticky", "label": "Sticky header on scroll", "default": true },
+      { "type": "image_picker", "id": "logo", "label": "Logo image" },
+      { "type": "range", "id": "logo_height", "label": "Logo height", "min": 24, "max": 96, "step": 2, "unit": "px", "default": 48 },
+      { "type": "image_picker", "id": "logo_mobile", "label": "Mobile logo image (optional)" }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      { "type": "select", "id": "footer_style", "label": "Footer style", "options": [
+        { "value": "navy", "label": "Navy" },
+        { "value": "sand", "label": "Sand" }
+      ], "default": "navy" }
+    ]
+  },
+  {
+    "name": "Brand assets & SEO",
+    "settings": [
+      { "type": "image_picker", "id": "favicon", "label": "Favicon", "info": "Square PNG, at least 32×32." },
+      { "type": "image_picker", "id": "social_share_image", "label": "Default social sharing image", "info": "Shown when pages are shared. 1200×630 recommended." },
+      { "type": "text", "id": "business_name", "label": "Business name (structured data)", "default": "Center for Balanced Living" },
+      { "type": "select", "id": "schema_business_type", "label": "Business type (structured data)", "options": [
+        { "value": "MedicalBusiness", "label": "Medical business" },
+        { "value": "Psychologist", "label": "Psychologist" },
+        { "value": "ProfessionalService", "label": "Professional service" },
+        { "value": "LocalBusiness", "label": "Local business" }
+      ], "default": "Psychologist" },
+      { "type": "text", "id": "business_phone", "label": "Phone" },
+      { "type": "text", "id": "business_email", "label": "Email" },
+      { "type": "text", "id": "business_street", "label": "Street address" },
+      { "type": "text", "id": "business_city", "label": "City", "default": "Middletown" },
+      { "type": "text", "id": "business_region", "label": "State/Region", "default": "DE" },
+      { "type": "text", "id": "business_zip", "label": "ZIP / postal code" },
+      { "type": "text", "id": "business_areas", "label": "Areas served (comma-separated)", "default": "Middletown, Townsend, Odessa, MOT, New Castle County, Delaware" }
+    ]
+  },
+  {
+    "name": "Social links",
+    "settings": [
+      { "type": "text", "id": "social_instagram", "label": "Instagram URL" },
+      { "type": "text", "id": "social_facebook", "label": "Facebook URL" },
+      { "type": "text", "id": "social_linkedin", "label": "LinkedIn URL" }
+    ]
+  },
+  {
+    "name": "Buttons & global CTAs",
+    "settings": [
+      { "type": "paragraph", "content": "Default calls-to-action available to sections that opt to use the global CTA." },
+      { "type": "text", "id": "primary_cta_label", "label": "Primary CTA label", "default": "Request a Consultation" },
+      { "type": "url", "id": "primary_cta_link", "label": "Primary CTA link" },
+      { "type": "text", "id": "secondary_cta_label", "label": "Secondary CTA label", "default": "Explore Services" },
+      { "type": "url", "id": "secondary_cta_link", "label": "Secondary CTA link" }
+    ]
+  },
+  {
+    "name": "Animations",
+    "settings": [
+      { "type": "checkbox", "id": "enable_animations", "label": "Enable subtle scroll animations", "default": true, "info": "Lightweight fade/rise on scroll. Automatically disabled for visitors who prefer reduced motion." }
+    ]
+  }
+]

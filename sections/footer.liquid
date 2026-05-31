@@ -1,0 +1,99 @@
+{%- comment -%}
+  Footer — brand blurb, up to three editable menu columns, social links, and a
+  local-SEO line. Built from blocks so columns are addable/reorderable.
+{%- endcomment -%}
+<footer class="site-footer" role="contentinfo">
+  <div class="page-width">
+    <div class="footer__grid">
+      <div class="footer__about">
+        {%- if settings.logo != blank -%}
+          <img class="footer__logo-img" src="{{ settings.logo | image_url: width: 320 }}" alt="{{ shop.name | escape }}" width="160" loading="lazy">
+        {%- else -%}
+          <span class="footer__logo">{{ section.settings.footer_title | default: shop.name }}</span>
+        {%- endif -%}
+        {%- if section.settings.about_text != blank -%}
+          <div class="rte">{{ section.settings.about_text }}</div>
+        {%- endif -%}
+        {%- if settings.social_instagram != blank or settings.social_facebook != blank or settings.social_linkedin != blank -%}
+          <div class="social" style="margin-top: var(--space-24);">
+            {%- if settings.social_instagram != blank -%}<a href="{{ settings.social_instagram }}" aria-label="Instagram" rel="noopener" target="_blank">{%- render 'icon', name: 'instagram', size: 18 -%}</a>{%- endif -%}
+            {%- if settings.social_facebook != blank -%}<a href="{{ settings.social_facebook }}" aria-label="Facebook" rel="noopener" target="_blank">{%- render 'icon', name: 'facebook', size: 18 -%}</a>{%- endif -%}
+            {%- if settings.social_linkedin != blank -%}<a href="{{ settings.social_linkedin }}" aria-label="LinkedIn" rel="noopener" target="_blank">{%- render 'icon', name: 'linkedin', size: 18 -%}</a>{%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'menu' -%}
+            {%- assign fmenu = linklists[block.settings.menu] -%}
+            <nav class="footer__col" aria-label="{{ block.settings.title | escape }}" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              {%- if fmenu != blank -%}
+                <ul class="footer__list">
+                  {%- for link in fmenu.links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </nav>
+          {%- when 'contact' -%}
+            <div class="footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              <ul class="footer__list">
+                {%- if block.settings.phone != blank -%}<li><a href="tel:{{ block.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{%- render 'icon', name: 'phone', size: 15 -%} {{ block.settings.phone }}</a></li>{%- endif -%}
+                {%- if block.settings.email != blank -%}<li><a href="mailto:{{ block.settings.email }}">{%- render 'icon', name: 'mail', size: 15 -%} {{ block.settings.email }}</a></li>{%- endif -%}
+                {%- if block.settings.address != blank -%}<li>{{ block.settings.address }}</li>{%- endif -%}
+                {%- if block.settings.hours != blank -%}<li>{{ block.settings.hours }}</li>{%- endif -%}
+              </ul>
+            </div>
+          {%- when 'text' -%}
+            <div class="footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              <div class="rte footer__about">{{ block.settings.content }}</div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.seo_text != blank -%}
+      <div class="rte" style="padding-block: var(--space-24); border-top: 1px solid color-mix(in srgb, var(--color-on-dark) 18%, transparent); font-size: var(--fs-sm); color: var(--color-muted);">
+        {{ section.settings.seo_text }}
+      </div>
+    {%- endif -%}
+
+    <div class="footer__bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ section.settings.rights_text }}</p>
+      <p>{{ powered_by_link }}</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "footer_title", "label": "Footer title (if no logo)", "default": "Center for Balanced Living" },
+    { "type": "richtext", "id": "about_text", "label": "About text", "default": "<p>Trauma-informed therapy, psychological evaluation, groups, workshops, and consultation for the MOT area and throughout Delaware.</p>" },
+    { "type": "richtext", "id": "seo_text", "label": "Local SEO paragraph", "info": "Plain, descriptive sentence about the areas you serve.", "default": "<p>Center for Balanced Living provides trauma-informed psychological care to Middletown, Townsend, Odessa, and the greater MOT area, with clients across New Castle County and Delaware including Wilmington, Newark, and Dover.</p>" },
+    { "type": "text", "id": "rights_text", "label": "Rights text", "default": "All rights reserved." }
+  ],
+  "blocks": [
+    { "type": "menu", "name": "Menu column", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "Explore" },
+      { "type": "link_list", "id": "menu", "label": "Menu" }
+    ]},
+    { "type": "contact", "name": "Contact column", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "Contact" },
+      { "type": "text", "id": "phone", "label": "Phone", "default": "(302) 608-3780" },
+      { "type": "text", "id": "email", "label": "Email" },
+      { "type": "html", "id": "address", "label": "Address" },
+      { "type": "text", "id": "hours", "label": "Hours" }
+    ]},
+    { "type": "text", "name": "Text column", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "About" },
+      { "type": "richtext", "id": "content", "label": "Content" }
+    ]}
+  ],
+  "max_blocks": 4,
+  "enabled_on": { "groups": ["footer"] }
+}
+{% endschema %}

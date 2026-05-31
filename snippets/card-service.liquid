@@ -1,0 +1,48 @@
+{%- comment -%}
+  Service card snippet — used by service-card-grid and featured-services.
+  Driven by a block's settings so it's fully editor-editable.
+  Accepts:
+    block        {Object}  the section block (settings used below)
+    heading_tag  {String}  'h3' (default) | 'h2' — keep one H1/page
+  Block settings used:
+    icon, image, image_alt, title, body, link, link_label, image_ratio
+{%- endcomment -%}
+{%- liquid
+  assign tag = heading_tag | default: 'h3'
+  assign ratio = block.settings.image_ratio | default: '1-1'
+  assign has_link = false
+  if block.settings.link != blank
+    assign has_link = true
+  endif
+-%}
+<article class="card{% if has_link %} is-linked{% endif %}" {{ block.shopify_attributes }}>
+  {%- if block.settings.image != blank -%}
+    <div class="card__media">
+      {%- render 'responsive-image',
+        image: block.settings.image,
+        alt: block.settings.image_alt,
+        ratio: ratio,
+        sizes: '(min-width: 990px) 360px, 100vw',
+        widths: '300, 450, 600, 900' -%}
+    </div>
+  {%- elsif block.settings.icon != blank -%}
+    <span class="card__icon">{%- render 'icon', name: block.settings.icon, size: 26 -%}</span>
+  {%- endif -%}
+
+  <{{ tag }} class="card__title">{{ block.settings.title | escape }}</{{ tag }}>
+
+  {%- if block.settings.body != blank -%}
+    <div class="card__body rte">{{ block.settings.body }}</div>
+  {%- endif -%}
+
+  {%- if has_link -%}
+    <p class="card__cta">
+      {%- assign cta_label = block.settings.link_label | default: 'Learn more' -%}
+      {%- render 'button',
+        label: cta_label,
+        href: block.settings.link,
+        style: 'tertiary',
+        aria: cta_label | append: ' — ' | append: block.settings.title -%}
+    </p>
+  {%- endif -%}
+</article>

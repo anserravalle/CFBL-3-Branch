@@ -1,0 +1,107 @@
+{%- comment -%}
+  Hero (brand) — headline, supporting copy, two CTAs, optional image and a
+  subtle abstract brand shape. Layout, alignment, colors, padding all editable.
+  Renders the page H1 by default (toggle off if another section owns the H1).
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign has_media = false
+  if section.settings.image != blank
+    assign has_media = true
+  endif
+  assign layout_class = 'hero--split'
+  if section.settings.layout == 'center' or has_media == false
+    assign layout_class = 'hero--center'
+  endif
+  assign heading_tag = 'h1'
+  if section.settings.use_h1 == false
+    assign heading_tag = 'h2'
+  endif
+  assign mobile_order = '-1'
+  if section.settings.mobile_image_first == false
+    assign mobile_order = '1'
+  endif
+-%}
+<section class="section hero bg--{{ bg }} {{ layout_class }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  {%- if section.settings.show_shape and settings.enable_animations -%}
+    <span class="brand-shape brand-shape--1" aria-hidden="true"></span>
+    <span class="brand-shape brand-shape--2" aria-hidden="true"></span>
+  {%- elsif section.settings.show_shape -%}
+    <span class="brand-shape brand-shape--1" aria-hidden="true"></span>
+  {%- endif -%}
+
+  <div class="page-width">
+    <div class="hero__grid {% if has_media %}has-media{% endif %}">
+      <div class="hero__content reveal">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="eyebrow hero__eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        <{{ heading_tag }} class="hero__title">{{ section.settings.heading }}</{{ heading_tag }}>
+        {%- if section.settings.subheading != blank -%}
+          <div class="hero__lead rte">{{ section.settings.subheading }}</div>
+        {%- endif -%}
+        {%- if section.settings.primary_label != blank or section.settings.secondary_label != blank -%}
+          <div class="btn-row {% if layout_class == 'hero--center' %}is-center{% endif %}">
+            {%- render 'button', label: section.settings.primary_label, href: section.settings.primary_link, style: 'primary', class: 'btn--lg' -%}
+            {%- render 'button', label: section.settings.secondary_label, href: section.settings.secondary_link, style: 'secondary' -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if has_media -%}
+        <div class="hero__media reveal" style="order: {{ mobile_order }};">
+          {%- render 'responsive-image',
+            image: section.settings.image,
+            alt: section.settings.image_alt,
+            ratio: section.settings.image_ratio,
+            loading: 'eager',
+            fetchpriority: 'high',
+            sizes: '(min-width: 990px) 48vw, 100vw',
+            widths: '480, 640, 800, 1000, 1300' -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Trauma-Informed Psychological Care" },
+    { "type": "text", "id": "heading", "label": "Headline", "default": "Your Path To Healing Begins Here" },
+    { "type": "richtext", "id": "subheading", "label": "Supporting copy", "default": "<p>Center for Balanced Living offers therapy, psychological evaluations, consultation, supervision, and educational services grounded in trauma-informed, research-based care. We support children, adolescents, adults, families, and professionals.</p>" },
+    { "type": "checkbox", "id": "use_h1", "label": "Use as page H1", "default": true, "info": "Keep one H1 per page. Turn off if another section is the H1." },
+    { "type": "header", "content": "Buttons" },
+    { "type": "text", "id": "primary_label", "label": "Primary button label", "default": "Start the Conversation" },
+    { "type": "url", "id": "primary_link", "label": "Primary button link" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary button label", "default": "Explore Services" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary button link" },
+    { "type": "header", "content": "Media" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt text", "info": "Describe the image for screen readers and SEO." },
+    { "type": "select", "id": "image_ratio", "label": "Image ratio", "options": [
+      { "value": "4-3", "label": "4:3" }, { "value": "1-1", "label": "Square" },
+      { "value": "3-2", "label": "3:2" }, { "value": "16-9", "label": "16:9" }
+    ], "default": "4-3" },
+    { "type": "checkbox", "id": "show_shape", "label": "Show soft brand-shape accent", "default": true },
+    { "type": "header", "content": "Layout & appearance" },
+    { "type": "select", "id": "layout", "label": "Layout", "options": [
+      { "value": "split", "label": "Text + image (split)" },
+      { "value": "center", "label": "Centered" }
+    ], "default": "split" },
+    { "type": "checkbox", "id": "mobile_image_first", "label": "Show image first on mobile", "default": false },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" },
+      { "value": "sand", "label": "Sand" },
+      { "value": "surface", "label": "White" },
+      { "value": "navy", "label": "Navy" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 }
+  ],
+  "presets": [{ "name": "Hero" }]
+}
+{% endschema %}

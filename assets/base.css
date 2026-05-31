@@ -322,6 +322,10 @@ strong, b { font-weight: 600; }
 }
 .bg--navy .btn--tertiary { color: var(--color-sand); }
 
+.btn--sm { min-height: 40px; padding: var(--space-8) var(--space-20); font-size: var(--fs-xs); }
+.btn--lg { min-height: 52px; padding: var(--space-16) var(--space-40); font-size: var(--fs-base); }
+.btn--full { width: 100%; }
+
 .btn-row {
   display: flex;
   flex-wrap: wrap;

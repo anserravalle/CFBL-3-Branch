@@ -1,0 +1,31 @@
+{%- comment -%}
+  Button snippet — renders the theme's button hierarchy.
+  Accepts:
+    label   {String}  Button text (required; renders nothing if blank)
+    href    {String}  Link target (defaults to '#')
+    style   {String}  'primary' | 'secondary' | 'tertiary' (default primary)
+    size    {String}  '' | 'sm' | 'lg'
+    class   {String}  extra classes
+    new_tab {Boolean} open in new tab
+    aria    {String}  accessible label override (use when label lacks context)
+{%- endcomment -%}
+{%- liquid
+  assign btn_style = style | default: 'primary'
+  assign btn_href = href | default: '#'
+  assign target = ''
+  assign rel = ''
+  if new_tab
+    assign target = ' target="_blank"'
+    assign rel = ' rel="noopener noreferrer"'
+  endif
+-%}
+{%- if label != blank -%}
+  <a href="{{ btn_href }}"
+     class="btn btn--{{ btn_style }} {{ class }}"
+     {%- if aria != blank %} aria-label="{{ aria | escape }}"{% endif %}{{ target }}{{ rel }}>
+    {{- label -}}
+    {%- if btn_style == 'tertiary' -%}
+      <span aria-hidden="true">&rarr;</span>
+    {%- endif -%}
+  </a>
+{%- endif -%}

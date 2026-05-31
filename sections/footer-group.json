@@ -1,0 +1,30 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "explore": {
+          "type": "menu",
+          "settings": { "title": "Explore", "menu": "footer" }
+        },
+        "services": {
+          "type": "menu",
+          "settings": { "title": "Services", "menu": "main-menu" }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Contact",
+            "phone": "(302) 608-3780",
+            "hours": "By appointment"
+          }
+        }
+      },
+      "block_order": ["explore", "services", "contact"],
+      "settings": {}
+    }
+  },
+  "order": ["footer"]
+}

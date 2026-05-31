@@ -1,0 +1,88 @@
+{%- comment -%}
+  Header — logo, primary navigation (from a linklist), CTA, and an accessible
+  mobile drawer. Sticky behavior and style are theme settings.
+{%- endcomment -%}
+{%- liquid
+  assign menu = linklists[section.settings.menu]
+  assign sticky_class = ''
+  if settings.header_sticky
+    assign sticky_class = 'is-sticky'
+  endif
+-%}
+<header class="site-header {{ sticky_class }}" style="--logo-height: {{ settings.logo_height }}px;">
+  <div class="page-width">
+    <div class="site-header__inner">
+      {%- comment -%} Logo {%- endcomment -%}
+      <a href="{{ routes.root_url }}" class="site-header__logo" aria-label="{{ shop.name }} — home">
+        {%- if settings.logo != blank -%}
+          {%- assign logo_alt = settings.logo.alt | default: shop.name -%}
+          <img src="{{ settings.logo | image_url: width: 400 }}"
+               srcset="{{ settings.logo | image_url: width: 200 }} 1x, {{ settings.logo | image_url: width: 400 }} 2x"
+               alt="{{ logo_alt | escape }}" width="{{ settings.logo.width }}" height="{{ settings.logo.height }}"
+               fetchpriority="high">
+        {%- else -%}
+          <span class="site-header__logo-text">{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+
+      {%- comment -%} Desktop nav {%- endcomment -%}
+      {%- if menu != blank -%}
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            {%- for link in menu.links -%}
+              <li>
+                <a href="{{ link.url }}" class="nav__link"
+                   {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {%- endif -%}
+
+      <div class="header__actions">
+        {%- if section.settings.cta_label != blank -%}
+          {%- render 'button', label: section.settings.cta_label, href: section.settings.cta_link, style: 'primary', class: 'btn--sm' -%}
+        {%- endif -%}
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="MobileDrawer" aria-label="Open menu" data-drawer-open>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+{%- comment -%} Mobile drawer {%- endcomment -%}
+<div class="drawer-overlay" data-drawer-overlay hidden></div>
+<aside class="drawer" id="MobileDrawer" aria-label="Mobile menu" aria-hidden="true" tabindex="-1">
+  <div class="drawer__header">
+    <span class="site-header__logo-text">{{ shop.name }}</span>
+    <button type="button" class="drawer__close" aria-label="Close menu" data-drawer-close>&times;</button>
+  </div>
+  {%- if menu != blank -%}
+    <nav aria-label="Mobile primary">
+      <ul class="drawer__list">
+        {%- for link in menu.links -%}
+          <li><a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  {%- endif -%}
+  {%- if section.settings.cta_label != blank -%}
+    <div style="margin-top: var(--space-24);">
+      {%- render 'button', label: section.settings.cta_label, href: section.settings.cta_link, style: 'primary', class: 'btn--full' -%}
+    </div>
+  {%- endif -%}
+</aside>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" },
+    { "type": "header", "content": "Header call-to-action" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Request a Consultation" },
+    { "type": "url", "id": "cta_link", "label": "Button link" }
+  ],
+  "enabled_on": { "groups": ["header"] }
+}
+{% endschema %}

@@ -1,0 +1,107 @@
+{%- comment -%}
+  Service card grid — the homepage "pathway" cards and any service listing.
+  Cards are blocks: addable, removable, reorderable, each fully editable.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign cols = section.settings.columns
+  assign mobile_class = ''
+  if section.settings.mobile_two_up
+    assign mobile_class = 'mobile-2'
+  endif
+  assign align_class = ''
+  if section.settings.text_align == 'center'
+    assign align_class = 'is-center'
+  endif
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.subheading != blank -%}
+        <div class="section__header {{ align_class }} reveal">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="grid grid--{{ cols }} {{ mobile_class }}">
+        {%- for block in section.blocks -%}
+          <div class="reveal" {{ block.shopify_attributes }}>
+            {%- render 'card-service', block: block -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.footer_label != blank -%}
+        <div class="btn-row is-center">
+          {%- render 'button', label: section.settings.footer_label, href: section.settings.footer_link, style: 'secondary' -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Service cards",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Choose Your Path" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Therapy, evaluations, and professional training each begin with careful listening, clinical clarity, and respect for the whole person." },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "center" },
+    { "type": "header", "content": "Grid" },
+    { "type": "select", "id": "columns", "label": "Columns (desktop)", "options": [
+      { "value": "2", "label": "2" }, { "value": "3", "label": "3" }, { "value": "4", "label": "4" }
+    ], "default": "3" },
+    { "type": "checkbox", "id": "mobile_two_up", "label": "Two columns on mobile", "default": false },
+    { "type": "header", "content": "Section footer button" },
+    { "type": "text", "id": "footer_label", "label": "Button label" },
+    { "type": "url", "id": "footer_link", "label": "Button link" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" },
+      { "value": "surface", "label": "White" }, { "value": "navy", "label": "Navy" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Service card",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon (used if no image)", "options": [
+          { "value": "", "label": "None" }, { "value": "heart", "label": "Heart" },
+          { "value": "compass", "label": "Compass" }, { "value": "shield", "label": "Shield" },
+          { "value": "users", "label": "Users" }, { "value": "book", "label": "Book" },
+          { "value": "leaf", "label": "Leaf" }, { "value": "award", "label": "Award" },
+          { "value": "star", "label": "Star" }
+        ], "default": "heart" },
+        { "type": "image_picker", "id": "image", "label": "Image (optional)" },
+        { "type": "text", "id": "image_alt", "label": "Image alt text" },
+        { "type": "select", "id": "image_ratio", "label": "Image ratio", "options": [
+          { "value": "1-1", "label": "Square" }, { "value": "3-2", "label": "3:2" }, { "value": "4-3", "label": "4:3" }
+        ], "default": "3-2" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Begin Therapy" },
+        { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Support for healing and change, grounded in evidence-based, trauma-informed care.</p>" },
+        { "type": "text", "id": "link_label", "label": "Link label", "default": "Explore Therapy" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [{
+    "name": "Service cards",
+    "blocks": [
+      { "type": "card", "settings": { "icon": "heart", "title": "Begin Therapy", "body": "<p>Support for healing and change.</p>", "link_label": "Explore Therapy" } },
+      { "type": "card", "settings": { "icon": "compass", "title": "Get an Evaluation", "body": "<p>Clarity for diagnosis and next steps.</p>", "link_label": "Explore Evaluations" } },
+      { "type": "card", "settings": { "icon": "book", "title": "Learn With Us", "body": "<p>Clinical training, supervision, and consultation.</p>", "link_label": "Learn With Us" } }
+    ]
+  }]
+}
+{% endschema %}
