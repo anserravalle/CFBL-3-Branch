@@ -4,10 +4,12 @@
       "type": "main-blog",
       "settings": {
         "eyebrow": "MUSA",
-        "subheading": "Essays on psychology, memory, identity, and being human.",
+        "subheading": "Essays on psychology, relationships, the moment, and the fragility of being human.",
         "per_page": 9
       }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
