@@ -14,7 +14,7 @@
         "primary_label": "Our Credentials",
         "primary_link": "/pages/credentials",
         "bg_scheme": "default",
-        "padding_top": 80,
+        "padding_top": 24,
         "padding_bottom": 80
       }
     },
@@ -194,9 +194,21 @@
         "padding_top": 96,
         "padding_bottom": 96
       }
+    },
+    "title": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "About Us",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 8
+      }
     }
   },
   "order": [
+    "title",
     "intro",
     "values",
     "team",
