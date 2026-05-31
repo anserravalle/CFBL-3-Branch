@@ -759,43 +759,57 @@ a.card:hover {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
-  padding: var(--space-40);
+  padding: clamp(var(--space-32), 4vw, var(--space-64)) var(--space-40);
   box-shadow: var(--shadow-sm);
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/* A flowing serif quote mark that sits above the text and breathes. */
+.testimonial::before {
+  content: "\201C";
+  font-family: "Cormorant", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 0.5;
+  color: color-mix(in srgb, var(--color-terracotta) 55%, transparent);
+  margin-bottom: var(--space-16);
+  display: block;
 }
 .testimonial__quote {
-  /* Reset the global blockquote styling (border/padding/italic) since this is a
-     <blockquote> element used as a styled pull quote. */
+  /* Reset the global blockquote styling so this reads as a clean pull quote. */
   margin: 0 0 var(--space-24);
   padding: 0;
   border: 0;
-  font-style: normal;
-  position: relative;
-  padding-top: var(--space-16);
-  font-family: var(--font-heading);
-  font-size: var(--fs-lg);
+  /* Flowing italic serif (Cormorant), not the small-caps display face. */
+  font-family: "Cormorant", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.7rem);
   color: var(--color-heading);
-  line-height: 1.4;
-}
-/* Decorative opening quote mark that does not disrupt text flow. */
-.testimonial__quote::before {
-  content: "\201C";
-  position: absolute;
-  top: -0.35em;
-  left: -0.06em;
-  font-size: 2.4em;
-  line-height: 1;
-  color: color-mix(in srgb, var(--color-terracotta) 45%, transparent);
-  pointer-events: none;
+  line-height: 1.5;
+  max-width: 62ch;
 }
 .testimonial__quote > :first-child { margin-top: 0; }
 .testimonial__quote > :last-child { margin-bottom: 0; }
-.testimonial__meta { display: flex; align-items: center; gap: var(--space-12); margin-top: auto; }
+.testimonial__rating { color: var(--color-terracotta); margin-bottom: var(--space-16); display: flex; gap: 2px; justify-content: center; }
+.testimonial__meta { display: flex; align-items: center; justify-content: center; gap: var(--space-12); margin-top: auto; }
 .testimonial__avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex: none; }
 .testimonial__name { font-weight: 600; font-size: var(--fs-sm); color: var(--color-text); }
 .testimonial__role { font-size: var(--fs-xs); color: var(--color-muted); }
+/* A subtle divider above the attribution to separate quote from author. */
+.testimonial__meta::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: color-mix(in srgb, var(--color-terracotta) 60%, transparent);
+  transform: translateY(calc(-1 * var(--space-16)));
+}
+.testimonial__meta { position: relative; padding-top: var(--space-24); }
 
 /* ---------------------------------------------------------------------------
    13. Section: Credentials / trust

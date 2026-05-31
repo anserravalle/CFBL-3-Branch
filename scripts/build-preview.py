@@ -108,6 +108,15 @@ body = f'''
   </div>
 </div></div></section>
 
+<section class="section bg--sand" style="--section-pt:80px;--section-pb:80px;"><div class="page-width"><div class="section__inner">
+  <div class="section__header is-center"><p class="eyebrow">Our Philosophy of Care</p><h2>Healing happens in relationship</h2></div>
+  <div class="grid grid--1">
+    <figure class="testimonial">
+      <blockquote class="testimonial__quote"><p>My approach to care begins with the understanding that each person is unique. Treatment should be thoughtful, responsive, and grounded in both clinical depth and the needs of the individual.</p></blockquote>
+      <figcaption class="testimonial__meta"><span><span class="testimonial__name">Dr. Angela (Niki) Serravalle</span><span class="testimonial__role">PsyD, LPCMH, NCC</span></span></figcaption>
+    </figure>
+  </div>
+</div></div></section>
 <section class="section bg--navy" style="--section-pt:96px;--section-pb:96px;"><div class="page-width"><div class="section__inner section__header is-center" style="margin-bottom:0">
   <p class="eyebrow">Take the Next Step</p><h2>Healing happens in relationship</h2>
   <div class="rte section__subheading"><p>Whether you are seeking therapy, an evaluation, consultation, or training, we are here to help you take a clear next step.</p></div>

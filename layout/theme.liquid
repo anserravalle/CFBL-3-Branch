@@ -26,11 +26,11 @@
       {%- liquid
         case brand_scope
           when 'institute'
-            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600'
+            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Cormorant:ital,wght@0,500;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600'
           when 'musa'
             assign font_query = 'family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500'
           else
-            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Montserrat:wght@300;400;500;600'
+            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Cormorant:ital,wght@0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600'
         endcase
       -%}
       <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?{{ font_query }}&display=swap">
