@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -5,17 +14,20 @@
       "settings": {
         "eyebrow": "Diagnostic Clarification",
         "heading": "Diagnostic Clarification Evaluations",
-        "subheading": "<p>Diagnostic clarification evaluations are designed to provide a more complete understanding when symptoms feel complex, overlapping, longstanding, or difficult to explain through a brief clinical conversation alone. At Center for Balanced Living, these evaluations are completed with clinical care, depth, and attention to the whole person. The goal is not simply to assign a diagnosis, but to understand what may be contributing to emotional distress, behavioral patterns, interpersonal challenges, cognitive concerns, developmental questions, or treatment uncertainty.</p>",
+        "subheading": "<p>Diagnostic clarification evaluations are designed to provide a more complete understanding when symptoms feel complex, overlapping, longstanding, or difficult to explain through a brief clinical conversation alone. </p><p>At Center for Balanced Living, these evaluations are completed with clinical care, depth, and attention to the whole person. The goal is not simply to assign a diagnosis, but to understand what may be contributing to emotional distress, behavioral patterns, interpersonal challenges, cognitive concerns, developmental questions, or treatment uncertainty.</p>",
         "use_h1": true,
         "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "All Evaluations",
         "secondary_link": "/pages/psychological-evaluations",
-        "image": "",
-        "image_frame": true,
-        "frame_color": "#9D654E",
+        "image": "shopify://shop_images/not-game-puzzles-or-game-blocks-more-like-psychological-assessment.png",
+        "image_alt": "Psychological Evaluation",
+        "image_ratio": "4-3",
+        "image_frame": false,
+        "frame_color": "#2b5275",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 88,
         "padding_bottom": 88
@@ -29,7 +41,8 @@
           "settings": {
             "icon": "check",
             "title": "People whose symptoms overlap across several conditions",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b1": {
@@ -37,7 +50,8 @@
           "settings": {
             "icon": "check",
             "title": "Those whose prior diagnoses have not quite fit",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b2": {
@@ -45,7 +59,8 @@
           "settings": {
             "icon": "check",
             "title": "Clients whose treatment has not been working as expected",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b3": {
@@ -53,7 +68,8 @@
           "settings": {
             "icon": "check",
             "title": "Anyone seeking clear direction for next steps",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         }
       },
@@ -81,29 +97,37 @@
         "p0": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Intake & History",
-            "text": "We begin with careful listening and a thorough history."
+            "text": "We begin with careful listening and a thorough history.",
+            "link": ""
           }
         },
         "p1": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Standardized Assessment",
-            "text": "Evidence-based measures tailored to the referral question."
+            "text": "Evidence-based measures tailored to the referral question.",
+            "link": ""
           }
         },
         "p2": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Feedback Session",
-            "text": "We review findings together, in plain language."
+            "text": "We review findings together, in plain language.",
+            "link": ""
           }
         },
         "p3": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Written Summary",
-            "text": "A clear report with recommendations and next steps."
+            "text": "A clear report with recommendations and next steps.",
+            "link": ""
           }
         }
       },
