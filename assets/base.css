@@ -1050,6 +1050,25 @@ textarea { min-height: 140px; resize: vertical; }
 .tabs__panel[hidden] { display: none; }
 .tabs__panel:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
 
+/* Panels with an image or video: two columns on desktop, stacked on mobile */
+.tabs__panel--media {
+  max-width: none;
+  display: grid;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+@media (min-width: 750px) {
+  .tabs__panel--media { grid-template-columns: 0.95fr 1.05fr; }
+}
+.tabs__panel-media {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.tabs__panel-media .video-wrap { box-shadow: none; }
+.tabs__panel-body { max-width: var(--measure); }
+.tabs__panel-body h3 { margin-bottom: var(--space-12); }
+
 /* ---------------------------------------------------------------------------
    22c. Images with text, scrolling (sticky media + scrolling text)
    --------------------------------------------------------------------------- */

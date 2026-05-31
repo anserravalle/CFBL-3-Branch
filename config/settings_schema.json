@@ -102,7 +102,7 @@
     "name": "Buttons & global CTAs",
     "settings": [
       { "type": "paragraph", "content": "Default calls-to-action available to sections that opt to use the global CTA." },
-      { "type": "text", "id": "primary_cta_label", "label": "Primary CTA label", "default": "Request a Consultation" },
+      { "type": "text", "id": "primary_cta_label", "label": "Primary CTA label", "default": "Start the Conversation" },
       { "type": "url", "id": "primary_cta_link", "label": "Primary CTA link" },
       { "type": "text", "id": "secondary_cta_label", "label": "Secondary CTA label", "default": "Explore Services" },
       { "type": "url", "id": "secondary_cta_link", "label": "Secondary CTA link" }

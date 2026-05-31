@@ -5,12 +5,12 @@
       "settings": {
         "eyebrow": "CFBL Institute",
         "heading": "Continuing education for clinicians who carry a caseload",
-        "subheading": "<p>Founded and led by Dr. Niki Serravalle, licensed clinical psychologist and founder of the Center for Balanced Living.</p>",
+        "subheading": "<p>Clinically rigorous training in trauma-informed practice, psychological assessment, and applied clinical reasoning, taught by a practicing psychologist.</p>",
         "use_h1": true,
         "primary_label": "View Trainings",
         "primary_link": "/pages/professional-trainings",
-        "secondary_label": "About the Trainer",
-        "secondary_link": "#about-the-trainer",
+        "secondary_label": "Meet the Trainer",
+        "secondary_link": "#trainer",
         "image": "",
         "image_frame": true,
         "frame_color": "#6F8F7A",
@@ -27,65 +27,102 @@
         "image": "shopify://shop_images/angela.jpg",
         "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "4-3",
-        "image_position": "right",
-        "eyebrow": "About the Trainer",
-        "heading": "Taught by a practicing psychologist",
-        "body": "<p>The Institute teaches what gets practiced at Center for Balanced Living: trauma-informed care delivered with diagnostic precision. Trainings are led by Dr. Angela (Niki) Serravalle, PsyD, LPCMH, NCC, whose work integrates psychological assessment with somatic and nervous-system-informed approaches.</p>",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Trainer",
+        "heading": "Dr. Angela (Niki) Serravalle, PsyD, LPCMH, NCC",
+        "body": "<p>Founded and led by Dr. Niki Serravalle, licensed clinical psychologist and founder of the Center for Balanced Living. CFBL Institute exists to bridge the gap between clinical theory and applied practice. Our work is grounded in trauma-informed science, nervous system awareness, cultural humility, and the lived complexity of real clinical work.</p>",
         "text_align": "left",
         "primary_label": "Full Bio",
         "primary_link": "/pages/niki-serravalle",
         "bg_scheme": "default",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 72,
+        "padding_bottom": 24
+      }
+    },
+    "why": {
+      "type": "testimonial-section",
+      "blocks": {
+        "q": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Training is how clinical knowledge moves from one clinician to the next. I teach because the best of what I learned came from clinicians who showed me how they thought, not just what to do. That is the kind of training I try to offer now.</p>",
+            "author": "Dr. Angela (Niki) Serravalle",
+            "role": "Why I Teach",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "q"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "subheading": "",
+        "columns": 1,
+        "bg_scheme": "sand",
+        "padding_top": 48,
+        "padding_bottom": 72
       }
     },
     "offerings": {
-      "type": "service-card-grid",
+      "type": "tabs",
       "blocks": {
         "trainings": {
-          "type": "card",
+          "type": "tab",
           "settings": {
-            "icon": "award",
             "title": "Professional Trainings",
-            "body": "<p>CE workshops and intensives for licensed clinicians.</p>",
-            "link_label": "Learn more",
-            "link": "/pages/professional-trainings"
+            "heading": "Professional Trainings",
+            "content": "<p>Advanced clinical trainings for licensed clinicians and graduate students ready to deepen their work in trauma, evaluation, and nervous system informed care. Built to translate directly into how you assess, conceptualize, and treat.</p>",
+            "link": "/pages/professional-trainings",
+            "link_label": "View trainings"
+          }
+        },
+        "courses": {
+          "type": "tab",
+          "settings": {
+            "title": "Courses & Certification",
+            "heading": "Courses & Certification",
+            "content": "<p>Multi-session courses that build clinical knowledge sequentially, with time to integrate between sessions. For clinicians strengthening their foundation and students building it for the first time.</p>",
+            "link": "/pages/courses-certification",
+            "link_label": "View courses"
+          }
+        },
+        "workshops": {
+          "type": "tab",
+          "settings": {
+            "title": "Workshops",
+            "heading": "Workshops",
+            "content": "<p>Workshops designed to bring trauma-informed, ecologically grounded, and meaningful learning into accessible, practical conversation.</p>",
+            "link": "/pages/workshops",
+            "link_label": "View workshops"
           }
         },
         "supervision": {
-          "type": "card",
+          "type": "tab",
           "settings": {
-            "icon": "users",
-            "title": "Clinical Supervision",
-            "body": "<p>Individual and group supervision toward licensure.</p>",
-            "link_label": "Learn more",
-            "link": "/pages/clinical-supervision"
-          }
-        },
-        "emdr": {
-          "type": "card",
-          "settings": {
-            "icon": "compass",
-            "title": "EMDR Consultation",
-            "body": "<p>Consultation toward EMDR certification.</p>",
-            "link_label": "Learn more",
-            "link": "/pages/emdr-consultation"
+            "title": "Supervision & Consultation",
+            "heading": "Supervision & Consultation",
+            "content": "<p>Individual and group clinical supervision toward licensure, plus EMDR consultation toward EMDRIA certification.</p>",
+            "link": "/pages/clinical-supervision",
+            "link_label": "Learn more"
           }
         }
       },
       "block_order": [
         "trainings",
-        "supervision",
-        "emdr"
+        "courses",
+        "workshops",
+        "supervision"
       ],
       "settings": {
-        "eyebrow": "Current Offerings",
-        "heading": "Professional Development",
-        "subheading": "",
-        "text_align": "center",
-        "columns": "3",
-        "card_style": "elevated",
-        "bg_scheme": "sand",
+        "eyebrow": "What We Offer",
+        "heading": "Ways to Learn With Us",
+        "subheading": "Select an area to read more, then open its full page for details, dates, and registration.",
+        "text_align": "left",
+        "image_ratio": "4-3",
+        "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -104,7 +141,7 @@
           "type": "item",
           "settings": {
             "question": "Who are the trainings for?",
-            "answer": "<p>Licensed mental health clinicians - psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, MDs - and graduate students in clinical and counseling psychology.</p>"
+            "answer": "<p>Licensed mental health clinicians (psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, MDs) and graduate students in clinical and counseling psychology.</p>"
           }
         },
         "format": {
@@ -125,7 +162,7 @@
         "heading": "Registration & CE Credit",
         "subheading": "",
         "cta_label": "",
-        "bg_scheme": "default",
+        "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -151,6 +188,7 @@
   "order": [
     "hero",
     "trainer",
+    "why",
     "offerings",
     "faq",
     "cta"

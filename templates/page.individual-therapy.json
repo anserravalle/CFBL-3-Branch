@@ -7,7 +7,7 @@
         "heading": "Therapy that meets you where you are",
         "subheading": "<p>Our clinicians draw from evidence-based and insight-oriented approaches based on each client’s needs, goals, and developmental stage. Depending on the presenting concerns, therapy may include work focused on emotional insight, nervous system regulation, coping skills, trauma processing, relationship patterns, or identity development.</p>",
         "use_h1": true,
-        "primary_label": "Request a Consultation",
+        "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "All Services",
         "secondary_link": "/pages/services",
@@ -165,44 +165,12 @@
             "question": "How long does a therapy session last?",
             "answer": "<p><em>The individual sessions are usually about 50 minutes. Dr. Serravalle works hard to start on time and end on time out of respect for her clients.</em></p>"
           }
-        },
-        "q4": {
-          "type": "item",
-          "settings": {
-            "question": "What is ACT?",
-            "answer": "<p><em>The main goal of Acceptance and Commitment Therapy is to help individuals recognize ways they attempt to suppress, avoid, and control emotional experiences that can create further challenges. By compassionately recognizing and addressing these challenges, an individual can become more able to make room for values-based actions that support their well-being. Learning how to accept things as they come, without evaluating or attempting to change the situation is a skill that can be developed in sessions and can be practiced outside of the sessions. ACT is not about changing or stopping those unwanted feelings or thought processes, it is about changing your relationship with them. ACT therapy can offer freedom to people who struggle with not wanting to have “full control” or an inability to “let things go”.</em></p>"
-          }
-        },
-        "q5": {
-          "type": "item",
-          "settings": {
-            "question": "What is CBT?",
-            "answer": "<p><em>Cognitive Behavioral Therapy is a structured, problem-focused therapy in which individuals are taught to observe and document their negative thoughts so they can identify the associations between thoughts, feelings, physiology, and behavior. Individuals will learn to assess the rationality and usefulness of these cognitions and change dysfunctional cognitions to amore adaptive perspective. Behavioral techniques such as activity scheduling, self-monitoring of mastery and pleasure, and graded task assignments are used to help individuals overcome disinterest and expose themselves to rewarding experiences. Individuals also learn adaptive coping skills and problem-solving skills. Cognitive Behavioral counseling entails many strategies and techniques to help depressed individuals address their thinking including psychoeducation, guided discovery, Socratic questioning, role-playing, imagery, and behavioral experiments.</em></p>"
-          }
-        },
-        "q6": {
-          "type": "item",
-          "settings": {
-            "question": "What is DBT?",
-            "answer": "<p><em>Dialectical Behavior Therapy (DBT) is a therapy used to help individuals develop skills to better manage stress, emotional regulation, and to help redirect behavioral patterns such as self-harm or other compulsive behaviors. DBT combines the standard cognitive-behavioral techniques, acceptance therapy, and mindful awareness. Mindfulness is one of the core elements in DBT therapy. It is a great foundation for the other building blocks that come with therapy and DBT skills. The acceptance portion of DBT helps individuals tolerate the powerful emotions that can come with therapy and life. The acceptance and mindfulness that is taught within DBT therapy create the ability to pay attention, nonjudgmentally, to the moments at hand. And reframes one’s perspective to handle it with more positive outlets and responses. The acceptance skills taught help one to no longer judge themselves for having these emotions or for being in “negative” situations. This can create less distress and panic when things come up.</em></p>"
-          }
-        },
-        "q7": {
-          "type": "item",
-          "settings": {
-            "question": "What is EMDR?",
-            "answer": "<p><em>Eye Movement Desensitization and Reprocessing (EMDR) is a form of therapy that is geared for individuals who have experienced physical and emotional trauma, and experience overall emotional distress from difficult life experiences. EMDR therapy is a parallel concept where your brain can heal from psychological trauma and how your body can recover from physical injury. EMDR therapy is a direct approach to one’s trauma, to be able to face the situation (at their own pace) under the supervision and guidance of a certified EMDR therapist. EMDR therapy is different from talk therapy in a few ways. EMDR therapy involves biological aspects such as eye movements (or other bilateral stimulations), that allows the brain to reprocess triggering memories.</em></p>"
-          }
         }
       },
       "block_order": [
         "q1",
         "q2",
-        "q3",
-        "q4",
-        "q5",
-        "q6",
-        "q7"
+        "q3"
       ],
       "settings": {
         "eyebrow": "Questions, Answered",
@@ -220,7 +188,7 @@
         "eyebrow": "Take the Next Step",
         "heading": "Begin therapy with us",
         "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
-        "primary_label": "Request a Consultation",
+        "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "Call (302) 608-3780",
         "secondary_link": "tel:3026083780",
@@ -230,11 +198,79 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "models": {
+      "type": "tabs",
+      "blocks": {
+        "act": {
+          "type": "tab",
+          "settings": {
+            "title": "Acceptance & Commitment (ACT)",
+            "heading": "Acceptance and Commitment Therapy",
+            "content": "<p>The main goal of Acceptance and Commitment Therapy is to help individuals recognize ways they attempt to suppress, avoid, and control emotional experiences that can create further challenges. By compassionately recognizing and addressing these challenges, an individual can become more able to make room for values-based actions that support their well-being. Learning how to accept things as they come, without evaluating or attempting to change the situation is a skill that can be developed in sessions and can be practiced outside of the sessions. ACT is not about changing or stopping those unwanted feelings or thought processes, it is about changing your relationship with them. ACT therapy can offer freedom to people who struggle with not wanting to have “full control” or an inability to “let things go”.</p>",
+            "link_label": "Learn more"
+          }
+        },
+        "cbt": {
+          "type": "tab",
+          "settings": {
+            "title": "Cognitive Behavioral (CBT)",
+            "heading": "Cognitive Behavioral Therapy",
+            "content": "<p>Cognitive Behavioral Therapy is a structured, problem-focused therapy in which individuals are taught to observe and document their negative thoughts so they can identify the associations between thoughts, feelings, physiology, and behavior. Individuals will learn to assess the rationality and usefulness of these cognitions and change dysfunctional cognitions to amore adaptive perspective. Behavioral techniques such as activity scheduling, self-monitoring of mastery and pleasure, and graded task assignments are used to help individuals overcome disinterest and expose themselves to rewarding experiences. Individuals also learn adaptive coping skills and problem-solving skills. Cognitive Behavioral counseling entails many strategies and techniques to help depressed individuals address their thinking including psychoeducation, guided discovery, Socratic questioning, role-playing, imagery, and behavioral experiments.</p>",
+            "link_label": "Learn more"
+          }
+        },
+        "dbt": {
+          "type": "tab",
+          "settings": {
+            "title": "Dialectical Behavior (DBT)",
+            "heading": "Dialectical Behavior Therapy",
+            "content": "<p>Dialectical Behavior Therapy (DBT) is a therapy used to help individuals develop skills to better manage stress, emotional regulation, and to help redirect behavioral patterns such as self-harm or other compulsive behaviors. DBT combines the standard cognitive-behavioral techniques, acceptance therapy, and mindful awareness. Mindfulness is one of the core elements in DBT therapy. It is a great foundation for the other building blocks that come with therapy and DBT skills. The acceptance portion of DBT helps individuals tolerate the powerful emotions that can come with therapy and life. The acceptance and mindfulness that is taught within DBT therapy create the ability to pay attention, nonjudgmentally, to the moments at hand. And reframes one’s perspective to handle it with more positive outlets and responses. The acceptance skills taught help one to no longer judge themselves for having these emotions or for being in “negative” situations. This can create less distress and panic when things come up.</p>",
+            "link_label": "Learn more"
+          }
+        },
+        "emdr": {
+          "type": "tab",
+          "settings": {
+            "title": "EMDR",
+            "heading": "Eye Movement Desensitization and Reprocessing",
+            "content": "<p>Eye Movement Desensitization and Reprocessing (EMDR) is a form of therapy that is geared for individuals who have experienced physical and emotional trauma, and experience overall emotional distress from difficult life experiences. EMDR therapy is a parallel concept where your brain can heal from psychological trauma and how your body can recover from physical injury. EMDR therapy is a direct approach to one’s trauma, to be able to face the situation (at their own pace) under the supervision and guidance of a certified EMDR therapist. EMDR therapy is different from talk therapy in a few ways. EMDR therapy involves biological aspects such as eye movements (or other bilateral stimulations), that allows the brain to reprocess triggering memories.</p>",
+            "link_label": "Learn more"
+          }
+        },
+        "trainings": {
+          "type": "tab",
+          "settings": {
+            "title": "Trainings & Certifications",
+            "heading": "Advanced Training We Draw From",
+            "content": "<p>Our work integrates EMDR, somatic psychology, Internal Family Systems, DBT, ACT, ecotherapy, and mindfulness-based frameworks. See the full list of certifications and advanced training behind our care.</p>",
+            "link": "/pages/credentials",
+            "link_label": "View all credentials"
+          }
+        }
+      },
+      "block_order": [
+        "act",
+        "cbt",
+        "dbt",
+        "emdr",
+        "trainings"
+      ],
+      "settings": {
+        "eyebrow": "How We Work",
+        "heading": "Our Models & Approach",
+        "subheading": "Therapy is tailored to you. These are the evidence-based models we draw from, and the training behind them.",
+        "text_align": "left",
+        "image_ratio": "4-3",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "hero",
-    "focus",
+    "models",
     "process",
     "faq",
     "cta"
