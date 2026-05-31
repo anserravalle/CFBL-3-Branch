@@ -23,13 +23,13 @@ sig = '<span class="header__signature" style="font-family:Cormorant SC,serif;fon
 body = f'''
 <div class="announcement"><div class="page-width"><p class="announcement__inner"><span>Now accepting new clients across the MOT area and throughout Delaware.</span><a href="#">Start the conversation</a></p></div></div>
 <header class="site-header"><div class="page-width"><div class="site-header__inner">
-  <a href="#" class="site-header__logo"><span class="site-header__logo-text">Center for Balanced Living</span></a>
+  <div class="site-header__brand"><a href="#" class="site-header__logo"><span class="site-header__logo-text">Center for Balanced Living</span></a>{sig}</div>
   <nav class="nav"><ul class="nav__list">
     <li><a class="nav__link" href="#">For Clients</a></li><li><a class="nav__link" href="#">For Professionals</a></li>
     <li><a class="nav__link" href="#">Career Development</a></li><li><a class="nav__link" href="#">About Us</a></li>
     <li><a class="nav__link" href="#">MUSA</a></li><li><a class="nav__link" href="#">Contact</a></li>
   </ul></nav>
-  <div class="header__actions">{sig}{btn('Start the Conversation','primary','btn--sm')}</div>
+  <div class="header__actions">{btn('Start the Conversation','primary','btn--sm')}</div>
 </div></div></header>
 <main>
 <section class="section hero bg--default hero--split" style="--section-pt:96px;--section-pb:96px;">

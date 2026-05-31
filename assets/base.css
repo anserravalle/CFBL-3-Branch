@@ -583,9 +583,15 @@ a.card:hover {
   background: color-mix(in srgb, var(--color-sand) 60%, transparent);
 }
 .header__actions { display: flex; align-items: center; gap: var(--space-16); }
+
+/* Left cluster: logo + cursive signature */
+.site-header__brand { display: inline-flex; align-items: center; gap: var(--space-16); }
 .header__signature { display: inline-flex; align-items: center; }
-.header__signature img { height: 44px; width: auto; object-fit: contain; }
-@media (max-width: 749px) { .header__signature { display: none; } }
+.header__signature img { height: 48px; width: auto; object-fit: contain; }
+@media (max-width: 749px) {
+  .site-header__brand { gap: var(--space-12); }
+  .header__signature img { height: 36px; }
+}
 
 .nav-toggle {
   display: none;
