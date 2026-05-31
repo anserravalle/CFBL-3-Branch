@@ -1,5 +1,5 @@
 {%- comment -%}
-  Images with text, scrolling — a sticky media column that swaps/fades to match
+  Images with text, scrolling - a sticky media column that swaps/fades to match
   the text item currently in view (good for "Meet the Team"). Each block is an
   item: image + title + content. On mobile (and with reduced motion) it stacks
   as simple image+text pairs. Progressive enhancement: works with no JS.
@@ -38,7 +38,7 @@
         <div class="scroller__text">
           {%- for block in section.blocks -%}
             <article class="scroller__item reveal" data-scroller-item data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
-              {%- comment -%} Inline image — shown on mobile, hidden on desktop where the sticky column takes over. {%- endcomment -%}
+              {%- comment -%} Inline image - shown on mobile, hidden on desktop where the sticky column takes over. {%- endcomment -%}
               <div class="scroller__inline-media">
                 {%- if block.settings.image != blank -%}
                   {%- render 'responsive-image', image: block.settings.image, alt: block.settings.title, ratio: section.settings.image_ratio, sizes: '100vw', widths: '480,640,800' -%}

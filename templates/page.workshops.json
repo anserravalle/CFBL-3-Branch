@@ -13,8 +13,8 @@
     "events": {
       "type": "workshop-event-grid",
       "blocks": {
-        "e1": { "type": "event", "settings": { "month": "JUN", "day": "12", "title": "Trauma-Informed Skills Group", "time": "6:00–7:30 PM", "location": "Middletown, DE", "description": "An eight-week group for building regulation and coping skills.", "link_label": "Register" } },
-        "e2": { "type": "event", "settings": { "month": "JUL", "day": "09", "title": "Parenting & Nervous-System Workshop", "time": "10:00–12:00 PM", "location": "Online", "description": "A practical workshop for parents and caregivers.", "link_label": "Register" } }
+        "e1": { "type": "event", "settings": { "month": "JUN", "day": "12", "title": "Trauma-Informed Skills Group", "time": "6:00-7:30 PM", "location": "Middletown, DE", "description": "An eight-week group for building regulation and coping skills.", "link_label": "Register" } },
+        "e2": { "type": "event", "settings": { "month": "JUL", "day": "09", "title": "Parenting & Nervous-System Workshop", "time": "10:00-12:00 PM", "location": "Online", "description": "A practical workshop for parents and caregivers.", "link_label": "Register" } }
       },
       "block_order": ["e1", "e2"],
       "settings": {

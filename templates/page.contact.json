@@ -11,11 +11,11 @@
       "settings": {
         "eyebrow": "Get in Touch",
         "heading": "Start the Conversation",
-        "intro": "<p>Whether you are seeking therapy, evaluations, consultation, supervision, or training, our team is here to help you take the next step. To speak with us directly, please call our office. We typically respond to messages within 24–48 hours.</p>",
+        "intro": "<p>Whether you are seeking therapy, evaluations, consultation, supervision, or training, our team is here to help you take the next step. To speak with us directly, please call our office. We typically respond to messages within 24-48 hours.</p>",
         "phone": "(302) 608-3780",
         "hours": "By appointment",
         "button_label": "Send Message",
-        "success_text": "Thank you. We typically respond within 24–48 hours.",
+        "success_text": "Thank you. We typically respond within 24-48 hours.",
         "disclaimer": "<p>This form is not for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 988 or 911, or go to your nearest emergency room.</p>",
         "bg_scheme": "default",
         "padding_top": 80,

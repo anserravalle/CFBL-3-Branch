@@ -74,7 +74,7 @@
       "settings": {
         "eyebrow": "One Practice, Three Paths",
         "heading": "Choose Your Path",
-        "subheading": "Center for Balanced Living brings together clinical care, professional education, and writing — each with its own focus.",
+        "subheading": "Center for Balanced Living brings together clinical care, professional education, and writing - each with its own focus.",
         "text_align": "center",
         "columns": "3",
         "mobile_two_up": false,
@@ -182,7 +182,7 @@
           "type": "item",
           "settings": {
             "title": "Reach Out",
-            "text": "Call (302) 608-3780 or send a message. We respond within 24–48 hours."
+            "text": "Call (302) 608-3780 or send a message. We respond within 24-48 hours."
           }
         },
         "consult": {
@@ -288,7 +288,7 @@
           "type": "item",
           "settings": {
             "question": "How do I schedule a first appointment?",
-            "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24–48 hours to find a time that works.</p>"
+            "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24-48 hours to find a time that works.</p>"
           }
         },
         "f2": {

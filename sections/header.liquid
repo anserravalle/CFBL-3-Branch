@@ -1,5 +1,5 @@
 {%- comment -%}
-  Header — logo, primary navigation (from a linklist), CTA, and an accessible
+  Header - logo, primary navigation (from a linklist), CTA, and an accessible
   mobile drawer. Sticky behavior and style are theme settings.
 {%- endcomment -%}
 {%- liquid
@@ -26,7 +26,7 @@
   <div class="page-width">
     <div class="site-header__inner">
       {%- comment -%} Logo {%- endcomment -%}
-      <a href="{{ routes.root_url }}" class="site-header__logo" aria-label="{{ brand_label }} — home">
+      <a href="{{ routes.root_url }}" class="site-header__logo" aria-label="{{ brand_label }} - home">
         {%- if active_logo != blank -%}
           {%- assign logo_alt = active_logo.alt | default: brand_label -%}
           <img src="{{ active_logo | image_url: width: 400 }}"

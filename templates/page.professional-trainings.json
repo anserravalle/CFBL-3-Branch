@@ -13,8 +13,8 @@
     "catalog": {
       "type": "workshop-event-grid",
       "blocks": {
-        "t1": { "type": "event", "settings": { "month": "SEP", "day": "18", "title": "Assessment-Informed Trauma Treatment", "time": "9:00 AM–4:00 PM", "location": "Live, online", "description": "Integrating psychological assessment with somatic and trauma work. CE credit available.", "link_label": "Register" } },
-        "t2": { "type": "event", "settings": { "month": "OCT", "day": "23", "title": "Applied Clinical Reasoning Intensive", "time": "9:00 AM–1:00 PM", "location": "Live, online", "description": "Case conceptualization and diagnostic precision for practicing clinicians.", "link_label": "Register" } }
+        "t1": { "type": "event", "settings": { "month": "SEP", "day": "18", "title": "Assessment-Informed Trauma Treatment", "time": "9:00 AM-4:00 PM", "location": "Live, online", "description": "Integrating psychological assessment with somatic and trauma work. CE credit available.", "link_label": "Register" } },
+        "t2": { "type": "event", "settings": { "month": "OCT", "day": "23", "title": "Applied Clinical Reasoning Intensive", "time": "9:00 AM-1:00 PM", "location": "Live, online", "description": "Case conceptualization and diagnostic precision for practicing clinicians.", "link_label": "Register" } }
       },
       "block_order": ["t1", "t2"],
       "settings": {

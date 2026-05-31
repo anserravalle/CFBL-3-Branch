@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Individual Therapy",
         "heading": "Therapy that meets you where you are",
-        "subheading": "<p>Trauma-informed, evidence-based therapy for children, teens, and adults. We pair clinical depth with warmth, attunement, and a holistic approach to mind, body, and spirit.</p>",
+        "subheading": "<p>Our clinicians draw from evidence-based and insight-oriented approaches based on each client’s needs, goals, and developmental stage. Depending on the presenting concerns, therapy may include work focused on emotional insight, nervous system regulation, coping skills, trauma processing, relationship patterns, or identity development.</p>",
         "use_h1": true,
         "primary_label": "Request a Consultation",
         "primary_link": "/pages/contact",
@@ -219,7 +219,7 @@
       "settings": {
         "eyebrow": "Take the Next Step",
         "heading": "Begin therapy with us",
-        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24–48 hours.</p>",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
         "primary_label": "Request a Consultation",
         "primary_link": "/pages/contact",
         "secondary_label": "Call (302) 608-3780",

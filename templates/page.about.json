@@ -184,7 +184,7 @@
       "type": "contact-cta",
       "settings": {
         "heading": "Let's talk about how we can help",
-        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24–48 hours.</p>",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
         "primary_label": "Request a Consultation",
         "primary_link": "/pages/contact",
         "secondary_label": "Explore Services",

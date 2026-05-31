@@ -1,7 +1,7 @@
-# Center for Balanced Living — Shopify Online Store 2.0 Theme
+# Center for Balanced Living - Shopify Online Store 2.0 Theme
 
 A bespoke, clinically-polished Shopify **Online Store 2.0** theme for Center for
-Balanced Living — a trauma-informed psychology practice in the MOT area of
+Balanced Living - a trauma-informed psychology practice in the MOT area of
 Delaware. Built design-system-first for complete no-code customization, strong
 SEO, accessibility, and performance.
 
@@ -63,7 +63,7 @@ Shopify requires this exact top-level folder layout. Keep folder names as-is.
 
 ## 2. How to upload / deploy
 
-### Option A — Shopify CLI (recommended for developers)
+### Option A - Shopify CLI (recommended for developers)
 ```bash
 # Install once: https://shopify.dev/docs/themes/tools/cli
 shopify theme push --unpublished        # upload as a new unpublished theme
@@ -72,14 +72,14 @@ shopify theme dev
 ```
 Run from the repository root (the folder containing `layout/`, `config/`, etc.).
 
-### Option B — Zip upload (no tools)
+### Option B - Zip upload (no tools)
 1. Zip the **contents** of this repo (so `layout/`, `config/`, `sections/`… are
-   at the top level of the zip — not nested inside a folder).
+   at the top level of the zip - not nested inside a folder).
    - `docs/`, `README.md`, and `.git/` aren't theme files; harmless if included.
 2. Shopify admin → **Online Store → Themes → Add theme → Upload zip file**.
 3. Click **Preview** to review, then **Publish** when ready.
 
-### After uploading — one-time setup
+### After uploading - one-time setup
 - **Navigation:** Shopify menus aren't part of a theme export. In **Content →
   Menus**, ensure a `Main menu` and a `Footer` menu exist (the header/footer
   reference them). Point links at the real pages.
@@ -98,14 +98,14 @@ Everything visual is editable with **no code**. Open **Online Store → Themes �
 Customize**.
 
 ### Global settings (Theme settings)
-- **Brand colors** — primary (navy), secondary (sky), sand, accent (terracotta),
+- **Brand colors** - primary (navy), secondary (sky), sand, accent (terracotta),
   background, text.
-- **Typography** — brand fonts on by default (Cormorant SC + Montserrat); toggle
+- **Typography** - brand fonts on by default (Cormorant SC + Montserrat); toggle
   off to pick Shopify fonts. Base font size + heading scale.
-- **Layout & spacing** — page width, content width, global section spacing,
+- **Layout & spacing** - page width, content width, global section spacing,
   button radius, card radius.
-- **Header / Footer** — style, sticky header, logo + mobile logo, logo height.
-- **Brand assets & SEO** — favicon, default social share image, business name,
+- **Header / Footer** - style, sticky header, logo + mobile logo, logo height.
+- **Brand assets & SEO** - favicon, default social share image, business name,
   business type, phone, email, address, areas served (powers local SEO schema).
 - **Social links**, **global CTAs**, **animations** on/off.
 
@@ -118,7 +118,7 @@ Customize**.
   padding**, button label/link/style, and mobile behavior.
 
 ### The homepage hero
-Two columns — text (eyebrow + heading + paragraph + two CTAs) left, image right.
+Two columns - text (eyebrow + heading + paragraph + two CTAs) left, image right.
 The image sits on an editable **offset frame/holder**: toggle "Show offset frame
 behind image" and set the **Frame color** (defaults to terracotta/brown so it
 reads as a holder behind the image on a tan background).
@@ -183,7 +183,7 @@ tags and JSON-LD automatically.
 ## 6. Brand family (CFBL · CFBL Institute · MUSA)
 
 One theme renders all three brands, each in its own palette + typography +
-logo — and they never mix on a page. The active look is decided **per page** by
+logo - and they never mix on a page. The active look is decided **per page** by
 the template you assign it (or a `custom.brand_scope` page metafield). See
 `docs/DESIGN_SYSTEM.md` §13b.
 
@@ -200,7 +200,7 @@ colors, fonts, and logo switch automatically.
 
 **Make more service landing pages:** in the theme editor, duplicate the
 `service` template (or any template) to create page-specific versions with their
-own FAQ/CTA copy — e.g. one per high-value service.
+own FAQ/CTA copy - e.g. one per high-value service.
 
 **Reminder:** sections defined in a JSON template are **shared** by every page
 using that template. A page's unique prose comes from the page's own content
@@ -215,6 +215,6 @@ the shared shell. Duplicate the template when a page needs unique band copy.
   enabled. Core flows (home, pages, blog, products, collections, cart, search,
   404) are covered.
 - **Apps:** the previous store used Mailchimp, Cowlendar (booking), and the
-  Google/YouTube widget via App embeds — re-enable under **Theme settings → App
+  Google/YouTube widget via App embeds - re-enable under **Theme settings → App
   embeds** if still in use.
 - **No external dependencies, no jQuery, no icon fonts, no animation libraries.**

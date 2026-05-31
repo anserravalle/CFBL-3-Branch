@@ -1,5 +1,5 @@
 {%- comment -%}
-  Service card grid — the homepage "pathway" cards and any service listing.
+  Service card grid - the homepage "pathway" cards and any service listing.
   Cards are blocks: addable, removable, reorderable, each fully editable.
   Card style (soft / elevated / framed / outline / overlay) is editor-controlled.
 {%- endcomment -%}
@@ -31,7 +31,7 @@
       <div class="grid grid--{{ cols }} {{ mobile_class }} cards--{{ card_style }}">
         {%- for block in section.blocks -%}
           <div class="reveal" {{ block.shopify_attributes }}>
-            {%- render 'card-service', block: block, style: card_style -%}
+            {%- render 'card-service', block: block, style: card_style, logo_size: section.settings.logo_size -%}
           </div>
         {%- endfor -%}
       </div>
@@ -67,7 +67,7 @@
       { "value": "framed", "label": "Framed (accent bar)" },
       { "value": "outline", "label": "Outlined" },
       { "value": "overlay", "label": "Image overlay" }
-    ], "default": "elevated", "info": "Overlay uses each card's image as a full background with the text on top — great for the brand/division chooser." },
+    ], "default": "elevated", "info": "Overlay uses each card's image as a full background with the text on top - great for the brand/division chooser." },
     { "type": "header", "content": "Section footer button" },
     { "type": "text", "id": "footer_label", "label": "Button label" },
     { "type": "url", "id": "footer_link", "label": "Button link" },
@@ -84,6 +84,8 @@
       "type": "card",
       "name": "Service card",
       "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Logo / mark (optional)", "info": "Small brand mark shown at the top of the card, e.g. the division logo." },
+        { "type": "text", "id": "logo_alt", "label": "Logo alt text" },
         { "type": "text", "id": "eyebrow", "label": "Eyebrow (optional)" },
         { "type": "select", "id": "icon", "label": "Icon (used if no image)", "options": [
           { "value": "", "label": "None" }, { "value": "heart", "label": "Heart" },

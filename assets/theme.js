@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Center for Balanced Living — theme.js
+   Center for Balanced Living - theme.js
    Lean, dependency-free interactivity: mobile drawer (with focus trap),
    accessible FAQ accordion, and click-to-load video. ~3KB.
    ========================================================================== */
@@ -137,7 +137,7 @@
   }
 
   /* ----------------------------------------------------------------------
-     Scrolling images + text — sticky media swaps to the item in view
+     Scrolling images + text - sticky media swaps to the item in view
      ---------------------------------------------------------------------- */
   function initScroller() {
     var scrollers = document.querySelectorAll('[data-scroller]');

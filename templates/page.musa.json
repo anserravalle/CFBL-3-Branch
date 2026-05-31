@@ -37,7 +37,7 @@
         "eyebrow": "Why I Write",
         "heading": "The writing is its own credential",
         "heading_tag": "h2",
-        "content": "<p>I write as a psychologist who reads — analytical, direct, and unafraid of the harder questions underneath the clinical ones. These essays are a place to think in public about memory, identity, culture, and what it means to be human, without the constraints of the consulting room.</p>",
+        "content": "<p>I write as a psychologist who reads - analytical, direct, and unafraid of the harder questions underneath the clinical ones. These essays are a place to think in public about memory, identity, culture, and what it means to be human, without the constraints of the consulting room.</p>",
         "text_align": "center",
         "content_width": 680,
         "bg_scheme": "sand",
@@ -68,7 +68,7 @@
       "settings": {
         "eyebrow": "Stay in Touch",
         "heading": "New essays, now and then",
-        "body": "<p>Subscribe to receive new writing as it is published. No noise — just the work.</p>",
+        "body": "<p>Subscribe to receive new writing as it is published. No noise - just the work.</p>",
         "button_label": "Subscribe",
         "success_text": "Thank you for subscribing.",
         "fine_print": "Your email is never shared.",

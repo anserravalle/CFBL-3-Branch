@@ -1,4 +1,4 @@
-# Navigation & site map — setup guide
+# Navigation & site map - setup guide
 
 Shopify **menus are created in the admin** (Content → Menus), not in theme files,
 so this guide gives you the exact menu tree to build plus the Pages, Blogs, and
@@ -38,7 +38,7 @@ Newsletter             → /blogs/newsletter
 Make It Make Sense     → /blogs/make-it-make-sense
 ```
 
-> Tip: a top-level item can be both a link **and** a dropdown — set its URL to
+> Tip: a top-level item can be both a link **and** a dropdown - set its URL to
 > the landing page and add children beneath it.
 
 ---

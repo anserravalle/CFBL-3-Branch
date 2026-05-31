@@ -1,14 +1,14 @@
-# Center for Balanced Living — Design System
+# Center for Balanced Living - Design System
 
 This document defines the design system **before** any section styling. Every
 section, block, and snippet in the theme inherits from these decisions. Do not
-improvise section styling independently — extend the tokens and rules below.
+improvise section styling independently - extend the tokens and rules below.
 
 ---
 
 ## 1. Brand foundation
 
-**Practice:** Center for Balanced Living — a trauma-informed clinical
+**Practice:** Center for Balanced Living - a trauma-informed clinical
 psychology practice serving Middletown, Townsend, and the greater MOT area of
 Delaware.
 
@@ -16,7 +16,7 @@ Delaware.
 sophisticated. Never trendy, casual, influencer-like, wellness-generic, or
 salesy.
 
-**Voice:** an experienced licensed psychologist who is also a businesswoman —
+**Voice:** an experienced licensed psychologist who is also a businesswoman -
 warm, accessible, hopeful, research-informed, relational. Uses "we" for the
 practice team. Avoids wellness clichés, "journey" language, and overpromising.
 
@@ -29,7 +29,7 @@ practice team. Avoids wellness clichés, "journey" language, and overpromising.
 | `--color-navy`     | `#2B5275`  | Primary. Headlines, primary buttons, key accents |
 | `--color-sky`      | `#4E9FBF`  | Secondary. Links, secondary accents, hover       |
 | `--color-sand`     | `#EED9C5`  | Warm background base, soft color fields           |
-| `--color-terracotta`| `#9D654E` | Accent. Used sparingly — one accent at a time     |
+| `--color-terracotta`| `#9D654E` | Accent. Used sparingly - one accent at a time     |
 
 **Derived / utility colors** (computed to maintain contrast):
 
@@ -51,7 +51,7 @@ practice team. Avoids wellness clichés, "journey" language, and overpromising.
 - On-dark text `#FBF6F0` on navy `#2B5275` → ~8:1 (AAA).
 - Never use Sky Blue for normal-size body text on light backgrounds (fails AA);
   reserve it for large text, borders, and UI accents, or darken to navy.
-- Never rely on color alone to convey meaning — pair with text, icon, or shape.
+- Never rely on color alone to convey meaning - pair with text, icon, or shape.
 
 ---
 
@@ -64,7 +64,7 @@ practice team. Avoids wellness clichés, "journey" language, and overpromising.
 Loaded via Google Fonts with `display=swap` and preconnect. Body font is also
 available as Shopify `font_picker` settings so the owner can change them.
 
-**Type scale** (modular, base 16px, ratio ≈ 1.25 — owner-adjustable via
+**Type scale** (modular, base 16px, ratio ≈ 1.25 - owner-adjustable via
 `heading_scale`):
 
 | Token        | rem    | Use                                    |
@@ -83,7 +83,7 @@ Headings scale fluidly with `clamp()` between mobile and desktop. The owner's
 `heading_scale` setting multiplies heading sizes globally.
 
 **Weights:** Cormorant SC 500/600/700; Montserrat 300/400/500/600.
-**Line-height:** headings 1.1–1.2; body 1.65; tight UI 1.3.
+**Line-height:** headings 1.1-1.2; body 1.65; tight UI 1.3.
 **Letter-spacing:** eyebrows `0.14em` uppercase; Cormorant SC headings `0.01em`.
 
 ---
@@ -103,7 +103,7 @@ Headings scale fluidly with `clamp()` between mobile and desktop. The owner's
 
 **Section rhythm:** vertical padding defaults to a global setting
 (`--section-spacing`, default 80px desktop / scales down on mobile). Each section
-can override top/bottom padding (0–160px) from the editor. Consecutive sections
+can override top/bottom padding (0-160px) from the editor. Consecutive sections
 of the same background color collapse rhythm naturally via consistent padding.
 
 ---
@@ -120,8 +120,8 @@ of the same background color collapse rhythm naturally via consistent padding.
 
 ## 6. Radius, borders, shadows
 
-- `--radius-button`: default 999px (pill) — owner-adjustable.
-- `--radius-card`: default 16px — owner-adjustable.
+- `--radius-button`: default 999px (pill) - owner-adjustable.
+- `--radius-card`: default 16px - owner-adjustable.
 - `--radius-image`: inherits card radius; ratio-controlled.
 - Borders: 1px `--color-border` hairlines.
 - Shadows (soft, low, no harsh): 
@@ -152,7 +152,7 @@ Rules: one primary button per section. Min target 44×44px. Visible focus ring
 - Surface white, `--radius-card`, `--shadow-md`, 1px border optional.
 - Padding `--space-32`. Internal rhythm: eyebrow → title (H3) → body → CTA.
 - Hover: lift `translateY(-4px)` + shadow-lg (disabled under reduced-motion).
-- Service cards: optional icon/image (1:1 or 4:3), title, 1–2 line body, link.
+- Service cards: optional icon/image (1:1 or 4:3), title, 1-2 line body, link.
 - Equal-height via grid; content top-aligned, CTA bottom-aligned.
 
 ---
@@ -203,7 +203,7 @@ graphic accent per section.
 
 ## 12. Motion
 
-- Subtle only: fade/translate ≤ 12px, 400–600ms ease-out, on scroll-in.
+- Subtle only: fade/translate ≤ 12px, 400-600ms ease-out, on scroll-in.
 - Globally toggleable (`enable_animations`).
 - Always wrapped in `@media (prefers-reduced-motion: no-preference)`.
 - No animation libraries; ~1KB IntersectionObserver in `section-animations.js`.

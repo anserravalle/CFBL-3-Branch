@@ -1,5 +1,5 @@
 /* ==========================================================================
-   section-animations.js — subtle scroll-reveal via IntersectionObserver.
+   section-animations.js - subtle scroll-reveal via IntersectionObserver.
    Only loaded when "Enable animations" is on. Respects reduced-motion: if the
    user prefers reduced motion, elements are shown immediately with no movement.
    ~0.6KB.

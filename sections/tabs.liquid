@@ -1,5 +1,5 @@
 {%- comment -%}
-  Tabs — tabbed content (e.g. "Areas of Evaluations"). Each tab block holds a
+  Tabs - tabbed content (e.g. "Areas of Evaluations"). Each tab block holds a
   title, a brief description, and a link to the full page. Accessible ARIA tabs
   with arrow-key navigation; the tab list scrolls horizontally on mobile.
 {%- endcomment -%}
@@ -48,7 +48,7 @@
                 {%- if block.settings.content != blank -%}<div class="rte">{{ block.settings.content }}</div>{%- endif -%}
                 {%- if tab_link != blank -%}
                   <p style="margin-top: var(--space-20);">
-                    {%- render 'button', label: block.settings.link_label | default: 'Learn more', href: tab_link, style: 'secondary', aria: block.settings.link_label | default: 'Learn more' | append: ' — ' | append: block.settings.title -%}
+                    {%- render 'button', label: block.settings.link_label | default: 'Learn more', href: tab_link, style: 'secondary', aria: block.settings.link_label | default: 'Learn more' | append: ' - ' | append: block.settings.title -%}
                   </p>
                 {%- endif -%}
               </div>

@@ -1,5 +1,5 @@
 {%- comment -%}
-  Workshops & events — list of upcoming offerings. Each event is a block with
+  Workshops & events - list of upcoming offerings. Each event is a block with
   date, title, details, and a registration link. Emits Event structured data.
 {%- endcomment -%}
 {%- liquid
@@ -20,6 +20,10 @@
       {%- if section.blocks.size > 0 -%}
         <div class="grid" style="gap:var(--space-16);">
           {%- for block in section.blocks -%}
+            {%- liquid
+              assign event_product = block.settings.product
+              assign reg_label = block.settings.link_label | default: 'Register'
+            -%}
             <article class="event reveal" {{ block.shopify_attributes }}>
               <div class="event__date">
                 <span class="event__month">{{ block.settings.month }}</span>
@@ -30,12 +34,27 @@
                 <p class="event__detail">
                   {%- if block.settings.time != blank %}{%- render 'icon', name: 'clock', size: 14 -%} {{ block.settings.time }}{% endif -%}
                   {%- if block.settings.location != blank %} &middot; {{ block.settings.location }}{% endif -%}
+                  {%- if event_product != blank %} &middot; {% if event_product.price > 0 %}{{ event_product.price | money }}{% else %}Free{% endif %}{% endif -%}
                 </p>
                 {%- if block.settings.description != blank -%}<p class="event__detail" style="margin-top:var(--space-8);">{{ block.settings.description }}</p>{%- endif -%}
+                {%- if event_product != blank and event_product.available == false -%}
+                  <p class="event__detail" style="margin-top:var(--space-8);color:var(--color-terracotta);font-weight:600;">Sold out / registration closed</p>
+                {%- endif -%}
               </div>
               <div class="event__cta">
-                {%- if block.settings.link != blank -%}
-                  {%- render 'button', label: block.settings.link_label | default: 'Register', href: block.settings.link, style: 'secondary', class: 'btn--sm', aria: block.settings.link_label | default: 'Register' | append: ' for ' | append: block.settings.title -%}
+                {%- if event_product != blank -%}
+                  {%- comment -%} Native Shopify registration: add the seat product to cart and check out. Seat limits come from product inventory. {%- endcomment -%}
+                  {%- if event_product.available -%}
+                    <form method="post" action="{{ routes.cart_add_url }}" class="event__register">
+                      <input type="hidden" name="id" value="{{ event_product.selected_or_first_available_variant.id }}">
+                      <input type="hidden" name="quantity" value="1">
+                      <button type="submit" class="btn btn--primary btn--sm" aria-label="{{ reg_label }} for {{ block.settings.title | escape }}">{{ reg_label }}</button>
+                    </form>
+                  {%- else -%}
+                    <button type="button" class="btn btn--secondary btn--sm" disabled>Sold Out</button>
+                  {%- endif -%}
+                {%- elsif block.settings.link != blank -%}
+                  {%- render 'button', label: reg_label, href: block.settings.link, style: 'secondary', class: 'btn--sm', aria: reg_label | append: ' for ' | append: block.settings.title -%}
                 {%- endif -%}
               </div>
             </article>
@@ -71,11 +90,13 @@
       { "type": "text", "id": "month", "label": "Month (short)", "default": "JUN" },
       { "type": "text", "id": "day", "label": "Day", "default": "12" },
       { "type": "text", "id": "title", "label": "Title", "default": "Trauma-Informed Skills Group" },
-      { "type": "text", "id": "time", "label": "Time", "default": "6:00–7:30 PM" },
+      { "type": "text", "id": "time", "label": "Time", "default": "6:00-7:30 PM" },
       { "type": "text", "id": "location", "label": "Location", "default": "Middletown, DE" },
       { "type": "text", "id": "description", "label": "Description" },
+      { "type": "header", "content": "Registration" },
+      { "type": "product", "id": "product", "label": "Register via product (recommended)", "info": "Link this event to a Shopify product to take registrations and payment through checkout. Seat limits use the product's inventory." },
       { "type": "text", "id": "link_label", "label": "Button label", "default": "Register" },
-      { "type": "url", "id": "link", "label": "Registration link" }
+      { "type": "url", "id": "link", "label": "External link (used only if no product is selected)" }
     ]}
   ],
   "max_blocks": 20,

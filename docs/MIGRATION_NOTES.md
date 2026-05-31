@@ -1,4 +1,4 @@
-# Migration notes — from "Impact" (Maestrooo) to the CFBL custom theme
+# Migration notes - from "Impact" (Maestrooo) to the CFBL custom theme
 
 The previous store ran **Impact v5.2.0** by Maestrooo. This theme is a ground-up
 rebuild on a bespoke design system, preserving real content, links, and brand
@@ -44,6 +44,6 @@ courses, educational-programs, groups, workshops, services-collection.
 
 ## Not carried over (intentionally)
 - Impact's `theme.js`/`sections.js` (200KB+), PhotoSwipe, country-flags assets,
-  and the heavy custom CSS — replaced by a lean `base.css` + `theme.js`.
-- Per-section inline `custom_css` font hacks (e.g. `h2 {font-size:70px}`) —
+  and the heavy custom CSS - replaced by a lean `base.css` + `theme.js`.
+- Per-section inline `custom_css` font hacks (e.g. `h2 {font-size:70px}`) -
   replaced by the design-system type scale and editor settings.
