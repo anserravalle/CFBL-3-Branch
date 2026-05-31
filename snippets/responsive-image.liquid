@@ -31,9 +31,12 @@
 
 <div class="media {{ ratio_class }} {{ class }}">
   {%- if img != blank -%}
-    {%- if img.presentation.focal_point -%}
-      {%- assign object_pos = img.presentation.focal_point -%}
-    {%- endif -%}
+    {%- liquid
+      assign img_style = ''
+      if img.presentation.focal_point != blank
+        assign img_style = 'object-position: ' | append: img.presentation.focal_point | append: ';'
+      endif
+    -%}
     {{
       img
       | image_url: width: 2000
@@ -44,7 +47,7 @@
         sizes: img_sizes,
         widths: img_widths,
         alt: alt_text,
-        style: object_pos
+        style: img_style
     }}
   {%- else -%}
     {{ placeholder | default: 'image' | placeholder_svg_tag: 'placeholder-svg' }}
