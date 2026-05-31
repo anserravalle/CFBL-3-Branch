@@ -1,92 +1,125 @@
 # Menu build guide (Content > Menus)
 
 How to add an item: Content > Menus > open the menu > **Add menu item** > type the
-**Name** > click the **Link** box and PICK the page/blog from the search list
-(this guarantees the right URL) > to make a dropdown child, drag it slightly
-right under its parent > **Save**.
+**Name** (what visitors see) > click the **Link** box and start typing the page's
+**real title** from the table below > PICK it from the list > to make a dropdown
+child, drag it slightly right under its parent > **Save**.
 
-Tip: link by picking from the list, not by typing URLs. Your page titles are long
-(e.g. "Services at Center for Balanced Living"), so the search picker avoids
-broken links.
+IMPORTANT: search by the REAL TITLE in the table below, not the short menu label.
+Several of your pages have long or unexpected titles (e.g. the Evaluations page is
+actually titled "Psychological Evaluations", the About page is "About Center for
+Balanced Living"). If you type the short label you will not find them.
 
-### Known handle quirks (from your URL Redirects)
-Your live page handles do NOT all match their short names. Shopify is already
-redirecting the old short links to these, so old bookmarks and Google results
-keep working. You do not need to create or rename any pages. When the picker
-shows a page, these are the real handles behind the titles:
+---
 
-- About  ->  `about-us-1`  (old `/pages/about` redirects here)
-- MUSA  ->  `musa-writing`  (old `/pages/musa` redirects here)
-- Career Development  ->  `career-development`  (old `/pages/careers` redirects here)
-- Professional Clinical Trainings  ->  `professional-clinical-trainings`
-  (there is also a typo'd `clinicial-trainings` redirect; ignore it, pick the
-  correctly spelled page)
-- Individual Therapy  ->  `therapy-bear-delaware`
-- Our Approach  ->  `our-approach`
+## Real page titles + handles (verified live from your store, 31 May 2026)
 
-Because these differ, ALWAYS pick from the search list. Do not hand-type
-`/pages/about` etc., or you will hit a redirect chain instead of the page.
+| Menu label you want | SEARCH for this exact title | handle |
+|---|---|---|
+| Services | Services at Center for Balanced Living | services |
+| About | About Center for Balanced Living | about-us |
+| Credentials | Credentials | credentials |
+| Individual Therapy | Individual Therapy | individual-therapy |
+| Psychological Evaluations | Psychological Evaluations | psychological-evaluations |
+| Wellness Groups | Welcome  To Our Wellness Groups | wellness-groups |
+| FAQ | FAQ | faq-1 |
+| CFBL Institute | CFBL Institute | cfbl-institute |
+| Professional Clinical Trainings | Professional Clinical Trainings | professional-clinical-trainings |
+| Workshops | Workshops | workshops |
+| Courses & Certification | Courses & Certification | courses-certification |
+| Career Development | Careers | career-development |
+| Clinical Supervision | Clinical Supervision | clinical-supervision |
+| EMDR Consultation | EMDR Consultation | consultation |
+| Join Our Team | Join Our Team | join-our-team |
+| MUSA | Musa | musa-writing |
+| Contact | Start The Conversation | contact |
+| Client Portal | Client Portal | client-portal |
+| Privacy Practices | (create or skip if not present) | - |
+
+### Evaluation sub-type pages (verified live)
+| Menu label | SEARCH for this title | handle |
+|---|---|---|
+| ADHD Evaluations | ADHD and Executive Functioning Evaluations | adhd-evaluations |
+| Autism Evaluations | Autism and Neurodevelopmental Evaluations | autism |
+| Personality & Emotional | Personality and Emotional Functioning | personality-and-emotion-and-functioning |
+| Academic & Learning | Academic and Learning Concerns | academic-and-learning-concerns |
+| Diagnostic Clarification | Diagnostic Clarification Evaluations | diagnostic-clarification-evaluations |
+
+### Blogs (pick the BLOG, not the same-named page)
+| Menu label | SEARCH for this title (under "Blogs") | handle |
+|---|---|---|
+| Make It Make Sense | Make It Make Sense (blog) | balanced-living-blog-make-it-make-sense |
+| Letters from the Practice | Letters from CFBL (blog) | newsletter |
+| Essays | Essays, Books & Other Publications (blog) | essays |
+
+WATCH OUT: you also have PAGES named "Make It Make Sense", "Essays, Books & Other
+Publications", and "Letters From The Practice". In the menu link picker, scroll to
+the **Blogs** group and pick the blog, not the page, for these three.
 
 ---
 
 ## Main menu (header)
 
-- **For Clients**  -> Services page
-  - About Us  -> About Us page
-  - Our Credentials  -> Credentials page
-  - Individual Therapy  -> Individual Therapy page
-  - Psychological Evaluations  -> Psychological Evaluations page
-  - Wellness Groups  -> Welcome To Our Wellness Groups page
-  - FAQ  -> FAQ page
-- **For Professionals**  -> CFBL Institute page
-  - Professional Clinical Trainings  -> Professional Clinical Trainings page
-  - Workshops  -> Workshops page
-  - Courses & Certification  -> Courses & Certification page
-- **Career Development**  -> Clinical Supervision page (or its own landing)
-  - Clinical Supervision  -> Clinical Supervision page
-  - EMDR Consultation  -> EMDR Consultation page
-  - Join Our Team  -> Join Our Team page
-- **About Us**  -> About Us page
-  - Meet the Team  -> About Us page
-  - (optional) individual clinician bio pages
-- **MUSA**  -> Musa page
-  - Essays  -> Essays blog
+- **For Clients**  -> Services at Center for Balanced Living
+  - About Us  -> About Center for Balanced Living
+  - Our Credentials  -> Credentials
+  - Individual Therapy  -> Individual Therapy
+  - Psychological Evaluations  -> Psychological Evaluations
+  - Wellness Groups  -> Welcome  To Our Wellness Groups
+  - FAQ  -> FAQ
+- **For Professionals**  -> CFBL Institute
+  - Professional Clinical Trainings  -> Professional Clinical Trainings
+  - Workshops  -> Workshops
+  - Courses & Certification  -> Courses & Certification
+- **Career Development**  -> Careers
+  - Clinical Supervision  -> Clinical Supervision
+  - EMDR Consultation  -> EMDR Consultation
+  - Join Our Team  -> Join Our Team
+- **About Us**  -> About Center for Balanced Living
+  - Meet the Team  -> About Center for Balanced Living
+  - (optional) individual clinician bio pages (Niki Serravalle, Amanda Foxwell,
+    Shay Oliver, Kirsten Lowe)
+- **MUSA**  -> Musa
+  - Essays  -> Essays, Books & Other Publications (blog)
   - (Books - add later when ready)
-- **Letters from the Practice**  -> Letters from CFBL blog
-- **Make It Make Sense**  -> Make It Make Sense blog
-- **Contact**  -> Start The Conversation page
+- **Letters from the Practice**  -> Letters from CFBL (blog)
+- **Make It Make Sense**  -> Make It Make Sense (blog)
+- **Contact**  -> Start The Conversation
 
 ---
 
 ## Footer menus
 
 **footer** (Explore column)
-- Contact  -> Start The Conversation page
-- Privacy Practices  -> Privacy Practices page
-- Letters from the Practice  -> Letters from CFBL blog
-- CFBL Institute  -> CFBL Institute page
+- Contact  -> Start The Conversation
+- Letters from the Practice  -> Letters from CFBL (blog)
+- CFBL Institute  -> CFBL Institute
 
 **footer-for-clients**
-- Therapy  -> Individual Therapy page
-- Evaluations  -> Psychological Evaluations page
-- Wellness Groups  -> Welcome To Our Wellness Groups page
-- Client Portal  -> Client Portal page (or the SimplePractice URL)
-- FAQ  -> FAQ page
+- Therapy  -> Individual Therapy
+- Evaluations  -> Psychological Evaluations
+- Wellness Groups  -> Welcome  To Our Wellness Groups
+- Client Portal  -> Client Portal
+- FAQ  -> FAQ
 
 **footer-for-professionals**
-- Join Our Team  -> Join Our Team page
-- Workshops  -> Workshops page
-- Courses & Certification  -> Courses & Certification page
-- Professional Clinical Trainings  -> Professional Clinical Trainings page
-- EMDR Consultation  -> EMDR Consultation page
-- Clinical Supervision  -> Clinical Supervision page
+- Join Our Team  -> Join Our Team
+- Workshops  -> Workshops
+- Courses & Certification  -> Courses & Certification
+- Professional Clinical Trainings  -> Professional Clinical Trainings
+- EMDR Consultation  -> EMDR Consultation
+- Clinical Supervision  -> Clinical Supervision
 
 ---
 
-## Blog templates (Content > Blog posts > Manage blogs > each blog > Theme template)
-- Make It Make Sense  -> `make-it-make-sense`
-- Letters from CFBL    -> `newsletter`
-- Essays               -> `essays` (and set its article template to `musa`)
+## Blog template assignment (Content > Blog posts > Manage blogs > each blog > Theme template)
+Current live state:
+- Make It Make Sense  -> "Default blog" (fine to launch; custom template optional)
+- Letters from CFBL    -> "newsletters-template"
+- Essays, Books & Other Publications -> "Default blog" (fine to launch)
+
+Launching with "Default blog" is acceptable. Custom blog templates can be wired
+after publish if desired.
 
 ---
 
@@ -97,9 +130,8 @@ human. "Books" gets added to the MUSA dropdown later when there is a books page.
 ---
 
 ## Final pre-publish checklist
-- [ ] Blog templates set (3)
-- [ ] Main menu built and saved
+- [ ] Main menu built and saved (search by REAL titles above)
 - [ ] Footer menus built and saved
-- [ ] Preview the theme; click every nav item; confirm none 404
+- [ ] Customize the CFBL theme; use the page dropdown to spot-check pages; confirm none 404
 - [ ] Logo, sub-brand logos, signature, favicon set in Theme settings
-- [ ] Publish (Online Store > Themes > Publish)
+- [ ] Publish (Online Store > Themes > CFBL row > Publish)
