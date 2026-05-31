@@ -9,6 +9,24 @@ Tip: link by picking from the list, not by typing URLs. Your page titles are lon
 (e.g. "Services at Center for Balanced Living"), so the search picker avoids
 broken links.
 
+### Known handle quirks (from your URL Redirects)
+Your live page handles do NOT all match their short names. Shopify is already
+redirecting the old short links to these, so old bookmarks and Google results
+keep working. You do not need to create or rename any pages. When the picker
+shows a page, these are the real handles behind the titles:
+
+- About  ->  `about-us-1`  (old `/pages/about` redirects here)
+- MUSA  ->  `musa-writing`  (old `/pages/musa` redirects here)
+- Career Development  ->  `career-development`  (old `/pages/careers` redirects here)
+- Professional Clinical Trainings  ->  `professional-clinical-trainings`
+  (there is also a typo'd `clinicial-trainings` redirect; ignore it, pick the
+  correctly spelled page)
+- Individual Therapy  ->  `therapy-bear-delaware`
+- Our Approach  ->  `our-approach`
+
+Because these differ, ALWAYS pick from the search list. Do not hand-type
+`/pages/about` etc., or you will hit a redirect chain instead of the page.
+
 ---
 
 ## Main menu (header)
