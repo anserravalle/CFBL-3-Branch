@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "schedule": { "type": "item", "settings": { "question": "How do I schedule a first appointment?", "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24–48 hours to find a time that works.</p>" } },
+        "insurance": { "type": "item", "settings": { "question": "Do you accept insurance?", "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>" } },
+        "evals": { "type": "item", "settings": { "question": "What happens during a psychological evaluation?", "answer": "<p>Evaluations begin with careful listening and history, followed by standardized assessment and a clear written summary with recommendations and next steps.</p>" } },
+        "fit": { "type": "item", "settings": { "question": "How do I know if we are a good fit?", "answer": "<p>Our first conversation is a chance to understand your goals and determine whether our services are right for you, or to offer a referral if another setting would serve you better.</p>" } },
+        "ages": { "type": "item", "settings": { "question": "Who do you work with?", "answer": "<p>We support children, adolescents, adults, and families, as well as professionals seeking supervision, consultation, and training.</p>" } },
+        "telehealth": { "type": "item", "settings": { "question": "Do you offer telehealth?", "answer": "<p>We can discuss in-person and telehealth options during your first contact, depending on the service and your needs.</p>" } }
+      },
+      "block_order": ["schedule", "insurance", "evals", "fit", "ages", "telehealth"],
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Still Have Questions?",
+        "heading": "We're glad to help",
+        "body": "<p>Reach out and we'll point you toward the right next step.</p>",
+        "primary_label": "Request a Consultation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": ["header", "faq", "cta"]
+}
