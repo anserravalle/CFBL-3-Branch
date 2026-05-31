@@ -145,36 +145,36 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
-        "f0": {
+        "q1": {
           "type": "item",
           "settings": {
-            "question": "Does this count toward certification?",
-            "answer": "<p>Consultation can contribute toward EMDRIA certification hours; we'll confirm specifics with you.</p>"
+            "question": "Do I need to complete EMDR basic training before seeking consultation?",
+            "answer": "<p><em>Yes. EMDR consultation at Center for Balanced Living is specifically for therapists who have already completed an EMDRIA approved basic training program. Consultation is the next step in the formal certification process and builds directly on the foundation established in basic training.</em></p>"
           }
         },
-        "f1": {
+        "q2": {
           "type": "item",
           "settings": {
-            "question": "Who is it for?",
-            "answer": "<p>Clinicians trained in EMDR seeking consultation or certification support.</p>"
+            "question": "What happens during EMDR consultation sessions?",
+            "answer": "<p><em>Sessions focus on case review, protocol refinement, and integration of EMDR with complex presentations including trauma, dissociation, attachment disruptions, and co-occurring conditions. Dr. Serravalle helps therapists develop fidelity to the adaptive information processing model and build the clinical reasoning skills that move practice beyond technique toward genuine mastery.</em></p>"
           }
         },
-        "f2": {
+        "q3": {
           "type": "item",
           "settings": {
-            "question": "How do I start?",
-            "answer": "<p>Reach out through the contact form to discuss your goals and schedule.</p>"
+            "question": "How many consultation hours do I need for EMDRIA certification?",
+            "answer": "<p><em>EMDRIA requires 10 hours of consultation with an Approved Consultant as part of the certification process, with at least 4 of those hours being individual consultation. </em></p><p><em>Dr. Serravalle offers both group and individual consultation both </em>virtually<em> and in person. </em></p><p><em>Reach out through our contact form or call (302) 608-3780 to get started.</em></p>"
           }
         }
       },
       "block_order": [
-        "f0",
-        "f1",
-        "f2"
+        "q1",
+        "q2",
+        "q3"
       ],
       "settings": {
         "eyebrow": "Questions, Answered",
-        "heading": "Common Questions",
+        "heading": "Common Questions About EMDR Consultation",
         "subheading": "",
         "cta_label": "",
         "bg_scheme": "sand",

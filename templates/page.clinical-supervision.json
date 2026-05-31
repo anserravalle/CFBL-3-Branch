@@ -145,36 +145,36 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
-        "f0": {
+        "q1": {
           "type": "item",
           "settings": {
-            "question": "Who is supervision for?",
-            "answer": "<p>Pre-licensed clinicians (LPCMH, LCSW, LMFT tracks) and supervisees seeking trauma-informed depth.</p>"
+            "question": "Who is supervision available for?",
+            "answer": "<p><em>Supervision at Center for Balanced Living is available for LPC associates and PsyD trainees working toward licensure as mental health counselors and psychologists. If you are accumulating supervised hours toward licensure, this is the right fit.</em></p>"
           }
         },
-        "f1": {
+        "q2": {
           "type": "item",
           "settings": {
-            "question": "Individual or group?",
-            "answer": "<p>Both are available; we'll match format to your stage and goals.</p>"
+            "question": "What does supervision focus on?",
+            "answer": "<p><em>Supervision integrates case conceptualization, trauma-informed treatment planning, ethical decision making, and the development of clinical judgment. Sessions support both practical skill development and the theoretical integration that strong clinical practice requires.</em></p>"
           }
         },
-        "f2": {
+        "q3": {
           "type": "item",
           "settings": {
-            "question": "How do I apply?",
-            "answer": "<p>Apply through our contact form and we'll follow up to discuss fit.</p>"
+            "question": "How do I get started with supervision?",
+            "answer": "<p><em>Reach out through our contact form or call (302) 608-3780 and someone from our office will be in touch within 24 hours to discuss your supervision needs and goals.</em></p>"
           }
         }
       },
       "block_order": [
-        "f0",
-        "f1",
-        "f2"
+        "q1",
+        "q2",
+        "q3"
       ],
       "settings": {
         "eyebrow": "Questions, Answered",
-        "heading": "Common Questions",
+        "heading": "Common Questions About Supervision",
         "subheading": "",
         "cta_label": "",
         "bg_scheme": "sand",

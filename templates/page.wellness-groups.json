@@ -145,36 +145,36 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
-        "f0": {
+        "q1": {
           "type": "item",
           "settings": {
-            "question": "How do groups work?",
-            "answer": "<p>Groups run for a set number of weeks with a consistent membership and a clinician facilitator.</p>"
+            "question": "Who are the wellness groups for?",
+            "answer": "<p><em>Our wellness groups are open to adults and teens 16 and up who are seeking personal growth, nervous system regulation skills, and connection in a supportive community setting. </em></p><p><em>Groups are educational and experiential in nature, not therapy groups, and are not covered by insurance.</em></p>"
           }
         },
-        "f1": {
+        "q2": {
           "type": "item",
           "settings": {
-            "question": "How do I join?",
-            "answer": "<p>Contact us and we'll discuss current openings and fit before you enroll.</p>"
+            "question": "Do I need to be in therapy to join a group?",
+            "answer": "<p><em>No. Our wellness groups are open to community members whether or not you are currently in therapy. </em></p><p><em>They are designed to be accessible and valuable as a standalone experience or as a complement to individual therapy.</em></p>"
           }
         },
-        "f2": {
+        "q3": {
           "type": "item",
           "settings": {
-            "question": "Is a screening required?",
-            "answer": "<p>A brief conversation helps ensure the group is a good fit for you.</p>"
+            "question": "How do I sign up for a group?",
+            "answer": "<p><em>Each group has its own registration through Eventbrite. </em><a href=\"https://www.eventbrite.com/o/center-for-balanced-living-121062482552\" target=\"_blank\" title=\"https://www.eventbrite.com/o/center-for-balanced-living-121062482552\"><em>(CLICK HERE)</em></a></p><p><em>Visit the Groups page to see current offerings and available dates. </em></p><p><em>Advance registration is required as group sizes are intentionally small. </em></p><p><em>Reach out to our office at (302) 608-3780 with any questions.</em></p>"
           }
         }
       },
       "block_order": [
-        "f0",
-        "f1",
-        "f2"
+        "q1",
+        "q2",
+        "q3"
       ],
       "settings": {
         "eyebrow": "Questions, Answered",
-        "heading": "Common Questions",
+        "heading": "Common Questions About Groups",
         "subheading": "",
         "cta_label": "",
         "bg_scheme": "sand",

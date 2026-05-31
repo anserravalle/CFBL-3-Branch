@@ -10,25 +10,284 @@
         "padding_bottom": 24
       }
     },
-    "faq": {
+    "faq_evaluation": {
       "type": "faq-section",
       "blocks": {
-        "schedule": { "type": "item", "settings": { "question": "How do I schedule a first appointment?", "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24–48 hours to find a time that works.</p>" } },
-        "insurance": { "type": "item", "settings": { "question": "Do you accept insurance?", "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>" } },
-        "evals": { "type": "item", "settings": { "question": "What happens during a psychological evaluation?", "answer": "<p>Evaluations begin with careful listening and history, followed by standardized assessment and a clear written summary with recommendations and next steps.</p>" } },
-        "fit": { "type": "item", "settings": { "question": "How do I know if we are a good fit?", "answer": "<p>Our first conversation is a chance to understand your goals and determine whether our services are right for you, or to offer a referral if another setting would serve you better.</p>" } },
-        "ages": { "type": "item", "settings": { "question": "Who do you work with?", "answer": "<p>We support children, adolescents, adults, and families, as well as professionals seeking supervision, consultation, and training.</p>" } },
-        "telehealth": { "type": "item", "settings": { "question": "Do you offer telehealth?", "answer": "<p>We can discuss in-person and telehealth options during your first contact, depending on the service and your needs.</p>" } }
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "What is a psychological evaluation?",
+            "answer": "<p>A psychological evaluation is part of an overall assessment. This includes a clinical interview, a battery of cognitive, behavioral, emotional, and personality and psychopathology tests and self-report measures, a review of records, a collateral interview with family/friends/doctors/therapists, analysis of data, and report writing. </p><p>These evaluations are typically used to clarify diagnosis and guide treatment for therapeutic purposes (i.e., if you are in therapy). Clinical psychologists typically perform these types of evaluations. Psychologists will administer  tests and measures for various issues related to an individual’s psychological, emotional, and behavioral functioning. Specifically, a clinical psychologist will select the appropriate tests based on the referral question. (Do I have Bipolar Disorder?)</p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "What can I expect on test day?",
+            "answer": "<p>Testing day is a long day. It is best to rest the night before. During the testing sessions, we will complete various tests that examine cognitive abilities, problem solving, verbal and nonverbal abilities, memory, attention and perhaps social perception and abilities. Individuals are encouraged to take breaks and can end testing at any time. They are also encouraged to wear comfortable clothes, and to bring snacks and drinks. </p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "Does insurance cover the evaluation?",
+            "answer": "<p>Each insurance plan is different. We call for benefits prior to your intake. We send a financial responsibility email before scheduling. We try to be as transparent about the process as we can. There are some policies that cover 100% and others that do not. The best way to know is let us look up your benefits for you. </p>"
+          }
+        },
+        "q4": {
+          "type": "item",
+          "settings": {
+            "question": "How long is an evaluation?",
+            "answer": "<p><em>The short answer is it depends. Each evaluation comes with a specific question and to answer those questions are different for each person. However, Dr. Serravalle works hard to complete the process as quickly as possible. Usually between 4-8 weeks. </em></p>"
+          }
+        },
+        "q5": {
+          "type": "item",
+          "settings": {
+            "question": "What is the difference between psychological and neuropsychological evaluation?",
+            "answer": "<p><em>Similar to the psychological evaluation, the neuropsychological evaluation is part of an overall assessment. However, there are a few differences here. First, the psychologist conducting the neuropsychological evaluation must be specifically trained in neuropsychological tests and measures. </em></p><p><em>At a minimum, they are licensed psychologists in their state and can practice independently and hold the equivalent of two full-time years of experience and specialized training in neuropsychology and related neurosciences. At least one of the years must be obtained post-doc, and both years are supervised by a clinical neuropsychologist. </em></p><p><em>Secondly, neuropsychologists use their in-depth knowledge of brain-behavior relationships to assess and evaluate patients with neurological, medical, neurodevelopmental, psychiatric, and cognitive conditions. They use tests, puzzles, and game-like activities to evaluate different cognitive areas of the brain, such as attention, memory, language, executive functioning, visual-spatial relations, motor skills, and intelligence. This evaluation is looking at the whole person, not just psychological functioning. The results will aid in understanding the underlying neurocognitive processes and their relation to an individual’s behaviors. </em></p>"
+          }
+        },
+        "q6": {
+          "type": "item",
+          "settings": {
+            "question": "What can the results of the evaluation be used for?",
+            "answer": "<p>The short answer is anything. Typically, they are used in healthcare, legal, education and for personal knowledge. They can be used to guide treatment, inform education and occupational settings for accommodations.  </p><p>•\tDr. Serravalle is not a forensic psychologist and therefore does not complete evaluations for custody, fitness for duty, competency, workmen’s comp or malpractice. Through her work with DPA she has met and worked with many forensic psychologist and can refer you to them.  </p><p></p>"
+          }
+        },
+        "q7": {
+          "type": "item",
+          "settings": {
+            "question": "What is an Educational Evaluation?",
+            "answer": "<p><em>The purpose of this evaluation is to provide an in-depth study of the cognitive/intellectual processes and current academic levels of functioning. This evaluation might also include an assessment of memory and executive functioning. The outcome is not a diagnosis but the ways in which any deficits or strengths impact the learning environment. The results may indicate learning giftedness as well as learning disorders. This type of evaluation usually informs IEP, 504 and accommodations for school. These evaluations are not covered by insurance. </em></p>"
+          }
+        },
+        "q8": {
+          "type": "item",
+          "settings": {
+            "question": "What is a Psychological/Neuropsychological Evaluation",
+            "answer": "<p><em>The purpose of this is to evaluate for emotional, social, personality and behaviors or cognitive strengths/deficits that impacting daily functioning . Results can include diagnosis for disorders such as Attention- Deficit/Hyperactivity Disorder, Autism Spectrum Disorders as well as Depression, or Anxiety disorders that may be affecting one’s functional abilities. These types of evaluations are often used to inform treatment including medication and therapy therefore these types of evaluations are often covered by insurance. </em></p>"
+          }
+        },
+        "q9": {
+          "type": "item",
+          "settings": {
+            "question": "What is a Risk Assessment?",
+            "answer": "<p>The purpose of this type of evaluation to determine a <br/>level of risk. The evaluation is examines one’s history, static and protective factors as well as current psychological functioning. They often require collateral data/participation. These assessments are not covered by insurance. </p>"
+          }
+        }
       },
-      "block_order": ["schedule", "insurance", "evals", "fit", "ages", "telehealth"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9"
+      ],
       "settings": {
         "eyebrow": "",
-        "heading": "",
+        "heading": "Psychological Evaluations",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "sand",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "faq_therapy": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "What is therapy like?",
+            "answer": "<p><em>The first few sessions are essential to getting to know one another. After that, it’s being committed to showing up and a willingness to explore the parts of yourself or your life that need adjusting.</em></p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "Do you have in-person or telehealth sessions?",
+            "answer": "<p><em>At this time, I offer both in-person and telehealth sessions. We can discuss what works best for you and which location can best help you meet your needs.</em></p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "How long does a therapy session last?",
+            "answer": "<p><em>The individual sessions are usually about 50 minutes. Dr. Serravalle works hard to start on time and end on time out of respect for her clients.</em></p>"
+          }
+        },
+        "q4": {
+          "type": "item",
+          "settings": {
+            "question": "What is ACT?",
+            "answer": "<p><em>The main goal of Acceptance and Commitment Therapy is to help individuals recognize ways they attempt to suppress, avoid, and control emotional experiences that can create further challenges. By compassionately recognizing and addressing these challenges, an individual can become more able to make room for values-based actions that support their well-being. Learning how to accept things as they come, without evaluating or attempting to change the situation is a skill that can be developed in sessions and can be practiced outside of the sessions. ACT is not about changing or stopping those unwanted feelings or thought processes, it is about changing your relationship with them. ACT therapy can offer freedom to people who struggle with not wanting to have “full control” or an inability to “let things go”.</em></p>"
+          }
+        },
+        "q5": {
+          "type": "item",
+          "settings": {
+            "question": "What is CBT?",
+            "answer": "<p><em>Cognitive Behavioral Therapy is a structured, problem-focused therapy in which individuals are taught to observe and document their negative thoughts so they can identify the associations between thoughts, feelings, physiology, and behavior. Individuals will learn to assess the rationality and usefulness of these cognitions and change dysfunctional cognitions to amore adaptive perspective. Behavioral techniques such as activity scheduling, self-monitoring of mastery and pleasure, and graded task assignments are used to help individuals overcome disinterest and expose themselves to rewarding experiences. Individuals also learn adaptive coping skills and problem-solving skills. Cognitive Behavioral counseling entails many strategies and techniques to help depressed individuals address their thinking including psychoeducation, guided discovery, Socratic questioning, role-playing, imagery, and behavioral experiments.</em></p>"
+          }
+        },
+        "q6": {
+          "type": "item",
+          "settings": {
+            "question": "What is DBT?",
+            "answer": "<p><em>Dialectical Behavior Therapy (DBT) is a therapy used to help individuals develop skills to better manage stress, emotional regulation, and to help redirect behavioral patterns such as self-harm or other compulsive behaviors. DBT combines the standard cognitive-behavioral techniques, acceptance therapy, and mindful awareness. Mindfulness is one of the core elements in DBT therapy. It is a great foundation for the other building blocks that come with therapy and DBT skills. The acceptance portion of DBT helps individuals tolerate the powerful emotions that can come with therapy and life. The acceptance and mindfulness that is taught within DBT therapy create the ability to pay attention, nonjudgmentally, to the moments at hand. And reframes one’s perspective to handle it with more positive outlets and responses. The acceptance skills taught help one to no longer judge themselves for having these emotions or for being in “negative” situations. This can create less distress and panic when things come up.</em></p>"
+          }
+        },
+        "q7": {
+          "type": "item",
+          "settings": {
+            "question": "What is EMDR?",
+            "answer": "<p><em>Eye Movement Desensitization and Reprocessing (EMDR) is a form of therapy that is geared for individuals who have experienced physical and emotional trauma, and experience overall emotional distress from difficult life experiences. EMDR therapy is a parallel concept where your brain can heal from psychological trauma and how your body can recover from physical injury. EMDR therapy is a direct approach to one’s trauma, to be able to face the situation (at their own pace) under the supervision and guidance of a certified EMDR therapist. EMDR therapy is different from talk therapy in a few ways. EMDR therapy involves biological aspects such as eye movements (or other bilateral stimulations), that allows the brain to reprocess triggering memories.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "Therapy",
         "subheading": "",
         "cta_label": "",
         "bg_scheme": "default",
-        "padding_top": 16,
-        "padding_bottom": 72
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "faq_supervision": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "Who is supervision available for?",
+            "answer": "<p><em>Supervision at Center for Balanced Living is available for LPC associates and PsyD trainees working toward licensure as mental health counselors and psychologists. If you are accumulating supervised hours toward licensure, this is the right fit.</em></p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "What does supervision focus on?",
+            "answer": "<p><em>Supervision integrates case conceptualization, trauma-informed treatment planning, ethical decision making, and the development of clinical judgment. Sessions support both practical skill development and the theoretical integration that strong clinical practice requires.</em></p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "How do I get started with supervision?",
+            "answer": "<p><em>Reach out through our contact form or call (302) 608-3780 and someone from our office will be in touch within 24 hours to discuss your supervision needs and goals.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "Clinical Supervision",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "sand",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "faq_emdr": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "Do I need to complete EMDR basic training before seeking consultation?",
+            "answer": "<p><em>Yes. EMDR consultation at Center for Balanced Living is specifically for therapists who have already completed an EMDRIA approved basic training program. Consultation is the next step in the formal certification process and builds directly on the foundation established in basic training.</em></p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "What happens during EMDR consultation sessions?",
+            "answer": "<p><em>Sessions focus on case review, protocol refinement, and integration of EMDR with complex presentations including trauma, dissociation, attachment disruptions, and co-occurring conditions. Dr. Serravalle helps therapists develop fidelity to the adaptive information processing model and build the clinical reasoning skills that move practice beyond technique toward genuine mastery.</em></p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "How many consultation hours do I need for EMDRIA certification?",
+            "answer": "<p><em>EMDRIA requires 10 hours of consultation with an Approved Consultant as part of the certification process, with at least 4 of those hours being individual consultation. </em></p><p><em>Dr. Serravalle offers both group and individual consultation both </em>virtually<em> and in person. </em></p><p><em>Reach out through our contact form or call (302) 608-3780 to get started.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "EMDR Consultation",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "default",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "faq_groups": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "Who are the wellness groups for?",
+            "answer": "<p><em>Our wellness groups are open to adults and teens 16 and up who are seeking personal growth, nervous system regulation skills, and connection in a supportive community setting. </em></p><p><em>Groups are educational and experiential in nature, not therapy groups, and are not covered by insurance.</em></p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "Do I need to be in therapy to join a group?",
+            "answer": "<p><em>No. Our wellness groups are open to community members whether or not you are currently in therapy. </em></p><p><em>They are designed to be accessible and valuable as a standalone experience or as a complement to individual therapy.</em></p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "How do I sign up for a group?",
+            "answer": "<p><em>Each group has its own registration through Eventbrite. </em><a href=\"https://www.eventbrite.com/o/center-for-balanced-living-121062482552\" target=\"_blank\" title=\"https://www.eventbrite.com/o/center-for-balanced-living-121062482552\"><em>(CLICK HERE)</em></a></p><p><em>Visit the Groups page to see current offerings and available dates. </em></p><p><em>Advance registration is required as group sizes are intentionally small. </em></p><p><em>Reach out to our office at (302) 608-3780 with any questions.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "Wellness Groups",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "sand",
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "cta": {
@@ -49,5 +308,13 @@
       }
     }
   },
-  "order": ["header", "faq", "cta"]
+  "order": [
+    "header",
+    "faq_evaluation",
+    "faq_therapy",
+    "faq_supervision",
+    "faq_emdr",
+    "faq_groups",
+    "cta"
+  ]
 }

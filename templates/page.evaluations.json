@@ -13,13 +13,59 @@
     "types": {
       "type": "tabs",
       "blocks": {
-        "autism": { "type": "tab", "settings": { "title": "Autism Spectrum", "content": "<p>These evaluations help clarify questions related to autism spectrum presentation, including social communication differences, sensory experiences, repetitive patterns, masking, and developmental history. The goal is to provide a thoughtful and comprehensive understanding of the individual's profile.</p>", "link": "/pages/autism", "link_label": "Learn more about autism evaluations" } },
-        "personality": { "type": "tab", "settings": { "title": "Personality & Emotional Functioning", "content": "<p>These evaluations help clarify patterns related to mood, anxiety, personality functioning, coping, emotional regulation, and interpersonal style. They can be useful when concerns are complex, longstanding, or difficult to fully understand through conversation alone.</p>", "link": "/pages/personality-and-emotion-and-functioning", "link_label": "Learn more" } },
-        "attention": { "type": "tab", "settings": { "title": "Attention & Executive Functioning", "content": "<p>Evaluations in this area help clarify concerns related to attention, impulsivity, organization, working memory, task initiation, and self-regulation. They can support understanding of ADHD and related executive functioning difficulties across school, work, and daily life.</p>", "link": "/pages/adhd-evaluations", "link_label": "Learn more" } },
-        "academic": { "type": "tab", "settings": { "title": "Academic & Learning Concerns", "content": "<p>Evaluations in this area explore concerns related to reading, writing, math, academic performance, learning differences, and the cognitive processes that may affect school functioning. They can also help identify strengths, challenges, and recommendations for support.</p>", "link": "/pages/academic-and-learning-concerns", "link_label": "Learn more" } },
-        "diagnostic": { "type": "tab", "settings": { "title": "Diagnostic Clarification", "content": "<p>Some evaluations are designed to answer broader or more complex diagnostic questions when there is uncertainty about the nature of the concerns. The goal is to provide greater clarity, more accurate understanding, and practical recommendations for next steps.</p>", "link": "/pages/diagnostic-clarification-evaluations", "link_label": "Learn more" } }
+        "autism": {
+          "type": "tab",
+          "settings": {
+            "title": "Autism Spectrum",
+            "content": "<p>These evaluations help clarify questions related to autism spectrum presentation, including social communication differences, sensory experiences, repetitive patterns, masking, and developmental history. The goal is to provide a thoughtful and comprehensive understanding of the individual's profile.</p>",
+            "link": "/pages/autism",
+            "link_label": "Learn more about autism evaluations"
+          }
+        },
+        "personality": {
+          "type": "tab",
+          "settings": {
+            "title": "Personality & Emotional Functioning",
+            "content": "<p>These evaluations help clarify patterns related to mood, anxiety, personality functioning, coping, emotional regulation, and interpersonal style. They can be useful when concerns are complex, longstanding, or difficult to fully understand through conversation alone.</p>",
+            "link": "/pages/personality-and-emotion-and-functioning",
+            "link_label": "Learn more"
+          }
+        },
+        "attention": {
+          "type": "tab",
+          "settings": {
+            "title": "Attention & Executive Functioning",
+            "content": "<p>Evaluations in this area help clarify concerns related to attention, impulsivity, organization, working memory, task initiation, and self-regulation. They can support understanding of ADHD and related executive functioning difficulties across school, work, and daily life.</p>",
+            "link": "/pages/adhd-evaluations",
+            "link_label": "Learn more"
+          }
+        },
+        "academic": {
+          "type": "tab",
+          "settings": {
+            "title": "Academic & Learning Concerns",
+            "content": "<p>Evaluations in this area explore concerns related to reading, writing, math, academic performance, learning differences, and the cognitive processes that may affect school functioning. They can also help identify strengths, challenges, and recommendations for support.</p>",
+            "link": "/pages/academic-and-learning-concerns",
+            "link_label": "Learn more"
+          }
+        },
+        "diagnostic": {
+          "type": "tab",
+          "settings": {
+            "title": "Diagnostic Clarification",
+            "content": "<p>Some evaluations are designed to answer broader or more complex diagnostic questions when there is uncertainty about the nature of the concerns. The goal is to provide greater clarity, more accurate understanding, and practical recommendations for next steps.</p>",
+            "link": "/pages/diagnostic-clarification-evaluations",
+            "link_label": "Learn more"
+          }
+        }
       },
-      "block_order": ["autism", "personality", "attention", "academic", "diagnostic"],
+      "block_order": [
+        "autism",
+        "personality",
+        "attention",
+        "academic",
+        "diagnostic"
+      ],
       "settings": {
         "eyebrow": "Types of Evaluations",
         "heading": "Areas of Evaluation",
@@ -33,12 +79,41 @@
     "process": {
       "type": "featured-services",
       "blocks": {
-        "intake": { "type": "item", "settings": { "title": "Intake & History", "text": "We begin with careful listening and a thorough history." } },
-        "assessment": { "type": "item", "settings": { "title": "Standardized Assessment", "text": "Evidence-based measures tailored to the referral question." } },
-        "feedback": { "type": "item", "settings": { "title": "Feedback Session", "text": "We review findings together, in plain language." } },
-        "report": { "type": "item", "settings": { "title": "Written Summary", "text": "A clear report with recommendations and next steps." } }
+        "intake": {
+          "type": "item",
+          "settings": {
+            "title": "Intake & History",
+            "text": "We begin with careful listening and a thorough history."
+          }
+        },
+        "assessment": {
+          "type": "item",
+          "settings": {
+            "title": "Standardized Assessment",
+            "text": "Evidence-based measures tailored to the referral question."
+          }
+        },
+        "feedback": {
+          "type": "item",
+          "settings": {
+            "title": "Feedback Session",
+            "text": "We review findings together, in plain language."
+          }
+        },
+        "report": {
+          "type": "item",
+          "settings": {
+            "title": "Written Summary",
+            "text": "A clear report with recommendations and next steps."
+          }
+        }
       },
-      "block_order": ["intake", "assessment", "feedback", "report"],
+      "block_order": [
+        "intake",
+        "assessment",
+        "feedback",
+        "report"
+      ],
       "settings": {
         "eyebrow": "What Happens",
         "heading": "The Evaluation Process",
@@ -65,7 +140,101 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "What is a psychological evaluation?",
+            "answer": "<p>A psychological evaluation is part of an overall assessment. This includes a clinical interview, a battery of cognitive, behavioral, emotional, and personality and psychopathology tests and self-report measures, a review of records, a collateral interview with family/friends/doctors/therapists, analysis of data, and report writing. </p><p>These evaluations are typically used to clarify diagnosis and guide treatment for therapeutic purposes (i.e., if you are in therapy). Clinical psychologists typically perform these types of evaluations. Psychologists will administer  tests and measures for various issues related to an individual’s psychological, emotional, and behavioral functioning. Specifically, a clinical psychologist will select the appropriate tests based on the referral question. (Do I have Bipolar Disorder?)</p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "What can I expect on test day?",
+            "answer": "<p>Testing day is a long day. It is best to rest the night before. During the testing sessions, we will complete various tests that examine cognitive abilities, problem solving, verbal and nonverbal abilities, memory, attention and perhaps social perception and abilities. Individuals are encouraged to take breaks and can end testing at any time. They are also encouraged to wear comfortable clothes, and to bring snacks and drinks. </p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "Does insurance cover the evaluation?",
+            "answer": "<p>Each insurance plan is different. We call for benefits prior to your intake. We send a financial responsibility email before scheduling. We try to be as transparent about the process as we can. There are some policies that cover 100% and others that do not. The best way to know is let us look up your benefits for you. </p>"
+          }
+        },
+        "q4": {
+          "type": "item",
+          "settings": {
+            "question": "How long is an evaluation?",
+            "answer": "<p><em>The short answer is it depends. Each evaluation comes with a specific question and to answer those questions are different for each person. However, Dr. Serravalle works hard to complete the process as quickly as possible. Usually between 4-8 weeks. </em></p>"
+          }
+        },
+        "q5": {
+          "type": "item",
+          "settings": {
+            "question": "What is the difference between psychological and neuropsychological evaluation?",
+            "answer": "<p><em>Similar to the psychological evaluation, the neuropsychological evaluation is part of an overall assessment. However, there are a few differences here. First, the psychologist conducting the neuropsychological evaluation must be specifically trained in neuropsychological tests and measures. </em></p><p><em>At a minimum, they are licensed psychologists in their state and can practice independently and hold the equivalent of two full-time years of experience and specialized training in neuropsychology and related neurosciences. At least one of the years must be obtained post-doc, and both years are supervised by a clinical neuropsychologist. </em></p><p><em>Secondly, neuropsychologists use their in-depth knowledge of brain-behavior relationships to assess and evaluate patients with neurological, medical, neurodevelopmental, psychiatric, and cognitive conditions. They use tests, puzzles, and game-like activities to evaluate different cognitive areas of the brain, such as attention, memory, language, executive functioning, visual-spatial relations, motor skills, and intelligence. This evaluation is looking at the whole person, not just psychological functioning. The results will aid in understanding the underlying neurocognitive processes and their relation to an individual’s behaviors. </em></p>"
+          }
+        },
+        "q6": {
+          "type": "item",
+          "settings": {
+            "question": "What can the results of the evaluation be used for?",
+            "answer": "<p>The short answer is anything. Typically, they are used in healthcare, legal, education and for personal knowledge. They can be used to guide treatment, inform education and occupational settings for accommodations.  </p><p>•\tDr. Serravalle is not a forensic psychologist and therefore does not complete evaluations for custody, fitness for duty, competency, workmen’s comp or malpractice. Through her work with DPA she has met and worked with many forensic psychologist and can refer you to them.  </p><p></p>"
+          }
+        },
+        "q7": {
+          "type": "item",
+          "settings": {
+            "question": "What is an Educational Evaluation?",
+            "answer": "<p><em>The purpose of this evaluation is to provide an in-depth study of the cognitive/intellectual processes and current academic levels of functioning. This evaluation might also include an assessment of memory and executive functioning. The outcome is not a diagnosis but the ways in which any deficits or strengths impact the learning environment. The results may indicate learning giftedness as well as learning disorders. This type of evaluation usually informs IEP, 504 and accommodations for school. These evaluations are not covered by insurance. </em></p>"
+          }
+        },
+        "q8": {
+          "type": "item",
+          "settings": {
+            "question": "What is a Psychological/Neuropsychological Evaluation",
+            "answer": "<p><em>The purpose of this is to evaluate for emotional, social, personality and behaviors or cognitive strengths/deficits that impacting daily functioning . Results can include diagnosis for disorders such as Attention- Deficit/Hyperactivity Disorder, Autism Spectrum Disorders as well as Depression, or Anxiety disorders that may be affecting one’s functional abilities. These types of evaluations are often used to inform treatment including medication and therapy therefore these types of evaluations are often covered by insurance. </em></p>"
+          }
+        },
+        "q9": {
+          "type": "item",
+          "settings": {
+            "question": "What is a Risk Assessment?",
+            "answer": "<p>The purpose of this type of evaluation to determine a <br/>level of risk. The evaluation is examines one’s history, static and protective factors as well as current psychological functioning. They often require collateral data/participation. These assessments are not covered by insurance. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9"
+      ],
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "heading": "Common Questions About Evaluations",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
-  "order": ["header", "types", "process", "cta"]
+  "order": [
+    "header",
+    "types",
+    "process",
+    "faq",
+    "cta"
+  ]
 }
