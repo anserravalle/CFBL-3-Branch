@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Client Portal",
+        "heading": "Your secure client portal",
+        "subheading": "<p>Existing clients can securely message us, complete paperwork, and manage appointments through our practice portal.</p>",
+        "use_h1": true,
+        "primary_label": "Open the Client Portal",
+        "primary_link": "#",
+        "secondary_label": "Contact the Office",
+        "secondary_link": "/pages/contact",
+        "image": "",
+        "image_frame": true,
+        "frame_color": "#9D654E",
+        "show_shape": true,
+        "layout": "split",
+        "bg_scheme": "default",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "body": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 24,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "body"
+  ]
+}

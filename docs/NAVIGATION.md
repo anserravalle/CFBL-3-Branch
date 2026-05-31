@@ -171,3 +171,23 @@ Saturday / Sunday: Closed
 In the theme editor, open the Header section and upload your **Signature image**
 (top right). A transparent PNG works best; adjust its height with the slider.
 It hides on mobile to keep the header compact.
+
+---
+
+## 7. Sub-evaluation & detail pages (added)
+
+Create these pages and assign the matching template (all auto-scope to CFBL,
+except courses which is Institute):
+
+| Page (handle)              | Template                   |
+| -------------------------- | -------------------------- |
+| adhd-evaluation            | `adhd-evaluation`          |
+| autism-evaluation          | `autism-evaluation`        |
+| diagnostic-clarification   | `diagnostic-clarification` |
+| personality-and-emotional  | `personality-and-emotional`|
+| academic-and-learning      | `academic-and-learning`    |
+| courses-certification      | `courses-certification`    |
+| client-portal              | `client-portal` (set the real portal URL on the hero button) |
+
+The Evaluations page tabs now link to these sub-pages. Workshops page has a
+detail intro. Privacy Practices can use the default `page` template.

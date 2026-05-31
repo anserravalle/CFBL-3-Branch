@@ -1,0 +1,143 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Personality & Emotional Functioning",
+        "heading": "Personality and Emotional Functioning Evaluations",
+        "subheading": "<p>Personality and emotional functioning evaluations are designed to provide a deeper understanding of how a person experiences themselves, relates to others, manages emotions, copes with stress, and responds to life circumstances. These evaluations can be especially helpful when symptoms feel complex, longstanding, confusing, or difficult to explain through a brief clinical conversation alone. At Center for Balanced Living, these evaluations are completed with care, clinical depth, and respect for the whole person. The goal is not to reduce someone to a diagnosis, but to better understand the patterns that may be shaping their distress, relationships, coping style, and treatment needs.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Evaluations",
+        "secondary_link": "/pages/psychological-evaluations",
+        "image": "",
+        "image_frame": true,
+        "frame_color": "#9D654E",
+        "show_shape": true,
+        "layout": "split",
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "benefits": {
+      "type": "featured-services",
+      "blocks": {
+        "b0": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Adults and teens seeking deeper self-understanding",
+            "text": ""
+          }
+        },
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "People navigating mood, anxiety, or relational patterns",
+            "text": ""
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Those wanting clarity to guide therapy and treatment planning",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "eyebrow": "Who Might Benefit",
+        "heading": "Is this evaluation right for you?",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "2",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "p0": {
+          "type": "item",
+          "settings": {
+            "title": "Intake & History",
+            "text": "We begin with careful listening and a thorough history."
+          }
+        },
+        "p1": {
+          "type": "item",
+          "settings": {
+            "title": "Standardized Assessment",
+            "text": "Evidence-based measures tailored to the referral question."
+          }
+        },
+        "p2": {
+          "type": "item",
+          "settings": {
+            "title": "Feedback Session",
+            "text": "We review findings together, in plain language."
+          }
+        },
+        "p3": {
+          "type": "item",
+          "settings": {
+            "title": "Written Summary",
+            "text": "A clear report with recommendations and next steps."
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "The Evaluation Process",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Get Started",
+        "heading": "Request an Evaluation",
+        "body": "<p>Tell us a little about what you are seeking clarity on, and we will guide you through the next step. We usually reach out within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "benefits",
+    "process",
+    "cta"
+  ]
+}

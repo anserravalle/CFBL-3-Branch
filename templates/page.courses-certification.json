@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "CFBL Institute",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "intro": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "content": "<p>Multi-session courses that build clinical knowledge sequentially, with time to integrate between sessions. For clinicians strengthening their foundation and students building it for the first time.</p>",
+        "text_align": "center",
+        "content_width": 760,
+        "bg_scheme": "default",
+        "padding_top": 8,
+        "padding_bottom": 40
+      }
+    },
+    "offerings": {
+      "type": "tabs",
+      "blocks": {
+        "emdr": {
+          "type": "tab",
+          "settings": {
+            "title": "EMDR Basic Training",
+            "heading": "12-Week EMDR Basic Training",
+            "content": "<p>A 12-week EMDR Basic Training for licensed clinicians and advanced graduate students integrating EMDR into clinical practice. The curriculum follows the standardized EMDRIA model and covers the eight phases of EMDR, the adaptive information processing framework, and the clinical skills required to safely and effectively treat trauma. This program is currently undergoing EMDRIA review; registration opens to waitlist members first once approval is granted.</p>",
+            "link": "/pages/contact",
+            "link_label": "Join the waitlist"
+          }
+        },
+        "eco": {
+          "type": "tab",
+          "settings": {
+            "title": "Nature-Based Foundations",
+            "heading": "Foundations of Nature-Based Clinical Practice",
+            "content": "<p>A 12-week course exploring the integration of nature-based interventions into trauma-informed clinical practice, built around ecological theory, nervous system science, and applied psychological work. For licensed clinicians, advanced graduate students, and helping professionals. Foundations serves as the entry course for the forthcoming CFBL Institute certification in nature-based clinical practice.</p>",
+            "link": "/pages/contact",
+            "link_label": "Express interest"
+          }
+        }
+      },
+      "block_order": [
+        "emdr",
+        "eco"
+      ],
+      "settings": {
+        "eyebrow": "Current & Upcoming",
+        "heading": "Courses & Certification",
+        "subheading": "Select a course to read more.",
+        "text_align": "left",
+        "image_ratio": "4-3",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Join a course or the waitlist",
+        "body": "<p>We welcome inquiries about courses, certification, and future offerings. We usually reach out within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Trainings",
+        "secondary_link": "/pages/professional-trainings",
+        "phone": "",
+        "disclaimer": "This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "header",
+    "intro",
+    "offerings",
+    "cta"
+  ]
+}
