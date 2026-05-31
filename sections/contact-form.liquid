@@ -1,9 +1,16 @@
 {%- comment -%}
-  Contact form - accessible Shopify contact form with optional dropdowns/fields
-  as blocks, plus an editable info column (phone, hours, emergency disclaimer).
+  Contact form - accessible Shopify contact form with structured fields:
+  first name, last name, email, phone, a "reason for reaching out" dropdown
+  (options set per page), a preferred-contact-method dropdown, and a message.
+  Includes an editable response-time note and the emergency disclaimer on every
+  page, with brand-matched intro copy. Submissions go to the store's contact
+  inbox via Shopify's {% form 'contact' %}.
 {%- endcomment -%}
 {%- liquid
   assign bg = section.settings.bg_scheme
+  assign reason_opts = section.settings.reason_options | split: ','
+  assign method_opts = section.settings.method_options | split: ','
+  assign use_h1 = section.settings.use_h1
 -%}
 <section class="section bg--{{ bg }}"
   style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
@@ -12,7 +19,9 @@
       {%- if section.settings.heading != blank or section.settings.eyebrow != blank -%}
         <div class="section__header reveal">
           {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
-          {%- if section.settings.heading != blank -%}<h1>{{ section.settings.heading }}</h1>{%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            {%- if use_h1 -%}<h1>{{ section.settings.heading }}</h1>{%- else -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- endif -%}
         </div>
       {%- endif -%}
 
@@ -33,55 +42,69 @@
               <p class="contact__detail">{%- render 'icon', name: 'clock', size: 20 -%} <span>{{ section.settings.hours }}</span></p>
             {%- endif -%}
           </div>
+          {%- if section.settings.response_note != blank -%}
+            <p class="contact__detail" style="margin-top:var(--space-24);font-weight:600;color:var(--color-heading);">{{ section.settings.response_note }}</p>
+          {%- endif -%}
           {%- if section.settings.disclaimer != blank -%}
-            <p class="form-note form-note--error" style="margin-top:var(--space-24);font-weight:500;" role="note">{{ section.settings.disclaimer }}</p>
+            <div class="form-note form-note--error" style="margin-top:var(--space-16);font-weight:500;" role="note">{{ section.settings.disclaimer }}</div>
           {%- endif -%}
         </div>
 
         <div class="contact__form-wrap reveal">
           {%- form 'contact', class: 'form-grid' -%}
             {%- if form.posted_successfully? -%}
-              <p class="form-note form-note--success" role="status" tabindex="-1">{{ section.settings.success_text | default: 'Thank you. We typically respond within 24-48 hours.' }}</p>
+              <p class="form-note form-note--success" role="status" tabindex="-1">{{ section.settings.success_text }}</p>
             {%- elsif form.errors -%}
               <p class="form-note form-note--error" role="alert">{{ form.errors | default_errors }}</p>
             {%- endif -%}
 
             <div class="form-grid--2">
               <div class="field">
-                <label for="ContactName">Name</label>
-                <input type="text" id="ContactName" name="contact[name]" autocomplete="name" required value="{{ form.name }}">
+                <label for="ContactFirst-{{ section.id }}">First name</label>
+                <input type="text" id="ContactFirst-{{ section.id }}" name="contact[First Name]" autocomplete="given-name" required>
               </div>
               <div class="field">
-                <label for="ContactEmail">Email</label>
-                <input type="email" id="ContactEmail" name="contact[email]" autocomplete="email" required value="{{ form.email }}">
+                <label for="ContactLast-{{ section.id }}">Last name</label>
+                <input type="text" id="ContactLast-{{ section.id }}" name="contact[Last Name]" autocomplete="family-name" required>
               </div>
             </div>
 
-            {%- for block in section.blocks -%}
-              {%- case block.type -%}
-                {%- when 'text' -%}
-                  <div class="field" {{ block.shopify_attributes }}>
-                    <label for="Contact-{{ block.id }}">{{ block.settings.title }}{% unless block.settings.required %} <span style="font-weight:400;color:var(--color-muted);">(optional)</span>{% endunless %}</label>
-                    <input type="{{ block.settings.input_type | default: 'text' }}" id="Contact-{{ block.id }}" name="contact[{{ block.settings.title }}]" {% if block.settings.required %}required{% endif %}>
-                  </div>
-                {%- when 'dropdown' -%}
-                  <div class="field" {{ block.shopify_attributes }}>
-                    <label for="Contact-{{ block.id }}">{{ block.settings.title }}</label>
-                    <select id="Contact-{{ block.id }}" name="contact[{{ block.settings.title }}]">
-                      <option value="">Please select…</option>
-                      {%- assign opts = block.settings.values | split: ',' -%}
-                      {%- for opt in opts -%}<option value="{{ opt | strip }}">{{ opt | strip }}</option>{%- endfor -%}
-                    </select>
-                  </div>
-              {%- endcase -%}
-            {%- endfor -%}
-
-            <div class="field">
-              <label for="ContactMessage">How can we help?</label>
-              <textarea id="ContactMessage" name="contact[body]" required>{{ form.body }}</textarea>
+            <div class="form-grid--2">
+              <div class="field">
+                <label for="ContactEmail-{{ section.id }}">Email</label>
+                <input type="email" id="ContactEmail-{{ section.id }}" name="contact[email]" autocomplete="email" required value="{{ form.email }}">
+              </div>
+              <div class="field">
+                <label for="ContactPhone-{{ section.id }}">Phone {% unless section.settings.phone_required %}<span style="font-weight:400;color:var(--color-muted);">(optional)</span>{% endunless %}</label>
+                <input type="tel" id="ContactPhone-{{ section.id }}" name="contact[Phone]" autocomplete="tel" {% if section.settings.phone_required %}required{% endif %}>
+              </div>
             </div>
 
-            <button type="submit" class="btn btn--primary btn--lg">{{ section.settings.button_label | default: 'Send Message' }}</button>
+            {%- if reason_opts.size > 0 -%}
+              <div class="field">
+                <label for="ContactReason-{{ section.id }}">{{ section.settings.reason_label }}</label>
+                <select id="ContactReason-{{ section.id }}" name="contact[{{ section.settings.reason_label }}]" required>
+                  <option value="">Please select...</option>
+                  {%- for opt in reason_opts -%}<option value="{{ opt | strip | escape }}">{{ opt | strip }}</option>{%- endfor -%}
+                </select>
+              </div>
+            {%- endif -%}
+
+            {%- if method_opts.size > 0 -%}
+              <div class="field">
+                <label for="ContactMethod-{{ section.id }}">{{ section.settings.method_label }}</label>
+                <select id="ContactMethod-{{ section.id }}" name="contact[Preferred Method of Contact]">
+                  {%- for opt in method_opts -%}<option value="{{ opt | strip | escape }}">{{ opt | strip }}</option>{%- endfor -%}
+                </select>
+              </div>
+            {%- endif -%}
+
+            <div class="field">
+              <label for="ContactMessage-{{ section.id }}">{{ section.settings.message_label }}</label>
+              <textarea id="ContactMessage-{{ section.id }}" name="contact[body]" {% if section.settings.message_required %}required{% endif %}>{{ form.body }}</textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg">{{ section.settings.button_label }}</button>
           {%- endform -%}
         </div>
       </div>
@@ -94,43 +117,33 @@
   "name": "Contact form",
   "settings": [
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Get in Touch" },
-    { "type": "text", "id": "heading", "label": "Heading (page H1)", "default": "Start the Conversation" },
-    { "type": "richtext", "id": "intro", "label": "Intro", "default": "<p>Whether you are seeking therapy, evaluations, consultation, supervision, or training, our team is here to help you take the next step. To speak with us directly, please call our office. We typically respond to messages within 24-48 hours.</p>" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Start the Conversation" },
+    { "type": "checkbox", "id": "use_h1", "label": "Use heading as page H1", "default": true },
+    { "type": "richtext", "id": "intro", "label": "Intro (brand-matched)", "default": "<p>Whether you are seeking therapy, an evaluation, or a first conversation, our team is here to help you take the next step. To speak with us directly, please call our office.</p>" },
     { "type": "text", "id": "phone", "label": "Phone", "default": "(302) 608-3780" },
     { "type": "text", "id": "email", "label": "Email" },
     { "type": "html", "id": "address", "label": "Address" },
     { "type": "text", "id": "hours", "label": "Hours", "default": "By appointment" },
+    { "type": "header", "content": "Form fields" },
+    { "type": "checkbox", "id": "phone_required", "label": "Require phone", "default": false },
+    { "type": "text", "id": "reason_label", "label": "Reason dropdown label", "default": "What are you reaching out about?" },
+    { "type": "text", "id": "reason_options", "label": "Reason options (comma-separated)", "info": "Set per page, e.g. Therapy, Evaluation, Group on the clinical page.", "default": "Therapy, Psychological Evaluation, Group or Workshop, Something Else" },
+    { "type": "text", "id": "method_label", "label": "Preferred contact label", "default": "Preferred method of contact" },
+    { "type": "text", "id": "method_options", "label": "Preferred contact options", "default": "Email, Phone, Either" },
+    { "type": "text", "id": "message_label", "label": "Message label", "default": "How can we help?" },
+    { "type": "checkbox", "id": "message_required", "label": "Require message", "default": true },
+    { "type": "header", "content": "Messaging" },
     { "type": "text", "id": "button_label", "label": "Submit button label", "default": "Send Message" },
-    { "type": "text", "id": "success_text", "label": "Success message", "default": "Thank you. We typically respond within 24-48 hours." },
-    { "type": "richtext", "id": "disclaimer", "label": "Emergency disclaimer", "default": "<p>This form is not for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 988 or 911, or go to your nearest emergency room.</p>" },
+    { "type": "text", "id": "success_text", "label": "Success message", "default": "Thank you. We usually reach out within 24-48 hours." },
+    { "type": "text", "id": "response_note", "label": "Response-time note", "default": "We usually reach out within 24-48 hours." },
+    { "type": "richtext", "id": "disclaimer", "label": "Emergency disclaimer", "default": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>" },
     { "type": "header", "content": "Appearance" },
     { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
-      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "surface", "label": "White" }
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "surface", "label": "White" }, { "value": "navy", "label": "Navy" }
     ], "default": "default" },
     { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
     { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
   ],
-  "blocks": [
-    { "type": "text", "name": "Text field", "settings": [
-      { "type": "text", "id": "title", "label": "Label", "default": "Phone Number" },
-      { "type": "select", "id": "input_type", "label": "Input type", "options": [
-        { "value": "text", "label": "Text" }, { "value": "tel", "label": "Phone" }, { "value": "email", "label": "Email" }
-      ], "default": "tel" },
-      { "type": "checkbox", "id": "required", "label": "Required", "default": false }
-    ]},
-    { "type": "dropdown", "name": "Dropdown", "settings": [
-      { "type": "text", "id": "title", "label": "Label", "default": "How can we help?" },
-      { "type": "text", "id": "values", "label": "Options (comma-separated)", "default": "Individual Therapy, Psychological Evaluation, Clinical Supervision, EMDR Consultation, Professional Training, Something Else" }
-    ]}
-  ],
-  "max_blocks": 6,
-  "presets": [{
-    "name": "Contact form",
-    "blocks": [
-      { "type": "dropdown", "settings": { "title": "How can we help?", "values": "Individual Therapy, Psychological Evaluation, Clinical Supervision, EMDR Consultation, Professional Training, Something Else" } },
-      { "type": "text", "settings": { "title": "Phone Number", "input_type": "tel", "required": false } },
-      { "type": "dropdown", "settings": { "title": "Preferred Method Of Contact", "values": "Email, Phone, Either" } }
-    ]
-  }]
+  "presets": [{ "name": "Contact form" }]
 }
 {% endschema %}

@@ -87,11 +87,37 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Let's talk about your growth",
+        "use_h1": false,
+        "intro": "<p>Reach out about clinical supervision, EMDR consultation, or joining our team. Tell us where you are in your training and what you are hoping to build.</p>",
+        "phone": "(302) 608-3780",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Clinical Supervision, EMDR Consultation, Join Our Team, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
     "hero",
     "paths",
+    "contact",
     "cta"
   ]
 }

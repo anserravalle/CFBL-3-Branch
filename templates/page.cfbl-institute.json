@@ -183,6 +183,31 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Register or inquire",
+        "use_h1": false,
+        "intro": "<p>Reach out about an upcoming training, course, or workshop, or to ask about CE credit and group rates. We respond to professional inquiries directly.</p>",
+        "phone": "(302) 608-3780",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Professional Training, Course or Certification, Workshop, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
@@ -191,6 +216,7 @@
     "why",
     "offerings",
     "faq",
+    "contact",
     "cta"
   ]
 }

@@ -13,14 +13,75 @@
     "pathways": {
       "type": "service-card-grid",
       "blocks": {
-        "therapy": { "type": "card", "settings": { "icon": "heart", "title": "Individual Therapy", "body": "<p>Trauma-informed therapy for children, teens, and adults.</p>", "link_label": "Learn more", "link": "/pages/individual-therapy" } },
-        "evals": { "type": "card", "settings": { "icon": "compass", "title": "Psychological Evaluations", "body": "<p>ADHD, autism, diagnostic clarification, and more.</p>", "link_label": "Learn more", "link": "/pages/psychological-evaluations" } },
-        "groups": { "type": "card", "settings": { "icon": "users", "title": "Groups & Workshops", "body": "<p>Therapy groups, workshops, and community education.</p>", "link_label": "Learn more", "link": "/pages/workshops" } },
-        "supervision": { "type": "card", "settings": { "icon": "book", "title": "Clinical Supervision", "body": "<p>Supervision and consultation for licensed clinicians.</p>", "link_label": "Learn more", "link": "/pages/clinical-supervision" } },
-        "emdr": { "type": "card", "settings": { "icon": "compass", "title": "EMDR Consultation", "body": "<p>Consultation toward EMDR certification and skill refinement.</p>", "link_label": "Learn more", "link": "/pages/emdr-consultation" } },
-        "training": { "type": "card", "settings": { "icon": "award", "title": "Professional Training", "body": "<p>Continuing education through the CFBL Institute.</p>", "link_label": "Learn more", "link": "/pages/cfbl-institute" } }
+        "therapy": {
+          "type": "card",
+          "settings": {
+            "icon": "heart",
+            "title": "Individual Therapy",
+            "body": "<p>Trauma-informed therapy for children, teens, and adults.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/individual-therapy"
+          }
+        },
+        "evals": {
+          "type": "card",
+          "settings": {
+            "icon": "compass",
+            "title": "Psychological Evaluations",
+            "body": "<p>ADHD, autism, diagnostic clarification, and more.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/psychological-evaluations"
+          }
+        },
+        "groups": {
+          "type": "card",
+          "settings": {
+            "icon": "users",
+            "title": "Groups & Workshops",
+            "body": "<p>Therapy groups, workshops, and community education.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/workshops"
+          }
+        },
+        "supervision": {
+          "type": "card",
+          "settings": {
+            "icon": "book",
+            "title": "Clinical Supervision",
+            "body": "<p>Supervision and consultation for licensed clinicians.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/clinical-supervision"
+          }
+        },
+        "emdr": {
+          "type": "card",
+          "settings": {
+            "icon": "compass",
+            "title": "EMDR Consultation",
+            "body": "<p>Consultation toward EMDR certification and skill refinement.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/emdr-consultation"
+          }
+        },
+        "training": {
+          "type": "card",
+          "settings": {
+            "icon": "award",
+            "title": "Professional Training",
+            "body": "<p>Continuing education through the CFBL Institute.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/cfbl-institute"
+          }
+        }
       },
-      "block_order": ["therapy", "evals", "groups", "supervision", "emdr", "training"],
+      "block_order": [
+        "therapy",
+        "evals",
+        "groups",
+        "supervision",
+        "emdr",
+        "training"
+      ],
       "settings": {
         "heading": "",
         "subheading": "",
@@ -47,7 +108,37 @@
         "padding_top": 96,
         "padding_bottom": 96
       }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "Reach Out",
+        "heading": "Let's find the right starting point",
+        "use_h1": false,
+        "intro": "<p>Tell us a little about what you are looking for, and we will help you find the service, or the referral, that fits. We are glad you are here.</p>",
+        "phone": "(302) 608-3780",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Therapy, Psychological Evaluation, Group or Workshop, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
-  "order": ["header", "pathways", "cta"]
+  "order": [
+    "header",
+    "pathways",
+    "contact",
+    "cta"
+  ]
 }
