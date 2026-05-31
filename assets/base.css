@@ -926,6 +926,101 @@ textarea { min-height: 140px; resize: vertical; }
 .breadcrumb a { color: var(--color-muted); }
 
 /* ---------------------------------------------------------------------------
+   22b. Tabs
+   --------------------------------------------------------------------------- */
+.tabs__list {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-32);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.tabs__tab {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: var(--space-16) var(--space-20);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tabs__tab:hover { color: var(--color-heading); }
+.tabs__tab[aria-selected="true"] {
+  color: var(--color-navy);
+  border-bottom-color: var(--color-terracotta);
+}
+.tabs__panel { max-width: var(--measure); }
+.tabs__panel[hidden] { display: none; }
+.tabs__panel:focus-visible { outline: 2px solid var(--color-sky); outline-offset: 4px; }
+
+/* ---------------------------------------------------------------------------
+   22c. Images with text, scrolling (sticky media + scrolling text)
+   --------------------------------------------------------------------------- */
+.scroller { display: block; }
+.scroller__media { display: none; }
+.scroller__inline-media {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-20);
+}
+.scroller__item { padding-block: var(--space-24); }
+.scroller__item:not(:last-child) { border-bottom: 1px solid var(--color-border); }
+.scroller__title { font-size: var(--fs-lg); margin-bottom: var(--space-4); }
+.scroller__role {
+  font-family: var(--font-body); font-size: var(--fs-sm); font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--color-terracotta); margin-bottom: var(--space-16);
+}
+
+@media (min-width: 750px) {
+  .scroller {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: start;
+  }
+  .scroller--media-end .scroller__media { order: 2; }
+  .scroller__media {
+    display: grid;
+    position: sticky;
+    top: 100px;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .scroller__media-item {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .scroller__media-item.is-active { opacity: 1; }
+  .scroller__inline-media { display: none; }
+  .scroller__item {
+    border-bottom: 0;
+    /* generous spacing gives each person enough scroll distance to trigger */
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-40);
+  }
+  .scroller__item:first-child { padding-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroller__media-item { transition: none; }
+}
+
+/* ---------------------------------------------------------------------------
    23. Animations (paired with section-animations.js + setting)
    --------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: no-preference) {

@@ -104,6 +104,66 @@
     });
   }
 
+  /* ----------------------------------------------------------------------
+     Tabs (ARIA tab pattern with arrow-key navigation)
+     ---------------------------------------------------------------------- */
+  function initTabs() {
+    document.querySelectorAll('[data-tabs]').forEach(function (group) {
+      var tabs = Array.prototype.slice.call(group.querySelectorAll('[role="tab"]'));
+      if (!tabs.length) return;
+
+      function select(tab) {
+        tabs.forEach(function (t) {
+          var selected = t === tab;
+          t.setAttribute('aria-selected', String(selected));
+          t.setAttribute('tabindex', selected ? '0' : '-1');
+          var panel = document.getElementById(t.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !selected;
+        });
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { select(tab); });
+        tab.addEventListener('keydown', function (e) {
+          var idx = null;
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') idx = (i + 1) % tabs.length;
+          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') idx = (i - 1 + tabs.length) % tabs.length;
+          else if (e.key === 'Home') idx = 0;
+          else if (e.key === 'End') idx = tabs.length - 1;
+          if (idx !== null) { e.preventDefault(); select(tabs[idx]); tabs[idx].focus(); }
+        });
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     Scrolling images + text — sticky media swaps to the item in view
+     ---------------------------------------------------------------------- */
+  function initScroller() {
+    var scrollers = document.querySelectorAll('[data-scroller]');
+    if (!scrollers.length || !('IntersectionObserver' in window)) return;
+
+    scrollers.forEach(function (scroller) {
+      var items = scroller.querySelectorAll('[data-scroller-item]');
+      var media = scroller.querySelectorAll('.scroller__media-item');
+      if (!items.length || !media.length) return;
+
+      function setActive(index) {
+        media.forEach(function (m) {
+          m.classList.toggle('is-active', m.getAttribute('data-media-index') === String(index));
+        });
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) setActive(entry.target.getAttribute('data-index'));
+        });
+      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+      items.forEach(function (item) { io.observe(item); });
+    });
+  }
+
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
@@ -113,5 +173,7 @@
     initDrawer();
     initFaq();
     initVideo();
+    initTabs();
+    initScroller();
   });
 })();

@@ -44,6 +44,8 @@ SEO, accessibility, and performance.
 │   ├── blog-feature.liquid newsletter-signup.liquid contact-cta.liquid
 │   ├── rich-text-brand.liquid video-section.liquid image-banner.liquid
 │   ├── resource-grid.liquid workshop-event-grid.liquid contact-form.liquid
+│   ├── tabs.liquid                  # Tabbed types (e.g. Areas of Evaluation)
+│   ├── images-with-text-scrolling.liquid  # Sticky "Meet the Team" scroller
 │   └── main-*.liquid                # page/blog/article/product/collection/cart/search/404
 ├── snippets/
 │   ├── button.liquid card-service.liquid responsive-image.liquid
