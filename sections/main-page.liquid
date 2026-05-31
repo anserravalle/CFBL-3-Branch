@@ -1,15 +1,19 @@
 {%- comment -%}
   Main page - renders a standard Shopify Page. Optional editable header band
-  (eyebrow + title), then the page's rich-text content. The page H1 lives here.
+  (eyebrow + title), then the page's rich-text content. The page H1 lives here
+  unless "Show page title" is turned off (use that when another section on the
+  page, e.g. a hero, already provides the H1, to keep one H1 per page).
 {%- endcomment -%}
 <article class="section bg--{{ section.settings.bg_scheme }}"
   style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
   <div class="page-width">
     <div class="section__inner">
-      <header class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal" style="max-width:var(--measure);">
-        {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
-        <h1>{{ page.title }}</h1>
-      </header>
+      {%- if section.settings.show_title -%}
+        <header class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal" style="max-width:var(--measure);">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          <h1>{{ page.title }}</h1>
+        </header>
+      {%- endif -%}
       <div class="rte article-body reveal">
         {{ page.content }}
       </div>
@@ -21,6 +25,7 @@
 {
   "name": "Page",
   "settings": [
+    { "type": "checkbox", "id": "show_title", "label": "Show page title (H1)", "default": true, "info": "Turn off when another section on the page provides the H1." },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow above title" },
     { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
       { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }

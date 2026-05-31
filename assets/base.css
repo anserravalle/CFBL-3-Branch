@@ -25,6 +25,11 @@
   --color-border: #E2D3C2;
   --color-navy-dark: #1E3C57;
   --color-on-dark: #FBF6F0;
+  /* Interactive text colors tuned to pass WCAG AA on light grounds.
+     Sky Blue (#4E9FBF) fails as text (~2.9:1), so link/tertiary hover use a
+     darkened sky; eyebrows use a darkened terracotta. */
+  --color-link-hover: #356F88;
+  --color-eyebrow: #85503C;
 
   /* Typography */
   --font-heading: "Cormorant SC", Georgia, "Times New Roman", serif;
@@ -90,6 +95,8 @@
   --color-navy-dark: #2A3530;
   --color-border: #D8D2C4;
   --color-on-dark: #F0EAE0;
+  --color-link-hover: #2F4A43;   /* darkened forest, AA on cream/paper */
+  --color-eyebrow: #3D5A52;      /* forest reads as the Institute accent */
   --font-body: "Lora", Georgia, "Times New Roman", serif;
   /* heading stays Cormorant SC - the family resemblance with the parent */
 }
@@ -107,6 +114,8 @@
   --color-navy-dark: #4A4036;   /* Walnut */
   --color-border: #DDD2BE;
   --color-on-dark: #F1E8D8;
+  --color-link-hover: #57181B;   /* darkened oxblood, AA on bone/parchment */
+  --color-eyebrow: #6E1F23;      /* oxblood reads as the MUSA accent (ochre is decorative only) */
   --font-heading: "DM Serif Display", Georgia, serif;
   --font-body: "EB Garamond", Georgia, "Times New Roman", serif;
 }
@@ -168,7 +177,7 @@ a {
   text-underline-offset: 0.18em;
   transition: color 0.2s ease;
 }
-a:hover { color: var(--color-sky); }
+a:hover { color: var(--color-link-hover); }
 
 ul, ol { margin: 0 0 var(--space-16); padding-left: 1.3em; }
 li { margin-bottom: var(--space-8); }
@@ -214,7 +223,7 @@ strong, b { font-weight: 600; }
 .skip-to-content:focus { top: 0; color: var(--color-on-dark); }
 
 :focus-visible {
-  outline: 2px solid var(--color-sky);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -254,7 +263,7 @@ strong, b { font-weight: 600; }
   font-weight: 600;
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
-  color: var(--color-terracotta);
+  color: var(--color-eyebrow);
   margin-bottom: var(--space-12);
 }
 
@@ -343,7 +352,7 @@ strong, b { font-weight: 600; }
   min-height: auto;
   border-radius: 2px;
 }
-.btn--tertiary:hover { color: var(--color-sky); text-decoration: underline; }
+.btn--tertiary:hover { color: var(--color-link-hover); text-decoration: underline; }
 
 /* On-dark variants */
 .bg--navy .btn--primary {
@@ -845,7 +854,7 @@ a.card:hover {
 }
 textarea { min-height: 140px; resize: vertical; }
 .input:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px solid var(--color-sky);
+  outline: 2px solid var(--color-focus);
   outline-offset: 1px;
   border-color: var(--color-sky);
 }
@@ -1039,7 +1048,7 @@ textarea { min-height: 140px; resize: vertical; }
 }
 .tabs__panel { max-width: var(--measure); }
 .tabs__panel[hidden] { display: none; }
-.tabs__panel:focus-visible { outline: 2px solid var(--color-sky); outline-offset: 4px; }
+.tabs__panel:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
 
 /* ---------------------------------------------------------------------------
    22c. Images with text, scrolling (sticky media + scrolling text)

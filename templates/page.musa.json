@@ -5,7 +5,6 @@
       "settings": {
         "eyebrow": "MUSA",
         "heading": "Writing on psychology, memory, identity, and being human",
-        "subheading": "<p>Books and essays by Dr. Angela (Niki) Serravalle.</p>",
         "use_h1": true,
         "primary_label": "Read the Essays",
         "primary_link": "/blogs/essays",
@@ -24,6 +23,7 @@
     "intro": {
       "type": "main-page",
       "settings": {
+        "show_title": false,
         "eyebrow": "",
         "text_align": "left",
         "bg_scheme": "default",
@@ -37,7 +37,7 @@
         "eyebrow": "Why I Write",
         "heading": "The writing is its own credential",
         "heading_tag": "h2",
-        "content": "<p>I write as a psychologist who reads - analytical, direct, and unafraid of the harder questions underneath the clinical ones. These essays are a place to think in public about memory, identity, culture, and what it means to be human, without the constraints of the consulting room.</p>",
+        "content": "<p>I write as a psychologist who reads, analytical, direct, and unafraid of the harder questions underneath the clinical ones. These essays are a place to think in public about memory, identity, culture, and what it means to be human, without the constraints of the consulting room.</p>",
         "text_align": "center",
         "content_width": 680,
         "bg_scheme": "sand",
@@ -68,7 +68,7 @@
       "settings": {
         "eyebrow": "Stay in Touch",
         "heading": "New essays, now and then",
-        "body": "<p>Subscribe to receive new writing as it is published. No noise - just the work.</p>",
+        "body": "<p>Subscribe to receive new writing as it is published. No noise, just the work.</p>",
         "button_label": "Subscribe",
         "success_text": "Thank you for subscribing.",
         "fine_print": "Your email is never shared.",
