@@ -51,15 +51,33 @@
         {%- endif -%}
       </div>
 
-      {%- comment -%} Desktop nav {%- endcomment -%}
+      {%- comment -%} Desktop nav (supports one level of dropdown) {%- endcomment -%}
       {%- if menu != blank -%}
         <nav class="nav" aria-label="Primary">
           <ul class="nav__list">
             {%- for link in menu.links -%}
-              <li>
-                <a href="{{ link.url }}" class="nav__link"
-                   {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
-              </li>
+              {%- if link.links != blank -%}
+                <li class="nav__item has-dropdown" data-dropdown>
+                  <a href="{{ link.url }}" class="nav__link"
+                     {% if link.current or link.child_active %}aria-current="page"{% endif %}>{{ link.title }}</a>
+                  <button type="button" class="nav__caret" aria-expanded="false" aria-label="Show {{ link.title | escape }} submenu" data-dropdown-toggle>
+                    <svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5L6 6.5L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <ul class="nav__dropdown">
+                    {%- for child in link.links -%}
+                      <li>
+                        <a href="{{ child.url }}" class="nav__dropdown-link"
+                           {% if child.current %}aria-current="page"{% endif %}>{{ child.title }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </li>
+              {%- else -%}
+                <li class="nav__item">
+                  <a href="{{ link.url }}" class="nav__link"
+                     {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
+                </li>
+              {%- endif -%}
             {%- endfor -%}
           </ul>
         </nav>
@@ -88,7 +106,23 @@
     <nav aria-label="Mobile primary">
       <ul class="drawer__list">
         {%- for link in menu.links -%}
-          <li><a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- if link.links != blank -%}
+            <li class="drawer__group" data-drawer-group>
+              <div class="drawer__group-row">
+                <a href="{{ link.url }}" {% if link.current or link.child_active %}aria-current="page"{% endif %}>{{ link.title }}</a>
+                <button type="button" class="drawer__group-toggle" aria-expanded="false" aria-label="Show {{ link.title | escape }} submenu" data-drawer-group-toggle>
+                  <svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5L6 6.5L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <ul class="drawer__sublist">
+                {%- for child in link.links -%}
+                  <li><a href="{{ child.url }}" {% if child.current %}aria-current="page"{% endif %}>{{ child.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </li>
+          {%- else -%}
+            <li><a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- endif -%}
         {%- endfor -%}
       </ul>
     </nav>

@@ -57,6 +57,55 @@
     openBtn.addEventListener('click', open);
     if (closeBtn) closeBtn.addEventListener('click', close);
     if (overlay) overlay.addEventListener('click', close);
+
+    // Mobile drawer: expandable submenu groups
+    drawer.querySelectorAll('[data-drawer-group-toggle]').forEach(function (btn) {
+      var group = btn.closest('[data-drawer-group]');
+      var sublist = group && group.querySelector('.drawer__sublist');
+      if (!sublist) return;
+      btn.addEventListener('click', function () {
+        var isOpen = group.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        sublist.style.maxHeight = isOpen ? sublist.scrollHeight + 'px' : null;
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     Desktop nav dropdowns (hover via CSS; this adds click + keyboard)
+     ---------------------------------------------------------------------- */
+  function initNavDropdowns() {
+    var items = document.querySelectorAll('[data-dropdown]');
+    if (!items.length) return;
+
+    function closeAll(except) {
+      items.forEach(function (item) {
+        if (item === except) return;
+        item.classList.remove('is-open');
+        var t = item.querySelector('[data-dropdown-toggle]');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    items.forEach(function (item) {
+      var toggle = item.querySelector('[data-dropdown-toggle]');
+      if (!toggle) return;
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        var willOpen = !item.classList.contains('is-open');
+        closeAll(item);
+        item.classList.toggle('is-open', willOpen);
+        toggle.setAttribute('aria-expanded', String(willOpen));
+      });
+    });
+
+    // Close on outside click or Escape
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('[data-dropdown]')) closeAll(null);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeAll(null);
+    });
   }
 
   /* ----------------------------------------------------------------------
@@ -171,6 +220,7 @@
 
   ready(function () {
     initDrawer();
+    initNavDropdowns();
     initFaq();
     initVideo();
     initTabs();
