@@ -36,9 +36,9 @@
     "trainer": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/angela.jpg",
+        "image": "shopify://shop_images/dr_serravalle.png",
         "image_alt": "Dr. Angela (Niki) Serravalle",
-        "image_ratio": "4-3",
+        "image_ratio": "1-1",
         "image_position": "left",
         "mobile_stack": "image",
         "eyebrow": "Meet the Trainer",
@@ -46,7 +46,7 @@
         "body": "<p>Founded and led by Dr. Niki Serravalle, licensed clinical psychologist and founder of the Center for Balanced Living. CFBL Institute exists to bridge the gap between clinical theory and applied practice. Our work is grounded in trauma-informed science, nervous system awareness, cultural humility, and the lived complexity of real clinical work.</p>",
         "text_align": "left",
         "phone": "",
-        "email": "",
+        "email": "drserravalle@gmail.com",
         "primary_label": "Full Bio",
         "primary_link": "/pages/niki-serravalle",
         "secondary_label": "",
