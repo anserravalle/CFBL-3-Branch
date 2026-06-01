@@ -850,7 +850,22 @@ a.card:hover {
   align-items: center;
   grid-template-columns: 1fr 1fr;
 }
-.text-image__media { border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-md); }
+.text-image__media { position: relative; }
+.text-image__media .media { position: relative; z-index: 1; border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-md); }
+/* Offset "frame / holder" behind the image - matches the hero treatment so
+   bio/intro images read consistently. Color is editable. */
+.text-image__media--framed { --frame-offset: 18px; padding: 0 var(--frame-offset) var(--frame-offset) 0; }
+.text-image__media--framed::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: var(--frame-offset);
+  left: var(--frame-offset);
+  right: 0;
+  bottom: 0;
+  background: var(--frame-color, var(--color-terracotta));
+  border-radius: var(--radius-card);
+}
 .text-image--image-right .text-image__media { order: 2; }
 .text-image--image-left .text-image__media { order: 0; }
 

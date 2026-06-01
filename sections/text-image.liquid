@@ -15,7 +15,8 @@
   <div class="page-width">
     <div class="text-image__grid text-image--image-{{ image_side }}">
       {%- if section.settings.image != blank -%}
-        <div class="text-image__media reveal">
+        <div class="text-image__media reveal {% if section.settings.image_frame %}text-image__media--framed{% endif %}"
+             style="--frame-color: {{ section.settings.frame_color }};">
           {%- render 'responsive-image',
             image: section.settings.image,
             alt: section.settings.image_alt,
@@ -60,6 +61,8 @@
       { "value": "4-3", "label": "4:3" }, { "value": "1-1", "label": "Square" },
       { "value": "3-2", "label": "3:2" }, { "value": "16-9", "label": "16:9" }
     ], "default": "4-3" },
+    { "type": "checkbox", "id": "image_frame", "label": "Show offset frame behind image", "default": true, "info": "A darker panel that sits behind the image (a brown 'holder' on a tan background)." },
+    { "type": "color", "id": "frame_color", "label": "Frame color", "default": "#9D654E" },
     { "type": "select", "id": "image_position", "label": "Image position (desktop)", "options": [
       { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }
     ], "default": "left" },
