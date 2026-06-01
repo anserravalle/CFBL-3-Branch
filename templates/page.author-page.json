@@ -12,29 +12,30 @@
     "bio_hero": {
       "type": "text-image",
       "settings": {
-        "image": "",
-        "image_alt": "",
+        "image": "shopify://shop_images/dr_serravalle_dark_suit_headhsot.jpg",
+        "image_alt": "dr serravalle",
         "image_ratio": "1-1",
         "image_position": "left",
         "mobile_stack": "image",
-        "eyebrow": "Our Team",
+        "eyebrow": "Meet the Author",
         "heading": "",
-        "body": "<p>Add this clinician's role, credentials, and a short introduction here, or edit the page content below for a longer bio.</p>",
+        "body": "<p>Dr. Angela (Niki) Serravalle is a psychologist, author, educator, and founder of Center for Balanced Living in Delaware. Her writing explores the complexities of trauma, memory, identity, relationships, and personal transformation through both a clinical and deeply human lens. Drawing from years of experience in psychological assessment, psychotherapy, and teaching, she writes for readers who seek a deeper understanding of themselves and the stories that shape their lives.</p>",
         "text_align": "left",
+        "phone": "",
+        "email": "drserravalle@gmail.com",
         "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "Meet the Team",
         "secondary_link": "/pages/about-us",
         "bg_scheme": "default",
         "padding_top": 80,
-        "padding_bottom": 48,
-        "phone": "",
-        "email": ""
+        "padding_bottom": 48
       }
     },
     "bio_body": {
       "type": "main-page",
       "settings": {
+        "show_title": true,
         "eyebrow": "",
         "text_align": "left",
         "bg_scheme": "default",
@@ -50,7 +51,8 @@
           "settings": {
             "icon": "shield",
             "title": "Trauma & PTSD",
-            "text": "Attuned, nervous-system-aware care."
+            "text": "Attuned, nervous-system-aware care.",
+            "link": ""
           }
         },
         "s2": {
@@ -58,7 +60,8 @@
           "settings": {
             "icon": "heart",
             "title": "Anxiety & Mood",
-            "text": "Evidence-based support for anxiety and depression."
+            "text": "Evidence-based support for anxiety and depression.",
+            "link": ""
           }
         },
         "s3": {
@@ -66,7 +69,8 @@
           "settings": {
             "icon": "users",
             "title": "Teens & Adults",
-            "text": "Developmentally informed care."
+            "text": "Developmentally informed care.",
+            "link": ""
           }
         }
       },
