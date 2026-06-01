@@ -29,15 +29,15 @@
       { "type": "checkbox", "id": "use_brand_fonts", "label": "Use brand fonts (Cormorant SC + Montserrat)", "default": true },
       { "type": "font_picker", "id": "heading_font", "label": "Heading font (override)", "default": "cormorant_n4", "info": "Used only when 'Use brand fonts' is off." },
       { "type": "font_picker", "id": "body_font", "label": "Body font (override)", "default": "montserrat_n4", "info": "Used only when 'Use brand fonts' is off." },
-      { "type": "range", "id": "base_font_size", "label": "Base font size", "min": 15, "max": 24, "step": 1, "unit": "px", "default": 20 },
+      { "type": "range", "id": "base_font_size", "label": "Base font size", "min": 15, "max": 20, "step": 1, "unit": "px", "default": 16 },
       { "type": "range", "id": "heading_scale", "label": "Heading scale", "min": 80, "max": 130, "step": 5, "unit": "%", "default": 100, "info": "Scales all headings up or down together." }
     ]
   },
   {
     "name": "Layout & spacing",
     "settings": [
-      { "type": "range", "id": "page_max_width", "label": "Page max width", "min": 1100, "max": 1800, "step": 20, "unit": "px", "default": 1660 },
-      { "type": "range", "id": "section_max_width", "label": "Content max width", "min": 900, "max": 1600, "step": 20, "unit": "px", "default": 1460 },
+      { "type": "range", "id": "page_max_width", "label": "Page max width", "min": 1100, "max": 1600, "step": 20, "unit": "px", "default": 1280 },
+      { "type": "range", "id": "section_max_width", "label": "Content max width", "min": 900, "max": 1400, "step": 20, "unit": "px", "default": 1100 },
       { "type": "range", "id": "section_spacing", "label": "Global vertical section spacing", "min": 32, "max": 160, "step": 4, "unit": "px", "default": 80, "info": "Default top/bottom padding for sections; each section can override." },
       { "type": "range", "id": "button_radius", "label": "Button corner radius", "min": 0, "max": 1000, "step": 10, "unit": "px", "default": 1000 },
       { "type": "range", "id": "card_radius", "label": "Card & image corner radius", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 16 }
