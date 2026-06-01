@@ -1,18 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "title": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "About Us",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 8
+      }
+    },
     "intro": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/homepage.png",
+        "image": "shopify://shop_images/psychological-therapy-in-a-private-practice.png",
         "image_alt": "Center for Balanced Living",
         "image_ratio": "4-3",
         "image_position": "right",
+        "mobile_stack": "image",
         "eyebrow": "About Us",
         "heading": "A trauma-informed practice grounded in relationship",
         "body": "<p>Center for Balanced Living is a clinician-owned psychology practice serving the MOT area of Delaware. We provide therapy, psychological evaluation, groups, workshops, and consultation, integrating evidence-based practice with warmth, attunement, and clinical depth.</p>",
         "text_align": "left",
+        "phone": "",
+        "email": "",
         "primary_label": "Our Credentials",
         "primary_link": "/pages/credentials",
+        "secondary_label": "",
+        "secondary_link": "",
         "bg_scheme": "default",
         "padding_top": 32,
         "padding_bottom": 80
@@ -54,6 +79,7 @@
       "settings": {
         "eyebrow": "What Guides Us",
         "heading": "Our values in practice",
+        "subheading": "",
         "text_align": "center",
         "columns": "3",
         "bg_scheme": "sand",
@@ -71,6 +97,7 @@
             "title": "Dr. Niki Serravalle",
             "role": "Founder · Licensed Psychologist, PsyD, LPCMH, NCC",
             "content": "<p>Dr. Angela “Niki” Serravalle is the founder of Center for Balanced Living and a licensed psychologist and licensed professional counselor of mental health with more than two decades of clinical experience. Her work is grounded in trauma-informed care, psychological evaluation, and professional training, with advanced specialization in trauma treatment, EMDR, and integrative approaches to healing.</p><p>Dr. Serravalle began her career at Sheppard Pratt, where she was introduced to Dialectical Behavior Therapy (DBT) and trauma-focused treatment. Her clinical path continued through work in substance use treatment, intensive outpatient programming for children and adolescents, and community mental health across Maryland and Delaware. Over time, she pursued advanced training in EMDR, TF-CBT, DBT, ACT, IFS, CPT, and Ecotherapy, reflecting her commitment to both evidence-based and emerging approaches in trauma care.</p><p>She later earned her doctorate in Clinical Psychology, where she deepened her specialization in psychological evaluation. Her practicum, internship, and postdoctoral training included work under specialists in neuropsychology and school psychology, shaping her strong interest in diagnostic clarity, neurodevelopment, and the ways systems and environments influence clinical presentation.</p><p>Today, Dr. Serravalle’s work is focused primarily on psychological evaluation, supervision, consultation, and training. Through Center for Balanced Living, she has built a practice that reflects her commitment to clinical depth, high-quality care, and the development of other professionals. She is not currently accepting new individual therapy clients. Clients seeking therapy are welcome to connect with our clinical team to explore fit and availability.</p>",
+            "phone": "",
             "email": "drserravalle@gmail.com",
             "bio_link": "/pages/niki-serravalle",
             "bio_link_label": "View full bio"
@@ -84,7 +111,9 @@
             "role": "Practice Manager",
             "content": "<p>Jada Senter is the Practice Manager at Center for Balanced Living. She oversees daily operations across the practice, including client communication, scheduling, billing coordination, and administrative support. </p><p>Jada also helps coordinate onsite events and plays an important role in ensuring that clients experience the practice as organized, responsive, and welcoming.</p>",
             "phone": "(302) 608-3780",
-            "email": "admin@balancedlivingde.com"
+            "email": "admin@balancedlivingde.com",
+            "bio_link": "",
+            "bio_link_label": "View full bio"
           }
         },
         "amanda_foxwell": {
@@ -115,6 +144,7 @@
         },
         "brianna_patton": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/brianna.jpg",
             "title": "Brianna Patton",
@@ -133,7 +163,10 @@
             "title": "Shay Oliver",
             "role": "Counseling Intern",
             "content": "<p>Shay Oliver is a graduate student at Capella University pursuing a master’s degree in Clinical Mental Health Counseling. She brings several years of experience in behavioral health as a Registered Behavior Technician, with work across school and clinical settings supporting children and families.</p><p>Her background includes Applied Behavior Analysis services and collaboration with families, educators, and interdisciplinary teams to support skill development, emotional regulation, and meaningful progress. Shay’s therapeutic style is warm, collaborative, and evidence-based. She approaches care from a holistic and individualized perspective, supporting clients emotionally, cognitively, socially, and environmentally while honoring their strengths and lived experiences.</p>",
-            "email": "SOliver@balancedlivingde.com"
+            "phone": "",
+            "email": "SOliver@balancedlivingde.com",
+            "bio_link": "",
+            "bio_link_label": "View full bio"
           }
         },
         "kim_shiflett": {
@@ -144,7 +177,9 @@
             "role": "Assessment Team Lead",
             "content": "<p>Kim Shiflett is the Assessment Team Lead at Center for Balanced Living. She supports the evaluation process through coordination, organization, and attention to detail, helping ensure that clients receive thorough, timely, and compassionate care. Her work is an essential part of the practice’s assessment services and contributes to a smooth and supportive evaluation experience for families and individuals.</p>",
             "phone": "(302) 608-3780",
-            "email": "Kimmy@balancedlivingde.com"
+            "email": "Kimmy@balancedlivingde.com",
+            "bio_link": "",
+            "bio_link_label": "View full bio"
           }
         },
         "kimberly_brown": {
@@ -154,7 +189,10 @@
             "title": "Kimberly Brown",
             "role": "Nutrition Specialist & Certified Personal Trainer",
             "content": "<p>Kimberly is a Pn1 Nutrition Specialist and a Certified Personal Trainer. She believes that our health is a combination of the food we eat, how we move, our daily habits and who we have surrounding us in our lives.</p><p>As a wife, homeschool mom, and entrepreneur she gets that life can be busy, overwhelming and difficult. We often put our health and needs last but it’s incredibly important to start taking care of you mentally and  physically. Through 1:1 training or group training, Kimberly takes a whole body wellness approach to making healthy living custom to your lifestyle.</p>",
-            "phone": "(302) 598-4135"
+            "phone": "(302) 598-4135",
+            "email": "",
+            "bio_link": "",
+            "bio_link_label": "View full bio"
           }
         }
       },
@@ -183,6 +221,7 @@
     "cta": {
       "type": "contact-cta",
       "settings": {
+        "eyebrow": "Take the Next Step",
         "heading": "Let's talk about how we can help",
         "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
         "primary_label": "Start the Conversation",
@@ -190,20 +229,10 @@
         "secondary_label": "Explore Services",
         "secondary_link": "/pages/services",
         "phone": "(302) 608-3780",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
         "bg_scheme": "navy",
         "padding_top": 96,
         "padding_bottom": 96
-      }
-    },
-    "title": {
-      "type": "main-page",
-      "settings": {
-        "show_title": true,
-        "eyebrow": "About Us",
-        "text_align": "center",
-        "bg_scheme": "default",
-        "padding_top": 80,
-        "padding_bottom": 8
       }
     }
   },
@@ -215,4 +244,3 @@
     "cta"
   ]
 }
-
