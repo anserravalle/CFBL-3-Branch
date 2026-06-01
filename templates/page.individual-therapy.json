@@ -22,75 +22,31 @@
       }
     },
     "focus": {
-      "type": "featured-services",
+      "type": "service-card-grid",
       "blocks": {
-        "i0": {
-          "type": "item",
-          "settings": {
-            "icon": "shield",
-            "title": "Trauma & PTSD",
-            "text": "Attuned care for trauma and its lasting effects."
-          }
-        },
-        "i1": {
-          "type": "item",
-          "settings": {
-            "icon": "heart",
-            "title": "Anxiety & Mood",
-            "text": "Support for anxiety, depression, and life transitions."
-          }
-        },
-        "i2": {
-          "type": "item",
-          "settings": {
-            "icon": "compass",
-            "title": "Identity & Growth",
-            "text": "Space to understand yourself and move forward."
-          }
-        },
-        "i3": {
-          "type": "item",
-          "settings": {
-            "icon": "users",
-            "title": "Relationships",
-            "text": "Care for connection, boundaries, and communication."
-          }
-        },
-        "i4": {
-          "type": "item",
-          "settings": {
-            "icon": "leaf",
-            "title": "Grief & Loss",
-            "text": "Companioned support through loss and change."
-          }
-        },
-        "i5": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "title": "Self & Esteem",
-            "text": "Building resilience and a steadier sense of self."
-          }
-        }
+        "c0": { "type": "card", "settings": { "image": "shopify://shop_images/nature2.avif", "image_alt": "Calm lake and forest at dawn", "image_ratio": "3-2", "icon": "", "title": "Trauma and Traumatic Stress", "body": "", "link_label": "" } },
+        "c1": { "type": "card", "settings": { "image": "shopify://shop_images/natrure_1212.avif", "image_alt": "Sunrise through misty trees", "image_ratio": "3-2", "icon": "", "title": "Anxiety and Chronic Worry", "body": "", "link_label": "" } },
+        "c2": { "type": "card", "settings": { "image": "shopify://shop_images/nature_10.avif", "image_alt": "Smooth stones and flowers", "image_ratio": "3-2", "icon": "", "title": "Depression and Mood Changes", "body": "", "link_label": "" } },
+        "c3": { "type": "card", "settings": { "image": "shopify://shop_images/nature_11.avif", "image_alt": "Quiet shoreline at dusk", "image_ratio": "3-2", "icon": "", "title": "Grief and Loss", "body": "", "link_label": "" } },
+        "c4": { "type": "card", "settings": { "image": "shopify://shop_images/nature_4.avif", "image_alt": "Footbridge through green woods", "image_ratio": "3-2", "icon": "", "title": "Relationship and Family Stress", "body": "", "link_label": "" } },
+        "c5": { "type": "card", "settings": { "image": "shopify://shop_images/ture_9.avif", "image_alt": "Soft natural light and foliage", "image_ratio": "3-2", "icon": "", "title": "Life Transitions", "body": "", "link_label": "" } },
+        "c6": { "type": "card", "settings": { "image": "shopify://shop_images/re_5.avif", "image_alt": "Blooming flowers", "image_ratio": "3-2", "icon": "", "title": "Identity Development", "body": "", "link_label": "" } },
+        "c7": { "type": "card", "settings": { "image": "shopify://shop_images/nature_6.avif", "image_alt": "Calm natural scene", "image_ratio": "3-2", "icon": "", "title": "Emotional Regulation Difficulties", "body": "", "link_label": "" } },
+        "c8": { "type": "card", "settings": { "image": "shopify://shop_images/ure_3.avif", "image_alt": "Gentle botanical detail", "image_ratio": "3-2", "icon": "", "title": "Parenting Support", "body": "", "link_label": "" } },
+        "c9": { "type": "card", "settings": { "image": "shopify://shop_images/nature_1.jpg", "image_alt": "Peaceful nature landscape", "image_ratio": "3-2", "icon": "", "title": "Stress and Burnout", "body": "", "link_label": "" } }
       },
-      "block_order": [
-        "i0",
-        "i1",
-        "i2",
-        "i3",
-        "i4",
-        "i5"
-      ],
+      "block_order": ["c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"],
       "settings": {
-        "eyebrow": "How We Help",
-        "heading": "What We Support",
-        "subheading": "",
+        "eyebrow": "Individual Therapy",
+        "heading": "Areas of Care",
+        "subheading": "The presentations we most often work with. Each one shows up differently in different people. The work is shaped to you.",
         "text_align": "center",
-        "numbered": false,
-        "columns": "3",
-        "bg_scheme": "sand",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "columns": "4",
+        "mobile_two_up": true,
+        "card_style": "soft",
+        "bg_scheme": "sage",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "process": {
@@ -137,7 +93,7 @@
         "text_align": "center",
         "numbered": true,
         "columns": "4",
-        "bg_scheme": "default",
+        "bg_scheme": "sage",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -177,7 +133,7 @@
         "heading": "Common Questions About Therapy",
         "subheading": "",
         "cta_label": "",
-        "bg_scheme": "sand",
+        "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -262,7 +218,7 @@
         "subheading": "Therapy is tailored to you. These are the evidence-based models we draw from, and the training behind them.",
         "text_align": "left",
         "image_ratio": "4-3",
-        "bg_scheme": "sand",
+        "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
       }
