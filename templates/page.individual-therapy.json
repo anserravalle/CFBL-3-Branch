@@ -18,7 +18,7 @@
         "layout": "split",
         "bg_scheme": "default",
         "padding_top": 80,
-        "padding_bottom": 88
+        "padding_bottom": 80
       }
     },
     "focus": {
