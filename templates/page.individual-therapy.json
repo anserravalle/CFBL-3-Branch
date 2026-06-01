@@ -270,6 +270,7 @@
   },
   "order": [
     "hero",
+    "focus",
     "models",
     "process",
     "faq",
