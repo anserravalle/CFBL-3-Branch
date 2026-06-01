@@ -14,10 +14,13 @@
   --color-sky: #4E9FBF;
   --color-sand: #EED9C5;
   --color-terracotta: #9D654E;
+  --color-sage: #6E8B74;        /* Clinical sage accent (calm, nature) */
+  --color-sage-deep: #4F6B57;   /* Darker sage for text/eyebrows (AA on light) */
 
   /* Derived surfaces & text */
   --color-bg: #FBF6F0;
   --color-bg-sand: #EED9C5;
+  --color-bg-sage: #E9EFE8;     /* Soft sage wash for section fields */
   --color-surface: #FFFFFF;
   --color-text: #2A2724;
   --color-heading: #2B5275;
@@ -282,6 +285,7 @@ strong, b { font-weight: 600; }
    --------------------------------------------------------------------------- */
 .bg--default { background-color: var(--color-bg); }
 .bg--sand { background-color: var(--color-bg-sand); }
+.bg--sage { background-color: var(--color-bg-sage); }
 .bg--surface { background-color: var(--color-surface); }
 .bg--terracotta { background-color: color-mix(in srgb, var(--color-terracotta) 14%, var(--color-bg)); }
 
