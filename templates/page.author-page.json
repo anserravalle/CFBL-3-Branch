@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "bio_hero": {
+      "type": "text-image",
+      "settings": {
+        "image": "",
+        "image_alt": "",
+        "image_ratio": "1-1",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Our Team",
+        "heading": "",
+        "body": "<p>Add this clinician's role, credentials, and a short introduction here, or edit the page content below for a longer bio.</p>",
+        "text_align": "left",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet the Team",
+        "secondary_link": "/pages/about-us",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 48,
+        "phone": "",
+        "email": ""
+      }
+    },
+    "bio_body": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 64
+      }
+    },
+    "specialties": {
+      "type": "featured-services",
+      "blocks": {
+        "s1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Attuned, nervous-system-aware care."
+          }
+        },
+        "s2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Mood",
+            "text": "Evidence-based support for anxiety and depression."
+          }
+        },
+        "s3": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Teens & Adults",
+            "text": "Developmentally informed care."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "eyebrow": "Areas of Focus",
+        "heading": "Specialties",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Work With Us",
+        "heading": "Ready to take the next step?",
+        "body": "<p>Reach out to ask about availability or to schedule a first conversation.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "bio_hero",
+    "bio_body",
+    "specialties",
+    "cta"
+  ]
+}

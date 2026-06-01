@@ -1,0 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "Careers",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "why": {
+      "type": "credentials-section",
+      "blocks": {
+        "c1": {
+          "type": "credential",
+          "settings": {
+            "icon": "heart",
+            "title": "Trauma-Informed Culture",
+            "text": "A team grounded in relational, nervous-system-aware care."
+          }
+        },
+        "c2": {
+          "type": "credential",
+          "settings": {
+            "icon": "users",
+            "title": "Collaborative & Supportive",
+            "text": "Consultation, supervision, and genuine peer support."
+          }
+        },
+        "c3": {
+          "type": "credential",
+          "settings": {
+            "icon": "compass",
+            "title": "Room to Grow",
+            "text": "Training, supervision, and a path toward licensure and certification."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "eyebrow": "Why Work With Us",
+        "heading": "A practice that invests in its clinicians",
+        "subheading": "A community that fosters healing relationships",
+        "text_align": "center",
+        "columns": "3",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Interested?",
+        "heading": "Tell us about yourself",
+        "body": "<p>Send us your resume and a note about the work you hope to do. We review every inquiry.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "",
+        "secondary_link": "",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "header",
+    "why",
+    "cta"
+  ]
+}
