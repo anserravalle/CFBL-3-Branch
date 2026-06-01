@@ -29,8 +29,8 @@
         "layout": "split",
         "mobile_image_first": false,
         "bg_scheme": "default",
-        "padding_top": 88,
-        "padding_bottom": 88
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "benefits": {
