@@ -14,7 +14,7 @@
     "page_max_width": 1280,
     "section_max_width": 1100,
     "section_spacing": 80,
-    "button_radius": 999,
+    "button_radius": 1000,
     "card_radius": 16,
     "header_style": "light",
     "header_sticky": true,

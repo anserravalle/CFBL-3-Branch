@@ -1,9 +1,9 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Center for Balanced Living",
+    "theme_name": "Balanced Living",
     "theme_version": "1.0.0",
-    "theme_author": "Center for Balanced Living",
+    "theme_author": "Balanced Living",
     "theme_documentation_url": "https://code.claude.com/docs",
     "theme_support_url": "https://code.claude.com/docs"
   },
@@ -39,7 +39,7 @@
       { "type": "range", "id": "page_max_width", "label": "Page max width", "min": 1100, "max": 1600, "step": 20, "unit": "px", "default": 1280 },
       { "type": "range", "id": "section_max_width", "label": "Content max width", "min": 900, "max": 1400, "step": 20, "unit": "px", "default": 1100 },
       { "type": "range", "id": "section_spacing", "label": "Global vertical section spacing", "min": 32, "max": 160, "step": 4, "unit": "px", "default": 80, "info": "Default top/bottom padding for sections; each section can override." },
-      { "type": "range", "id": "button_radius", "label": "Button corner radius", "min": 0, "max": 999, "step": 1, "unit": "px", "default": 999 },
+      { "type": "range", "id": "button_radius", "label": "Button corner radius", "min": 0, "max": 1000, "step": 10, "unit": "px", "default": 1000 },
       { "type": "range", "id": "card_radius", "label": "Card & image corner radius", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 16 }
     ]
   },
