@@ -15,6 +15,8 @@
         "image": "shopify://shop_images/dr_serravalle_dark_suit_headhsot.jpg",
         "image_alt": "dr serravalle",
         "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#6e1f23",
         "image_position": "left",
         "mobile_stack": "image",
         "eyebrow": "Meet the Author",
@@ -34,6 +36,7 @@
     },
     "bio_body": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "eyebrow": "",
@@ -46,35 +49,45 @@
     "specialties": {
       "type": "featured-services",
       "blocks": {
+        "item_HcAwaa": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Resilience & Growth",
+            "text": "Exploring adaptation, meaning-making, personal development, and the capacity for change throughout the lifespan.",
+            "link": "shopify://blogs/essays"
+          }
+        },
         "s1": {
           "type": "item",
           "settings": {
             "icon": "shield",
             "title": "Trauma & PTSD",
-            "text": "Attuned, nervous-system-aware care.",
-            "link": ""
+            "text": "Exploring how adverse experiences shape the nervous system, relationships, identity, and the path toward recovery.",
+            "link": "shopify://blogs/essays"
           }
         },
         "s2": {
           "type": "item",
           "settings": {
             "icon": "heart",
-            "title": "Anxiety & Mood",
-            "text": "Evidence-based support for anxiety and depression.",
-            "link": ""
+            "title": "Psychology & Human Behavior",
+            "text": "Making sense of why people think, feel, and act the way they do through research-informed insight and practical understanding.",
+            "link": "shopify://blogs/balanced-living-blog-make-it-make-sense"
           }
         },
         "s3": {
           "type": "item",
           "settings": {
             "icon": "users",
-            "title": "Teens & Adults",
-            "text": "Developmentally informed care.",
-            "link": ""
+            "title": "Attunement and Identity",
+            "text": "Examining how personal history, life experiences, and relationships influence the stories we tell about ourselves.",
+            "link": "shopify://blogs/balanced-living-blog-make-it-make-sense"
           }
         }
       },
       "block_order": [
+        "item_HcAwaa",
         "s1",
         "s2",
         "s3"
@@ -85,8 +98,8 @@
         "subheading": "",
         "text_align": "center",
         "numbered": false,
-        "columns": "3",
-        "bg_scheme": "sand",
+        "columns": "4",
+        "bg_scheme": "surface",
         "padding_top": 64,
         "padding_bottom": 64
       }
