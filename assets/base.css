@@ -59,7 +59,7 @@
   /* Layout */
   --page-max-width: 1660px;
   --section-max-width: 1460px;
-  --measure: 76ch;
+  --measure: 90ch;
   --gutter: clamp(20px, 5vw, 64px);
   --section-spacing: 80px;
 
