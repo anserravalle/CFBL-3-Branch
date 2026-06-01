@@ -20,9 +20,9 @@
       "blocks": {
         "field": { "type": "tag", "settings": { "title": "The Field", "tag": "The Field", "icon": "compass", "description": "<p>Notes on the profession, research, and where psychology is heading.</p>" } },
         "therapy": { "type": "tag", "settings": { "title": "On Therapy", "tag": "On Therapy", "icon": "heart", "description": "<p>How change happens in the room, and what good care asks of us.</p>" } },
-        "diagnostics": { "type": "tag", "settings": { "title": "On Diagnostics", "tag": "On Diagnostics", "icon": "shield", "description": "<p>Assessment, diagnosis, and the search for clarity.</p>" } },
+        "diagnostics": { "type": "tag", "settings": { "title": "On Diagnosis", "tag": "On Diagnosis", "icon": "shield", "description": "<p>Assessment, diagnosis, and the search for clarity.</p>" } },
         "culture": { "type": "tag", "settings": { "title": "The Cultural Moment", "tag": "The Cultural Moment", "icon": "star", "description": "<p>Mental health in the culture we are actually living in.</p>" } },
-        "human": { "type": "tag", "settings": { "title": "Being Human", "tag": "Being Human", "icon": "leaf", "description": "<p>The wider, more personal questions underneath the clinical ones.</p>" } }
+        "human": { "type": "tag", "settings": { "title": "On Relationships", "tag": "On Relationships", "icon": "leaf", "description": "<p>Connection, attachment, and the relationships that shape us.</p>" } }
       },
       "block_order": ["field", "therapy", "diagnostics", "culture", "human"],
       "settings": {
