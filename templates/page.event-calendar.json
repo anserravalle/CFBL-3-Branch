@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "intro": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "Community",
+        "heading": "Event Calendar",
+        "heading_tag": "h1",
+        "content": "<p>Explore upcoming workshops, wellness groups, professional trainings, and community events at Center for Balanced Living. This calendar includes current offerings for individuals, families, clinicians, and community members.</p>",
+        "text_align": "center",
+        "content_width": 760,
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "calendar": {
+      "type": "calendar-embed",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "calendar_src": "",
+        "iframe_title": "Center for Balanced Living event calendar",
+        "height": 680,
+        "max_width": 960,
+        "button_label": "",
+        "button_style": "secondary",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 8,
+        "padding_bottom": 56
+      }
+    },
+    "cta": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "Register",
+        "heading": "Reserve Your Spot",
+        "heading_tag": "h2",
+        "content": "<p>See full details and registration for our current offerings.</p>",
+        "text_align": "center",
+        "content_width": 680,
+        "button_label": "Browse Workshops & Groups",
+        "button_link": "/pages/workshopspage",
+        "button_style": "primary",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "calendar",
+    "cta"
+  ]
+}
