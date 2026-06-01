@@ -1,0 +1,217 @@
+{
+  "sections": {
+    "intro": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/homepage.png",
+        "image_alt": "Center for Balanced Living",
+        "image_ratio": "4-3",
+        "image_position": "right",
+        "eyebrow": "About Us",
+        "heading": "A trauma-informed practice grounded in relationship",
+        "body": "<p>Center for Balanced Living is a clinician-owned psychology practice serving the MOT area of Delaware. We provide therapy, psychological evaluation, groups, workshops, and consultation, integrating evidence-based practice with warmth, attunement, and clinical depth.</p>",
+        "text_align": "left",
+        "primary_label": "Our Credentials",
+        "primary_link": "/pages/credentials",
+        "bg_scheme": "default",
+        "padding_top": 24,
+        "padding_bottom": 80
+      }
+    },
+    "values": {
+      "type": "credentials-section",
+      "blocks": {
+        "c1": {
+          "type": "credential",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma-Informed",
+            "text": "Calm, regulated, and grounded in nervous-system-aware practice."
+          }
+        },
+        "c2": {
+          "type": "credential",
+          "settings": {
+            "icon": "compass",
+            "title": "Diagnostically Precise",
+            "text": "Thorough evaluation that brings clarity and direction."
+          }
+        },
+        "c3": {
+          "type": "credential",
+          "settings": {
+            "icon": "heart",
+            "title": "Relational & Warm",
+            "text": "Care that honors the whole person, not just the symptom."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "eyebrow": "What Guides Us",
+        "heading": "Our values in practice",
+        "text_align": "center",
+        "columns": "3",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "team": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "dr_niki_serravalle": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/angela.jpg",
+            "title": "Dr. Niki Serravalle",
+            "role": "Founder · Licensed Psychologist, PsyD, LPCMH, NCC",
+            "content": "<p>Dr. Angela “Niki” Serravalle is the founder of Center for Balanced Living and a licensed psychologist and licensed professional counselor of mental health with more than two decades of clinical experience. Her work is grounded in trauma-informed care, psychological evaluation, and professional training, with advanced specialization in trauma treatment, EMDR, and integrative approaches to healing.</p><p>Dr. Serravalle began her career at Sheppard Pratt, where she was introduced to Dialectical Behavior Therapy (DBT) and trauma-focused treatment. Her clinical path continued through work in substance use treatment, intensive outpatient programming for children and adolescents, and community mental health across Maryland and Delaware. Over time, she pursued advanced training in EMDR, TF-CBT, DBT, ACT, IFS, CPT, and Ecotherapy, reflecting her commitment to both evidence-based and emerging approaches in trauma care.</p><p>She later earned her doctorate in Clinical Psychology, where she deepened her specialization in psychological evaluation. Her practicum, internship, and postdoctoral training included work under specialists in neuropsychology and school psychology, shaping her strong interest in diagnostic clarity, neurodevelopment, and the ways systems and environments influence clinical presentation.</p><p>Today, Dr. Serravalle’s work is focused primarily on psychological evaluation, supervision, consultation, and training. Through Center for Balanced Living, she has built a practice that reflects her commitment to clinical depth, high-quality care, and the development of other professionals. She is not currently accepting new individual therapy clients. Clients seeking therapy are welcome to connect with our clinical team to explore fit and availability.</p>",
+            "email": "drserravalle@gmail.com",
+            "bio_link": "/pages/niki-serravalle",
+            "bio_link_label": "View full bio"
+          }
+        },
+        "jada_senter": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Jada_1_1.jpg",
+            "title": "Jada Senter",
+            "role": "Practice Manager",
+            "content": "<p>Jada Senter is the Practice Manager at Center for Balanced Living. She oversees daily operations across the practice, including client communication, scheduling, billing coordination, and administrative support. </p><p>Jada also helps coordinate onsite events and plays an important role in ensuring that clients experience the practice as organized, responsive, and welcoming.</p>",
+            "phone": "(302) 608-3780",
+            "email": "admin@balancedlivingde.com"
+          }
+        },
+        "amanda_foxwell": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/amanda.jpg",
+            "title": "Amanda Foxwell",
+            "role": "Mental Health Counselor",
+            "content": "<p>Amanda Foxwell is a mental health counselor who works with teens and adults navigating trauma, anxiety, and related emotional concerns. She holds a master’s degree in Mental Health Counseling from Capella University and a bachelor’s degree in Applied Behavior Analysis from Purdue University. Amanda is currently working toward licensure as a Licensed Professional Counselor of Mental Health.</p><p>Amanda is EMDR-trained and certified in ecotherapy, reflecting her holistic and nature-informed approach to healing. She brings warmth, empathy, and evidence-based care to her work, creating a supportive therapeutic environment where clients can process challenges, build resilience, and move toward meaningful growth.</p>",
+            "phone": "(302) 365-0610",
+            "email": "amandaf@balancedlivingde.com",
+            "bio_link": "/pages/amanda-foxwell",
+            "bio_link_label": "View full bio"
+          }
+        },
+        "kirsten_lowe": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/kirsten.jpg",
+            "title": "Kirsten Lowe",
+            "role": "Mental Health Counselor",
+            "content": "<p>Kirsten Lowe is a mental health counselor with a master’s degree in Clinical Mental Health Counseling from Wilmington University. She also holds degrees in Elementary Education and Special Education, with advanced training in autism and severe intellectual disabilities. Before becoming a counselor, Kirsten worked as a special education teacher serving children ages 5 through 14.</p><p>Her therapeutic approach is collaborative, supportive, and individualized, drawing from Cognitive Behavioral Therapy, mindfulness-based strategies, and strengths-based care. Kirsten is also completing EMDR training as part of her continued commitment to trauma-informed, evidence-based practice. She works to create a safe and open space where clients feel heard, supported, and empowered in their growth.</p>",
+            "phone": "(302) 336-8037",
+            "email": "KLowe@balancedlivingde.com",
+            "bio_link": "/pages/kirsten-lowe",
+            "bio_link_label": "View full bio"
+          }
+        },
+        "brianna_patton": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/brianna.jpg",
+            "title": "Brianna Patton",
+            "role": "Mental Health Counselor",
+            "content": "<p>Brianna Patton is a mental health counselor working toward licensure as a Licensed Professional Counselor of Mental Health. She provides supportive, evidence-based therapy focused on helping clients strengthen coping skills, build emotional resilience, and develop practical strategies for change.</p><p>Brianna’s work draws from Cognitive Behavioral Therapy and Solution-Focused Therapy, offering a structured and goal-oriented approach to treatment. She is also completing EMDR training to further support clients in processing distressing experiences and reducing the impact of trauma-related symptoms. Her clinical style is collaborative, grounded, and focused on meaningful progress.</p>",
+            "phone": "(302) 608-3780",
+            "email": "BPatton@balancedlivingde.com",
+            "bio_link": "/pages/brianna-patton",
+            "bio_link_label": "View full bio"
+          }
+        },
+        "shay_oliver": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/shay.jpg",
+            "title": "Shay Oliver",
+            "role": "Counseling Intern",
+            "content": "<p>Shay Oliver is a graduate student at Capella University pursuing a master’s degree in Clinical Mental Health Counseling. She brings several years of experience in behavioral health as a Registered Behavior Technician, with work across school and clinical settings supporting children and families.</p><p>Her background includes Applied Behavior Analysis services and collaboration with families, educators, and interdisciplinary teams to support skill development, emotional regulation, and meaningful progress. Shay’s therapeutic style is warm, collaborative, and evidence-based. She approaches care from a holistic and individualized perspective, supporting clients emotionally, cognitively, socially, and environmentally while honoring their strengths and lived experiences.</p>",
+            "email": "SOliver@balancedlivingde.com"
+          }
+        },
+        "kim_shiflett": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-15.png",
+            "title": "Kim Shiflett",
+            "role": "Assessment Team Lead",
+            "content": "<p>Kim Shiflett is the Assessment Team Lead at Center for Balanced Living. She supports the evaluation process through coordination, organization, and attention to detail, helping ensure that clients receive thorough, timely, and compassionate care. Her work is an essential part of the practice’s assessment services and contributes to a smooth and supportive evaluation experience for families and individuals.</p>",
+            "phone": "(302) 608-3780",
+            "email": "Kimmy@balancedlivingde.com"
+          }
+        },
+        "kimberly_brown": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/kbrown.png",
+            "title": "Kimberly Brown",
+            "role": "Nutrition Specialist & Certified Personal Trainer",
+            "content": "<p>Kimberly is a Pn1 Nutrition Specialist and a Certified Personal Trainer. She believes that our health is a combination of the food we eat, how we move, our daily habits and who we have surrounding us in our lives.</p><p>As a wife, homeschool mom, and entrepreneur she gets that life can be busy, overwhelming and difficult. We often put our health and needs last but it’s incredibly important to start taking care of you mentally and  physically. Through 1:1 training or group training, Kimberly takes a whole body wellness approach to making healthy living custom to your lifestyle.</p>",
+            "phone": "(302) 598-4135"
+          }
+        }
+      },
+      "block_order": [
+        "dr_niki_serravalle",
+        "jada_senter",
+        "amanda_foxwell",
+        "kirsten_lowe",
+        "brianna_patton",
+        "shay_oliver",
+        "kim_shiflett",
+        "kimberly_brown"
+      ],
+      "settings": {
+        "eyebrow": "Our Team",
+        "heading": "Meet Our Team",
+        "subheading": "<p>The team at Center for Balanced Living includes psychologists, counselors, and support staff committed to trauma-informed, relationally grounded, and evidence-based care.</p>",
+        "text_align": "center",
+        "image_position": "start",
+        "image_ratio": "4-3",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "heading": "Let's talk about how we can help",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Explore Services",
+        "secondary_link": "/pages/services",
+        "phone": "(302) 608-3780",
+        "bg_scheme": "navy",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "title": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "About Us",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 8
+      }
+    }
+  },
+  "order": [
+    "title",
+    "intro",
+    "values",
+    "team",
+    "cta"
+  ]
+}
