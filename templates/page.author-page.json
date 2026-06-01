@@ -27,7 +27,7 @@
         "primary_link": "/pages/contact",
         "secondary_label": "Meet the Team",
         "secondary_link": "/pages/about-us",
-        "bg_scheme": "default",
+        "bg_scheme": "sand",
         "padding_top": 80,
         "padding_bottom": 48
       }
