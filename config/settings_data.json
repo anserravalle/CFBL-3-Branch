@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_primary": "#2B5275",
@@ -9,23 +18,26 @@
     "use_brand_fonts": true,
     "heading_font": "cormorant_n4",
     "body_font": "montserrat_n4",
-    "base_font_size": 19,
+    "base_font_size": 18,
     "heading_scale": 110,
-    "page_max_width": 1660,
-    "section_max_width": 1460,
+    "page_max_width": 1400,
+    "section_max_width": 1240,
     "section_spacing": 80,
     "button_radius": 1000,
     "card_radius": 16,
     "header_style": "light",
     "header_sticky": true,
-    "logo_height": 56,
+    "logo": "shopify://shop_images/logosig.png",
+    "logo_height": 62,
     "footer_style": "navy",
     "favicon": "shopify://shop_images/faviconC4bl.png",
     "business_name": "Center for Balanced Living",
     "schema_business_type": "Psychologist",
     "business_phone": "(302) 608-3780",
+    "business_street": "5879 Summit Bridge Road",
     "business_city": "Townsend",
     "business_region": "DE",
+    "business_zip": "19734",
     "business_areas": "Townsend, Middletown, Odessa, MOT, New Castle County, Delaware, Wilmington, Newark, Dover",
     "social_instagram": "https://www.instagram.com/centerforbalancedlivingde",
     "social_facebook": "https://www.facebook.com/Dr.Serravalle",
@@ -35,8 +47,7 @@
     "secondary_cta_label": "Explore Services",
     "secondary_cta_link": "/pages/services",
     "enable_animations": true,
-    "business_street": "5879 Summit Bridge Road",
-    "business_zip": "19734"
+    "content_for_index": []
   },
   "presets": {
     "Center for Balanced Living": {
