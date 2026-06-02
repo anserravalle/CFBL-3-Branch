@@ -20,6 +20,32 @@
         "padding_bottom": 48
       }
     },
+    "text_image_T4ki7g": {
+      "type": "text-image",
+      "name": "Text with image",
+      "settings": {
+        "image": "shopify://shop_images/dr_serravalle.png",
+        "image_alt": "drserravalle",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Trainer",
+        "heading": "Learn With Dr. Serravalle",
+        "body": "<p>Dr. Angela “Niki” Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "drserravalle@gmail.com",
+        "primary_label": "Explore Our Offerings",
+        "primary_link": "shopify://pages/cfbl-institute",
+        "secondary_label": "",
+        "secondary_link": "",
+        "bg_scheme": "surface",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "catalog": {
       "type": "workshop-event-grid",
       "blocks": {
@@ -115,39 +141,13 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
-    },
-    "text_image_T4ki7g": {
-      "type": "text-image",
-      "name": "Text with image",
-      "settings": {
-        "image": "shopify://shop_images/dr_serravalle.png",
-        "image_alt": "drserravalle",
-        "image_ratio": "4-3",
-        "image_frame": true,
-        "frame_color": "#3d5a52",
-        "image_position": "left",
-        "mobile_stack": "image",
-        "eyebrow": "Meet the Trainer",
-        "heading": "Learn With Dr. Serravalle",
-        "body": "<p>Dr. Angela “Niki” Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
-        "text_align": "left",
-        "phone": "",
-        "email": "",
-        "primary_label": "Explore Our Offerings",
-        "primary_link": "shopify://pages/cfbl-institute",
-        "secondary_label": "",
-        "secondary_link": "",
-        "bg_scheme": "sand",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
     }
   },
   "order": [
     "header",
+    "text_image_T4ki7g",
     "catalog",
     "faq",
-    "cta",
-    "text_image_T4ki7g"
+    "cta"
   ]
 }
