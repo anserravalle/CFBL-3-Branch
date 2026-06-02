@@ -1218,7 +1218,7 @@ textarea { min-height: 140px; resize: vertical; }
    --------------------------------------------------------------------------- */
 .tabs__list {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-12);
   overflow-x: auto;
   border-bottom: 1px solid var(--color-border);
   margin-bottom: var(--space-32);
@@ -1231,9 +1231,9 @@ textarea { min-height: 140px; resize: vertical; }
   border: 0;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
-  padding: var(--space-16) var(--space-20);
+  padding: var(--space-16) var(--space-28);
   font-family: var(--font-body);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--color-muted);
@@ -1267,6 +1267,10 @@ textarea { min-height: 140px; resize: vertical; }
 .tabs__panel-media .video-wrap { box-shadow: none; }
 .tabs__panel-body { max-width: var(--measure); }
 .tabs__panel-body h3 { margin-bottom: var(--space-12); }
+/* Text-only tab panels (no image/video) fill the full card width instead of
+   stopping at the reading measure, so the copy reaches across the panel. */
+.tabs__panel:not(.tabs__panel--media),
+.tabs__panel:not(.tabs__panel--media) .tabs__panel-body { max-width: none; }
 
 /* ---------------------------------------------------------------------------
    22c. Images with text, scrolling (sticky media + scrolling text)
