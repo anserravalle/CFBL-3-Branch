@@ -937,8 +937,8 @@ a.card:hover {
 .grid--2 .testimonial,
 .grid--3 .testimonial {
   position: relative;
-  padding: var(--space-32) var(--space-28);
-  min-height: 280px;
+  padding: var(--space-32) var(--space-40);
+  min-height: 240px;
   justify-content: center;
   border-color: color-mix(in srgb, var(--color-terracotta) 35%, var(--color-border));
 }
@@ -957,7 +957,7 @@ a.card:hover {
 .grid--3 .testimonial__quote {
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.12rem);
   line-height: 1.6;
-  max-width: 38ch;
+  max-width: 52ch;
 }
 
 /* ---------------------------------------------------------------------------
