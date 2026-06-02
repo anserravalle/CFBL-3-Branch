@@ -1,14 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "intro": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "A Different Kind of Clinical Learning",
+        "heading": "Workshops",
+        "heading_tag": "h1",
+        "content": "<p>Explore thoughtful, clinician-led workshops designed to offer insight, practical tools, and meaningful support. Topics vary throughout the year and may include trauma, emotional wellness, values, relationships, creativity, self-understanding, and personal growth.</p>",
+        "text_align": "center",
+        "content_width": 760,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
     "header": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+        "show_title": false,
         "eyebrow": "Groups & Workshops",
         "text_align": "center",
         "bg_scheme": "default",
         "padding_top": 80,
-        "padding_bottom": 24,
-        "show_title": false
+        "padding_bottom": 24
       }
     },
     "events": {
@@ -23,7 +50,9 @@
             "time": "6:00-7:30 PM",
             "location": "Townsend, DE",
             "description": "An eight-week group for building regulation and coping skills.",
-            "link_label": "Register"
+            "product": "",
+            "link_label": "Register",
+            "link": ""
           }
         },
         "e2": {
@@ -35,7 +64,9 @@
             "time": "10:00-12:00 PM",
             "location": "Online",
             "description": "A practical workshop for parents and caregivers.",
-            "link_label": "Register"
+            "product": "",
+            "link_label": "Register",
+            "link": ""
           }
         }
       },
@@ -59,25 +90,39 @@
         "eyebrow": "Stay Informed",
         "heading": "Hear About New Groups & Workshops",
         "body": "<p>We'll let you know when new offerings open for registration.</p>",
+        "placeholder": "Email address",
         "button_label": "Subscribe",
+        "success_text": "Thank you for subscribing.",
+        "fine_print": "We respect your privacy and never share your information.",
         "text_align": "center",
         "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
       }
     },
-    "intro": {
-      "type": "rich-text-brand",
+    "hero_brand_gmVhdD": {
+      "type": "hero-brand",
+      "name": "Hero",
       "settings": {
-        "eyebrow": "A Different Kind of Clinical Learning",
-        "heading": "Workshops",
-        "heading_tag": "h1",
-        "content": "<p>Explore thoughtful, clinician-led workshops designed to offer insight, practical tools, and meaningful support. Topics vary throughout the year and may include trauma, emotional wellness, values, relationships, creativity, self-understanding, and personal growth.</p>",
-        "text_align": "center",
-        "content_width": 760,
-        "bg_scheme": "default",
-        "padding_top": 80,
-        "padding_bottom": 24
+        "eyebrow": "Workshops at Center for Balanced Living",
+        "heading": "Thoughtful Learning for Healing, Growth, and Connection",
+        "subheading": "<p>Our workshops are designed to offer clinically grounded education in a format that feels accessible, reflective, and human.</p><p>Led by experienced clinicians, these offerings create space to explore topics such as trauma recovery, emotional regulation, self-understanding, creativity, relationships, nervous system awareness, and personal growth. Each workshop is developed with care, bringing together research-informed practice, practical tools, and opportunities for meaningful reflection.</p><p>Whether you are attending for support, insight, community, or continued learning, our workshops invite you to slow down, engage more deeply, and leave with something you can carry into daily life.</p>",
+        "use_h1": true,
+        "primary_label": "",
+        "primary_link": "",
+        "secondary_label": "",
+        "secondary_link": "",
+        "image": "shopify://shop_images/psychology-workshops-in-a-professional-private-practice.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "surface",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },
@@ -85,6 +130,7 @@
     "intro",
     "header",
     "events",
-    "newsletter"
+    "newsletter",
+    "hero_brand_gmVhdD"
   ]
 }
