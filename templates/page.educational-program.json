@@ -38,7 +38,9 @@
       "settings": {
         "image": "shopify://shop_images/angela.jpg",
         "image_alt": "Dr. Angela (Niki) Serravalle",
-        "image_ratio": "4-3",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#9d654e",
         "image_position": "left",
         "mobile_stack": "image",
         "eyebrow": "Meet the Trainer",
@@ -77,7 +79,7 @@
         "heading": "",
         "subheading": "",
         "columns": 1,
-        "bg_scheme": "sand",
+        "bg_scheme": "sage",
         "padding_top": 48,
         "padding_bottom": 72
       }
@@ -133,7 +135,8 @@
             "title": "Supervision & Consultation",
             "heading": "Supervision & Consultation",
             "content": "<p>Individual and group clinical supervision toward licensure, plus EMDR consultation toward EMDRIA certification.</p>",
-            "image_alt": "",
+            "image": "shopify://shop_images/niki_supervsion.png",
+            "image_alt": "niki supervision",
             "video_url": "",
             "page": "",
             "link": "/pages/clinical-supervision",
