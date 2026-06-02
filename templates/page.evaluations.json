@@ -1,12 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header": {
       "type": "main-page",
       "settings": {
+        "show_title": true,
         "eyebrow": "Psychological Evaluations",
         "text_align": "left",
         "bg_scheme": "default",
-        "padding_top": 80,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "intro": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "content": "<p>Psychological evaluations at Center for Balanced Living are designed to provide thoughtful, comprehensive insight into emotional, behavioral, cognitive, and personality functioning. Evaluations may help clarify diagnoses, identify strengths and challenges, inform treatment planning, support academic or workplace accommodations, and provide a deeper understanding of an individual’s functioning across settings. Our approach emphasizes clinical depth, diagnostic clarity, and individualized recommendations grounded in evidence-based assessment practices.</p>",
+        "text_align": "left",
+        "content_width": 820,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "bg_scheme": "default",
+        "padding_top": 0,
         "padding_bottom": 48
       }
     },
@@ -17,7 +44,11 @@
           "type": "tab",
           "settings": {
             "title": "Autism Spectrum",
+            "heading": "",
             "content": "<p>These evaluations help clarify questions related to autism spectrum presentation, including social communication differences, sensory experiences, repetitive patterns, masking, and developmental history. The goal is to provide a thoughtful and comprehensive understanding of the individual's profile.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/autism-evaluation",
             "link_label": "Learn more about autism evaluations"
           }
@@ -26,7 +57,11 @@
           "type": "tab",
           "settings": {
             "title": "Personality & Emotional Functioning",
+            "heading": "",
             "content": "<p>These evaluations help clarify patterns related to mood, anxiety, personality functioning, coping, emotional regulation, and interpersonal style. They can be useful when concerns are complex, longstanding, or difficult to fully understand through conversation alone.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/personality-and-emotional",
             "link_label": "Learn more"
           }
@@ -35,7 +70,11 @@
           "type": "tab",
           "settings": {
             "title": "Attention & Executive Functioning",
+            "heading": "",
             "content": "<p>Evaluations in this area help clarify concerns related to attention, impulsivity, organization, working memory, task initiation, and self-regulation. They can support understanding of ADHD and related executive functioning difficulties across school, work, and daily life.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/adhd-evaluation",
             "link_label": "Learn more"
           }
@@ -44,7 +83,11 @@
           "type": "tab",
           "settings": {
             "title": "Academic & Learning Concerns",
+            "heading": "",
             "content": "<p>Evaluations in this area explore concerns related to reading, writing, math, academic performance, learning differences, and the cognitive processes that may affect school functioning. They can also help identify strengths, challenges, and recommendations for support.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/academic-and-learning",
             "link_label": "Learn more"
           }
@@ -53,7 +96,11 @@
           "type": "tab",
           "settings": {
             "title": "Diagnostic Clarification",
+            "heading": "",
             "content": "<p>Some evaluations are designed to answer broader or more complex diagnostic questions when there is uncertainty about the nature of the concerns. The goal is to provide greater clarity, more accurate understanding, and practical recommendations for next steps.</p>",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
             "link": "/pages/diagnostic-clarification",
             "link_label": "Learn more"
           }
@@ -71,6 +118,7 @@
         "heading": "Areas of Evaluation",
         "subheading": "Each evaluation is tailored to the referral question. Select an area to learn more.",
         "text_align": "left",
+        "image_ratio": "4-3",
         "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
@@ -82,29 +130,37 @@
         "intake": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Intake & History",
-            "text": "We begin with careful listening and a thorough history."
+            "text": "We begin with careful listening and a thorough history.",
+            "link": ""
           }
         },
         "assessment": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Standardized Assessment",
-            "text": "Evidence-based measures tailored to the referral question."
+            "text": "Evidence-based measures tailored to the referral question.",
+            "link": ""
           }
         },
         "feedback": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Feedback Session",
-            "text": "We review findings together, in plain language."
+            "text": "We review findings together, in plain language.",
+            "link": ""
           }
         },
         "report": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Written Summary",
-            "text": "A clear report with recommendations and next steps."
+            "text": "A clear report with recommendations and next steps.",
+            "link": ""
           }
         }
       },
@@ -117,28 +173,13 @@
       "settings": {
         "eyebrow": "What Happens",
         "heading": "The Evaluation Process",
+        "subheading": "",
         "text_align": "center",
         "numbered": true,
         "columns": "4",
         "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
-      }
-    },
-    "cta": {
-      "type": "contact-cta",
-      "settings": {
-        "eyebrow": "Get Started",
-        "heading": "Request an Evaluation",
-        "body": "<p>Tell us a little about what you're seeking clarity on, and we'll guide you through the next step.</p>",
-        "primary_label": "Start the Conversation",
-        "primary_link": "/pages/contact",
-        "secondary_label": "Call (302) 608-3780",
-        "secondary_link": "tel:3026083780",
-        "phone": "",
-        "bg_scheme": "navy",
-        "padding_top": 88,
-        "padding_bottom": 88
       }
     },
     "faq": {
@@ -224,23 +265,27 @@
         "heading": "Common Questions About Evaluations",
         "subheading": "",
         "cta_label": "",
+        "cta_link": "",
         "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
       }
     },
-    "intro": {
-      "type": "rich-text-brand",
+    "cta": {
+      "type": "contact-cta",
       "settings": {
-        "eyebrow": "",
-        "heading": "",
-        "heading_tag": "h2",
-        "content": "<p>Psychological evaluations at Center for Balanced Living are designed to provide thoughtful, comprehensive insight into emotional, behavioral, cognitive, and personality functioning. Evaluations may help clarify diagnoses, identify strengths and challenges, inform treatment planning, support academic or workplace accommodations, and provide a deeper understanding of an individual’s functioning across settings. Our approach emphasizes clinical depth, diagnostic clarity, and individualized recommendations grounded in evidence-based assessment practices.</p><p>The evaluation process typically includes an initial consultation, record review when relevant, testing sessions, scoring and interpretation, and a feedback appointment to review results. Each evaluation is tailored to the referral question and may vary depending on age, presenting concerns, and the scope of the assessment.</p><p>Evaluations in this area help clarify concerns related to attention, impulsivity, organization, working memory, task initiation, and self-regulation. They can support understanding of ADHD and related executive functioning difficulties across school, work, and daily life. Learn More Here</p><p>Evaluations in this area explore concerns related to reading, writing, math, academic performance, learning differences, and the cognitive processes that may affect school functioning. They can help also identify strengths, challenges, and recommendations for support. Learn More Here</p><p>Some evaluations are designed to answer broader or more complex diagnostic questions when there is uncertainty about the nature of the concerns. The goal is to provide greater clarity, more accurate understanding, and practical recommendations for next steps. Learn More Here</p><p>For many individuals and families, the evaluation process provides language for experiences that have felt confusing, frustrating, or difficult to explain. Greater clarity can support treatment planning, educational advocacy, self-understanding, and more effective support across settings.</p><p>Whether you are exploring therapy, psychological evaluation, supervision, consultation, or educational offerings, we welcome you to reach out. Our team can help guide you to the service or next step that best fits your needs. Contact our office to discuss your concerns and learn more about the evaluation process. We usually respond within 24 hours. This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p><p>Everything was very quick and efficient in getting the appointments scheduled and there was a decent turn-around time for getting my results back. I also feel like I understood the results because of the feedback session.</p><p>I felt very seen. Dr. Serravale and staff were very knowledgeable, passionate, and showed immense empathy to me when I was having a bad time. I am extremely grateful to have worked with her through the testing and assessment process.</p><p>The Center for Balanced living helped give us the answers we needed to help get the right support for our daughter. I am so glad we did the testing. Without it we would have never know how to move forward.</p><p>Dr Seravalle is wonderful! Her attention to detail and understanding of testing information is wonderful. I appreciated that she would let the testing and scores be her guide in helping to determine, what, if any, additional testing was recommended. We couldn't be happier with the invaluable information she helped us to gather.</p><p>All our questions were answered whenever asked, and we felt like our evaluations were very thorough and gave us a true picture of our child's neurological profile.</p><p>Dr. Serravalle was very patient and accommodating with my son. She took her time and explained every step of the way.</p>",
-        "text_align": "left",
-        "content_width": 820,
-        "bg_scheme": "default",
-        "padding_top": 8,
-        "padding_bottom": 48
+        "eyebrow": "Get Started",
+        "heading": "Request an Evaluation",
+        "body": "<p>Tell us a little about what you're seeking clarity on, and we'll guide you through the next step.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
