@@ -13,7 +13,7 @@
       "type": "main-page",
       "settings": {
         "show_title": true,
-        "eyebrow": "CFBL Institute · Professional Trainings",
+        "eyebrow": "CFBL Institute \u00b7 Professional Trainings",
         "text_align": "left",
         "bg_scheme": "default",
         "padding_top": 80,
@@ -33,7 +33,7 @@
         "mobile_stack": "image",
         "eyebrow": "Meet the Trainer",
         "heading": "Learn With Dr. Serravalle",
-        "body": "<p>Dr. Angela “Niki” Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
+        "body": "<p>Dr. Angela \u201cNiki\u201d Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
         "text_align": "left",
         "phone": "302-608-3780",
         "email": "drserravalle@gmail.com",
@@ -57,7 +57,7 @@
             "title": "Assessment-Informed Trauma Treatment",
             "time": "9:00 AM-4:00 PM",
             "location": "Live, online",
-            "description": "Integrating psychological assessment with somatic and trauma work. CE credit available.",
+            "description": "Integrating psychological assessment with somatic and trauma work.",
             "product": "",
             "link_label": "Register",
             "link": ""
@@ -95,13 +95,6 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
-        "ce": {
-          "type": "item",
-          "settings": {
-            "question": "Is CE credit available?",
-            "answer": "<p>CE credit details and eligibility are listed with each training and vary by license type and jurisdiction.</p>"
-          }
-        },
         "format": {
           "type": "item",
           "settings": {
@@ -111,12 +104,11 @@
         }
       },
       "block_order": [
-        "ce",
         "format"
       ],
       "settings": {
         "eyebrow": "Details",
-        "heading": "Registration & CE Credit",
+        "heading": "Registration",
         "subheading": "Practical answers about scheduling, insurance, evaluations, and finding the right fit.",
         "cta_label": "",
         "cta_link": "",
@@ -130,7 +122,7 @@
       "settings": {
         "eyebrow": "For Clinicians",
         "heading": "Register or Inquire",
-        "body": "<p>Reserve a seat in an upcoming training, or contact us with questions about CE credit and group rates.</p>",
+        "body": "<p>Reserve a seat in an upcoming training, or contact us with questions about group rates.</p>",
         "primary_label": "View All Trainings",
         "primary_link": "/pages/courses-certification",
         "secondary_label": "Contact the Institute",

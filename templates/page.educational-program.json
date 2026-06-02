@@ -164,13 +164,6 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
-        "ce": {
-          "type": "item",
-          "settings": {
-            "question": "Is CE credit available?",
-            "answer": "<p>CE credit details and eligibility are listed with each training and vary by license type and jurisdiction.</p>"
-          }
-        },
         "who": {
           "type": "item",
           "settings": {
@@ -187,13 +180,12 @@
         }
       },
       "block_order": [
-        "ce",
         "who",
         "format"
       ],
       "settings": {
         "eyebrow": "Details",
-        "heading": "Registration & CE Credit",
+        "heading": "Registration",
         "subheading": "",
         "cta_label": "",
         "cta_link": "",
@@ -208,7 +200,7 @@
         "eyebrow": "For Clinicians",
         "heading": "Register or inquire",
         "use_h1": false,
-        "intro": "<p>Reach out about an upcoming training, course, or workshop, or to ask about CE credit and group rates. We respond to professional inquiries directly.</p>",
+        "intro": "<p>Reach out about an upcoming training, course, or workshop, or to ask about group rates. We respond to professional inquiries directly.</p>",
         "phone": "(302) 608-3780",
         "email": "",
         "address": "",
