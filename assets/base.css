@@ -931,6 +931,35 @@ a.card:hover {
 }
 .testimonial__meta { position: relative; padding-top: var(--space-24); }
 
+/* Multi-column (review-style) testimonials read as compact, squarer, framed
+   cards - distinct from the single large pull-quote (grid--1) used for
+   philosophy statements, which keeps its big display treatment. */
+.grid--2 .testimonial,
+.grid--3 .testimonial {
+  position: relative;
+  padding: var(--space-32) var(--space-28);
+  min-height: 280px;
+  justify-content: center;
+  border-color: color-mix(in srgb, var(--color-terracotta) 35%, var(--color-border));
+}
+.grid--2 .testimonial::after,
+.grid--3 .testimonial::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1px solid color-mix(in srgb, var(--color-terracotta) 30%, transparent);
+  border-radius: calc(var(--radius-card) - 6px);
+  pointer-events: none;
+}
+.grid--2 .testimonial::before,
+.grid--3 .testimonial::before { font-size: 2.25rem; }
+.grid--2 .testimonial__quote,
+.grid--3 .testimonial__quote {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.12rem);
+  line-height: 1.6;
+  max-width: 38ch;
+}
+
 /* ---------------------------------------------------------------------------
    13. Section: Credentials / trust
    --------------------------------------------------------------------------- */
