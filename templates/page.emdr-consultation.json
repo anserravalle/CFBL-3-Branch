@@ -106,7 +106,7 @@
         "text_align": "center",
         "numbered": false,
         "columns": "3",
-        "bg_scheme": "sand",
+        "bg_scheme": "sage",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -164,7 +164,7 @@
         "text_align": "center",
         "numbered": true,
         "columns": "4",
-        "bg_scheme": "default",
+        "bg_scheme": "surface",
         "padding_top": 72,
         "padding_bottom": 72
       }
