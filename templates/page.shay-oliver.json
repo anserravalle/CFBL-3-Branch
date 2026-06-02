@@ -36,6 +36,7 @@
     },
     "bio_body": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "eyebrow": "",
