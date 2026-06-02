@@ -97,7 +97,7 @@
             "image_alt": "",
             "video_url": "",
             "page": "",
-            "link": "/pages/professional-trainings",
+            "link": "/pages/professional-clinical-trainings",
             "link_label": "View trainings"
           }
         },
@@ -125,7 +125,7 @@
             "image_alt": "",
             "video_url": "",
             "page": "",
-            "link": "/pages/workshops",
+            "link": "/pages/workshopspage",
             "link_label": "View workshops"
           }
         },
@@ -235,7 +235,7 @@
         "heading": "Train with us",
         "body": "<p>Join a cohort or inquire about supervision and consultation.</p>",
         "primary_label": "View Trainings",
-        "primary_link": "/pages/professional-trainings",
+        "primary_link": "/pages/professional-clinical-trainings",
         "secondary_label": "Contact the Institute",
         "secondary_link": "/pages/contact",
         "phone": "",

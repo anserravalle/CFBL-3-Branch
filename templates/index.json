@@ -78,7 +78,7 @@
             "title": "CFBL Writing (MUSA)",
             "body": "<p>Essays and books on psychology, relationships, the moment, and the fragility of being human.</p>",
             "link_label": "Read MUSA",
-            "link": "/pages/musa"
+            "link": "/pages/musa-writing"
           }
         }
       },
@@ -425,7 +425,7 @@
         "heading": "Frequently Asked Questions",
         "subheading": "Practical answers about scheduling, insurance, evaluations, and finding the right fit.",
         "cta_label": "See all FAQs",
-        "cta_link": "/pages/faq",
+        "cta_link": "/pages/faq-1",
         "bg_scheme": "default",
         "padding_top": 80,
         "padding_bottom": 80

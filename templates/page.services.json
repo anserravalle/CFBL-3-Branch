@@ -40,7 +40,7 @@
             "title": "Groups & Workshops",
             "body": "<p>Therapy groups, workshops, and community education.</p>",
             "link_label": "Learn more",
-            "link": "/pages/workshops"
+            "link": "/pages/workshopspage"
           }
         },
         "supervision": {
@@ -60,7 +60,7 @@
             "title": "EMDR Consultation",
             "body": "<p>Consultation toward EMDR certification and skill refinement.</p>",
             "link_label": "Learn more",
-            "link": "/pages/emdr-consultation"
+            "link": "/pages/consultation"
           }
         },
         "training": {
