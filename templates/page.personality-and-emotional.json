@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -5,17 +14,20 @@
       "settings": {
         "eyebrow": "Personality & Emotional Functioning",
         "heading": "Personality and Emotional Functioning Evaluations",
-        "subheading": "<p>Personality and emotional functioning evaluations are designed to provide a deeper understanding of how a person experiences themselves, relates to others, manages emotions, copes with stress, and responds to life circumstances. These evaluations can be especially helpful when symptoms feel complex, longstanding, confusing, or difficult to explain through a brief clinical conversation alone. At Center for Balanced Living, these evaluations are completed with care, clinical depth, and respect for the whole person. The goal is not to reduce someone to a diagnosis, but to better understand the patterns that may be shaping their distress, relationships, coping style, and treatment needs.</p>",
+        "subheading": "<p>Personality and emotional functioning evaluations are designed to provide a deeper understanding of how a person experiences themselves, relates to others, manages emotions, copes with stress, and responds to life circumstances. These evaluations can be especially helpful when symptoms feel complex, longstanding, confusing, or difficult to explain through a brief clinical conversation alone. </p><p>At Center for Balanced Living, these evaluations are completed with care, clinical depth, and respect for the whole person. The goal is not to reduce someone to a diagnosis, but to better understand the patterns that may be shaping their distress, relationships, coping style, and treatment needs.</p>",
         "use_h1": true,
         "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
         "secondary_label": "All Evaluations",
         "secondary_link": "/pages/psychological-evaluations",
-        "image": "",
+        "image": "shopify://shop_images/personality_assessment.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "#2b5275",
         "show_shape": true,
         "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
         "padding_top": 88,
         "padding_bottom": 88
@@ -29,7 +41,8 @@
           "settings": {
             "icon": "check",
             "title": "Adults and teens seeking deeper self-understanding",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b1": {
@@ -37,7 +50,8 @@
           "settings": {
             "icon": "check",
             "title": "People navigating mood, anxiety, or relational patterns",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         },
         "b2": {
@@ -45,7 +59,8 @@
           "settings": {
             "icon": "check",
             "title": "Those wanting clarity to guide therapy and treatment planning",
-            "text": ""
+            "text": "",
+            "link": ""
           }
         }
       },
@@ -72,29 +87,37 @@
         "p0": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Intake & History",
-            "text": "We begin with careful listening and a thorough history."
+            "text": "We begin with careful listening and a thorough history.",
+            "link": ""
           }
         },
         "p1": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Standardized Assessment",
-            "text": "Evidence-based measures tailored to the referral question."
+            "text": "Evidence-based measures tailored to the referral question.",
+            "link": ""
           }
         },
         "p2": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Feedback Session",
-            "text": "We review findings together, in plain language."
+            "text": "We review findings together, in plain language.",
+            "link": ""
           }
         },
         "p3": {
           "type": "item",
           "settings": {
+            "icon": "leaf",
             "title": "Written Summary",
-            "text": "A clear report with recommendations and next steps."
+            "text": "A clear report with recommendations and next steps.",
+            "link": ""
           }
         }
       },
