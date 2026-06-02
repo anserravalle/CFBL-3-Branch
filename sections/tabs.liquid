@@ -82,6 +82,11 @@
             {%- endfor -%}
           </div>
         </div>
+        {%- if section.settings.footer_label != blank -%}
+          <div class="btn-row {% if section.settings.text_align == 'center' %}is-center{% endif %}" style="margin-top: var(--space-32);">
+            {%- render 'button', label: section.settings.footer_label, href: section.settings.footer_link, style: section.settings.footer_style | default: 'secondary' -%}
+          </div>
+        {%- endif -%}
       {%- endif -%}
     </div>
   </div>
@@ -101,6 +106,12 @@
     { "type": "select", "id": "image_ratio", "label": "Media ratio (tabs with images)", "options": [
       { "value": "4-3", "label": "4:3" }, { "value": "3-2", "label": "3:2" }, { "value": "1-1", "label": "Square" }, { "value": "16-9", "label": "16:9" }
     ], "default": "4-3" },
+    { "type": "header", "content": "Section button (below tabs)" },
+    { "type": "text", "id": "footer_label", "label": "Button label" },
+    { "type": "url", "id": "footer_link", "label": "Button link" },
+    { "type": "select", "id": "footer_style", "label": "Button style", "options": [
+      { "value": "primary", "label": "Primary" }, { "value": "secondary", "label": "Secondary" }, { "value": "tertiary", "label": "Text link" }
+    ], "default": "secondary" },
     { "type": "header", "content": "Appearance" },
     { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
       { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" },
