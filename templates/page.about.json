@@ -214,8 +214,8 @@
         "subheading": "<p>The team at Center for Balanced Living includes psychologists, counselors, and support staff committed to trauma-informed, relationally grounded, and evidence-based care.</p>",
         "text_align": "center",
         "image_position": "start",
-        "image_ratio": "4-3",
-        "bg_scheme": "default",
+        "image_ratio": "1-1",
+        "bg_scheme": "surface",
         "padding_top": 80,
         "padding_bottom": 80
       }
