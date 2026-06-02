@@ -118,6 +118,18 @@
             "bio_link_label": "View full bio"
           }
         },
+        "item_ynzAdF": {
+          "type": "item",
+          "settings": {
+            "title": "Team member",
+            "role": "",
+            "content": "",
+            "phone": "",
+            "email": "",
+            "bio_link": "",
+            "bio_link_label": "View full bio"
+          }
+        },
         "amanda_foxwell": {
           "type": "item",
           "settings": {
@@ -201,6 +213,7 @@
       "block_order": [
         "dr_niki_serravalle",
         "jada_senter",
+        "item_ynzAdF",
         "amanda_foxwell",
         "kirsten_lowe",
         "brianna_patton",
