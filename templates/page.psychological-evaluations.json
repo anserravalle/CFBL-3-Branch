@@ -147,7 +147,8 @@
         "phone": "",
         "bg_scheme": "navy",
         "padding_top": 88,
-        "padding_bottom": 88
+        "padding_bottom": 88,
+        "disclaimer": "This page is not for emergencies. If you are experiencing a mental health emergency, call 911 or go to your nearest emergency room."
       }
     },
     "faq": {
@@ -157,7 +158,7 @@
           "type": "item",
           "settings": {
             "question": "What is a psychological evaluation?",
-            "answer": "<p>A psychological evaluation is part of an overall assessment. This includes a clinical interview, a battery of cognitive, behavioral, emotional, and personality and psychopathology tests and self-report measures, a review of records, a collateral interview with family/friends/doctors/therapists, analysis of data, and report writing. </p><p>These evaluations are typically used to clarify diagnosis and guide treatment for therapeutic purposes (i.e., if you are in therapy). Clinical psychologists typically perform these types of evaluations. Psychologists will administer  tests and measures for various issues related to an individual’s psychological, emotional, and behavioral functioning. Specifically, a clinical psychologist will select the appropriate tests based on the referral question. (Do I have Bipolar Disorder?)</p>"
+            "answer": "<p>A psychological evaluation is part of an overall assessment. This includes a clinical interview, a battery of cognitive, behavioral, emotional, and personality and psychopathology tests and self-report measures, a review of records, a collateral interview with family/friends/doctors/therapists, analysis of data, and report writing. </p><p>These evaluations are typically used to clarify diagnosis and guide treatment for therapeutic purposes (i.e., if you are in therapy). Clinical psychologists typically perform these types of evaluations. Psychologists will administer  tests and measures for various issues related to an individual\u2019s psychological, emotional, and behavioral functioning. Specifically, a clinical psychologist will select the appropriate tests based on the referral question. (Do I have Bipolar Disorder?)</p>"
           }
         },
         "q2": {
@@ -185,14 +186,14 @@
           "type": "item",
           "settings": {
             "question": "What is the difference between psychological and neuropsychological evaluation?",
-            "answer": "<p><em>Similar to the psychological evaluation, the neuropsychological evaluation is part of an overall assessment. However, there are a few differences here. First, the psychologist conducting the neuropsychological evaluation must be specifically trained in neuropsychological tests and measures. </em></p><p><em>At a minimum, they are licensed psychologists in their state and can practice independently and hold the equivalent of two full-time years of experience and specialized training in neuropsychology and related neurosciences. At least one of the years must be obtained post-doc, and both years are supervised by a clinical neuropsychologist. </em></p><p><em>Secondly, neuropsychologists use their in-depth knowledge of brain-behavior relationships to assess and evaluate patients with neurological, medical, neurodevelopmental, psychiatric, and cognitive conditions. They use tests, puzzles, and game-like activities to evaluate different cognitive areas of the brain, such as attention, memory, language, executive functioning, visual-spatial relations, motor skills, and intelligence. This evaluation is looking at the whole person, not just psychological functioning. The results will aid in understanding the underlying neurocognitive processes and their relation to an individual’s behaviors. </em></p>"
+            "answer": "<p><em>Similar to the psychological evaluation, the neuropsychological evaluation is part of an overall assessment. However, there are a few differences here. First, the psychologist conducting the neuropsychological evaluation must be specifically trained in neuropsychological tests and measures. </em></p><p><em>At a minimum, they are licensed psychologists in their state and can practice independently and hold the equivalent of two full-time years of experience and specialized training in neuropsychology and related neurosciences. At least one of the years must be obtained post-doc, and both years are supervised by a clinical neuropsychologist. </em></p><p><em>Secondly, neuropsychologists use their in-depth knowledge of brain-behavior relationships to assess and evaluate patients with neurological, medical, neurodevelopmental, psychiatric, and cognitive conditions. They use tests, puzzles, and game-like activities to evaluate different cognitive areas of the brain, such as attention, memory, language, executive functioning, visual-spatial relations, motor skills, and intelligence. This evaluation is looking at the whole person, not just psychological functioning. The results will aid in understanding the underlying neurocognitive processes and their relation to an individual\u2019s behaviors. </em></p>"
           }
         },
         "q6": {
           "type": "item",
           "settings": {
             "question": "What can the results of the evaluation be used for?",
-            "answer": "<p>The short answer is anything. Typically, they are used in healthcare, legal, education and for personal knowledge. They can be used to guide treatment, inform education and occupational settings for accommodations.  </p><p>•\tDr. Serravalle is not a forensic psychologist and therefore does not complete evaluations for custody, fitness for duty, competency, workmen’s comp or malpractice. Through her work with DPA she has met and worked with many forensic psychologist and can refer you to them.  </p><p></p>"
+            "answer": "<p>The short answer is anything. Typically, they are used in healthcare, legal, education and for personal knowledge. They can be used to guide treatment, inform education and occupational settings for accommodations.  </p><p>\u2022\tDr. Serravalle is not a forensic psychologist and therefore does not complete evaluations for custody, fitness for duty, competency, workmen\u2019s comp or malpractice. Through her work with DPA she has met and worked with many forensic psychologist and can refer you to them.  </p><p></p>"
           }
         },
         "q7": {
@@ -206,14 +207,14 @@
           "type": "item",
           "settings": {
             "question": "What is a Psychological/Neuropsychological Evaluation",
-            "answer": "<p><em>The purpose of this is to evaluate for emotional, social, personality and behaviors or cognitive strengths/deficits that impacting daily functioning . Results can include diagnosis for disorders such as Attention- Deficit/Hyperactivity Disorder, Autism Spectrum Disorders as well as Depression, or Anxiety disorders that may be affecting one’s functional abilities. These types of evaluations are often used to inform treatment including medication and therapy therefore these types of evaluations are often covered by insurance. </em></p>"
+            "answer": "<p><em>The purpose of this is to evaluate for emotional, social, personality and behaviors or cognitive strengths/deficits that impacting daily functioning . Results can include diagnosis for disorders such as Attention- Deficit/Hyperactivity Disorder, Autism Spectrum Disorders as well as Depression, or Anxiety disorders that may be affecting one\u2019s functional abilities. These types of evaluations are often used to inform treatment including medication and therapy therefore these types of evaluations are often covered by insurance. </em></p>"
           }
         },
         "q9": {
           "type": "item",
           "settings": {
             "question": "What is a Risk Assessment?",
-            "answer": "<p>The purpose of this type of evaluation to determine a <br/>level of risk. The evaluation is examines one’s history, static and protective factors as well as current psychological functioning. They often require collateral data/participation. These assessments are not covered by insurance. </p>"
+            "answer": "<p>The purpose of this type of evaluation to determine a <br/>level of risk. The evaluation is examines one\u2019s history, static and protective factors as well as current psychological functioning. They often require collateral data/participation. These assessments are not covered by insurance. </p>"
           }
         }
       },
@@ -244,12 +245,88 @@
         "eyebrow": "",
         "heading": "",
         "heading_tag": "h2",
-        "content": "<p>Psychological evaluations at Center for Balanced Living are designed to provide thoughtful, comprehensive insight into emotional, behavioral, cognitive, and personality functioning. Evaluations may help clarify diagnoses, identify strengths and challenges, inform treatment planning, support academic or workplace accommodations, and provide a deeper understanding of an individual’s functioning across settings. Our approach emphasizes clinical depth, diagnostic clarity, and individualized recommendations grounded in evidence-based assessment practices.</p><p>The evaluation process typically includes an initial consultation, record review when relevant, testing sessions, scoring and interpretation, and a feedback appointment to review results. Each evaluation is tailored to the referral question and may vary depending on age, presenting concerns, and the scope of the assessment.</p><p>Evaluations in this area help clarify concerns related to attention, impulsivity, organization, working memory, task initiation, and self-regulation. They can support understanding of ADHD and related executive functioning difficulties across school, work, and daily life. Learn More Here</p><p>Evaluations in this area explore concerns related to reading, writing, math, academic performance, learning differences, and the cognitive processes that may affect school functioning. They can help also identify strengths, challenges, and recommendations for support. Learn More Here</p><p>Some evaluations are designed to answer broader or more complex diagnostic questions when there is uncertainty about the nature of the concerns. The goal is to provide greater clarity, more accurate understanding, and practical recommendations for next steps. Learn More Here</p><p>For many individuals and families, the evaluation process provides language for experiences that have felt confusing, frustrating, or difficult to explain. Greater clarity can support treatment planning, educational advocacy, self-understanding, and more effective support across settings.</p><p>Whether you are exploring therapy, psychological evaluation, supervision, consultation, or educational offerings, we welcome you to reach out. Our team can help guide you to the service or next step that best fits your needs. Contact our office to discuss your concerns and learn more about the evaluation process. We usually respond within 24 hours. This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p><p>Everything was very quick and efficient in getting the appointments scheduled and there was a decent turn-around time for getting my results back. I also feel like I understood the results because of the feedback session.</p><p>I felt very seen. Dr. Serravale and staff were very knowledgeable, passionate, and showed immense empathy to me when I was having a bad time. I am extremely grateful to have worked with her through the testing and assessment process.</p><p>The Center for Balanced living helped give us the answers we needed to help get the right support for our daughter. I am so glad we did the testing. Without it we would have never know how to move forward.</p><p>Dr Seravalle is wonderful! Her attention to detail and understanding of testing information is wonderful. I appreciated that she would let the testing and scores be her guide in helping to determine, what, if any, additional testing was recommended. We couldn't be happier with the invaluable information she helped us to gather.</p><p>All our questions were answered whenever asked, and we felt like our evaluations were very thorough and gave us a true picture of our child's neurological profile.</p><p>Dr. Serravalle was very patient and accommodating with my son. She took her time and explained every step of the way.</p>",
+        "content": "<p>Psychological evaluations at Center for Balanced Living are designed to provide thoughtful, comprehensive insight into emotional, behavioral, cognitive, and personality functioning. Evaluations may help clarify diagnoses, identify strengths and challenges, inform treatment planning, support academic or workplace accommodations, and provide a deeper understanding of functioning across settings, grounded in evidence-based assessment practices.</p><p>The process typically includes an initial consultation, record review when relevant, testing sessions, scoring and interpretation, and a feedback appointment to review results. Each evaluation is tailored to the referral question and may vary by age, presenting concerns, and scope.</p><p>For many individuals and families, an evaluation provides language for experiences that have felt confusing or hard to explain, supporting treatment planning, educational advocacy, and more effective support.</p>",
         "text_align": "left",
         "content_width": 820,
         "bg_scheme": "default",
         "padding_top": 8,
         "padding_bottom": 48
+      }
+    },
+    "testimonials": {
+      "type": "testimonial-section",
+      "blocks": {
+        "q1": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Everything was very quick and efficient in getting the appointments scheduled, and there was a good turn-around time for getting my results back. I also feel like I understood the results because of the feedback session.</p>",
+            "author": "",
+            "role": "Evaluation Client",
+            "rating": 0
+          }
+        },
+        "q2": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>I felt very seen. Dr. Serravalle and staff were knowledgeable, passionate, and showed immense empathy to me when I was having a hard time. I am extremely grateful to have worked with her through the testing and assessment process.</p>",
+            "author": "",
+            "role": "Evaluation Client",
+            "rating": 0
+          }
+        },
+        "q3": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>The Center for Balanced Living gave us the answers we needed to get the right support for our daughter. I am so glad we did the testing. Without it we would never have known how to move forward.</p>",
+            "author": "",
+            "role": "Parent of Evaluation Client",
+            "rating": 0
+          }
+        },
+        "q4": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Dr. Serravalle is wonderful! Her attention to detail and understanding of testing information is wonderful. I appreciated that she let the testing and scores be her guide in determining what, if any, additional testing was recommended. We couldn't be happier with the invaluable information she helped us gather.</p>",
+            "author": "",
+            "role": "Parent of Evaluation Client",
+            "rating": 0
+          }
+        },
+        "q5": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>All our questions were answered whenever asked, and our evaluations were very thorough and gave us a true picture of our child's neurological profile.</p>",
+            "author": "",
+            "role": "Parent of Evaluation Client",
+            "rating": 0
+          }
+        },
+        "q6": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Dr. Serravalle was very patient and accommodating with my son. She took her time and explained every step of the way.</p>",
+            "author": "",
+            "role": "Parent of Evaluation Client",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "eyebrow": "Client Experiences",
+        "heading": "What Families Say",
+        "subheading": "",
+        "columns": 3,
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     }
   },
@@ -258,6 +335,7 @@
     "intro",
     "types",
     "process",
+    "testimonials",
     "faq",
     "cta"
   ]
