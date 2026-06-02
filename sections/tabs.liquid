@@ -72,7 +72,9 @@
                   {%- if tab_link != blank -%}
                     <p style="margin-top: var(--space-20);">
                       {%- assign tl = block.settings.link_label | default: 'Learn more' -%}
-                      {%- render 'button', label: tl, href: tab_link, style: 'secondary', aria: tl | append: ', ' | append: block.settings.title -%}
+                      {%- assign tab_external = false -%}
+                      {%- if tab_link contains '://' -%}{%- assign tab_external = true -%}{%- endif -%}
+                      {%- render 'button', label: tl, href: tab_link, style: 'secondary', new_tab: tab_external, aria: tl | append: ', ' | append: block.settings.title -%}
                     </p>
                   {%- endif -%}
                 </div>
