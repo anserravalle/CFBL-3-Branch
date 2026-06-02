@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "bio_hero": {
+      "type": "text-image",
+      "settings": {
+        "image": "",
+        "image_alt": "Amanda Foxwell, trauma-informed clinician at Center for Balanced Living",
+        "image_ratio": "1-1",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Clinician",
+        "heading": "",
+        "body": "",
+        "text_align": "left",
+        "phone": "",
+        "email": "",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet the Team",
+        "secondary_link": "/pages/about-us",
+        "image_frame": true,
+        "frame_color": "#9D654E",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "bio_body": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 64
+      }
+    },
+    "specialties": {
+      "type": "featured-services",
+      "blocks": {
+        "s1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Attuned, nervous-system-aware care."
+          }
+        },
+        "s2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Mood",
+            "text": "Evidence-based support for anxiety and depression."
+          }
+        },
+        "s3": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Teens & Adults",
+            "text": "Developmentally informed care."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "eyebrow": "Areas of Focus",
+        "heading": "Specialties",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "default",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Work With Us",
+        "heading": "Ready to take the next step?",
+        "body": "<p>Reach out to ask about availability or to schedule a first conversation.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "bio_hero",
+    "bio_body",
+    "specialties",
+    "cta"
+  ]
+}
