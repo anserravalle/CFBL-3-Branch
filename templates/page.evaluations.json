@@ -50,7 +50,7 @@
             "image_alt": "",
             "video_url": "",
             "page": "",
-            "link": "/pages/autism-evaluation",
+            "link": "/pages/autism",
             "link_label": "Learn more about autism evaluations"
           }
         },
@@ -64,7 +64,7 @@
             "image_alt": "",
             "video_url": "",
             "page": "",
-            "link": "/pages/personality-and-emotional",
+            "link": "/pages/personality-and-emotion-and-functioning",
             "link_label": "Learn more"
           }
         },
@@ -78,7 +78,7 @@
             "image_alt": "adhd assessment",
             "video_url": "",
             "page": "",
-            "link": "/pages/adhd-evaluation",
+            "link": "/pages/adhd-evaluations",
             "link_label": "Learn more"
           }
         },
@@ -92,7 +92,7 @@
             "image_alt": "",
             "video_url": "",
             "page": "",
-            "link": "/pages/academic-and-learning",
+            "link": "/pages/academic-and-learning-concerns",
             "link_label": "Learn more"
           }
         },
@@ -106,7 +106,7 @@
             "image_alt": "",
             "video_url": "",
             "page": "",
-            "link": "/pages/diagnostic-clarification",
+            "link": "/pages/diagnostic-clarification-evaluations",
             "link_label": "Learn more"
           }
         }
