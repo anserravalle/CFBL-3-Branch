@@ -148,6 +148,8 @@
       "settings": {
         "image_alt": "A calm, welcoming clinical space",
         "image_ratio": "16-9",
+        "image_frame": true,
+        "frame_color": "#9d654e",
         "image_position": "left",
         "mobile_stack": "text",
         "eyebrow": "Our Approach",
@@ -229,6 +231,8 @@
         "image": "shopify://shop_images/Untitled_Email_Signature.jpg",
         "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "16-9",
+        "image_frame": true,
+        "frame_color": "#9d654e",
         "image_position": "right",
         "mobile_stack": "text",
         "eyebrow": "Meet the Practice",
@@ -312,7 +316,7 @@
           "settings": {
             "quote": "<p>We pair evidence-based care with warmth, attunement, and a holistic approach to mind, body, and spirit.</p>",
             "author": "Center for Balanced Living",
-            "role": "Our commitment to every client",
+            "role": "",
             "rating": 0
           }
         }
