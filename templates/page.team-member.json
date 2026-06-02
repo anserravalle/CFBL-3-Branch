@@ -1,36 +1,14 @@
 {
   "sections": {
-    "bio_hero": {
-      "type": "text-image",
-      "settings": {
-        "image": "",
-        "image_alt": "",
-        "image_ratio": "1-1",
-        "image_position": "left",
-        "mobile_stack": "image",
-        "eyebrow": "Our Team",
-        "heading": "",
-        "body": "<p>Add this clinician's role, credentials, and a short introduction here, or edit the page content below for a longer bio.</p>",
-        "text_align": "left",
-        "primary_label": "Start the Conversation",
-        "primary_link": "/pages/contact",
-        "secondary_label": "Meet the Team",
-        "secondary_link": "/pages/about-us",
-        "bg_scheme": "default",
-        "padding_top": 80,
-        "padding_bottom": 48,
-        "phone": "",
-        "email": ""
-      }
-    },
     "bio_body": {
       "type": "main-page",
       "settings": {
-        "eyebrow": "",
+        "show_title": true,
+        "eyebrow": "Meet the Clinician",
         "text_align": "left",
-        "bg_scheme": "default",
-        "padding_top": 16,
-        "padding_bottom": 64
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 56
       }
     },
     "specialties": {
@@ -73,7 +51,7 @@
         "text_align": "center",
         "numbered": false,
         "columns": "3",
-        "bg_scheme": "sand",
+        "bg_scheme": "default",
         "padding_top": 64,
         "padding_bottom": 64
       }
@@ -97,7 +75,6 @@
     }
   },
   "order": [
-    "bio_hero",
     "bio_body",
     "specialties",
     "cta"
