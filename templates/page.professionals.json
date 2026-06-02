@@ -11,6 +11,7 @@
   "sections": {
     "header": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "eyebrow": "Careers",
@@ -18,6 +19,31 @@
         "bg_scheme": "default",
         "padding_top": 80,
         "padding_bottom": 48
+      }
+    },
+    "hero_brand_BxAkK4": {
+      "type": "hero-brand",
+      "name": "Hero",
+      "settings": {
+        "eyebrow": "Careers at Center for Balanced Living",
+        "heading": "Join a Practice Grounded in Clinical Depth, Collaboration, and Care",
+        "subheading": "<p>Center for Balanced Living is growing, and we are looking for thoughtful clinicians who value trauma-informed care, ethical practice, and meaningful professional development.</p><p>Our team is built around clinical integrity, relational warmth, and a shared commitment to doing good work with care. We welcome clinicians who want to grow within a practice culture that supports reflection, strong case conceptualization, ongoing learning, and respect for the complexity of psychotherapy.</p><p>Whether you are seeking a professional home, supervision, consultation, or a place to deepen your clinical work, we invite you to learn more about opportunities at Center for Balanced Living.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "",
+        "secondary_label": "Explore Services",
+        "secondary_link": "",
+        "image": "shopify://shop_images/banner_for_the_newsletter.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     },
     "why": {
@@ -84,6 +110,7 @@
   },
   "order": [
     "header",
+    "hero_brand_BxAkK4",
     "why",
     "cta"
   ]
