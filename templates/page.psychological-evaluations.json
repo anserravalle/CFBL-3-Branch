@@ -11,6 +11,7 @@
   "sections": {
     "header": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "eyebrow": "Psychological Evaluations",
@@ -20,21 +21,29 @@
         "padding_bottom": 48
       }
     },
-    "intro": {
-      "type": "rich-text-brand",
+    "hero_brand_VHE48y": {
+      "type": "hero-brand",
+      "name": "Hero",
       "settings": {
-        "eyebrow": "",
-        "heading": "",
-        "heading_tag": "h2",
-        "content": "<p>Psychological evaluations at Center for Balanced Living are designed to provide thoughtful, comprehensive insight into emotional, behavioral, cognitive, and personality functioning. Evaluations may help clarify diagnoses, identify strengths and challenges, inform treatment planning, support academic or workplace accommodations, and provide a deeper understanding of functioning across settings, grounded in evidence-based assessment practices.</p><p>The process typically includes an initial consultation, record review when relevant, testing sessions, scoring and interpretation, and a feedback appointment to review results. Each evaluation is tailored to the referral question and may vary by age, presenting concerns, and scope.</p><p>For many individuals and families, an evaluation provides language for experiences that have felt confusing or hard to explain, supporting treatment planning, educational advocacy, and more effective support.</p>",
-        "text_align": "left",
-        "content_width": 820,
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
+        "eyebrow": "Trauma-Informed Psychological Evaluation",
+        "heading": "Psychological Evaluations",
+        "subheading": "<p>Psychological evaluations at Center for Balanced Living are designed to provide thoughtful, comprehensive insight into emotional, behavioral, cognitive, and personality functioning. Evaluations may help clarify diagnoses, identify strengths and challenges, inform treatment planning, support academic or workplace accommodations, and provide a deeper understanding of functioning across settings, grounded in evidence-based assessment practices.</p><p>The process typically includes an initial consultation, record review when relevant, testing sessions, scoring and interpretation, and a feedback appointment to review results. Each evaluation is tailored to the referral question and may vary by age, presenting concerns, and scope.</p><p>For many individuals and families, an evaluation provides language for experiences that have felt confusing or hard to explain, supporting treatment planning, educational advocacy, and more effective support.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "shopify://pages/contact",
+        "secondary_label": "Learn More About Us",
+        "secondary_link": "shopify://pages/about-us",
+        "image": "shopify://shop_images/not-game-puzzles-or-game-blocks-more-like-psychological-assessment.png",
+        "image_alt": "",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
         "bg_scheme": "default",
-        "padding_top": 8,
-        "padding_bottom": 48
+        "padding_top": 48,
+        "padding_bottom": 44
       }
     },
     "types": {
@@ -118,8 +127,8 @@
         "heading": "Areas of Evaluation",
         "subheading": "Each evaluation is tailored to the referral question. Select an area to learn more.",
         "text_align": "left",
-        "image_ratio": "4-3",
-        "bg_scheme": "sand",
+        "image_ratio": "16-9",
+        "bg_scheme": "sage",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -363,41 +372,15 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
-    },
-    "hero_brand_VHE48y": {
-      "type": "hero-brand",
-      "name": "Hero",
-      "settings": {
-        "eyebrow": "Trauma-Informed Psychological Evaluation",
-        "heading": "Psychological Evaluations",
-        "subheading": "<p>Psychological evaluations at Center for Balanced Living are designed to provide thoughtful, comprehensive insight into emotional, behavioral, cognitive, and personality functioning. Evaluations may help clarify diagnoses, identify strengths and challenges, inform treatment planning, support academic or workplace accommodations, and provide a deeper understanding of functioning across settings, grounded in evidence-based assessment practices.</p><p>The process typically includes an initial consultation, record review when relevant, testing sessions, scoring and interpretation, and a feedback appointment to review results. Each evaluation is tailored to the referral question and may vary by age, presenting concerns, and scope.</p><p>For many individuals and families, an evaluation provides language for experiences that have felt confusing or hard to explain, supporting treatment planning, educational advocacy, and more effective support.</p>",
-        "use_h1": true,
-        "primary_label": "Start the Conversation",
-        "primary_link": "shopify://pages/contact",
-        "secondary_label": "Learn More About Us",
-        "secondary_link": "shopify://pages/about-us",
-        "image": "shopify://shop_images/not-game-puzzles-or-game-blocks-more-like-psychological-assessment.png",
-        "image_alt": "",
-        "image_ratio": "1-1",
-        "image_frame": true,
-        "frame_color": "#2b5275",
-        "show_shape": true,
-        "layout": "split",
-        "mobile_image_first": false,
-        "bg_scheme": "default",
-        "padding_top": 48,
-        "padding_bottom": 44
-      }
     }
   },
   "order": [
     "header",
-    "intro",
+    "hero_brand_VHE48y",
     "types",
     "process",
     "testimonials",
     "faq",
-    "cta",
-    "hero_brand_VHE48y"
+    "cta"
   ]
 }
