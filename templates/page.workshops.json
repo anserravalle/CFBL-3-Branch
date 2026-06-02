@@ -11,6 +11,7 @@
   "sections": {
     "intro": {
       "type": "rich-text-brand",
+      "disabled": true,
       "settings": {
         "eyebrow": "A Different Kind of Clinical Learning",
         "heading": "Workshops",
@@ -24,6 +25,31 @@
         "bg_scheme": "default",
         "padding_top": 80,
         "padding_bottom": 24
+      }
+    },
+    "hero_brand_gmVhdD": {
+      "type": "hero-brand",
+      "name": "Hero",
+      "settings": {
+        "eyebrow": "Workshops at Center for Balanced Living",
+        "heading": "Thoughtful Learning for Healing, Growth, and Connection",
+        "subheading": "<p>Our workshops are designed to offer clinically grounded education in a format that feels accessible, reflective, and human.</p><p>Led by experienced clinicians, these offerings create space to explore topics such as trauma recovery, emotional regulation, self-understanding, creativity, relationships, nervous system awareness, and personal growth. Each workshop is developed with care, bringing together research-informed practice, practical tools, and opportunities for meaningful reflection.</p><p>Whether you are attending for support, insight, community, or continued learning, our workshops invite you to slow down, engage more deeply, and leave with something you can carry into daily life.</p>",
+        "use_h1": true,
+        "primary_label": "",
+        "primary_link": "",
+        "secondary_label": "",
+        "secondary_link": "",
+        "image": "shopify://shop_images/psychology-workshops-in-a-professional-private-practice.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "surface",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     },
     "header": {
@@ -99,38 +125,13 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
-    },
-    "hero_brand_gmVhdD": {
-      "type": "hero-brand",
-      "name": "Hero",
-      "settings": {
-        "eyebrow": "Workshops at Center for Balanced Living",
-        "heading": "Thoughtful Learning for Healing, Growth, and Connection",
-        "subheading": "<p>Our workshops are designed to offer clinically grounded education in a format that feels accessible, reflective, and human.</p><p>Led by experienced clinicians, these offerings create space to explore topics such as trauma recovery, emotional regulation, self-understanding, creativity, relationships, nervous system awareness, and personal growth. Each workshop is developed with care, bringing together research-informed practice, practical tools, and opportunities for meaningful reflection.</p><p>Whether you are attending for support, insight, community, or continued learning, our workshops invite you to slow down, engage more deeply, and leave with something you can carry into daily life.</p>",
-        "use_h1": true,
-        "primary_label": "",
-        "primary_link": "",
-        "secondary_label": "",
-        "secondary_link": "",
-        "image": "shopify://shop_images/psychology-workshops-in-a-professional-private-practice.png",
-        "image_alt": "",
-        "image_ratio": "4-3",
-        "image_frame": true,
-        "frame_color": "#2b5275",
-        "show_shape": true,
-        "layout": "split",
-        "mobile_image_first": false,
-        "bg_scheme": "surface",
-        "padding_top": 96,
-        "padding_bottom": 96
-      }
     }
   },
   "order": [
     "intro",
+    "hero_brand_gmVhdD",
     "header",
     "events",
-    "newsletter",
-    "hero_brand_gmVhdD"
+    "newsletter"
   ]
 }
