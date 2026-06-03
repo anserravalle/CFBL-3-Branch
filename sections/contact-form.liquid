@@ -52,6 +52,9 @@
 
         <div class="contact__form-wrap reveal">
           {%- form 'contact', class: 'form-grid' -%}
+            {%- comment -%} Hidden routing marker: stamps every website submission so
+                inbox filters can match form emails only (never stray client emails). {%- endcomment -%}
+            <input type="hidden" name="contact[Submitted via]" value="CFBL website form (balancedlivingde.com)">
             {%- if form.posted_successfully? -%}
               <p class="form-note form-note--success" role="status" tabindex="-1">{{ section.settings.success_text }}</p>
             {%- elsif form.errors -%}
