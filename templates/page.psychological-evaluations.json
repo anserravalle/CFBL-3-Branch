@@ -294,7 +294,7 @@
           "type": "item",
           "settings": {
             "question": "What is a psychological evaluation?",
-            "answer": "<p>A psychological evaluation is part of an overall assessment. This includes a clinical interview, a battery of cognitive, behavioral, emotional, and personality and psychopathology tests and self-report measures, a review of records, a collateral interview with family/friends/doctors/therapists, analysis of data, and report writing. </p><p>These evaluations are typically used to clarify diagnosis and guide treatment for therapeutic purposes (i.e., if you are in therapy). Clinical psychologists typically perform these types of evaluations. Psychologists will administer  tests and measures for various issues related to an individual\u2019s psychological, emotional, and behavioral functioning. Specifically, a clinical psychologist will select the appropriate tests based on the referral question. (Do I have Bipolar Disorder?)</p>"
+            "answer": "<p>A psychological evaluation is part of an overall assessment. This includes a clinical interview, a battery of cognitive, behavioral, emotional, and personality and psychopathology tests and self-report measures, a review of records, a collateral interview with family/friends/doctors/therapists, analysis of data, and report writing. </p><p>These evaluations are typically used to clarify diagnosis and guide treatment for therapeutic purposes (i.e., if you are in therapy). Clinical psychologists typically perform these types of evaluations. Psychologists will administer  tests and measures for various issues related to an individual’s psychological, emotional, and behavioral functioning. Specifically, a clinical psychologist will select the appropriate tests based on the referral question. (Do I have Bipolar Disorder?)</p>"
           }
         },
         "q2": {
@@ -322,14 +322,14 @@
           "type": "item",
           "settings": {
             "question": "What is the difference between psychological and neuropsychological evaluation?",
-            "answer": "<p><em>Similar to the psychological evaluation, the neuropsychological evaluation is part of an overall assessment. However, there are a few differences here. First, the psychologist conducting the neuropsychological evaluation must be specifically trained in neuropsychological tests and measures. </em></p><p><em>At a minimum, they are licensed psychologists in their state and can practice independently and hold the equivalent of two full-time years of experience and specialized training in neuropsychology and related neurosciences. At least one of the years must be obtained post-doc, and both years are supervised by a clinical neuropsychologist. </em></p><p><em>Secondly, neuropsychologists use their in-depth knowledge of brain-behavior relationships to assess and evaluate patients with neurological, medical, neurodevelopmental, psychiatric, and cognitive conditions. They use tests, puzzles, and game-like activities to evaluate different cognitive areas of the brain, such as attention, memory, language, executive functioning, visual-spatial relations, motor skills, and intelligence. This evaluation is looking at the whole person, not just psychological functioning. The results will aid in understanding the underlying neurocognitive processes and their relation to an individual\u2019s behaviors. </em></p>"
+            "answer": "<p><em>Similar to the psychological evaluation, the neuropsychological evaluation is part of an overall assessment. However, there are a few differences here. First, the psychologist conducting the neuropsychological evaluation must be specifically trained in neuropsychological tests and measures. </em></p><p><em>At a minimum, they are licensed psychologists in their state and can practice independently and hold the equivalent of two full-time years of experience and specialized training in neuropsychology and related neurosciences. At least one of the years must be obtained post-doc, and both years are supervised by a clinical neuropsychologist. </em></p><p><em>Secondly, neuropsychologists use their in-depth knowledge of brain-behavior relationships to assess and evaluate patients with neurological, medical, neurodevelopmental, psychiatric, and cognitive conditions. They use tests, puzzles, and game-like activities to evaluate different cognitive areas of the brain, such as attention, memory, language, executive functioning, visual-spatial relations, motor skills, and intelligence. This evaluation is looking at the whole person, not just psychological functioning. The results will aid in understanding the underlying neurocognitive processes and their relation to an individual’s behaviors. </em></p>"
           }
         },
         "q6": {
           "type": "item",
           "settings": {
             "question": "What can the results of the evaluation be used for?",
-            "answer": "<p>The short answer is anything. Typically, they are used in healthcare, legal, education and for personal knowledge. They can be used to guide treatment, inform education and occupational settings for accommodations.  </p><p>\u2022\tDr. Serravalle is not a forensic psychologist and therefore does not complete evaluations for custody, fitness for duty, competency, workmen\u2019s comp or malpractice. Through her work with DPA she has met and worked with many forensic psychologist and can refer you to them.  </p><p></p>"
+            "answer": "<p>The short answer is anything. Typically, they are used in healthcare, legal, education and for personal knowledge. They can be used to guide treatment, inform education and occupational settings for accommodations.  </p><p>•\tDr. Serravalle is not a forensic psychologist and therefore does not complete evaluations for custody, fitness for duty, competency, workmen’s comp or malpractice. Through her work with DPA she has met and worked with many forensic psychologist and can refer you to them.  </p><p></p>"
           }
         },
         "q7": {
@@ -339,18 +339,11 @@
             "answer": "<p><em>The purpose of this evaluation is to provide an in-depth study of the cognitive/intellectual processes and current academic levels of functioning. This evaluation might also include an assessment of memory and executive functioning. The outcome is not a diagnosis but the ways in which any deficits or strengths impact the learning environment. The results may indicate learning giftedness as well as learning disorders. This type of evaluation usually informs IEP, 504 and accommodations for school. These evaluations are not covered by insurance. </em></p>"
           }
         },
-        "q8": {
-          "type": "item",
-          "settings": {
-            "question": "What is a Psychological/Neuropsychological Evaluation",
-            "answer": "<p><em>The purpose of this is to evaluate for emotional, social, personality and behaviors or cognitive strengths/deficits that impacting daily functioning . Results can include diagnosis for disorders such as Attention- Deficit/Hyperactivity Disorder, Autism Spectrum Disorders as well as Depression, or Anxiety disorders that may be affecting one\u2019s functional abilities. These types of evaluations are often used to inform treatment including medication and therapy therefore these types of evaluations are often covered by insurance. </em></p>"
-          }
-        },
         "q9": {
           "type": "item",
           "settings": {
             "question": "What is a Risk Assessment?",
-            "answer": "<p>The purpose of this type of evaluation to determine a <br/>level of risk. The evaluation is examines one\u2019s history, static and protective factors as well as current psychological functioning. They often require collateral data/participation. These assessments are not covered by insurance. </p>"
+            "answer": "<p>The purpose of this type of evaluation to determine a <br/>level of risk. The evaluation is examines one’s history, static and protective factors as well as current psychological functioning. They often require collateral data/participation. These assessments are not covered by insurance. </p>"
           }
         }
       },
@@ -362,7 +355,6 @@
         "q5",
         "q6",
         "q7",
-        "q8",
         "q9"
       ],
       "settings": {

@@ -239,13 +239,6 @@
             "answer": "<p><em>The purpose of this evaluation is to provide an in-depth study of the cognitive/intellectual processes and current academic levels of functioning. This evaluation might also include an assessment of memory and executive functioning. The outcome is not a diagnosis but the ways in which any deficits or strengths impact the learning environment. The results may indicate learning giftedness as well as learning disorders. This type of evaluation usually informs IEP, 504 and accommodations for school. These evaluations are not covered by insurance. </em></p>"
           }
         },
-        "q8": {
-          "type": "item",
-          "settings": {
-            "question": "What is a Psychological/Neuropsychological Evaluation",
-            "answer": "<p><em>The purpose of this is to evaluate for emotional, social, personality and behaviors or cognitive strengths/deficits that impacting daily functioning . Results can include diagnosis for disorders such as Attention- Deficit/Hyperactivity Disorder, Autism Spectrum Disorders as well as Depression, or Anxiety disorders that may be affecting one’s functional abilities. These types of evaluations are often used to inform treatment including medication and therapy therefore these types of evaluations are often covered by insurance. </em></p>"
-          }
-        },
         "q9": {
           "type": "item",
           "settings": {
@@ -262,7 +255,6 @@
         "q5",
         "q6",
         "q7",
-        "q8",
         "q9"
       ],
       "settings": {
