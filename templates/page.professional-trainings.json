@@ -13,7 +13,7 @@
       "type": "main-page",
       "settings": {
         "show_title": true,
-        "eyebrow": "CFBL Institute \u00b7 Professional Trainings",
+        "eyebrow": "CFBL Institute · Professional Trainings",
         "text_align": "left",
         "bg_scheme": "default",
         "padding_top": 80,
@@ -33,7 +33,7 @@
         "mobile_stack": "image",
         "eyebrow": "Meet the Trainer",
         "heading": "Learn With Dr. Serravalle",
-        "body": "<p>Dr. Angela \u201cNiki\u201d Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
+        "body": "<p>Dr. Angela “Niki” Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
         "text_align": "left",
         "phone": "302-608-3780",
         "email": "drserravalle@gmail.com",
@@ -87,7 +87,7 @@
         "heading": "Trainings & Continuing Education",
         "subheading": "Taught by a practicing psychologist who carries a clinical caseload.",
         "text_align": "left",
-        "bg_scheme": "sand",
+        "bg_scheme": "sage",
         "padding_top": 72,
         "padding_bottom": 72
       }
