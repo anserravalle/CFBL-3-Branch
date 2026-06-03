@@ -33,6 +33,75 @@
         "padding_bottom": 88
       }
     },
+    "now_forming": {
+      "type": "service-card-grid",
+      "blocks": {
+        "petloss_live": {
+          "type": "card",
+          "settings": {
+            "logo": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "heart",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Pet Loss Support Group (In-Person)",
+            "body": "<p>A gentle, supported space to process the grief, memory, and connection that come with losing a beloved companion. Led by Dr. Niki Serravalle, in person in Townsend.</p>",
+            "link_label": "Join the waitlist",
+            "link": "/pages/contact"
+          }
+        },
+        "petloss_virtual": {
+          "type": "card",
+          "settings": {
+            "logo": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "heart",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Pet Loss Support Group (Virtual)",
+            "body": "<p>The same supported space to honor your grief and memories, offered online so you can join from anywhere in Delaware. Led by Dr. Niki Serravalle.</p>",
+            "link_label": "Join the waitlist",
+            "link": "/pages/contact"
+          }
+        },
+        "rooted": {
+          "type": "card",
+          "settings": {
+            "logo": "shopify://shop_images/Untitled_design.png",
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "leaf",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Rooted & Rising (with Amanda)",
+            "body": "<p>An art-therapy approach to managing stress, led by Amanda Foxwell. Use creativity and expression to ground, regulate, and reconnect. In person.</p>",
+            "link_label": "Join the waitlist",
+            "link": "/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "petloss_live",
+        "petloss_virtual",
+        "rooted"
+      ],
+      "settings": {
+        "eyebrow": "Now Forming",
+        "heading": "Join a Waitlist",
+        "subheading": "New groups begin this June. Add your name and we'll reach out with dates and details as they are set.",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 48
+      }
+    },
     "focus": {
       "type": "featured-services",
       "blocks": {
@@ -225,75 +294,6 @@
         "bg_scheme": "navy",
         "padding_top": 88,
         "padding_bottom": 88
-      }
-    },
-    "now_forming": {
-      "type": "service-card-grid",
-      "blocks": {
-        "petloss_live": {
-          "type": "card",
-          "settings": {
-            "logo_alt": "",
-            "eyebrow": "",
-            "icon": "heart",
-            "image": "",
-            "image_alt": "",
-            "image_ratio": "4-3",
-            "title": "Pet Loss Support Group (In-Person)",
-            "body": "<p>A gentle, supported space to process the grief, memory, and connection that come with losing a beloved companion. Led by Dr. Niki Serravalle, in person in Townsend.</p>",
-            "link_label": "Join the waitlist",
-            "link": "/pages/contact"
-          }
-        },
-        "petloss_virtual": {
-          "type": "card",
-          "settings": {
-            "logo_alt": "",
-            "eyebrow": "",
-            "icon": "heart",
-            "image": "",
-            "image_alt": "",
-            "image_ratio": "4-3",
-            "title": "Pet Loss Support Group (Virtual)",
-            "body": "<p>The same supported space to honor your grief and memories, offered online so you can join from anywhere in Delaware. Led by Dr. Niki Serravalle.</p>",
-            "link_label": "Join the waitlist",
-            "link": "/pages/contact"
-          }
-        },
-        "rooted": {
-          "type": "card",
-          "settings": {
-            "logo_alt": "",
-            "eyebrow": "",
-            "icon": "leaf",
-            "image": "",
-            "image_alt": "",
-            "image_ratio": "4-3",
-            "title": "Rooted &amp; Rising (with Amanda)",
-            "body": "<p>An art-therapy approach to managing stress, led by Amanda Foxwell. Use creativity and expression to ground, regulate, and reconnect. In person.</p>",
-            "link_label": "Join the waitlist",
-            "link": "/pages/contact"
-          }
-        }
-      },
-      "block_order": [
-        "petloss_live",
-        "petloss_virtual",
-        "rooted"
-      ],
-      "settings": {
-        "eyebrow": "Now Forming",
-        "heading": "Join a Waitlist",
-        "subheading": "New groups begin this June. Add your name and we'll reach out with dates and details as they are set.",
-        "text_align": "center",
-        "columns": "3",
-        "mobile_two_up": false,
-        "card_style": "elevated",
-        "footer_label": "",
-        "footer_link": "",
-        "bg_scheme": "default",
-        "padding_top": 72,
-        "padding_bottom": 48
       }
     }
   },
