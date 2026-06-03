@@ -187,3 +187,78 @@ book retailers. No Google Business Profile, no local SEO.
 If the Institute ever operates from a **separate physical address** (a different
 building/suite), a second GBP at that address is legitimate. Same address as the
 practice = keep it to one profile.
+
+---
+
+## Marketing WITHOUT reviews (chosen approach)
+
+Not soliciting client reviews is a valid, ethics-forward choice for a clinical
+practice. You can still rank and convert locally by maxing out every other
+signal Google rewards. Reframed priority order when reviews are off the table:
+
+1. Reach 100% profile completeness (Google favors complete profiles).
+2. Categories: primary plus relevant secondaries.
+3. Services with short descriptions (keyword relevance).
+4. Google Posts every week (this freshness signal does the work review velocity
+   would have done).
+5. Add photos regularly (faces, signage, the twelve acres).
+6. Seed the Q&A yourself.
+7. Turn on every true Attribute.
+8. Add Products for groups and courses (visual and linkable).
+9. Set the booking / appointment link.
+
+### Categories
+Primary: Psychologist (keep). Add only true-fit secondaries: Mental health
+service, Mental health clinic, Counselor, Psychotherapist, Family counselor,
+Child psychologist.
+
+### Attributes to turn on (Edit profile: Service options / Accessibility / From the business)
+Online appointments; Onsite or in-person services; Identifies as woman-owned;
+LGBTQ friendly; Wheelchair accessible entrance and parking (if true);
+Appointment required; Languages spoken.
+
+### Booking / appointment link
+Set it to: https://balancedlivingde.com/pages/contact?utm_source=google&utm_medium=gbp
+(the UTM lets you see GBP traffic in analytics). Use the client portal link only
+for existing clients.
+
+### Service areas
+Townsend, Middletown, Odessa, Smyrna, Bear, Newark, Wilmington, Dover. Telehealth
+statewide.
+
+### Q&A to seed (you can post and answer your own questions)
+- Do you offer telehealth? Yes, across Delaware, plus in-person in Townsend.
+- Do you do ADHD and autism evaluations? Yes, for children, teens, and adults,
+  with a written report and a feedback session.
+- Are you accepting new clients? Yes, our clinical team is welcoming new therapy
+  and evaluation clients. Reach out to check current availability.
+- What insurance do you accept? BlueCross BlueShield, Highmark Health Options,
+  Aetna, and Medicare. Private pay and sliding scale available.
+- How do I get started? Visit balancedlivingde.com or call (302) 608-3780. We
+  usually respond within 24 to 48 hours.
+- Do you run groups? Yes, including a Pet Loss Support Group and Rooted and
+  Rising art therapy for stress. Join the waitlist on our site.
+
+### Products (add each as a GBP Product, with a photo and a link)
+- Pet Loss Support Group (waitlist), link /pages/wellness-groups
+- Rooted and Rising art therapy (waitlist), link /pages/wellness-groups
+- Psychological and ADHD/Autism Evaluations, link /pages/psychological-evaluations
+- EMDR Consultation for clinicians, link /pages/emdr-consultation
+- Courses and Certification (Fall 2026), link /pages/courses-certification
+
+### Event posts to add now (Posts, choose "Event," set the date)
+- Tuesday Q&A with Dr. Serravalle, Tuesdays 6 PM: A brief, free Q&A and the first
+  step in our assessment process. Email Kimmy to reserve a spot.
+- Pet Loss Support Group (now forming): A supported space to process grief,
+  memory, and connection after losing a beloved companion. In person and virtual.
+  Join the waitlist.
+- Rooted and Rising (now forming): An art therapy approach to managing stress
+  with Amanda Foxwell. No art experience needed. Join the waitlist.
+- EMDR Group Supervision, Tuesdays 9 AM: Consultation and case support for
+  clinicians. Email Dr. Serravalle.
+
+### Posting cadence
+One post per week, minimum. Rotate through: an offering, an event, a short
+educational tip, and the practice or place. Event posts expire after their date,
+so recreate the recurring ones (the Tuesday Q&A and EMDR supervision) when they
+lapse.
