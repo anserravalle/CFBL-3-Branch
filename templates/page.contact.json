@@ -22,7 +22,7 @@
         "hours": "By appointment",
         "phone_required": false,
         "reason_label": "What are you reaching out about?",
-        "reason_options": "Therapy, Psychological Evaluation, Group or Workshop, Clinical Supervision, EMDR Consultation, Professional Training, Join Our Team, Something Else",
+        "reason_options": "Therapy, Psychological Evaluation, Group or Workshop, Clinical Supervision, EMDR Consultation, Professional Training, Courses & Certification, Join Our Team, Something Else",
         "method_label": "Preferred method of contact",
         "method_options": "Email, Phone, Either",
         "message_label": "How can we help?",
