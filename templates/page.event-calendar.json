@@ -59,11 +59,50 @@
         "padding_top": 64,
         "padding_bottom": 72
       }
+    },
+    "weekly": {
+      "type": "featured-services",
+      "blocks": {
+        "emdr": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "EMDR Group Supervision",
+            "text": "Tuesdays at 9:00 AM. Consultation and case support for clinicians. To register, email Dr. Serravalle (click the title).",
+            "link": "mailto:drserravalle@gmail.com"
+          }
+        },
+        "qa": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Tuesday Q&A with Dr. Serravalle",
+            "text": "Tuesdays at 6:00 PM. A brief, free Q&A and the first step in our assessment process. To register, email Kimmy (click the title).",
+            "link": "mailto:kimmy@balancedlivingde.com"
+          }
+        }
+      },
+      "block_order": [
+        "emdr",
+        "qa"
+      ],
+      "settings": {
+        "eyebrow": "Every Week",
+        "heading": "Weekly Offerings",
+        "subheading": "Recurring sessions you can join. Registration is by email.",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "2",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "intro",
     "calendar",
+    "weekly",
     "cta"
   ]
 }
