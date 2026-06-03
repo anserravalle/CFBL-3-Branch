@@ -26,7 +26,7 @@
         "eyebrow": "",
         "heading": "",
         "heading_tag": "h2",
-        "content": "<p>Multi-session courses that build clinical knowledge sequentially, with time to integrate between sessions. For clinicians strengthening their foundation and students building it for the first time.</p>",
+        "content": "<p>Multi-session courses that build clinical knowledge sequentially, with time to integrate between sessions \u2014 for clinicians strengthening their foundation and students building it for the first time. Our first cohorts begin Fall 2026, and we're taking names now.</p>",
         "text_align": "center",
         "content_width": 760,
         "button_label": "",
@@ -44,39 +44,54 @@
           "type": "tab",
           "settings": {
             "title": "EMDR Basic Training",
-            "heading": "12-Week EMDR Basic Training",
-            "content": "<p>A 12-week EMDR Basic Training for licensed clinicians and advanced graduate students integrating EMDR into clinical practice. The curriculum follows the standardized EMDRIA model and covers the eight phases of EMDR, the adaptive information processing framework, and the clinical skills required to safely and effectively treat trauma. This program is currently undergoing EMDRIA review; registration opens to waitlist members first once approval is granted.</p>",
+            "heading": "EMDR Basic Training (12 Weeks)",
+            "content": "<p>A 12-week EMDR Basic Training for licensed clinicians and advanced graduate students integrating EMDR into clinical practice. Following the standardized EMDRIA training model, the curriculum covers the eight phases of EMDR, the adaptive information processing framework, and the clinical skills to treat trauma safely and effectively.</p><p><strong>Status:</strong> Pending EMDRIA approval. Launching Fall 2026 \u2014 we're taking names now, and interest-list members are invited to register first once approval is granted.</p>",
             "image": "shopify://shop_images/EMDR_Basic_training.png",
-            "image_alt": "",
+            "image_alt": "EMDR Basic Training",
             "video_url": "",
             "page": "",
             "link": "/pages/contact",
-            "link_label": "Join the waitlist"
+            "link_label": "Join the interest list"
           }
         },
-        "eco": {
+        "nature": {
           "type": "tab",
           "settings": {
-            "title": "Nature-Based Foundations",
-            "heading": "Foundations of Nature-Based Clinical Practice",
-            "content": "<p>A 12-week course exploring the integration of nature-based interventions into trauma-informed clinical practice, built around ecological theory, nervous system science, and applied psychological work. For licensed clinicians, advanced graduate students, and helping professionals. Foundations serves as the entry course for the forthcoming CFBL Institute certification in nature-based clinical practice.</p>",
+            "title": "Nature-Based Clinical Specialist",
+            "heading": "Nature-Based Clinical Specialist (12 Weeks)",
+            "content": "<p>A 12-week course on integrating nature-based interventions into trauma-informed clinical practice, built around ecological theory, nervous system science, and applied psychological work. For licensed clinicians, advanced graduate students, and helping professionals pursuing the CFBL Institute's nature-based clinical specialization.</p><p><strong>Status:</strong> CE approval pending. Launching Fall 2026 \u2014 now taking names for the interest list.</p>",
             "image": "shopify://shop_images/nature-based-clinical-specialist-course.png",
-            "image_alt": "",
+            "image_alt": "Nature-Based Clinical Specialist Course",
             "video_url": "",
             "page": "",
             "link": "/pages/contact",
-            "link_label": "Express interest"
+            "link_label": "Join the interest list"
+          }
+        },
+        "foundations": {
+          "type": "tab",
+          "settings": {
+            "title": "Foundations of Trauma Therapy",
+            "heading": "Foundations of Trauma Therapy (12 Weeks)",
+            "content": "<p>A 12-week foundational course in trauma therapy for clinicians strengthening their core skills and graduate students building them for the first time. Covers trauma theory, the nervous system, assessment, stabilization, and an integrative, evidence-based approach to treatment, sequenced with time to absorb and apply between sessions.</p><p><strong>Status:</strong> CE approval pending. Launching Fall 2026 \u2014 now taking names for the interest list.</p>",
+            "image": "shopify://shop_images/psychology-training.png",
+            "image_alt": "Foundations of Trauma Therapy course",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/contact",
+            "link_label": "Join the interest list"
           }
         }
       },
       "block_order": [
         "emdr",
-        "eco"
+        "nature",
+        "foundations"
       ],
       "settings": {
-        "eyebrow": "Current & Upcoming",
+        "eyebrow": "Launching Fall 2026",
         "heading": "Courses & Certification",
-        "subheading": "Select a course to read more.",
+        "subheading": "Three new courses launch this fall. CE approval is pending \u2014 join the interest list to be first to know when registration opens.",
         "text_align": "left",
         "image_ratio": "4-3",
         "bg_scheme": "sand",
@@ -88,9 +103,9 @@
       "type": "contact-cta",
       "settings": {
         "eyebrow": "For Clinicians",
-        "heading": "Join a course or the waitlist",
-        "body": "<p>We welcome inquiries about courses, certification, and future offerings. We usually reach out within 24-48 hours.</p>",
-        "primary_label": "Start the Conversation",
+        "heading": "Join the Interest List",
+        "body": "<p>All three courses launch Fall 2026 with CE approval pending. Add your name to the interest list and we'll reach out as soon as registration opens \u2014 usually within 24-48 hours.</p>",
+        "primary_label": "Join the Interest List",
         "primary_link": "/pages/contact",
         "secondary_label": "All Trainings",
         "secondary_link": "/pages/professional-clinical-trainings",
