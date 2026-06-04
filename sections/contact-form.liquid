@@ -37,6 +37,7 @@
             {%- endif -%}
             {%- if section.settings.whatsapp != blank -%}
               <p class="contact__detail">{%- render 'icon', name: 'whatsapp', size: 20 -%} <a href="https://wa.me/{{ section.settings.whatsapp | replace: ' ','' | replace: '+','' | replace: '(','' | replace: ')','' | replace: '-','' }}" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+              <p class="contact__detail" style="font-size:var(--fs-xs);color:var(--color-muted);margin:calc(-1 * var(--space-8)) 0 0 0;">For brief, non-urgent questions only. Please do not share private health information by text.</p>
             {%- endif -%}
             {%- if section.settings.address != blank -%}
               <p class="contact__detail">{%- render 'icon', name: 'pin', size: 20 -%} <span>{{ section.settings.address }}</span></p>
