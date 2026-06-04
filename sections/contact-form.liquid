@@ -35,6 +35,9 @@
             {%- if section.settings.email != blank -%}
               <p class="contact__detail">{%- render 'icon', name: 'mail', size: 20 -%} <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></p>
             {%- endif -%}
+            {%- if section.settings.whatsapp != blank -%}
+              <p class="contact__detail">{%- render 'icon', name: 'whatsapp', size: 20 -%} <a href="https://wa.me/{{ section.settings.whatsapp | replace: ' ','' | replace: '+','' | replace: '(','' | replace: ')','' | replace: '-','' }}" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+            {%- endif -%}
             {%- if section.settings.address != blank -%}
               <p class="contact__detail">{%- render 'icon', name: 'pin', size: 20 -%} <span>{{ section.settings.address }}</span></p>
             {%- endif -%}
@@ -125,6 +128,7 @@
     { "type": "richtext", "id": "intro", "label": "Intro (brand-matched)", "default": "<p>Whether you are seeking therapy, an evaluation, or a first conversation, our team is here to help you take the next step. To speak with us directly, please call our office.</p>" },
     { "type": "text", "id": "phone", "label": "Phone", "default": "(302) 608-3780" },
     { "type": "text", "id": "email", "label": "Email" },
+    { "type": "text", "id": "whatsapp", "label": "WhatsApp number", "info": "Digits with country code, e.g. 13028243722. Shows a 'Message us on WhatsApp' link. Leave blank to hide." },
     { "type": "html", "id": "address", "label": "Address" },
     { "type": "text", "id": "hours", "label": "Hours", "default": "By appointment" },
     { "type": "header", "content": "Form fields" },
