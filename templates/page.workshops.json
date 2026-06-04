@@ -70,8 +70,8 @@
         "e1": {
           "type": "event",
           "settings": {
-            "month": "JUN",
-            "day": "12",
+            "month": "Dates",
+            "day": "TBA",
             "title": "Trauma-Informed Skills Group",
             "time": "6:00-7:30 PM",
             "location": "Townsend, DE",
@@ -84,8 +84,8 @@
         "e2": {
           "type": "event",
           "settings": {
-            "month": "JUL",
-            "day": "09",
+            "month": "Dates",
+            "day": "TBA",
             "title": "Parenting & Nervous-System Workshop",
             "time": "10:00-12:00 PM",
             "location": "Online",
