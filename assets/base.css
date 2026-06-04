@@ -1245,6 +1245,32 @@ textarea { min-height: 140px; resize: vertical; }
   color: var(--color-navy);
   border-bottom-color: var(--color-terracotta);
 }
+/* Mobile: wrap tabs into tappable pill buttons so every option is visible at
+   once. Avoids the hidden horizontal scroll that users may not notice. */
+@media (max-width: 749px) {
+  .tabs__list {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
+    gap: var(--space-8);
+    border-bottom: 0;
+    margin-bottom: var(--space-28);
+  }
+  .tabs__tab {
+    border: 1.5px solid var(--color-border);
+    border-radius: 999px;
+    padding: var(--space-8) var(--space-16);
+    margin-bottom: 0;
+    font-size: var(--fs-sm);
+    white-space: normal;
+    line-height: 1.2;
+  }
+  .tabs__tab[aria-selected="true"] {
+    background: var(--color-navy);
+    color: #fff;
+    border-color: var(--color-navy);
+  }
+}
 .tabs__panel { max-width: var(--measure); }
 .tabs__panel[hidden] { display: none; }
 .tabs__panel:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
