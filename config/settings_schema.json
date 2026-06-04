@@ -83,6 +83,8 @@
       ], "default": "Psychologist" },
       { "type": "text", "id": "business_phone", "label": "Phone" },
       { "type": "text", "id": "business_email", "label": "Email" },
+      { "type": "text", "id": "whatsapp_number", "label": "WhatsApp number", "info": "Digits with country code, e.g. 13028243722. Shows a 'Message us on WhatsApp' link on contact forms. Leave blank to hide everywhere." },
+      { "type": "text", "id": "whatsapp_text", "label": "WhatsApp pre-filled message", "default": "Hi, I'm reaching out from the Center for Balanced Living website." },
       { "type": "text", "id": "business_street", "label": "Street address" },
       { "type": "text", "id": "business_city", "label": "City", "default": "Townsend" },
       { "type": "text", "id": "business_region", "label": "State/Region", "default": "DE" },

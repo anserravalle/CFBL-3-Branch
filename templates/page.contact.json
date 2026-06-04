@@ -33,8 +33,7 @@
         "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
         "bg_scheme": "default",
         "padding_top": 80,
-        "padding_bottom": 80,
-        "whatsapp": "13028243722"
+        "padding_bottom": 80
       }
     },
     "map_cta": {
