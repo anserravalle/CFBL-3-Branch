@@ -57,10 +57,10 @@
             "title": "Assessment-Informed Trauma Treatment",
             "time": "9:00 AM-4:00 PM",
             "location": "Live, online",
-            "description": "Integrating psychological assessment with somatic and trauma work.",
+            "description": "Integrating psychological assessment with somatic and trauma work. This session is full. Join the waitlist for the next date.",
             "product": "",
-            "link_label": "Register",
-            "link": ""
+            "link_label": "Join the Waitlist",
+            "link": "/pages/contact"
           }
         },
         "t2": {
@@ -71,10 +71,10 @@
             "title": "Applied Clinical Reasoning Intensive",
             "time": "9:00 AM-1:00 PM",
             "location": "Live, online",
-            "description": "Case conceptualization and diagnostic precision for practicing clinicians.",
+            "description": "Case conceptualization and diagnostic precision for practicing clinicians. This session is full. Join the waitlist for the next date.",
             "product": "",
-            "link_label": "Register",
-            "link": ""
+            "link_label": "Join the Waitlist",
+            "link": "/pages/contact"
           }
         }
       },
@@ -85,7 +85,7 @@
       "settings": {
         "eyebrow": "Upcoming",
         "heading": "Trainings & Continuing Education",
-        "subheading": "Taught by a practicing psychologist who carries a clinical caseload.",
+        "subheading": "Taught by a practicing psychologist who carries a clinical caseload. Our current trainings are full; join the waitlist to hear first when new dates open.",
         "text_align": "left",
         "bg_scheme": "sage",
         "padding_top": 72,
@@ -108,7 +108,7 @@
       ],
       "settings": {
         "eyebrow": "Details",
-        "heading": "Registration",
+        "heading": "Waitlist & Details",
         "subheading": "Practical answers about scheduling, insurance, evaluations, and finding the right fit.",
         "cta_label": "",
         "cta_link": "",
@@ -121,10 +121,10 @@
       "type": "contact-cta",
       "settings": {
         "eyebrow": "For Clinicians",
-        "heading": "Register or Inquire",
-        "body": "<p>Reserve a seat in an upcoming training, or contact us with questions about group rates.</p>",
-        "primary_label": "View All Trainings",
-        "primary_link": "/pages/courses-certification",
+        "heading": "Join the Waitlist",
+        "body": "<p>Our current trainings are full. Add your name to the waitlist and we'll reach out as soon as new dates open. Questions about group rates? Just ask.</p>",
+        "primary_label": "Join the Waitlist",
+        "primary_link": "/pages/contact",
         "secondary_label": "Contact the Institute",
         "secondary_link": "/pages/contact",
         "phone": "",
