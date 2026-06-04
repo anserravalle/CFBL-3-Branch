@@ -29,7 +29,10 @@
             "title": "Individual Therapy",
             "body": "<p>Trauma-informed therapy for children, teens, and adults.</p>",
             "link_label": "Learn more",
-            "link": "/pages/individual-therapy"
+            "link": "/pages/individual-therapy",
+            "image": "shopify://shop_images/psychological-therapy-in-a-private-practice.png",
+            "image_alt": "A calm private-practice therapy room",
+            "image_ratio": "4-3"
           }
         },
         "evals": {
@@ -39,7 +42,10 @@
             "title": "Psychological Evaluations",
             "body": "<p>ADHD, autism, diagnostic clarification, and more.</p>",
             "link_label": "Learn more",
-            "link": "/pages/psychological-evaluations"
+            "link": "/pages/psychological-evaluations",
+            "image": "shopify://shop_images/not-game-puzzles-or-game-blocks-more-like-psychological-assessment.png",
+            "image_alt": "Psychological assessment materials",
+            "image_ratio": "4-3"
           }
         },
         "groups": {
@@ -49,7 +55,10 @@
             "title": "Groups & Workshops",
             "body": "<p>Therapy groups, workshops, and community education.</p>",
             "link_label": "Learn more",
-            "link": "/pages/workshopspage"
+            "link": "/pages/workshopspage",
+            "image": "shopify://shop_images/psychology-workshops-in-a-professional-private-practice.png",
+            "image_alt": "A professional workshop setting",
+            "image_ratio": "4-3"
           }
         },
         "supervision": {
@@ -59,7 +68,10 @@
             "title": "Clinical Supervision",
             "body": "<p>Supervision and consultation for licensed clinicians.</p>",
             "link_label": "Learn more",
-            "link": "/pages/clinical-supervision"
+            "link": "/pages/clinical-supervision",
+            "image": "shopify://shop_images/niki_supervsion.png",
+            "image_alt": "A clinical supervision session",
+            "image_ratio": "4-3"
           }
         },
         "emdr": {
@@ -69,7 +81,10 @@
             "title": "EMDR Consultation",
             "body": "<p>Consultation toward EMDR certification and skill refinement.</p>",
             "link_label": "Learn more",
-            "link": "/pages/consultation"
+            "link": "/pages/consultation",
+            "image": "shopify://shop_images/drserravalle_training3.png",
+            "image_alt": "A clinician training session",
+            "image_ratio": "4-3"
           }
         },
         "training": {
@@ -79,7 +94,10 @@
             "title": "Professional Training",
             "body": "<p>Continuing education through the CFBL Institute.</p>",
             "link_label": "Learn more",
-            "link": "/pages/cfbl-institute"
+            "link": "/pages/cfbl-institute",
+            "image": "shopify://shop_images/cfbl_inst.png",
+            "image_alt": "CFBL Institute professional training",
+            "image_ratio": "4-3"
           }
         }
       },
@@ -99,7 +117,8 @@
         "mobile_two_up": false,
         "bg_scheme": "default",
         "padding_top": 16,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "card_style": "elevated"
       }
     },
     "cta": {
