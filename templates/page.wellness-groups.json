@@ -39,11 +39,11 @@
         "petloss_live": {
           "type": "card",
           "settings": {
-            "logo": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
             "logo_alt": "",
             "eyebrow": "",
             "icon": "heart",
-            "image_alt": "",
+            "image": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
+            "image_alt": "Pet Loss Support Group (In-Person)",
             "image_ratio": "4-3",
             "title": "Pet Loss Support Group (In-Person)",
             "body": "<p>A gentle, supported space to process the grief, memory, and connection that come with losing a beloved companion. Led by Dr. Niki Serravalle, in person in Townsend.</p>",
@@ -54,11 +54,11 @@
         "petloss_virtual": {
           "type": "card",
           "settings": {
-            "logo": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
             "logo_alt": "",
             "eyebrow": "",
             "icon": "heart",
-            "image_alt": "",
+            "image": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
+            "image_alt": "Pet Loss Support Group (Virtual)",
             "image_ratio": "4-3",
             "title": "Pet Loss Support Group (Virtual)",
             "body": "<p>The same supported space to honor your grief and memories, offered online so you can join from anywhere in Delaware. Led by Dr. Niki Serravalle.</p>",
@@ -69,11 +69,11 @@
         "rooted": {
           "type": "card",
           "settings": {
-            "logo": "shopify://shop_images/Untitled_design.png",
             "logo_alt": "",
             "eyebrow": "",
             "icon": "leaf",
-            "image_alt": "",
+            "image": "shopify://shop_images/Untitled_design.png",
+            "image_alt": "Rooted & Rising (with Amanda",
             "image_ratio": "4-3",
             "title": "Rooted & Rising (with Amanda)",
             "body": "<p>An art-therapy approach to managing stress, led by Amanda Foxwell. Use creativity and expression to ground, regulate, and reconnect. In person.</p>",
