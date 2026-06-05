@@ -12,8 +12,8 @@
     "bio_hero": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/dr_serravalle_dark_suit_headhsot.jpg",
-        "image_alt": "dr serravalle",
+        "image": "shopify://shop_images/angela.jpg",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "1-1",
         "image_frame": true,
         "frame_color": "#6e1f23",

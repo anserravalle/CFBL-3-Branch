@@ -388,7 +388,7 @@
     "evaluator": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/dr_serravalle.png",
+        "image": "shopify://shop_images/drNikihs.jpg",
         "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "1-1",
         "image_frame": true,
