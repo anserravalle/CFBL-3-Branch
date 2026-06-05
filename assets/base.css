@@ -918,8 +918,8 @@ a.card:hover {
 .testimonial__rating { color: var(--color-terracotta); margin-bottom: var(--space-16); display: flex; gap: 2px; justify-content: center; }
 .testimonial__meta { display: flex; align-items: center; justify-content: center; gap: var(--space-12); margin-top: auto; }
 .testimonial__avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex: none; }
-.testimonial__name { font-weight: 600; font-size: var(--fs-sm); color: var(--color-text); }
-.testimonial__role { font-size: var(--fs-xs); color: var(--color-muted); }
+.testimonial__name { display: block; font-weight: 600; font-size: var(--fs-sm); color: var(--color-text); }
+.testimonial__role { display: block; margin-top: 2px; font-size: var(--fs-xs); color: var(--color-muted); }
 /* A subtle divider above the attribution to separate quote from author. */
 .testimonial__meta::before {
   content: "";
