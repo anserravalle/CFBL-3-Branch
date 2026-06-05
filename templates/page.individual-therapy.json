@@ -14,7 +14,7 @@
       "settings": {
         "eyebrow": "Individual Therapy",
         "heading": "Therapy that meets you where you are",
-        "subheading": "<p>Our clinicians draw from evidence-based and insight-oriented approaches based on each client\u2019s needs, goals, and developmental stage. Depending on the presenting concerns, therapy may include work focused on emotional insight, nervous system regulation, coping skills, trauma processing, relationship patterns, or identity development.</p>",
+        "subheading": "<p>Our clinicians draw from evidence-based and insight-oriented approaches based on each client’s needs, goals, and developmental stage. Depending on the presenting concerns, therapy may include work focused on emotional insight, nervous system regulation, coping skills, trauma processing, relationship patterns, or identity development.</p>",
         "use_h1": true,
         "primary_label": "Start the Conversation",
         "primary_link": "/pages/contact",
@@ -24,7 +24,7 @@
         "image_alt": "",
         "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9d654e",
+        "frame_color": "#2b5275",
         "show_shape": true,
         "layout": "split",
         "mobile_image_first": false,
@@ -222,7 +222,7 @@
           "settings": {
             "title": "Acceptance & Commitment (ACT)",
             "heading": "Acceptance and Commitment Therapy",
-            "content": "<p>The main goal of Acceptance and Commitment Therapy is to help individuals recognize ways they attempt to suppress, avoid, and control emotional experiences that can create further challenges. By compassionately recognizing and addressing these challenges, an individual can become more able to make room for values-based actions that support their well-being. Learning how to accept things as they come, without evaluating or attempting to change the situation is a skill that can be developed in sessions and can be practiced outside of the sessions. ACT is not about changing or stopping those unwanted feelings or thought processes, it is about changing your relationship with them. ACT therapy can offer freedom to people who struggle with not wanting to have \u201cfull control\u201d or an inability to \u201clet things go\u201d.</p>",
+            "content": "<p>The main goal of Acceptance and Commitment Therapy is to help individuals recognize ways they attempt to suppress, avoid, and control emotional experiences that can create further challenges. By compassionately recognizing and addressing these challenges, an individual can become more able to make room for values-based actions that support their well-being. Learning how to accept things as they come, without evaluating or attempting to change the situation is a skill that can be developed in sessions and can be practiced outside of the sessions. ACT is not about changing or stopping those unwanted feelings or thought processes, it is about changing your relationship with them. ACT therapy can offer freedom to people who struggle with not wanting to have “full control” or an inability to “let things go”.</p>",
             "image_alt": "",
             "video_url": "",
             "page": "",
@@ -248,7 +248,7 @@
           "settings": {
             "title": "Dialectical Behavior (DBT)",
             "heading": "Dialectical Behavior Therapy",
-            "content": "<p>Dialectical Behavior Therapy (DBT) is a therapy used to help individuals develop skills to better manage stress, emotional regulation, and to help redirect behavioral patterns such as self-harm or other compulsive behaviors. DBT combines the standard cognitive-behavioral techniques, acceptance therapy, and mindful awareness. Mindfulness is one of the core elements in DBT therapy. It is a great foundation for the other building blocks that come with therapy and DBT skills. The acceptance portion of DBT helps individuals tolerate the powerful emotions that can come with therapy and life. The acceptance and mindfulness that is taught within DBT therapy create the ability to pay attention, nonjudgmentally, to the moments at hand. And reframes one\u2019s perspective to handle it with more positive outlets and responses. The acceptance skills taught help one to no longer judge themselves for having these emotions or for being in \u201cnegative\u201d situations. This can create less distress and panic when things come up.</p>",
+            "content": "<p>Dialectical Behavior Therapy (DBT) is a therapy used to help individuals develop skills to better manage stress, emotional regulation, and to help redirect behavioral patterns such as self-harm or other compulsive behaviors. DBT combines the standard cognitive-behavioral techniques, acceptance therapy, and mindful awareness. Mindfulness is one of the core elements in DBT therapy. It is a great foundation for the other building blocks that come with therapy and DBT skills. The acceptance portion of DBT helps individuals tolerate the powerful emotions that can come with therapy and life. The acceptance and mindfulness that is taught within DBT therapy create the ability to pay attention, nonjudgmentally, to the moments at hand. And reframes one’s perspective to handle it with more positive outlets and responses. The acceptance skills taught help one to no longer judge themselves for having these emotions or for being in “negative” situations. This can create less distress and panic when things come up.</p>",
             "image_alt": "",
             "video_url": "",
             "page": "",
@@ -261,7 +261,7 @@
           "settings": {
             "title": "EMDR",
             "heading": "Eye Movement Desensitization and Reprocessing",
-            "content": "<p>Eye Movement Desensitization and Reprocessing (EMDR) is a form of therapy that is geared for individuals who have experienced physical and emotional trauma, and experience overall emotional distress from difficult life experiences. EMDR therapy is a parallel concept where your brain can heal from psychological trauma and how your body can recover from physical injury. EMDR therapy is a direct approach to one\u2019s trauma, to be able to face the situation (at their own pace) under the supervision and guidance of a certified EMDR therapist. EMDR therapy is different from talk therapy in a few ways. EMDR therapy involves biological aspects such as eye movements (or other bilateral stimulations), that allows the brain to reprocess triggering memories.</p>",
+            "content": "<p>Eye Movement Desensitization and Reprocessing (EMDR) is a form of therapy that is geared for individuals who have experienced physical and emotional trauma, and experience overall emotional distress from difficult life experiences. EMDR therapy is a parallel concept where your brain can heal from psychological trauma and how your body can recover from physical injury. EMDR therapy is a direct approach to one’s trauma, to be able to face the situation (at their own pace) under the supervision and guidance of a certified EMDR therapist. EMDR therapy is different from talk therapy in a few ways. EMDR therapy involves biological aspects such as eye movements (or other bilateral stimulations), that allows the brain to reprocess triggering memories.</p>",
             "image_alt": "",
             "video_url": "",
             "page": "",
@@ -296,12 +296,12 @@
         "subheading": "Therapy is tailored to you. These are the evidence-based models we draw from, and the training behind them.",
         "text_align": "left",
         "image_ratio": "4-3",
+        "footer_label": "",
+        "footer_link": "",
+        "footer_style": "secondary",
         "bg_scheme": "default",
         "padding_top": 72,
-        "padding_bottom": 72,
-        "footer_label": "Learn More About Our Credentials",
-        "footer_link": "/pages/credentials",
-        "footer_style": "secondary"
+        "padding_bottom": 72
       }
     },
     "process": {
@@ -369,7 +369,7 @@
           "type": "item",
           "settings": {
             "question": "What is therapy like?",
-            "answer": "<p><em>The first few sessions are essential to getting to know one another. After that, it\u2019s being committed to showing up and a willingness to explore the parts of yourself or your life that need adjusting.</em></p>"
+            "answer": "<p><em>The first few sessions are essential to getting to know one another. After that, it’s being committed to showing up and a willingness to explore the parts of yourself or your life that need adjusting.</em></p>"
           }
         },
         "q2": {
