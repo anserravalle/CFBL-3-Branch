@@ -927,9 +927,9 @@ a.card:hover {
   width: 32px;
   height: 2px;
   background: color-mix(in srgb, var(--color-terracotta) 60%, transparent);
-  transform: translateY(calc(-1 * var(--space-16)));
+  transform: translateY(calc(-1 * var(--space-24)));
 }
-.testimonial__meta { position: relative; padding-top: var(--space-24); }
+.testimonial__meta { position: relative; padding-top: var(--space-40); }
 
 /* Multi-column (review-style) testimonials read as compact, squarer, framed
    cards - distinct from the single large pull-quote (grid--1) used for
