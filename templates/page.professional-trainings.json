@@ -95,24 +95,48 @@
     "faq": {
       "type": "faq-section",
       "blocks": {
+        "howwait": {
+          "type": "item",
+          "settings": {
+            "question": "How does the waitlist work?",
+            "answer": "<p>Add your name and we will email you as soon as new dates are announced. Waitlist members are invited to register first, before seats open publicly.</p>"
+          }
+        },
+        "who": {
+          "type": "item",
+          "settings": {
+            "question": "Who are the trainings for?",
+            "answer": "<p>Licensed mental health clinicians (psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, MDs) and graduate students in clinical and counseling psychology.</p>"
+          }
+        },
         "format": {
           "type": "item",
           "settings": {
             "question": "What is the format?",
             "answer": "<p>Trainings are delivered live online unless otherwise noted, with materials provided to registrants.</p>"
           }
+        },
+        "when": {
+          "type": "item",
+          "settings": {
+            "question": "When will new dates open?",
+            "answer": "<p>New cohorts are added throughout the year. Joining the waitlist is the best way to hear first.</p>"
+          }
         }
       },
       "block_order": [
-        "format"
+        "howwait",
+        "who",
+        "format",
+        "when"
       ],
       "settings": {
-        "eyebrow": "Details",
+        "eyebrow": "For Clinicians",
         "heading": "Waitlist & Details",
-        "subheading": "Practical answers about scheduling, insurance, evaluations, and finding the right fit.",
-        "cta_label": "",
-        "cta_link": "",
-        "bg_scheme": "default",
+        "subheading": "Our current trainings are full. Here is how the waitlist works and what to expect when new dates open.",
+        "cta_label": "Join the Waitlist",
+        "cta_link": "/pages/contact",
+        "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
       }
