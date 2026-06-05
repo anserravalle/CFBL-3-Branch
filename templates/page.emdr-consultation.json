@@ -164,7 +164,7 @@
         "text_align": "center",
         "numbered": true,
         "columns": "4",
-        "bg_scheme": "surface",
+        "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -205,7 +205,7 @@
         "subheading": "",
         "cta_label": "",
         "cta_link": "",
-        "bg_scheme": "surface",
+        "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 72
       }
