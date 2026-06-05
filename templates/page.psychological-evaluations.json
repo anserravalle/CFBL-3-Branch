@@ -438,6 +438,57 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "evaluator": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/drNikihs.jpg",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Evaluator",
+        "heading": "Dr. Angela (Niki) Serravalle, PsyD, LPCMH, NCC",
+        "body": "<p>Your evaluation is conducted by Dr. Niki Serravalle, a licensed psychologist whose doctoral training focused on psychological assessment, with practicum, internship, and postdoctoral work under specialists in neuropsychology and school psychology. She brings more than two decades of clinical experience and a deep commitment to diagnostic clarity, neurodevelopment, and understanding the whole person behind the scores.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "",
+        "primary_label": "Full Bio",
+        "primary_link": "/pages/niki-serravalle",
+        "secondary_label": "",
+        "secondary_link": "",
+        "bg_scheme": "surface",
+        "padding_top": 72,
+        "padding_bottom": 24
+      }
+    },
+    "why": {
+      "type": "testimonial-section",
+      "blocks": {
+        "q": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>An evaluation is more than a score or a label. It is a chance to be truly seen. I do this work because clarity changes everything. It gives people language for experiences that have felt confusing, and it opens the door to the right support.</p>",
+            "author": "Dr. Angela (Niki) Serravalle",
+            "role": "PsyD, LPCMH, NCC",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "q"
+      ],
+      "settings": {
+        "eyebrow": "Why I Do This Work",
+        "heading": "",
+        "subheading": "",
+        "columns": 1,
+        "bg_scheme": "sage",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [

@@ -53,7 +53,9 @@
         "secondary_link": "",
         "bg_scheme": "default",
         "padding_top": 72,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "image_frame": true,
+        "frame_color": "#6e1f23"
       }
     },
     "why": {
