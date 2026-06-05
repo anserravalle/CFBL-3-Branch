@@ -27,7 +27,7 @@
         "image_alt": "Center for Balanced Living",
         "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "",
+        "frame_color": "#2b5275",
         "image_position": "right",
         "mobile_stack": "image",
         "eyebrow": "About Us",
