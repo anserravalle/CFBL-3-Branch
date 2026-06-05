@@ -84,7 +84,7 @@
         "subheading": "",
         "text_align": "center",
         "columns": "3",
-        "bg_scheme": "sand",
+        "bg_scheme": "default",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -215,7 +215,7 @@
         "text_align": "center",
         "image_position": "start",
         "image_ratio": "1-1",
-        "bg_scheme": "surface",
+        "bg_scheme": "sage",
         "padding_top": 80,
         "padding_bottom": 80
       }
