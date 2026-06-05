@@ -171,27 +171,59 @@
           "type": "item",
           "settings": {
             "question": "Who are the trainings for?",
-            "answer": "<p>Licensed mental health clinicians (psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, MDs) and graduate students in clinical and counseling psychology.</p>"
+            "answer": "<p>Our trainings are built for licensed mental health clinicians, including psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, and MDs, as well as graduate students in clinical and counseling psychology. Each offering lists the clinical experience it assumes so you can choose the right fit.</p>"
           }
         },
         "format": {
           "type": "item",
           "settings": {
             "question": "What is the format?",
-            "answer": "<p>Trainings are delivered live online unless otherwise noted, with materials provided to registrants.</p>"
+            "answer": "<p>Most trainings are delivered live online so you can attend from anywhere, with slides and handouts shared with registrants. Some run as a multi-session series with time to integrate between meetings. The length, schedule, and any pre-work are listed on each training's page.</p>"
+          }
+        },
+        "register": {
+          "type": "item",
+          "settings": {
+            "question": "How do I register, and what if a training is full?",
+            "answer": "<p>Registration opens on each training's page once dates are confirmed. When a cohort is full or dates are still being scheduled, you can join the waitlist. Waitlist members hear first and are invited to register before seats open to the public.</p>"
+          }
+        },
+        "credit": {
+          "type": "item",
+          "settings": {
+            "question": "Will I receive a certificate or continuing education credit?",
+            "answer": "<p>Registrants receive a certificate of completion listing the training title, date, and contact hours. Continuing education details are confirmed for each offering and noted on its page. If you have a specific licensing-board requirement, reach out before registering and we will tell you what that training provides.</p>"
+          }
+        },
+        "cost": {
+          "type": "item",
+          "settings": {
+            "question": "What does it cost, and are group rates available?",
+            "answer": "<p>Pricing is listed on each training's page and varies by length and format. Reduced student rates are available for many offerings, and we offer group rates for agencies or practices enrolling several clinicians. Contact us for a group quote.</p>"
+          }
+        },
+        "cancel": {
+          "type": "item",
+          "settings": {
+            "question": "What if I need to cancel or need an accommodation?",
+            "answer": "<p>If you need to cancel, let us know as early as you can and we will arrange a transfer or a credit toward a future cohort. If you need an accommodation to take part fully, tell us when you register so we can plan ahead.</p>"
           }
         }
       },
       "block_order": [
         "who",
-        "format"
+        "format",
+        "register",
+        "credit",
+        "cost",
+        "cancel"
       ],
       "settings": {
         "eyebrow": "Details",
         "heading": "Registration",
-        "subheading": "",
-        "cta_label": "",
-        "cta_link": "",
+        "subheading": "Everything to know before you register. Do not see your question here? Reach out and we will answer it.",
+        "cta_label": "Join the Waitlist",
+        "cta_link": "/pages/contact",
         "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
