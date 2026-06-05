@@ -121,7 +121,7 @@
         "success_text": "Thank you for subscribing.",
         "fine_print": "We respect your privacy and never share your information.",
         "text_align": "center",
-        "bg_scheme": "default",
+        "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
       }
