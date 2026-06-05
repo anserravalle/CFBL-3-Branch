@@ -28,7 +28,7 @@
         "secondary_label": "Meet the Team",
         "secondary_link": "/pages/about-us",
         "image_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "",
         "bg_scheme": "sand",
         "padding_top": 80,
         "padding_bottom": 48

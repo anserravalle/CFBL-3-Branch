@@ -53,7 +53,7 @@
         {%- comment -%} Image column. Renders a framed placeholder even when no
             image is set, so the layout reads as intended in the editor. {%- endcomment -%}
         <div class="hero__media reveal {% if section.settings.image_frame %}hero__media--framed{% endif %}"
-             style="order: {{ mobile_order }}; --frame-color: {{ section.settings.frame_color }};">
+             style="order: {{ mobile_order }};{% if section.settings.frame_color != blank %} --frame-color: {{ section.settings.frame_color }};{% endif %}">
           {%- render 'responsive-image',
             image: section.settings.image,
             alt: section.settings.image_alt,
@@ -90,7 +90,7 @@
       { "value": "3-2", "label": "3:2" }, { "value": "16-9", "label": "16:9" }
     ], "default": "4-3" },
     { "type": "checkbox", "id": "image_frame", "label": "Show offset frame behind image", "default": true, "info": "A darker panel that sits behind the image (a brown 'holder' on a tan background)." },
-    { "type": "color", "id": "frame_color", "label": "Frame color", "default": "#9D654E" },
+    { "type": "color", "id": "frame_color", "label": "Frame color (leave blank to match brand)", "default": "" },
     { "type": "checkbox", "id": "show_shape", "label": "Show soft brand-shape accent", "default": true },
     { "type": "header", "content": "Layout & appearance" },
     { "type": "select", "id": "layout", "label": "Layout", "options": [

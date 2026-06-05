@@ -37,7 +37,7 @@
         "image_alt": "",
         "image_ratio": "1-1",
         "image_frame": true,
-        "frame_color": "#2b5275",
+        "frame_color": "",
         "show_shape": true,
         "layout": "split",
         "mobile_image_first": false,
@@ -131,7 +131,7 @@
         "footer_label": "",
         "footer_link": "",
         "footer_style": "secondary",
-        "bg_scheme": "sage",
+        "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -221,7 +221,7 @@
         "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "1-1",
         "image_frame": true,
-        "frame_color": "#2b5275",
+        "frame_color": "",
         "image_position": "left",
         "mobile_stack": "image",
         "eyebrow": "Meet the Evaluator",
@@ -260,7 +260,7 @@
         "heading": "",
         "subheading": "",
         "columns": 1,
-        "bg_scheme": "sage",
+        "bg_scheme": "sand",
         "padding_top": 48,
         "padding_bottom": 72
       }
@@ -446,7 +446,7 @@
         "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "1-1",
         "image_frame": true,
-        "frame_color": "#2b5275",
+        "frame_color": "",
         "image_position": "left",
         "mobile_stack": "image",
         "eyebrow": "Meet the Evaluator",
@@ -485,7 +485,7 @@
         "heading": "",
         "subheading": "",
         "columns": 1,
-        "bg_scheme": "sage",
+        "bg_scheme": "sand",
         "padding_top": 48,
         "padding_bottom": 72
       }

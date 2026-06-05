@@ -24,7 +24,7 @@
         "image_alt": "adhd executive functioning evaluation",
         "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9d654e",
+        "frame_color": "",
         "show_shape": true,
         "layout": "split",
         "mobile_image_first": false,
