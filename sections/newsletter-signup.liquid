@@ -5,6 +5,7 @@
 {%- liquid
   assign bg = section.settings.bg_scheme
   assign center = section.settings.text_align
+  assign list_tag = section.settings.list_tag | default: 'newsletter'
 -%}
 <section class="section bg--{{ bg }}"
   style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
@@ -16,7 +17,7 @@
 
       {%- form 'customer', class: 'newsletter__form' -%}
         {%- if center == 'center' -%}<style>#newsletter-{{ section.id }} .newsletter__form{margin-inline:auto;justify-content:center;}</style>{%- endif -%}
-        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input type="hidden" name="contact[tags]" value="{{ list_tag }}">
         <div class="field newsletter__inline">
           <label class="visually-hidden" for="NewsletterEmail-{{ section.id }}">{{ section.settings.placeholder | default: 'Email address' }}</label>
           <input id="NewsletterEmail-{{ section.id }}" type="email" name="contact[email]"
@@ -49,6 +50,7 @@
     { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Occasional resources on trauma-informed care, evaluations, and upcoming workshops. No noise.</p>" },
     { "type": "text", "id": "placeholder", "label": "Input placeholder", "default": "Email address" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Subscribe" },
+    { "type": "text", "id": "list_tag", "label": "List tag", "default": "newsletter", "info": "Tag added to each subscriber in Shopify so you can segment lists (e.g. 'newsletter' for essays, 'stories-we-told' for the book launch)." },
     { "type": "text", "id": "success_text", "label": "Success message", "default": "Thank you for subscribing." },
     { "type": "text", "id": "fine_print", "label": "Fine print", "default": "We respect your privacy and never share your information." },
     { "type": "select", "id": "text_align", "label": "Alignment", "options": [

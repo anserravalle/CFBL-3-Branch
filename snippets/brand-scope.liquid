@@ -19,7 +19,7 @@
   assign suffix = template.suffix | default: '' | downcase
 
   assign institute_suffixes = 'cfbl-institute,institute,professional-trainings,courses-certification,clinical-supervision,emdr-consultation,professionals,educational-program,professional-development'
-  assign musa_suffixes = 'musa,author-page,author,essays'
+  assign musa_suffixes = 'musa,author-page,author,essays,the-stories-we-told,book'
 
   assign list = institute_suffixes | split: ','
   for item in list
