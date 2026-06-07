@@ -1,0 +1,129 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "MUSA",
+        "heading": "Writing on psychology, relationships, the moment, and the fragility of being human",
+        "subheading": "<p>Books and essays by Dr. Angela (Niki) Serravalle.</p>",
+        "use_h1": true,
+        "primary_label": "Read the Essays",
+        "primary_link": "/blogs/essays",
+        "secondary_label": "",
+        "secondary_link": "",
+        "image": "shopify://shop_images/musa_inverse.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#6e1f23",
+        "show_shape": false,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "author": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/angela.jpg",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
+        "image_ratio": "4-3",
+        "image_position": "right",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Author",
+        "heading": "Dr. Angela (Niki) Serravalle",
+        "body": "<p>Dr. Niki Serravalle is a licensed clinical psychologist, author, and the founder of the Center for Balanced Living. Her clinical work centers on trauma-informed care, psychological evaluation, and the integration of nature-based and somatic approaches into therapeutic practice. She writes MUSA from her practice in Delaware, where the clinical and the personal continually meet. Her first book, The Stories We Told: The Dance of Codependency, is forthcoming.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "",
+        "primary_label": "",
+        "primary_link": "",
+        "secondary_label": "",
+        "secondary_link": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 24,
+        "image_frame": true,
+        "frame_color": "#6e1f23"
+      }
+    },
+    "why": {
+      "type": "testimonial-section",
+      "blocks": {
+        "q": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>In Latin and Italian, Musa is the muse, the figure who animates writing, thinking, and creative work. To write in the company of a muse was to listen carefully and give shape to what mattered most. It was writing with intention. MUSA is where I house my writing, a space where the clinical, the literary, and the personal meet on the page.</p>",
+            "author": "Dr. Angela (Niki) Serravalle",
+            "role": "",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "q"
+      ],
+      "settings": {
+        "eyebrow": "Why I Write",
+        "heading": "",
+        "subheading": "",
+        "columns": 1,
+        "bg_scheme": "sand",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    },
+    "essays": {
+      "type": "blog-feature",
+      "settings": {
+        "eyebrow": "Recent Essays",
+        "heading": "From the Desk",
+        "subheading": "",
+        "blog": "essays",
+        "post_limit": 3,
+        "columns": "3",
+        "show_excerpt": true,
+        "show_tags": false,
+        "view_all_label": "All essays",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "subscribe": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in Touch",
+        "heading": "New essays, now and then",
+        "body": "<p>Subscribe to receive new writing as it is published. No noise, just the work.</p>",
+        "placeholder": "Email address",
+        "button_label": "Subscribe",
+        "success_text": "Thank you for subscribing.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "author",
+    "why",
+    "essays",
+    "subscribe"
+  ]
+}
