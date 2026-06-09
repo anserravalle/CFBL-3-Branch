@@ -18,8 +18,8 @@
         "use_h1": true,
         "primary_label": "Read the Essays",
         "primary_link": "/blogs/essays",
-        "secondary_label": "",
-        "secondary_link": "",
+        "secondary_label": "Explore Publications",
+        "secondary_link": "/pages/publications",
         "image": "shopify://shop_images/musa_inverse.png",
         "image_alt": "",
         "image_ratio": "4-3",
@@ -56,6 +56,28 @@
         "padding_bottom": 24,
         "image_frame": true,
         "frame_color": "#6e1f23"
+      }
+    },
+    "book": {
+      "type": "book-feature",
+      "settings": {
+        "eyebrow": "The Book",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance of a Codependent and a Compulsive Liar",
+        "cover": "",
+        "cover_alt": "The Stories We Told by Dr. Angela (Niki) Serravalle",
+        "cover_ratio": "2-3",
+        "cover_caption": "The drawing is real. He made it on our second date.",
+        "cover_frame": true,
+        "frame_color": "#6e1f23",
+        "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway — a reckoning with love, deception, and the long work of coming home to herself.</p>",
+        "primary_label": "Read more",
+        "primary_link": "/pages/the-stories-we-told",
+        "excerpt_label": "",
+        "excerpt": "",
+        "bg_scheme": "surface",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     },
     "why": {
@@ -102,6 +124,23 @@
         "padding_bottom": 72
       }
     },
+    "articles": {
+      "type": "publication-list",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "eyebrow": "Articles",
+        "heading": "Articles & Other Writing",
+        "subheading": "Selected published articles and professional writing.",
+        "text_align": "left",
+        "limit": 4,
+        "footer_label": "Explore Publications",
+        "footer_link": "/pages/publications",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "subscribe": {
       "type": "newsletter-signup",
       "settings": {
@@ -122,8 +161,10 @@
   "order": [
     "hero",
     "author",
+    "book",
     "why",
     "essays",
+    "articles",
     "subscribe"
   ]
 }
