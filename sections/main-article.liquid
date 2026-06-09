@@ -39,35 +39,35 @@
         </div>
       {%- endif -%}
 
-      {%- comment -%} Keep reading: previous (newer) / next (older) post in this blog. {%- endcomment -%}
-      {%- assign prev_post = null -%}
-      {%- assign next_post = null -%}
+      {%- comment -%} Keep reading. Posts list newest-first, so the neighbour BEFORE the current post in the loop is the newer one ("Next" in a 1-2-3 series, shown left) and the one AFTER is older ("Previous", shown right). {%- endcomment -%}
+      {%- assign newer_post = null -%}
+      {%- assign older_post = null -%}
       {%- assign seen_current = false -%}
       {%- for a in blog.articles -%}
-        {%- if seen_current and next_post == null -%}
-          {%- assign next_post = a -%}
+        {%- if seen_current and older_post == null -%}
+          {%- assign older_post = a -%}
         {%- endif -%}
         {%- if a.id == article.id -%}
           {%- assign seen_current = true -%}
         {%- elsif seen_current == false -%}
-          {%- assign prev_post = a -%}
+          {%- assign newer_post = a -%}
         {%- endif -%}
       {%- endfor -%}
 
-      {%- if prev_post or next_post -%}
+      {%- if newer_post or older_post -%}
         <nav class="article-pager reveal" aria-label="More from {{ blog.title }}">
-          {%- if prev_post -%}
-            <a class="article-pager__link" href="{{ prev_post.url }}" rel="prev">
-              <span class="eyebrow">&larr; Previous</span>
-              <span class="article-pager__title">{{ prev_post.title }}</span>
+          {%- if newer_post -%}
+            <a class="article-pager__link" href="{{ newer_post.url }}" rel="next">
+              <span class="eyebrow">&larr; Next</span>
+              <span class="article-pager__title">{{ newer_post.title }}</span>
             </a>
           {%- else -%}
             <span class="article-pager__link article-pager__link--empty" aria-hidden="true"></span>
           {%- endif -%}
-          {%- if next_post -%}
-            <a class="article-pager__link article-pager__link--next" href="{{ next_post.url }}" rel="next">
-              <span class="eyebrow">Next &rarr;</span>
-              <span class="article-pager__title">{{ next_post.title }}</span>
+          {%- if older_post -%}
+            <a class="article-pager__link article-pager__link--right" href="{{ older_post.url }}" rel="prev">
+              <span class="eyebrow">Previous &rarr;</span>
+              <span class="article-pager__title">{{ older_post.title }}</span>
             </a>
           {%- else -%}
             <span class="article-pager__link article-pager__link--empty" aria-hidden="true"></span>
@@ -83,7 +83,7 @@
   .article-pager__link{display:flex;flex-direction:column;gap:var(--space-8);padding:var(--space-20);border:1px solid var(--color-border);border-radius:var(--radius-card);text-decoration:none;transition:border-color .2s ease;}
   .article-pager__link:hover{border-color:var(--color-heading);}
   .article-pager__link--empty{border:none;}
-  .article-pager__link--next{text-align:right;}
+  .article-pager__link--right{text-align:right;}
   .article-pager__title{font-weight:600;color:var(--color-heading);line-height:1.3;}
   @media (max-width:600px){.article-pager{grid-template-columns:1fr;}.article-pager__link--next{text-align:left;}}
 {%- endstyle -%}
