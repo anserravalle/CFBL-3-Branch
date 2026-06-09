@@ -26,7 +26,7 @@
         "stw": {
           "type": "book",
           "settings": {
-            "cover": "",
+            "cover": "shopify://shop_images/the_stories.png",
             "title": "The Stories We Told",
             "subtitle": "The Dance of a Codependent and a Compulsive Liar",
             "blurb": "A memoir of loving a compulsive liar, and the long work of coming back to herself.",
@@ -38,7 +38,9 @@
           }
         }
       },
-      "block_order": ["stw"],
+      "block_order": [
+        "stw"
+      ],
       "settings": {
         "eyebrow": "Books",
         "heading": "Books",
@@ -72,8 +74,6 @@
     },
     "articles": {
       "type": "publication-list",
-      "blocks": {},
-      "block_order": [],
       "settings": {
         "eyebrow": "Articles",
         "heading": "Articles",
@@ -84,9 +84,14 @@
         "footer_link": "",
         "bg_scheme": "default",
         "padding_top": 64,
-        "padding_bottom": 80
+        "padding_bottom": 88
       }
     }
   },
-  "order": ["header", "books", "essays", "articles"]
+  "order": [
+    "header",
+    "books",
+    "essays",
+    "articles"
+  ]
 }
