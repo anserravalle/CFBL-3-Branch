@@ -39,6 +39,8 @@
         "image": "shopify://shop_images/angela.jpg",
         "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#6e1f23",
         "image_position": "right",
         "mobile_stack": "image",
         "eyebrow": "Meet the Author",
@@ -53,9 +55,7 @@
         "secondary_link": "",
         "bg_scheme": "default",
         "padding_top": 72,
-        "padding_bottom": 24,
-        "image_frame": true,
-        "frame_color": "#6e1f23"
+        "padding_bottom": 24
       }
     },
     "book": {
@@ -64,18 +64,18 @@
         "eyebrow": "The Book",
         "title": "The Stories We Told",
         "subtitle": "The Dance of a Codependent and a Compulsive Liar",
-        "cover": "",
+        "cover": "shopify://shop_images/the_stories.png",
         "cover_alt": "The Stories We Told by Dr. Angela (Niki) Serravalle",
         "cover_ratio": "2-3",
-        "cover_caption": "The drawing is real. He made it on our second date.",
+        "cover_caption": "The drawing is real. He made it on our first date.",
         "cover_frame": true,
         "frame_color": "#6e1f23",
-        "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway — a reckoning with love, deception, and the long work of coming home to herself.</p>",
-        "primary_label": "Read more",
+        "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway, a reckoning with love, deception, and the long work of coming home to herself.</p>",
+        "primary_label": "Coming Soon",
         "primary_link": "/pages/the-stories-we-told",
         "excerpt_label": "",
         "excerpt": "",
-        "bg_scheme": "surface",
+        "bg_scheme": "sand",
         "padding_top": 88,
         "padding_bottom": 88
       }
@@ -126,8 +126,6 @@
     },
     "articles": {
       "type": "publication-list",
-      "blocks": {},
-      "block_order": [],
       "settings": {
         "eyebrow": "Articles",
         "heading": "Articles & Other Writing",
@@ -149,6 +147,7 @@
         "body": "<p>Subscribe to receive new writing as it is published. No noise, just the work.</p>",
         "placeholder": "Email address",
         "button_label": "Subscribe",
+        "list_tag": "newsletter",
         "success_text": "Thank you for subscribing.",
         "fine_print": "Your email is never shared.",
         "text_align": "center",
