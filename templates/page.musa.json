@@ -58,28 +58,6 @@
         "padding_bottom": 24
       }
     },
-    "book": {
-      "type": "book-feature",
-      "settings": {
-        "eyebrow": "The Book",
-        "title": "The Stories We Told",
-        "subtitle": "The Dance of a Codependent and a Compulsive Liar",
-        "cover": "shopify://shop_images/the_stories.png",
-        "cover_alt": "The Stories We Told by Dr. Angela (Niki) Serravalle",
-        "cover_ratio": "2-3",
-        "cover_caption": "The drawing is real. He made it on our first date.",
-        "cover_frame": true,
-        "frame_color": "#6e1f23",
-        "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway, a reckoning with love, deception, and the long work of coming home to herself.</p>",
-        "primary_label": "Coming Soon",
-        "primary_link": "/pages/the-stories-we-told",
-        "excerpt_label": "",
-        "excerpt": "",
-        "bg_scheme": "sand",
-        "padding_top": 88,
-        "padding_bottom": 88
-      }
-    },
     "why": {
       "type": "testimonial-section",
       "blocks": {
@@ -104,6 +82,28 @@
         "bg_scheme": "sand",
         "padding_top": 48,
         "padding_bottom": 72
+      }
+    },
+    "book": {
+      "type": "book-feature",
+      "settings": {
+        "eyebrow": "The Book",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance of a Codependent and a Compulsive Liar",
+        "cover": "shopify://shop_images/the_stories.png",
+        "cover_alt": "The Stories We Told by Dr. Angela (Niki) Serravalle",
+        "cover_ratio": "2-3",
+        "cover_caption": "The drawing is real. He made it on our first date.",
+        "cover_frame": true,
+        "frame_color": "#6e1f23",
+        "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway, a reckoning with love, deception, and the long work of coming home to herself.</p>",
+        "primary_label": "Coming Soon",
+        "primary_link": "/pages/the-stories-we-told",
+        "excerpt_label": "",
+        "excerpt": "",
+        "bg_scheme": "sand",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     },
     "essays": {
@@ -132,7 +132,7 @@
         "subheading": "Selected published articles and professional writing.",
         "text_align": "left",
         "limit": 4,
-        "footer_label": "Explore Publications",
+        "footer_label": "Coming Soon",
         "footer_link": "/pages/publications",
         "bg_scheme": "sand",
         "padding_top": 72,
@@ -160,8 +160,8 @@
   "order": [
     "hero",
     "author",
-    "book",
     "why",
+    "book",
     "essays",
     "articles",
     "subscribe"
