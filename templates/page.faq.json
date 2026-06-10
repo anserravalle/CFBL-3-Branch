@@ -277,7 +277,7 @@
           "type": "item",
           "settings": {
             "question": "How do I sign up for a group?",
-            "answer": "<p><em>Each group has its own registration through Eventbrite. </em><a href=\"https://www.eventbrite.com/o/center-for-balanced-living-121062482552\" target=\"_blank\" title=\"https://www.eventbrite.com/o/center-for-balanced-living-121062482552\"><em>(CLICK HERE)</em></a></p><p><em>Visit the Groups page to see current offerings and available dates. </em></p><p><em>Advance registration is required as group sizes are intentionally small. </em></p><p><em>Reach out to our office at (302) 608-3780 with any questions.</em></p>"
+            "answer": "<p><em>Each group has its own registration page on our website. Visit the </em><a href=\"/pages/wellness-groups\"><em>Wellness Groups</em></a><em> page, choose a group, and click Register to reserve your spot and pay securely at checkout. </em></p><p><em>Advance registration is required as group sizes are intentionally small. </em></p><p><em>Reach out to our office at (302) 608-3780 with any questions.</em></p>"
           }
         }
       },
