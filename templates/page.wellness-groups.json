@@ -47,8 +47,8 @@
             "image_ratio": "4-3",
             "title": "Pet Loss Support Group (In-Person)",
             "body": "<p>A gentle, supported space to process the grief, memory, and connection that come with losing a beloved companion. Led by Dr. Niki Serravalle, in person in Townsend.</p>",
-            "link_label": "Join the waitlist",
-            "link": "/pages/contact"
+            "link_label": "Register — free",
+            "link": "/products/pet-loss-support-group-in-person"
           }
         },
         "petloss_virtual": {
@@ -62,8 +62,8 @@
             "image_ratio": "4-3",
             "title": "Pet Loss Support Group (Virtual)",
             "body": "<p>The same supported space to honor your grief and memories, offered online so you can join from anywhere in Delaware. Led by Dr. Niki Serravalle.</p>",
-            "link_label": "Join the waitlist",
-            "link": "/pages/contact"
+            "link_label": "Register — free",
+            "link": "/products/pet-loss-support-group-virtual"
           }
         },
         "rooted": {
@@ -83,14 +83,14 @@
         }
       },
       "block_order": [
+        "rooted",
         "petloss_live",
-        "petloss_virtual",
-        "rooted"
+        "petloss_virtual"
       ],
       "settings": {
-        "eyebrow": "Now Forming",
-        "heading": "Join a Waitlist",
-        "subheading": "New groups begin this June. Add your name and we'll reach out with dates and details as they are set.",
+        "eyebrow": "Open for Registration",
+        "heading": "Register for a Group",
+        "subheading": "Choose a group and register online to claim your spot. Space is intentionally limited to keep each group small.",
         "text_align": "center",
         "columns": "3",
         "mobile_two_up": false,
