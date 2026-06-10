@@ -49,6 +49,20 @@
     "catalog": {
       "type": "workshop-event-grid",
       "blocks": {
+        "t0": {
+          "type": "event",
+          "settings": {
+            "month": "Sept",
+            "day": "18-19",
+            "title": "Foundations of Trauma Therapy",
+            "time": "9:00 AM to 5:00 PM ET, both days",
+            "location": "Live virtual, via Zoom",
+            "description": "A two-day live virtual intensive in thinking across trauma modalities, not within one. 12 NBCC CE clock hours. Beta cohort, limited to 15 clinicians.",
+            "product": "gid://shopify/Product/10209563214130",
+            "link_label": "Register",
+            "link": "/products/foundations-of-trauma-therapy-two-day-live-virtual-intensive-sept-18-19-2026-beta-cohort"
+          }
+        },
         "t1": {
           "type": "event",
           "settings": {
@@ -79,13 +93,14 @@
         }
       },
       "block_order": [
+        "t0",
         "t1",
         "t2"
       ],
       "settings": {
         "eyebrow": "Upcoming",
         "heading": "Trainings & Continuing Education",
-        "subheading": "Taught by a practicing psychologist who carries a clinical caseload. Our current trainings are full; join the waitlist to hear first when new dates open.",
+        "subheading": "Taught by a practicing psychologist who carries a clinical caseload. Registration is open for the Foundations of Trauma Therapy beta cohort below. Other trainings are forming; join the waitlist to hear first when new dates open.",
         "text_align": "left",
         "bg_scheme": "sage",
         "padding_top": 72,
