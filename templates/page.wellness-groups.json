@@ -70,14 +70,14 @@
           "type": "card",
           "settings": {
             "logo_alt": "",
-            "eyebrow": "",
+            "eyebrow": "Friday, July 10 · 5:00–6:00 PM",
             "icon": "leaf",
             "image": "shopify://shop_images/Untitled_design.png",
-            "image_alt": "Rooted & Rising (with Amanda",
+            "image_alt": "Rooted & Rising (with Amanda)",
             "image_ratio": "4-3",
             "title": "Rooted & Rising (with Amanda)",
-            "body": "<p>An art-therapy approach to managing stress, led by Amanda Foxwell. Use creativity and expression to ground, regulate, and reconnect. In person.</p>",
-            "link_label": "Join the waitlist",
+            "body": "<p>Understanding the nervous system through creative expression. An art-therapy group led by Amanda Foxwell, in person.</p><p><strong>$25</strong> &middot; one hour &middot; all art supplies included.</p>",
+            "link_label": "Reserve your spot",
             "link": "/pages/contact"
           }
         }
