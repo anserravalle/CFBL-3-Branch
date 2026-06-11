@@ -1,0 +1,71 @@
+{%- comment -%}
+  CFBL "Spread the word" block for the Shopify Order Confirmation email.
+  Paste this into Settings > Notifications > Order confirmation, inside the
+  Liquid template (a good spot is just after the order summary table).
+
+  It only shows when the order contains an event (any product tagged
+  "Registration"), and renders one share row per event, plus the
+  bring-a-friend perk (code BRINGAFRIEND, 15% off).
+{%- endcomment -%}
+
+{%- assign has_event = false -%}
+{%- for line in line_items -%}
+  {%- if line.product.tags contains 'Registration' -%}
+    {%- assign has_event = true -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if has_event -%}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:24px 0;">
+  <tr>
+    <td style="background-color:#1E2B45; border-radius:10px 10px 0 0; padding:20px 28px;" align="center">
+      <p style="margin:0 0 4px 0; font-family:Georgia,'Times New Roman',serif; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:#C4A463;">Spread the Word</p>
+      <p style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:20px; line-height:26px; color:#F4EFE4;">Know someone who&rsquo;d love this? Bring a friend.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color:#FBF8F1; border:1px solid #E2D8C6; border-top:none; border-radius:0 0 10px 10px; padding:22px 28px;">
+
+      {%- for line in line_items -%}
+        {%- if line.product.tags contains 'Registration' -%}
+          {%- assign event_url = shop.url | append: '/products/' | append: line.product.handle -%}
+          {%- capture mail_subject -%}Join me at Center for Balanced Living{%- endcapture -%}
+          {%- capture mail_body -%}I just registered for {{ line.title }} at Center for Balanced Living and thought of you. Come with me: {{ event_url }}{%- endcapture -%}
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px 0;">
+            <tr>
+              <td style="padding:0 0 8px 0; font-family:Georgia,'Times New Roman',serif; font-size:16px; color:#1E2B45;">
+                <strong>{{ line.title }}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family:Georgia,serif; font-size:14px;">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ event_url | url_encode }}" style="display:inline-block; padding:8px 16px; margin:0 6px 6px 0; background-color:#1E2B45; color:#F4EFE4; border-radius:6px; letter-spacing:0.5px;">Share on Facebook</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ event_url | url_encode }}" style="display:inline-block; padding:8px 16px; margin:0 6px 6px 0; background-color:#38583F; color:#FFFFFF; border-radius:6px; letter-spacing:0.5px;">Share on LinkedIn</a>
+                <a href="mailto:?subject={{ mail_subject | url_encode }}&body={{ mail_body | url_encode }}" style="display:inline-block; padding:8px 16px; margin:0 6px 6px 0; background-color:#6B2D33; color:#FFFFFF; border-radius:6px; letter-spacing:0.5px;">Email a friend</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0 0 0; font-family:Georgia,serif; font-size:13px; color:#6E6657;">
+                Or copy this link to text or post anywhere:<br>
+                <a href="{{ event_url }}" style="color:#6B2D33; word-break:break-all;">{{ event_url }}</a>
+              </td>
+            </tr>
+          </table>
+
+        {%- endif -%}
+      {%- endfor -%}
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px; border-top:1px solid #E2D8C6;">
+        <tr>
+          <td style="padding:16px 0 0 0; font-family:Georgia,'Times New Roman',serif; font-size:14px; line-height:22px; color:#4E483D;">
+            <strong style="color:#6B2D33;">Bring a friend, save together.</strong> When they register with code
+            <strong style="color:#1E2B45;">BRINGAFRIEND</strong>, they&rsquo;ll get <strong>15% off</strong>. The best things grow in good company.
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+{%- endif -%}
