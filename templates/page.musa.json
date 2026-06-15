@@ -20,7 +20,7 @@
         "primary_link": "/blogs/essays",
         "secondary_label": "Explore Publications",
         "secondary_link": "/pages/publications",
-        "image": "shopify://shop_images/musa_inverse.png",
+        "image": "shopify://shop_images/musa_solid_back.png",
         "image_alt": "",
         "image_ratio": "4-3",
         "image_frame": true,
@@ -28,7 +28,7 @@
         "show_shape": false,
         "layout": "split",
         "mobile_image_first": false,
-        "bg_scheme": "default",
+        "bg_scheme": "sand",
         "padding_top": 96,
         "padding_bottom": 96
       }
