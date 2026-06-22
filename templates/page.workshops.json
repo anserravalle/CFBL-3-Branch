@@ -67,6 +67,20 @@
     "events": {
       "type": "workshop-event-grid",
       "blocks": {
+        "event_rX78RY": {
+          "type": "event",
+          "settings": {
+            "month": "OCT",
+            "day": "10",
+            "title": "Nature Based EMDR",
+            "time": "12:00-3:00pm",
+            "location": "Virtual",
+            "description": "This three-hour workshop is for EMDR clinicians who already know how to do the work and want to think more carefully about when and how nature-informed elements belong inside a standard EMDR case. It is not a new protocol. The eight-phase, three-pronged structure does not change.",
+            "product": "nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "link_label": "Register",
+            "link": ""
+          }
+        },
         "e1": {
           "type": "event",
           "settings": {
@@ -97,6 +111,7 @@
         }
       },
       "block_order": [
+        "event_rX78RY",
         "e1",
         "e2"
       ],
@@ -118,6 +133,7 @@
         "body": "<p>Our current workshops are full. Add your name and we'll let you know the moment new dates open.</p>",
         "placeholder": "Email address",
         "button_label": "Join the Waitlist",
+        "list_tag": "newsletter",
         "success_text": "Thank you for subscribing.",
         "fine_print": "We respect your privacy and never share your information.",
         "text_align": "center",
