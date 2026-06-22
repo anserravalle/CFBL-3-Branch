@@ -47,7 +47,7 @@
         "show_shape": true,
         "layout": "split",
         "mobile_image_first": false,
-        "bg_scheme": "surface",
+        "bg_scheme": "default",
         "padding_top": 96,
         "padding_bottom": 96
       }
@@ -83,6 +83,7 @@
         },
         "e1": {
           "type": "event",
+          "disabled": true,
           "settings": {
             "month": "Dates",
             "day": "TBA",
@@ -97,6 +98,7 @@
         },
         "e2": {
           "type": "event",
+          "disabled": true,
           "settings": {
             "month": "Dates",
             "day": "TBA",
@@ -137,7 +139,7 @@
         "success_text": "Thank you for subscribing.",
         "fine_print": "We respect your privacy and never share your information.",
         "text_align": "center",
-        "bg_scheme": "sand",
+        "bg_scheme": "surface",
         "padding_top": 72,
         "padding_bottom": 72
       }
