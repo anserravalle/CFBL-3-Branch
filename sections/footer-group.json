@@ -41,13 +41,25 @@
             "title": "Office Hours",
             "content": "<p>Monday: 10 am-6 pm<br>Tuesday: 10 am-6 pm<br>Wednesday: 10 am-6 pm<br>Thursday: 10 am-6 pm<br>Friday: 10 am-4 pm<br>Saturday / Sunday: Closed</p>"
           }
+        },
+        "signup": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Stay in Touch",
+            "text": "New writing, events, and updates from CFBL. No noise, just the work.",
+            "placeholder": "Email address",
+            "button_label": "Subscribe",
+            "list_tag": "newsletter",
+            "success_text": "Thank you for subscribing."
+          }
         }
       },
       "block_order": [
         "explore",
         "clients",
         "professionals",
-        "hours"
+        "hours",
+        "signup"
       ],
       "settings": {
         "footer_title": "Center for Balanced Living",

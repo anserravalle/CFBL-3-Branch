@@ -147,7 +147,7 @@
         "body": "<p>Subscribe to receive new writing as it is published. No noise, just the work.</p>",
         "placeholder": "Email address",
         "button_label": "Subscribe",
-        "list_tag": "newsletter",
+        "list_tag": "musa",
         "success_text": "Thank you for subscribing.",
         "fine_print": "Your email is never shared.",
         "text_align": "center",

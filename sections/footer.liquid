@@ -65,6 +65,24 @@
               {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
               <div class="rte footer__about">{{ block.settings.content }}</div>
             </div>
+          {%- when 'newsletter' -%}
+            <div class="footer__col footer__signup" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              {%- if block.settings.text != blank -%}<p class="footer__signup-text">{{ block.settings.text }}</p>{%- endif -%}
+              {%- form 'customer', class: 'footer__signup-form' -%}
+                <input type="hidden" name="contact[tags]" value="{{ block.settings.list_tag | default: 'newsletter' }}">
+                <label class="visually-hidden" for="FooterSignup-{{ block.id }}">{{ block.settings.placeholder | default: 'Email address' }}</label>
+                <div class="footer__signup-row">
+                  <input id="FooterSignup-{{ block.id }}" type="email" name="contact[email]" class="input" placeholder="{{ block.settings.placeholder | default: 'Email address' }}" required autocomplete="email" aria-required="true">
+                  <button type="submit" class="btn btn--primary btn--sm">{{ block.settings.button_label | default: 'Subscribe' }}</button>
+                </div>
+                {%- if form.posted_successfully? -%}
+                  <p class="form-note form-note--success" role="status">{{ block.settings.success_text | default: 'Thank you for subscribing.' }}</p>
+                {%- elsif form.errors -%}
+                  <p class="form-note form-note--error" role="alert">{{ form.errors | default_errors }}</p>
+                {%- endif -%}
+              {%- endform -%}
+            </div>
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -81,6 +99,12 @@
     </div>
   </div>
 </footer>
+
+{%- style -%}
+  .footer__signup-row{display:flex;gap:var(--space-8);flex-wrap:wrap;margin-top:var(--space-12);}
+  .footer__signup-row .input{flex:1 1 170px;min-width:0;}
+  .footer__signup-text{font-size:var(--fs-sm);color:var(--color-muted);margin-top:var(--space-4);}
+{%- endstyle -%}
 
 {% schema %}
 {
@@ -106,9 +130,17 @@
     { "type": "text", "name": "Text column", "settings": [
       { "type": "text", "id": "title", "label": "Heading", "default": "About" },
       { "type": "richtext", "id": "content", "label": "Content" }
+    ]},
+    { "type": "newsletter", "name": "Newsletter signup", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "Stay in touch" },
+      { "type": "text", "id": "text", "label": "Text", "default": "New writing, events, and updates. No noise." },
+      { "type": "text", "id": "placeholder", "label": "Email placeholder", "default": "Email address" },
+      { "type": "text", "id": "button_label", "label": "Button label", "default": "Subscribe" },
+      { "type": "text", "id": "list_tag", "label": "List tag", "info": "Tags the subscriber in Shopify so you can segment lists in Shopify Email (Marketing).", "default": "newsletter" },
+      { "type": "text", "id": "success_text", "label": "Success message", "default": "Thank you for subscribing." }
     ]}
   ],
-  "max_blocks": 4,
+  "max_blocks": 6,
   "enabled_on": { "groups": ["footer"] }
 }
 {% endschema %}
