@@ -386,6 +386,23 @@
         "padding_bottom": 72
       }
     },
+    "subscribe": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Letters From the Practice",
+        "heading": "Get letters in your inbox",
+        "body": "<p>Subscribe for new letters from the practice, plus news on groups, workshops, and events. No noise, just the work.</p>",
+        "placeholder": "Email address",
+        "button_label": "Subscribe",
+        "list_tag": "newsletter",
+        "success_text": "Thank you for subscribing.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "surface",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "faq": {
       "type": "faq-section",
       "blocks": {
@@ -465,6 +482,7 @@
     "local_seo",
     "resources",
     "newsletter_feature",
+    "subscribe",
     "faq",
     "contact_cta"
   ]
