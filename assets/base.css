@@ -381,6 +381,55 @@ strong, b { font-weight: 600; }
 }
 .bg--navy .btn--tertiary { color: var(--color-sand); }
 
+/* ---------------------------------------------------------------------------
+   5b. Extended background choices: brand bands + cream / burnt orange
+   --------------------------------------------------------------------------- */
+.bg--cream { background-color: #F4EAD9; }
+.bg--institute { background-color: #3D5A52; }
+.bg--musa { background-color: #6E1F23; }
+.bg--burnt { background-color: #9D654E; }
+
+/* Dark brand bands: light text, links, eyebrow on the section itself */
+.bg--institute, .bg--musa, .bg--burnt {
+  --color-text: var(--color-on-dark);
+  --color-heading: var(--color-on-dark);
+  --color-muted: color-mix(in srgb, var(--color-on-dark) 78%, transparent);
+  --color-border: color-mix(in srgb, var(--color-on-dark) 22%, transparent);
+  --color-eyebrow: var(--color-sand);
+  color: var(--color-on-dark);
+}
+.bg--institute a, .bg--musa a, .bg--burnt a { color: var(--color-sand); }
+.bg--institute a:hover, .bg--musa a:hover, .bg--burnt a:hover { color: #fff; }
+
+/* On-dark buttons (mirror the navy band) */
+.bg--institute .btn--primary, .bg--musa .btn--primary, .bg--burnt .btn--primary {
+  background-color: var(--color-sand); color: var(--color-navy); border-color: var(--color-sand);
+}
+.bg--institute .btn--primary:hover, .bg--musa .btn--primary:hover, .bg--burnt .btn--primary:hover {
+  background-color: #fff; border-color: #fff; color: var(--color-navy);
+}
+.bg--institute .btn--secondary, .bg--musa .btn--secondary, .bg--burnt .btn--secondary {
+  color: var(--color-on-dark); border-color: color-mix(in srgb, var(--color-on-dark) 60%, transparent);
+}
+.bg--institute .btn--secondary:hover, .bg--musa .btn--secondary:hover, .bg--burnt .btn--secondary:hover {
+  background-color: var(--color-on-dark); color: var(--color-navy);
+}
+.bg--institute .btn--tertiary, .bg--musa .btn--tertiary, .bg--burnt .btn--tertiary { color: var(--color-sand); }
+
+/* Cards stay light + readable on any dark band, with brand-colored titles/icons/CTAs.
+   (--color-navy resolves to the brand primary on Institute/MUSA pages.) */
+.bg--navy .card, .bg--institute .card, .bg--musa .card, .bg--burnt .card {
+  --color-text: #2A2724;
+  --color-heading: var(--color-navy);
+  --color-muted: #6B6258;
+  --color-border: #E2D3C2;
+  --color-eyebrow: var(--color-navy);
+  color: #2A2724;
+}
+.bg--navy .card a, .bg--institute .card a, .bg--musa .card a, .bg--burnt .card a,
+.bg--navy .card .btn--tertiary, .bg--institute .card .btn--tertiary,
+.bg--musa .card .btn--tertiary, .bg--burnt .card .btn--tertiary { color: var(--color-navy); }
+
 .btn--sm { min-height: 40px; padding: var(--space-8) var(--space-20); font-size: var(--fs-xs); }
 .btn--lg { min-height: 52px; padding: var(--space-16) var(--space-40); font-size: var(--fs-base); }
 .btn--full { width: 100%; }
