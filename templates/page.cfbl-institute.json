@@ -151,6 +151,7 @@
     },
     "offerings": {
       "type": "tabs",
+      "disabled": true,
       "blocks": {
         "trainings": {
           "type": "tab",
