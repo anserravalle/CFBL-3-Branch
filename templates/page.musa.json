@@ -20,11 +20,11 @@
         "primary_link": "/blogs/essays",
         "secondary_label": "Explore Publications",
         "secondary_link": "/pages/publications",
-        "image": "shopify://shop_images/musa_solid_back.png",
+        "image": "shopify://shop_images/MUSA_logo.png",
         "image_alt": "",
         "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#6e1f23",
+        "frame_color": "#9D654E",
         "show_shape": false,
         "layout": "split",
         "mobile_image_first": false,
@@ -42,7 +42,6 @@
             "logo_alt": "",
             "eyebrow": "Newsletter",
             "icon": "mail",
-            "image": "",
             "image_alt": "",
             "image_ratio": "4-3",
             "title": "Letters from the Practice",
@@ -57,7 +56,6 @@
             "logo_alt": "",
             "eyebrow": "Blog",
             "icon": "compass",
-            "image": "",
             "image_alt": "",
             "image_ratio": "4-3",
             "title": "Make It Make Sense",
@@ -72,7 +70,6 @@
             "logo_alt": "",
             "eyebrow": "Library",
             "icon": "book",
-            "image": "",
             "image_alt": "",
             "image_ratio": "4-3",
             "title": "Essays & Publications",
@@ -82,7 +79,11 @@
           }
         }
       },
-      "block_order": ["letters", "blog", "publications"],
+      "block_order": [
+        "letters",
+        "blog",
+        "publications"
+      ],
       "settings": {
         "eyebrow": "Explore MUSA",
         "heading": "Three Ways to Read",
@@ -93,7 +94,7 @@
         "card_style": "elevated",
         "footer_label": "",
         "footer_link": "",
-        "bg_scheme": "surface",
+        "bg_scheme": "burnt",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -184,7 +185,7 @@
         "show_tags": false,
         "view_all_label": "All essays",
         "text_align": "left",
-        "bg_scheme": "default",
+        "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
       }
