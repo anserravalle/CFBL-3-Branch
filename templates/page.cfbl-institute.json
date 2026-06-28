@@ -20,7 +20,7 @@
         "primary_link": "shopify://pages/professional-clinical-trainings",
         "secondary_label": "Meet the Trainer",
         "secondary_link": "shopify://pages/niki-serravalle",
-        "image": "shopify://shop_images/cfbl_inst.png",
+        "image": "shopify://shop_images/cfbl_intitute_logo.png",
         "image_alt": "",
         "image_ratio": "1-1",
         "image_frame": true,
@@ -82,7 +82,11 @@
           }
         }
       },
-      "block_order": ["trainings", "courses", "workshops"],
+      "block_order": [
+        "trainings",
+        "courses",
+        "workshops"
+      ],
       "settings": {
         "eyebrow": "Explore the Institute",
         "heading": "Three Ways to Learn With Us",
@@ -93,7 +97,7 @@
         "card_style": "elevated",
         "footer_label": "",
         "footer_link": "",
-        "bg_scheme": "sand",
+        "bg_scheme": "sage",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -151,7 +155,6 @@
     },
     "offerings": {
       "type": "tabs",
-      "disabled": true,
       "blocks": {
         "trainings": {
           "type": "tab",
@@ -216,6 +219,7 @@
         "workshops",
         "supervision"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "What We Offer",
         "heading": "Ways to Learn With Us",
