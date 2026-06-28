@@ -33,6 +33,71 @@
         "padding_bottom": 96
       }
     },
+    "paths": {
+      "type": "service-card-grid",
+      "blocks": {
+        "letters": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Newsletter",
+            "icon": "mail",
+            "image": "",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Letters from the Practice",
+            "body": "<p>Notes from the practice: events, celebrations, and seasonal intentions.</p>",
+            "link_label": "Read the Letters",
+            "link": "/blogs/newsletter"
+          }
+        },
+        "blog": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Blog",
+            "icon": "compass",
+            "image": "",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Make It Make Sense",
+            "body": "<p>Grounded, research-informed essays on psychology, therapy, and the cultural moment.</p>",
+            "link_label": "Read the Blog",
+            "link": "/blogs/balanced-living-blog-make-it-make-sense"
+          }
+        },
+        "publications": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Library",
+            "icon": "book",
+            "image": "",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Essays & Publications",
+            "body": "<p>Books, essays, and articles by Dr. Niki Serravalle.</p>",
+            "link_label": "Explore Publications",
+            "link": "/pages/publications"
+          }
+        }
+      },
+      "block_order": ["letters", "blog", "publications"],
+      "settings": {
+        "eyebrow": "Explore MUSA",
+        "heading": "Three Ways to Read",
+        "subheading": "",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "surface",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "author": {
       "type": "text-image",
       "settings": {
@@ -159,6 +224,7 @@
   },
   "order": [
     "hero",
+    "paths",
     "author",
     "why",
     "book",

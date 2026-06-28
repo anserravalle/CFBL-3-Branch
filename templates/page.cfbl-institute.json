@@ -33,6 +33,71 @@
         "padding_bottom": 88
       }
     },
+    "paths": {
+      "type": "service-card-grid",
+      "blocks": {
+        "trainings": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "For Clinicians",
+            "icon": "shield",
+            "image": "shopify://shop_images/drserravalle_training3.png",
+            "image_alt": "Clinicians in a professional training",
+            "image_ratio": "4-3",
+            "title": "Professional Trainings",
+            "body": "<p>Live continuing-education intensives and trainings for licensed clinicians.</p>",
+            "link_label": "View Trainings",
+            "link": "/pages/professional-clinical-trainings"
+          }
+        },
+        "courses": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Go Deeper",
+            "icon": "book",
+            "image": "shopify://shop_images/psychology-training.png",
+            "image_alt": "Clinical course materials",
+            "image_ratio": "4-3",
+            "title": "Courses & Certification",
+            "body": "<p>Multi-session courses and certification tracks that build clinical skill over time.</p>",
+            "link_label": "Explore Courses",
+            "link": "/pages/courses-certification"
+          }
+        },
+        "workshops": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Practical Learning",
+            "icon": "leaf",
+            "image": "shopify://shop_images/drserravalle_ecotherapy_training.png",
+            "image_alt": "A hands-on clinical workshop",
+            "image_ratio": "4-3",
+            "title": "Workshops",
+            "body": "<p>Clinician-led workshops offering practical tools and reflective learning.</p>",
+            "link_label": "See Workshops",
+            "link": "/pages/workshopspage"
+          }
+        }
+      },
+      "block_order": ["trainings", "courses", "workshops"],
+      "settings": {
+        "eyebrow": "Explore the Institute",
+        "heading": "Three Ways to Learn With Us",
+        "subheading": "",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "trainer": {
       "type": "text-image",
       "settings": {
@@ -278,6 +343,7 @@
   },
   "order": [
     "hero",
+    "paths",
     "trainer",
     "why",
     "offerings",
