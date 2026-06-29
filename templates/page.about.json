@@ -14,6 +14,8 @@
       "settings": {
         "show_title": true,
         "eyebrow": "About Us",
+        "logo_alt": "",
+        "logo_width": 260,
         "text_align": "center",
         "bg_scheme": "default",
         "padding_top": 80,
@@ -23,7 +25,7 @@
     "intro": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/psychological-therapy-in-a-private-practice.png",
+        "image": "shopify://shop_images/IMG_5365.png",
         "image_alt": "Center for Balanced Living",
         "image_ratio": "4-3",
         "image_frame": true,
