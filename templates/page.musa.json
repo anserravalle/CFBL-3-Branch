@@ -214,6 +214,7 @@
     },
     "articles": {
       "type": "publication-list",
+      "disabled": true,
       "settings": {
         "eyebrow": "Articles",
         "heading": "Articles & Other Writing",
@@ -225,81 +226,6 @@
         "bg_scheme": "cream",
         "padding_top": 72,
         "padding_bottom": 72
-      }
-    },
-    "blog_tag_cards_4kgE6Y": {
-      "type": "blog-tag-cards",
-      "blocks": {
-        "tag_WYF87b": {
-          "type": "tag",
-          "settings": {
-            "title": "The Field",
-            "tag": "The Field",
-            "description": "",
-            "icon": "compass",
-            "link": ""
-          }
-        },
-        "tag_dNtaib": {
-          "type": "tag",
-          "settings": {
-            "title": "On Therapy",
-            "tag": "On Therapy",
-            "description": "",
-            "icon": "heart",
-            "link": ""
-          }
-        },
-        "tag_PKJFAz": {
-          "type": "tag",
-          "settings": {
-            "title": "On Diagnostics",
-            "tag": "On Diagnostics",
-            "description": "",
-            "icon": "shield",
-            "link": ""
-          }
-        },
-        "tag_Nnc9ta": {
-          "type": "tag",
-          "settings": {
-            "title": "The Cultural Moment",
-            "tag": "The Cultural Moment",
-            "description": "",
-            "icon": "star",
-            "link": ""
-          }
-        },
-        "tag_R4NVKt": {
-          "type": "tag",
-          "settings": {
-            "title": "Being Human",
-            "tag": "Being Human",
-            "description": "",
-            "icon": "leaf",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "tag_WYF87b",
-        "tag_dNtaib",
-        "tag_PKJFAz",
-        "tag_Nnc9ta",
-        "tag_R4NVKt"
-      ],
-      "name": "Blog tag cards",
-      "settings": {
-        "eyebrow": "Explore by the Blog Articles By Theme",
-        "heading": "Make It Make Sense",
-        "subheading": "Choose a thread to follow. Each card opens every piece tagged with that theme.",
-        "blog": "",
-        "text_align": "center",
-        "columns": "3",
-        "card_style": "framed",
-        "bg_scheme": "musa",
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     },
     "subscribe": {
@@ -329,7 +255,6 @@
     "essays",
     "letters_feed",
     "articles",
-    "blog_tag_cards_4kgE6Y",
     "subscribe"
   ]
 }
