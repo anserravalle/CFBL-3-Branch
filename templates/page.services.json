@@ -9,18 +9,39 @@
  */
 {
   "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "CFBL Clinical Services",
+        "heading": "Trauma-informed care for the whole person",
+        "subheading": "<p>Therapy, psychological evaluation, groups, and workshops for children, teens, adults, and families, grounded in research-based, trauma-informed care.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet Our Team",
+        "secondary_link": "/pages/team-introductions",
+        "image": "shopify://shop_images/Untitled_-_June_27_2026_at_12.56.12.png",
+        "image_alt": "Center for Balanced Living",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
     "header": {
       "type": "main-page",
       "settings": {
-        "show_title": true,
+        "show_title": false,
         "eyebrow": "Our Services",
-        "logo": "shopify://shop_images/Untitled_-_June_27_2026_at_12.56.12.png",
-        "logo_alt": "",
-        "logo_width": 260,
         "text_align": "center",
         "bg_scheme": "default",
-        "padding_top": 80,
-        "padding_bottom": 32
+        "padding_top": 40,
+        "padding_bottom": 8
       }
     },
     "pathways": {
@@ -188,6 +209,7 @@
     }
   },
   "order": [
+    "hero",
     "header",
     "pathways",
     "contact",
