@@ -499,6 +499,15 @@ a.card:hover {
 }
 .cards--elevated .card:hover,
 .card--elevated.is-linked:hover { box-shadow: 0 26px 58px rgba(34, 39, 36, 0.38), 0 10px 20px rgba(34, 39, 36, 0.20); }
+/* Darker shadow so elevated still reads on colored / dark bands (e.g. burnt orange) */
+.bg--navy .cards--elevated .card, .bg--institute .cards--elevated .card,
+.bg--musa .cards--elevated .card, .bg--burnt .cards--elevated .card {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42), 0 6px 16px rgba(0, 0, 0, 0.30);
+}
+.bg--navy .cards--elevated .card:hover, .bg--institute .cards--elevated .card:hover,
+.bg--musa .cards--elevated .card:hover, .bg--burnt .cards--elevated .card:hover {
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.50), 0 10px 22px rgba(0, 0, 0, 0.34);
+}
 
 /* Framed: a quiet accent rule down the left edge + hairline border, no shadow */
 .cards--framed .card,

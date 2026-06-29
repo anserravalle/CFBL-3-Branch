@@ -8,10 +8,15 @@
   style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
   <div class="page-width">
     <div class="section__inner">
-      {%- if section.settings.show_title -%}
+      {%- if section.settings.show_title or section.settings.logo != blank -%}
         <header class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal" style="max-width:var(--measure);">
-          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
-          <h1>{{ page.title }}</h1>
+          {%- if section.settings.logo != blank -%}
+            <img class="page-header__logo" src="{{ section.settings.logo | image_url: width: 800 }}" alt="{{ section.settings.logo_alt | default: page.title | escape }}" width="{{ section.settings.logo_width }}" style="max-width:{{ section.settings.logo_width }}px;width:100%;height:auto;display:block;margin-bottom:var(--space-20);{% if section.settings.text_align == 'center' %}margin-inline:auto;{% endif %}" loading="eager">
+          {%- endif -%}
+          {%- if section.settings.show_title -%}
+            {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+            <h1>{{ page.title }}</h1>
+          {%- endif -%}
         </header>
       {%- endif -%}
       <div class="rte article-body reveal">
@@ -27,6 +32,10 @@
   "settings": [
     { "type": "checkbox", "id": "show_title", "label": "Show page title (H1)", "default": true, "info": "Turn off when another section on the page provides the H1." },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow above title" },
+    { "type": "header", "content": "Logo banner" },
+    { "type": "image_picker", "id": "logo", "label": "Logo image (optional)", "info": "Shows above the title." },
+    { "type": "text", "id": "logo_alt", "label": "Logo alt text" },
+    { "type": "range", "id": "logo_width", "label": "Logo width", "min": 80, "max": 640, "step": 10, "unit": "px", "default": 260 },
     { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
       { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
     ], "default": "center" },
