@@ -31,7 +31,7 @@
           <div class="blogfeat__track{% unless section.settings.carousel %} grid grid--{{ cols }}{% endunless %}"{% if section.settings.carousel %} style="--per: {{ cols }};" tabindex="0" role="group" aria-label="{{ section.settings.heading | default: 'Posts' | escape }}"{% endif %}>
             {%- for article in blog.articles limit: limit -%}
               <article class="article-card reveal">
-                {%- if article.image -%}
+                {%- if section.settings.show_image and article.image -%}
                   <a href="{{ article.url }}" tabindex="-1" aria-hidden="true">
                     {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw', widths: '320,480,640,800' -%}
                   </a>
@@ -88,6 +88,7 @@
     { "type": "select", "id": "columns", "label": "Columns (desktop)", "options": [
       { "value": "2", "label": "2" }, { "value": "3", "label": "3" }
     ], "default": "3" },
+    { "type": "checkbox", "id": "show_image", "label": "Show post image", "default": true },
     { "type": "checkbox", "id": "show_excerpt", "label": "Show excerpt", "default": true },
     { "type": "checkbox", "id": "show_tags", "label": "Show first tag", "default": true },
     { "type": "text", "id": "view_all_label", "label": "View-all link label", "default": "View all resources" },
