@@ -1262,6 +1262,66 @@ textarea { min-height: 140px; resize: vertical; }
 .article-card__excerpt { color: var(--color-text); margin-bottom: var(--space-20); }
 .article-card__cta { margin-top: auto; }
 
+/* Framed post cards: offset brand-color panel behind the image (echoes the book cover) */
+.article-card--framed .article-card__media {
+  position: relative;
+  display: block;
+  padding: 0 14px 14px 0;
+}
+.article-card--framed .article-card__media::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 14px; left: 14px; right: 0; bottom: 0;
+  background: var(--frame-color, var(--color-navy));
+  border-radius: var(--radius-card);
+}
+.article-card--framed .article-card__media .media,
+.article-card--framed .article-card__media img { position: relative; z-index: 1; }
+
+/* Swipe carousel ("turn the pages") */
+.blogfeat { position: relative; }
+.blogfeat--carousel .blogfeat__track {
+  display: flex;
+  gap: var(--space-32);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: var(--space-8) 2px var(--space-20);
+}
+.blogfeat--carousel .blogfeat__track::-webkit-scrollbar { display: none; }
+.blogfeat--carousel .blogfeat__track:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
+.blogfeat--carousel .article-card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: calc((100% - (var(--per, 3) - 1) * var(--space-32)) / var(--per, 3));
+}
+@media (max-width: 989px) {
+  .blogfeat--carousel .article-card { width: 80%; }
+}
+.blogfeat__nav {
+  position: absolute;
+  top: 30%;
+  z-index: 4;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-heading);
+  display: grid; place-items: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.15s ease;
+}
+.blogfeat__nav--prev { left: -10px; transform: scaleX(-1); }
+.blogfeat__nav--prev:hover { transform: scaleX(-1) scale(1.06); }
+.blogfeat__nav--next { right: -10px; }
+.blogfeat__nav--next:hover { transform: scale(1.06); }
+.blogfeat__nav[hidden] { display: none; }
+@media (max-width: 749px) { .blogfeat__nav { display: none; } }
+
 .article-body { max-width: var(--measure); margin-inline: auto; }
 .article-body h2 { margin-top: var(--space-48); }
 .article-body h3 { margin-top: var(--space-32); }

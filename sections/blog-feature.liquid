@@ -24,28 +24,51 @@
       </div>
 
       {%- if blog != blank and blog.articles_count > 0 -%}
-        <div class="grid grid--{{ cols }}">
-          {%- for article in blog.articles limit: limit -%}
-            <article class="article-card reveal">
-              {%- if article.image -%}
-                <a href="{{ article.url }}" tabindex="-1" aria-hidden="true">
-                  {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw', widths: '320,480,640,800' -%}
-                </a>
-              {%- endif -%}
-              <div class="article-card__body">
-                <p class="article-card__meta">
-                  <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%b %-d, %Y' }}</time>
-                  {%- if section.settings.show_tags and article.tags.size > 0 %} &middot; {{ article.tags.first }}{% endif -%}
-                </p>
-                <h3 class="article-card__title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
-                {%- if section.settings.show_excerpt -%}
-                  <p class="article-card__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 22 }}</p>
+        {%- assign framed = section.settings.framed -%}
+        <div id="blogfeat-{{ section.id }}" class="blogfeat{% if section.settings.carousel %} blogfeat--carousel{% endif %}"{% if section.settings.frame_color != blank %} style="--frame-color: {{ section.settings.frame_color }};"{% endif %}>
+          {%- if section.settings.carousel -%}
+            <button class="blogfeat__nav blogfeat__nav--prev" type="button" aria-label="Previous" hidden>{%- render 'icon', name: 'arrow-right', size: 20 -%}</button>
+          {%- endif -%}
+          <div class="blogfeat__track{% unless section.settings.carousel %} grid grid--{{ cols }}{% endunless %}"{% if section.settings.carousel %} style="--per: {{ cols }};" tabindex="0" role="group" aria-label="{{ section.settings.heading | default: 'Posts' | escape }}"{% endif %}>
+            {%- for article in blog.articles limit: limit -%}
+              <article class="article-card reveal{% if framed %} article-card--framed{% endif %}">
+                {%- if article.image -%}
+                  <a class="article-card__media" href="{{ article.url }}" tabindex="-1" aria-hidden="true">
+                    {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw', widths: '320,480,640,800' -%}
+                  </a>
                 {%- endif -%}
-                <p class="article-card__cta">{%- render 'button', label: 'Read more', href: article.url, style: 'tertiary', aria: 'Read more: ' | append: article.title -%}</p>
-              </div>
-            </article>
-          {%- endfor -%}
+                <div class="article-card__body">
+                  <p class="article-card__meta">
+                    <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%b %-d, %Y' }}</time>
+                    {%- if section.settings.show_tags and article.tags.size > 0 %} &middot; {{ article.tags.first }}{% endif -%}
+                  </p>
+                  <h3 class="article-card__title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+                  {%- if section.settings.show_excerpt -%}
+                    <p class="article-card__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 22 }}</p>
+                  {%- endif -%}
+                  <p class="article-card__cta">{%- render 'button', label: 'Read more', href: article.url, style: 'tertiary', aria: 'Read more: ' | append: article.title -%}</p>
+                </div>
+              </article>
+            {%- endfor -%}
+          </div>
+          {%- if section.settings.carousel -%}
+            <button class="blogfeat__nav blogfeat__nav--next" type="button" aria-label="Next">{%- render 'icon', name: 'arrow-right', size: 20 -%}</button>
+          {%- endif -%}
         </div>
+        {%- if section.settings.carousel -%}
+          <script>
+          (function(){
+            var root=document.getElementById('blogfeat-{{ section.id }}'); if(!root){return;}
+            var t=root.querySelector('.blogfeat__track'),p=root.querySelector('.blogfeat__nav--prev'),n=root.querySelector('.blogfeat__nav--next');
+            if(!t||!p||!n){return;}
+            function step(){var c=t.querySelector('.article-card');return c?c.getBoundingClientRect().width+32:t.clientWidth*0.8;}
+            function upd(){p.hidden=t.scrollLeft<=4;n.hidden=t.scrollLeft>=t.scrollWidth-t.clientWidth-4;}
+            p.addEventListener('click',function(){t.scrollBy({left:-step(),behavior:'smooth'});});
+            n.addEventListener('click',function(){t.scrollBy({left:step(),behavior:'smooth'});});
+            t.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+          })();
+          </script>
+        {%- endif -%}
       {%- else -%}
         <p class="section__subheading">Posts will appear here once your blog has published articles. Choose a blog in this section's settings.</p>
       {%- endif -%}
@@ -72,6 +95,10 @@
     { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
       { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
     ], "default": "left" },
+    { "type": "header", "content": "Card style" },
+    { "type": "checkbox", "id": "framed", "label": "Framed cards (offset brand panel, like the books)", "default": true },
+    { "type": "color", "id": "frame_color", "label": "Frame color", "info": "Leave blank to use the page's brand color." },
+    { "type": "checkbox", "id": "carousel", "label": "Swipe carousel (turn the pages)", "default": true },
     { "type": "header", "content": "Appearance" },
     { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
       { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" }, { "value": "surface", "label": "White" }, { "value": "cream", "label": "Cream" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
