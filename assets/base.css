@@ -418,7 +418,8 @@ strong, b { font-weight: 600; }
 
 /* Cards stay light + readable on any dark band, with brand-colored titles/icons/CTAs.
    (--color-navy resolves to the brand primary on Institute/MUSA pages.) */
-.bg--navy .card, .bg--institute .card, .bg--musa .card, .bg--burnt .card {
+.bg--navy .card, .bg--institute .card, .bg--musa .card, .bg--burnt .card,
+.bg--navy .article-card, .bg--institute .article-card, .bg--musa .article-card, .bg--burnt .article-card {
   --color-text: #2A2724;
   --color-heading: var(--color-navy);
   --color-muted: #6B6258;
@@ -428,7 +429,9 @@ strong, b { font-weight: 600; }
 }
 .bg--navy .card a, .bg--institute .card a, .bg--musa .card a, .bg--burnt .card a,
 .bg--navy .card .btn--tertiary, .bg--institute .card .btn--tertiary,
-.bg--musa .card .btn--tertiary, .bg--burnt .card .btn--tertiary { color: var(--color-navy); }
+.bg--musa .card .btn--tertiary, .bg--burnt .card .btn--tertiary,
+.bg--navy .article-card a, .bg--institute .article-card a,
+.bg--musa .article-card a, .bg--burnt .article-card a { color: var(--color-navy); }
 
 .btn--sm { min-height: 40px; padding: var(--space-8) var(--space-20); font-size: var(--fs-xs); }
 .btn--lg { min-height: 52px; padding: var(--space-16) var(--space-40); font-size: var(--fs-base); }
