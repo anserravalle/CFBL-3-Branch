@@ -129,10 +129,10 @@
         "text_align": "center",
         "columns": "3",
         "mobile_two_up": false,
-        "card_style": "elevated",
+        "card_style": "outline",
         "footer_label": "",
         "footer_link": "",
-        "bg_scheme": "default",
+        "bg_scheme": "navy",
         "padding_top": 16,
         "padding_bottom": 80
       }
