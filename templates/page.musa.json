@@ -193,6 +193,25 @@
         "padding_bottom": 72
       }
     },
+    "letters_feed": {
+      "type": "blog-feature",
+      "settings": {
+        "eyebrow": "Letters from the Practice",
+        "heading": "Recent Letters",
+        "subheading": "",
+        "blog": "newsletter",
+        "post_limit": 3,
+        "columns": "3",
+        "show_excerpt": true,
+        "show_tags": false,
+        "view_all_label": "All letters",
+        "text_align": "left",
+        "carousel": true,
+        "bg_scheme": "cream",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "articles": {
       "type": "publication-list",
       "settings": {
@@ -308,6 +327,7 @@
     "why",
     "book",
     "essays",
+    "letters_feed",
     "articles",
     "blog_tag_cards_4kgE6Y",
     "subscribe"
