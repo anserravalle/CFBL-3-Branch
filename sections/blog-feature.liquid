@@ -24,16 +24,15 @@
       </div>
 
       {%- if blog != blank and blog.articles_count > 0 -%}
-        {%- assign framed = section.settings.framed -%}
-        <div id="blogfeat-{{ section.id }}" class="blogfeat{% if section.settings.carousel %} blogfeat--carousel{% endif %}"{% if section.settings.frame_color != blank %} style="--frame-color: {{ section.settings.frame_color }};"{% endif %}>
+        <div id="blogfeat-{{ section.id }}" class="blogfeat{% if section.settings.carousel %} blogfeat--carousel{% endif %}">
           {%- if section.settings.carousel -%}
             <button class="blogfeat__nav blogfeat__nav--prev" type="button" aria-label="Previous" hidden>{%- render 'icon', name: 'arrow-right', size: 20 -%}</button>
           {%- endif -%}
           <div class="blogfeat__track{% unless section.settings.carousel %} grid grid--{{ cols }}{% endunless %}"{% if section.settings.carousel %} style="--per: {{ cols }};" tabindex="0" role="group" aria-label="{{ section.settings.heading | default: 'Posts' | escape }}"{% endif %}>
             {%- for article in blog.articles limit: limit -%}
-              <article class="article-card reveal{% if framed %} article-card--framed{% endif %}">
+              <article class="article-card reveal">
                 {%- if article.image -%}
-                  <a class="article-card__media" href="{{ article.url }}" tabindex="-1" aria-hidden="true">
+                  <a href="{{ article.url }}" tabindex="-1" aria-hidden="true">
                     {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw', widths: '320,480,640,800' -%}
                   </a>
                 {%- endif -%}
@@ -96,8 +95,6 @@
       { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
     ], "default": "left" },
     { "type": "header", "content": "Card style" },
-    { "type": "checkbox", "id": "framed", "label": "Framed cards (offset brand panel, like the books)", "default": true },
-    { "type": "color", "id": "frame_color", "label": "Frame color", "info": "Leave blank to use the page's brand color." },
     { "type": "checkbox", "id": "carousel", "label": "Swipe carousel (turn the pages)", "default": true },
     { "type": "header", "content": "Appearance" },
     { "type": "select", "id": "bg_scheme", "label": "Background", "options": [

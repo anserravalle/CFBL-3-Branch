@@ -1262,28 +1262,6 @@ textarea { min-height: 140px; resize: vertical; }
 .article-card__excerpt { color: var(--color-text); margin-bottom: var(--space-20); }
 .article-card__cta { margin-top: auto; }
 
-/* Framed post cards: offset brand-color panel behind the image (echoes the book cover) */
-.article-card--framed .article-card__media {
-  position: relative;
-  display: block;
-  padding: 0 14px 14px 0;
-}
-.article-card--framed .article-card__media::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 14px; left: 14px; right: 0; bottom: 0;
-  background: var(--frame-color, var(--color-navy));
-  border-radius: var(--radius-card);
-}
-.article-card--framed .article-card__media .media,
-.article-card--framed .article-card__media img {
-  position: relative;
-  z-index: 1;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-}
-
 /* Swipe carousel ("turn the pages") */
 .blogfeat { position: relative; }
 .blogfeat--carousel .blogfeat__track {
@@ -1301,10 +1279,10 @@ textarea { min-height: 140px; resize: vertical; }
 .blogfeat--carousel .article-card {
   scroll-snap-align: start;
   flex: 0 0 auto;
-  width: calc((100% - (var(--per, 3) - 1) * var(--space-32)) / var(--per, 3));
+  width: clamp(280px, 38%, 400px);
 }
-@media (max-width: 989px) {
-  .blogfeat--carousel .article-card { width: 80%; }
+@media (max-width: 749px) {
+  .blogfeat--carousel .article-card { width: 84%; }
 }
 .blogfeat__nav {
   position: absolute;
