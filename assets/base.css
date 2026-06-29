@@ -419,7 +419,8 @@ strong, b { font-weight: 600; }
 /* Cards stay light + readable on any dark band, with brand-colored titles/icons/CTAs.
    (--color-navy resolves to the brand primary on Institute/MUSA pages.) */
 .bg--navy .card, .bg--institute .card, .bg--musa .card, .bg--burnt .card,
-.bg--navy .article-card, .bg--institute .article-card, .bg--musa .article-card, .bg--burnt .article-card {
+.bg--navy .article-card, .bg--institute .article-card, .bg--musa .article-card, .bg--burnt .article-card,
+.bg--navy .testimonial, .bg--institute .testimonial, .bg--musa .testimonial, .bg--burnt .testimonial {
   --color-text: #2A2724;
   --color-heading: var(--color-navy);
   --color-muted: #6B6258;
