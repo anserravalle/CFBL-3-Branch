@@ -161,7 +161,7 @@
         "cover_ratio": "2-3",
         "cover_caption": "The drawing is real. He made it on our first date.",
         "cover_frame": true,
-        "frame_color": "#3D2B22",
+        "frame_color": "#3d2b22",
         "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway, a reckoning with love, deception, and the long work of coming home to herself.</p>",
         "primary_label": "Coming Soon",
         "primary_link": "/pages/the-stories-we-told",
@@ -179,16 +179,15 @@
         "heading": "From the Desk",
         "subheading": "",
         "blog": "essays",
-        "post_limit": 3,
+        "post_limit": 6,
         "columns": "3",
+        "show_image": true,
         "show_excerpt": true,
         "show_tags": false,
         "view_all_label": "All essays",
         "text_align": "left",
-        "framed": true,
-        "frame_color": "",
         "carousel": true,
-        "bg_scheme": "cream",
+        "bg_scheme": "sand",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -196,11 +195,11 @@
     "letters_feed": {
       "type": "blog-feature",
       "settings": {
-        "eyebrow": "Letters from the Practice",
-        "heading": "Recent Letters",
+        "eyebrow": "Monthly Newsletter",
+        "heading": "Letters From the Practice",
         "subheading": "",
         "blog": "newsletter",
-        "post_limit": 3,
+        "post_limit": 6,
         "columns": "3",
         "show_image": false,
         "show_excerpt": true,
@@ -208,7 +207,7 @@
         "view_all_label": "All letters",
         "text_align": "left",
         "carousel": true,
-        "bg_scheme": "cream",
+        "bg_scheme": "burnt",
         "padding_top": 72,
         "padding_bottom": 72
       }
