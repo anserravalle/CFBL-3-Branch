@@ -24,11 +24,11 @@
         "image_alt": "",
         "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "#9d654e",
         "show_shape": false,
         "layout": "split",
         "mobile_image_first": false,
-        "bg_scheme": "sand",
+        "bg_scheme": "cream",
         "padding_top": 96,
         "padding_bottom": 96
       }
@@ -119,7 +119,7 @@
         "primary_link": "",
         "secondary_label": "",
         "secondary_link": "",
-        "bg_scheme": "default",
+        "bg_scheme": "cream",
         "padding_top": 72,
         "padding_bottom": 24
       }
@@ -145,7 +145,7 @@
         "heading": "",
         "subheading": "",
         "columns": 1,
-        "bg_scheme": "sand",
+        "bg_scheme": "cream",
         "padding_top": 48,
         "padding_bottom": 72
       }
@@ -161,7 +161,7 @@
         "cover_ratio": "2-3",
         "cover_caption": "The drawing is real. He made it on our first date.",
         "cover_frame": true,
-        "frame_color": "#6e1f23",
+        "frame_color": "#9D654E",
         "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway, a reckoning with love, deception, and the long work of coming home to herself.</p>",
         "primary_label": "Coming Soon",
         "primary_link": "/pages/the-stories-we-told",
@@ -185,7 +185,7 @@
         "show_tags": false,
         "view_all_label": "All essays",
         "text_align": "left",
-        "bg_scheme": "sand",
+        "bg_scheme": "cream",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -200,7 +200,7 @@
         "limit": 4,
         "footer_label": "Coming Soon",
         "footer_link": "/pages/publications",
-        "bg_scheme": "sand",
+        "bg_scheme": "cream",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -217,7 +217,7 @@
         "success_text": "Thank you for subscribing.",
         "fine_print": "Your email is never shared.",
         "text_align": "center",
-        "bg_scheme": "sand",
+        "bg_scheme": "cream",
         "padding_top": 72,
         "padding_bottom": 88
       }
