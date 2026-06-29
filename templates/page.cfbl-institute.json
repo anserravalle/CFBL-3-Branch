@@ -13,7 +13,7 @@
       "type": "hero-brand",
       "settings": {
         "eyebrow": "CFBL Institute",
-        "heading": "Continuing education for clinicians who carry a caseload",
+        "heading": "Continuing education for clinicians",
         "subheading": "<p>Clinically rigorous training in trauma-informed practice, psychological assessment, and applied clinical reasoning, taught by a practicing psychologist.</p>",
         "use_h1": true,
         "primary_label": "View Trainings",
@@ -94,7 +94,7 @@
         "text_align": "center",
         "columns": "3",
         "mobile_two_up": false,
-        "card_style": "elevated",
+        "card_style": "framed",
         "footer_label": "",
         "footer_link": "",
         "bg_scheme": "sage",
