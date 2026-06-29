@@ -161,7 +161,7 @@
         "cover_ratio": "2-3",
         "cover_caption": "The drawing is real. He made it on our first date.",
         "cover_frame": true,
-        "frame_color": "#9D654E",
+        "frame_color": "#3D2B22",
         "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway, a reckoning with love, deception, and the long work of coming home to herself.</p>",
         "primary_label": "Coming Soon",
         "primary_link": "/pages/the-stories-we-told",
@@ -185,6 +185,9 @@
         "show_tags": false,
         "view_all_label": "All essays",
         "text_align": "left",
+        "framed": true,
+        "frame_color": "",
+        "carousel": true,
         "bg_scheme": "cream",
         "padding_top": 72,
         "padding_bottom": 72
