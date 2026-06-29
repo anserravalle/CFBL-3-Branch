@@ -145,7 +145,7 @@
         "heading": "",
         "subheading": "",
         "columns": 1,
-        "bg_scheme": "cream",
+        "bg_scheme": "musa",
         "padding_top": 48,
         "padding_bottom": 72
       }
@@ -187,7 +187,7 @@
         "view_all_label": "All essays",
         "text_align": "left",
         "carousel": true,
-        "bg_scheme": "sand",
+        "bg_scheme": "burnt",
         "padding_top": 72,
         "padding_bottom": 72
       }
