@@ -1277,7 +1277,12 @@ textarea { min-height: 140px; resize: vertical; }
   border-radius: var(--radius-card);
 }
 .article-card--framed .article-card__media .media,
-.article-card--framed .article-card__media img { position: relative; z-index: 1; }
+.article-card--framed .article-card__media img {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
 
 /* Swipe carousel ("turn the pages") */
 .blogfeat { position: relative; }
