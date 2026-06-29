@@ -228,9 +228,9 @@
     "clinician": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/Untitled_Email_Signature.jpg",
+        "image": "shopify://shop_images/Untitled_-_June_27_2026_at_12.56.12.png",
         "image_alt": "Dr. Angela (Niki) Serravalle",
-        "image_ratio": "16-9",
+        "image_ratio": "1-1",
         "image_frame": true,
         "frame_color": "#2b5275",
         "image_position": "right",
