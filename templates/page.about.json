@@ -94,6 +94,19 @@
     "team": {
       "type": "images-with-text-scrolling",
       "blocks": {
+        "item_qmzmbJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/FullSizeRender_fc007d0c-c164-4742-9ecb-917e7b1c71b4.heic",
+            "title": "Brittany Heitmann",
+            "role": "LPCMH, NCC",
+            "content": "<p>Brittany Heitmann is a Licensed Professional Counselor of Mental Health (LPCMH) with a strong foundation in clinical care and human services. She holds a Master’s degree in Clinical Mental Health, a Master’s degree in Human Services, and a Bachelor’s degree in Psychology.</p><p>Brittany specializes in family systems work and has extensive experience supporting families and individuals navigating trauma, grief, and communication challenges. Her approach is grounded in evidence-based practice and shaped by a deep respect for each client’s story, strengths, and values.</p><p>She has advanced training in Cognitive Behavioral Therapy (CBT), Trauma-Focused Cognitive Behavioral Therapy (TF-CBT), and the Child and Family Traumatic Stress Intervention (CFTSI). Brittany believes that every person has a unique sense of purpose and a personal “why” that can guide meaningful change. Using a solution-focused approach, she partners with clients to develop practical, values-driven plans that support healing, growth, and lasting progress.</p>",
+            "phone": "",
+            "email": "BHeitmann@balancedlivingde.com",
+            "bio_link": "",
+            "bio_link_label": "View full bio"
+          }
+        },
         "dr_niki_serravalle": {
           "type": "item",
           "settings": {
@@ -201,6 +214,7 @@
         }
       },
       "block_order": [
+        "item_qmzmbJ",
         "dr_niki_serravalle",
         "jada_senter",
         "amanda_foxwell",
