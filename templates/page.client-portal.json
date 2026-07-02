@@ -35,10 +35,11 @@
     },
     "body": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "show_title": false,
         "eyebrow": "",
+        "logo_alt": "",
+        "logo_width": 260,
         "text_align": "left",
         "bg_scheme": "default",
         "padding_top": 24,
