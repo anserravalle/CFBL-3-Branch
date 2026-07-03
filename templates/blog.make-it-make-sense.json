@@ -15,6 +15,8 @@
         "eyebrow": "The Blog",
         "heading": "Make It Make Sense",
         "heading_tag": "h1",
+        "blog": "balanced-living-blog-make-it-make-sense",
+        "article": "balanced-living-blog-make-it-make-sense/why-matching-with-your-therapist-matters",
         "current_label": "Latest",
         "read_label": "Read the latest",
         "archive_label": "",
@@ -27,17 +29,69 @@
     "themes": {
       "type": "blog-tag-cards",
       "blocks": {
-        "field": { "type": "tag", "settings": { "title": "The Field", "tag": "The Field", "icon": "compass", "description": "<p>Notes on the profession, research, and where psychology is heading.</p>" } },
-        "therapy": { "type": "tag", "settings": { "title": "On Therapy", "tag": "On Therapy", "icon": "heart", "description": "<p>How change happens in the room, and what good care asks of us.</p>" } },
-        "diagnostics": { "type": "tag", "settings": { "title": "On Diagnosis", "tag": "On Diagnosis", "icon": "shield", "description": "<p>Assessment, diagnosis, and the search for clarity.</p>" } },
-        "culture": { "type": "tag", "settings": { "title": "The Cultural Moment", "tag": "The Cultural Moment", "icon": "star", "description": "<p>Mental health in the culture we are actually living in.</p>" } },
-        "human": { "type": "tag", "settings": { "title": "On Relationships", "tag": "On Relationships", "icon": "leaf", "description": "<p>Connection, attachment, and the relationships that shape us.</p>" } }
+        "field": {
+          "type": "tag",
+          "settings": {
+            "title": "The Field",
+            "tag": "The Field",
+            "description": "<p>Notes on the profession, research, and where psychology is heading.</p>",
+            "icon": "compass",
+            "link": ""
+          }
+        },
+        "therapy": {
+          "type": "tag",
+          "settings": {
+            "title": "On Therapy",
+            "tag": "On Therapy",
+            "description": "<p>How change happens in the room, and what good care asks of us.</p>",
+            "icon": "heart",
+            "link": ""
+          }
+        },
+        "diagnostics": {
+          "type": "tag",
+          "settings": {
+            "title": "On Diagnosis",
+            "tag": "On Diagnosis",
+            "description": "<p>Assessment, diagnosis, and the search for clarity.</p>",
+            "icon": "shield",
+            "link": ""
+          }
+        },
+        "culture": {
+          "type": "tag",
+          "settings": {
+            "title": "The Cultural Moment",
+            "tag": "The Cultural Moment",
+            "description": "<p>Mental health in the culture we are actually living in.</p>",
+            "icon": "star",
+            "link": ""
+          }
+        },
+        "human": {
+          "type": "tag",
+          "settings": {
+            "title": "On Relationships",
+            "tag": "On Relationships",
+            "description": "<p>Connection, attachment, and the relationships that shape us.</p>",
+            "icon": "leaf",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["field", "therapy", "diagnostics", "culture", "human"],
+      "block_order": [
+        "field",
+        "therapy",
+        "diagnostics",
+        "culture",
+        "human"
+      ],
       "settings": {
         "eyebrow": "Explore by Theme",
         "heading": "Follow a Thread",
         "subheading": "Each card opens every piece tagged with that theme.",
+        "blog": "",
         "text_align": "center",
         "columns": "3",
         "card_style": "framed",
@@ -56,5 +110,9 @@
       }
     }
   },
-  "order": ["featured", "themes", "list"]
+  "order": [
+    "featured",
+    "themes",
+    "list"
+  ]
 }
