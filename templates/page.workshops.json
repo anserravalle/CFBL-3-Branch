@@ -43,7 +43,7 @@
         "image_alt": "",
         "image_ratio": "4-3",
         "image_frame": true,
-        "frame_color": "#6F8F7A",
+        "frame_color": "#6f8f7a",
         "show_shape": true,
         "layout": "split",
         "mobile_image_first": false,
@@ -58,6 +58,8 @@
       "settings": {
         "show_title": false,
         "eyebrow": "Groups & Workshops",
+        "logo_alt": "",
+        "logo_width": 260,
         "text_align": "center",
         "bg_scheme": "default",
         "padding_top": 80,
@@ -70,8 +72,8 @@
         "event_rX78RY": {
           "type": "event",
           "settings": {
-            "month": "OCT",
-            "day": "10",
+            "month": "AUG",
+            "day": "21",
             "title": "Nature Based EMDR",
             "time": "12:00-3:00pm",
             "location": "Virtual",
