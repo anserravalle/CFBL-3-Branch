@@ -14,6 +14,13 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "text_P3GUXV": {
+          "type": "text",
+          "settings": {
+            "title": "Contact Info",
+            "content": "<p>Office (302) 608-3780</p><p>Fax (302) 355-3226</p><p>5879 Summit Bridge Road Townsed, DE 19734</p>"
+          }
+        },
         "explore": {
           "type": "menu",
           "settings": {
@@ -39,27 +46,16 @@
           "type": "text",
           "settings": {
             "title": "Office Hours",
-            "content": "<p>Monday: 10 am-6 pm<br>Tuesday: 10 am-6 pm<br>Wednesday: 10 am-6 pm<br>Thursday: 10 am-6 pm<br>Friday: 10 am-4 pm<br>Saturday / Sunday: Closed</p>"
-          }
-        },
-        "signup": {
-          "type": "newsletter",
-          "settings": {
-            "title": "Stay in Touch",
-            "text": "New writing, events, and updates from CFBL. No noise, just the work.",
-            "placeholder": "Email address",
-            "button_label": "Subscribe",
-            "list_tag": "newsletter",
-            "success_text": "Thank you for subscribing."
+            "content": "<p>Monday: 10 am-6 pm<br/>Tuesday: 10 am-6 pm<br/>Wednesday: 10 am-6 pm<br/>Thursday: 10 am-6 pm<br/>Friday: 10 am-4 pm<br/>Saturday / Sunday: Closed</p>"
           }
         }
       },
       "block_order": [
+        "text_P3GUXV",
         "explore",
         "clients",
         "professionals",
-        "hours",
-        "signup"
+        "hours"
       ],
       "settings": {
         "footer_title": "Center for Balanced Living",
