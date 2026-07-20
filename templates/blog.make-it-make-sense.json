@@ -21,7 +21,7 @@
         "read_label": "Read the latest",
         "archive_label": "",
         "image_position": "left",
-        "bg_scheme": "surface",
+        "bg_scheme": "default",
         "padding_top": 72,
         "padding_bottom": 48
       }
