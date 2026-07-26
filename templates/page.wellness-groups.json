@@ -36,6 +36,36 @@
     "now_forming": {
       "type": "service-card-grid",
       "blocks": {
+        "card_yQpmzt": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Thursday August 21 at 5:00pm (1 hour)",
+            "icon": "award",
+            "image": "shopify://shop_images/cfblintitutelogo_69230b38-3a8a-4b19-a505-d43a3903caa5.png",
+            "image_alt": "parent support group",
+            "image_ratio": "3-2",
+            "title": "Parenting With Purpose: Monthly Virtual Parent Support Group",
+            "body": "<p><strong>Parenting With Purpose</strong> is a monthly virtual support group designed for parents and caregivers who want practical strategies, professional guidance, and a supportive community of other parents.</p><p>Each session focuses on a different parenting topic while providing opportunities for discussion, reflection, and skill-building that you can immediately apply at home.</p>",
+            "link_label": "Register (free)",
+            "link": "shopify://products/parenting-with-purpose-monthly-virtual-parent-support-group"
+          }
+        },
+        "rooted": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Friday, July 10 at 5:00 PM (1 hour)",
+            "icon": "leaf",
+            "image": "shopify://shop_images/Untitled_design.png",
+            "image_alt": "Rooted & Rising (with Amanda)",
+            "image_ratio": "4-3",
+            "title": "Rooted & Rising (with Amanda)",
+            "body": "<p>Understanding the nervous system through creative expression. An art-therapy group led by Amanda Foxwell, in person.</p><p><strong>$25</strong>, one hour, all art supplies included.</p>",
+            "link_label": "Register ($25)",
+            "link": "/products/rooted-rising-art-therapy-group-with-amanda-foxwell"
+          }
+        },
         "petloss_live": {
           "type": "card",
           "settings": {
@@ -65,24 +95,10 @@
             "link_label": "Register (free)",
             "link": "/products/pet-loss-support-group-virtual"
           }
-        },
-        "rooted": {
-          "type": "card",
-          "settings": {
-            "logo_alt": "",
-            "eyebrow": "Friday, July 10 at 5:00 PM (1 hour)",
-            "icon": "leaf",
-            "image": "shopify://shop_images/Untitled_design.png",
-            "image_alt": "Rooted & Rising (with Amanda)",
-            "image_ratio": "4-3",
-            "title": "Rooted & Rising (with Amanda)",
-            "body": "<p>Understanding the nervous system through creative expression. An art-therapy group led by Amanda Foxwell, in person.</p><p><strong>$25</strong>, one hour, all art supplies included.</p>",
-            "link_label": "Register ($25)",
-            "link": "/products/rooted-rising-art-therapy-group-with-amanda-foxwell"
-          }
         }
       },
       "block_order": [
+        "card_yQpmzt",
         "rooted",
         "petloss_live",
         "petloss_virtual"
