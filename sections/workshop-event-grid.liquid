@@ -41,7 +41,16 @@
                   <p class="event__detail" style="margin-top:var(--space-8);color:var(--color-terracotta);font-weight:600;">Sold out / registration closed</p>
                 {%- endif -%}
               </div>
-              <div class="event__cta">
+              <div class="event__cta" style="display:flex;gap:var(--space-8);flex-wrap:wrap;align-items:center;">
+                {%- liquid
+                  assign learn_url = block.settings.learn_more
+                  if learn_url == blank and event_product != blank
+                    assign learn_url = event_product.url
+                  endif
+                -%}
+                {%- if learn_url != blank -%}
+                  {%- render 'button', label: block.settings.learn_more_label | default: 'Learn More', href: learn_url, style: 'tertiary', class: 'btn--sm', aria: 'Learn more about ' | append: block.settings.title -%}
+                {%- endif -%}
                 {%- if event_product != blank -%}
                   {%- comment -%} Native Shopify registration: add the seat product to cart and check out. Seat limits come from product inventory. {%- endcomment -%}
                   {%- if event_product.available -%}
@@ -93,9 +102,12 @@
       { "type": "text", "id": "time", "label": "Time", "default": "6:00-7:30 PM" },
       { "type": "text", "id": "location", "label": "Location", "default": "Middletown, DE" },
       { "type": "text", "id": "description", "label": "Description" },
+      { "type": "header", "content": "Learn more" },
+      { "type": "url", "id": "learn_more", "label": "Learn More link", "info": "The detail page for this offering. Leave blank to use the selected product's page automatically." },
+      { "type": "text", "id": "learn_more_label", "label": "Learn More button label", "default": "Learn More" },
       { "type": "header", "content": "Registration" },
       { "type": "product", "id": "product", "label": "Register via product (recommended)", "info": "Link this event to a Shopify product to take registrations and payment through checkout. Seat limits use the product's inventory." },
-      { "type": "text", "id": "link_label", "label": "Button label", "default": "Register" },
+      { "type": "text", "id": "link_label", "label": "Register button label", "default": "Register" },
       { "type": "url", "id": "link", "label": "External link (used only if no product is selected)" }
     ]}
   ],
