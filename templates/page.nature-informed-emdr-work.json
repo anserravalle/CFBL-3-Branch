@@ -55,7 +55,6 @@
     },
     "header": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "show_title": false,
         "eyebrow": "Groups & Workshops",
@@ -72,6 +71,7 @@
       "blocks": {
         "event_rX78RY": {
           "type": "event",
+          "disabled": true,
           "settings": {
             "month": "AUG",
             "day": "21",
