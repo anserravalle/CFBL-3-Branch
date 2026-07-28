@@ -29,6 +29,7 @@
     },
     "hero_brand_gmVhdD": {
       "type": "hero-brand",
+      "disabled": true,
       "name": "Hero",
       "settings": {
         "eyebrow": "Workshops at Center for Balanced Living",
@@ -74,7 +75,7 @@
           "settings": {
             "month": "AUG",
             "day": "21",
-            "title": "Nature Based EMDR",
+            "title": "Nature-Informed EMDR Workshop | 3 EMDRIA CE Credits",
             "time": "12:00-3:00pm",
             "location": "Virtual",
             "description": "This three-hour workshop is for EMDR clinicians who already know how to do the work and want to think more carefully about when and how nature-informed elements belong inside a standard EMDR case. It is not a new protocol. The eight-phase, three-pronged structure does not change.",
