@@ -148,7 +148,6 @@
         },
         "brianna_patton": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/brianna.jpg",
             "title": "Brianna Patton",
@@ -199,6 +198,19 @@
             "bio_link_label": "View full bio"
           }
         },
+        "item_4JX9wR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Parmeet_Singh.png",
+            "title": "Parmeet Singh",
+            "role": "Postdoctoral Assistant",
+            "content": "<p>Parmeet Singh is a proud Delawarean who graduated Magna Cum Laude with a Bachelor of Arts in Psychology from the University of Delaware after attending Salesianum High School. </p><p>Parmeet is completing his internship at Immaculata University in their doctoral degree in Clinical Psychology (PsyD). </p><p>He works at Meadowood Transition Program as a Registered Behavior Technician. Parmeet maintains current membership in the American Psychological Association and the National Society of Leadership and Success. </p><p>Parmeet assists at the Center for Balanced Living by providing comprehensive assessments. His areas of interest are learning disabilities and primary care psychology, in particular psychosocial oncology. </p><p>Parmeet speaks fluent English, Hindi, and Punjabi. In his spare time, Parmeet enjoys traveling, relaxing with his family, making pizzas with his niece, and catching up on sports.</p>",
+            "phone": "",
+            "email": "psingh@balancedlivingde.com",
+            "bio_link": "",
+            "bio_link_label": "View full bio"
+          }
+        },
         "kimberly_brown": {
           "type": "item",
           "settings": {
@@ -222,6 +234,7 @@
         "shay_oliver",
         "item_qmzmbJ",
         "kim_shiflett",
+        "item_4JX9wR",
         "kimberly_brown"
       ],
       "settings": {
