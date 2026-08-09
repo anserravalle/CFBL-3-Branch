@@ -17,7 +17,7 @@ Applied directly to the flattened cover, for **direction only** — not final ar
 - `front_optionA_15pct-lift.png` / `front_optionB_20pct-lift.png` — front, +15% / +20% lift
 - `fullwrap_optionA_15pct-lift.png` / `fullwrap_optionB_20pct-lift.png` — full wraps
 - `backcover_first-person-DRAFT.png` — back cover with the first-person draft copy + new headshot
-- `author-headshot_BW_waist-up.png` — the supplied photo, isolated, waist-up, black and white
+- `author-headshot_BW_studio-sharpened.png` — the supplied studio B&W headshot with the soft hair sharpened (strand detail recovered, no halos)
 - `thumbnail-test_200px_original-vs-A-vs-B.png` — the 200px thumbnail test
 
 ### What the comps include
@@ -30,7 +30,7 @@ Applied directly to the flattened cover, for **direction only** — not final ar
   fingers stop reading — a receding soft-focus fix, not an anatomical redraw
 - Upper third + left edge lifted toward warm stone/bone, lower-right kept dark
 - Back-cover **description reset in first person** (draft), author bio left third-person
-- **New B&W author headshot** placed in the back-cover photo slot
+- **New B&W studio headshot** (hair sharpened) placed in the back-cover photo slot
 
 ## Still needs supplied files / layered source
 - **Approved back-cover copy** — the first-person text here is a faithful draft
