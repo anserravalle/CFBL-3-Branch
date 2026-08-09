@@ -29,7 +29,9 @@ Applied directly to the flattened cover, for **direction only** — not final ar
 - **Female hand** (draped over his neck) softened into the smoke so the malformed
   fingers stop reading — a receding soft-focus fix, not an anatomical redraw
 - Upper third + left edge lifted toward warm stone/bone, lower-right kept dark
-- Back-cover **description reset in first person** (draft), author bio left third-person
+- Back-cover **description reset in first person** (draft, no em dashes)
+- **Author bio updated** (clinical psychological evaluation; nature-based sciences; integrated trauma care) and **website** changed to balancedlivingde.com
+- Author headshot **softly warmed to a duotone** to match the palette
 - **New B&W studio headshot** (hair sharpened) placed in the back-cover photo slot
 
 ## Still needs supplied files / layered source
