@@ -1,111 +1,79 @@
 # The Stories We Told — KDP Print Cover Production Kit
 
-**Why this exists:** the design comps in `comps/` are low-resolution direction built on a
-flattened JPEG with the text baked into the art. They cannot be uploaded to KDP. A print
-cover must be assembled at 300 DPI from **clean, high-resolution artwork** (the couple/smoke
-image with no text on it). This kit has everything needed to build that file — the exact
-dimensions, the finalized copy, and the specs — so it can be assembled cleanly once the
-high-res art exists.
+Trade paperback memoir. **Front is now typographic — no AI art, no external image dependency —
+so front and back are built at 300 DPI from scratch.** The only gate on the full wrap is the
+final even page count (sets the spine).
 
 ---
 
-## The one blocker: high-resolution art
+## Trim & paper — LOCKED
+- **Trim: 5.5" × 8.5"**, **cream** paper, B&W interior.
+- Bleed: 0.125" all sides. Safe zone: keep type ≥ 0.25" inside every trim edge.
+- 300 DPI. KDP accepts RGB (it converts); CMYK optional.
 
-The cover art is AI-generated and low-resolution, with the title/subtitle already burned in.
-To finish, we need the **base couple/smoke image, text-free, at print resolution.** Options,
-best first:
+## Dimensions (300 DPI)
+- Full-bleed panel height: 8.5 + 0.25 = **2625 px**
+- Front standalone (bleed all sides): 5.75" = **1725 px** wide × 2625 px  ✅ built
+- Back panel (bleed 3 sides): 5.625" = 1687 px; built at 1725 for the standalone proof ✅
+- **Full wrap** = 5.5 + 5.5 + spine + 0.25" bleed wide × **8.75" (2625 px)** tall
 
-1. **Regenerate** it in the same AI tool at its largest output (2K–4K), with **no text**, and
-   framed a little loose so it can be cropped to trim + bleed.
-2. **AI-upscale** the existing art (Topaz, Photoshop "Super Resolution," Canva enhancer, or a
-   free upscaler) to at least the pixel sizes below. Atmospheric art upscales tolerably;
-   text does not — which is why the text must be re-set fresh, not upscaled.
+**Spine (cream) = page count × 0.0025".** Even page count required. Build to the *final* count,
+not an estimate — the interior tightening pass is still open.
 
-Once that art exists, the type below is dropped on top crisply and exported.
+| Pages | Spine | Full-wrap width |
+|---|---|---|
+| 260 | 0.650" (195 px) | 11.90" (3570 px) |
+| 280 | 0.700" (210 px) | 11.95" (3585 px) |
+| 300 | 0.750" (225 px) | 12.00" (3600 px) |
+| 320 | 0.800" (240 px) | 12.05" (3615 px) |
 
----
-
-## Exact dimensions (300 DPI)
-
-Full cover is **one wrap**: back + spine + front, plus 0.125" bleed on all four sides.
-
-**Trim 5.5" × 8.5" — LOCKED — cream paper:**
-- Height: 8.5" + 0.25" bleed = **2625 px**
-- Front/back panel width: 5.5" + 0.125" outer bleed = 5.625" = **1687 px**; standalone front with full bleed = 5.75" = **1725 px**
-- Spine width depends on page count (below), added between them.
-
-**Full-wrap width = 1837 (back) + spine + 1837 (front).**
-
-**Spine width by page count** (black-and-white interior):
-| Paper | Formula | 200 pg | 250 pg | 300 pg |
-|---|---|---|---|---|
-| White (60#) | pages × 0.002252" × 300 | 135 px | 169 px | 203 px |
-| Cream (60#) | pages × 0.0025" × 300 | 150 px | 188 px | 225 px |
-
-> Fill in your final page count and paper. Example: 6×9, 260 pages, cream →
-> spine ≈ 195 px → full wrap ≈ 1837 + 195 + 1837 = **3869 × 2775 px**.
-
-**Safe zone:** keep all text ≥ 0.25" (75 px) inside every trim edge and ≥ 0.0625" (19 px)
-off the spine folds. Text on the spine only if page count ≥ 100.
+Spine text needs 0.0625" clearance from each fold. **Build to KDP's downloaded template** (and a
+separate IngramSpark template if used — their stocks and spines differ).
 
 ---
 
-## Finalized copy (paste-ready)
-
-**Front**
-- Title: **The Stories We Told**
-- Subtitle (two lines, oxblood small caps): **THE DANCE BETWEEN A CODEPENDENT / AND A COMPULSIVE LIAR**
-- Below subtitle (cream small caps, smaller, space above): **A MEMOIR**
-- Author: **NIKI SERRAVALLE** (no credentials on the front)
-
-**Spine:** The Stories We Told  ·  NIKI SERRAVALLE
-
-**Back — description (first-person DRAFT; replace with the book's approved copy):**
-> In *The Stories We Told*, I examine the intimate and disorienting bond between a codependent
-> and a compulsive liar. Through a deeply personal memoir, I trace the emotional logic of
-> attachment, the seduction of explanation, and the slow unraveling that occurs when love
-> becomes organized around confusion, rescue, and self-betrayal.
->
-> This is a story about longing, self-deception, trauma, and the narratives we build to survive
-> what we cannot yet bear to name. With psychological insight and emotional precision, I invite
-> you into the complicated dance between truth and illusion, and the cost of confusing being
-> chosen with being loved.
-
-**Back — author bio:**
-> **NIKI SERRAVALLE, PSY.D., LPCMH, NCC** is a psychologist specializing in clinical
-> psychological evaluation, and a trauma-informed therapist. She is the founder of the Center
-> for Balanced Living in Delaware and a sought-after speaker and educator. Her work lives at the
-> intersection of psychology, nature-based sciences, integrated trauma care, and the human
-> stories that shape who we become.
-
-**Back — website:** balancedlivingde.com
-**Back — photo:** `comps/author-headshot_BW_natural.png` (or `_color_natural.png`) — high-res, ready.
-**No em dashes anywhere in the cover copy.**
+## Delivery formats
+- **Print:** single-page PDF of the full wrap, fonts embedded, flattened, 300 DPI.
+- **Ebook:** flat front only, **1600 × 2560 px**, RGB, JPEG < 50 MB.  ✅ built
+- **Social / reveal:** hi-res front-only JPEG (1650 × 2550).  ✅ built
 
 ---
 
-## Type & color specs
+## Copy — FINAL (front locked; back pending your approved block)
 
-- **Title** — high-contrast Didone display serif (the comp uses one like *InstrumentSerif* or
-  *Gloock*). Cream **#EEE5DA**. Stacked: "The / Stories / We / Told," with "Stories" and "Told"
-  large and "The"/"We" smaller.
-- **Subtitle / "A Memoir" / spine / bio heading** — classical serif small caps, generous
-  letterspacing. Oxblood **#A56E6A** for the subtitle and headings; cream **#EEE5DA** for
-  "A Memoir."
-- **Body (back blurb + bio)** — old-style serif (e.g., a Garamond/Minion), warm off-white
-  **#DAD6D0**, ~11–12 pt, left-aligned.
-- **Threads / accents** — oxblood, carried in the art.
-- **Tonal direction** — upper third and left edge lifted toward warm stone/bone; lower-right
-  kept dark (see the two lift options in `comps/`).
+**Front** ✅ built
+- Title: **The Stories We Told** (Gloock Didone)
+- Subtitle, two lines, oxblood small caps: **The Dance Between a Codependent / and a Compulsive Liar**
+- **A Memoir**
+- Byline: **Dr. Niki Serravalle** (no post-nominals)
+
+**Spine:** The Stories We Told · Dr. Niki Serravalle
+
+**Back — description:** ⛔ PENDING. Set the **approved short back-cover copy, verbatim, do not
+rewrite.** Opens on "She is a psychologist." (The old first-person-of-the-catalog paragraph is
+retired.)
+
+**Back — bio:** ⛔ PENDING one final version. Standardize (your note quoted "licensed clinical
+psychologist, author, and teacher"), cut "sought-after speaker," and state this is her **first
+memoir**.
+
+**Back — website:** balancedlivingde.com ✅
+**Back — photo:** confirm final treatment (natural B&W vs warm duotone of the real photo).
+**No em dashes in the cover copy.**
 
 ---
 
-## Two ways to finish
+## Type & color
+- Title: **Gloock** (Didone), ink brown **#261E1C** on bone **#EAE2D4**.
+- Small caps (subtitle, "A Memoir", byline, bio heading): **ArsenalSC**; oxblood **#96342E** / **#A56E6A**.
+- Back body: **Crimson Pro**, warm off-white **#DDD8D1** on textured oxblood ground.
+- Accent: single red thread **#9E2824**, concentrated as stitches over the fracture, off the title.
 
-**A. I assemble it.** Send me: (1) the base art text-free at the pixel sizes above, and
-(2) your trim size, final page count, and paper (white/cream). I'll build the full wrap to the
-KDP template and export a print-ready PDF.
+## Production checks
+- Rebuild spine to the **final even page count** after interior tightening.
+- Barcode keep-out: true **2.0 × 1.2"** clear area, 0.25" inside the bottom-right trim (KDP prints it). ✅
+- **ISBN on the artwork must match the one you register.** Send the assigned ISBN.
 
-**B. You assemble it** in Canva (KDP cover template), Affinity/Photoshop, or Amazon's free KDP
-Cover Creator, using this kit. I'll supply any element (crisp type as PNGs, the headshot,
-color values) on request.
+## To finish the wrap, I need
+1. Approved **short back-cover copy** (verbatim).  2. Final **bio**.  3. **Photo** choice.
+4. Final **page count** + confirm cream.  5. Registered **ISBN**.
