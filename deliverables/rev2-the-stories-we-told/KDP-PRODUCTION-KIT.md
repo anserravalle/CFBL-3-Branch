@@ -29,9 +29,9 @@ Once that art exists, the type below is dropped on top crisply and exported.
 
 Full cover is **one wrap**: back + spine + front, plus 0.125" bleed on all four sides.
 
-**Trim 6" × 9" (standard memoir):**
-- Height: 9" + 0.25" bleed = **2775 px**
-- Front (and back) width: 6" + 0.125" outer bleed = 6.125" = **1837 px** each
+**Trim 5.5" × 8.5" — LOCKED — cream paper:**
+- Height: 8.5" + 0.25" bleed = **2625 px**
+- Front/back panel width: 5.5" + 0.125" outer bleed = 5.625" = **1687 px**; standalone front with full bleed = 5.75" = **1725 px**
 - Spine width depends on page count (below), added between them.
 
 **Full-wrap width = 1837 (back) + spine + 1837 (front).**
