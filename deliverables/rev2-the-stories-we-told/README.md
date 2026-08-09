@@ -17,7 +17,8 @@ Applied directly to the flattened cover, for **direction only** — not final ar
 - `front_optionA_15pct-lift.png` / `front_optionB_20pct-lift.png` — front, +15% / +20% lift
 - `fullwrap_optionA_15pct-lift.png` / `fullwrap_optionB_20pct-lift.png` — full wraps
 - `backcover_first-person-DRAFT.png` — back cover with the first-person draft copy + new headshot
-- `author-headshot_BW_studio-sharpened.png` — the supplied studio B&W headshot with the soft hair sharpened (strand detail recovered, no halos)
+- `author-headshot_warm-duotone.png` — the original photo, isolated (soft-focus background), waist-up, warm black-and-white duotone
+- `author-headshot_warm-duotone_full-frame.png` — same treatment, full frame (uncropped)
 - `thumbnail-test_200px_original-vs-A-vs-B.png` — the 200px thumbnail test
 
 ### What the comps include
@@ -32,7 +33,7 @@ Applied directly to the flattened cover, for **direction only** — not final ar
 - Back-cover **description reset in first person** (draft, no em dashes)
 - **Author bio updated** (clinical psychological evaluation; nature-based sciences; integrated trauma care) and **website** changed to balancedlivingde.com
 - Author headshot **softly warmed to a duotone** to match the palette
-- **New B&W studio headshot** (hair sharpened) placed in the back-cover photo slot
+- **New warm-duotone headshot** (from the original photo) placed in the back-cover photo slot
 
 ## Still needs supplied files / layered source
 - **Approved back-cover copy** — the first-person text here is a faithful draft
