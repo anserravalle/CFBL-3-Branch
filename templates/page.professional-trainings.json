@@ -14,6 +14,8 @@
       "settings": {
         "show_title": true,
         "eyebrow": "CFBL Institute · Professional Trainings",
+        "logo_alt": "",
+        "logo_width": 260,
         "text_align": "left",
         "bg_scheme": "default",
         "padding_top": 80,
@@ -57,8 +59,10 @@
             "title": "Foundations of Trauma Therapy",
             "time": "9:00 AM to 5:00 PM ET, both days",
             "location": "Live virtual, via Zoom",
-            "description": "A two-day live virtual intensive in thinking across trauma modalities, not within one. 12 NBCC CE clock hours. Beta cohort, limited to 15 clinicians.",
-            "product": "gid://shopify/Product/10209563214130",
+            "description": "A two-day live virtual intensive in thinking across trauma modalities, not within one. CEs pending ACEP approval.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
+            "product": "gid://shopify/product/10209563214130",
             "link_label": "Register",
             "link": "/products/foundations-of-trauma-therapy-two-day-live-virtual-intensive-sept-18-19-2026-beta-cohort"
           }
@@ -72,6 +76,8 @@
             "time": "9:00 AM-4:00 PM",
             "location": "Live, online",
             "description": "Integrating psychological assessment with somatic and trauma work. This session is full. Join the waitlist for the next date.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
             "product": "",
             "link_label": "Join the Waitlist",
             "link": "/pages/contact"
@@ -86,6 +92,8 @@
             "time": "9:00 AM-1:00 PM",
             "location": "Live, online",
             "description": "Case conceptualization and diagnostic precision for practicing clinicians. This session is full. Join the waitlist for the next date.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
             "product": "",
             "link_label": "Join the Waitlist",
             "link": "/pages/contact"
