@@ -51,22 +51,6 @@
     "catalog": {
       "type": "workshop-event-grid",
       "blocks": {
-        "event_hYxqpf": {
-          "type": "event",
-          "settings": {
-            "month": "OCT",
-            "day": "2",
-            "title": "Nature Based EMDR",
-            "time": "2:00-5:00pm EST",
-            "location": "Virtual",
-            "description": "",
-            "learn_more": "shopify://products/nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
-            "learn_more_label": "Learn More",
-            "product": "nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
-            "link_label": "Register",
-            "link": ""
-          }
-        },
         "t0": {
           "type": "event",
           "settings": {
@@ -81,6 +65,22 @@
             "product": "gid://shopify/product/10209563214130",
             "link_label": "Register",
             "link": "/products/foundations-of-trauma-therapy-two-day-live-virtual-intensive-sept-18-19-2026-beta-cohort"
+          }
+        },
+        "event_hYxqpf": {
+          "type": "event",
+          "settings": {
+            "month": "OCT",
+            "day": "2",
+            "title": "Nature Based EMDR",
+            "time": "2:00-5:00pm EST",
+            "location": "Virtual",
+            "description": "",
+            "learn_more": "shopify://products/nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "learn_more_label": "Learn More",
+            "product": "nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "link_label": "Register",
+            "link": ""
           }
         },
         "t1": {
@@ -118,8 +118,8 @@
         }
       },
       "block_order": [
-        "event_hYxqpf",
         "t0",
+        "event_hYxqpf",
         "t1",
         "t2"
       ],
