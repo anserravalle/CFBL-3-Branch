@@ -51,6 +51,22 @@
     "catalog": {
       "type": "workshop-event-grid",
       "blocks": {
+        "event_hYxqpf": {
+          "type": "event",
+          "settings": {
+            "month": "OCT",
+            "day": "2",
+            "title": "Nature Based EMDR",
+            "time": "2:00-5:00pm EST",
+            "location": "Virtual",
+            "description": "",
+            "learn_more": "shopify://products/nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "learn_more_label": "Learn More",
+            "product": "nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "link_label": "Register",
+            "link": ""
+          }
+        },
         "t0": {
           "type": "event",
           "settings": {
@@ -102,6 +118,7 @@
         }
       },
       "block_order": [
+        "event_hYxqpf",
         "t0",
         "t1",
         "t2"
