@@ -56,12 +56,13 @@
     "header": {
       "type": "main-page",
       "settings": {
-        "show_title": false,
-        "eyebrow": "Groups & Workshops",
+        "show_title": true,
+        "eyebrow": "",
+        "logo": "shopify://shop_images/FOUNDATIONS_column_v4.png",
         "logo_alt": "",
         "logo_width": 260,
         "text_align": "center",
-        "bg_scheme": "default",
+        "bg_scheme": "institute",
         "padding_top": 80,
         "padding_bottom": 24
       }
@@ -79,6 +80,8 @@
             "time": "12:00-3:00pm",
             "location": "Virtual",
             "description": "This three-hour workshop is for EMDR clinicians who already know how to do the work and want to think more carefully about when and how nature-informed elements belong inside a standard EMDR case. It is not a new protocol. The eight-phase, three-pronged structure does not change.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
             "product": "nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
             "link_label": "Register",
             "link": "shopify://pages/nature-based-emdr-ethical-clinically-grounded-applications"
@@ -94,6 +97,8 @@
             "time": "6:00-7:30 PM",
             "location": "Townsend, DE",
             "description": "An eight-week group for building regulation and coping skills. This session is full. Join the waitlist for the next date.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
             "product": "",
             "link_label": "Join the Waitlist",
             "link": "/pages/contact"
@@ -109,6 +114,8 @@
             "time": "10:00-12:00 PM",
             "location": "Online",
             "description": "A practical workshop for parents and caregivers. This session is full. Join the waitlist for the next date.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
             "product": "",
             "link_label": "Join the Waitlist",
             "link": "/pages/contact"
