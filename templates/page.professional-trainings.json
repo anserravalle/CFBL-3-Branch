@@ -85,6 +85,7 @@
         },
         "t2": {
           "type": "event",
+          "disabled": true,
           "settings": {
             "month": "Dates",
             "day": "TBA",
