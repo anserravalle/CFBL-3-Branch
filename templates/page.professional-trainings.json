@@ -13,7 +13,7 @@
       "type": "main-page",
       "settings": {
         "show_title": true,
-        "eyebrow": "CFBL Institute · Professional Trainings",
+        "eyebrow": "CFBL Institute \u00b7 Professional Trainings",
         "logo_alt": "",
         "logo_width": 260,
         "text_align": "left",
@@ -35,7 +35,7 @@
         "mobile_stack": "image",
         "eyebrow": "Meet the Trainer",
         "heading": "Learn With Dr. Serravalle",
-        "body": "<p>Dr. Angela “Niki” Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
+        "body": "<p>Dr. Angela \u201cNiki\u201d Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
         "text_align": "left",
         "phone": "302-608-3780",
         "email": "drserravalle@gmail.com",
@@ -198,6 +198,23 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "join_list": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in the Loop",
+        "heading": "Be first to know about new trainings",
+        "body": "<p>Join the list and hear when new professional trainings open for registration, before seats go public.</p>",
+        "placeholder": "Email address",
+        "button_label": "Join the List",
+        "list_tag": "institute,trainings",
+        "success_text": "Thank you. You're on the list.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
@@ -205,6 +222,7 @@
     "text_image_T4ki7g",
     "catalog",
     "faq",
+    "join_list",
     "cta"
   ]
 }

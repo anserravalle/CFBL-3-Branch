@@ -138,7 +138,7 @@
         "body": "<p>Our current workshops are full. Add your name and we'll let you know the moment new dates open.</p>",
         "placeholder": "Email address",
         "button_label": "Join the Waitlist",
-        "list_tag": "workshops",
+        "list_tag": "institute,foundations-waitlist",
         "success_text": "Thank you for subscribing.",
         "fine_print": "We respect your privacy and never share your information.",
         "text_align": "center",

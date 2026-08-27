@@ -344,6 +344,23 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "join_list": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in the Loop",
+        "heading": "Hear about new trainings first",
+        "body": "<p>Join the Institute list for new trainings, courses, and CE announcements for clinicians. No noise, just the work.</p>",
+        "placeholder": "Email address",
+        "button_label": "Join the List",
+        "list_tag": "institute",
+        "success_text": "Thank you. You're on the list.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
@@ -353,6 +370,7 @@
     "why",
     "offerings",
     "faq",
+    "join_list",
     "contact",
     "cta"
   ]

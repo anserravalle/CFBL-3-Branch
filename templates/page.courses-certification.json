@@ -115,12 +115,30 @@
         "padding_top": 88,
         "padding_bottom": 88
       }
+    },
+    "join_list": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in the Loop",
+        "heading": "Hear when new courses open",
+        "body": "<p>Join the list for new courses and certification cohorts, announced to the list before open enrollment.</p>",
+        "placeholder": "Email address",
+        "button_label": "Join the List",
+        "list_tag": "institute,courses",
+        "success_text": "Thank you. You're on the list.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
     "header",
     "intro",
     "offerings",
+    "join_list",
     "cta"
   ]
 }
