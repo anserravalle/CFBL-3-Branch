@@ -13,7 +13,7 @@
       "type": "main-page",
       "settings": {
         "show_title": true,
-        "eyebrow": "CFBL Institute \u00b7 Professional Trainings",
+        "eyebrow": "CFBL Institute · Professional Trainings",
         "logo_alt": "",
         "logo_width": 260,
         "text_align": "left",
@@ -35,7 +35,7 @@
         "mobile_stack": "image",
         "eyebrow": "Meet the Trainer",
         "heading": "Learn With Dr. Serravalle",
-        "body": "<p>Dr. Angela \u201cNiki\u201d Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
+        "body": "<p>Dr. Angela “Niki” Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
         "text_align": "left",
         "phone": "302-608-3780",
         "email": "drserravalle@gmail.com",
@@ -60,7 +60,7 @@
             "time": "9:00 AM to 5:00 PM ET, both days",
             "location": "Live virtual, via Zoom",
             "description": "A two-day live virtual intensive in thinking across trauma modalities, not within one. CEs pending ACEP approval.",
-            "learn_more": "",
+            "learn_more": "shopify://pages/foundations-of-trauma-therapy",
             "learn_more_label": "Learn More",
             "product": "gid://shopify/product/10209563214130",
             "link_label": "Register",
@@ -182,23 +182,6 @@
         "padding_bottom": 72
       }
     },
-    "cta": {
-      "type": "contact-cta",
-      "settings": {
-        "eyebrow": "For Clinicians",
-        "heading": "Join the Waitlist",
-        "body": "<p>Our current trainings are full. Add your name to the waitlist and we'll reach out as soon as new dates open. Questions about group rates? Just ask.</p>",
-        "primary_label": "Join the Waitlist",
-        "primary_link": "/pages/contact",
-        "secondary_label": "Contact the Institute",
-        "secondary_link": "/pages/contact",
-        "phone": "",
-        "disclaimer": "",
-        "bg_scheme": "navy",
-        "padding_top": 88,
-        "padding_bottom": 88
-      }
-    },
     "join_list": {
       "type": "newsletter-signup",
       "settings": {
@@ -213,6 +196,23 @@
         "text_align": "center",
         "bg_scheme": "sage",
         "padding_top": 72,
+        "padding_bottom": 88
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Join the Waitlist",
+        "body": "<p>Our current trainings are full. Add your name to the waitlist and we'll reach out as soon as new dates open. Questions about group rates? Just ask.</p>",
+        "primary_label": "Join the Waitlist",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Contact the Institute",
+        "secondary_link": "/pages/contact",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
         "padding_bottom": 88
       }
     }
