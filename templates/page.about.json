@@ -159,19 +159,6 @@
             "bio_link_label": "View full bio"
           }
         },
-        "shay_oliver": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/shay.jpg",
-            "title": "Shay Oliver",
-            "role": "Counseling Intern",
-            "content": "<p>Shay Oliver is a graduate student at Capella University pursuing a master’s degree in Clinical Mental Health Counseling. She brings several years of experience in behavioral health as a Registered Behavior Technician, with work across school and clinical settings supporting children and families.</p><p>Her background includes Applied Behavior Analysis services and collaboration with families, educators, and interdisciplinary teams to support skill development, emotional regulation, and meaningful progress. Shay’s therapeutic style is warm, collaborative, and evidence-based. She approaches care from a holistic and individualized perspective, supporting clients emotionally, cognitively, socially, and environmentally while honoring their strengths and lived experiences.</p>",
-            "phone": "",
-            "email": "SOliver@balancedlivingde.com",
-            "bio_link": "",
-            "bio_link_label": "View full bio"
-          }
-        },
         "item_qmzmbJ": {
           "type": "item",
           "settings": {
@@ -214,7 +201,7 @@
         "kimberly_brown": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/kbrown.png",
+            "image": "shopify://shop_images/Kimberly_Brown_-_Updated_CFBL_Headshot.png",
             "title": "Kimberly Brown",
             "role": "Nutrition Specialist & Certified Personal Trainer",
             "content": "<p>Kimberly is a Pn1 Nutrition Specialist and a Certified Personal Trainer. She believes that our health is a combination of the food we eat, how we move, our daily habits and who we have surrounding us in our lives.</p><p>As a wife, homeschool mom, and entrepreneur she gets that life can be busy, overwhelming and difficult. We often put our health and needs last but it’s incredibly important to start taking care of you mentally and  physically. Through 1:1 training or group training, Kimberly takes a whole body wellness approach to making healthy living custom to your lifestyle.</p>",
@@ -231,7 +218,6 @@
         "amanda_foxwell",
         "kirsten_lowe",
         "brianna_patton",
-        "shay_oliver",
         "item_qmzmbJ",
         "kim_shiflett",
         "item_4JX9wR",
