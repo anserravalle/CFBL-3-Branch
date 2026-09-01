@@ -31,22 +31,31 @@
         "padding_bottom": 72
       }
     },
-    "notify": {
-      "type": "newsletter-signup",
-      "settings": {
-        "eyebrow": "Coming Soon",
-        "heading": "The Stories We Told is coming.",
-        "body": "<p>Be the first to know when it launches, and get a chance to read it early.</p>",
-        "placeholder": "Email address",
-        "button_label": "Notify me",
-        "list_tag": "stories-we-told",
-        "success_text": "You are on the list. You will be among the first to read it.",
-        "fine_print": "Separate from the MUSA essays list. Your email is never shared.",
-        "text_align": "center",
-        "bg_scheme": "navy",
-        "padding_top": 80,
-        "padding_bottom": 96
-      }
+    "1788290595e26c3a05": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c4bd784_YKYCNV": {
+          "type": "ai_gen_block_c4bd784",
+          "settings": {
+            "youtube_url": "https://youtu.be/Qx3462s_aMw?si=GaBtExXNNr9Iayrk",
+            "title": "Latest Podcast Episode",
+            "description": "<p>What happens when someone dies and, in the process of grieving them, you discover that parts of the person you knew may not have been true?<br/><br/>In Part 1 of this deeply personal conversation, Dr. Christina Zampitella is joined by psychologist and author Dr. Niki Serravalle to explore a complicated and rarely discussed kind of grief: grieving the death of someone who lied about significant parts of their life.<br/>Dr. Serravalle shares the story of her relationship with her late ex-husband, from the intense connection they experienced early on to the small, seemingly inconsequential lies that eventually gave way to much larger deceptions.<br/><br/>Together, Christina and Niki explore the confusion of loving and trusting someone while also learning to overlook inconsistencies, and how patterns of codependency can become intertwined with relationships marked by instability and deception.<br/><br/>The conversation also examines the difference between compulsive lying and intentional manipulation, how codependency can show up even in people who appear strong and self-aware, and the grief that can happen long before a physical death when a relationship or the life you believed you had begins to disappear.<br/><br/>Then, after her late ex-husband’s unexpected death, Niki made a discovery that challenged one of the most fundamental stories he had told about himself. Despite years of describing himself as a Marine and appearing to live with the physical and psychological effects of military service, his family told her he had never served in the military.<br/><br/>That discovery opened an entirely new layer of grief and an unsettling question:<br/>Who exactly are you grieving when you can no longer be certain who the person was?<br/>Part 2 continues 9/15. </p>",
+            "desktop_width_percent": 100,
+            "padding": 40,
+            "border_radius": 16,
+            "video_border_radius": 8,
+            "background_color": "#FBF6F0",
+            "text_color": "#2A2724",
+            "title_size": 32,
+            "description_size": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c4bd784_YKYCNV"
+      ],
+      "settings": {}
     },
     "more": {
       "type": "contact-cta",
@@ -64,11 +73,29 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "notify": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Coming Soon",
+        "heading": "The Stories We Told is coming.",
+        "body": "<p>Be the first to know when it launches, and get a chance to read it early.</p>",
+        "placeholder": "Email address",
+        "button_label": "Notify me",
+        "list_tag": "stories-we-told",
+        "success_text": "You are on the list. You will be among the first to read it.",
+        "fine_print": "Separate from the MUSA essays list. Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 96
+      }
     }
   },
   "order": [
     "book",
-    "notify",
-    "more"
+    "1788290595e26c3a05",
+    "more",
+    "notify"
   ]
 }
