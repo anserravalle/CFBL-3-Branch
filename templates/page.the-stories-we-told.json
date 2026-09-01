@@ -44,10 +44,10 @@
             "padding": 40,
             "border_radius": 16,
             "video_border_radius": 8,
-            "background_color": "#FBF6F0",
-            "text_color": "#2A2724",
-            "title_size": 32,
-            "description_size": 16
+            "background_color": "#6E1F23",
+            "text_color": "#C5A572",
+            "title_size": 40,
+            "description_size": 20
           },
           "blocks": {}
         }
