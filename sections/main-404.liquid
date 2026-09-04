@@ -1,0 +1,18 @@
+{%- comment -%} 404 - calm, helpful not-found page. {%- endcomment -%}
+<section class="section bg--default" style="--section-pt:120px;--section-pb:120px;">
+  <div class="page-width">
+    <div class="section__inner section__header is-center" style="margin-bottom:0;">
+      <p class="eyebrow">Page Not Found</p>
+      <h1>We couldn't find that page</h1>
+      <p class="section__subheading">The page may have moved. Let's help you find your way.</p>
+      <div class="btn-row is-center">
+        {%- render 'button', label: 'Return Home', href: routes.root_url, style: 'primary' -%}
+        {%- render 'button', label: 'Contact Us', href: '/pages/contact', style: 'secondary' -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{ "name": "404" }
+{% endschema %}

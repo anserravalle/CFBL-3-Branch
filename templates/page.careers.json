@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Career Development",
+        "heading": "Grow your clinical practice with us",
+        "subheading": "<p>Clinical supervision toward licensure, EMDR consultation toward EMDRIA certification, and opportunities to join our team.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Join Our Team",
+        "secondary_link": "/pages/join-our-team",
+        "image": "shopify://shop_images/group.png",
+        "image_alt": "CFBL team",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "paths": {
+      "type": "tabs",
+      "blocks": {
+        "supervision": {
+          "type": "tab",
+          "settings": {
+            "title": "Clinical Supervision",
+            "heading": "Clinical Supervision",
+            "content": "<p>Supervision offers a space to deepen clinical skill, strengthen case conceptualization, and support thoughtful professional growth, grounded in reflection and clinical integrity. Available for LPC associates and PsyD trainees working toward licensure.</p>",
+            "image": "shopify://shop_images/supervision_2.png",
+            "image_alt": "clinical supervision",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/clinical-supervision",
+            "link_label": "Learn about supervision"
+          }
+        },
+        "emdr": {
+          "type": "tab",
+          "settings": {
+            "title": "EMDR Consultation",
+            "heading": "EMDR Consultation",
+            "content": "<p>As a Certified EMDR Therapist and EMDRIA Approved Consultant, Dr. Serravalle provides consultation that strengthens EMDR case conceptualization and supports clinicians working toward EMDRIA certification.</p>",
+            "image": "shopify://shop_images/of-a-psychologist-supervisor-consulting-with-a-student-about-emdr-practice.png",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/consultation",
+            "link_label": "Learn about EMDR consultation"
+          }
+        },
+        "team": {
+          "type": "tab",
+          "settings": {
+            "title": "Join Our Team",
+            "heading": "Join Our Team",
+            "content": "<p>We are always interested in connecting with clinicians who share our commitment to trauma-informed, relationally grounded care. Learn about current openings and what it is like to work at Center for Balanced Living.</p>",
+            "image": "shopify://shop_images/34E13667-1EEB-471C-B1BB-0C8F94575923.jpg",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/join-our-team",
+            "link_label": "See opportunities"
+          }
+        }
+      },
+      "block_order": [
+        "supervision",
+        "emdr",
+        "team"
+      ],
+      "settings": {
+        "eyebrow": "Pathways",
+        "heading": "Ways to Grow With Us",
+        "subheading": "Select a path to read more, then open its full page for details.",
+        "text_align": "left",
+        "image_ratio": "16-9",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Let's talk about your growth",
+        "use_h1": false,
+        "intro": "<p>Reach out about clinical supervision, EMDR consultation, or joining our team. Tell us where you are in your training and what you are hoping to build.</p>",
+        "phone": "(302) 608-3780",
+        "email": "",
+        "address": "",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Clinical Supervision, EMDR Consultation, Join Our Team, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "disabled": true,
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Let's talk about your growth",
+        "body": "<p>Reach out to discuss supervision, consultation, or joining our team.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Join Our Team",
+        "secondary_link": "/pages/join-our-team",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "paths",
+    "contact",
+    "cta"
+  ]
+}

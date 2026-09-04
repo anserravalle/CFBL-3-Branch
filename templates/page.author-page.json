@@ -1,0 +1,131 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bio_hero": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/angela.jpg",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#6e1f23",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Author",
+        "heading": "",
+        "body": "<p>Dr. Angela (Niki) Serravalle is a psychologist, author, educator, and founder of Center for Balanced Living in Delaware. Her writing explores the complexities of trauma, memory, identity, relationships, and personal transformation through both a clinical and deeply human lens. Drawing from years of experience in psychological assessment, psychotherapy, and teaching, she writes for readers who seek a deeper understanding of themselves and the stories that shape their lives.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "drserravalle@gmail.com",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet the Team",
+        "secondary_link": "/pages/about-us",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "bio_body": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "eyebrow": "",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 64
+      }
+    },
+    "specialties": {
+      "type": "featured-services",
+      "blocks": {
+        "item_HcAwaa": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Resilience & Growth",
+            "text": "Exploring adaptation, meaning-making, personal development, and the capacity for change throughout the lifespan.",
+            "link": "shopify://blogs/essays"
+          }
+        },
+        "s1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Exploring how adverse experiences shape the nervous system, relationships, identity, and the path toward recovery.",
+            "link": "shopify://blogs/essays"
+          }
+        },
+        "s2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Psychology & Human Behavior",
+            "text": "Making sense of why people think, feel, and act the way they do through research-informed insight and practical understanding.",
+            "link": "shopify://blogs/balanced-living-blog-make-it-make-sense"
+          }
+        },
+        "s3": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Attunement and Identity",
+            "text": "Examining how personal history, life experiences, and relationships influence the stories we tell about ourselves.",
+            "link": "shopify://blogs/balanced-living-blog-make-it-make-sense"
+          }
+        }
+      },
+      "block_order": [
+        "item_HcAwaa",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "eyebrow": "Areas of Focus",
+        "heading": "Specialties",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "4",
+        "bg_scheme": "surface",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Work With Us",
+        "heading": "Ready to take the next step?",
+        "body": "<p>Reach out to ask about availability or to schedule a first conversation.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "bio_hero",
+    "bio_body",
+    "specialties",
+    "cta"
+  ]
+}

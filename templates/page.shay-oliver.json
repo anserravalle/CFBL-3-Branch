@@ -1,0 +1,121 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bio_hero": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/shay.jpg",
+        "image_alt": "Shay Oliver, trauma-informed clinician at Center for Balanced Living",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Clinician",
+        "heading": "Shay Oliver, prelicensed Clinician",
+        "body": "<p>Shay Oliver is a mental health counselor at Center for Balanced Living in Townsend, Delaware, working under the direct clinical supervision of Dr. Niki Serravalle.</p><p>She is completing her Master's degree in Clinical Mental Health Counseling at Capella University and brings five years of hands-on experience in behavioral health as a Registered Behavior Technician, including work with children diagnosed with Autism Spectrum Disorder in school and clinical settings.</p><p>Shay's approach is warm, evidence-based, and collaborative, with a holistic orientation that honors each client's unique strengths and lived experience.</p><p>Clinicians in supervised training are often among the most engaged and invested in the work, bringing current clinical education, close supervision, and genuine commitment to every session.</p><p>Shay is accepting new clients at a reduced self-pay rate of $30 per session.</p>",
+        "text_align": "left",
+        "phone": "302-608-3780",
+        "email": "",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet the Team",
+        "secondary_link": "/pages/about-us",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "bio_body": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "eyebrow": "",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 64
+      }
+    },
+    "specialties": {
+      "type": "featured-services",
+      "blocks": {
+        "s1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Attuned, nervous-system-aware care.",
+            "link": ""
+          }
+        },
+        "s2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Mood",
+            "text": "Evidence-based support for anxiety and depression.",
+            "link": ""
+          }
+        },
+        "s3": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Teens & Adults",
+            "text": "Developmentally informed care.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "eyebrow": "Areas of Focus",
+        "heading": "Specialties",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "default",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Work With Us",
+        "heading": "Ready to take the next step?",
+        "body": "<p>Reach out to ask about availability or to schedule a first conversation.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "bio_hero",
+    "bio_body",
+    "specialties",
+    "cta"
+  ]
+}

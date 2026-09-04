@@ -1,0 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "featured": {
+      "type": "featured-post",
+      "settings": {
+        "eyebrow": "The Blog",
+        "heading": "Make It Make Sense",
+        "heading_tag": "h1",
+        "blog": "balanced-living-blog-make-it-make-sense",
+        "article": "balanced-living-blog-make-it-make-sense/he-can-do-it-when-he-wants-to",
+        "current_label": "Latest",
+        "read_label": "Read the latest",
+        "archive_label": "",
+        "image_position": "left",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 48
+      }
+    },
+    "themes": {
+      "type": "blog-tag-cards",
+      "blocks": {
+        "field": {
+          "type": "tag",
+          "settings": {
+            "title": "The Field",
+            "tag": "The Field",
+            "description": "<p>Notes on the profession, research, and where psychology is heading.</p>",
+            "icon": "compass",
+            "link": ""
+          }
+        },
+        "therapy": {
+          "type": "tag",
+          "settings": {
+            "title": "On Therapy",
+            "tag": "On Therapy",
+            "description": "<p>How change happens in the room, and what good care asks of us.</p>",
+            "icon": "heart",
+            "link": ""
+          }
+        },
+        "diagnostics": {
+          "type": "tag",
+          "settings": {
+            "title": "On Diagnosis",
+            "tag": "On Diagnosis",
+            "description": "<p>Assessment, diagnosis, and the search for clarity.</p>",
+            "icon": "shield",
+            "link": ""
+          }
+        },
+        "culture": {
+          "type": "tag",
+          "settings": {
+            "title": "The Cultural Moment",
+            "tag": "The Cultural Moment",
+            "description": "<p>Mental health in the culture we are actually living in.</p>",
+            "icon": "star",
+            "link": ""
+          }
+        },
+        "human": {
+          "type": "tag",
+          "settings": {
+            "title": "On Relationships",
+            "tag": "On Relationships",
+            "description": "<p>Connection, attachment, and the relationships that shape us.</p>",
+            "icon": "leaf",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "field",
+        "therapy",
+        "diagnostics",
+        "culture",
+        "human"
+      ],
+      "settings": {
+        "eyebrow": "Explore by Theme",
+        "heading": "Follow a Thread",
+        "subheading": "Each card opens every piece tagged with that theme.",
+        "blog": "",
+        "text_align": "center",
+        "columns": "3",
+        "card_style": "framed",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "list": {
+      "type": "main-blog",
+      "settings": {
+        "show_title": false,
+        "eyebrow": "",
+        "subheading": "",
+        "per_page": 9
+      }
+    }
+  },
+  "order": [
+    "featured",
+    "themes",
+    "list"
+  ]
+}

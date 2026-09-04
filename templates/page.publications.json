@@ -1,0 +1,97 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "MUSA",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 8
+      }
+    },
+    "books": {
+      "type": "book-grid",
+      "blocks": {
+        "stw": {
+          "type": "book",
+          "settings": {
+            "cover": "shopify://shop_images/the_stories.png",
+            "title": "The Stories We Told",
+            "subtitle": "The Dance of a Codependent and a Compulsive Liar",
+            "blurb": "A memoir of loving a compulsive liar, and the long work of coming back to herself.",
+            "status": "Coming soon",
+            "cover_frame": true,
+            "frame_color": "",
+            "link": "/pages/the-stories-we-told",
+            "link_label": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "stw"
+      ],
+      "settings": {
+        "eyebrow": "Books",
+        "heading": "Books",
+        "subheading": "",
+        "text_align": "left",
+        "columns": "3",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "default",
+        "padding_top": 40,
+        "padding_bottom": 48
+      }
+    },
+    "essays": {
+      "type": "blog-feature",
+      "settings": {
+        "eyebrow": "Essays",
+        "heading": "Essays",
+        "subheading": "",
+        "blog": "essays",
+        "post_limit": 3,
+        "columns": "3",
+        "show_excerpt": true,
+        "show_tags": false,
+        "view_all_label": "All essays",
+        "text_align": "left",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "articles": {
+      "type": "publication-list",
+      "settings": {
+        "eyebrow": "Articles",
+        "heading": "Articles",
+        "subheading": "Selected published articles and professional writing.",
+        "text_align": "left",
+        "limit": 0,
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "default",
+        "padding_top": 64,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "header",
+    "books",
+    "essays",
+    "articles"
+  ]
+}

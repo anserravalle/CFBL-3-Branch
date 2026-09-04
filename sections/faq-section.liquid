@@ -1,0 +1,101 @@
+{%- comment -%}
+  FAQ - accessible accordion built from blocks. Emits FAQPage structured data
+  so questions/answers are eligible for rich results. Covers insurance,
+  scheduling, evaluations, fit, etc. Each item is editable & reorderable.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign faq_blocks = section.blocks
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.heading != blank or section.settings.eyebrow != blank -%}
+        <div class="section__header is-center reveal">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="faq" data-faq>
+        {%- for block in faq_blocks -%}
+          {%- assign panel_id = 'faq-' | append: section.id | append: '-' | append: forloop.index -%}
+          <div class="faq__item" {{ block.shopify_attributes }}>
+            <h3 style="margin:0;">
+              <button type="button" class="faq__question" aria-expanded="false" aria-controls="{{ panel_id }}">
+                <span>{{ block.settings.question }}</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="{{ panel_id }}" role="region">
+              <div class="faq__answer-inner rte">{{ block.settings.answer }}</div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.cta_label != blank -%}
+        <div class="btn-row is-center">
+          {%- render 'button', label: section.settings.cta_label, href: section.settings.cta_link, style: 'secondary' -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{%- if faq_blocks.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in faq_blocks -%}
+    {
+      "@type": "Question",
+      "name": {{ block.settings.question | json }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | strip_html | strip_newlines | json }} }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Questions, Answered" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Frequently Asked Questions" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Practical answers about scheduling, insurance, evaluations, and finding the right fit." },
+    { "type": "text", "id": "cta_label", "label": "Footer button label" },
+    { "type": "url", "id": "cta_link", "label": "Footer button link" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" },
+      { "value": "surface", "label": "White" }, { "value": "cream", "label": "Cream" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Question", "settings": [
+      { "type": "text", "id": "question", "label": "Question", "default": "Do you accept insurance?" },
+      { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>We can share current details about insurance, out-of-network benefits, and self-pay options during your first contact. We are happy to help you understand your coverage before scheduling.</p>" }
+    ]}
+  ],
+  "max_blocks": 30,
+  "presets": [{
+    "name": "FAQ",
+    "blocks": [
+      { "type": "item", "settings": { "question": "How do I schedule a first appointment?", "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24-48 hours to find a time that works.</p>" } },
+      { "type": "item", "settings": { "question": "Do you accept insurance?", "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>" } },
+      { "type": "item", "settings": { "question": "What happens during a psychological evaluation?", "answer": "<p>Evaluations begin with careful listening and history, followed by standardized assessment and a clear written summary with recommendations and next steps.</p>" } },
+      { "type": "item", "settings": { "question": "How do I know if we are a good fit?", "answer": "<p>Fit matters. Our first conversation is a chance to understand your goals and determine whether our services are right for you, or to offer a referral if another setting would serve you better.</p>" } }
+    ]
+  }]
+}
+{% endschema %}

@@ -1,0 +1,117 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "eyebrow": "Careers",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "hero_brand_BxAkK4": {
+      "type": "hero-brand",
+      "name": "Hero",
+      "settings": {
+        "eyebrow": "Careers at Center for Balanced Living",
+        "heading": "Join a Practice Grounded in Clinical Depth, Collaboration, and Care",
+        "subheading": "<p>Center for Balanced Living is growing, and we are looking for thoughtful clinicians who value trauma-informed care, ethical practice, and meaningful professional development.</p><p>Our team is built around clinical integrity, relational warmth, and a shared commitment to doing good work with care. We welcome clinicians who want to grow within a practice culture that supports reflection, strong case conceptualization, ongoing learning, and respect for the complexity of psychotherapy.</p><p>Whether you are seeking a professional home, supervision, consultation, or a place to deepen your clinical work, we invite you to learn more about opportunities at Center for Balanced Living.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "",
+        "secondary_label": "Explore Services",
+        "secondary_link": "",
+        "image": "shopify://shop_images/banner_for_the_newsletter.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "why": {
+      "type": "credentials-section",
+      "blocks": {
+        "c1": {
+          "type": "credential",
+          "settings": {
+            "icon": "heart",
+            "title": "Trauma-Informed Culture",
+            "text": "A team grounded in relational, nervous-system-aware care."
+          }
+        },
+        "c2": {
+          "type": "credential",
+          "settings": {
+            "icon": "users",
+            "title": "Collaborative & Supportive",
+            "text": "Consultation, supervision, and genuine peer support."
+          }
+        },
+        "c3": {
+          "type": "credential",
+          "settings": {
+            "icon": "compass",
+            "title": "Room to Grow",
+            "text": "Training, supervision, and a path toward licensure and certification."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "eyebrow": "Why Work With Us",
+        "heading": "A practice that invests in its clinicians",
+        "subheading": "A community that fosters healing relationships",
+        "text_align": "center",
+        "columns": "3",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Interested?",
+        "heading": "Tell us about yourself",
+        "body": "<p>Send us your resume and a note about the work you hope to do. We review every inquiry.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "",
+        "secondary_link": "",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "header",
+    "hero_brand_BxAkK4",
+    "why",
+    "cta"
+  ]
+}

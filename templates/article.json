@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": { "show_image": true, "show_author": true, "show_tags": true }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Questions About Your Care?",
+        "heading": "We're here to help",
+        "body": "<p>If something here resonated, reach out. We'll help you find a clear next step.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Explore Services",
+        "secondary_link": "/pages/services",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": ["main", "cta"]
+}

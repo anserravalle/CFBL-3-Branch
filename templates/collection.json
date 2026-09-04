@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": { "show_description": true, "free_label": "Free", "per_page": 12 }
+    }
+  },
+  "order": ["main"]
+}

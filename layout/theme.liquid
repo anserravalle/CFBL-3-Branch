@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}" class="no-js">
+  <head>
+    <meta name="facebook-domain-verification" content="abc123xyz..." />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="{{ settings.color_primary | default: '#2B5275' }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
+    {%- endif -%}
+
+    <title>{{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+
+    {%- comment -%} Resolve the per-page brand scope (cfbl | institute | musa). {%- endcomment -%}
+    {%- capture brand_scope %}{% render 'brand-scope' %}{% endcapture -%}
+    {%- assign brand_scope = brand_scope | strip -%}
+
+    {%- comment -%} Fonts per scope. Brand fonts (default on) load the right
+        families for the active sub-brand; otherwise the owner's Shopify fonts. {%- endcomment -%}
+    {%- if settings.use_brand_fonts -%}
+      {%- liquid
+        case brand_scope
+          when 'institute'
+            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Cormorant:ital,wght@0,500;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600'
+          when 'musa'
+            assign font_query = 'family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500'
+          else
+            assign font_query = 'family=Cormorant+SC:wght@500;600;700&family=Cormorant:ital,wght@0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600'
+        endcase
+      -%}
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?{{ font_query }}&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{ font_query }}&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{ font_query }}&display=swap"></noscript>
+    {%- else -%}
+      {{ settings.heading_font | font_face: font_display: 'swap' }}
+      {{ settings.body_font | font_face: font_display: 'swap' }}
+    {%- endif -%}
+
+    {{ content_for_header }}
+
+    {%- comment -%} Design tokens seeded from theme settings (see base.css for fallbacks) {%- endcomment -%}
+    {%- liquid
+      assign heading_font = settings.heading_font
+      assign body_font = settings.body_font
+    -%}
+    <style>
+      :root {
+        --color-navy: {{ settings.color_primary | default: '#2B5275' }};
+        --color-sky: {{ settings.color_secondary | default: '#4E9FBF' }};
+        --color-sand: {{ settings.color_sand | default: '#EED9C5' }};
+        --color-terracotta: {{ settings.color_accent | default: '#9D654E' }};
+        --color-bg: {{ settings.color_background | default: '#FBF6F0' }};
+        --color-bg-sand: {{ settings.color_sand | default: '#EED9C5' }};
+        --color-text: {{ settings.color_text | default: '#2A2724' }};
+        --color-heading: {{ settings.color_primary | default: '#2B5275' }};
+        --color-navy-dark: {{ settings.color_primary | default: '#2B5275' | color_darken: 12 }};
+        {% unless settings.use_brand_fonts %}
+          {% if heading_font %}--font-heading: {{ heading_font.family }}, {{ heading_font.fallback_families }};{% endif %}
+          {% if body_font %}--font-body: {{ body_font.family }}, {{ body_font.fallback_families }};{% endif %}
+        {% endunless %}
+        --fs-root: {{ settings.base_font_size | default: 16 }}px;
+        --heading-scale: {{ settings.heading_scale | default: 100 | divided_by: 100.0 }};
+        --page-max-width: {{ settings.page_max_width | default: 1280 }}px;
+        --section-max-width: {{ settings.section_max_width | default: 1100 }}px;
+        --section-spacing: {{ settings.section_spacing | default: 80 }}px;
+        --radius-button: {{ settings.button_radius | default: 999 }}px;
+        --radius-card: {{ settings.card_radius | default: 16 }}px;
+        {% if settings.footer_style == 'sand' %}--footer-bg: var(--color-bg-sand);{% endif %}
+        {% if settings.header_style == 'navy' %}--header-bg: var(--color-navy);{% endif %}
+      }
+      {%- if settings.header_style == 'navy' -%}
+      .site-header { color: var(--color-on-dark); }
+      .site-header .nav__link, .site-header .site-header__logo-text { color: var(--color-on-dark); }
+      {%- endif -%}
+    </style>
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
+    {%- render 'seo-meta' -%}
+
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
+  </head>
+
+  <body class="template-{{ request.page_type | handleize }} brand--{{ brand_scope }}{% if settings.enable_animations %} animations-on{% endif %}">
+    <a class="skip-to-content" href="#MainContent">{{ 'accessibility.skip_to_content' | t | default: 'Skip to content' }}</a>
+
+    {%- sections 'announcement-group' -%}
+    {%- sections 'header-group' -%}
+
+    <main id="MainContent" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {%- sections 'footer-group' -%}
+
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    {%- if settings.enable_animations -%}
+      <script src="{{ 'section-animations.js' | asset_url }}" defer></script>
+    {%- endif -%}
+  </body>
+</html>

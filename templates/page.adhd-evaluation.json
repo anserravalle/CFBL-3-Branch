@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "ADHD & Executive Functioning",
+        "heading": "ADHD and Executive Functioning Evaluations",
+        "subheading": "<p>ADHD and executive functioning evaluations are designed to provide diagnostic clarity when there are questions about attention, impulsivity, hyperactivity, organization, working memory, emotional regulation, task completion, academic functioning, or daily life demands. </p><p>At Center for Balanced Living, ADHD evaluations are completed with clinical care and attention to the whole person. The goal is not simply to determine whether someone meets criteria for ADHD, but to understand how attention, executive functioning, learning, emotional regulation, anxiety, sleep, trauma, and environmental demands may be interacting.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Evaluations",
+        "secondary_link": "/pages/psychological-evaluations",
+        "image": "shopify://shop_images/adhd_evaluation.png",
+        "image_alt": "adhd executive functioning evaluation",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "benefits": {
+      "type": "featured-services",
+      "blocks": {
+        "b0": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Individuals struggling with focus, organization, time management, or task completion",
+            "text": "",
+            "link": ""
+          }
+        },
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Students experiencing academic difficulties despite real effort",
+            "text": "",
+            "link": ""
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Adults seeking clarity about lifelong patterns of inattention or disorganization",
+            "text": "",
+            "link": ""
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Families wanting to understand a child's attention and behavior",
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "eyebrow": "Who Might Benefit",
+        "heading": "Is this evaluation right for you?",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "2",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "p0": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Intake & History",
+            "text": "We begin with careful listening and a thorough history.",
+            "link": ""
+          }
+        },
+        "p1": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Standardized Assessment",
+            "text": "Evidence-based measures tailored to the referral question.",
+            "link": ""
+          }
+        },
+        "p2": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Feedback Session",
+            "text": "We review findings together, in plain language.",
+            "link": ""
+          }
+        },
+        "p3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Written Summary",
+            "text": "A clear report with recommendations and next steps.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "The Evaluation Process",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Get Started",
+        "heading": "Request an ADHD Evaluation",
+        "body": "<p>Tell us a little about what you are seeking clarity on, and we will guide you through the next step. We usually reach out within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "benefits",
+    "process",
+    "cta"
+  ]
+}

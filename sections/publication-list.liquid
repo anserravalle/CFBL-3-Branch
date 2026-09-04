@@ -1,0 +1,103 @@
+{%- comment -%}
+  Publication list - academic / professional output rendered as a clean citation
+  list. Each block is one publication: title, authors, venue, year, type, and a
+  link out (DOI, journal, or PDF). Used full on the Publications page and as a
+  limited inline preview (with a "see all" link) on MUSA.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign limit = section.settings.limit | default: 0
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    {%- if section.settings.heading != blank or section.settings.eyebrow != blank -%}
+      <div class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal">
+        {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+        {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+        {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <ol class="pub-list reveal">
+        {%- for block in section.blocks -%}
+          {%- if limit > 0 and forloop.index0 >= limit -%}{%- break -%}{%- endif -%}
+          <li class="pub" {{ block.shopify_attributes }}>
+            {%- if block.settings.pub_type != blank -%}<span class="pub__type">{{ block.settings.pub_type }}</span>{%- endif -%}
+            <p class="pub__title">
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" target="_blank" rel="noopener">{{ block.settings.title }}</a>
+              {%- else -%}
+                {{ block.settings.title }}
+              {%- endif -%}
+            </p>
+            {%- if block.settings.authors != blank -%}<p class="pub__authors">{{ block.settings.authors }}</p>{%- endif -%}
+            {%- if block.settings.venue != blank or block.settings.year != blank -%}
+              <p class="pub__venue">
+                {%- if block.settings.venue != blank -%}<cite>{{ block.settings.venue }}</cite>{%- endif -%}
+                {%- if block.settings.venue != blank and block.settings.year != blank -%}, {% endif -%}
+                {%- if block.settings.year != blank -%}{{ block.settings.year }}{%- endif -%}
+              </p>
+            {%- endif -%}
+            {%- if block.settings.link != blank -%}
+              <p class="pub__cta"><a href="{{ block.settings.link }}" target="_blank" rel="noopener">{{ block.settings.link_label | default: 'View' }}</a></p>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ol>
+    {%- else -%}
+      <p class="section__subheading reveal">Add a publication in this section's settings.</p>
+    {%- endif -%}
+
+    {%- if section.settings.footer_label != blank and section.settings.footer_link != blank -%}
+      <div class="section__footer is-center reveal" style="margin-top:var(--space-40);">
+        {%- render 'button', label: section.settings.footer_label, href: section.settings.footer_link, style: 'secondary' -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Publication list",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Publications" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Academic & Professional Work" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "left" },
+    { "type": "range", "id": "limit", "label": "Max items shown (0 = all)", "min": 0, "max": 20, "step": 1, "default": 0, "info": "Use a small number on MUSA for a preview; 0 on the full Publications page." },
+    { "type": "header", "content": "See all link (for previews)" },
+    { "type": "text", "id": "footer_label", "label": "Footer button label" },
+    { "type": "url", "id": "footer_link", "label": "Footer button link" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" }, { "value": "surface", "label": "White" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "cream", "label": "Cream" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    { "type": "publication", "name": "Publication", "settings": [
+      { "type": "text", "id": "title", "label": "Title" },
+      { "type": "text", "id": "authors", "label": "Authors", "info": "e.g. Serravalle, A. N., & Coauthor, B." },
+      { "type": "text", "id": "venue", "label": "Journal / venue" },
+      { "type": "text", "id": "year", "label": "Year" },
+      { "type": "select", "id": "pub_type", "label": "Type", "options": [
+        { "value": "", "label": "None" },
+        { "value": "Journal article", "label": "Journal article" },
+        { "value": "Book chapter", "label": "Book chapter" },
+        { "value": "Conference", "label": "Conference" },
+        { "value": "Report", "label": "Report" }
+      ], "default": "Journal article" },
+      { "type": "url", "id": "link", "label": "Link (DOI, journal, or PDF)" },
+      { "type": "text", "id": "link_label", "label": "Link label", "default": "View" }
+    ]}
+  ],
+  "max_blocks": 50,
+  "presets": [{ "name": "Publication list", "blocks": [{ "type": "publication" }] }]
+}
+{% endschema %}

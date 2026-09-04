@@ -1,0 +1,218 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "CFBL Clinical Services",
+        "heading": "Trauma-informed care for the whole person",
+        "subheading": "<p>Therapy, psychological evaluation, groups, and workshops for children, teens, adults, and families, grounded in research-based, trauma-informed care.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet Our Team",
+        "secondary_link": "/pages/team-introductions",
+        "image": "shopify://shop_images/Untitled_-_June_27_2026_at_12.56.12.png",
+        "image_alt": "Center for Balanced Living",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "eyebrow": "Our Services",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "pathways": {
+      "type": "service-card-grid",
+      "blocks": {
+        "therapy": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "heart",
+            "image": "shopify://shop_images/psychological-therapy-in-a-private-practice.png",
+            "image_alt": "A calm private-practice therapy room",
+            "image_ratio": "4-3",
+            "title": "Individual Therapy",
+            "body": "<p>Trauma-informed therapy for children, teens, and adults.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/individual-therapy"
+          }
+        },
+        "evals": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "compass",
+            "image": "shopify://shop_images/not-game-puzzles-or-game-blocks-more-like-psychological-assessment.png",
+            "image_alt": "Psychological assessment materials",
+            "image_ratio": "4-3",
+            "title": "Psychological Evaluations",
+            "body": "<p>ADHD, autism, diagnostic clarification, and more.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/psychological-evaluations"
+          }
+        },
+        "groups": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "users",
+            "image": "shopify://shop_images/psychology-workshops-in-a-professional-private-practice.png",
+            "image_alt": "A professional workshop setting",
+            "image_ratio": "4-3",
+            "title": "Groups & Workshops",
+            "body": "<p>Therapy groups, workshops, and community education.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/workshopspage"
+          }
+        },
+        "supervision": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "book",
+            "image": "shopify://shop_images/niki_supervsion.png",
+            "image_alt": "A clinical supervision session",
+            "image_ratio": "4-3",
+            "title": "Clinical Supervision",
+            "body": "<p>Supervision and consultation for licensed clinicians.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/clinical-supervision"
+          }
+        },
+        "emdr": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "compass",
+            "image": "shopify://shop_images/emdr.png",
+            "image_alt": "EMDR consultation session",
+            "image_ratio": "4-3",
+            "title": "EMDR Consultation",
+            "body": "<p>Consultation toward EMDR certification and skill refinement.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/consultation"
+          }
+        },
+        "training": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "award",
+            "image": "shopify://shop_images/drserravalle_training3.png",
+            "image_alt": "CFBL Institute professional training",
+            "image_ratio": "4-3",
+            "title": "Professional Training",
+            "body": "<p>Continuing education through the CFBL Institute.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/cfbl-institute"
+          }
+        }
+      },
+      "block_order": [
+        "therapy",
+        "evals",
+        "groups",
+        "supervision",
+        "emdr",
+        "training"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "subheading": "",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "navy",
+        "padding_top": 16,
+        "padding_bottom": 80
+      }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "Reach Out",
+        "heading": "Let's find the right starting point",
+        "use_h1": false,
+        "intro": "<p>Tell us a little about what you are looking for, and we will help you find the service, or the referral, that fits. We are glad you are here.</p>",
+        "phone": "(302) 608-3780",
+        "email": "",
+        "whatsapp": "",
+        "whatsapp_text": "",
+        "address": "",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Therapy, Psychological Evaluation, Group or Workshop, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Not Sure Where to Start?",
+        "heading": "We'll help you find the right fit",
+        "body": "<p>Tell us a little about what you're looking for, and we'll point you toward the service, or the referral, that serves you best.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "header",
+    "pathways",
+    "contact",
+    "cta"
+  ]
+}

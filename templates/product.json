@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": { "button_label": "Register" }
+    }
+  },
+  "order": ["main"]
+}

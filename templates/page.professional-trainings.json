@@ -1,0 +1,228 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "CFBL Institute · Professional Trainings",
+        "logo_alt": "",
+        "logo_width": 260,
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "text_image_T4ki7g": {
+      "type": "text-image",
+      "name": "Text with image",
+      "settings": {
+        "image": "shopify://shop_images/dr_serravalle.png",
+        "image_alt": "drserravalle",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Trainer",
+        "heading": "Learn With Dr. Serravalle",
+        "body": "<p>Dr. Angela “Niki” Serravalle brings more than two decades of clinical experience to her teaching, with a focus on helping clinicians and community learners move beyond surface-level information into deeper understanding, clearer conceptualization, and more grounded practice. Through CFBL Institute courses and Center for Balanced Living workshops, her trainings are designed to be clinically thoughtful, accessible, and applicable to real work with real people.</p>",
+        "text_align": "left",
+        "phone": "302-608-3780",
+        "email": "drserravalle@gmail.com",
+        "primary_label": "Explore Our Offerings",
+        "primary_link": "shopify://pages/cfbl-institute",
+        "secondary_label": "",
+        "secondary_link": "",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "catalog": {
+      "type": "workshop-event-grid",
+      "blocks": {
+        "t0": {
+          "type": "event",
+          "settings": {
+            "month": "Sept",
+            "day": "18-19",
+            "title": "Foundations of Trauma Therapy",
+            "time": "9:00 AM to 5:00 PM ET, both days",
+            "location": "Live virtual, via Zoom",
+            "description": "A two-day live virtual intensive in thinking across trauma modalities, not within one. CEs pending ACEP approval.",
+            "learn_more": "shopify://pages/foundations-of-trauma-therapy",
+            "learn_more_label": "Learn More",
+            "product": "gid://shopify/product/10209563214130",
+            "link_label": "Register",
+            "link": "/products/foundations-of-trauma-therapy-two-day-live-virtual-intensive-sept-18-19-2026-beta-cohort"
+          }
+        },
+        "event_hYxqpf": {
+          "type": "event",
+          "settings": {
+            "month": "OCT",
+            "day": "2",
+            "title": "Nature Based EMDR",
+            "time": "2:00-5:00pm EST",
+            "location": "Virtual",
+            "description": "A three-hour workshop on when nature-informed elements genuinely support EMDR preparation, regulation and integration, and when they do not. For clinicians who have completed an EMDRIA-Approved Basic EMDR Training. 3 EMDRIA Credits.",
+            "learn_more": "shopify://products/nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "learn_more_label": "Learn More",
+            "product": "nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "link_label": "Register",
+            "link": ""
+          }
+        },
+        "t1": {
+          "type": "event",
+          "settings": {
+            "month": "Dates",
+            "day": "TBA",
+            "title": "Assessment-Informed Trauma Treatment",
+            "time": "9:00 AM-4:00 PM",
+            "location": "Live, online",
+            "description": "Integrating psychological assessment with somatic and trauma work. This session is full. Join the waitlist for the next date.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
+            "product": "",
+            "link_label": "Join the Waitlist",
+            "link": "/pages/contact"
+          }
+        },
+        "t2": {
+          "type": "event",
+          "disabled": true,
+          "settings": {
+            "month": "Dates",
+            "day": "TBA",
+            "title": "Applied Clinical Reasoning Intensive",
+            "time": "9:00 AM-1:00 PM",
+            "location": "Live, online",
+            "description": "Case conceptualization and diagnostic precision for practicing clinicians. This session is full. Join the waitlist for the next date.",
+            "learn_more": "",
+            "learn_more_label": "Learn More",
+            "product": "",
+            "link_label": "Join the Waitlist",
+            "link": "/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "t0",
+        "event_hYxqpf",
+        "t1",
+        "t2"
+      ],
+      "settings": {
+        "eyebrow": "Upcoming",
+        "heading": "Trainings & Continuing Education",
+        "subheading": "Taught by a practicing psychologist who carries a clinical caseload. Registration is open for the Foundations of Trauma Therapy beta cohort below. Other trainings are forming; join the waitlist to hear first when new dates open.",
+        "text_align": "left",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "howwait": {
+          "type": "item",
+          "settings": {
+            "question": "How does the waitlist work?",
+            "answer": "<p>Add your name and we will email you as soon as new dates are announced. Waitlist members are invited to register first, before seats open publicly.</p>"
+          }
+        },
+        "who": {
+          "type": "item",
+          "settings": {
+            "question": "Who are the trainings for?",
+            "answer": "<p>Licensed mental health clinicians (psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, MDs) and graduate students in clinical and counseling psychology.</p>"
+          }
+        },
+        "format": {
+          "type": "item",
+          "settings": {
+            "question": "What is the format?",
+            "answer": "<p>Trainings are delivered live online unless otherwise noted, with materials provided to registrants.</p>"
+          }
+        },
+        "when": {
+          "type": "item",
+          "settings": {
+            "question": "When will new dates open?",
+            "answer": "<p>New cohorts are added throughout the year. Joining the waitlist is the best way to hear first.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "howwait",
+        "who",
+        "format",
+        "when"
+      ],
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Waitlist & Details",
+        "subheading": "Our current trainings are full. Here is how the waitlist works and what to expect when new dates open.",
+        "cta_label": "Join the Waitlist",
+        "cta_link": "/pages/contact",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "join_list": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in the Loop",
+        "heading": "Be first to know about new trainings",
+        "body": "<p>Join the list and hear when new professional trainings open for registration, before seats go public.</p>",
+        "placeholder": "Email address",
+        "button_label": "Join the List",
+        "list_tag": "institute,trainings",
+        "success_text": "Thank you. You're on the list.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Join the Waitlist",
+        "body": "<p>Our current trainings are full. Add your name to the waitlist and we'll reach out as soon as new dates open. Questions about group rates? Just ask.</p>",
+        "primary_label": "Join the Waitlist",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Contact the Institute",
+        "secondary_link": "/pages/contact",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "header",
+    "text_image_T4ki7g",
+    "catalog",
+    "faq",
+    "join_list",
+    "cta"
+  ]
+}

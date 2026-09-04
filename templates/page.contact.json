@@ -1,0 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "Get in Touch",
+        "heading": "Start the Conversation",
+        "use_h1": true,
+        "intro": "<p>Whether you are seeking therapy, an evaluation, professional consultation, or training, our team is here to help you take the next step. To speak with us directly, please call our office.</p>",
+        "phone": "(302) 608-3780",
+        "email": "",
+        "address": "",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Therapy, Psychological Evaluation, Group or Workshop, Clinical Supervision, EMDR Consultation, Professional Training, Courses & Certification, Join Our Team, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "map_cta": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Serving Middletown, Townsend & the MOT Area",
+        "heading_tag": "h2",
+        "content": "<p>Center for Balanced Living serves clients across the MOT area and throughout Delaware, including Wilmington, Newark, Smyrna, and Dover.</p>",
+        "text_align": "center",
+        "content_width": 700,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "contact",
+    "map_cta"
+  ]
+}

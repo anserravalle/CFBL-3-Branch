@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Autism Evaluation",
+        "heading": "Autism Evaluations for Clarity and Deeper Understanding",
+        "subheading": "<p>Autism evaluations are designed to provide diagnostic clarity when there are questions about social communication, sensory differences, restricted or repetitive patterns of behavior, emotional regulation, executive functioning, developmental history, or differences in how a person experiences and responds to the world. </p><p>At Center for Balanced Living, autism evaluations are completed with clinical care, developmental context, and respect for the whole person. </p><p>The goal is not to reduce someone to a label, but to better understand patterns of functioning, clarify diagnosis when appropriate, and provide recommendations that support daily life, treatment planning, school supports, workplace needs, and self-understanding.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Evaluations",
+        "secondary_link": "/pages/psychological-evaluations",
+        "image": "shopify://shop_images/ASD_evaluation.png",
+        "image_alt": "autism evaluation",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "benefits": {
+      "type": "featured-services",
+      "blocks": {
+        "b0": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Children, teens, and adults seeking an affirming autism evaluation",
+            "text": "",
+            "link": ""
+          }
+        },
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "People who suspect their experiences may have been missed or misunderstood",
+            "text": "",
+            "link": ""
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Those who have learned to mask and want a clearer self-understanding",
+            "text": "",
+            "link": ""
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Families seeking access to services and support",
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "eyebrow": "Who Might Benefit",
+        "heading": "Is this evaluation right for you?",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "2",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "p0": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Clinical Interview",
+            "text": "We begin with listening and developmental history.",
+            "link": ""
+          }
+        },
+        "p1": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Standardized Measures",
+            "text": "Affirming, evidence-based assessment.",
+            "link": ""
+          }
+        },
+        "p2": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Observation",
+            "text": "Careful, respectful observation across contexts.",
+            "link": ""
+          }
+        },
+        "p3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Findings & Support",
+            "text": "Clear results and individualized recommendations.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "The Evaluation Process",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Get Started",
+        "heading": "Request an Autism Evaluation",
+        "body": "<p>Tell us a little about what you are seeking clarity on, and we will guide you through the next step. We usually reach out within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "benefits",
+    "process",
+    "cta"
+  ]
+}

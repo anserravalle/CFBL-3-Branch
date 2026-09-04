@@ -1,0 +1,49 @@
+{%- comment -%}
+  Main page - renders a standard Shopify Page. Optional editable header band
+  (eyebrow + title), then the page's rich-text content. The page H1 lives here
+  unless "Show page title" is turned off (use that when another section on the
+  page, e.g. a hero, already provides the H1, to keep one H1 per page).
+{%- endcomment -%}
+<article class="section bg--{{ section.settings.bg_scheme }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.show_title or section.settings.logo != blank -%}
+        <header class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal" style="max-width:var(--measure);">
+          {%- if section.settings.logo != blank -%}
+            <img class="page-header__logo" src="{{ section.settings.logo | image_url: width: 800 }}" alt="{{ section.settings.logo_alt | default: page.title | escape }}" width="{{ section.settings.logo_width }}" style="max-width:{{ section.settings.logo_width }}px;width:100%;height:auto;display:block;margin-bottom:var(--space-20);{% if section.settings.text_align == 'center' %}margin-inline:auto;{% endif %}" loading="eager">
+          {%- endif -%}
+          {%- if section.settings.show_title -%}
+            {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+            <h1>{{ page.title }}</h1>
+          {%- endif -%}
+        </header>
+      {%- endif -%}
+      <div class="rte article-body reveal">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Page",
+  "settings": [
+    { "type": "checkbox", "id": "show_title", "label": "Show page title (H1)", "default": true, "info": "Turn off when another section on the page provides the H1." },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow above title" },
+    { "type": "header", "content": "Logo banner" },
+    { "type": "image_picker", "id": "logo", "label": "Logo image (optional)", "info": "Shows above the title." },
+    { "type": "text", "id": "logo_alt", "label": "Logo alt text" },
+    { "type": "range", "id": "logo_width", "label": "Logo width", "min": 80, "max": 640, "step": 10, "unit": "px", "default": 260 },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "center" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "surface", "label": "White" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" }, { "value": "cream", "label": "Cream" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 64 }
+  ]
+}
+{% endschema %}

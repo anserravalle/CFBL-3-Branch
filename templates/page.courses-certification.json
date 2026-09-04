@@ -1,0 +1,144 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "CFBL Institute",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "intro": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "content": "<p>Multi-session courses that build clinical knowledge sequentially, with time to integrate between sessions, for clinicians strengthening their foundation and students building it for the first time. Our first cohorts begin Fall 2026, and we're taking names now.</p>",
+        "text_align": "center",
+        "content_width": 760,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "bg_scheme": "default",
+        "padding_top": 8,
+        "padding_bottom": 40
+      }
+    },
+    "offerings": {
+      "type": "tabs",
+      "blocks": {
+        "emdr": {
+          "type": "tab",
+          "settings": {
+            "title": "EMDR Basic Training",
+            "heading": "EMDR Basic Training (12 Weeks)",
+            "content": "<p>A 12-week EMDR Basic Training for licensed clinicians and advanced graduate students integrating EMDR into clinical practice. Following the standardized EMDRIA training model, the curriculum covers the eight phases of EMDR, the adaptive information processing framework, and the clinical skills to treat trauma safely and effectively.</p><p><strong>Status:</strong> Pending EMDRIA approval. Launching Fall 2026, and we're taking names now. Interest-list members are invited to register first once approval is granted.</p>",
+            "image": "shopify://shop_images/EMDR_Basic_training.png",
+            "image_alt": "EMDR Basic Training",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/contact",
+            "link_label": "Join the interest list"
+          }
+        },
+        "nature": {
+          "type": "tab",
+          "settings": {
+            "title": "Nature-Based Clinical Specialist",
+            "heading": "Nature-Based Clinical Specialist (12 Weeks)",
+            "content": "<p>A 12-week course on integrating nature-based interventions into trauma-informed clinical practice, built around ecological theory, nervous system science, and applied psychological work. For licensed clinicians, advanced graduate students, and helping professionals pursuing the CFBL Institute's nature-based clinical specialization.</p><p><strong>Status:</strong> CE approval pending. Launching Fall 2026. Now taking names for the interest list.</p>",
+            "image": "shopify://shop_images/nature-based-clinical-specialist-course.png",
+            "image_alt": "Nature-Based Clinical Specialist Course",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/contact",
+            "link_label": "Join the interest list"
+          }
+        },
+        "foundations": {
+          "type": "tab",
+          "settings": {
+            "title": "Foundations of Trauma Therapy",
+            "heading": "Foundations of Trauma Therapy (12 Weeks)",
+            "content": "<p>A 12-week foundational course in trauma therapy for clinicians strengthening their core skills and graduate students building them for the first time. Covers trauma theory, the nervous system, assessment, stabilization, and an integrative, evidence-based approach to treatment, sequenced with time to absorb and apply between sessions.</p><p><strong>Status:</strong> CE approval pending. Launching Fall 2026. Now taking names for the interest list.</p>",
+            "image": "shopify://shop_images/psychology-training.png",
+            "image_alt": "Foundations of Trauma Therapy course",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/contact",
+            "link_label": "Join the interest list"
+          }
+        }
+      },
+      "block_order": [
+        "emdr",
+        "nature",
+        "foundations"
+      ],
+      "settings": {
+        "eyebrow": "Launching Fall 2026",
+        "heading": "Courses & Certification",
+        "subheading": "Three new courses launch this fall. CE approval is pending. Join the interest list to be first to know when registration opens.",
+        "text_align": "left",
+        "image_ratio": "4-3",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Join the Interest List",
+        "body": "<p>All three courses launch Fall 2026 with CE approval pending. Add your name to the interest list and we'll reach out as soon as registration opens, usually within 24-48 hours.</p>",
+        "primary_label": "Join the Interest List",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Trainings",
+        "secondary_link": "/pages/professional-clinical-trainings",
+        "phone": "",
+        "disclaimer": "This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "join_list": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in the Loop",
+        "heading": "Hear when new courses open",
+        "body": "<p>Join the list for new courses and certification cohorts, announced to the list before open enrollment.</p>",
+        "placeholder": "Email address",
+        "button_label": "Join the List",
+        "list_tag": "institute,courses",
+        "success_text": "Thank you. You're on the list.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "header",
+    "intro",
+    "offerings",
+    "join_list",
+    "cta"
+  ]
+}

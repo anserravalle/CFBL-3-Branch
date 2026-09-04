@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "Your Privacy",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Questions About Privacy?",
+        "heading": "We're glad to help",
+        "body": "<p>If you have questions about our privacy practices or your records, please reach out.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "",
+        "secondary_link": "",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cta"
+  ]
+}

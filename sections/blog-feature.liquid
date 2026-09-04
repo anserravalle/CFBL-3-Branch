@@ -1,0 +1,109 @@
+{%- comment -%}
+  Blog feature - surfaces recent articles from a chosen blog (resources/SEO).
+  Falls back gracefully when the blog has no posts.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign blog = blogs[section.settings.blog]
+  assign limit = section.settings.post_limit
+  assign cols = section.settings.columns
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      <div class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:var(--space-24);flex-wrap:wrap;max-width:none;">
+        <div>
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2 style="margin-bottom:0;">{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- if section.settings.subheading != blank -%}<p class="section__subheading" style="margin-top:var(--space-12);">{{ section.settings.subheading }}</p>{%- endif -%}
+        </div>
+        {%- if section.settings.view_all_label != blank and blog != blank -%}
+          {%- render 'button', label: section.settings.view_all_label, href: blog.url, style: 'tertiary' -%}
+        {%- endif -%}
+      </div>
+
+      {%- if blog != blank and blog.articles_count > 0 -%}
+        <div id="blogfeat-{{ section.id }}" class="blogfeat{% if section.settings.carousel %} blogfeat--carousel{% endif %}">
+          {%- if section.settings.carousel -%}
+            <button class="blogfeat__nav blogfeat__nav--prev" type="button" aria-label="Previous" hidden>{%- render 'icon', name: 'arrow-right', size: 20 -%}</button>
+          {%- endif -%}
+          <div class="blogfeat__track{% unless section.settings.carousel %} grid grid--{{ cols }}{% endunless %}"{% if section.settings.carousel %} style="--per: {{ cols }};" tabindex="0" role="group" aria-label="{{ section.settings.heading | default: 'Posts' | escape }}"{% endif %}>
+            {%- for article in blog.articles limit: limit -%}
+              <article class="article-card reveal">
+                {%- if section.settings.show_image and article.image -%}
+                  <a href="{{ article.url }}" tabindex="-1" aria-hidden="true">
+                    {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw', widths: '320,480,640,800' -%}
+                  </a>
+                {%- endif -%}
+                <div class="article-card__body">
+                  <p class="article-card__meta">
+                    <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%b %-d, %Y' }}</time>
+                    {%- if section.settings.show_tags and article.tags.size > 0 %} &middot; {{ article.tags.first }}{% endif -%}
+                  </p>
+                  <h3 class="article-card__title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+                  {%- if section.settings.show_excerpt -%}
+                    <p class="article-card__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 22 }}</p>
+                  {%- endif -%}
+                  <p class="article-card__cta">{%- render 'button', label: 'Read more', href: article.url, style: 'tertiary', aria: 'Read more: ' | append: article.title -%}</p>
+                </div>
+              </article>
+            {%- endfor -%}
+          </div>
+          {%- if section.settings.carousel -%}
+            <button class="blogfeat__nav blogfeat__nav--next" type="button" aria-label="Next">{%- render 'icon', name: 'arrow-right', size: 20 -%}</button>
+          {%- endif -%}
+        </div>
+        {%- if section.settings.carousel -%}
+          <script>
+          (function(){
+            var root=document.getElementById('blogfeat-{{ section.id }}'); if(!root){return;}
+            var t=root.querySelector('.blogfeat__track'),p=root.querySelector('.blogfeat__nav--prev'),n=root.querySelector('.blogfeat__nav--next');
+            if(!t||!p||!n){return;}
+            function step(){var c=t.querySelector('.article-card');return c?c.getBoundingClientRect().width+32:t.clientWidth*0.8;}
+            function upd(){p.hidden=t.scrollLeft<=4;n.hidden=t.scrollLeft>=t.scrollWidth-t.clientWidth-4;}
+            p.addEventListener('click',function(){t.scrollBy({left:-step(),behavior:'smooth'});});
+            n.addEventListener('click',function(){t.scrollBy({left:step(),behavior:'smooth'});});
+            t.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+          })();
+          </script>
+        {%- endif -%}
+      {%- else -%}
+        <p class="section__subheading">Posts will appear here once your blog has published articles. Choose a blog in this section's settings.</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Blog / resources",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Resources" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Notes From Our Practice" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Grounded, research-informed writing on therapy, evaluation, and care." },
+    { "type": "blog", "id": "blog", "label": "Blog" },
+    { "type": "range", "id": "post_limit", "label": "Posts to show", "min": 2, "max": 6, "step": 1, "default": 3 },
+    { "type": "select", "id": "columns", "label": "Columns (desktop)", "options": [
+      { "value": "2", "label": "2" }, { "value": "3", "label": "3" }
+    ], "default": "3" },
+    { "type": "checkbox", "id": "show_image", "label": "Show post image", "default": true },
+    { "type": "checkbox", "id": "show_excerpt", "label": "Show excerpt", "default": true },
+    { "type": "checkbox", "id": "show_tags", "label": "Show first tag", "default": true },
+    { "type": "text", "id": "view_all_label", "label": "View-all link label", "default": "View all resources" },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "left" },
+    { "type": "header", "content": "Card style" },
+    { "type": "checkbox", "id": "carousel", "label": "Swipe carousel (turn the pages)", "default": true },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" }, { "value": "surface", "label": "White" }, { "value": "cream", "label": "Cream" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "presets": [{ "name": "Blog / resources" }]
+}
+{% endschema %}
