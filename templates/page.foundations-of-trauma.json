@@ -69,6 +69,7 @@
     },
     "events": {
       "type": "workshop-event-grid",
+      "disabled": true,
       "blocks": {
         "event_rX78RY": {
           "type": "event",
@@ -140,9 +141,9 @@
     "newsletter": {
       "type": "newsletter-signup",
       "settings": {
-        "eyebrow": "Stay Informed",
-        "heading": "Join the Workshop Waitlist",
-        "body": "<p>Our current workshops are full. Add your name and we'll let you know the moment new dates open.</p>",
+        "eyebrow": "Next Cohort",
+        "heading": "Join the Waitlist for the Next Cohort",
+        "body": "<p>The September beta cohort is full. Add your name and you'll hear first when the next cohort of Foundations of Trauma Therapy opens. Waitlist members are invited to register before seats go public.</p>",
         "placeholder": "Email address",
         "button_label": "Join the Waitlist",
         "list_tag": "institute,foundations-waitlist",
