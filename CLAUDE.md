@@ -22,19 +22,33 @@ Shopify is right.
 ## Where the standard actually lives
 
 The `cfbl-marketing` skill is explicit that **it does not carry brand rules and
-this file must not pretend to either**. The living standard is the Notion page
-**Marketing & Content Engine** (`3bbe8dd3-03bf-81f9-a509-e5acacd65f88`), which
-Niki edits directly and which is therefore always newer than any file. It holds
-brand grammar, the visual standard, the learning loop, and what not to repeat.
-Read it before producing anything. If it and this file disagree, Notion wins, then
-fix this file.
+this file must not pretend to either**. Rules that change need to live somewhere
+Niki edits directly, or they go stale and the work comes back wrong.
 
-**Status, 2026-09-10: unresolved and blocking.** The Notion MCP connection in this
-session returns 401, API token is invalid, on every call. Niki has separately said
-she deleted everything in Notion. So either the standard is gone or it is merely
-unreachable from here, and those need different responses. Until that is settled,
-anything produced is being produced without the standard, and that fact should be
-stated rather than papered over.
+That home used to be the Notion page Marketing & Content Engine. **Notion was
+emptied and deleted, confirmed by Niki on 2026-09-10.** The page is gone and with
+it the accumulated what-not-to-repeat log, the visual standard and the learning
+loop. One fragment survived only because the skill file happened to quote it as a
+cautionary example.
+
+**The living standard is now `tbleatoO3KDm2VZbS`, The Standard, in this base.**
+Read it before producing anything. If it and this file disagree, The Standard
+wins, then fix this file. Seeded 2026-09-10 with sixteen principles recovered from
+the three sources that outlived Notion: the skill file, the operations connector
+code, and the alt text on Niki's own design files in Shopify.
+
+The split is deliberate. Durable architecture lives here, in a repo, under version
+control. Anything that changes lives in The Standard, in Airtable, where she
+already works. A file she does not edit is a file that will be wrong within a
+month.
+
+**The `cfbl-marketing` skill is now partly broken and will mislead the next
+session.** Its first instruction is to read a Notion page that no longer exists,
+and every collection id it names is dead: Content, Weekly Cycles, Idea Bank,
+Tasks. Its process rules survive and are worth keeping. Its substrate does not.
+It needs rewriting against Airtable, and until then it points at nothing.
+`cfbl-content-creator` and `cfbl-weekly-marketing` are also still installed even
+though `cfbl-marketing` states both are retired.
 
 The skill also mandates process this build does not yet implement: the week runs
 **Sunday through Saturday, planned Thursday to Saturday of the week before**; a
@@ -173,6 +187,16 @@ API:
 | Post to TikTok | `fldUJgetjGUWqEt0U` |
 
 **Curriculum Vault** `tbldTobI99OtH0DRe`.
+
+**The Standard** `tbleatoO3KDm2VZbS`. The living standard, replacing the deleted
+Notion page. One row per durable principle. Fields: Principle
+`fldjOmKv7ci6fe9qI`, Kind `fldAplH5BD1tk24Oo`, Detail `fldmJEYfoPerke27f`, Date
+established `fldaInnGkJ3OXg7qn`, Source `fldVNeMHgZ6adzR3F`, Provenance
+`fldrPFOjxYV6YEgBb`. Six fields on purpose. The system this replaces died of
+thirty-three properties.
+
+Write the knowledge, not the adjective. "Too Canva" is not knowledge. "A solid
+color ground with a boxed headshot reads as an academic slide" is.
 
 Send Queue is a formula, not a select. It reads the three venue checkboxes and
 only names a platform when the linked brand actually has a profile id for it. A
