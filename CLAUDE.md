@@ -578,11 +578,33 @@ Article intake needs dedup before it can go on a schedule.
 The Wednesday call sheet is still manual. It should be a scheduled run that
 assigns codes, writes shot notes, and emails the sheet out.
 
+The September one was built by hand on 2026-09-10 as a published page at
+`https://claude.ai/code/artifact/7876aa18-7119-4178-8129-5b8ece22c5b8`. Fourteen
+shots, printable, and it remembers what has been ticked off. **It is grouped by
+where she has to stand rather than by publish date**, which is the thing that
+makes it a call sheet rather than a schedule: four of the fourteen are in her
+office and can be done in one visit, five are moody interiors that are one evening
+with a phone. Whatever automates this must keep that grouping. Sorting by date
+produces a list nobody can shoot from.
+
 The asset matcher does not exist. Files are attached to records by hand. An
 hourly job should match uploaded filenames to Asset Codes and attach them.
 
-Where composed images live is undecided. Buffer needs a permanent public URL and
-Airtable attachment URLs expire, so Shopify Files is the likely answer.
+**Decided 2026-09-10. Composed images live in Shopify Files.** Drive and Canva
+are where things are made; Shopify Files is the shelf. It is the only one of the
+three that gives a permanent public address Buffer can reach, Airtable attachment
+URLs expire, and Niki's finished work is already there. Nothing to migrate.
+
+Two things found when that was settled. **An app is dumping her Instagram feed
+into the same folder**, as `instagram-image-<uuid>.jpg` at 1080x1350 with no alt
+text, several a day at 18:01, 22:01 and 23:01. It already outnumbers the design
+work and will bury the library. Find it and turn it off. And **three naming
+conventions are running at once** in her own files: `WTDIR_wk1_Herman` with no
+date, `SPOT_01_Serravalle_quote` numbering a series, `0911_CFBL_ADHDEvals`
+date-first. Use date-first going forward. **Never rename what is already
+published**: the filename sits inside the CDN path, so renaming breaks every post,
+Buffer item and Metricool record pointing at it. The matcher accepts all three
+patterns instead.
 
 The Canva composition step is unbuilt. The photograph arrives, the brand kit is
 applied, the composed file exports. Canva brand kit ids are in the Brands table.
