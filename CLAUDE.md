@@ -42,13 +42,16 @@ control. Anything that changes lives in The Standard, in Airtable, where she
 already works. A file she does not edit is a file that will be wrong within a
 month.
 
-**The `cfbl-marketing` skill is now partly broken and will mislead the next
-session.** Its first instruction is to read a Notion page that no longer exists,
-and every collection id it names is dead: Content, Weekly Cycles, Idea Bank,
-Tasks. Its process rules survive and are worth keeping. Its substrate does not.
-It needs rewriting against Airtable, and until then it points at nothing.
-`cfbl-content-creator` and `cfbl-weekly-marketing` are also still installed even
-though `cfbl-marketing` states both are retired.
+**The skill was rewritten against Airtable on 2026-09-10** and now lives in this
+repo at `.claude/skills/cfbl-marketing/`, with references for allocation,
+production, the asset library, and Airtable state. The process rules were kept,
+the Notion substrate was replaced, and the CE claims were corrected against the
+store.
+
+The account-level synced copies are still installed and still point at Notion.
+`cfbl-marketing`, `cfbl-content-creator` and `cfbl-weekly-marketing` all need
+deleting from Niki's Claude skill settings, which only she can do. Until then the
+stale ones can still fire, and two of them are retired by their own successor.
 
 The skill also mandates process this build does not yet implement: the week runs
 **Sunday through Saturday, planned Thursday to Saturday of the week before**; a
@@ -97,10 +100,15 @@ content outperformed the layout-led version. A predecessor skill carried the sta
 rule, the work came back wrong, and Niki spent a Sunday re-teaching something she
 had already written down. Do not restate the layout rule without the photograph.
 
-**MUSA** is literary. The tradition is a book page and an essay in a good
-magazine. Type-led, image-sparse, image oblique when present. Drop caps, pull
-quotes, wide margins, a single column that trusts the reader. It never explains
-itself. Posts to Handle Beta.
+**MUSA** is literary in tone and **still photography-led**. Moody atmosphere,
+books, paper, letters, shadow, deep contrast, a single line set into the image.
+Wide margins, the text given room. It never explains itself. Posts to Handle Beta.
+
+**Correction, 2026-09-10.** An earlier version of this file said MUSA is type-led
+and image-sparse. That layout was retired around 2026-08-11 when photography-led
+content measurably outperformed type-led, and the retired version was written into
+a live shot note as if it were the standard. **Image-oblique, never
+image-absent.** The three print traditions set tone, not layout.
 
 MUSA is all the writing: the book, the essays, the excerpts. MUSA carries a
 LinkedIn profile and a bare link to a piece of writing is a continuation of the
@@ -380,12 +388,29 @@ established, and the dorsal and ventral vagal distinction in polyvagal theory is
 not. The polyvagal claim is defensible in public because the pre-read packet
 cites Grossman (2023), Biological Psychology.
 
-## Foundations of Trauma Therapy
+## Continuing education, stated exactly
 
-The pilot is **NBCC accreditation pending**. Nothing may claim or imply CE credit
-for it until that clears. It is running and it is closed. Do not promote it. The
-material may be used for teaching content and brand posts that do not reference a
-cohort or imply enrollment.
+Never flatten approved and pending, and never state either from memory. Read the
+Shopify product record. Getting this wrong is an ethics problem, not a marketing
+one. Verified against Shopify 2026-09-10:
+
+**Foundations of Trauma Therapy**, 18 and 19 September 2026, provides 12 hours of
+instruction across two days. This pilot cohort is the delivery that **completes
+CFBL Institute's NBCC accreditation application**, and **the hours count toward
+your practice rather than your licence renewal**. DRAFT status, 14 seats
+remaining, not publicly purchasable. It is running and it is closed. Do not
+promote it. The material may be used for teaching content and brand posts that do
+not reference a cohort or imply enrollment.
+
+**Nature-Informed EMDR** is genuinely **EMDRIA Approved for 3 EMDRIA Credits** and
+the product page leads with it. Friday 2 October 2026, 2:00 to 5:00pm Eastern,
+live on Zoom. Credit requires live real-time attendance. Prerequisite is
+completion of an EMDRIA-Approved Basic EMDR Training. ACTIVE, 99 dollars, 10
+seats, tracked, policy DENY.
+
+Two earlier claims were wrong. This file said Foundations was simply NBCC
+accreditation pending with no CE claim possible. The skill file said it carries 12
+NBCC clock hours with ACEP approval pending. Neither matches the store.
 
 ## Hard rules
 
