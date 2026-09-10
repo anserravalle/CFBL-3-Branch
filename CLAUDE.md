@@ -93,72 +93,142 @@ important thing the practice communicates. Do not propose removing it, muting it
 or reducing it to brand colours, and do not treat it as a differentiation problem:
 the practice predates the market's version of it.
 
+**The CBL Brand Guide sets a minimum size of 2 inches, 200 pixels.** The guide
+therefore already concedes the mark does not work small. A reduced version for
+profile circles and favicons is not a deviation from the guide, it is the thing
+the guide implies is needed and does not yet exist.
+
+The guide states the meaning directly: unity, inclusivity, and the
+interconnectedness of mind, body and spirit. Clear space is the width of the C
+from the logotype, and half the height of the o between mark and name. A
+horizontal secondary lockup exists and the guide says to use it only when
+necessary.
+
+The mark belongs to Center for Balanced Living. **Professional Education's avoid
+list names the rainbow CFBL logo directly**, so the CFBL Institute logo drafted on
+2026-09-10 sits against the manual. That is Niki's call, not this file's, but it
+should be a decision rather than an oversight.
+
 The brand palettes below sit around the mark. They do not replace it.
 
-## The three brands
+## Two public brands, three internal visual systems
 
-Three brands, two social handles, three print traditions. The traditions are the
-point. Palette alone will not separate them, and palette is what everyone else
-reaches for first. Each brand takes its visual grammar from a different tradition
-of the printed page, which is why the system cannot be copied with a template
-swap.
+**The governing document is the Brand + Marketing Operating Manual, v1.0, August
+2026, approved by Niki.** It is in her Canva as
+`Dr_Niki_Serravalle_Brand_Marketing_Operating_Manual.docx`. Its source foundation
+is the CFBL Brand Kit Master. Confirmed current 2026-09-10. It outranks this file,
+the skill, and The Standard.
 
-**CFBL Clinical** is editorial. The tradition is a well-made magazine feature.
-Photography carries weight, type sits beside it rather than over it, layouts are
-asymmetric, whitespace is generous but purposeful. Warm, human, credible. It
-should feel like something you would read in a waiting room and keep. Posts to
-Handle Alpha. This brand may invite, may say register, may link to a product.
+Its non-negotiable premise, in its own words: the public does not need to learn a
+family tree of sub-brands. It needs two clear destinations. **Center for Balanced
+Living** for the practice, and **Dr. Niki Serravalle** for authority, education,
+writing, speaking and books. CFBL Institute and MUSA are internal design languages
+and product imprints. They do not compete for attention as equal public
+identities.
 
-**CFBL Institute** is scholarly. The tradition is a scientific monograph or a
-serious field guide, but **photography leads**. The monograph apparatus sits
-around the photograph rather than replacing it: a photographic plate with a roman
-numeral and a citation caption, a figure number on a diagram, a ruled table only
-where the table carries information. Nothing decorative. This serves the mission
-directly: adult learners who want a deep dive rather than a certificate should be
-able to see the difference before they read a word. Posts to Handle Beta.
+Its closing rule: if a person must understand the brand architecture before they
+can understand the content, the content is not ready.
 
-**Correction, 2026-09-10.** An earlier version of this file said "plates with
-captions and figure numbers, ruled tables, marginal annotation" with no mention of
-photography. That is the exact rule the `cfbl-marketing` skill records as retired
-on 2026-08-16, when Notion had already logged that photography-led Institute
-content outperformed the layout-led version. A predecessor skill carried the stale
-rule, the work came back wrong, and Niki spent a Sunday re-teaching something she
-had already written down. Do not restate the layout rule without the photograph.
+**Correction, 2026-09-10.** This file previously described three co-equal brands
+with three print traditions. That was wrong. The manual lists "third-brand
+explanation" under Stop, and its AI section says explicitly not to treat CFBL
+Institute or MUSA as equal public identities. The internal systems are real and
+worth preserving; they are just never the signature.
 
-**MUSA** is literary in tone and **still photography-led**. Moody atmosphere,
-books, paper, letters, shadow, deep contrast, a single line set into the image.
-Wide margins, the text given room. It never explains itself. Posts to Handle Beta.
+| Internal system | Signs as | Category line | Account |
+|---|---|---|---|
+| CFBL Clinical | Center for Balanced Living | Trauma-informed therapy and psychological assessment | @centerforbalancedliving |
+| Core Dr. Niki (bridge) | Dr. Niki Serravalle | Make It Make Sense | @drserravalle |
+| Professional Education | Dr. Niki Serravalle | Professional Education | @drserravalle |
+| Books + Essays | Dr. Niki Serravalle | Books + Essays | @drserravalle |
 
-**Correction, 2026-09-10.** An earlier version of this file said MUSA is type-led
-and image-sparse. That layout was retired around 2026-08-11 when photography-led
-content measurably outperformed type-led, and the retired version was written into
-a live shot note as if it were the standard. **Image-oblique, never
-image-absent.** The three print traditions set tone, not layout.
+The public brand leads and is the largest identity on the asset. The category line
+sits underneath. One category line, never a list of programs. MUSA may appear as a
+subtle imprint on Books + Essays; it is never the identity.
 
-MUSA is all the writing: the book, the essays, the excerpts. MUSA carries a
-LinkedIn profile and a bare link to a piece of writing is a continuation of the
-work, which is permitted. Promotional framing around that link is not. The rule
-is about voice, not venue.
+Three systems share restraint, generous whitespace, clean alignment, limited
+accents and serious typography. CFBL Clinical and Professional Education share
+Cormorant SC as a family signature. **Books + Essays breaks from that family on
+purpose** so the writing reads as an independent credential.
 
-The newsletter Letters from the Practice is Clinical, not MUSA, because an events
-letter has to be able to say register and MUSA cannot say register.
+**CFBL Clinical.** Editorial, a well-made magazine feature. Open with a specific
+human moment, then the idea. Photography carries the post. Asymmetric, generous
+whitespace. Warm, human, credible, clinically accurate without a jargon wall.
+Palette Cobalt Blue #2B5275, Ocean and Sky Blue #4E9FBF, Sand #EED9C5, #9D654E,
+Warm Gray #3D2D29. Cormorant SC headlines, Montserrat body. Default signature is a
+sand field, a navy headline, one graphic accent. Carries the rainbow logo. Avoid
+busy patterns, neon, high saturation, harsh gradients, cartoons, long all-caps
+lines, or more than one headline hierarchy.
 
-**Make It Make Sense, MIMS, is the blog, not a newsletter.** Clinical. It runs
-bimonthly and it is the cadence anchor for the whole calendar. Post and email on
-day 0, social on day 2. Call it Make It Make Sense, never "the blog." The
-published tiles carry MAKE IT MAKE SENSE as a kicker over Center for Balanced
-Living, so it is a practice property even when a piece also runs on the Dr.
-Serravalle account.
+**Core Dr. Niki, the bridge.** Public-facing psychology explanation and Make It
+Make Sense. It borrows rather than owning a palette, which is why published Make
+It Make Sense cards read in navy and sand duotone. It must not read as the
+practice's intake voice or as either owned system on the same account.
 
-The pipeline through January 2027 is in Content Pipeline, each row prefixed MIMS,
-each carrying its full SEO package, target and secondary keywords, meta and Google
-preview descriptions, internal linking, and the local SEO instruction. Two of them
-carry a clinical caution in the record: keep emotion dysregulation separate from
-rejection sensitive dysphoria in the October piece, and route the stimulant
-question to the prescriber in the December one.
+**Professional Education.** Scholarly, a serious field guide, **photography led**.
+Lead with the mechanism or the finding, not with the reader. Name the evidence
+base. Palette Forest #3D5A52, Sage #6F8F7A, Sage Mist #B8C9BC, Soft Sky #C2D7E9,
+Cream #EAE2D0, Paper #F0EAE0, Deep Ink #2A3530. Cormorant SC headlines, Lora body,
+Inter or Source Sans Pro for metadata only. Imagery is assessment materials,
+teaching context, clinical concepts, restrained natural detail. No wellness
+imagery. **Avoid parent-brand navy or terracotta as primary fields, the rainbow
+CFBL logo, decorative botanicals, spa gradients, and parent-brand appointment
+language.**
 
-Institute and MUSA share Handle Beta. One brand per day on Beta. Two posts on the
-same page on the same day compete with each other.
+The layout-led version of this system, plates and figure numbers and ruled tables
+without photography, was retired on 2026-08-16 when photography-led work
+outperformed it. A predecessor skill carried the stale rule, the work came back
+wrong, and Niki spent a Sunday re-teaching something she had written down. Do not
+restate it.
+
+**Books + Essays.** Literary, first person, analytical, direct. One idea per
+piece. Trust the reader to finish the thought. Never explain the piece. Palette
+Bone #F1E8D8, Parchment #EDE0C8, **Oxblood #6E1F23**, Ochre #C5A572, Walnut
+#4A4036, Ink #1F1A16. **DM Serif Display** titles and drop caps, **EB Garamond**
+body. Editorial variety inside a locked system, pull quotes with hairlines,
+generous reading measure. Photography led, image-oblique, **never image-absent**.
+**Avoid Cormorant, any CFBL or Institute colour, decorative botanicals, women
+journaling, coffee-and-journal flat lays, credentials above the essay title, pure
+black, and marketing-heavy CTAs.**
+
+Oxblood was recorded here as #5A0C11 until 2026-09-10. Wrong colour. The
+type-led, image-sparse version of this system was retired around 2026-08-11 and
+had reached a live shot note before being corrected.
+
+A bare link to a full essay is continuation, not a call to action, the way a
+magazine runs an excerpt and says where the rest lives. The promotional framing
+around it is what is forbidden. On LinkedIn write the excerpt long.
+
+**Letters from the Practice** is Clinical, because an events letter has to be able
+to say register.
+
+**Make It Make Sense, MIMS, is the blog.** It routes to Dr. Niki Serravalle on the
+bridge treatment, not to the practice, per the manual's routing table. Bimonthly,
+every other week, and it is the cadence anchor for the whole calendar. Post and
+email day 0, social day 2. Call it Make It Make Sense, never "the blog." The
+pipeline through January 2027 is in Content Pipeline, each row prefixed MIMS with
+its full SEO package.
+
+Professional Education and Books + Essays share the @drserravalle account. One
+system per day on it.
+
+### Routing, from the manual
+
+| If the content is mainly about | Publish from | System |
+|---|---|---|
+| Therapy, evaluations, groups, the team, local resources, referral access | Center for Balanced Living | CFBL Clinical |
+| Public psychology explanation, Make It Make Sense | Dr. Niki Serravalle | Core Dr. Niki bridge |
+| Clinician skills, clinical reasoning, CE, consultation, advanced training | Dr. Niki Serravalle | Professional Education |
+| Books, essays, author ideas, writing process, reading life | Dr. Niki Serravalle | Books + Essays |
+| A topic genuinely serving two audiences | Two tailored assets | Each audience's correct system |
+
+### Reel endings
+
+Two master end cards, and they are **attached, never regenerated per reel**. The
+practice ending is a sand ground with a navy wordmark. The Dr. Niki ending keeps
+the identity fixed and changes only the category line. Use one destination, never
+stack follow and subscribe and register and buy. Keep endings 9:16 and retain a
+clean editable master.
 
 ## The filename is the state
 
