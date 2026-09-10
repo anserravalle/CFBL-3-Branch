@@ -116,7 +116,7 @@ Team 2907664.
 | CFBL 1 Shopify Intake | 6216427 | Active, webhook driven |
 | CFBL 2 Article Intake | 6219321 | On demand only, no dedup yet |
 | CFBL 3 Buffer Publisher | 6214861 | Built, never run live |
-| Website Activity Sync | 6203896 | Broken, awaiting deactivation, do not repair |
+| Website Activity Sync | 6203896 | Deactivated 2026-09-10, do not repair or delete |
 
 Intake quarantines by default and promotes only on an exact brand match. When the
 brand search returns nothing the branch halts and the row stays in Needs Manual

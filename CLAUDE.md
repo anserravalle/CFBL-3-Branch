@@ -289,8 +289,9 @@ two operations, in its whole life. It reads Shopify pages and articles and would
 write them into a Notion Website Activity database that is being retired, which is
 work CFBL 2 Article Intake already does into Airtable.
 
-It runs daily at 06:00 and now fails at initialization, which emails Niki an error
-every morning. It should be deactivated, not fixed and not deleted.
+It ran daily at 06:00 and failed at initialization, emailing Niki an error every
+morning. **Deactivated 2026-09-10.** `isActive` false, `nextExec` null. Not
+deleted, because the blueprint is worth keeping.
 
 Keep the blueprint. Its router is the create-or-update dedup pattern that CFBL 2
 Article Intake is missing: query the destination by a natural key, then branch on
@@ -457,9 +458,6 @@ Vercel. Metricool holds every caption the old system published, for blogIds
 6760980 Center for Balanced Living and 6760856 Dr Serravalle, with MUSA
 interleaved on the Dr Serravalle account. Do not delete the Vercel project, rotate
 the token, or cancel Metricool until that history is out.
-
-Website Activity Sync, scenario 6203896, is awaiting deactivation by Niki. See the
-established-facts section above for why it should not be repaired.
 
 There is an empty record in Brands and Asset Kits with no name and no tag. It
 cannot match anything, but it is debris from an intake test.
