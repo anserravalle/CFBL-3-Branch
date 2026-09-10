@@ -19,6 +19,41 @@ Buffer publishes to Instagram and LinkedIn.
 Shopify is the source of record. Airtable is derived. When the two disagree,
 Shopify is right.
 
+## Where the standard actually lives
+
+The `cfbl-marketing` skill is explicit that **it does not carry brand rules and
+this file must not pretend to either**. The living standard is the Notion page
+**Marketing & Content Engine** (`3bbe8dd3-03bf-81f9-a509-e5acacd65f88`), which
+Niki edits directly and which is therefore always newer than any file. It holds
+brand grammar, the visual standard, the learning loop, and what not to repeat.
+Read it before producing anything. If it and this file disagree, Notion wins, then
+fix this file.
+
+**Status, 2026-09-10: unresolved and blocking.** The Notion MCP connection in this
+session returns 401, API token is invalid, on every call. Niki has separately said
+she deleted everything in Notion. So either the standard is gone or it is merely
+unreachable from here, and those need different responses. Until that is settled,
+anything produced is being produced without the standard, and that fact should be
+stated rather than papered over.
+
+The skill also mandates process this build does not yet implement: the week runs
+**Sunday through Saturday, planned Thursday to Saturday of the week before**; a
+blog drags its own dates, post and email on day 0 and social on day 2; founder
+presence at least once a week; at least half conversational CTAs; roughly three
+parts value to one part promotion, counted not estimated; one lighthearted post
+not landing the same day as a heavy clinical piece; layout varies from the prior
+cycle within each brand; and the ask list goes out as dated Notion Tasks with an
+owner, never as a chat list or a document.
+
+**Two genuine conflicts to resolve, not to quietly pick a side on.**
+
+The skill says none of the connected tools publish, posting stays with Niki, and
+nothing is finished without her explicit yes on that specific piece. This build
+has an auto-publishing Buffer scenario and a Publish Guard designed to remove
+approval fields. Those cannot both be right.
+
+The skill delivers to Metricool as a bulk CSV. This build delivers to Buffer.
+
 ## The three brands
 
 Three brands, two social handles, three print traditions. The traditions are the
@@ -33,11 +68,20 @@ should feel like something you would read in a waiting room and keep. Posts to
 Handle Alpha. This brand may invite, may say register, may link to a product.
 
 **CFBL Institute** is scholarly. The tradition is a scientific monograph or a
-serious field guide. Plates with captions and figure numbers. Ruled tables.
-Marginal annotation. Nothing decorative that does not carry information. This
-serves the mission directly: adult learners who want a deep dive rather than a
-certificate should be able to see the difference before they read a word. Posts
-to Handle Beta.
+serious field guide, but **photography leads**. The monograph apparatus sits
+around the photograph rather than replacing it: a photographic plate with a roman
+numeral and a citation caption, a figure number on a diagram, a ruled table only
+where the table carries information. Nothing decorative. This serves the mission
+directly: adult learners who want a deep dive rather than a certificate should be
+able to see the difference before they read a word. Posts to Handle Beta.
+
+**Correction, 2026-09-10.** An earlier version of this file said "plates with
+captions and figure numbers, ruled tables, marginal annotation" with no mention of
+photography. That is the exact rule the `cfbl-marketing` skill records as retired
+on 2026-08-16, when Notion had already logged that photography-led Institute
+content outperformed the layout-led version. A predecessor skill carried the stale
+rule, the work came back wrong, and Niki spent a Sunday re-teaching something she
+had already written down. Do not restate the layout rule without the photograph.
 
 **MUSA** is literary. The tradition is a book page and an essay in a good
 magazine. Type-led, image-sparse, image oblique when present. Drop caps, pull
@@ -71,9 +115,21 @@ thirty-three properties. Four competing approval surfaces that could each
 disagree with the others. Do not reintroduce a second approval surface. If a new
 requirement seems to need one, it does not.
 
-Asset codes are `ACCOUNT-MMDD-LETTER`. Accounts are `CFBL`, `INST`, `MUSA`.
-Example: `CFBL-0916-A`. The photographer names the file the code and nothing
-else. Renaming breaks the link between the record and the asset.
+Asset codes are `ACCOUNT-MMDD-LETTER`. Accounts are `CFBL`, `INST`, `DRS`,
+`MUSA`. Example: `CFBL-0916-A`.
+
+**The code goes at the front and a descriptive slug may follow it**, so
+`INST-0920-A_WTDIR_Hinshaw.png` is correct and preferred. This is not a
+compromise, it is the fix for a real defect found on 2026-09-10.
+
+Niki's actual design files are named `MMDD_ACCOUNT_Slug.png`, for example
+`0907_DRS_WTDIR_Herman.png`. The old connector's parser, `api/_lib/naming.js` in
+`cfbl-operations-connector`, only accepts a stem that BEGINS `CFBL-`, `DRS-` or
+`MUSA-` followed by four digits and a letter, and has no `INST` account at all.
+Not one of her real files parses. The publisher was matching a convention nothing
+was named in, which is a sufficient explanation for that system appearing to do
+nothing. Any matcher built here must accept the code as a prefix with arbitrary
+text after it, and must know `INST`.
 
 ## Airtable
 
@@ -188,8 +244,25 @@ reauthorizing does not change that. Keep writing scripts if they are useful, pos
 manually. Do not spend another session on this.
 
 **Shopify allows one connection per store in Make.** Creating a new one replaces
-the old one. The replacement of 10967062 with 10989870 may have broken the
-Website Activity Sync scenario. Unverified.
+the old one. The replacement of 10967062 with 10989870 **did** break Website
+Activity Sync, scenario 6203896. Confirmed 2026-09-10 by a Make error email:
+scenario validation failed, four problems, account 10967062 not found plus three
+references to Notion account 10967276, also gone.
+
+Do not repair it. Read its blueprint first: module 3 carries a filter named
+"TEST LOCK - Notion writes disabled" whose condition is `READ_ONLY_TEST` equals
+`ENABLE_NOTION_SYNC`, which can never be true. Every Notion write in that scenario
+is downstream of that filter, so it has never written anything. Two executions,
+two operations, in its whole life. It reads Shopify pages and articles and would
+write them into a Notion Website Activity database that is being retired, which is
+work CFBL 2 Article Intake already does into Airtable.
+
+It runs daily at 06:00 and now fails at initialization, which emails Niki an error
+every morning. It should be deactivated, not fixed and not deleted.
+
+Keep the blueprint. Its router is the create-or-update dedup pattern that CFBL 2
+Article Intake is missing: query the destination by a natural key, then branch on
+whether the result count is 1 or 0. Port that rather than inventing one.
 
 **Reauthorizing an OAuth connection replays the original grant.** It does not add
 scopes. A new scope needs a new connection.
@@ -231,12 +304,24 @@ all.
 
 ## Recurring series
 
-**What the Doctor Is Reading.** Monthly. One theme, one book, and what the book
-licenses a clinician to say in a room with a client. Assigned to the Institute
-rather than MUSA: the audience is the Institute audience, the grammar is a plate
-with a caption and a citation line, and a reading community has to be able to say
-join us, which MUSA cannot. Each month sorts the book's claims into the four
-tiers.
+**What the Doctor Is Reading.** Already launched in September 2026, not new.
+`WTDIR_00_Intro.png` in Shopify Files states the real structure: **a subject a
+month, a book a week, a short film on Sunday, twelve subjects from September 2026
+to August 2027.** September's subject is trauma across modalities, and week cards
+already exist for Herman, van der Kolk, Fisher and Pete Walker. Assigned to the
+Institute rather than MUSA: the audience is the Institute audience, and a reading
+community has to be able to say join us, which MUSA cannot. Each book gets sorted
+into the four tiers.
+
+**Unresolved.** `0902_DRS_InstituteReview_intro.png` announces The Institute
+Review as "one month, one theme, one book, a book review for therapists," one day
+before the WTDIR intro card. Either it was renamed or there are two book series
+competing on the same handle. Niki has to say which before either runs again.
+
+**Do not announce a launch.** On 2026-09-10 a record was built announcing this
+series as new, with a monthly cadence and an invented October pick, because the
+existing Shopify Files were not read first. Read what already shipped before
+building a series.
 
 **Letters from the Practice.** Clinical. Events and community.
 
@@ -317,7 +402,15 @@ applied, the composed file exports. Canva brand kit ids are in the Brands table.
 
 The earlier Vercel connector, cfbl-operations-connector, still runs an hourly
 publish cron and a Monday analytics cron against Notion. Notion has been emptied.
-Retire those crons.
+Retire those crons, but **export the Metricool history first**. That connector
+already has `listScheduledPosts(blogId, start, end)` and a live Metricool token in
+Vercel. Metricool holds every caption the old system published, for blogIds
+6760980 Center for Balanced Living and 6760856 Dr Serravalle, with MUSA
+interleaved on the Dr Serravalle account. Do not delete the Vercel project, rotate
+the token, or cancel Metricool until that history is out.
+
+Website Activity Sync, scenario 6203896, is awaiting deactivation by Niki. See the
+established-facts section above for why it should not be repaired.
 
 There is an empty record in Brands and Asset Kits with no name and no tag. It
 cannot match anything, but it is debris from an intake test.
