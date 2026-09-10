@@ -78,12 +78,30 @@ approval fields. Those cannot both be right.
 
 The skill delivers to Metricool as a bulk CSV. This build delivers to Buffer.
 
+## The mark
+
+**The rainbow tree is the practice's founding symbol. It is never a palette
+question and it is never removed.**
+
+Eight years old. On the building, the car, the signage, the logo. The spectrum is
+inclusion and community, which is the foundation the practice was built on.
+
+On 2026-09-10 this system called it decoration carrying no information and
+proposed recolouring it to the Institute greens. That was wrong on its own terms.
+The test is whether an element carries information, and this one carries the most
+important thing the practice communicates. Do not propose removing it, muting it,
+or reducing it to brand colours, and do not treat it as a differentiation problem:
+the practice predates the market's version of it.
+
+The brand palettes below sit around the mark. They do not replace it.
+
 ## The three brands
 
 Three brands, two social handles, three print traditions. The traditions are the
-point. Palette is the weakest possible differentiator and it is the one everyone
-uses. Each brand takes its visual grammar from a different tradition of the
-printed page, which is why the system cannot be copied with a template swap.
+point. Palette alone will not separate them, and palette is what everyone else
+reaches for first. Each brand takes its visual grammar from a different tradition
+of the printed page, which is why the system cannot be copied with a template
+swap.
 
 **CFBL Clinical** is editorial. The tradition is a well-made magazine feature.
 Photography carries weight, type sits beside it rather than over it, layouts are
