@@ -141,8 +141,21 @@ work, which is permitted. Promotional framing around that link is not. The rule
 is about voice, not venue.
 
 The newsletter Letters from the Practice is Clinical, not MUSA, because an events
-letter has to be able to say register and MUSA cannot say register. Make It Make
-Sense is the other newsletter.
+letter has to be able to say register and MUSA cannot say register.
+
+**Make It Make Sense, MIMS, is the blog, not a newsletter.** Clinical. It runs
+bimonthly and it is the cadence anchor for the whole calendar. Post and email on
+day 0, social on day 2. Call it Make It Make Sense, never "the blog." The
+published tiles carry MAKE IT MAKE SENSE as a kicker over Center for Balanced
+Living, so it is a practice property even when a piece also runs on the Dr.
+Serravalle account.
+
+The pipeline through January 2027 is in Content Pipeline, each row prefixed MIMS,
+each carrying its full SEO package, target and secondary keywords, meta and Google
+preview descriptions, internal linking, and the local SEO instruction. Two of them
+carry a clinical caution in the record: keep emotion dysregulation separate from
+rejection sensitive dysphoria in the October piece, and route the stimulant
+question to the prescriber in the December one.
 
 Institute and MUSA share Handle Beta. One brand per day on Beta. Two posts on the
 same page on the same day compete with each other.
@@ -371,10 +384,13 @@ Institute rather than MUSA: the audience is the Institute audience, and a readin
 community has to be able to say join us, which MUSA cannot. Each book gets sorted
 into the four tiers.
 
-**Unresolved.** `0902_DRS_InstituteReview_intro.png` announces The Institute
-Review as "one month, one theme, one book, a book review for therapists," one day
-before the WTDIR intro card. Either it was renamed or there are two book series
-competing on the same handle. Niki has to say which before either runs again.
+**Settled 2026-09-10.** The Institute Review was the discarded first name.
+`0902_DRS_InstituteReview_intro.png` was made on 2 September as one month, one
+theme, one book. Roughly twenty hours later What the Doctor Is Reading superseded
+it at a book a week. Nothing was made under the old name afterwards. One series.
+
+Separately, THE CFBL SHELF runs on the practice account, parent-facing, currently
+Lisa Damour. Different audience, not a duplicate.
 
 **Do not announce a launch.** On 2026-09-10 a record was built announcing this
 series as new, with a monthly cadence and an invented October pick, because the
