@@ -199,6 +199,32 @@ A bare link to a full essay is continuation, not a call to action, the way a
 magazine runs an excerpt and says where the rest lives. The promotional framing
 around it is what is forbidden. On LinkedIn write the excerpt long.
 
+**Two registers live inside this one system and they are not interchangeable.**
+The book is interior and oblique. The essays are direct, argued, addressed to a
+reader in pain, and useful in a way the book deliberately is not. So a post
+carrying an essay may say something a reader can act on. A post carrying a book
+excerpt may not. "Never explain the piece" governs the framing around the work,
+not the prose inside it.
+
+Established 2026-09-10 by reading what actually shipped. **The Distance Between
+Us ran as a four-part series in June 2026** on Shopify blog
+`gid://shopify/Blog/120677892402`, Essays, Books & Other Publications. Parts one
+and two sit with the person who needed distance, three and four with the person
+who was left. Handles `family-estrangement-series`, `family-estrangement-part-2`,
+`the-distance-between-us-part-3`, `relationship-repair-distance-us-4`.
+
+Until that read, this system was being run as if the whole category were the
+book, which would have flattened the essays into obliqueness they do not have.
+Four thesis lines are already published and need no new writing: "They are living
+inside a nervous system that did the best it could with what it had." "Cutting
+off contact often works. That is exactly why people do it." "The phone sits
+there. Able to ring. Not ringing." "Hold the door open without standing in the
+doorway."
+
+What worked in that series was the structure, not the volume: four parts, both
+sides of one silence, neither side made the villain. The form is repeatable and
+the next one is a subject rather than a word count.
+
 **Letters from the Practice** is Clinical, because an events letter has to be able
 to say register.
 
@@ -572,3 +598,11 @@ the token, or cancel Metricool until that history is out.
 
 There is an empty record in Brands and Asset Kits with no name and no tag. It
 cannot match anything, but it is debris from an intake test.
+
+**A month became a blog instead of an article.** Shopify carries Letters from
+CFBL, handle `newsletter`, with sixteen articles, and alongside it Letters From
+The Practice: September 2026, handle
+`letters-from-the-practice-september-2026`, with zero. CFBL 2 Article Intake
+routes by blog id, so anything published into the new one is invisible to it.
+Publish the September letter as an article inside Letters from CFBL and retire
+the empty blog. Found 2026-09-10.
