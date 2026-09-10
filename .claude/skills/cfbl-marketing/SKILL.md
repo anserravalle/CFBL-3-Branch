@@ -69,16 +69,16 @@ it.** Any collection id beginning `collection://` in older material is dead.
 
 ## The run, in order
 
-**The week runs Sunday through Saturday. It is planned Thursday to Saturday of the
-week before.** Set by Niki, 2026-08-16.
+**Retired 2026-09-10.** The Sunday-through-Saturday week planned Thursday to
+Saturday of the week before was set on 2026-08-16 and Niki has killed it. Do not
+reinstate it.
 
-So a run starting Thursday produces the week beginning the following Sunday, and
-the plan must be finished and in front of her by Saturday so Sunday can open on
-schedule. Producing ahead is the point. If the run slips past Saturday, cut scope
-rather than cutting the site check or the review gate.
+Plan a week ahead of whatever week is being produced, and get the plan in front of
+her before that week opens. The cadence anchor is the blog, which runs **every
+other week**, not the calendar week.
 
-A blog release inside the week drags its own dates with it: post and email on day
-0, social on day 2. Place those first, then fit the rest of the week around them.
+A blog release drags its own dates with it: post and email on day 0, social on day
+2. Place those first, then fit everything else around them.
 
 ### 1. Read the standard and what already shipped
 

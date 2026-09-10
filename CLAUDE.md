@@ -53,14 +53,21 @@ The account-level synced copies are still installed and still point at Notion.
 deleting from Niki's Claude skill settings, which only she can do. Until then the
 stale ones can still fire, and two of them are retired by their own successor.
 
-The skill also mandates process this build does not yet implement: the week runs
-**Sunday through Saturday, planned Thursday to Saturday of the week before**; a
-blog drags its own dates, post and email on day 0 and social on day 2; founder
+The skill also mandates process this build does not yet implement: founder
 presence at least once a week; at least half conversational CTAs; roughly three
 parts value to one part promotion, counted not estimated; one lighthearted post
 not landing the same day as a heavy clinical piece; layout varies from the prior
-cycle within each brand; and the ask list goes out as dated Notion Tasks with an
-owner, never as a chat list or a document.
+cycle within each brand; and the ask list goes somewhere dated and owned rather
+than into chat.
+
+**Every one of those came from the 2026-08-16 snapshot and none has been
+reconfirmed since.** Treat them as provisional. The Sunday-to-Saturday week came
+from the same batch and Niki retired it on 2026-09-10, which is reason to check
+the rest rather than assume them.
+
+**The cadence anchor is the blog, not the calendar week.** It runs every other
+week. Post and email on day 0, social on day 2. Build the schedule around those
+dates.
 
 **Two genuine conflicts to resolve, not to quietly pick a side on.**
 
