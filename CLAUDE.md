@@ -424,8 +424,15 @@ write them into a Notion Website Activity database that is being retired, which 
 work CFBL 2 Article Intake already does into Airtable.
 
 It ran daily at 06:00 and failed at initialization, emailing Niki an error every
-morning. **Deactivated 2026-09-10.** `isActive` false, `nextExec` null. Not
-deleted, because the blueprint is worth keeping.
+morning. **Deactivated 2026-09-10, and it did not stay off.** By that evening it
+was `isActive` true again with `nextExec` set to 2026-09-12T10:00:00Z, without
+having been edited since 2026-09-08. Deactivated a second time and verified
+`isActive` false, `nextExec` null.
+
+**Treat a third error email as evidence that something re-enables it, and delete
+it at that point rather than deactivating again.** Export the blueprint first.
+Until then it stays, because its create-or-update router is the dedup pattern the
+article intake still needs.
 
 Keep the blueprint. Its router is the create-or-update dedup pattern that CFBL 2
 Article Intake is missing: query the destination by a natural key, then branch on
