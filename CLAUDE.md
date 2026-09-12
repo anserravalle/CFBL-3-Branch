@@ -330,6 +330,38 @@ API:
 
 **Curriculum Vault** `tbldTobI99OtH0DRe`.
 
+**Asset Library** `tblgSCefEKXy1Gag0`. Added 2026-09-12. One row per photograph,
+video or composed card, linked both ways to Content Pipeline. Fields: Filename
+`fldIt3f5WCwCG4B00`, Description `fldEweTTLgPjcgnR2`, Drive link
+`fldlYM9Z9brCLU06f`, Where `fldIGsnXUb9cxeIKF`, Who is in it `fldBdBFo6bhMnQ0DH`,
+Kind `fld4k6ZE2ZWCiLKAh`, State `fld0x6zkiytqCIBKO`, Used on `fldbvrEDxT576TpZq`.
+
+**It exists because a filename is not a description.** Fifteen records sat waiting
+on files while a Drive folder held thirty usable images, and nothing connected the
+two because the only thing describing an image was its name.
+`propertybutterflyonflower.jpeg` sounds like it serves the Nature-Informed EMDR
+record and does not: it is a wide roadside garden and that record asks for one
+object shot close. Nobody finds that out without opening the file.
+
+Description is the only field that matters and it is written after looking, never
+from the filename. It says what a stranger would see, and it names anything
+disqualifying: a slogan on a shelf, a visible outlet, a person without written
+permission, a prop that already appears on another panel.
+
+**This is a catalogue, not a workflow.** Nothing in it decides whether anything
+publishes. Publish Guard on Content Pipeline remains the only ship or no-ship
+decision, and State here must never be treated as an approval. The lineage this
+system replaces died of four competing approval surfaces.
+
+`Where` exists to serve the rule that a carousel's interiors come from the same
+room as its cover. `Used on` exists so the same waiting-room photograph does not
+quietly become the whole feed.
+
+**Any automated matcher must be scoped to the marketing folders and never allowed
+to search Drive generally.** Searching for "Fisher" and "Walker," who are book
+authors in the reading series, returns client evaluation files with those
+surnames. Found 2026-09-12.
+
 **The Standard** `tbleatoO3KDm2VZbS`. The living standard, replacing the deleted
 Notion page. One row per durable principle. Fields: Principle
 `fldjOmKv7ci6fe9qI`, Kind `fldAplH5BD1tk24Oo`, Detail `fldmJEYfoPerke27f`, Date
