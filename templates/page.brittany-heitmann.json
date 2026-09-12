@@ -1,0 +1,123 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bio_hero": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/FullSizeRender_fc007d0c-c164-4742-9ecb-917e7b1c71b4.heic",
+        "image_alt": "Brittany Heitmann, trauma-informed clinician at Center for Balanced Living",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Clinician",
+        "heading": "Brittany Heitmann, LPCMH, NCC",
+        "body": "<p>Brittany Heitmann is a Licensed Professional Counselor of Mental Health (LPCMH) with a strong foundation in clinical care and human services. She holds a Master’s degree in Clinical Mental Health, a Master’s degree in Human Services, and a Bachelor’s degree in Psychology.</p><p>Brittany specializes in family systems work and has extensive experience supporting families and individuals navigating trauma, grief, and communication challenges. Her approach is grounded in evidence-based practice and shaped by a deep respect for each client’s story, strengths, and values.</p><p>She has advanced training in Cognitive Behavioral Therapy (CBT), Trauma-Focused Cognitive Behavioral Therapy (TF-CBT), and the Child and Family Traumatic Stress Intervention (CFTSI). Brittany believes that every person has a unique sense of purpose and a personal “why” that can guide meaningful change. Using a solution-focused approach, she partners with clients to develop practical, values-driven plans that support healing, growth, and lasting progress.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "BHeitmann@balancedlivingde.com",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet the Team",
+        "secondary_link": "/pages/about-us",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "bio_body": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "eyebrow": "",
+        "logo_alt": "",
+        "logo_width": 260,
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 64
+      }
+    },
+    "specialties": {
+      "type": "featured-services",
+      "blocks": {
+        "s1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Attuned, nervous-system-aware care.",
+            "link": ""
+          }
+        },
+        "s2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Mood",
+            "text": "Evidence-based support for anxiety and depression.",
+            "link": ""
+          }
+        },
+        "s3": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Teens & Adults",
+            "text": "Developmentally informed care.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "eyebrow": "Areas of Focus",
+        "heading": "Specialties",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "default",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Work With Us",
+        "heading": "Ready to take the next step?",
+        "body": "<p>Reach out to ask about availability or to schedule a first conversation.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "bio_hero",
+    "bio_body",
+    "specialties",
+    "cta"
+  ]
+}

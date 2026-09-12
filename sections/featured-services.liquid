@@ -1,0 +1,95 @@
+{%- comment -%}
+  Featured services / specialties / process steps.
+  A versatile list section: each block is an icon (or auto-number) + title +
+  text + optional link. Use it for specialties (trauma, assessment, ages) or,
+  with "numbered" on, for a "what happens next" process.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign cols = section.settings.columns
+  assign numbered = section.settings.numbered
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.heading != blank or section.settings.eyebrow != blank -%}
+        <div class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="grid grid--{{ cols }} mobile-2">
+        {%- for block in section.blocks -%}
+          <div class="credential reveal" {{ block.shopify_attributes }}>
+            <span class="credential__icon" {% if numbered %}style="font-family: var(--font-heading); font-size: var(--fs-lg);"{% endif %}>
+              {%- if numbered -%}{{ forloop.index }}{%- else -%}{%- render 'icon', name: block.settings.icon, size: 22 -%}{%- endif -%}
+            </span>
+            <div>
+              <h3 class="credential__title" style="font-size: var(--fs-base);">
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" style="text-decoration:none;">{{ block.settings.title }}</a>
+                {%- else -%}
+                  {{ block.settings.title }}
+                {%- endif -%}
+              </h3>
+              {%- if block.settings.text != blank -%}<p class="credential__text">{{ block.settings.text }}</p>{%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Specialties / Process",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Areas of Focus" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Specialized Support for the Whole Person" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "center" },
+    { "type": "checkbox", "id": "numbered", "label": "Numbered steps (process mode)", "default": false },
+    { "type": "select", "id": "columns", "label": "Columns (desktop)", "options": [
+      { "value": "2", "label": "2" }, { "value": "3", "label": "3" }, { "value": "4", "label": "4" }
+    ], "default": "4" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" },
+      { "value": "surface", "label": "White" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "cream", "label": "Cream" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Item", "settings": [
+      { "type": "select", "id": "icon", "label": "Icon", "options": [
+        { "value": "heart", "label": "Heart" }, { "value": "shield", "label": "Shield" },
+        { "value": "compass", "label": "Compass" }, { "value": "users", "label": "Users" },
+        { "value": "book", "label": "Book" }, { "value": "leaf", "label": "Leaf" },
+        { "value": "award", "label": "Award" }, { "value": "star", "label": "Star" },
+        { "value": "clock", "label": "Clock" }, { "value": "check", "label": "Check" }
+      ], "default": "leaf" },
+      { "type": "text", "id": "title", "label": "Title", "default": "Trauma & PTSD" },
+      { "type": "text", "id": "text", "label": "Text", "default": "Attuned, nervous-system-aware care for trauma and its lasting effects." },
+      { "type": "url", "id": "link", "label": "Link (optional)" }
+    ]}
+  ],
+  "max_blocks": 12,
+  "presets": [{
+    "name": "Specialties / Process",
+    "blocks": [
+      { "type": "item", "settings": { "icon": "shield", "title": "Trauma & PTSD", "text": "Attuned, nervous-system-aware care for trauma." } },
+      { "type": "item", "settings": { "icon": "compass", "title": "Assessment & Diagnosis", "text": "Clarity through thorough psychological evaluation." } },
+      { "type": "item", "settings": { "icon": "users", "title": "Children, Teens & Adults", "text": "Developmentally informed support across the lifespan." } },
+      { "type": "item", "settings": { "icon": "heart", "title": "Anxiety & Mood", "text": "Evidence-based care for anxiety, depression, and more." } }
+    ]
+  }]
+}
+{% endschema %}

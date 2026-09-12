@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "eyebrow": "Resources",
+        "subheading": "Grounded, research-informed writing on therapy, evaluation, and care.",
+        "per_page": 9
+      }
+    }
+  },
+  "order": ["main"]
+}

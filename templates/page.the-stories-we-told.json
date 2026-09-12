@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "book": {
+      "type": "book-feature",
+      "settings": {
+        "eyebrow": "The Book",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance of a Codependent and a Compulsive Liar",
+        "cover": "shopify://shop_images/1BECC4CF-280B-41C8-9612-C2DB35EDC0FC.jpg",
+        "cover_alt": "Cover of The Stories We Told, a drawing of a small house",
+        "cover_ratio": "2-3",
+        "cover_caption": "The drawing is real. He made it on our second date.",
+        "cover_frame": true,
+        "frame_color": "",
+        "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway.</p><p>Dr. Niki Serravalle had built a life she was proud of, a practice, three daughters, a hard-won steadiness, when she fell for Ed. He was charm and chaos, fire and ice, a man who could make an ordinary table feel like the center of the world. On their second date she asked him to draw where he saw his life in five years. He sketched a small house on the back of a receipt. She kept it.</p><p>What followed was nine years of loving a compulsive liar, and of slowly learning how much of herself she would abandon to keep the story going. This is not a book about a villain. It is a book about the dance. Two people who learned early that love came with conditions, finding a familiar charge in each other. The pull that felt like home. The cost of staying. And the long, unglamorous work of coming back to herself.</p><p>Written with the intimacy of memoir and the eye of a psychologist who could not think her way out of it, this is for every woman who has loved someone confusing, stayed longer than she should have, and wondered why. It is her story. Somehow, it is also yours.</p>",
+        "primary_label": "",
+        "primary_link": "",
+        "excerpt_label": "An excerpt",
+        "excerpt": "<p>Our second date stays vivid in my memory. We both dressed up a little more than the occasion required, because we wanted to impress. We were caught up in candlelight, the slow burn of chemistry thick in the air.</p><p>He leaned in across the table, playful and curious. <em>So,</em> he said with a grin, <em>you're going to be a psychologist? Does that mean you can read minds? Or tell the future or something?</em></p><p>I smiled and said, <em>Of course I can.</em> Then I added, <em>Actually, let me show you. Draw me a picture of where you think your life will be in five years.</em></p><p>He laughed, surprised, but his eyes lit up. He dug around, pulled an old receipt from his pocket, and even ran out to his truck to find a pen. Right there on the back of that crumpled slip, he sketched a small house. Simple. Nestled in the woods.</p><p>When he handed it back to me, something stirred inside me. <em>This tells me everything I need to know about you, Ed,</em> I told him softly.</p><p>He raised an eyebrow, grinning. <em>Really? You got all that from a little picture?</em></p><p>I laughed. <em>It's the story of you,</em> I said.</p><p>Most of all, I saw that he wanted home. Comfort. To belong. A place to have a family.</p><p>In that moment, I believed we wanted the same thing.</p>",
+        "bg_scheme": "default",
+        "padding_top": 96,
+        "padding_bottom": 72
+      }
+    },
+    "1788290595e26c3a05": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c4bd784_YKYCNV": {
+          "type": "ai_gen_block_c4bd784",
+          "settings": {
+            "youtube_url": "https://youtu.be/Qx3462s_aMw?si=GaBtExXNNr9Iayrk",
+            "title": "Latest Podcast Episode",
+            "description": "<p>What happens when someone dies and, in the process of grieving them, you discover that parts of the person you knew may not have been true?<br/><br/>In Part 1 of this deeply personal conversation, Dr. Christina Zampitella is joined by psychologist and author Dr. Niki Serravalle to explore a complicated and rarely discussed kind of grief: grieving the death of someone who lied about significant parts of their life.<br/>Dr. Serravalle shares the story of her relationship with her late ex-husband, from the intense connection they experienced early on to the small, seemingly inconsequential lies that eventually gave way to much larger deceptions.<br/><br/>Together, Christina and Niki explore the confusion of loving and trusting someone while also learning to overlook inconsistencies, and how patterns of codependency can become intertwined with relationships marked by instability and deception.<br/><br/>The conversation also examines the difference between compulsive lying and intentional manipulation, how codependency can show up even in people who appear strong and self-aware, and the grief that can happen long before a physical death when a relationship or the life you believed you had begins to disappear.<br/><br/>Then, after her late ex-husband’s unexpected death, Niki made a discovery that challenged one of the most fundamental stories he had told about himself. Despite years of describing himself as a Marine and appearing to live with the physical and psychological effects of military service, his family told her he had never served in the military.<br/><br/>That discovery opened an entirely new layer of grief and an unsettling question:<br/>Who exactly are you grieving when you can no longer be certain who the person was?<br/>Part 2 continues 9/15. </p>",
+            "desktop_width_percent": 100,
+            "padding": 40,
+            "border_radius": 16,
+            "video_border_radius": 8,
+            "background_color": "#6e1f23",
+            "text_color": "#c5a572",
+            "title_size": 40,
+            "description_size": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c4bd784_YKYCNV"
+      ],
+      "settings": {}
+    },
+    "more": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "MUSA",
+        "heading": "While you wait, there is the writing",
+        "body": "<p>Essays on psychology, relationships, the moment, and the fragility of being human.</p>",
+        "primary_label": "Read the Essays",
+        "primary_link": "/blogs/essays",
+        "secondary_label": "About the Author",
+        "secondary_link": "/pages/musa",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "notify": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Coming Soon",
+        "heading": "The Stories We Told is coming.",
+        "body": "<p>Be the first to know when it launches, and get a chance to read it early.</p>",
+        "placeholder": "Email address",
+        "button_label": "Notify me",
+        "list_tag": "stories-we-told",
+        "success_text": "You are on the list. You will be among the first to read it.",
+        "fine_print": "Separate from the MUSA essays list. Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "book",
+    "1788290595e26c3a05",
+    "more",
+    "notify"
+  ]
+}

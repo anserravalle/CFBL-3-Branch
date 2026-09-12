@@ -1,0 +1,121 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bio_hero": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/kirsten.jpg",
+        "image_alt": "Kirsten Lowe, trauma-informed clinician at Center for Balanced Living",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Clinician",
+        "heading": "Kirsten Lowe, LACMH, NCC",
+        "body": "<p>Kirsten Lowe is a trauma-informed mental health counselor at Center for Balanced Living in Townsend, Delaware. She holds a Master's degree in Clinical Mental Health Counseling from Wilmington University and brings a unique clinical background rooted in special education, having worked with children ages 5 through 14 with autism and severe intellectual disabilities before transitioning fully into mental health counseling.</p><p>Kirsten has a particular gift for helping clients move toward their goals with clarity and accountability. Her style is warm but grounding. She has a gentle way of bringing clients back to what they came to therapy for, without judgment or pressure. Clients who tend to avoid, postpone, or lose sight of their intentions often find Kirsten's approach especially effective.</p><p>She draws from Cognitive Behavioral Therapy, mindfulness, and strengths-based approaches, and is actively completing EMDR training as part of her continued commitment to evidence-based, trauma-informed care. Kirsten works with adults and is currently accepting new clients.</p><p>Kirsten works with adults and is currently accepting new clients.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "klowe@balancedlivingde.com",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Meet the Team",
+        "secondary_link": "/pages/about-us",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "bio_body": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "eyebrow": "",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 16,
+        "padding_bottom": 64
+      }
+    },
+    "specialties": {
+      "type": "featured-services",
+      "blocks": {
+        "s1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma & PTSD",
+            "text": "Attuned, nervous-system-aware care.",
+            "link": ""
+          }
+        },
+        "s2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Mood",
+            "text": "Evidence-based support for anxiety and depression.",
+            "link": ""
+          }
+        },
+        "s3": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Teens & Adults",
+            "text": "Developmentally informed care.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "eyebrow": "Areas of Focus",
+        "heading": "Specialties",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "default",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Work With Us",
+        "heading": "Ready to take the next step?",
+        "body": "<p>Reach out to ask about availability or to schedule a first conversation.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "bio_hero",
+    "bio_body",
+    "specialties",
+    "cta"
+  ]
+}

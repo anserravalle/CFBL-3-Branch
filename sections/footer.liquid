@@ -1,0 +1,146 @@
+{%- comment -%}
+  Footer - brand blurb, up to three editable menu columns, social links, and a
+  local-SEO line. Built from blocks so columns are addable/reorderable.
+{%- endcomment -%}
+<footer class="site-footer" role="contentinfo">
+  <div class="page-width">
+    <div class="footer__grid">
+      {%- liquid
+        capture brand_scope
+          render 'brand-scope'
+        endcapture
+        assign brand_scope = brand_scope | strip
+        assign active_logo = settings.logo
+        assign brand_label = section.settings.footer_title | default: shop.name
+        if brand_scope == 'institute' and settings.logo_institute != blank
+          assign active_logo = settings.logo_institute
+          assign brand_label = 'CFBL Institute'
+        elsif brand_scope == 'musa' and settings.logo_musa != blank
+          assign active_logo = settings.logo_musa
+          assign brand_label = 'MUSA'
+        endif
+      -%}
+      <div class="footer__about">
+        {%- if active_logo != blank -%}
+          <img class="footer__logo-img" src="{{ active_logo | image_url: width: 320 }}" alt="{{ brand_label | escape }}" width="160" loading="lazy">
+        {%- else -%}
+          <span class="footer__logo">{{ brand_label }}</span>
+        {%- endif -%}
+        {%- if section.settings.about_text != blank -%}
+          <div class="rte">{{ section.settings.about_text }}</div>
+        {%- endif -%}
+        {%- if settings.social_instagram != blank or settings.social_facebook != blank or settings.social_linkedin != blank -%}
+          <div class="social" style="margin-top: var(--space-24);">
+            {%- if settings.social_instagram != blank -%}<a href="{{ settings.social_instagram }}" aria-label="Instagram" rel="noopener" target="_blank">{%- render 'icon', name: 'instagram', size: 18 -%}</a>{%- endif -%}
+            {%- if settings.social_facebook != blank -%}<a href="{{ settings.social_facebook }}" aria-label="Facebook" rel="noopener" target="_blank">{%- render 'icon', name: 'facebook', size: 18 -%}</a>{%- endif -%}
+            {%- if settings.social_linkedin != blank -%}<a href="{{ settings.social_linkedin }}" aria-label="LinkedIn" rel="noopener" target="_blank">{%- render 'icon', name: 'linkedin', size: 18 -%}</a>{%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'menu' -%}
+            {%- assign fmenu = linklists[block.settings.menu] -%}
+            <nav class="footer__col" aria-label="{{ block.settings.title | escape }}" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              {%- if fmenu != blank -%}
+                <ul class="footer__list">
+                  {%- for link in fmenu.links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </nav>
+          {%- when 'contact' -%}
+            <div class="footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              <ul class="footer__list">
+                {%- if block.settings.phone != blank -%}<li><a href="tel:{{ block.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{%- render 'icon', name: 'phone', size: 15 -%} {{ block.settings.phone }}</a></li>{%- endif -%}
+                {%- if block.settings.email != blank -%}<li><a href="mailto:{{ block.settings.email }}">{%- render 'icon', name: 'mail', size: 15 -%} {{ block.settings.email }}</a></li>{%- endif -%}
+                {%- if block.settings.address != blank -%}<li>{{ block.settings.address }}</li>{%- endif -%}
+                {%- if block.settings.hours != blank -%}<li>{{ block.settings.hours }}</li>{%- endif -%}
+              </ul>
+            </div>
+          {%- when 'text' -%}
+            <div class="footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              <div class="rte footer__about">{{ block.settings.content }}</div>
+            </div>
+          {%- when 'newsletter' -%}
+            <div class="footer__col footer__signup" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}<h2 class="footer__heading">{{ block.settings.title }}</h2>{%- endif -%}
+              {%- if block.settings.text != blank -%}<p class="footer__signup-text">{{ block.settings.text }}</p>{%- endif -%}
+              {%- form 'customer', class: 'footer__signup-form' -%}
+                <input type="hidden" name="contact[tags]" value="{{ block.settings.list_tag | default: 'newsletter' }}">
+                <label class="visually-hidden" for="FooterSignup-{{ block.id }}">{{ block.settings.placeholder | default: 'Email address' }}</label>
+                <div class="footer__signup-row">
+                  <input id="FooterSignup-{{ block.id }}" type="email" name="contact[email]" class="input" placeholder="{{ block.settings.placeholder | default: 'Email address' }}" required autocomplete="email" aria-required="true">
+                  <button type="submit" class="btn btn--primary btn--sm">{{ block.settings.button_label | default: 'Subscribe' }}</button>
+                </div>
+                {%- if form.posted_successfully? -%}
+                  <p class="form-note form-note--success" role="status">{{ block.settings.success_text | default: 'Thank you for subscribing.' }}</p>
+                {%- elsif form.errors -%}
+                  <p class="form-note form-note--error" role="alert">{{ form.errors | default_errors }}</p>
+                {%- endif -%}
+              {%- endform -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.seo_text != blank -%}
+      <div class="rte" style="padding-block: var(--space-24); border-top: 1px solid color-mix(in srgb, var(--color-on-dark) 18%, transparent); font-size: var(--fs-sm); color: var(--color-muted);">
+        {{ section.settings.seo_text }}
+      </div>
+    {%- endif -%}
+
+    <div class="footer__bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ section.settings.rights_text }}</p>
+      <p>{{ powered_by_link }}</p>
+    </div>
+  </div>
+</footer>
+
+{%- style -%}
+  .footer__signup-row{display:flex;gap:var(--space-8);flex-wrap:wrap;margin-top:var(--space-12);}
+  .footer__signup-row .input{flex:1 1 170px;min-width:0;}
+  .footer__signup-text{font-size:var(--fs-sm);color:var(--color-muted);margin-top:var(--space-4);}
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "footer_title", "label": "Footer title (if no logo)", "default": "Center for Balanced Living" },
+    { "type": "richtext", "id": "about_text", "label": "About text", "default": "<p>Trauma-informed therapy, psychological evaluation, groups, workshops, and consultation for the MOT area and throughout Delaware.</p>" },
+    { "type": "richtext", "id": "seo_text", "label": "Local SEO paragraph", "info": "Plain, descriptive sentence about the areas you serve.", "default": "<p>Center for Balanced Living provides trauma-informed psychological care from our Townsend, Delaware office, serving Middletown, Odessa, and the greater MOT area, with clients across New Castle County and Delaware including Wilmington, Newark, and Dover.</p>" },
+    { "type": "text", "id": "rights_text", "label": "Rights text", "default": "All rights reserved." }
+  ],
+  "blocks": [
+    { "type": "menu", "name": "Menu column", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "Explore" },
+      { "type": "link_list", "id": "menu", "label": "Menu" }
+    ]},
+    { "type": "contact", "name": "Contact column", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "Contact" },
+      { "type": "text", "id": "phone", "label": "Phone", "default": "(302) 608-3780" },
+      { "type": "text", "id": "email", "label": "Email" },
+      { "type": "html", "id": "address", "label": "Address" },
+      { "type": "text", "id": "hours", "label": "Hours" }
+    ]},
+    { "type": "text", "name": "Text column", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "About" },
+      { "type": "richtext", "id": "content", "label": "Content" }
+    ]},
+    { "type": "newsletter", "name": "Newsletter signup", "settings": [
+      { "type": "text", "id": "title", "label": "Heading", "default": "Stay in touch" },
+      { "type": "text", "id": "text", "label": "Text", "default": "New writing, events, and updates. No noise." },
+      { "type": "text", "id": "placeholder", "label": "Email placeholder", "default": "Email address" },
+      { "type": "text", "id": "button_label", "label": "Button label", "default": "Subscribe" },
+      { "type": "text", "id": "list_tag", "label": "List tag", "info": "Tags the subscriber in Shopify so you can segment lists in Shopify Email (Marketing).", "default": "newsletter" },
+      { "type": "text", "id": "success_text", "label": "Success message", "default": "Thank you for subscribing." }
+    ]}
+  ],
+  "max_blocks": 6,
+  "enabled_on": { "groups": ["footer"] }
+}
+{% endschema %}

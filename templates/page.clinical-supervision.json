@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Clinical Supervision",
+        "heading": "Supervision grounded in real clinical practice",
+        "subheading": "<p>Supervision offers a space to deepen clinical skill, strengthen case conceptualization, and support thoughtful professional growth. At Center for Balanced Living, supervision is grounded in reflection, clinical integrity, and the development of more intentional, effective work with clients.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Services",
+        "secondary_link": "/pages/services",
+        "image": "shopify://shop_images/niki_supervsion.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "focus": {
+      "type": "featured-services",
+      "blocks": {
+        "i0": {
+          "type": "item",
+          "settings": {
+            "icon": "compass",
+            "title": "Case Conceptualization",
+            "text": "Clear, defensible clinical reasoning.",
+            "link": ""
+          }
+        },
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma-Informed Practice",
+            "text": "Nervous-system-aware intervention.",
+            "link": ""
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "book",
+            "title": "Assessment Literacy",
+            "text": "Integrating data into treatment.",
+            "link": ""
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "award",
+            "title": "Toward Licensure",
+            "text": "Documentation and competencies for licensure.",
+            "link": ""
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Group Supervision",
+            "text": "Peer learning in a structured cohort.",
+            "link": ""
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Clinician Wellbeing",
+            "text": "Sustainable, ethical practice.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "i0",
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "settings": {
+        "eyebrow": "Focus Areas",
+        "heading": "What Supervision Covers",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "sage",
+        "padding_top": 48,
+        "padding_bottom": 40
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "p0": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Reach Out",
+            "text": "Call (302) 608-3780 or send a message.",
+            "link": ""
+          }
+        },
+        "p1": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Talk With Us",
+            "text": "A first conversation to understand your goals and fit.",
+            "link": ""
+          }
+        },
+        "p2": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Make a Plan",
+            "text": "Together we outline a thoughtful path forward.",
+            "link": ""
+          }
+        },
+        "p3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Begin",
+            "text": "We move at a pace that respects you.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "A Clear First Step",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "Who is supervision available for?",
+            "answer": "<p><em>Supervision at Center for Balanced Living is available for LPC associates and PsyD trainees working toward licensure as mental health counselors and psychologists. If you are accumulating supervised hours toward licensure, this is the right fit.</em></p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "What does supervision focus on?",
+            "answer": "<p><em>Supervision integrates case conceptualization, trauma-informed treatment planning, ethical decision making, and the development of clinical judgment. Sessions support both practical skill development and the theoretical integration that strong clinical practice requires.</em></p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "How do I get started with supervision?",
+            "answer": "<p><em>Reach out through our contact form or call (302) 608-3780 and someone from our office will be in touch within 24 hours to discuss your supervision needs and goals.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "heading": "Common Questions About Supervision",
+        "subheading": "",
+        "cta_label": "",
+        "cta_link": "",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Take the Next Step",
+        "heading": "Apply for supervision",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "focus",
+    "process",
+    "faq",
+    "cta"
+  ]
+}

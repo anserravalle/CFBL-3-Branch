@@ -1,0 +1,153 @@
+{%- comment -%}
+  Header - logo, primary navigation (from a linklist), an optional signature
+  image (top right), a CTA, and an accessible mobile drawer. Sticky behavior and
+  style are theme settings. Logo + scope follow the active brand.
+{%- endcomment -%}
+{%- liquid
+  assign menu = linklists[section.settings.menu]
+  assign sticky_class = ''
+  if settings.header_sticky
+    assign sticky_class = 'is-sticky'
+  endif
+  capture brand_scope
+    render 'brand-scope'
+  endcapture
+  assign brand_scope = brand_scope | strip
+  assign active_logo = settings.logo
+  assign brand_label = shop.name
+  if brand_scope == 'institute' and settings.logo_institute != blank
+    assign active_logo = settings.logo_institute
+    assign brand_label = 'CFBL Institute'
+  elsif brand_scope == 'musa' and settings.logo_musa != blank
+    assign active_logo = settings.logo_musa
+    assign brand_label = 'MUSA'
+  endif
+-%}
+<header class="site-header {{ sticky_class }}" style="--logo-height: {{ settings.logo_height }}px;">
+  <div class="page-width">
+    <div class="site-header__inner">
+      {%- comment -%} Left cluster: logo + optional cursive signature {%- endcomment -%}
+      <div class="site-header__brand">
+        <a href="{{ routes.root_url }}" class="site-header__logo" aria-label="{{ brand_label }} home">
+          {%- if active_logo != blank -%}
+            {%- assign logo_alt = active_logo.alt | default: brand_label -%}
+            <img src="{{ active_logo | image_url: width: 400 }}"
+                 srcset="{{ active_logo | image_url: width: 200 }} 1x, {{ active_logo | image_url: width: 400 }} 2x"
+                 alt="{{ logo_alt | escape }}" width="{{ active_logo.width }}" height="{{ active_logo.height }}"
+                 fetchpriority="high">
+          {%- else -%}
+            <span class="site-header__logo-text">{{ brand_label }}</span>
+          {%- endif -%}
+        </a>
+        {%- if section.settings.signature != blank -%}
+          {%- assign sig_alt = section.settings.signature.alt | default: section.settings.signature_alt | default: 'Signature' -%}
+          {%- if section.settings.signature_link != blank -%}
+            <a href="{{ section.settings.signature_link }}" class="header__signature" aria-label="{{ sig_alt | escape }}">
+              <img src="{{ section.settings.signature | image_url: width: 400 }}" alt="{{ sig_alt | escape }}" style="height: {{ section.settings.signature_height }}px;" width="200" loading="eager">
+            </a>
+          {%- else -%}
+            <img class="header__signature" src="{{ section.settings.signature | image_url: width: 400 }}" alt="{{ sig_alt | escape }}" style="height: {{ section.settings.signature_height }}px;" width="200" loading="eager">
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Desktop nav (supports one level of dropdown) {%- endcomment -%}
+      {%- if menu != blank -%}
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            {%- for link in menu.links -%}
+              {%- if link.links != blank -%}
+                <li class="nav__item has-dropdown" data-dropdown>
+                  <a href="{{ link.url }}" class="nav__link"
+                     {% if link.current or link.child_active %}aria-current="page"{% endif %}>{{ link.title }}</a>
+                  <button type="button" class="nav__caret" aria-expanded="false" aria-label="Show {{ link.title | escape }} submenu" data-dropdown-toggle>
+                    <svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5L6 6.5L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <ul class="nav__dropdown">
+                    {%- for child in link.links -%}
+                      <li>
+                        <a href="{{ child.url }}" class="nav__dropdown-link"
+                           {% if child.current %}aria-current="page"{% endif %}>{{ child.title }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </li>
+              {%- else -%}
+                <li class="nav__item">
+                  <a href="{{ link.url }}" class="nav__link"
+                     {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {%- endif -%}
+
+      <div class="header__actions">
+        {%- if section.settings.cta_label != blank -%}
+          {%- render 'button', label: section.settings.cta_label, href: section.settings.cta_link, style: 'primary', class: 'btn--sm' -%}
+        {%- endif -%}
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="MobileDrawer" aria-label="Open menu" data-drawer-open>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+{%- comment -%} Mobile drawer {%- endcomment -%}
+<div class="drawer-overlay" data-drawer-overlay hidden></div>
+<aside class="drawer" id="MobileDrawer" aria-label="Mobile menu" aria-hidden="true" tabindex="-1">
+  <div class="drawer__header">
+    <span class="site-header__logo-text">{{ brand_label }}</span>
+    <button type="button" class="drawer__close" aria-label="Close menu" data-drawer-close>&times;</button>
+  </div>
+  {%- if menu != blank -%}
+    <nav aria-label="Mobile primary">
+      <ul class="drawer__list">
+        {%- for link in menu.links -%}
+          {%- if link.links != blank -%}
+            <li class="drawer__group" data-drawer-group>
+              <div class="drawer__group-row">
+                <a href="{{ link.url }}" {% if link.current or link.child_active %}aria-current="page"{% endif %}>{{ link.title }}</a>
+                <button type="button" class="drawer__group-toggle" aria-expanded="false" aria-label="Show {{ link.title | escape }} submenu" data-drawer-group-toggle>
+                  <svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5L6 6.5L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <ul class="drawer__sublist">
+                {%- for child in link.links -%}
+                  <li><a href="{{ child.url }}" {% if child.current %}aria-current="page"{% endif %}>{{ child.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </li>
+          {%- else -%}
+            <li><a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+  {%- endif -%}
+  {%- if section.settings.cta_label != blank -%}
+    <div style="margin-top: var(--space-24);">
+      {%- render 'button', label: section.settings.cta_label, href: section.settings.cta_link, style: 'primary', class: 'btn--full' -%}
+    </div>
+  {%- endif -%}
+</aside>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" },
+    { "type": "header", "content": "Signature image (left, by the logo)" },
+    { "type": "image_picker", "id": "signature", "label": "Cursive signature image", "info": "A handwritten/cursive signature shown at the left of the header, beside the logo. A transparent PNG works best." },
+    { "type": "text", "id": "signature_alt", "label": "Signature alt text", "default": "Dr. Niki Serravalle signature" },
+    { "type": "url", "id": "signature_link", "label": "Signature link (optional)" },
+    { "type": "range", "id": "signature_height", "label": "Signature height", "min": 24, "max": 96, "step": 2, "unit": "px", "default": 48 },
+    { "type": "header", "content": "Header call-to-action" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Start the Conversation" },
+    { "type": "url", "id": "cta_link", "label": "Button link" }
+  ],
+  "enabled_on": { "groups": ["header"] }
+}
+{% endschema %}

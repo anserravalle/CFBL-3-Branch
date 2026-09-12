@@ -1,0 +1,11 @@
+{
+  "type": "announcement",
+  "name": "Announcement",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {}
+    }
+  },
+  "order": ["announcement-bar"]
+}

@@ -1,0 +1,377 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "CFBL Institute",
+        "heading": "Continuing education for clinicians",
+        "subheading": "<p>Clinically rigorous training in trauma-informed practice, psychological assessment, and applied clinical reasoning, taught by a practicing psychologist.</p>",
+        "use_h1": true,
+        "primary_label": "View Trainings",
+        "primary_link": "shopify://pages/professional-clinical-trainings",
+        "secondary_label": "Meet the Trainer",
+        "secondary_link": "shopify://pages/niki-serravalle",
+        "image": "shopify://shop_images/cfbl_intitute_logo.png",
+        "image_alt": "",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "paths": {
+      "type": "service-card-grid",
+      "blocks": {
+        "trainings": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "For Clinicians",
+            "icon": "shield",
+            "image": "shopify://shop_images/drserravalle_training3.png",
+            "image_alt": "Clinicians in a professional training",
+            "image_ratio": "4-3",
+            "title": "Professional Trainings",
+            "body": "<p>Live continuing-education intensives and trainings for licensed clinicians.</p>",
+            "link_label": "View Trainings",
+            "link": "/pages/professional-clinical-trainings"
+          }
+        },
+        "courses": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Go Deeper",
+            "icon": "book",
+            "image": "shopify://shop_images/psychology-training.png",
+            "image_alt": "Clinical course materials",
+            "image_ratio": "4-3",
+            "title": "Courses & Certification",
+            "body": "<p>Multi-session courses and certification tracks that build clinical skill over time.</p>",
+            "link_label": "Explore Courses",
+            "link": "/pages/courses-certification"
+          }
+        },
+        "workshops": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Practical Learning",
+            "icon": "leaf",
+            "image": "shopify://shop_images/drserravalle_ecotherapy_training.png",
+            "image_alt": "A hands-on clinical workshop",
+            "image_ratio": "4-3",
+            "title": "Workshops",
+            "body": "<p>Clinician-led workshops offering practical tools and reflective learning.</p>",
+            "link_label": "See Workshops",
+            "link": "/pages/workshopspage"
+          }
+        }
+      },
+      "block_order": [
+        "trainings",
+        "courses",
+        "workshops"
+      ],
+      "settings": {
+        "eyebrow": "Explore the Institute",
+        "heading": "Three Ways to Learn With Us",
+        "subheading": "",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "sage",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "trainer": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/dr_serravalle.png",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
+        "image_ratio": "1-1",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "image_position": "left",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Trainer",
+        "heading": "Dr. Angela (Niki) Serravalle, PsyD, LPCMH, NCC",
+        "body": "<p>Founded and led by Dr. Niki Serravalle, licensed clinical psychologist and founder of the Center for Balanced Living. CFBL Institute exists to bridge the gap between clinical theory and applied practice. Our work is grounded in trauma-informed science, nervous system awareness, cultural humility, and the lived complexity of real clinical work.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "drserravalle@gmail.com",
+        "primary_label": "Full Bio",
+        "primary_link": "/pages/niki-serravalle",
+        "secondary_label": "",
+        "secondary_link": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 24
+      }
+    },
+    "why": {
+      "type": "testimonial-section",
+      "blocks": {
+        "q": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Training is how clinical knowledge moves from one clinician to the next. I teach because the best of what I learned came from clinicians who showed me how they thought, not just what to do. That is the kind of training I try to offer now.</p>",
+            "author": "Dr. Angela (Niki) Serravalle",
+            "role": "",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "q"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "subheading": "",
+        "columns": 1,
+        "bg_scheme": "sage",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    },
+    "offerings": {
+      "type": "tabs",
+      "blocks": {
+        "trainings": {
+          "type": "tab",
+          "settings": {
+            "title": "Professional Trainings",
+            "heading": "Professional Trainings",
+            "content": "<p>Advanced clinical trainings for licensed clinicians and graduate students ready to deepen their work in trauma, evaluation, and nervous system informed care. Built to translate directly into how you assess, conceptualize, and treat.</p>",
+            "image": "shopify://shop_images/drserravalle_training3.png",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/professional-clinical-trainings",
+            "link_label": "View trainings"
+          }
+        },
+        "courses": {
+          "type": "tab",
+          "settings": {
+            "title": "Courses & Certification",
+            "heading": "Courses & Certification",
+            "content": "<p>Multi-session courses that build clinical knowledge sequentially, with time to integrate between sessions. For clinicians strengthening their foundation and students building it for the first time.</p>",
+            "image": "shopify://shop_images/psychology-training.png",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/courses-certification",
+            "link_label": "View courses"
+          }
+        },
+        "workshops": {
+          "type": "tab",
+          "settings": {
+            "title": "Workshops",
+            "heading": "Workshops",
+            "content": "<p>Workshops designed to bring trauma-informed, ecologically grounded, and meaningful learning into accessible, practical conversation.</p>",
+            "image": "shopify://shop_images/drserravalle_ecotherapy_training.png",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/workshopspage",
+            "link_label": "View workshops"
+          }
+        },
+        "supervision": {
+          "type": "tab",
+          "settings": {
+            "title": "Supervision & Consultation",
+            "heading": "Supervision & Consultation",
+            "content": "<p>Individual and group clinical supervision toward licensure, plus EMDR consultation toward EMDRIA certification.</p>",
+            "image": "shopify://shop_images/supervision_2.png",
+            "image_alt": "",
+            "video_url": "",
+            "page": "",
+            "link": "/pages/clinical-supervision",
+            "link_label": "Learn more"
+          }
+        }
+      },
+      "block_order": [
+        "trainings",
+        "courses",
+        "workshops",
+        "supervision"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "What We Offer",
+        "heading": "Ways to Learn With Us",
+        "subheading": "Select an area to read more, then open its full page for details, dates, and registration.",
+        "text_align": "left",
+        "image_ratio": "4-3",
+        "footer_label": "",
+        "footer_link": "",
+        "footer_style": "secondary",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "who": {
+          "type": "item",
+          "settings": {
+            "question": "Who are the trainings for?",
+            "answer": "<p>Our trainings are built for licensed mental health clinicians, including psychologists, LCSWs, LPCs, LMFTs, LMHCs, PMHNPs, and MDs, as well as graduate students in clinical and counseling psychology. Each offering lists the clinical experience it assumes so you can choose the right fit.</p>"
+          }
+        },
+        "format": {
+          "type": "item",
+          "settings": {
+            "question": "What is the format?",
+            "answer": "<p>Most trainings are delivered live online so you can attend from anywhere, with slides and handouts shared with registrants. Some run as a multi-session series with time to integrate between meetings. The length, schedule, and any pre-work are listed on each training's page.</p>"
+          }
+        },
+        "register": {
+          "type": "item",
+          "settings": {
+            "question": "How do I register, and what if a training is full?",
+            "answer": "<p>Registration opens on each training's page once dates are confirmed. When a cohort is full or dates are still being scheduled, you can join the waitlist. Waitlist members hear first and are invited to register before seats open to the public.</p>"
+          }
+        },
+        "credit": {
+          "type": "item",
+          "settings": {
+            "question": "Will I receive a certificate or continuing education credit?",
+            "answer": "<p>Registrants receive a certificate of completion listing the training title, date, and contact hours. Continuing education details are confirmed for each offering and noted on its page. If you have a specific licensing-board requirement, reach out before registering and we will tell you what that training provides.</p>"
+          }
+        },
+        "cost": {
+          "type": "item",
+          "settings": {
+            "question": "What does it cost, and are group rates available?",
+            "answer": "<p>Pricing is listed on each training's page and varies by length and format. Reduced student rates are available for many offerings, and we offer group rates for agencies or practices enrolling several clinicians. Contact us for a group quote.</p>"
+          }
+        },
+        "cancel": {
+          "type": "item",
+          "settings": {
+            "question": "What if I need to cancel or need an accommodation?",
+            "answer": "<p>If you need to cancel, let us know as early as you can and we will arrange a transfer or a credit toward a future cohort. If you need an accommodation to take part fully, tell us when you register so we can plan ahead.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "who",
+        "format",
+        "register",
+        "credit",
+        "cost",
+        "cancel"
+      ],
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Registration",
+        "subheading": "Everything to know before you register. Do not see your question here? Reach out and we will answer it.",
+        "cta_label": "Join the Waitlist",
+        "cta_link": "/pages/contact",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "eyebrow": "For Clinicians",
+        "heading": "Register or inquire",
+        "use_h1": false,
+        "intro": "<p>Reach out about an upcoming training, course, or workshop, or to ask about group rates. We respond to professional inquiries directly.</p>",
+        "phone": "(302) 608-3780",
+        "email": "",
+        "whatsapp": "",
+        "whatsapp_text": "",
+        "address": "",
+        "hours": "By appointment",
+        "phone_required": false,
+        "reason_label": "What are you reaching out about?",
+        "reason_options": "Professional Training, Course or Certification, Workshop, Something Else",
+        "method_label": "Preferred method of contact",
+        "method_options": "Email, Phone, Either",
+        "message_label": "How can we help?",
+        "message_required": true,
+        "button_label": "Send Message",
+        "success_text": "Thank you. We usually reach out within 24-48 hours.",
+        "response_note": "We usually reach out within 24-48 hours.",
+        "disclaimer": "<p>This form is not intended for emergencies or urgent mental health concerns. If you are experiencing an emergency, call 911 or go to your nearest emergency room.</p>",
+        "bg_scheme": "sand",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "For Professionals",
+        "heading": "Train with us",
+        "body": "<p>Join a cohort or inquire about supervision and consultation.</p>",
+        "primary_label": "View Trainings",
+        "primary_link": "/pages/professional-clinical-trainings",
+        "secondary_label": "Contact the Institute",
+        "secondary_link": "/pages/contact",
+        "phone": "",
+        "disclaimer": "",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "join_list": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in the Loop",
+        "heading": "Hear about new trainings first",
+        "body": "<p>Join the Institute list for new trainings, courses, and CE announcements for clinicians. No noise, just the work.</p>",
+        "placeholder": "Email address",
+        "button_label": "Join the List",
+        "list_tag": "institute",
+        "success_text": "Thank you. You're on the list.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "paths",
+    "trainer",
+    "why",
+    "offerings",
+    "faq",
+    "join_list",
+    "contact",
+    "cta"
+  ]
+}

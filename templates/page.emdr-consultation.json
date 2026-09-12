@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "EMDR Consultation",
+        "heading": "Consultation toward EMDR certification",
+        "subheading": "<p>Dr. Serravalle is a Certified EMDR Therapist and EMDRIA Approved Consultant, offering consultation grounded in clinical integrity, reflection, and practical guidance for meaningful trauma-focused work. </p><p>EMDR consultation offers a space for clinicians to deepen their understanding of the EMDR process, strengthen case conceptualization, and receive thoughtful support in applying EMDR with greater clarity and confidence.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Services",
+        "secondary_link": "/pages/services",
+        "image": "shopify://shop_images/psychological-therapy-in-a-private-practice.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#3d5a52",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "focus": {
+      "type": "featured-services",
+      "blocks": {
+        "i0": {
+          "type": "item",
+          "settings": {
+            "icon": "compass",
+            "title": "Protocol Fidelity",
+            "text": "Sound application of the standard protocol.",
+            "link": ""
+          }
+        },
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Complex Trauma",
+            "text": "Adapting EMDR for complex presentations.",
+            "link": ""
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "award",
+            "title": "Toward Certification",
+            "text": "Consultation hours toward EMDRIA certification.",
+            "link": ""
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "book",
+            "title": "Case Review",
+            "text": "Detailed, practical case consultation.",
+            "link": ""
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Resourcing & Stabilization",
+            "text": "Preparation and stabilization skills.",
+            "link": ""
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Group or Individual",
+            "text": "Flexible consultation formats.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "i0",
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "settings": {
+        "eyebrow": "Focus Areas",
+        "heading": "What Consultation Covers",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "sage",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "p0": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Reach Out",
+            "text": "Call (302) 608-3780 or send a message.",
+            "link": ""
+          }
+        },
+        "p1": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Talk With Us",
+            "text": "A first conversation to understand your goals and fit.",
+            "link": ""
+          }
+        },
+        "p2": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Make a Plan",
+            "text": "Together we outline a thoughtful path forward.",
+            "link": ""
+          }
+        },
+        "p3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Begin",
+            "text": "We move at a pace that respects you.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "A Clear First Step",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "Do I need to complete EMDR basic training before seeking consultation?",
+            "answer": "<p><em>Yes. EMDR consultation at Center for Balanced Living is specifically for therapists who have already completed an EMDRIA approved basic training program. Consultation is the next step in the formal certification process and builds directly on the foundation established in basic training.</em></p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "What happens during EMDR consultation sessions?",
+            "answer": "<p><em>Sessions focus on case review, protocol refinement, and integration of EMDR with complex presentations including trauma, dissociation, attachment disruptions, and co-occurring conditions. Dr. Serravalle helps therapists develop fidelity to the adaptive information processing model and build the clinical reasoning skills that move practice beyond technique toward genuine mastery.</em></p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "How many consultation hours do I need for EMDRIA certification?",
+            "answer": "<p><em>EMDRIA requires 10 hours of consultation with an Approved Consultant as part of the certification process, with at least 4 of those hours being individual consultation. </em></p><p><em>Dr. Serravalle offers both group and individual consultation both </em>virtually<em> and in person. </em></p><p><em>Reach out through our contact form or call (302) 608-3780 to get started.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "heading": "Common Questions About EMDR Consultation",
+        "subheading": "",
+        "cta_label": "",
+        "cta_link": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Take the Next Step",
+        "heading": "Start EMDR consultation",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "focus",
+    "process",
+    "faq",
+    "cta"
+  ]
+}

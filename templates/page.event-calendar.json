@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "intro": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "Community",
+        "heading": "Event Calendar",
+        "heading_tag": "h1",
+        "content": "<p>Explore upcoming workshops, wellness groups, professional trainings, and community events at Center for Balanced Living. This calendar includes current offerings for individuals, families, clinicians, and community members.</p>",
+        "text_align": "center",
+        "content_width": 760,
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "calendar": {
+      "type": "calendar-embed",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "calendar_src": "https://calendar.google.com/calendar/embed?src=c_b5e6547d3042f423258597a81d0cba1eedb64a8bfe8b65b2201d047f3f475193%40group.calendar.google.com&ctz=America%2FNew_York",
+        "iframe_title": "Center for Balanced Living event calendar",
+        "height": 680,
+        "max_width": 960,
+        "button_label": "Open full calendar",
+        "button_link": "https://calendar.google.com/calendar/embed?src=c_b5e6547d3042f423258597a81d0cba1eedb64a8bfe8b65b2201d047f3f475193%40group.calendar.google.com&ctz=America%2FNew_York",
+        "button_style": "secondary",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 8,
+        "padding_bottom": 56
+      }
+    },
+    "cta": {
+      "type": "rich-text-brand",
+      "settings": {
+        "eyebrow": "Register",
+        "heading": "Reserve Your Spot",
+        "heading_tag": "h2",
+        "content": "<p>See full details and registration for our current offerings.</p>",
+        "text_align": "center",
+        "content_width": 680,
+        "button_label": "Browse Workshops & Groups",
+        "button_link": "/pages/workshopspage",
+        "button_style": "primary",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
+    },
+    "weekly": {
+      "type": "featured-services",
+      "blocks": {
+        "emdr": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "EMDR Group Supervision",
+            "text": "Tuesdays at 9:00 AM. Consultation and case support for clinicians. To register, email Dr. Serravalle (click the title).",
+            "link": "mailto:drserravalle@gmail.com"
+          }
+        },
+        "qa": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Tuesday Q&A with Dr. Serravalle",
+            "text": "Tuesdays at 6:00 PM. A brief, free Q&A and the first step in our assessment process. To register, email Kimmy (click the title).",
+            "link": "mailto:kimmy@balancedlivingde.com"
+          }
+        }
+      },
+      "block_order": [
+        "emdr",
+        "qa"
+      ],
+      "settings": {
+        "eyebrow": "Every Week",
+        "heading": "Weekly Offerings",
+        "subheading": "Recurring sessions you can join. Registration is by email.",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "2",
+        "bg_scheme": "sand",
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "calendar",
+    "weekly",
+    "cta"
+  ]
+}

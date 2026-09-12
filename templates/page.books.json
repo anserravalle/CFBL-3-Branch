@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "eyebrow": "MUSA",
+        "text_align": "center",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 8
+      }
+    },
+    "shelf": {
+      "type": "book-grid",
+      "blocks": {
+        "stw": {
+          "type": "book",
+          "settings": {
+            "cover": "",
+            "title": "The Stories We Told",
+            "subtitle": "The Dance of a Codependent and a Compulsive Liar",
+            "blurb": "A memoir of loving a compulsive liar, and the long work of coming back to herself.",
+            "status": "Coming soon",
+            "cover_frame": true,
+            "frame_color": "",
+            "link": "/pages/the-stories-we-told",
+            "link_label": "Read more"
+          }
+        }
+      },
+      "block_order": ["stw"],
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "subheading": "Books by Dr. Angela (Niki) Serravalle.",
+        "text_align": "center",
+        "columns": "3",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "default",
+        "padding_top": 24,
+        "padding_bottom": 80
+      }
+    },
+    "subscribe": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in Touch",
+        "heading": "Be the first to know",
+        "body": "<p>Get word when a new book is on the way, and a chance to read it early.</p>",
+        "placeholder": "Email address",
+        "button_label": "Notify me",
+        "list_tag": "stories-we-told",
+        "success_text": "You are on the list.",
+        "fine_print": "Separate from the MUSA essays list. Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": ["header", "shelf", "subscribe"]
+}

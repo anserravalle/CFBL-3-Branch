@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_P3GUXV": {
+          "type": "text",
+          "settings": {
+            "title": "Contact Info",
+            "content": "<p>Office (302) 608-3780</p><p>Fax (302) 355-3226</p><p>5879 Summit Bridge Road Townsed, DE 19734</p>"
+          }
+        },
+        "explore": {
+          "type": "menu",
+          "settings": {
+            "title": "Explore",
+            "menu": "footer"
+          }
+        },
+        "clients": {
+          "type": "menu",
+          "settings": {
+            "title": "For Clients",
+            "menu": "for-clients"
+          }
+        },
+        "professionals": {
+          "type": "menu",
+          "settings": {
+            "title": "For Professionals",
+            "menu": "for-professionals"
+          }
+        },
+        "hours": {
+          "type": "text",
+          "settings": {
+            "title": "Office Hours",
+            "content": "<p>Monday: 10 am-6 pm<br/>Tuesday: 10 am-6 pm<br/>Wednesday: 10 am-6 pm<br/>Thursday: 10 am-6 pm<br/>Friday: 10 am-4 pm<br/>Saturday / Sunday: Closed</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_P3GUXV",
+        "explore",
+        "clients",
+        "professionals",
+        "hours"
+      ],
+      "settings": {
+        "footer_title": "Center for Balanced Living",
+        "about_text": "<p>Trauma-informed therapy, psychological evaluation, groups, workshops, and consultation for the MOT area and throughout Delaware.</p>",
+        "seo_text": "<p>Center for Balanced Living provides trauma-informed psychological care from our Townsend, Delaware office, serving Middletown, Odessa, and the greater MOT area, with clients across New Castle County and Delaware including Wilmington, Newark, and Dover.</p>",
+        "rights_text": "All rights reserved."
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

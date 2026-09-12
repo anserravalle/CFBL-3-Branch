@@ -1,0 +1,100 @@
+{%- comment -%} Main article - single post with editorial reading layout. {%- endcomment -%}
+<article class="section bg--default" style="--section-pt: 64px; --section-pb: 80px;">
+  <div class="page-width">
+    <div class="article-body">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ blog.url }}">{{ blog.title }}</a> <span aria-hidden="true">/</span> {{ article.title }}
+      </nav>
+
+      <header class="reveal" style="margin-bottom:var(--space-40);">
+        {%- if section.settings.show_tags and article.tags.size > 0 -%}
+          <p class="eyebrow">{{ article.tags.first }}</p>
+        {%- endif -%}
+        <h1>{{ article.title }}</h1>
+        <p class="article-hero__meta">
+          {%- if section.settings.show_author -%}{{ article.author }} &middot; {% endif -%}
+          <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%B %-d, %Y' }}</time>
+        </p>
+      </header>
+
+      {%- if article.image and section.settings.show_image -%}
+        <div class="reveal" style="margin-bottom:var(--space-40);">
+          {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '16-9', loading: 'eager', sizes: '(min-width:768px) 760px, 100vw', widths: '480,768,1000,1300' -%}
+        </div>
+      {%- endif -%}
+
+      <div class="rte">{{ article.content }}</div>
+
+      {%- if blog.comments_enabled? -%}
+        <div style="margin-top:var(--space-64);">
+          <h2>{{ article.comments_count }} {% if article.comments_count == 1 %}comment{% else %}comments{% endif %}</h2>
+          {%- if article.comments.size > 0 -%}
+            {%- for comment in article.comments -%}
+              <div style="padding:var(--space-24) 0;border-bottom:1px solid var(--color-border);">
+                <p style="margin-bottom:var(--space-8);">{{ comment.content }}</p>
+                <p class="article-card__meta">{{ comment.author }} &middot; {{ comment.created_at | date: '%b %-d, %Y' }}</p>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} Keep reading. Posts list newest-first, so the neighbour BEFORE the current post in the loop is the newer one ("Next" in a 1-2-3 series, shown left) and the one AFTER is older ("Previous", shown right). {%- endcomment -%}
+      {%- assign newer_post = null -%}
+      {%- assign older_post = null -%}
+      {%- assign seen_current = false -%}
+      {%- for a in blog.articles -%}
+        {%- if seen_current and older_post == null -%}
+          {%- assign older_post = a -%}
+        {%- endif -%}
+        {%- if a.id == article.id -%}
+          {%- assign seen_current = true -%}
+        {%- elsif seen_current == false -%}
+          {%- assign newer_post = a -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if newer_post or older_post -%}
+        <nav class="article-pager reveal" aria-label="More from {{ blog.title }}">
+          {%- if newer_post -%}
+            <a class="article-pager__link" href="{{ newer_post.url }}" rel="next">
+              <span class="eyebrow">&larr; Next</span>
+              <span class="article-pager__title">{{ newer_post.title }}</span>
+            </a>
+          {%- else -%}
+            <span class="article-pager__link article-pager__link--empty" aria-hidden="true"></span>
+          {%- endif -%}
+          {%- if older_post -%}
+            <a class="article-pager__link article-pager__link--right" href="{{ older_post.url }}" rel="prev">
+              <span class="eyebrow">Previous &rarr;</span>
+              <span class="article-pager__title">{{ older_post.title }}</span>
+            </a>
+          {%- else -%}
+            <span class="article-pager__link article-pager__link--empty" aria-hidden="true"></span>
+          {%- endif -%}
+        </nav>
+      {%- endif -%}
+    </div>
+  </div>
+</article>
+
+{%- style -%}
+  .article-pager{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);margin-top:var(--space-64);padding-top:var(--space-32);border-top:1px solid var(--color-border);}
+  .article-pager__link{display:flex;flex-direction:column;gap:var(--space-8);padding:var(--space-20);border:1px solid var(--color-border);border-radius:var(--radius-card);text-decoration:none;transition:border-color .2s ease;}
+  .article-pager__link:hover{border-color:var(--color-heading);}
+  .article-pager__link--empty{border:none;}
+  .article-pager__link--right{text-align:right;}
+  .article-pager__title{font-weight:600;color:var(--color-heading);line-height:1.3;}
+  @media (max-width:600px){.article-pager{grid-template-columns:1fr;}.article-pager__link--right{text-align:left;}}
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Article",
+  "settings": [
+    { "type": "checkbox", "id": "show_image", "label": "Show featured image", "default": true },
+    { "type": "checkbox", "id": "show_author", "label": "Show author", "default": true },
+    { "type": "checkbox", "id": "show_tags", "label": "Show first tag", "default": true }
+  ]
+}
+{% endschema %}

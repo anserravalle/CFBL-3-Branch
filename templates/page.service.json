@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "",
+        "text_align": "left",
+        "bg_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 56
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "reach": { "type": "item", "settings": { "title": "Reach Out", "text": "Call (302) 608-3780 or send a message. We respond within 24-48 hours." } },
+        "consult": { "type": "item", "settings": { "title": "Talk With Us", "text": "A first conversation to understand your goals and determine fit." } },
+        "plan": { "type": "item", "settings": { "title": "Make a Plan", "text": "Together we outline a thoughtful, individualized path forward." } },
+        "begin": { "type": "item", "settings": { "title": "Begin Care", "text": "We move at a pace that respects you." } }
+      },
+      "block_order": ["reach", "consult", "plan", "begin"],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "A Clear, Unhurried First Step",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "f1": { "type": "item", "settings": { "question": "How do I get started?", "answer": "<p>Call us at (302) 608-3780 or use our contact form. We typically respond within 24-48 hours.</p>" } },
+        "f2": { "type": "item", "settings": { "question": "Do you accept insurance?", "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>" } },
+        "f3": { "type": "item", "settings": { "question": "How do I know if this is the right fit?", "answer": "<p>Our first conversation helps us understand your goals and determine whether this service is right for you, or offer a referral if another setting would serve you better.</p>" } }
+      },
+      "block_order": ["f1", "f2", "f3"],
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "heading": "Common Questions",
+        "subheading": "",
+        "cta_label": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Take the Next Step",
+        "heading": "Let's talk about how we can help",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": ["header", "process", "faq", "cta"]
+}

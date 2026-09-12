@@ -1,0 +1,98 @@
+{%- comment -%}
+  Collection cards — pick ONE collection and show its live products as cards.
+  Use it to separate offerings by brand: e.g. the "Groups" collection on a CFBL
+  page, and "Training and Courses" on the Institute page. Always current: when a
+  product is added to / removed from the collection, this updates automatically.
+{%- endcomment -%}
+{%- liquid
+  assign coll = section.settings.collection
+  assign cols = section.settings.columns | default: '3'
+  assign cstyle = section.settings.card_style | default: 'soft'
+  assign center = false
+  if section.settings.text_align == 'center'
+    assign center = true
+  endif
+-%}
+<section class="section bg--{{ section.settings.bg_scheme }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.subheading != blank -%}
+        <div class="section__header {% if center %}is-center{% endif %} reveal">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if coll != blank and coll.products_count > 0 -%}
+        <div class="grid grid--{{ cols }} cards--{{ cstyle }}">
+          {%- for product in coll.products limit: section.settings.limit -%}
+            <article class="card is-linked reveal">
+              {%- if product.featured_image != blank -%}
+                <a class="card__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+                  {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt | default: product.title, ratio: '4-3', sizes: '(min-width: 990px) 360px, 100vw', widths: '300, 450, 600, 900' -%}
+                </a>
+              {%- endif -%}
+              <h3 class="card__title"><a href="{{ product.url }}" style="text-decoration:none; color:inherit;">{{ product.title }}</a></h3>
+              {%- if section.settings.show_price -%}
+                <p class="card__price" style="font-family:var(--font-body); font-weight:600; color:var(--color-heading); margin:0 0 var(--space-12);">
+                  {%- if product.price > 0 -%}{{ product.price | money }}{%- else -%}Free{%- endif -%}
+                  {%- unless product.available %} &middot; <span style="color:var(--color-muted); font-weight:400;">Waitlist</span>{%- endunless -%}
+                </p>
+              {%- endif -%}
+              {%- if section.settings.show_description and product.description != blank -%}
+                <div class="card__body rte">{{ product.description | strip_html | truncatewords: 24 }}</div>
+              {%- endif -%}
+              <p class="card__cta">
+                {%- render 'button', label: section.settings.cta_label, href: product.url, style: 'tertiary', aria: section.settings.cta_label | append: ', ' | append: product.title -%}
+              </p>
+            </article>
+          {%- endfor -%}
+        </div>
+        {%- if section.settings.footer_label != blank and coll.url != blank -%}
+          <div class="section__footer {% if center %}is-center{% endif %}" style="margin-top:var(--space-40);">
+            {%- render 'button', label: section.settings.footer_label, href: coll.url, style: 'secondary' -%}
+          </div>
+        {%- endif -%}
+      {%- else -%}
+        <p class="section__subheading reveal">{{ section.settings.empty_text }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection cards",
+  "tag": "section",
+  "settings": [
+    { "type": "collection", "id": "collection", "label": "Collection", "info": "Shows every product in this collection. e.g. Groups (CFBL) or Training and Courses (Institute)." },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Enrolling Now" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Current Offerings" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "range", "id": "limit", "label": "Max products to show", "min": 2, "max": 12, "step": 1, "default": 6 },
+    { "type": "select", "id": "columns", "label": "Columns (desktop)", "options": [
+      { "value": "2", "label": "2" }, { "value": "3", "label": "3" }, { "value": "4", "label": "4" }
+    ], "default": "3" },
+    { "type": "checkbox", "id": "show_price", "label": "Show price", "default": true },
+    { "type": "checkbox", "id": "show_description", "label": "Show short description", "default": false },
+    { "type": "text", "id": "cta_label", "label": "Card button label", "default": "View & register" },
+    { "type": "text", "id": "footer_label", "label": "Footer button label", "info": "Links to the full collection page. Leave blank to hide.", "default": "See all" },
+    { "type": "text", "id": "empty_text", "label": "Text when collection is empty", "default": "New offerings are being scheduled. Check back soon, or reach out to join the waitlist." },
+    { "type": "header", "content": "Appearance" },
+    { "type": "select", "id": "card_style", "label": "Card style", "options": [
+      { "value": "soft", "label": "Soft" }, { "value": "elevated", "label": "Elevated" }, { "value": "framed", "label": "Framed" }, { "value": "outline", "label": "Outlined" }
+    ], "default": "soft" },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "center" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" }, { "value": "surface", "label": "White" }, { "value": "cream", "label": "Cream" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 }
+  ],
+  "presets": [{ "name": "Collection cards" }]
+}
+{% endschema %}

@@ -1,0 +1,123 @@
+{%- comment -%}
+  Substack feed — pulls the latest posts from a Substack RSS feed and shows them
+  as excerpt cards that link out to the full post on Substack. Client-side fetch
+  (via a public CORS proxy) so it stays current with no manual updates. Falls back
+  to a "Read on Substack" button if the feed can't load or JS is off.
+{%- endcomment -%}
+{%- liquid
+  assign bg = section.settings.bg_scheme
+  assign cols = section.settings.columns | default: '3'
+-%}
+<section class="section bg--{{ bg }}"
+  style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <div class="section__inner">
+      {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.subheading != blank -%}
+        <div class="section__header {% if section.settings.text_align == 'center' %}is-center{% endif %} reveal">
+          {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+          {%- if section.settings.subheading != blank -%}<p class="section__subheading">{{ section.settings.subheading }}</p>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.feed_url != blank -%}
+        <div id="substack-{{ section.id }}"
+             class="grid grid--{{ cols }}"
+             data-feed="{{ section.settings.feed_url }}"
+             data-limit="{{ section.settings.post_limit }}"
+             data-excerpt="{{ section.settings.show_excerpt }}"
+             data-cta="{{ section.settings.cta_label | escape }}">
+          <noscript>
+            <p class="section__subheading">Read the latest at
+              <a href="{{ section.settings.substack_url | default: section.settings.feed_url }}">our Substack</a>.
+            </p>
+          </noscript>
+        </div>
+        {%- if section.settings.substack_url != blank -%}
+          <div class="section__footer {% if section.settings.text_align == 'center' %}is-center{% endif %}" style="margin-top:var(--space-40);">
+            {%- render 'button', label: section.settings.footer_label | default: 'Read more on Substack', href: section.settings.substack_url, style: 'secondary' -%}
+          </div>
+        {%- endif -%}
+
+        <script>
+        (function(){
+          var el = document.getElementById('substack-{{ section.id }}');
+          if(!el) return;
+          var feed = el.getAttribute('data-feed');
+          var limit = parseInt(el.getAttribute('data-limit'), 10) || 3;
+          var wantExcerpt = el.getAttribute('data-excerpt') === 'true';
+          var cta = el.getAttribute('data-cta') || 'Read on Substack';
+          var proxy = 'https://api.allorigins.win/raw?url=';
+          function esc(s){ var d=document.createElement('div'); d.textContent=s||''; return d.innerHTML; }
+          function textFrom(html){ var d=document.createElement('div'); d.innerHTML=html||''; return (d.textContent||'').trim(); }
+          function firstImg(html){ var d=document.createElement('div'); d.innerHTML=html||''; var i=d.querySelector('img'); return i?i.getAttribute('src'):''; }
+          fetch(proxy + encodeURIComponent(feed))
+            .then(function(r){ if(!r.ok) throw 0; return r.text(); })
+            .then(function(str){
+              var xml = new DOMParser().parseFromString(str, 'text/xml');
+              var items = xml.querySelectorAll('item');
+              if(!items.length) throw 0;
+              var html = '';
+              for(var i=0; i<Math.min(items.length, limit); i++){
+                var it = items[i];
+                var title = (it.querySelector('title')||{}).textContent || 'Untitled';
+                var link = (it.querySelector('link')||{}).textContent || feed;
+                var date = (it.querySelector('pubDate')||{}).textContent || '';
+                var enc = it.getElementsByTagName('content:encoded')[0];
+                var body = enc ? enc.textContent : ((it.querySelector('description')||{}).textContent || '');
+                var img = firstImg(body);
+                var words = textFrom(body).split(/\s+/).slice(0,26).join(' ');
+                var d = date ? new Date(date) : null;
+                var dstr = d ? d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) : '';
+                html += '<article class="article-card">';
+                if(img){ html += '<a href="'+esc(link)+'" target="_blank" rel="noopener"><img src="'+esc(img)+'" alt="'+esc(title)+'" style="display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;"></a>'; }
+                html += '<div class="article-card__body">';
+                if(dstr){ html += '<p class="article-card__meta">'+esc(dstr)+'</p>'; }
+                html += '<h3 class="article-card__title"><a href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(title)+'</a></h3>';
+                if(wantExcerpt && words){ html += '<p class="article-card__excerpt">'+esc(words)+'…</p>'; }
+                html += '<p class="article-card__cta"><a class="btn btn--tertiary" href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(cta)+' &rarr;</a></p>';
+                html += '</div></article>';
+              }
+              el.innerHTML = html;
+            })
+            .catch(function(){
+              el.innerHTML = '<p class="section__subheading">Read the latest at <a href="'+esc('{{ section.settings.substack_url | default: section.settings.feed_url }}')+'" target="_blank" rel="noopener">our Substack</a>.</p>';
+            });
+        })();
+        </script>
+      {%- else -%}
+        <p class="section__subheading reveal">Add your Substack RSS feed URL in this section's settings (e.g. https://yourname.substack.com/feed).</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Substack feed",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "feed_url", "label": "Substack RSS feed URL", "info": "Your Substack address + /feed, e.g. https://yourname.substack.com/feed" },
+    { "type": "url", "id": "substack_url", "label": "Substack home link", "info": "Used for the footer button and fallback link." },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "From Substack" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Latest Writing" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "range", "id": "post_limit", "label": "Posts to show", "min": 1, "max": 9, "step": 1, "default": 3 },
+    { "type": "select", "id": "columns", "label": "Columns (desktop)", "options": [
+      { "value": "2", "label": "2" }, { "value": "3", "label": "3" }
+    ], "default": "3" },
+    { "type": "checkbox", "id": "show_excerpt", "label": "Show excerpt", "default": true },
+    { "type": "text", "id": "cta_label", "label": "Card link label", "default": "Read on Substack" },
+    { "type": "text", "id": "footer_label", "label": "Footer button label", "default": "Read more on Substack" },
+    { "type": "select", "id": "text_align", "label": "Header alignment", "options": [
+      { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }
+    ], "default": "center" },
+    { "type": "select", "id": "bg_scheme", "label": "Background", "options": [
+      { "value": "default", "label": "Page background" }, { "value": "sand", "label": "Sand" }, { "value": "sage", "label": "Sage" }, { "value": "surface", "label": "White" }, { "value": "cream", "label": "Cream" }, { "value": "navy", "label": "Navy (CFBL)" }, { "value": "institute", "label": "Institute green" }, { "value": "musa", "label": "MUSA maroon" }, { "value": "burnt", "label": "Burnt orange" }
+    ], "default": "default" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 }
+  ],
+  "presets": [{ "name": "Substack feed" }]
+}
+{% endschema %}

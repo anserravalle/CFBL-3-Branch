@@ -1,0 +1,261 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "MUSA",
+        "heading": "Writing on psychology, relationships, the moment, and the fragility of being human",
+        "subheading": "<p>Books and essays by Dr. Angela (Niki) Serravalle.</p>",
+        "use_h1": true,
+        "primary_label": "Read the Essays",
+        "primary_link": "/blogs/essays",
+        "secondary_label": "Explore Publications",
+        "secondary_link": "/pages/publications",
+        "image": "shopify://shop_images/MUSA_logo.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#c5a572",
+        "show_shape": false,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "paths": {
+      "type": "service-card-grid",
+      "blocks": {
+        "letters": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Newsletter",
+            "icon": "mail",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Letters from the Practice",
+            "body": "<p>Notes from the practice: events, celebrations, and seasonal intentions.</p>",
+            "link_label": "Read the Letters",
+            "link": "/blogs/newsletter"
+          }
+        },
+        "blog": {
+          "type": "card",
+          "settings": {
+            "logo": "shopify://shop_images/MUSA_logo.png",
+            "logo_alt": "",
+            "eyebrow": "Blog",
+            "icon": "compass",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Make It Make Sense",
+            "body": "<p>Grounded, research-informed essays on psychology, therapy, and the cultural moment.</p>",
+            "link_label": "Read the Blog",
+            "link": "/blogs/balanced-living-blog-make-it-make-sense"
+          }
+        },
+        "publications": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Library",
+            "icon": "book",
+            "image_alt": "",
+            "image_ratio": "4-3",
+            "title": "Essays & Publications",
+            "body": "<p>Books, essays, and articles by Dr. Niki Serravalle.</p>",
+            "link_label": "Explore Publications",
+            "link": "/pages/publications"
+          }
+        }
+      },
+      "block_order": [
+        "letters",
+        "blog",
+        "publications"
+      ],
+      "settings": {
+        "eyebrow": "Explore MUSA",
+        "heading": "Three Ways to Read",
+        "subheading": "",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "burnt",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "author": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify://shop_images/angela.jpg",
+        "image_alt": "Dr. Angela (Niki) Serravalle",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#6e1f23",
+        "image_position": "right",
+        "mobile_stack": "image",
+        "eyebrow": "Meet the Author",
+        "heading": "Dr. Angela (Niki) Serravalle",
+        "body": "<p>Dr. Niki Serravalle is a licensed clinical psychologist, author, and the founder of the Center for Balanced Living. Her clinical work centers on trauma-informed care, psychological evaluation, and the integration of nature-based and somatic approaches into therapeutic practice. She writes MUSA from her practice in Delaware, where the clinical and the personal continually meet. Her first book, The Stories We Told: The Dance of a Codependent and a Compulsive Liar, is forthcoming.</p>",
+        "text_align": "left",
+        "phone": "",
+        "email": "",
+        "primary_label": "",
+        "primary_link": "",
+        "secondary_label": "",
+        "secondary_link": "",
+        "bg_scheme": "cream",
+        "padding_top": 72,
+        "padding_bottom": 24
+      }
+    },
+    "why": {
+      "type": "testimonial-section",
+      "blocks": {
+        "q": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>In Latin and Italian, Musa is the muse, the figure who animates writing, thinking, and creative work. To write in the company of a muse was to listen carefully and give shape to what mattered most. It was writing with intention. MUSA is where I house my writing, a space where the clinical, the literary, and the personal meet on the page.</p>",
+            "author": "Dr. Angela (Niki) Serravalle",
+            "role": "",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "q"
+      ],
+      "settings": {
+        "eyebrow": "Why I Write",
+        "heading": "",
+        "subheading": "",
+        "columns": 1,
+        "bg_scheme": "musa",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    },
+    "book": {
+      "type": "book-feature",
+      "settings": {
+        "eyebrow": "The Book",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance of a Codependent and a Compulsive Liar",
+        "cover": "shopify://shop_images/1BECC4CF-280B-41C8-9612-C2DB35EDC0FC.jpg",
+        "cover_alt": "The Stories We Told by Dr. Angela (Niki) Serravalle",
+        "cover_ratio": "2-3",
+        "cover_caption": "",
+        "cover_frame": true,
+        "frame_color": "#3d2b22",
+        "description": "<p>The Stories We Told is the memoir of a clinical psychologist who knew the signs and stayed anyway, a reckoning with love, deception, and the long work of coming home to herself.</p>",
+        "primary_label": "Coming Soon",
+        "primary_link": "/pages/the-stories-we-told",
+        "excerpt_label": "",
+        "excerpt": "",
+        "bg_scheme": "sand",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "essays": {
+      "type": "blog-feature",
+      "settings": {
+        "eyebrow": "Recent Essays",
+        "heading": "From the Desk",
+        "subheading": "",
+        "blog": "essays",
+        "post_limit": 6,
+        "columns": "3",
+        "show_image": true,
+        "show_excerpt": true,
+        "show_tags": false,
+        "view_all_label": "All essays",
+        "text_align": "left",
+        "carousel": true,
+        "bg_scheme": "burnt",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "letters_feed": {
+      "type": "blog-feature",
+      "settings": {
+        "eyebrow": "Monthly Newsletter",
+        "heading": "Letters From the Practice",
+        "subheading": "",
+        "blog": "newsletter",
+        "post_limit": 6,
+        "columns": "3",
+        "show_image": false,
+        "show_excerpt": true,
+        "show_tags": false,
+        "view_all_label": "All letters",
+        "text_align": "left",
+        "carousel": true,
+        "bg_scheme": "musa",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "articles": {
+      "type": "publication-list",
+      "disabled": true,
+      "settings": {
+        "eyebrow": "Articles",
+        "heading": "Articles & Other Writing",
+        "subheading": "Selected published articles and professional writing.",
+        "text_align": "left",
+        "limit": 4,
+        "footer_label": "Coming Soon",
+        "footer_link": "/pages/publications",
+        "bg_scheme": "cream",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "subscribe": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Stay in Touch",
+        "heading": "New essays, now and then",
+        "body": "<p>Subscribe to receive new writing as it is published. No noise, just the work.</p>",
+        "placeholder": "Email address",
+        "button_label": "Subscribe",
+        "list_tag": "musa",
+        "success_text": "Thank you for subscribing.",
+        "fine_print": "Your email is never shared.",
+        "text_align": "center",
+        "bg_scheme": "cream",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "paths",
+    "author",
+    "why",
+    "book",
+    "essays",
+    "letters_feed",
+    "articles",
+    "subscribe"
+  ]
+}

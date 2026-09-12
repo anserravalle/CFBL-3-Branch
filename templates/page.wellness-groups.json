@@ -1,0 +1,324 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-brand",
+      "settings": {
+        "eyebrow": "Wellness Groups",
+        "heading": "Healing happens in connection",
+        "subheading": "<p>Center for Balanced Living offers Our wellness groups offer space for connection, insight, and growth through shared experiences guided by thoughtful clinical support. Topics may evolve over time and may include trauma, creativity, values, emotional wellness, and other themes that support meaningful healing and reflection.</p>",
+        "use_h1": true,
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "All Services",
+        "secondary_link": "/pages/services",
+        "image": "shopify://shop_images/supervision_2.png",
+        "image_alt": "",
+        "image_ratio": "4-3",
+        "image_frame": true,
+        "frame_color": "#2b5275",
+        "show_shape": true,
+        "layout": "split",
+        "mobile_image_first": false,
+        "bg_scheme": "default",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "now_forming": {
+      "type": "service-card-grid",
+      "blocks": {
+        "card_yQpmzt": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Friday August 21 at 5:00pm (1 hour)",
+            "icon": "award",
+            "image": "shopify://shop_images/cfblintitutelogo_69230b38-3a8a-4b19-a505-d43a3903caa5.png",
+            "image_alt": "parent support group",
+            "image_ratio": "3-2",
+            "title": "Parenting With Purpose: Monthly Virtual Parent Support Group",
+            "body": "<p><strong>Parenting With Purpose</strong> is a monthly virtual support group designed for parents and caregivers who want practical strategies, professional guidance, and a supportive community of other parents.</p><p>Each session focuses on a different parenting topic while providing opportunities for discussion, reflection, and skill-building that you can immediately apply at home.</p>",
+            "link_label": "Register (free)",
+            "link": "shopify://products/parenting-with-purpose-monthly-virtual-parent-support-group"
+          }
+        },
+        "rooted": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "Friday, July 10 at 5:00 PM (1 hour)",
+            "icon": "leaf",
+            "image": "shopify://shop_images/Untitled_design.png",
+            "image_alt": "Rooted & Rising (with Amanda)",
+            "image_ratio": "4-3",
+            "title": "Rooted & Rising (with Amanda)",
+            "body": "<p>Understanding the nervous system through creative expression. An art-therapy group led by Amanda Foxwell, in person.</p><p><strong>$25</strong>, one hour, all art supplies included.</p>",
+            "link_label": "Register ($25)",
+            "link": "/products/rooted-rising-art-therapy-group-with-amanda-foxwell"
+          }
+        },
+        "petloss_live": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "heart",
+            "image": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
+            "image_alt": "Pet Loss Support Group (In-Person)",
+            "image_ratio": "4-3",
+            "title": "Pet Loss Support Group (In-Person)",
+            "body": "<p>A gentle, supported space to process the grief, memory, and connection that come with losing a beloved companion. Led by Dr. Niki Serravalle, in person in Townsend.</p>",
+            "link_label": "Register (free)",
+            "link": "/products/pet-loss-support-group-in-person"
+          }
+        },
+        "petloss_virtual": {
+          "type": "card",
+          "settings": {
+            "logo_alt": "",
+            "eyebrow": "",
+            "icon": "heart",
+            "image": "shopify://shop_images/Untitled_design_d278525d-ca87-4e6c-9f78-2807d74d5325.png",
+            "image_alt": "Pet Loss Support Group (Virtual)",
+            "image_ratio": "4-3",
+            "title": "Pet Loss Support Group (Virtual)",
+            "body": "<p>The same supported space to honor your grief and memories, offered online so you can join from anywhere in Delaware. Led by Dr. Niki Serravalle.</p>",
+            "link_label": "Register (free)",
+            "link": "/products/pet-loss-support-group-virtual"
+          }
+        }
+      },
+      "block_order": [
+        "card_yQpmzt",
+        "rooted",
+        "petloss_live",
+        "petloss_virtual"
+      ],
+      "settings": {
+        "eyebrow": "Open for Registration",
+        "heading": "Register for a Group",
+        "subheading": "Choose a group and register online to claim your spot. Space is intentionally limited to keep each group small.",
+        "text_align": "center",
+        "columns": "3",
+        "mobile_two_up": false,
+        "card_style": "elevated",
+        "footer_label": "",
+        "footer_link": "",
+        "bg_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 48
+      }
+    },
+    "focus": {
+      "type": "featured-services",
+      "blocks": {
+        "i0": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Trauma Skills Group",
+            "text": "Regulation and coping skills in a supported setting.",
+            "link": ""
+          }
+        },
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "title": "Anxiety & Stress",
+            "text": "Practical tools for managing anxiety.",
+            "link": ""
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "users",
+            "title": "Connection & Support",
+            "text": "Process groups for shared experience.",
+            "link": ""
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Mindfulness & Body",
+            "text": "Nervous-system-aware practices.",
+            "link": ""
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "compass",
+            "title": "Teens & Young Adults",
+            "text": "Developmentally tailored groups.",
+            "link": ""
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "title": "Parenting Support",
+            "text": "Support for caregivers.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "i0",
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "settings": {
+        "eyebrow": "Our Groups",
+        "heading": "Types of Groups We Offer",
+        "subheading": "Ongoing and seasonal groups across these focus areas. Reach out to ask what is currently running or forming.",
+        "text_align": "center",
+        "numbered": false,
+        "columns": "3",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "p0": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Reach Out",
+            "text": "Call (302) 608-3780 or send a message.",
+            "link": ""
+          }
+        },
+        "p1": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Talk With Us",
+            "text": "A first conversation to understand your goals and fit.",
+            "link": ""
+          }
+        },
+        "p2": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Make a Plan",
+            "text": "Together we outline a thoughtful path forward.",
+            "link": ""
+          }
+        },
+        "p3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Begin",
+            "text": "We move at a pace that respects you.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "eyebrow": "What to Expect",
+        "heading": "A Clear First Step",
+        "subheading": "",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "Who are the wellness groups for?",
+            "answer": "<p><em>Our wellness groups are open to adults and teens 16 and up who are seeking personal growth, nervous system regulation skills, and connection in a supportive community setting. </em></p><p><em>Groups are educational and experiential in nature, not therapy groups, and are not covered by insurance.</em></p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "Do I need to be in therapy to join a group?",
+            "answer": "<p><em>No. Our wellness groups are open to community members whether or not you are currently in therapy. </em></p><p><em>They are designed to be accessible and valuable as a standalone experience or as a complement to individual therapy.</em></p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "How do I sign up for a group?",
+            "answer": "<p><em>Each group has its own registration page on our website. Visit the </em><a href=\"/pages/wellness-groups\"><em>Wellness Groups</em></a><em> page, choose a group, and click Register to reserve your spot and pay securely at checkout. </em></p><p><em>Advance registration is required as group sizes are intentionally small. </em></p><p><em>Reach out to our office at (302) 608-3780 with any questions.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "Questions, Answered",
+        "heading": "Common Questions About Groups",
+        "subheading": "",
+        "cta_label": "",
+        "cta_link": "",
+        "bg_scheme": "sand",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Take the Next Step",
+        "heading": "Join a group",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "now_forming",
+    "focus",
+    "process",
+    "faq",
+    "cta"
+  ]
+}
