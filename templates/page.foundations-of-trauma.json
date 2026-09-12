@@ -69,7 +69,6 @@
     },
     "events": {
       "type": "workshop-event-grid",
-      "disabled": true,
       "blocks": {
         "event_rX78RY": {
           "type": "event",
@@ -83,7 +82,7 @@
             "description": "This three-hour workshop is for EMDR clinicians who already know how to do the work and want to think more carefully about when and how nature-informed elements belong inside a standard EMDR case. It is not a new protocol. The eight-phase, three-pronged structure does not change.",
             "learn_more": "",
             "learn_more_label": "Learn More",
-            "product": "nature-informed-emdr-ethical-and-clinically-grounded-applications-for-preparation-regulation-and-integration",
+            "product": "nature-informed-emdr",
             "link_label": "Register",
             "link": "shopify://pages/nature-based-emdr-ethical-clinically-grounded-applications"
           }
@@ -128,6 +127,7 @@
         "e1",
         "e2"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "Upcoming",
         "heading": "Upcoming Offerings",
