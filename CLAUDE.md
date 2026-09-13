@@ -795,12 +795,17 @@ applied, the composed file exports. Canva brand kit ids are in the Brands table.
 
 The earlier Vercel connector, cfbl-operations-connector, still runs an hourly
 publish cron and a Monday analytics cron against Notion. Notion has been emptied.
-~~Retire those crons, but **export the Metricool history first**.~~ That connector
+~~Retire those crons, but export the Metricool history first. That connector
 already has `listScheduledPosts(blogId, start, end)` and a live Metricool token in
 Vercel. Metricool holds every caption the old system published, for blogIds
 6760980 Center for Balanced Living and 6760856 Dr Serravalle, with MUSA
 interleaved on the Dr Serravalle account. Do not delete the Vercel project, rotate
-the token, or cancel Metricool until that history is out.
+the token, or cancel Metricool until that history is out.~~
+
+**All of the above is void.** Metricool is canceled, the caption history for both
+blog IDs is unavailable, and nothing waits on it. Retire the crons whenever
+convenient and decommission the project. The blog IDs are kept only so that a
+future reader recognizes them if they surface elsewhere.
 
 There is an empty record in Brands and Asset Kits with no name and no tag. It
 cannot match anything, but it is debris from an intake test.
