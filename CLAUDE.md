@@ -90,7 +90,7 @@ On 2026-09-10 this system called it decoration carrying no information and
 proposed recolouring it to the Institute greens. That was wrong on its own terms.
 The test is whether an element carries information, and this one carries the most
 important thing the practice communicates. Do not propose removing it, muting it,
-or reducing it to brand colours, and do not treat it as a differentiation problem:
+or reducing it to brand colors, and do not treat it as a differentiation problem:
 the practice predates the market's version of it.
 
 **The CBL Brand Guide sets a minimum size of 2 inches, 200 pixels.** The guide
@@ -187,11 +187,11 @@ Bone #F1E8D8, Parchment #EDE0C8, **Oxblood #6E1F23**, Ochre #C5A572, Walnut
 #4A4036, Ink #1F1A16. **DM Serif Display** titles and drop caps, **EB Garamond**
 body. Editorial variety inside a locked system, pull quotes with hairlines,
 generous reading measure. Photography led, image-oblique, **never image-absent**.
-**Avoid Cormorant, any CFBL or Institute colour, decorative botanicals, women
+**Avoid Cormorant, any CFBL or Institute color, decorative botanicals, women
 journaling, coffee-and-journal flat lays, credentials above the essay title, pure
 black, and marketing-heavy CTAs.**
 
-Oxblood was recorded here as #5A0C11 until 2026-09-10. Wrong colour. The
+Oxblood was recorded here as #5A0C11 until 2026-09-10. Wrong color. The
 type-led, image-sparse version of this system was retired around 2026-08-11 and
 had reached a live shot note before being corrected.
 
@@ -348,7 +348,7 @@ from the filename. It says what a stranger would see, and it names anything
 disqualifying: a slogan on a shelf, a visible outlet, a person without written
 permission, a prop that already appears on another panel.
 
-**This is a catalogue, not a workflow.** Nothing in it decides whether anything
+**This is a catalog, not a workflow.** Nothing in it decides whether anything
 publishes. Publish Guard on Content Pipeline remains the only ship or no-ship
 decision, and State here must never be treated as an approval. The lineage this
 system replaces died of four competing approval surfaces.
@@ -504,7 +504,7 @@ Marketing sells the workshops and the evaluations. Brand building demonstrates
 expertise without selling anything. Community building asks a question and works
 the replies, or shows the people in the practice.
 
-The Institute is not a product catalogue. It exists to build a brand clinicians
+The Institute is not a product catalog. It exists to build a brand clinicians
 trust. Institute brand posts should be able to run with no product mentioned at
 all.
 
@@ -574,7 +574,7 @@ one. Verified against Shopify 2026-09-10:
 **Foundations of Trauma Therapy**, 18 and 19 September 2026, provides 12 hours of
 instruction across two days. This pilot cohort is the delivery that **completes
 CFBL Institute's NBCC accreditation application**, and **the hours count toward
-your practice rather than your licence renewal**. DRAFT status, 14 seats
+your practice rather than your license renewal**. DRAFT status, 14 seats
 remaining, not publicly purchasable. It is running and it is closed. Do not
 promote it. The material may be used for teaching content and brand posts that do
 not reference a cohort or imply enrollment.
