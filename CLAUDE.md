@@ -293,6 +293,36 @@ them back. A generator told to give plain unlettered spines gives plain
 unlettered spines. Name the object and name it blank. Same for a mug, a folder
 tab, a whiteboard, a wall poster.
 
+**Niki runs a ChatGPT system that generates images against the brand**, built
+2026-09-13. It renders. It does not hold the standard.
+
+That distinction matters because brand rules now live in four places: the
+Operating Manual, The Standard, this file, and the instructions inside that
+system. Four surfaces that can disagree, which is the shape of the failure that
+killed the predecessor build. The fix is not consolidation, since the renderer
+has to hold something to be useful. The fix is that **every brief written from
+here names the palette hex values, the typefaces, the aspect ratio and the layout
+positions explicitly**, even though her system could supply them from memory. If
+the two drift, the brief wins and the drift shows up inside a week rather than
+inside six months. A brief that says "make the 0924 card" and trusts the renderer
+for the rest hides drift indefinitely.
+
+The no-lettering clause goes in regardless. It is a generator failure mode, not a
+brand rule, so a brand-aware system will not necessarily carry it.
+
+**She records from a script.** Voiceover or to camera, her choice of framing,
+raw file back here for the cut. A script has to carry three things and nothing
+else: the words exactly as spoken, a target length in seconds, and whether it is
+to camera or voiceover. No bulleted outline to talk around, no stage directions
+inside the spoken text. A 15 second voiceover is roughly 35 to 40 words, so write
+to that rather than writing long and trimming, because trimming her recorded
+voice cuts her cadence and it shows.
+
+**This is what finally makes founder presence possible.** The skill mandates it
+at least once a week and nothing in the pipeline could produce it, because every
+asset was a still or a silent b-roll cut. Her voice over her own b-roll is
+founder presence at the cost of a phone recording.
+
 ## The filename is the state
 
 Inherited from the earlier Notion system and kept deliberately.
