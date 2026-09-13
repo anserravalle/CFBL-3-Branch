@@ -5,6 +5,17 @@ description: The single operating skill for all marketing across Center for Bala
 
 # CFBL Marketing
 
+> **HANDOFF, 13 September 2026.** ChatGPT/Work is now the primary marketing
+> operator and Codex owns technical maintenance. The authoritative operating
+> instructions are `OPERATOR_SPEC.md` and `CURRENT_SYSTEM.md` in the repository
+> root. **Where this skill and those files disagree, those files win.**
+>
+> Two things in this skill are superseded. The weekly run below is replaced by an
+> **eight-week editorial horizon** with one concentrated production shoot
+> supplying six to eight weeks of authentic material. The counted content ratio is
+> replaced by **three strategic jobs judged across the cycle**. The craft, the
+> art direction and the approval discipline all still hold.
+
 ## The one rule that makes this skill work
 
 **This skill does not carry brand rules. The Standard does.**
@@ -64,8 +75,10 @@ answers.
 Base is `appP8PQe3dvqxosjR`, CFBL 3-Brand Engine. Field ids and query patterns are
 in `references/airtable-state.md`.
 
-**Notion is deleted. Do not read from it, write to it, or route anything through
-it.** Any collection id beginning `collection://` in older material is dead.
+**Notion and Metricool are retired and are not part of the current stack.** Do not
+read from them, write to them, or route anything through them. Any collection id
+beginning `collection://` in older material is dead. Buffer is the active
+publishing platform. Full detail in `RETIRED_SYSTEMS.md`.
 
 ## The run, in order
 
@@ -117,7 +130,8 @@ this skill, the website wins and the discrepancy gets written into The Standard.
 
 ### 3. Allocate the week
 
-Three brands every week at differentiated intensity. Base footprints, expansion
+> Four internal systems across two public identities, at differentiated intensity.
+> "Three brands" here is legacy phrasing; see `CURRENT_SYSTEM.md`. Base footprints, expansion
 triggers, and campaign structure are in `references/allocation.md`.
 
 If the site check and carried-forward work do not fill the allocation, draw from

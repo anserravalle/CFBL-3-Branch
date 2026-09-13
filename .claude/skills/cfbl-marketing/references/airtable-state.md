@@ -1,7 +1,12 @@
 # Airtable state
 
-Base `appP8PQe3dvqxosjR`, CFBL 3-Brand Engine. This replaces `notion-state.md`,
-which pointed at a workspace that was deleted on or before 2026-09-10.
+Base `appP8PQe3dvqxosjR`, CFBL 3-Brand Engine. Airtable is the operational
+database. Shopify remains the source of truth for anything public: products,
+prices, availability, pages and articles. Where the two disagree, Shopify is
+right.
+
+This file replaced an earlier Notion-backed equivalent. Notion is retired; see
+`RETIRED_SYSTEMS.md`.
 
 ## Tables
 

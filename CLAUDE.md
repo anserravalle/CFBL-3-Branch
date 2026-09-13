@@ -1,7 +1,27 @@
-# CFBL 3-Brand Marketing and Curriculum Engine
+# CFBL Marketing and Curriculum Engine: history and reasoning
 
-This file is the durable record of the system. A conversation ends. This does not.
-Read it before doing anything, and update it when a decision changes.
+> **HANDOFF, 13 September 2026.** Operation of this system moved from Claude to
+> **ChatGPT/Work** as primary marketing operator, with **Codex** owning technical
+> maintenance. **This file is no longer the operating instruction.** It is the
+> archive: why decisions were made, what was tried, what failed and why.
+>
+> For current execution read, in this order:
+>
+> | File | Answers |
+> |---|---|
+> | `CURRENT_SYSTEM.md` | What we market, to whom, under which identity, what each system looks and sounds like, where information is verified |
+> | `OPERATOR_SPEC.md` | How the 8-week cycle runs, how the shoot is planned, how assets are made, who approves, how performance is measured |
+> | `CODEX_MAINTENANCE.md` | Infrastructure, automations, dependencies, defect classes |
+> | `RETIRED_SYSTEMS.md` | Notion, Metricool, and every superseded rule |
+> | `OPEN_ISSUES.md` | Genuine unresolved technical issues |
+>
+> **Where this file and those files disagree, those files win.** Several rules
+> below are superseded, including the weekly cadence and the counted content
+> ratio. They are left in place because the reasoning behind them is still
+> instructive, and each is marked in `RETIRED_SYSTEMS.md`.
+
+This file is the durable record of the reasoning. A conversation ends. This does
+not.
 
 The Airtable base is the operational record: records, copy, shot notes, and
 publish state all live there and are not at risk when a session ends. What lives
@@ -594,8 +614,13 @@ and does nothing.** Check the execution log, not the return value.
 
 ## Content ratio
 
-Thirty percent marketing, thirty percent brand building, thirty percent community
-building. Read across the month, not the week. A single week will not divide
+> **SUPERSEDED 2026-09-13.** The counted 30/30/30 split is retired. Content has
+> three strategic jobs and the mix is judged across the editorial cycle rather
+> than forced into any single week. See `OPERATOR_SPEC.md`. The three jobs below
+> survive; the arithmetic does not.
+
+~~Thirty percent marketing, thirty percent brand building, thirty percent community
+building.~~ Read across the month, not the week. A single week will not divide
 evenly and forcing it produces filler.
 
 Marketing sells the workshops and the evaluations. Brand building demonstrates
