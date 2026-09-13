@@ -256,6 +256,43 @@ the identity fixed and changes only the category line. Use one destination, neve
 stack follow and subscribe and register and buy. Keep endings 9:16 and retain a
 clean editable master.
 
+## Who makes what
+
+**Niki makes the stills. This system cuts the video.** Confirmed by her 2026-09-13.
+
+She generates and composes still images herself, so a shot note is only useful to
+her if it is paste-ready. Every one has to carry the literal prompt text, the
+no-lettering clause, the aspect ratio, and the layout spec at 1080x1350 saying
+where the headline sits, where the identity lockup sits, and what is deliberately
+absent. A shot note describing a mood is not a shot note.
+
+Video is the reverse. She shoots, and she can deliver a piece straight to camera
+in one take, but the cutting is not hers. Footage arrives as a raw file and comes
+back as a finished reel, 10 to 15 seconds, vertical. A reel that needs no
+speaking gets built from her b-roll with type on screen.
+
+The planning consequence: a still can turn around the same day she reads the
+brief, so stills can be scheduled against a date. A reel cannot exist until
+something has been shot, so reels get scheduled against footage that already
+exists rather than against footage that is only planned.
+
+**Generators letter objects unprompted, and they letter them with affirmations.**
+On the three September MIMS cards they produced a notebook reading "Questions
+Lead to Clarity," a mug reading PEOPLE CLARITY POSSIBILITY, and book spines
+reading CURIOSITY, POTENTIAL, DIFFERENT THINKING, BRIGHT FUTURES. Three
+instances in one set of three, so it is default behavior rather than bad luck. On
+a psychologist's card that language reads as a vision board and it costs the
+exact credibility the card exists to build.
+
+Append to every image prompt: no text, no writing, no lettering, no printed
+words, no signage, no labels, no handwriting anywhere in the frame, plain
+unlettered book spines, plain unprinted mug.
+
+**Substitute rather than remove.** A generator told to leave the books out puts
+them back. A generator told to give plain unlettered spines gives plain
+unlettered spines. Name the object and name it blank. Same for a mug, a folder
+tab, a whiteboard, a wall poster.
+
 ## The filename is the state
 
 Inherited from the earlier Notion system and kept deliberately.
