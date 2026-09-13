@@ -65,9 +65,9 @@ The **Adobe for creativity** connector is already installed and is the single co
 
 Every real photograph is graded before it reaches a layout. Auto-straighten if needed, then `image_apply_auto_tone`, then `image_apply_adjustments` for highlight recovery, shadow lift, Lab warming, and vibrance. Mask the subject when it needs to separate from the room. One grade across the week's set so mixed sources read as one shoot.
 
-**Outfit and background recoloring is authorized.** Staff have given permission, which means one sitting yields a terracotta version for the practice and a forest version for the Institute without re-shooting. Mask with `image_select_by_prompt` using `bodyParts` of `Coat`, `Upper Clothes`, or `Dress`, then shift hue with the HSL group. Use `colorize` only on neutral, white, grey, or patterned garments.
+**Outfit and background recoloring is authorized.** Staff have given permission, which means one sitting yields a terracotta version for the practice and a forest version for the Institute without re-shooting. Mask with `image_select_by_prompt` using `bodyParts` of `Coat`, `Upper Clothes`, or `Dress`, then shift hue with the HSL group. Use `colorize` only on neutral, white, gray, or patterned garments.
 
-**The line that does not move:** lighting, colour, tone, straightening, depth, crop, and clothing colour are fair game. Reshaping a real person's face or body is not.
+**The line that does not move:** lighting, color, tone, straightening, depth, crop, and clothing color are fair game. Reshaping a real person's face or body is not.
 
 ## Where not to look
 

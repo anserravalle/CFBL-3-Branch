@@ -68,7 +68,7 @@ Verified against Shopify on 2026-09-10:
 
 **Nature-Informed EMDR** is genuinely **EMDRIA Approved for 3 EMDRIA Credits** and the product page leads with it. Friday 2 October 2026, 2:00 to 5:00pm Eastern, live on Zoom. Credit requires live real-time attendance. Prerequisite is completion of an EMDRIA-Approved Basic EMDR Training. ACTIVE, 99 dollars, 10 seats, tracked, policy DENY.
 
-**Foundations of Trauma Therapy**, 18 and 19 September 2026, provides 12 hours of instruction across two days. This pilot cohort is the delivery that **completes CFBL Institute's NBCC accreditation application**, and **the hours count toward your practice rather than your licence renewal**. The product is DRAFT with 14 seats remaining, so it is not publicly purchasable. Do not promote it.
+**Foundations of Trauma Therapy**, 18 and 19 September 2026, provides 12 hours of instruction across two days. This pilot cohort is the delivery that **completes CFBL Institute's NBCC accreditation application**, and **the hours count toward your practice rather than your license renewal**. The product is DRAFT with 14 seats remaining, so it is not publicly purchasable. Do not promote it.
 
 An earlier version of this file claimed Foundations carries 12 NBCC clock hours with ACEP approval pending. Shopify contradicts that and Shopify is the source of record.
 
