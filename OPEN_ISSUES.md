@@ -56,23 +56,34 @@ Owner: Codex.
 
 ---
 
-## 4. Metricool history is not exported, and the Vercel crons still fire
+## 4. The Vercel connector crons still fire against a dead endpoint
 
 `cfbl-operations-connector` still runs an hourly publish cron and a Monday
-analytics cron against a Notion workspace that returns 401. Those crons are
-failing rather than writing, but they are still scheduled.
+analytics cron against a Notion workspace that returns 401. They are failing
+rather than writing, but they are still scheduled.
 
-They cannot simply be deleted, because the same project holds the live Metricool
-token and `listScheduledPosts(blogId, start, end)`, which is the only route to the
-published caption history for blogIds `6760980` and `6760856`.
-
-**Order of operations: export the history, then retire the crons, then
-decommission.** Do not cancel Metricool, rotate the token, or delete the Vercel
-project first.
+**Retire them.** There is no longer a sequencing constraint. The export that
+previously had to happen first is closed as unavailable, see below.
 
 Not verifiable from the current session; no Vercel access.
 
 Owner: Codex.
+
+### Closed, not blocking: the Metricool caption history
+
+The published caption history for blogIds `6760980` and `6760856` was previously
+recorded as a blocking dependency, on the reasoning that it had to be exported
+through the connector's `listScheduledPosts(blogId, start, end)` before anything
+was decommissioned.
+
+**Metricool has been canceled.** That history is therefore treated as
+unavailable, and it is a historical limitation rather than an open task. Nothing
+waits on it. The connector, its token and its crons can be retired on their own
+schedule.
+
+If any of that history is later found to matter, it is a recovery question for
+Metricool support, not a dependency inside this system. Do not reintroduce it as
+a blocker.
 
 ---
 
@@ -160,6 +171,11 @@ Owner: Niki.
 ---
 
 ## 11. The Buffer publisher has never run live
+
+**Not a precondition for the first operating cycle.** Posts are placed into
+Buffer manually after Niki's approval, and that is a supported path, not a
+workaround. Marketing runs while engineering hardens the publisher. Do not hold a
+cycle for this.
 
 **Make scenario `6214861`.** Built, correct in structure, zero executions.
 

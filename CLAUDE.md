@@ -788,9 +788,14 @@ patterns instead.
 The Canva composition step is unbuilt. The photograph arrives, the brand kit is
 applied, the composed file exports. Canva brand kit ids are in the Brands table.
 
+> **SUPERSEDED 2026-09-13.** Metricool has been canceled and the caption history
+> is unavailable. The export below is closed, the sequencing constraint is void,
+> and the crons can be retired on their own. See `OPEN_ISSUES.md` and
+> `RETIRED_SYSTEMS.md`.
+
 The earlier Vercel connector, cfbl-operations-connector, still runs an hourly
 publish cron and a Monday analytics cron against Notion. Notion has been emptied.
-Retire those crons, but **export the Metricool history first**. That connector
+~~Retire those crons, but **export the Metricool history first**.~~ That connector
 already has `listScheduledPosts(blogId, start, end)` and a live Metricool token in
 Vercel. Metricool holds every caption the old system published, for blogIds
 6760980 Center for Balanced Living and 6760856 Dr Serravalle, with MUSA

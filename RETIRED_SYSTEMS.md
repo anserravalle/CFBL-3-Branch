@@ -56,21 +56,26 @@ vs this build delivers to Buffer" conflict that was recorded as live was already
 resolved when the skill was rewritten on 2026-09-10; the record simply never
 caught up.
 
-**One live dependency remains, and it is a data-preservation issue, not a
-workflow one.** Metricool holds every caption the old system published, for
-blogIds `6760980` Center for Balanced Living and `6760856` Dr Serravalle, with
-MUSA interleaved on the Dr Serravalle account. **That history has not been
-exported.** Do not cancel the Metricool account, delete the Vercel project, or
-rotate its token until it is out. See `OPEN_ISSUES.md`.
+**The account has been canceled, and the caption history went with it.**
+Metricool held every caption the old system published, for blogIds `6760980`
+Center for Balanced Living and `6760856` Dr Serravalle, with MUSA interleaved on
+the Dr Serravalle account. That history was never exported and is treated as
+unavailable.
+
+This is recorded as a historical limitation, not an open task. Nothing in the
+current system depends on it and nothing waits for it. Earlier revisions of this
+documentation carried an instruction not to cancel Metricool until the export was
+complete; that instruction is void and has been removed from `OPEN_ISSUES.md`.
 
 ## The Vercel operations connector. Retired, not yet decommissioned.
 
 `cfbl-operations-connector` ran an hourly publish cron and a Monday analytics cron
 against Notion. Notion is gone, so those crons now fire against a dead endpoint.
 
-It holds `listScheduledPosts(blogId, start, end)` and a live Metricool token,
-which is the mechanism for the export above. Retire the crons, export the history,
-then decommission. Not before.
+It holds `listScheduledPosts(blogId, start, end)` and a Metricool token, which was
+the mechanism for the export above. With Metricool canceled that route is closed,
+so there is no longer anything to sequence around. Retire the crons and
+decommission the project whenever convenient.
 
 Its `api/_lib/naming.js` parser is documented as a defect class in
 `CODEX_MAINTENANCE.md`.

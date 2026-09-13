@@ -194,6 +194,28 @@ one piece is not approval of the week.
 **Buffer is the active publishing platform**, and posts reach it only after Niki
 has approved them.
 
+**Approved posts are placed into Buffer manually.** That is the supported path,
+not a workaround. The Make Buffer publisher exists but has never run live, and
+automation is not a precondition for operating. Marketing runs while engineering
+hardens the publisher.
+
+### The success criterion for the first cycle
+
+The system is working when ChatGPT/Work can, without help:
+
+1. Map the next eight weeks across Center for Balanced Living and Dr. Niki
+   Serravalle, with community building, brand building and conversion objectives
+   named for the cycle.
+2. Build that map against **current** Shopify offers and the live recurring
+   series, verified rather than remembered.
+3. Inventory the authentic photography and video that already exists.
+4. Produce one grouped shoot plan for the material that is missing, organized by
+   location, outfit and setup.
+5. Deliver the first week's finished assets and copy for review.
+6. Place the approved posts into Buffer.
+
+Automation follows. It does not gate any of the six.
+
 Deliver work in the spirit of *here is what I made, review it*. Never idea lists,
 never checklists, never instructions telling Niki how to make the asset herself.
 Treat nothing as published until it is, and never imply anything went out.
