@@ -267,9 +267,29 @@ where the headline sits, where the identity lockup sits, and what is deliberatel
 absent. A shot note describing a mood is not a shot note.
 
 Video is the reverse. She shoots, and she can deliver a piece straight to camera
-in one take, but the cutting is not hers. Footage arrives as a raw file and comes
-back as a finished reel, 10 to 15 seconds, vertical. A reel that needs no
-speaking gets built from her b-roll with type on screen.
+in one take. Footage arrives as a raw file and comes back as a finished reel, 10
+to 15 seconds, vertical. A reel that needs no speaking gets built from her b-roll
+with type on screen.
+
+**She bought Adobe Premiere on 2026-09-13, and it changes less than it looks.**
+Editing was already the cheapest step. What blocks reels is that footage exists
+and nothing is written against it: five REEL records were waiting in the 18 days
+from 13 September and every one was waiting on an asset rather than on an edit.
+
+Two things it genuinely unlocks. **Captions**, which is the highest-return item in
+the whole video workflow because reels are watched muted, and which Premiere
+transcribes and burns in for a few minutes a reel once the style is set. And
+**take selection**, because when she is on camera she is the only one who can
+judge which take reads right, and that is not a technical question.
+
+The technical cuts stay here: eased zoom releases, HDR tonemapping, timing to a
+beat, holding a still under room tone before cutting to live. Scripted and
+repeatable, no reason to rebuild them by hand.
+
+**A Premiere project does not travel back into this system.** Keep the raw
+masters in Drive regardless of where the cut happens, or the pipeline loses the
+source and the work fragments the same way the brand rules fragment across four
+surfaces.
 
 The planning consequence: a still can turn around the same day she reads the
 brief, so stills can be scheduled against a date. A reel cannot exist until
