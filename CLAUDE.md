@@ -87,7 +87,7 @@ Eight years old. On the building, the car, the signage, the logo. The spectrum i
 inclusion and community, which is the foundation the practice was built on.
 
 On 2026-09-10 this system called it decoration carrying no information and
-proposed recolouring it to the Institute greens. That was wrong on its own terms.
+proposed recoloring it to the Institute greens. That was wrong on its own terms.
 The test is whether an element carries information, and this one carries the most
 important thing the practice communicates. Do not propose removing it, muting it,
 or reducing it to brand colors, and do not treat it as a differentiation problem:
@@ -592,6 +592,23 @@ NBCC clock hours with ACEP approval pending. Neither matches the store.
 ## Hard rules
 
 No em dashes, anywhere, ever. Regular hyphens only.
+
+**American English, anywhere, ever.** This is a Delaware practice writing for an
+American audience. Organize, recognize, realize, analyze. Color, behavior, favor.
+Center, not centre. License, not licence, which matters most in the continuing
+education language: hours count toward practice rather than license renewal.
+Catalog, gray, judgment, traveling, canceled, program.
+
+Units follow the same rule. Feet and inches in a shot note, never meters. A
+direction reading "phone two meters back" tells an American nothing about where
+to stand.
+
+Same scope as the em dash rule: captions, copy, email, documents, shot notes,
+Airtable fields, code comments and commit messages. Caught by Niki on 2026-09-13
+in a caption one step from publishing, after it had already reached two captions,
+two shot notes, an entry in The Standard and six lines of this file. A British
+spelling in a caption does not read as a typo. It reads as though someone else
+wrote it, which on a personal account is the one thing copy cannot afford.
 
 Never put protected health information or identifiable client information into
 any connected system.
