@@ -76,7 +76,11 @@ nothing is finished without her explicit yes on that specific piece. This build
 has an auto-publishing Buffer scenario and a Publish Guard designed to remove
 approval fields. Those cannot both be right.
 
-The skill delivers to Metricool as a bulk CSV. This build delivers to Buffer.
+~~The skill delivers to Metricool as a bulk CSV. This build delivers to Buffer.~~
+**Resolved, verified 2026-09-13.** The rewritten skill contains no Metricool
+anywhere, in the skill file or any of the four references. It delivers files to
+Niki directly. This conflict died when the skill was rewritten on 2026-09-10 and
+this file simply never recorded it. Only the approval conflict above is live.
 
 ## The mark
 
@@ -501,7 +505,9 @@ rather than campaign-level. That is the whole reason to do it this way.
 
 Team 2907664.
 
-**6216427, CFBL 1 Shopify Intake.** Active, webhook driven. Shopify pushes to
+**6216427, CFBL 1 Shopify Intake.** **Not active, verified 2026-09-13:**
+`isActive` false, `isinvalid` true, 20 executions and 14 errors. This file said
+Active and it is not. Webhook driven when it runs. Shopify pushes to
 Make rather than Make polling Shopify, which sidesteps app scopes entirely. Flow:
 webhook, then create the Airtable record as Needs Manual Review, then search
 Brands by tag, then promote to Draft and link the brand if a brand matched.
@@ -541,6 +547,11 @@ is downstream of that filter, so it has never written anything. Two executions,
 two operations, in its whole life. It reads Shopify pages and articles and would
 write them into a Notion Website Activity database that is being retired, which is
 work CFBL 2 Article Intake already does into Airtable.
+
+**Third check, 2026-09-13: it is still off.** `isActive` false, `nextExec` null,
+not deleted. It still carries three Notion modules and its daily 06:00 schedule
+definition, so it is present and inert rather than gone. No third error email has
+been reported, so nothing is re-enabling it and it stays for its blueprint.
 
 It ran daily at 06:00 and failed at initialization, emailing Niki an error every
 morning. **Deactivated 2026-09-10, and it did not stay off.** By that evening it
