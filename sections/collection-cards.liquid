@@ -31,7 +31,7 @@
             <article class="card is-linked reveal">
               {%- if product.featured_image != blank -%}
                 <a class="card__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
-                  {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt | default: product.title, ratio: '4-3', sizes: '(min-width: 990px) 360px, 100vw', widths: '300, 450, 600, 900' -%}
+                  {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt, default: product.title, ratio: '4-3', sizes: '(min-width: 990px) 360px, 100vw', widths: '300, 450, 600, 900' -%}
                 </a>
               {%- endif -%}
               <h3 class="card__title"><a href="{{ product.url }}" style="text-decoration:none; color:inherit;">{{ product.title }}</a></h3>
@@ -45,7 +45,7 @@
                 <div class="card__body rte">{{ product.description | strip_html | truncatewords: 24 }}</div>
               {%- endif -%}
               <p class="card__cta">
-                {%- render 'button', label: section.settings.cta_label, href: product.url, style: 'tertiary', aria: section.settings.cta_label | append: ', ' | append: product.title -%}
+                {%- render 'button', label: section.settings.cta_label, href: product.url, style: 'tertiary', aria: section.settings.cta_label, append: product.title -%}
               </p>
             </article>
           {%- endfor -%}
@@ -96,3 +96,23 @@
   "presets": [{ "name": "Collection cards" }]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt
+    | default: product.title, ratio: '4-3', sizes: '(min-width: 990px) 360px, 100vw',
+    widths: '300, 450, 600, 900' -%}"
+  to: "{%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt,
+    default: product.title, ratio: '4-3', sizes: '(min-width: 990px) 360px, 100vw',
+    widths: '300, 450, 600, 900' -%}"
+  position: 1922..2129
+- from: "{%- render 'button', label: section.settings.cta_label, href: product.url,
+    style: 'tertiary', aria: section.settings.cta_label | append: ', ' | append: product.title
+    -%}"
+  to: "{%- render 'button', label: section.settings.cta_label, href: product.url,
+    style: 'tertiary', aria: section.settings.cta_label, append: product.title -%}"
+  position: 3105..3258
+{% endcomment %}

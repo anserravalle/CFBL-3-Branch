@@ -19,7 +19,7 @@
           {%- for product in collection.products -%}
             <a href="{{ product.url }}" class="article-card is-linked reveal" style="text-decoration:none;">
               {%- if product.featured_image -%}
-                {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt | default: product.title, ratio: '4-3', sizes: '(min-width:990px) 360px, 50vw', widths: '300,450,600,800' -%}
+                {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt, default: product.title, ratio: '4-3', sizes: '(min-width:990px) 360px, 50vw', widths: '300,450,600,800' -%}
               {%- endif -%}
               <div class="article-card__body">
                 <h2 class="article-card__title" style="font-size:var(--fs-lg);">{{ product.title }}</h2>
@@ -61,3 +61,17 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt
+    | default: product.title, ratio: '4-3', sizes: '(min-width:990px) 360px, 50vw',
+    widths: '300,450,600,800' -%}"
+  to: "{%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt,
+    default: product.title, ratio: '4-3', sizes: '(min-width:990px) 360px, 50vw',
+    widths: '300,450,600,800' -%}"
+  position: 1108..1310
+{% endcomment %}

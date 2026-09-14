@@ -24,13 +24,13 @@
           {%- for article in blog.articles -%}
             <article class="article-card reveal">
               {%- if article.image -%}
-                <a href="{{ article.url }}" tabindex="-1" aria-hidden="true">{%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw', widths: '320,480,640,800' -%}</a>
+                <a href="{{ article.url }}" tabindex="-1" aria-hidden="true">{%- render 'responsive-image', image: article.image, alt: article.image.alt, default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw', widths: '320,480,640,800' -%}</a>
               {%- endif -%}
               <div class="article-card__body">
                 <p class="article-card__meta"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%b %-d, %Y' }}</time>{% if article.tags.size > 0 %} &middot; {{ article.tags.first }}{% endif %}</p>
                 <h2 class="article-card__title" style="font-size:var(--fs-lg);"><a href="{{ article.url }}">{{ article.title }}</a></h2>
                 <p class="article-card__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 24 }}</p>
-                <p class="article-card__cta">{%- render 'button', label: 'Read more', href: article.url, style: 'tertiary', aria: 'Read more: ' | append: article.title -%}</p>
+                <p class="article-card__cta">{%- render 'button', label: 'Read more', href: article.url, style: 'tertiary', aria: 'Read more: ', append: article.title -%}</p>
               </div>
             </article>
           {%- endfor -%}
@@ -65,3 +65,22 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image', image: article.image, alt: article.image.alt
+    | default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw',
+    widths: '320,480,640,800' -%}"
+  to: "{%- render 'responsive-image', image: article.image, alt: article.image.alt,
+    default: article.title, ratio: '3-2', sizes: '(min-width:990px) 380px, 100vw',
+    widths: '320,480,640,800' -%}"
+  position: 1702..1887
+- from: "{%- render 'button', label: 'Read more', href: article.url, style: 'tertiary',
+    aria: 'Read more: ' | append: article.title -%}"
+  to: "{%- render 'button', label: 'Read more', href: article.url, style: 'tertiary',
+    aria: 'Read more: ', append: article.title -%}"
+  position: 2511..2636
+{% endcomment %}

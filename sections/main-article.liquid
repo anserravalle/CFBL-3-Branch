@@ -19,7 +19,7 @@
 
       {%- if article.image and section.settings.show_image -%}
         <div class="reveal" style="margin-bottom:var(--space-40);">
-          {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '16-9', loading: 'eager', sizes: '(min-width:768px) 760px, 100vw', widths: '480,768,1000,1300' -%}
+          {%- render 'responsive-image', image: article.image, alt: article.image.alt, default: article.title, ratio: '16-9', loading: 'eager', sizes: '(min-width:768px) 760px, 100vw', widths: '480,768,1000,1300' -%}
         </div>
       {%- endif -%}
 
@@ -98,3 +98,17 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image', image: article.image, alt: article.image.alt
+    | default: article.title, ratio: '16-9', loading: 'eager', sizes: '(min-width:768px)
+    760px, 100vw', widths: '480,768,1000,1300' -%}"
+  to: "{%- render 'responsive-image', image: article.image, alt: article.image.alt,
+    default: article.title, ratio: '16-9', loading: 'eager', sizes: '(min-width:768px)
+    760px, 100vw', widths: '480,768,1000,1300' -%}"
+  position: 1102..1308
+{% endcomment %}

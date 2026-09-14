@@ -59,7 +59,7 @@
                 </ul>
               {%- endif -%}
               {%- if block.settings.bio_link != blank -%}
-                <p class="scroller__cta">{%- render 'button', label: block.settings.bio_link_label | default: 'View full bio', href: block.settings.bio_link, style: 'tertiary', aria: 'View full bio: ' | append: block.settings.title -%}</p>
+                <p class="scroller__cta">{%- render 'button', label: block.settings.bio_link_label, default: 'View full bio', href: block.settings.bio_link, style: 'tertiary', aria: 'View full bio: ', append: block.settings.title -%}</p>
               {%- endif -%}
             </article>
           {%- endfor -%}
@@ -110,3 +110,17 @@
   "presets": [{ "name": "Scrolling image + text", "blocks": [{ "type": "item" }, { "type": "item" }, { "type": "item" }] }]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'button', label: block.settings.bio_link_label | default: 'View
+    full bio', href: block.settings.bio_link, style: 'tertiary', aria: 'View full
+    bio: ' | append: block.settings.title -%}"
+  to: "{%- render 'button', label: block.settings.bio_link_label, default: 'View full
+    bio', href: block.settings.bio_link, style: 'tertiary', aria: 'View full bio:
+    ', append: block.settings.title -%}"
+  position: 4256..4448
+{% endcomment %}

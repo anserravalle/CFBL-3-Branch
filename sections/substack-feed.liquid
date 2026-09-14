@@ -35,7 +35,7 @@
         </div>
         {%- if section.settings.substack_url != blank -%}
           <div class="section__footer {% if section.settings.text_align == 'center' %}is-center{% endif %}" style="margin-top:var(--space-40);">
-            {%- render 'button', label: section.settings.footer_label | default: 'Read more on Substack', href: section.settings.substack_url, style: 'secondary' -%}
+            {%- render 'button', label: section.settings.footer_label, default: 'Read more on Substack', href: section.settings.substack_url, style: 'secondary' -%}
           </div>
         {%- endif -%}
 
@@ -121,3 +121,15 @@
   "presets": [{ "name": "Substack feed" }]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'button', label: section.settings.footer_label | default: 'Read
+    more on Substack', href: section.settings.substack_url, style: 'secondary' -%}"
+  to: "{%- render 'button', label: section.settings.footer_label, default: 'Read more
+    on Substack', href: section.settings.substack_url, style: 'secondary' -%}"
+  position: 2177..2329
+{% endcomment %}

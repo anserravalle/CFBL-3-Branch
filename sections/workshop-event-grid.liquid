@@ -49,7 +49,7 @@
                   endif
                 -%}
                 {%- if learn_url != blank -%}
-                  {%- render 'button', label: block.settings.learn_more_label | default: 'Learn More', href: learn_url, style: 'tertiary', class: 'btn--sm', aria: 'Learn more about ' | append: block.settings.title -%}
+                  {%- render 'button', label: block.settings.learn_more_label, default: 'Learn More', href: learn_url, style: 'tertiary', class: 'btn--sm', aria: 'Learn more about ', append: block.settings.title -%}
                 {%- endif -%}
                 {%- if event_product != blank -%}
                   {%- comment -%} Native Shopify registration: add the seat product to cart and check out. Seat limits come from product inventory. {%- endcomment -%}
@@ -63,7 +63,7 @@
                     <button type="button" class="btn btn--secondary btn--sm" disabled>Sold Out</button>
                   {%- endif -%}
                 {%- elsif block.settings.link != blank -%}
-                  {%- render 'button', label: reg_label, href: block.settings.link, style: 'secondary', class: 'btn--sm', aria: reg_label | append: ' for ' | append: block.settings.title -%}
+                  {%- render 'button', label: reg_label, href: block.settings.link, style: 'secondary', class: 'btn--sm', aria: reg_label, append: block.settings.title -%}
                 {%- endif -%}
               </div>
             </article>
@@ -115,3 +115,23 @@
   "presets": [{ "name": "Workshops & events", "blocks": [{ "type": "event" }, { "type": "event" }] }]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'button', label: block.settings.learn_more_label | default: 'Learn
+    More', href: learn_url, style: 'tertiary', class: 'btn--sm', aria: 'Learn more
+    about ' | append: block.settings.title -%}"
+  to: "{%- render 'button', label: block.settings.learn_more_label, default: 'Learn
+    More', href: learn_url, style: 'tertiary', class: 'btn--sm', aria: 'Learn more
+    about ', append: block.settings.title -%}"
+  position: 3153..3350
+- from: "{%- render 'button', label: reg_label, href: block.settings.link, style:
+    'secondary', class: 'btn--sm', aria: reg_label | append: ' for ' | append: block.settings.title
+    -%}"
+  to: "{%- render 'button', label: reg_label, href: block.settings.link, style: 'secondary',
+    class: 'btn--sm', aria: reg_label, append: block.settings.title -%}"
+  position: 4385..4538
+{% endcomment %}

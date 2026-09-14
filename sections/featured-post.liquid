@@ -40,7 +40,7 @@
         <div class="text-image__grid text-image--image-{{ img_order }} reveal" style="align-items:center;">
           <a href="{{ article.url }}" class="text-image__media" tabindex="-1" aria-hidden="true" style="display:block;">
             {%- if article.image -%}
-              {%- render 'responsive-image', image: article.image, alt: article.image.alt | default: article.title, ratio: '4-3', sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}
+              {%- render 'responsive-image', image: article.image, alt: article.image.alt, default: article.title, ratio: '4-3', sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}
             {%- else -%}
               <div class="media media--4-3" style="background:var(--color-bg-sand);"></div>
             {%- endif -%}
@@ -54,7 +54,7 @@
             <h3 style="font-size:var(--fs-2xl);"><a href="{{ article.url }}" style="text-decoration:none;">{{ article.title }}</a></h3>
             <div class="rte">{{ article.excerpt_or_content | strip_html | truncatewords: 40 }}</div>
             <div class="btn-row">
-              {%- render 'button', label: section.settings.read_label | default: 'Read it', href: article.url, style: 'primary' -%}
+              {%- render 'button', label: section.settings.read_label, default: 'Read it', href: article.url, style: 'primary' -%}
               {%- if blog != blank and section.settings.archive_label != blank -%}
                 {%- render 'button', label: section.settings.archive_label, href: blog.url, style: 'secondary' -%}
               {%- endif -%}
@@ -97,3 +97,22 @@
   "presets": [{ "name": "Featured post" }]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image', image: article.image, alt: article.image.alt
+    | default: article.title, ratio: '4-3', sizes: '(min-width:990px) 48vw, 100vw',
+    widths: '480,640,800,1000,1300' -%}"
+  to: "{%- render 'responsive-image', image: article.image, alt: article.image.alt,
+    default: article.title, ratio: '4-3', sizes: '(min-width:990px) 48vw, 100vw',
+    widths: '480,640,800,1000,1300' -%}"
+  position: 2184..2374
+- from: "{%- render 'button', label: section.settings.read_label | default: 'Read
+    it', href: article.url, style: 'primary' -%}"
+  to: "{%- render 'button', label: section.settings.read_label, default: 'Read it',
+    href: article.url, style: 'primary' -%}"
+  position: 3269..3385
+{% endcomment %}

@@ -13,14 +13,14 @@
     <div class="text-image__grid" style="align-items:start;">
       <div class="text-image__media reveal">
         {%- if product.featured_image -%}
-          {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt | default: product.title, ratio: '4-3', loading: 'eager', fetchpriority: 'high', sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}
+          {%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt, default: product.title, ratio: '4-3', loading: 'eager', fetchpriority: 'high', sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}
         {%- else -%}
           <div class="media media--4-3">{{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
         {%- endif -%}
         {%- if product.images.size > 1 -%}
           <div class="grid grid--4 mobile-2" style="margin-top:var(--space-16);gap:var(--space-12);">
             {%- for image in product.images offset: 1 limit: 4 -%}
-              {%- render 'responsive-image', image: image, alt: image.alt | default: product.title, ratio: '1-1', sizes: '120px', widths: '120,240' -%}
+              {%- render 'responsive-image', image: image, alt: image.alt, default: product.title, ratio: '1-1', sizes: '120px', widths: '120,240' -%}
             {%- endfor -%}
           </div>
         {%- endif -%}
@@ -66,3 +66,22 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt
+    | default: product.title, ratio: '4-3', loading: 'eager', fetchpriority: 'high',
+    sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}"
+  to: "{%- render 'responsive-image', image: product.featured_image, alt: product.featured_image.alt,
+    default: product.title, ratio: '4-3', loading: 'eager', fetchpriority: 'high',
+    sizes: '(min-width:990px) 48vw, 100vw', widths: '480,640,800,1000,1300' -%}"
+  position: 751..1000
+- from: "{%- render 'responsive-image', image: image, alt: image.alt | default: product.title,
+    ratio: '1-1', sizes: '120px', widths: '120,240' -%}"
+  to: "{%- render 'responsive-image', image: image, alt: image.alt, default: product.title,
+    ratio: '1-1', sizes: '120px', widths: '120,240' -%}"
+  position: 1375..1511
+{% endcomment %}

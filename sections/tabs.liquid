@@ -61,7 +61,7 @@
                         <iframe src="{{ block.settings.video_url }}" title="{{ block.settings.title | escape }}" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                       </div>
                     {%- else -%}
-                      {%- render 'responsive-image', image: block.settings.image, alt: block.settings.image_alt | default: block.settings.title, ratio: section.settings.image_ratio, sizes: '(min-width:750px) 46vw, 100vw', widths: '480,640,800,1000' -%}
+                      {%- render 'responsive-image', image: block.settings.image, alt: block.settings.image_alt, default: block.settings.title, ratio: section.settings.image_ratio, sizes: '(min-width:750px) 46vw, 100vw', widths: '480,640,800,1000' -%}
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -74,7 +74,7 @@
                       {%- assign tl = block.settings.link_label | default: 'Learn more' -%}
                       {%- assign tab_external = false -%}
                       {%- if tab_link contains '://' -%}{%- assign tab_external = true -%}{%- endif -%}
-                      {%- render 'button', label: tl, href: tab_link, style: 'secondary', new_tab: tab_external, aria: tl | append: ', ' | append: block.settings.title -%}
+                      {%- render 'button', label: tl, href: tab_link, style: 'secondary', new_tab: tab_external, aria: tl, append: block.settings.title -%}
                     </p>
                   {%- endif -%}
                 </div>
@@ -84,7 +84,7 @@
         </div>
         {%- if section.settings.footer_label != blank -%}
           <div class="btn-row {% if section.settings.text_align == 'center' %}is-center{% endif %}" style="margin-top: var(--space-32);">
-            {%- render 'button', label: section.settings.footer_label, href: section.settings.footer_link, style: section.settings.footer_style | default: 'secondary' -%}
+            {%- render 'button', label: section.settings.footer_label, href: section.settings.footer_link, style: section.settings.footer_style, default: 'secondary' -%}
           </div>
         {%- endif -%}
       {%- endif -%}
@@ -146,3 +146,27 @@
   }]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image', image: block.settings.image, alt: block.settings.image_alt
+    | default: block.settings.title, ratio: section.settings.image_ratio, sizes: '(min-width:750px)
+    46vw, 100vw', widths: '480,640,800,1000' -%}"
+  to: "{%- render 'responsive-image', image: block.settings.image, alt: block.settings.image_alt,
+    default: block.settings.title, ratio: section.settings.image_ratio, sizes: '(min-width:750px)
+    46vw, 100vw', widths: '480,640,800,1000' -%}"
+  position: 3453..3682
+- from: "{%- render 'button', label: tl, href: tab_link, style: 'secondary', new_tab:
+    tab_external, aria: tl | append: ', ' | append: block.settings.title -%}"
+  to: "{%- render 'button', label: tl, href: tab_link, style: 'secondary', new_tab:
+    tab_external, aria: tl, append: block.settings.title -%}"
+  position: 4440..4573
+- from: "{%- render 'button', label: section.settings.footer_label, href: section.settings.footer_link,
+    style: section.settings.footer_style | default: 'secondary' -%}"
+  to: "{%- render 'button', label: section.settings.footer_label, href: section.settings.footer_link,
+    style: section.settings.footer_style, default: 'secondary' -%}"
+  position: 4942..5099
+{% endcomment %}
