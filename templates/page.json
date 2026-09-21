@@ -28,6 +28,64 @@
     },
     "1790008850f99db37e": {
       "type": "apps",
+      "blocks": {
+        "forms_inline_K7im69": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1163516",
+            "text_color": "#6E1F23",
+            "button_background_color": "#C5A572",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#6E1F23",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        },
+        "forms_inline_bYdgxJ": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1163512",
+            "text_color": "#3D5A52",
+            "button_background_color": "#6F8F7A",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#3D5A52",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        },
+        "forms_inline_qVCEBX": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1163505",
+            "text_color": "#2B5275",
+            "button_background_color": "#4E9FBF",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#2B5275",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_K7im69",
+        "forms_inline_bYdgxJ",
+        "forms_inline_qVCEBX"
+      ],
       "settings": {}
     },
     "17900088954c2882d6": {
@@ -36,11 +94,11 @@
         "forms_inline_ANPkTN": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
+            "form_id": "1163500",
+            "text_color": "#2B5275",
+            "button_background_color": "#2B5275",
             "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
+            "links_color": "#2B5275",
             "errors_color": "#E02229",
             "text_alignment": "center",
             "form_alignment": "center",
