@@ -210,23 +210,6 @@
         "padding_bottom": 72
       }
     },
-    "cta": {
-      "type": "contact-cta",
-      "settings": {
-        "eyebrow": "Take the Next Step",
-        "heading": "Start EMDR consultation",
-        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
-        "primary_label": "Start the Conversation",
-        "primary_link": "/pages/contact",
-        "secondary_label": "Call (302) 608-3780",
-        "secondary_link": "tel:3026083780",
-        "phone": "",
-        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
-        "bg_scheme": "navy",
-        "padding_top": 88,
-        "padding_bottom": 88
-      }
-    },
     "17901071178704ce11": {
       "type": "apps",
       "blocks": {
@@ -252,6 +235,23 @@
         "forms_inline_7fpXPr"
       ],
       "settings": {}
+    },
+    "cta": {
+      "type": "contact-cta",
+      "settings": {
+        "eyebrow": "Take the Next Step",
+        "heading": "Start EMDR consultation",
+        "body": "<p>Reach out for a consultation or to ask a question. We respond within 24-48 hours.</p>",
+        "primary_label": "Start the Conversation",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Call (302) 608-3780",
+        "secondary_link": "tel:3026083780",
+        "phone": "",
+        "disclaimer": "This is not for emergencies. If you are in crisis, call 988 or 911, or go to your nearest emergency room.",
+        "bg_scheme": "navy",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
@@ -259,7 +259,7 @@
     "focus",
     "process",
     "faq",
-    "cta",
-    "17901071178704ce11"
+    "17901071178704ce11",
+    "cta"
   ]
 }
