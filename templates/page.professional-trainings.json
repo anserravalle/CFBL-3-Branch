@@ -53,6 +53,7 @@
       "blocks": {
         "t0": {
           "type": "event",
+          "disabled": true,
           "settings": {
             "month": "Dates",
             "day": "TBA",
@@ -87,16 +88,16 @@
           "type": "event",
           "settings": {
             "month": "Dates",
-            "day": "TBA",
-            "title": "Assessment-Informed Trauma Treatment",
-            "time": "9:00 AM-4:00 PM",
-            "location": "Live, online",
-            "description": "Integrating psychological assessment with somatic and trauma work. This session is full. Join the waitlist for the next date.",
-            "learn_more": "",
-            "learn_more_label": "Learn More",
+            "day": "Oct 16",
+            "title": "Cultural Awareness in Psychological Assessment With Gender-Diverse Clients",
+            "time": "9:00 AM-11:00 AM EST",
+            "location": "Virtual via Zoom, hosted by the Delaware Psychological Association",
+            "description": "Assessment is often treated as neutral, but intake procedures, norm selection and interpretive language can reduce validity when clients are transgender or gender diverse. This program covers where that bias enters the workflow and how to document defensible norming and scoring decisions without pathologizing identity. Presented by Dr. Niki Serravalle, PsyD, LPCMH, and Rev. Karla Fleshman, LCSW, MDiv. The Delaware Psychological Association offers 2 CE credits (EDI). DPA members $70, non-members $90, students $30.",
+            "learn_more": "https://dpa.app.clientclub.net/courses/products/1acafaaa-6cc1-4ca2-b15e-70360c93a034/categories/c6dac0c5-d926-4971-9c5b-37ffbe611db3/posts/4ad8c8cc-b154-4261-ad6d-de5e645f9814",
+            "learn_more_label": "Register Here",
             "product": "",
-            "link_label": "Join the Waitlist",
-            "link": "/pages/contact"
+            "link_label": "DPA Registration",
+            "link": "/pagehttps://dpa.app.clientclub.net/courses/products/1acafaaa-6cc1-4ca2-b15e-70360c93a034/categories/c6dac0c5-d926-4971-9c5b-37ffbe611db3/posts/4ad8c8cc-b154-4261-ad6d-de5e645f9814s/contact"
           }
         },
         "t2": {
