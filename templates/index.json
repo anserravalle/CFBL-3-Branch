@@ -373,6 +373,7 @@
     },
     "newsletter_feature": {
       "type": "featured-post",
+      "disabled": true,
       "settings": {
         "eyebrow": "Letters From the Practice",
         "heading": "From Our Newsletter",
@@ -392,8 +393,8 @@
       "type": "newsletter-signup",
       "settings": {
         "eyebrow": "Letters From the Practice",
-        "heading": "Get letters in your inbox",
-        "body": "<p>Subscribe for new letters from the practice, plus news on groups, workshops, and events. No noise, just the work.</p>",
+        "heading": "Get letters about our community in your inbox",
+        "body": "<p>Subscribe for newletters from the practice, plus news on groups, workshops, and events. No noise, just the work.</p>",
         "placeholder": "Email address",
         "button_label": "Subscribe",
         "list_tag": "newsletter",
