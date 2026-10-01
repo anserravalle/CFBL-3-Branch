@@ -366,7 +366,7 @@
         "view_all_label": "Read the blog",
         "text_align": "left",
         "carousel": true,
-        "bg_scheme": "default",
+        "bg_scheme": "musa",
         "padding_top": 80,
         "padding_bottom": 80
       }
