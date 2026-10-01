@@ -126,6 +126,7 @@
         "e1",
         "e2"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "Upcoming",
         "heading": "Upcoming Offerings",
