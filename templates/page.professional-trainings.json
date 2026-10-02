@@ -70,6 +70,7 @@
         },
         "event_hYxqpf": {
           "type": "event",
+          "disabled": true,
           "settings": {
             "month": "OCT",
             "day": "2",
