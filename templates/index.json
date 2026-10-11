@@ -46,7 +46,7 @@
             "image_alt": "A calm, welcoming clinical space",
             "image_ratio": "4-3",
             "title": "CFBL Clinical Services",
-            "body": "<p>Therapy, psychological evaluation, groups, and workshops for children, teens, adults, and families.</p>",
+            "body": "<p>Therapy, psychological evaluation for children, teens, adults, and families.</p>",
             "link_label": "Explore Clinical Services",
             "link": "/pages/services"
           }
@@ -220,7 +220,7 @@
         "text_align": "center",
         "numbered": false,
         "columns": "4",
-        "bg_scheme": "default",
+        "bg_scheme": "navy",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -394,7 +394,7 @@
       "settings": {
         "eyebrow": "Letters From the Practice",
         "heading": "Get letters about our community in your inbox",
-        "body": "<p>Subscribe for newletters from the practice, plus news on groups, workshops, and events. No noise, just the work.</p>",
+        "body": "<p>Subscribe for letters from the practice, plus news on services and events. No noise, just the work.</p>",
         "placeholder": "Email address",
         "button_label": "Subscribe",
         "list_tag": "newsletter",
