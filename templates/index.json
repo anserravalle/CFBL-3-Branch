@@ -142,6 +142,113 @@
       ],
       "settings": {}
     },
+    "1791756404c64106b5": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_91e9842_TGaftx": {
+          "type": "ai_gen_block_91e9842",
+          "settings": {
+            "heading": "Meet our administrative team",
+            "aria_label": "Team members, scroll horizontally",
+            "link_label": "Read bio",
+            "scroll_hint": "Scroll to meet the team",
+            "desktop_width_percent": 100,
+            "background_color": "#657786",
+            "text_color": "#FBF6F0",
+            "frame_color": "#BF7777",
+            "person_1_image": "shopify://shop_images/Dr_Serravalle_01_burgundy-chair.jpg",
+            "person_1_name": "Dr. Niki Serravalle",
+            "person_1_role": "Owner, Clinical Psychologist, LPCMH",
+            "person_1_link": "shopify://pages/niki-serravalle",
+            "person_2_image": "shopify://shop_images/Jada_Senter_-_Updated_CFBL_Headshot.png",
+            "person_2_name": "Jada Senter",
+            "person_2_role": "Practice Manager",
+            "person_2_link": "",
+            "person_3_image": "shopify://shop_images/kimmy_headshot.png",
+            "person_3_name": "Kim Shiflett",
+            "person_3_role": "Assessment Team Lead",
+            "person_3_link": "",
+            "person_4_name": "",
+            "person_4_role": "",
+            "person_4_link": "",
+            "person_5_name": "",
+            "person_5_role": "",
+            "person_5_link": "",
+            "person_6_name": "",
+            "person_6_role": "",
+            "person_6_link": "",
+            "person_7_name": "",
+            "person_7_role": "",
+            "person_7_link": "",
+            "person_8_name": "",
+            "person_8_role": "",
+            "person_8_link": "",
+            "person_9_name": "",
+            "person_9_role": "",
+            "person_9_link": "",
+            "person_10_name": "",
+            "person_10_role": "",
+            "person_10_link": ""
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_91e9842_UjeDfn": {
+          "type": "ai_gen_block_91e9842",
+          "settings": {
+            "heading": "Meet our clinical team",
+            "aria_label": "Team members, scroll horizontally",
+            "link_label": "Read bio",
+            "scroll_hint": "Scroll to meet the team",
+            "desktop_width_percent": 100,
+            "background_color": "#AF8979",
+            "text_color": "#FBF6F0",
+            "frame_color": "#4E9FBF",
+            "person_1_image": "shopify://shop_images/amanda_cda3ca2b-17db-4fe8-9308-f1e2f23bcb28.jpg",
+            "person_1_name": "Amanda Foxwell",
+            "person_1_role": "LPCMH, NCC",
+            "person_1_link": "shopify://pages/amanda-foxwell",
+            "person_2_image": "shopify://shop_images/brianna_headshot.png",
+            "person_2_name": "Brianna Patton",
+            "person_2_role": "LACMH, NCC",
+            "person_2_link": "shopify://pages/brianna-patton",
+            "person_3_image": "shopify://shop_images/Brittany_-_Updated_CFBL_Headshot.png",
+            "person_3_name": "Brittany Heitmann",
+            "person_3_role": "LPCMH, NCC",
+            "person_3_link": "shopify://pages/brittney-heitmann",
+            "person_4_image": "shopify://shop_images/kirsten_e27efe86-8123-4c89-b4c3-ac72f29ffbe2.jpg",
+            "person_4_name": "Kirsten Lowe",
+            "person_4_role": "LACMH, NCC",
+            "person_4_link": "shopify://pages/kirsten-lowe",
+            "person_5_image": "shopify://shop_images/IMG_7291.webp",
+            "person_5_name": "Michael Szczechowski",
+            "person_5_role": "Doctoral Psychology Assistant",
+            "person_5_link": "",
+            "person_6_name": "",
+            "person_6_role": "",
+            "person_6_link": "",
+            "person_7_name": "",
+            "person_7_role": "",
+            "person_7_link": "",
+            "person_8_name": "",
+            "person_8_role": "",
+            "person_8_link": "",
+            "person_9_name": "",
+            "person_9_role": "",
+            "person_9_link": "",
+            "person_10_name": "",
+            "person_10_role": "",
+            "person_10_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_91e9842_TGaftx",
+        "ai_gen_block_91e9842_UjeDfn"
+      ],
+      "custom_css": [],
+      "settings": {}
+    },
     "approach": {
       "type": "text-image",
       "disabled": true,
@@ -163,6 +270,65 @@
         "secondary_label": "",
         "secondary_link": "",
         "bg_scheme": "surface",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "process": {
+      "type": "featured-services",
+      "blocks": {
+        "reach": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Reach Out",
+            "text": "Call (302) 608-3780 or send a message. We respond within 24-48 hours.",
+            "link": ""
+          }
+        },
+        "consult": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Talk With Us",
+            "text": "A first conversation to understand your goals and determine fit.",
+            "link": ""
+          }
+        },
+        "plan": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Make a Plan",
+            "text": "Together we outline a thoughtful, individualized path forward.",
+            "link": ""
+          }
+        },
+        "begin": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Begin Care",
+            "text": "Therapy, evaluation, or consultation, at a pace that respects you.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "reach",
+        "consult",
+        "plan",
+        "begin"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "What Happens Next",
+        "heading": "A Clear, Unhurried First Step",
+        "subheading": "We make the path from first contact to care simple and transparent.",
+        "text_align": "center",
+        "numbered": true,
+        "columns": "4",
+        "bg_scheme": "sand",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -250,64 +416,6 @@
         "padding_bottom": 80
       }
     },
-    "process": {
-      "type": "featured-services",
-      "blocks": {
-        "reach": {
-          "type": "item",
-          "settings": {
-            "icon": "leaf",
-            "title": "Reach Out",
-            "text": "Call (302) 608-3780 or send a message. We respond within 24-48 hours.",
-            "link": ""
-          }
-        },
-        "consult": {
-          "type": "item",
-          "settings": {
-            "icon": "leaf",
-            "title": "Talk With Us",
-            "text": "A first conversation to understand your goals and determine fit.",
-            "link": ""
-          }
-        },
-        "plan": {
-          "type": "item",
-          "settings": {
-            "icon": "leaf",
-            "title": "Make a Plan",
-            "text": "Together we outline a thoughtful, individualized path forward.",
-            "link": ""
-          }
-        },
-        "begin": {
-          "type": "item",
-          "settings": {
-            "icon": "leaf",
-            "title": "Begin Care",
-            "text": "Therapy, evaluation, or consultation, at a pace that respects you.",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "reach",
-        "consult",
-        "plan",
-        "begin"
-      ],
-      "settings": {
-        "eyebrow": "What Happens Next",
-        "heading": "A Clear, Unhurried First Step",
-        "subheading": "We make the path from first contact to care simple and transparent.",
-        "text_align": "center",
-        "numbered": true,
-        "columns": "4",
-        "bg_scheme": "sand",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "philosophy": {
       "type": "testimonial-section",
       "blocks": {
@@ -329,7 +437,7 @@
         "heading": "Healing happens in relationship",
         "subheading": "",
         "columns": 1,
-        "bg_scheme": "default",
+        "bg_scheme": "sage",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -346,7 +454,7 @@
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
-        "bg_scheme": "default",
+        "bg_scheme": "sage",
         "padding_top": 56,
         "padding_bottom": 56
       }
@@ -401,7 +509,7 @@
         "success_text": "Thank you for subscribing.",
         "fine_print": "Your email is never shared.",
         "text_align": "center",
-        "bg_scheme": "surface",
+        "bg_scheme": "burnt",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -420,7 +528,7 @@
           "type": "item",
           "settings": {
             "question": "Do you accept insurance?",
-            "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling.</p>"
+            "answer": "<p>We can review insurance, out-of-network benefits, and self-pay options with you before scheduling. Currently, we are in network with Aetna, Blue Cross and Blue Shield, Health Options, and Medicare.&nbsp;</p>"
           }
         },
         "f3": {
@@ -477,10 +585,11 @@
     "hero",
     "pathways",
     "17802271632b8f6a37",
+    "1791756404c64106b5",
     "approach",
+    "process",
     "specialties",
     "clinician",
-    "process",
     "philosophy",
     "local_seo",
     "resources",
