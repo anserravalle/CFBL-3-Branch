@@ -1,6 +1,154 @@
+{% doc %}
+  @prompt
+    Create a row of team member cards for a therapy practice, supporting up to 12 editable people in the exact order entered, never alphabetized. Each card has centered text and a square photo about 240px wide on desktop, surrounded by a thin 2px frame with a 6px gap between frame and photo. Below: bold name, small uppercase credentials, italic role, optional one-line description, and a 'Read bio' link visible only when a link is entered. Include editable fields for all person content and photo. Section settings: heading, background color, text color, frame color, and layout choice labeled 'scroll sideways' or 'centered grid that wraps'. Horizontal scroll mode must snap cards into place and show accessible previous and next arrow buttons only when the row overflows, updating on resize. Wrapping grid must be centered. On mobile, scroll cards are about 68% of screen width, and grid layout shows two cards per row with responsive square photos. Default background #EED9C5, text #2B5275, frame #4E9FBF. No textures, gradients, shadows, or rounded corners on photos. Hide empty optional content. Keep styling clean and accessible.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% style %}
+  .ai-team-{{ ai_gen_id }} { display:block; width:{{ block.settings.desktop_width_percent }}%; max-width:100%; box-sizing:border-box; background:{{ block.settings.background_color }}; color:{{ block.settings.text_color }}; padding:40px 20px; }
+  .ai-team-{{ ai_gen_id }} *, .ai-team-{{ ai_gen_id }} *::before, .ai-team-{{ ai_gen_id }} *::after { box-sizing:border-box; }
+  .ai-team-{{ ai_gen_id }}__inner { max-width:1200px; margin:0 auto; }
+  .ai-team-{{ ai_gen_id }}__heading { color:inherit; text-align:center; margin:0 0 32px; }
+  .ai-team-{{ ai_gen_id }}__controls { display:flex; justify-content:flex-end; gap:10px; margin:0 0 12px; }
+  .ai-team-{{ ai_gen_id }}__arrow { width:44px; height:44px; padding:0; display:inline-flex; align-items:center; justify-content:center; color:{{ block.settings.text_color }}; background:transparent; border:1px solid currentColor; cursor:pointer; }
+  .ai-team-{{ ai_gen_id }}__arrow:hover { color:{{ block.settings.background_color }}; background:{{ block.settings.text_color }}; }
+  .ai-team-{{ ai_gen_id }}__arrow:focus-visible, .ai-team-{{ ai_gen_id }}__bio:focus-visible { outline:3px solid currentColor; outline-offset:3px; }
+  .ai-team-{{ ai_gen_id }}__arrow[hidden] { display:none; }
+  .ai-team-{{ ai_gen_id }}__arrow svg { width:20px; height:20px; }
+  .ai-team-{{ ai_gen_id }}__list { display:flex; align-items:flex-start; justify-content:center; gap:24px; padding:4px; }
+  .ai-team-{{ ai_gen_id }}--scroll .ai-team-{{ ai_gen_id }}__list { justify-content:flex-start; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; scrollbar-width:thin; }
+  .ai-team-{{ ai_gen_id }}__card { flex:0 0 240px; min-width:0; text-align:center; scroll-snap-align:start; }
+  .ai-team-{{ ai_gen_id }}__frame { width:100%; padding:6px; border:2px solid {{ block.settings.frame_color }}; }
+  .ai-team-{{ ai_gen_id }}__photo, .ai-team-{{ ai_gen_id }}__placeholder { width:100%; aspect-ratio:1; display:block; object-fit:cover; }
+  .ai-team-{{ ai_gen_id }}__placeholder { background:rgba(255,255,255,.35); }
+  .ai-team-{{ ai_gen_id }}__placeholder svg { display:block; width:100%; height:100%; }
+  .ai-team-{{ ai_gen_id }}__name { margin:16px 0 4px; color:inherit; font-weight:700; font-size:1.15em; }
+  .ai-team-{{ ai_gen_id }}__credentials { margin:0 0 7px; font-size:.78em; letter-spacing:.09em; text-transform:uppercase; }
+  .ai-team-{{ ai_gen_id }}__role { margin:0 0 8px; font-style:italic; }
+  .ai-team-{{ ai_gen_id }}__description { margin:0 0 10px; font-size:.9em; line-height:1.45; }
+  .ai-team-{{ ai_gen_id }}__bio { color:inherit; text-underline-offset:3px; font-weight:600; }
+  .ai-team-{{ ai_gen_id }}--grid .ai-team-{{ ai_gen_id }}__list { flex-wrap:wrap; }
+  .ai-team-{{ ai_gen_id }}--grid .ai-team-{{ ai_gen_id }}__card { flex-basis:240px; }
+  @media screen and (max-width:749px) {
+    .ai-team-{{ ai_gen_id }} { padding:32px 16px; }
+    .ai-team-{{ ai_gen_id }}__card { flex-basis:68%; }
+    .ai-team-{{ ai_gen_id }}--grid .ai-team-{{ ai_gen_id }}__list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 12px; }
+    .ai-team-{{ ai_gen_id }}--grid .ai-team-{{ ai_gen_id }}__card { width:100%; flex-basis:auto; }
+  }
+  @media (prefers-reduced-motion:reduce) { .ai-team-{{ ai_gen_id }}--scroll .ai-team-{{ ai_gen_id }}__list { scroll-behavior:auto; } }
+{% endstyle %}
+<team-roster-{{ ai_gen_id }} class="ai-team-{{ ai_gen_id }} ai-team-{{ ai_gen_id }}--{{ block.settings.layout }}" {{ block.shopify_attributes }}>
+  <div class="ai-team-{{ ai_gen_id }}__inner">
+    {% if block.settings.heading != blank %}<h2 class="ai-team-{{ ai_gen_id }}__heading">{{ block.settings.heading | escape }}</h2>{% endif %}
+    {% if block.settings.layout == 'scroll' %}<div class="ai-team-{{ ai_gen_id }}__controls" aria-label="Team member navigation"><button class="ai-team-{{ ai_gen_id }}__arrow" type="button" data-direction="previous" aria-label="Scroll to previous team members" hidden><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="ai-team-{{ ai_gen_id }}__arrow" type="button" data-direction="next" aria-label="Scroll to next team members" hidden><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>{% endif %}
+    <div class="ai-team-{{ ai_gen_id }}__list" data-roster-list>
+      {% for i in (1..12) %}
+        {% liquid
+          assign name_key = 'person_' | append: i | append: '_name'
+          assign credentials_key = 'person_' | append: i | append: '_credentials'
+          assign role_key = 'person_' | append: i | append: '_role'
+          assign description_key = 'person_' | append: i | append: '_description'
+          assign photo_key = 'person_' | append: i | append: '_photo'
+          assign bio_key = 'person_' | append: i | append: '_bio'
+          assign person_name = block.settings[name_key]
+          assign person_credentials = block.settings[credentials_key]
+          assign person_role = block.settings[role_key]
+          assign person_description = block.settings[description_key]
+          assign person_photo = block.settings[photo_key]
+          assign person_bio = block.settings[bio_key]
+        %}
+        {% if person_name != blank or person_photo != blank or person_credentials != blank or person_role != blank or person_description != blank or person_bio != blank %}
+          <article class="ai-team-{{ ai_gen_id }}__card">
+            <div class="ai-team-{{ ai_gen_id }}__frame">
+              {% if person_photo != blank %}<img class="ai-team-{{ ai_gen_id }}__photo" src="{{ person_photo | image_url: width: 600 }}" alt="{{ person_photo.alt | default: person_name | escape }}" loading="lazy" width="{{ person_photo.width }}" height="{{ person_photo.height }}">{% else %}<div class="ai-team-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}</div>{% endif %}
+            </div>
+            {% if person_name != blank %}<h3 class="ai-team-{{ ai_gen_id }}__name">{{ person_name | escape }}</h3>{% endif %}
+            {% if person_credentials != blank %}<p class="ai-team-{{ ai_gen_id }}__credentials">{{ person_credentials | escape }}</p>{% endif %}
+            {% if person_role != blank %}<p class="ai-team-{{ ai_gen_id }}__role">{{ person_role | escape }}</p>{% endif %}
+            {% if person_description != blank %}<p class="ai-team-{{ ai_gen_id }}__description">{{ person_description | escape }}</p>{% endif %}
+            {% if person_bio != blank %}<a class="ai-team-{{ ai_gen_id }}__bio" href="{{ person_bio }}">Read bio</a>{% endif %}
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</team-roster-{{ ai_gen_id }}>
+<script>
+  (function() {
+    const tagName = 'team-roster-{{ ai_gen_id }}';
+    if (customElements.get(tagName)) return;
+    class TeamRoster extends HTMLElement {
+      connectedCallback() {
+        this.list = this.querySelector('[data-roster-list]');
+        this.previous = this.querySelector('[data-direction="previous"]');
+        this.next = this.querySelector('[data-direction="next"]');
+        if (!this.list || !this.previous || !this.next) return;
+        this.previous.addEventListener('click', () => this.move(-1));
+        this.next.addEventListener('click', () => this.move(1));
+        this.onScroll = () => this.updateControls();
+        this.list.addEventListener('scroll', this.onScroll, { passive:true });
+        this.resizeObserver = new ResizeObserver(() => this.updateControls());
+        this.resizeObserver.observe(this.list);
+        this.updateControls();
+      }
+      disconnectedCallback() {
+        if (this.resizeObserver) this.resizeObserver.disconnect();
+        if (this.list && this.onScroll) this.list.removeEventListener('scroll', this.onScroll);
+      }
+      move(direction) {
+        const card = this.list.querySelector('.ai-team-{{ ai_gen_id }}__card');
+        if (!card) return;
+        const gap = parseFloat(getComputedStyle(this.list).columnGap) || 0;
+        this.list.scrollBy({ left:direction * (card.getBoundingClientRect().width + gap), behavior:'smooth' });
+      }
+      updateControls() {
+        const max = this.list.scrollWidth - this.list.clientWidth;
+        const overflowing = max > 2;
+        this.previous.hidden = !overflowing || this.list.scrollLeft <= 2;
+        this.next.hidden = !overflowing || this.list.scrollLeft >= max - 2;
+      }
+    }
+    customElements.define(tagName, TeamRoster);
+  })();
+</script>
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Team member row",
+  "settings": [
+    {"type":"text","id":"heading","label":"Heading","default":"Meet our team"},
+    {"type":"select","id":"layout","label":"Layout","options":[{"value":"scroll","label":"Scroll sideways"},{"value":"grid","label":"Centered grid that wraps"}],"default":"scroll"},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"color","id":"background_color","label":"Background","default":"#EED9C5"},
+    {"type":"color","id":"text_color","label":"Text","default":"#2B5275"},
+    {"type":"color","id":"frame_color","label":"Frame","default":"#4E9FBF"},
+    {"type":"header","content":"Team members"},
+    {"type":"paragraph","content":"Enter members in the desired display order. Blank entries are hidden; the order is never changed."},
+    {"type":"header","content":"Person 1"},
+    {"type":"text","id":"person_1_name","label":"Name"},{"type":"text","id":"person_1_credentials","label":"Credentials"},{"type":"text","id":"person_1_role","label":"Role"},{"type":"text","id":"person_1_description","label":"Description"},{"type":"image_picker","id":"person_1_photo","label":"Photo"},{"type":"url","id":"person_1_bio","label":"Bio link"},
+    {"type":"header","content":"Person 2"},
+    {"type":"text","id":"person_2_name","label":"Name"},{"type":"text","id":"person_2_credentials","label":"Credentials"},{"type":"text","id":"person_2_role","label":"Role"},{"type":"text","id":"person_2_description","label":"Description"},{"type":"image_picker","id":"person_2_photo","label":"Photo"},{"type":"url","id":"person_2_bio","label":"Bio link"},
+    {"type":"header","content":"Person 3"},
+    {"type":"text","id":"person_3_name","label":"Name"},{"type":"text","id":"person_3_credentials","label":"Credentials"},{"type":"text","id":"person_3_role","label":"Role"},{"type":"text","id":"person_3_description","label":"Description"},{"type":"image_picker","id":"person_3_photo","label":"Photo"},{"type":"url","id":"person_3_bio","label":"Bio link"},
+    {"type":"header","content":"Person 4"},
+    {"type":"text","id":"person_4_name","label":"Name"},{"type":"text","id":"person_4_credentials","label":"Credentials"},{"type":"text","id":"person_4_role","label":"Role"},{"type":"text","id":"person_4_description","label":"Description"},{"type":"image_picker","id":"person_4_photo","label":"Photo"},{"type":"url","id":"person_4_bio","label":"Bio link"},
+    {"type":"header","content":"Person 5"},
+    {"type":"text","id":"person_5_name","label":"Name"},{"type":"text","id":"person_5_credentials","label":"Credentials"},{"type":"text","id":"person_5_role","label":"Role"},{"type":"text","id":"person_5_description","label":"Description"},{"type":"image_picker","id":"person_5_photo","label":"Photo"},{"type":"url","id":"person_5_bio","label":"Bio link"},
+    {"type":"header","content":"Person 6"},
+    {"type":"text","id":"person_6_name","label":"Name"},{"type":"text","id":"person_6_credentials","label":"Credentials"},{"type":"text","id":"person_6_role","label":"Role"},{"type":"text","id":"person_6_description","label":"Description"},{"type":"image_picker","id":"person_6_photo","label":"Photo"},{"type":"url","id":"person_6_bio","label":"Bio link"},
+    {"type":"header","content":"Person 7"},
+    {"type":"text","id":"person_7_name","label":"Name"},{"type":"text","id":"person_7_credentials","label":"Credentials"},{"type":"text","id":"person_7_role","label":"Role"},{"type":"text","id":"person_7_description","label":"Description"},{"type":"image_picker","id":"person_7_photo","label":"Photo"},{"type":"url","id":"person_7_bio","label":"Bio link"},
+    {"type":"header","content":"Person 8"},
+    {"type":"text","id":"person_8_name","label":"Name"},{"type":"text","id":"person_8_credentials","label":"Credentials"},{"type":"text","id":"person_8_role","label":"Role"},{"type":"text","id":"person_8_description","label":"Description"},{"type":"image_picker","id":"person_8_photo","label":"Photo"},{"type":"url","id":"person_8_bio","label":"Bio link"},
+    {"type":"header","content":"Person 9"},
+    {"type":"text","id":"person_9_name","label":"Name"},{"type":"text","id":"person_9_credentials","label":"Credentials"},{"type":"text","id":"person_9_role","label":"Role"},{"type":"text","id":"person_9_description","label":"Description"},{"type":"image_picker","id":"person_9_photo","label":"Photo"},{"type":"url","id":"person_9_bio","label":"Bio link"},
+    {"type":"header","content":"Person 10"},
+    {"type":"text","id":"person_10_name","label":"Name"},{"type":"text","id":"person_10_credentials","label":"Credentials"},{"type":"text","id":"person_10_role","label":"Role"},{"type":"text","id":"person_10_description","label":"Description"},{"type":"image_picker","id":"person_10_photo","label":"Photo"},{"type":"url","id":"person_10_bio","label":"Bio link"},
+    {"type":"header","content":"Person 11"},
+    {"type":"text","id":"person_11_name","label":"Name"},{"type":"text","id":"person_11_credentials","label":"Credentials"},{"type":"text","id":"person_11_role","label":"Role"},{"type":"text","id":"person_11_description","label":"Description"},{"type":"image_picker","id":"person_11_photo","label":"Photo"},{"type":"url","id":"person_11_bio","label":"Bio link"},
+    {"type":"header","content":"Person 12"},
+    {"type":"text","id":"person_12_name","label":"Name"},{"type":"text","id":"person_12_credentials","label":"Credentials"},{"type":"text","id":"person_12_role","label":"Role"},{"type":"text","id":"person_12_description","label":"Description"},{"type":"image_picker","id":"person_12_photo","label":"Photo"},{"type":"url","id":"person_12_bio","label":"Bio link"}
+  ],
+  "presets":[{"name":"Team member row"}],
+  "tag":null,
+  "class":"team-member-row"
+}
 {% endschema %}
