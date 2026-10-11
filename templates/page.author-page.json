@@ -12,7 +12,7 @@
     "bio_hero": {
       "type": "text-image",
       "settings": {
-        "image": "shopify://shop_images/angela.jpg",
+        "image": "shopify://shop_images/Dr_Serravalle_01_burgundy-chair.jpg",
         "image_alt": "Dr. Angela (Niki) Serravalle",
         "image_ratio": "1-1",
         "image_frame": true,
@@ -40,6 +40,8 @@
       "settings": {
         "show_title": true,
         "eyebrow": "",
+        "logo_alt": "",
+        "logo_width": 260,
         "text_align": "left",
         "bg_scheme": "default",
         "padding_top": 16,
