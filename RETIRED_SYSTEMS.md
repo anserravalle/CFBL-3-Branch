@@ -16,9 +16,11 @@ Shopify Intake was off from at least 13 September 2026 and the Buffer publisher
 was never run live. Niki confirmed on 11 November 2026 that she does not use
 Airtable.
 
-**The Standard moved** to a Google Doc in Drive, Marketing: [The Standard](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit).
-The rule that retired Notion applies to Airtable too: a place Niki does not edit
-is a place that goes stale.
+**The Standard moved into Niki's Claude Projects**, which she reorganized into
+five: Operating System, Clinical Writing, MUSA, Content, and Institute. The
+sixteen principles in the Airtable table were not exported. The rule that retired
+Notion applies to Airtable too: a place Niki does not edit is a place that goes
+stale.
 
 **The base is kept as an archive, not maintained.** It still holds the Make It
 Make Sense pipeline with SEO packages through January 2027 and the Asset Library
