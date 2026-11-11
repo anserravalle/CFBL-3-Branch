@@ -100,9 +100,10 @@ clinical = [
            f'<td valign="top" style="padding-left:14px;font-size:17px;line-height:1.6;color:{BROWN};">Michael Szczechowski is a pre-doctoral intern in psychological assessment at the practice. If you or your child comes in for an evaluation, you may meet him during testing.</td>'
            f'</tr></table>',
          SAND, BROWN),
-    card(h2("A parent support group with Brianna Patton", NAVY)
-         + p(f'Brianna Patton, LACMH, NCC, is starting a support group for parents and is taking names now. If you would like to be on the list, email her at '
-             f'<a href="mailto:bpatton@balancedlivingde.com?subject=Parent%20support%20group" style="color:{NAVY};font-weight:bold;">bpatton@balancedlivingde.com</a>.', last=True),
+    card(h2("Parenting With Purpose", NAVY)
+         + p("Brianna Patton, LACMH, NCC, leads a support group for parents and caregivers. It meets once a month online, and the next session is in December. "
+             "Registration is free, and the date and Zoom link go by email to everyone who signs up. "
+             f'{a("Save your spot", SITE + "/products/parenting-with-purpose-monthly-virtual-parent-support-group", NAVY)}', last=True),
          SAND, BROWN),
 ]
 
