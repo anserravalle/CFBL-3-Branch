@@ -20,7 +20,7 @@ description: The single operating skill for all marketing across Center for Bala
 
 **This skill does not carry brand rules. The Standard does.**
 
-Read **The Standard**, table `tbleatoO3KDm2VZbS` in base `appP8PQe3dvqxosjR`, before
+Read **The Standard**, the Google Doc in Drive, Marketing (https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit), before
 producing anything. It holds the living standard: brand grammar, the visual
 standard, the learning loop, and what not to repeat. Niki edits it directly, so it
 is always newer than this file.
@@ -61,7 +61,7 @@ answers.
 
 | Thing | Home |
 |---|---|
-| The living standard | **The Standard** `tbleatoO3KDm2VZbS` |
+| The living standard | **The Standard**, Google Doc in Drive, Marketing |
 | Every content record | **Content Pipeline** `tbl4AGvnuD3YjS1n2` |
 | Brands, kits, routing, profiles | **Brands & Asset Kits** `tbl93bjxUvFkMhYDd` |
 | Course and training material | **Curriculum Vault** `tbldTobI99OtH0DRe` |

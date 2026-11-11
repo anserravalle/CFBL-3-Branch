@@ -1,6 +1,14 @@
 # Operator specification
 
-For ChatGPT/Work, the primary marketing operator. This is how the cycle runs.
+> **Operating change, 11 November 2026, confirmed by Niki.** Claude is the
+> marketing operator again, including the technical maintenance this file assigns
+> to Codex, with Niki as final approval authority. **Airtable is retired:** Niki
+> does not use it and nothing live depends on it. **The Standard now lives in a
+> Google Doc** in Drive, Marketing: [The Standard](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit). Shopify remains the
+> source of record. Where this file still names ChatGPT, Codex or Airtable, read it
+> through this note. See `RETIRED_SYSTEMS.md`.
+
+For Claude, the marketing operator. This is how the cycle runs.
 
 Read `CURRENT_SYSTEM.md` first for the brands, palettes, voice, routing, hard
 rules and CE language. This file is process only.
@@ -9,8 +17,8 @@ rules and CE language. This file is process only.
 
 **This file does not carry brand rules. The Standard does.**
 
-Read **The Standard**, Airtable table `tbleatoO3KDm2VZbS` in base
-`appP8PQe3dvqxosjR`, before producing anything. It is the living layer, Niki edits
+Read **The Standard**, the Google Doc in Drive, Marketing
+([link](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit)), before producing anything. It is the living layer, Niki edits
 it directly, and it is always newer than any file. Where The Standard and a file
 disagree, The Standard wins and the file gets fixed.
 
@@ -234,7 +242,10 @@ Standard as a row, written as knowledge rather than as an adjective. "Too Canva"
 is not knowledge. "A solid color ground with a boxed headshot reads as an academic
 slide" is.
 
-## Airtable, the operational database
+## Airtable, retired 11 November 2026
+
+Kept for reference only. Do not read from or write to this base as part of the
+cycle. The IDs below identify the archive.
 
 Base `appP8PQe3dvqxosjR`, CFBL 3-Brand Engine.
 

@@ -1,5 +1,13 @@
 # Codex maintenance
 
+> **Operating change, 11 November 2026, confirmed by Niki.** Claude is the
+> marketing operator again, including the technical maintenance this file assigns
+> to Codex, with Niki as final approval authority. **Airtable is retired:** Niki
+> does not use it and nothing live depends on it. **The Standard now lives in a
+> Google Doc** in Drive, Marketing: [The Standard](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit). Shopify remains the
+> source of record. Where this file still names ChatGPT, Codex or Airtable, read it
+> through this note. See `RETIRED_SYSTEMS.md`.
+
 Technical infrastructure, automations, dependencies and known defects. What Codex
 owns and what it does not.
 

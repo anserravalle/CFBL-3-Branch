@@ -1,5 +1,13 @@
 # CFBL Marketing System: current state
 
+> **Operating change, 11 November 2026, confirmed by Niki.** Claude is the
+> marketing operator again, including the technical maintenance this file assigns
+> to Codex, with Niki as final approval authority. **Airtable is retired:** Niki
+> does not use it and nothing live depends on it. **The Standard now lives in a
+> Google Doc** in Drive, Marketing: [The Standard](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit). Shopify remains the
+> source of record. Where this file still names ChatGPT, Codex or Airtable, read it
+> through this note. See `RETIRED_SYSTEMS.md`.
+
 Authoritative description of the system as it exists on 13 September 2026, at the
 handoff from Claude as primary operator to ChatGPT/Work.
 
@@ -121,20 +129,19 @@ names it directly, so it does not appear on Institute work.
 
 | System | Role |
 |---|---|
-| **Airtable** | Operational marketing database and The Standard |
+| **The Standard** | Google Doc in Drive, Marketing. The living brand and production standard |
 | **Shopify** | Source of truth for products, offers, pages, articles, availability, pricing, all public website information |
 | **Google Drive** | Authentic photography, video and source media |
 | **Canva, Adobe** | Creative production |
 | **Buffer** | Scheduling and publishing |
 | **Google Calendar** | Dates and scheduling information |
-| **GitHub / Codex** | Durable technical architecture, code, integrations, maintenance, repairs |
-| **ChatGPT / Work** | Primary marketing operator, strategist, content producer, creative director, cross-app execution |
+| **GitHub** | Durable technical architecture, code, integrations |
+| **Claude** | Marketing operator, strategist, content producer, creative director, technical maintenance |
 | **Niki** | Final approval authority |
 
-**Shopify is the source of record. Airtable is derived. When they disagree,
-Shopify is right.**
+**Shopify is the source of record.** Airtable was retired on 11 November 2026.
 
-Notion and Metricool are retired. See `RETIRED_SYSTEMS.md`.
+Notion, Metricool and Airtable are retired. See `RETIRED_SYSTEMS.md`.
 
 ## Where current information is verified
 

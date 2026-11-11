@@ -1,5 +1,13 @@
 # CFBL Marketing and Curriculum Engine
 
+> **Operating change, 11 November 2026, confirmed by Niki.** Claude is the
+> marketing operator again, including the technical maintenance this file assigns
+> to Codex, with Niki as final approval authority. **Airtable is retired:** Niki
+> does not use it and nothing live depends on it. **The Standard now lives in a
+> Google Doc** in Drive, Marketing: [The Standard](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit). Shopify remains the
+> source of record. Where this file still names ChatGPT, Codex or Airtable, read it
+> through this note. See `RETIRED_SYSTEMS.md`.
+
 Marketing and content system for Center for Balanced Living and Dr. Niki
 Serravalle.
 
@@ -23,7 +31,7 @@ final approval authority.
 **The Brand + Marketing Operating Manual v1.0**, August 2026, held in Niki's
 Canva, outranks every file here.
 
-**The Standard**, Airtable table `tbleatoO3KDm2VZbS`, is the living layer. Niki
+**The Standard**, a Google Doc in Drive, Marketing ([link](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit)), is the living layer. Niki
 edits it directly, so it is always newer than any file. Where it and a file
 disagree, The Standard wins and the file gets fixed.
 

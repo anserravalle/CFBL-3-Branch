@@ -1,5 +1,13 @@
 # CFBL Marketing and Curriculum Engine: history and reasoning
 
+> **Operating change, 11 November 2026, confirmed by Niki.** Claude is the
+> marketing operator again, including technical maintenance, and the handoff below
+> is reversed, with Niki as final approval authority. **Airtable is retired:** Niki
+> does not use it and nothing live depends on it. **The Standard now lives in a
+> Google Doc** in Drive, Marketing: [The Standard](https://docs.google.com/document/d/1y6_Uyj5zCBeMCtTx1BS1zga6lzBbBlTHJEtwSe6cUXc/edit). Shopify remains the
+> source of record. Where this file still names ChatGPT, Codex or Airtable, read it
+> through this note. See `RETIRED_SYSTEMS.md`.
+
 > **HANDOFF, 13 September 2026.** Operation of this system moved from Claude to
 > **ChatGPT/Work** as primary marketing operator, with **Codex** owning technical
 > maintenance. **This file is no longer the operating instruction.** It is the
