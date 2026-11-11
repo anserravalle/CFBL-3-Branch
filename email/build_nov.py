@@ -101,8 +101,8 @@ clinical = [
            f'</tr></table>',
          SAND, BROWN),
     card(h2("Parenting With Purpose", NAVY)
-         + p("Brianna Patton, LACMH, NCC, leads a support group for parents and caregivers. It meets once a month online, and the next session is in December. "
-             "Registration is free, and the date and Zoom link go by email to everyone who signs up. "
+         + p("Brianna Patton, LACMH, NCC, leads a support group for parents and caregivers. It meets once a month online, and the next session is Friday, December 4. "
+             "Registration is free, and the time and Zoom link go by email to everyone who signs up. "
              f'{a("Save your spot", SITE + "/products/parenting-with-purpose-monthly-virtual-parent-support-group", NAVY)}', last=True),
          SAND, BROWN),
 ]
