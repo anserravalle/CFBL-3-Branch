@@ -20,7 +20,7 @@ description: The single operating skill for all marketing across Center for Bala
 
 **This skill does not carry brand rules. The Standard does.**
 
-Read **The Standard**, table `tbleatoO3KDm2VZbS` in base `appP8PQe3dvqxosjR`, before
+Read the rules in Niki's Claude Projects (Operating System first), before
 producing anything. It holds the living standard: brand grammar, the visual
 standard, the learning loop, and what not to repeat. Niki edits it directly, so it
 is always newer than this file.
@@ -61,7 +61,7 @@ answers.
 
 | Thing | Home |
 |---|---|
-| The living standard | **The Standard** `tbleatoO3KDm2VZbS` |
+| The living standard | Niki's Claude Projects, Operating System first |
 | Every content record | **Content Pipeline** `tbl4AGvnuD3YjS1n2` |
 | Brands, kits, routing, profiles | **Brands & Asset Kits** `tbl93bjxUvFkMhYDd` |
 | Course and training material | **Curriculum Vault** `tbldTobI99OtH0DRe` |

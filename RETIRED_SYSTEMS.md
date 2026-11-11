@@ -7,6 +7,26 @@ technically useful parts are not lost.
 **If anything here contradicts `CURRENT_SYSTEM.md` or `OPERATOR_SPEC.md`, those
 files win.**
 
+## Airtable. Retired 11 November 2026.
+
+Base `appP8PQe3dvqxosjR`, CFBL 3-Brand Engine. It was meant to sit between
+Shopify and social publishing: Shopify articles flowed in through Make, Publish
+Guard decided readiness, and Buffer published. That pipeline never ran. CFBL 1
+Shopify Intake was off from at least 13 September 2026 and the Buffer publisher
+was never run live. Niki confirmed on 11 November 2026 that she does not use
+Airtable.
+
+**The Standard moved into Niki's Claude Projects**, which she reorganized into
+five: Operating System, Clinical Writing, MUSA, Content, and Institute. The
+sixteen principles in the Airtable table were not exported. The rule that retired
+Notion applies to Airtable too: a place Niki does not edit is a place that goes
+stale.
+
+**The base is kept as an archive, not maintained.** It still holds the Make It
+Make Sense pipeline with SEO packages through January 2027 and the Asset Library
+descriptions. Read it for reference; do not route work through it. The Make
+scenarios that write to it (6216427, 6219321, 6214861) stay off.
+
 ## Notion. Retired.
 
 Notion was the home of the living standard, on a page called Marketing & Content
