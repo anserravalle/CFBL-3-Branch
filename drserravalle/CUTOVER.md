@@ -134,6 +134,11 @@ imported list and new signups land in the same segment.
       "Dr. Niki Serravalle". The essay template hides the byline, so this only shows in
       feeds and admin. Pick one.
 
+- [ ] `Dr_Niki_MUSA.jpg` (office portrait, used as the home hero) shows a shelf sign
+      reading "...low-vibin' sketchy-ass energy..." above her shoulder. Replace, retouch
+      or crop before the home page goes public. Check other photos taken in the office
+      for the same sign.
+
 ## Cutover day, 1 December (in this order)
 
 1. **drserravalle.com:** set the Institute products active. Publish the hidden pages
