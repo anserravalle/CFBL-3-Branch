@@ -7,23 +7,26 @@
   endif
 -%}
 <article>
-  <header class="art-head measure">
-    <p class="meta">
-      {%- if is_essay -%}
-        {{ article.published_at | date: '%B %-d, %Y' }}
-      {%- else -%}
-        {{ blog.title }} &middot; {{ article.published_at | date: '%B %-d, %Y' }}
-      {%- endif -%}
-    </p>
-    <h1>{{ article.title }}</h1>
-    {%- unless is_essay %}<p class="meta">By {{ article.author }}</p>{% endunless -%}
-  </header>
-
-  {%- if article.image -%}
-    <figure class="art-img">
-      {{ article.image | image_url: width: 2200 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 1100px) 1100px, 100vw', alt: article.image.alt }}
-    </figure>
-  {%- endif -%}
+  <section class="inner-band">
+    <header class="art-head measure">
+      <p class="meta">
+        {%- if is_essay -%}
+          {{ article.published_at | date: '%B %-d, %Y' }}
+        {%- else -%}
+          {{ blog.title }} &middot; {{ article.published_at | date: '%B %-d, %Y' }}
+        {%- endif -%}
+      </p>
+      <h1>{{ article.title }}</h1>
+      {%- unless is_essay %}<p class="meta">By {{ article.author }}</p>{% endunless -%}
+    </header>
+    {%- if article.image -%}
+      <figure class="art-img art-img--{% if is_essay %}print{% else %}paper{% endif %}">
+        <div class="art-img__frame">
+          {{ article.image | image_url: width: 1800 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 900px) 820px, 100vw', alt: article.image.alt }}
+        </div>
+      </figure>
+    {%- endif -%}
+  </section>
 
   <div class="prose measure">
     {{ article.content }}

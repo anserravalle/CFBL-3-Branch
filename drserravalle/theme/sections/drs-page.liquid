@@ -1,8 +1,10 @@
+<section class="inner-band inner-band--page">
 <header class="page-head {% if section.settings.image %}wrap{% else %}measure{% endif %}">
   {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
   <h1>{{ page.title }}</h1>
   {%- if section.settings.lede != blank %}<p class="lede">{{ section.settings.lede }}</p>{% endif -%}
 </header>
+</section>
 {%- if section.settings.image -%}
   <div class="split wrap">
     <figure class="split__img">{{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'eager', sizes: '(min-width: 860px) 40vw, 100vw' }}</figure>

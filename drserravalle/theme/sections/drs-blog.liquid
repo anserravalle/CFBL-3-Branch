@@ -1,4 +1,5 @@
 {%- paginate blog.articles by 24 -%}
+<section class="inner-band inner-band--page">
 <header class="page-head {% if blog.handle == 'essays' %}measure{% else %}wrap{% endif %}">
   <p class="eyebrow">{% if blog.handle == 'essays' %}Essays{% else %}{{ section.settings.eyebrow }}{% endif %}</p>
   <h1>{% if blog.handle == 'essays' %}{{ section.settings.essays_title }}{% else %}{{ blog.title }}{% endif %}</h1>
@@ -14,6 +15,7 @@
   -%}
   {%- if lede != blank %}<p class="lede">{{ lede }}</p>{% endif -%}
 </header>
+</section>
 
 {%- if blog.handle == 'essays' -%}
   {%- comment -%} A contents page. Series are grouped, newest series first, parts in reading order. {%- endcomment -%}

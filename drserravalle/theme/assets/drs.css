@@ -473,3 +473,34 @@ p { margin: 0 0 1.1em; }
 .tb__tier span { display: block; line-height: 1.4; margin-top: 2px; }
 .tb__page { padding-bottom: 40px; }
 .tb__page--r figcaption { padding-bottom: 4px; }
+
+/* Inner pages carry the home page's language (Niki, 12 Nov: inner pages "look like
+   slides, boring"). A brand band at the top in the system color, title in Bone,
+   fading into the reading surface; the featured photo framed by its world's material,
+   overlapping the fade. Long reading stays on a light ground. */
+.sys-bridge { --band: var(--cobalt); }
+.sys-essays { --band: var(--oxblood); }
+.sys-edu { --band: var(--forest); }
+.inner-band { background: linear-gradient(180deg, var(--band) 0%, var(--band) 62%, var(--bone) 100%); color: var(--bone); padding-bottom: 24px; }
+.inner-band--page { padding-bottom: 120px; }
+.inner-band--short { height: 140px; padding: 0; }
+.inner-band h1, .inner-band .page-head h1 { color: var(--bone); }
+.inner-band .meta, .inner-band .eyebrow { color: var(--ochre); }
+.inner-band .lede { color: rgba(241, 232, 216, .88); }
+.inner-band .art-head { padding-top: 88px; }
+.inner-band .page-head { padding-top: 96px; }
+.art-img { width: min(820px, 100% - 32px); margin: 24px auto 72px; }
+.art-img__frame img { width: 100%; max-height: none; object-fit: cover; aspect-ratio: 3 / 2; display: block; }
+.art-img--paper { filter: drop-shadow(0 26px 30px rgba(0, 0, 0, .35)); }
+.art-img--paper .art-img__frame { background: radial-gradient(ellipse at 20% 15%, rgba(255, 250, 238, .55), transparent 55%), #EDE0C8; padding: 22px 22px 46px; transform: rotate(-1.4deg); }
+.art-img--print .art-img__frame { background: var(--bone); padding: 14px; transform: rotate(1deg); box-shadow: 0 26px 40px rgba(0, 0, 0, .35); }
+.sys-edu .art-img--paper .art-img__frame { background: var(--cream); transform: none; border: 1px solid rgba(42, 53, 48, .2); }
+/* Blog index: Make It Make Sense cards as parchment prints */
+.tpl-blog .card__img { background: #EDE0C8; padding: 10px 10px 24px; aspect-ratio: auto; box-shadow: 0 14px 22px rgba(0, 0, 0, .18); transform: rotate(-1deg); }
+.tpl-blog .card:nth-child(even) .card__img { transform: rotate(.9deg); }
+.tpl-blog .card__img img { aspect-ratio: 4 / 3; }
+.tpl-blog .card--lead .card__img img { aspect-ratio: 16 / 9; }
+.tpl-blog .cards { margin-top: -40px; position: relative; }
+/* Product page under a short Forest band */
+.inner-band--short + .prod { margin-top: -60px; }
+.prod__buy { background: var(--bone); padding: 28px; box-shadow: 0 18px 40px rgba(0, 0, 0, .12); }
