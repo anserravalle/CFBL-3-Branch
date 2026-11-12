@@ -504,3 +504,9 @@ p { margin: 0 0 1.1em; }
 /* Product page under a short Forest band */
 .inner-band--short + .prod { margin-top: -60px; }
 .prod__buy { background: var(--bone); padding: 28px; box-shadow: 0 18px 40px rgba(0, 0, 0, .12); }
+
+/* Cream breath between the two reds (Niki, 12 Nov): the intro and the book band are
+   both Oxblood, so the intro fades out to Cream and the book band fades back in.
+   Padding keeps all type clear of the fade. */
+.intro { background: linear-gradient(180deg, var(--oxblood) 0, var(--oxblood) calc(100% - 240px), var(--cream) 100%); padding-bottom: 260px; }
+.blk.book-band { background: linear-gradient(180deg, var(--cream) 0, var(--oxblood) 240px, var(--oxblood) 100%); padding-top: 280px; }
