@@ -259,3 +259,27 @@ p { margin: 0 0 1.1em; }
 /* Footer practice note on the Deep Ink band (after the base rule so it wins) */
 .site-foot .site-foot__practice, .site-foot .site-foot__practice p { color: rgba(234, 226, 208, .78); }
 .site-foot .site-foot__practice a { color: var(--ochre); }
+
+/* Color mass (Niki, 12 Nov: "very beige"). Deep accent fields carry the combined
+   palette; Bone is kept for reading surfaces only. */
+.hero__img { background: var(--sky); }
+.hero__copy { background: var(--cobalt); color: var(--bone); }
+.hero__copy h1 { color: var(--bone); }
+.hero__copy .eyebrow { color: var(--ochre); }
+.hero__copy .btn { background: var(--ochre); border-color: var(--ochre); color: var(--deep-ink); }
+
+.door { background: var(--accent); color: var(--bone); padding-bottom: 28px; }
+.door__img { background: rgba(0, 0, 0, .14); border-bottom: 0; margin-bottom: 22px; }
+.door .eyebrow, .door h3, .door p { padding: 0 24px; }
+.door .eyebrow { color: var(--ochre); }
+.door h3 { color: var(--bone); }
+.door p { color: rgba(241, 232, 216, .85); }
+
+.blk.book-band { background: var(--oxblood); color: var(--bone); }
+.book-band h2, .book-band .meta { color: var(--bone); }
+.book-band .book__sub { color: rgba(241, 232, 216, .8); }
+.book-band .book__excerpt { border-left-color: var(--ochre); }
+.book-band .book__cover { background: var(--parchment); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); }
+.book-band .btn { background: var(--ochre); border-color: var(--ochre); color: var(--ink-0); }
+.book-band a:not(.btn) { color: var(--ochre); }
+.site-foot { margin-top: 0; }
