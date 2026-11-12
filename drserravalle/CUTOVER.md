@@ -82,17 +82,25 @@ imported list and new signups land in the same segment.
 
 ## Before 1 December: Claude
 
-- [ ] **[CFBL]** Read every Institute product record (`descriptionHtml`, variants,
-      `inventoryQuantity`, `inventoryPolicy`, `tracked`) and recreate each on
-      drserravalle.com as **draft**, same handle, CE language copied exactly. Public
-      `products.json` is in `source/` as a cross-check, never as the record.
-- [ ] **[CFBL]** Check for Q1 orders. Each seat sold on CFBL reduces seats on the new
-      product by one. Those registrants stay served from CFBL.
+- [x] **Done 12 Nov.** Seven Institute products read from the CFBL admin and recreated
+      on drserravalle.com as **draft**, same handles, prices, variants, seat counts and
+      inventory settings. Descriptions read back byte-identical to the source.
+      Records in `source/institute_products_admin.json`.
+- [x] **Done 12 Nov.** No CFBL orders since 15 October, so no Q1 seats were sold and
+      nothing stays served from CFBL. **Re-check on 30 November:** any seat sold on CFBL
+      before cutover reduces the new product's inventory by one.
+- [ ] Confirm with EMDRIA that the approval for Nature-Informed EMDR (3 EMDRIA Credits)
+      covers the March 5, 2027 offering, not only the October 2026 one.
+- [ ] Not yet on sale: EMDR Basic Training, the single-day Foundations intensive (Mar 20),
+      Report Writing. Each needs a price, then a draft product here, not on CFBL.
 - [ ] **[CFBL]** Export customers tagged `list-mims` with marketing consent, then import
       into drserravalle.com. Keep the consent column. Never import anyone who did not
       consent.
-- [ ] Fill the Professional Education program rows (theme editor, `page.education`)
-      once the products exist.
+- [x] Professional Education program rows filled 12 Nov (six rows, CE lines copied from
+      the product records). Price and Register appear automatically once products go active.
+- [ ] Files: 285 of the 1,062 CFBL files move (`source/files_to_move.json`). Copy in
+      progress 12 Nov. Shopify will not import a video from its own video CDN as a
+      Video, so reels are stored as plain mp4 files with the same filenames.
 - [ ] Move What the Doctor Is Reading from the CFBL Institute page into Clinical Notes
       or a section on Professional Education.
 - [x] Menus `drs-main`, `drs-footer-read`, `drs-footer-more` created 12 Nov. `main-menu` is left alone because the live Whisper theme reads it. Header order: Make It Make Sense, Essays, The Book,
