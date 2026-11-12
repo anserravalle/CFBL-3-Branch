@@ -27,9 +27,8 @@
         <p>{{ section.settings.sold_out }}</p>
       {%- endif -%}
     {%- endform -%}
-    {%- if section.settings.policies_url != blank -%}
-      <p class="form-note"><a href="{{ section.settings.policies_url }}">{{ section.settings.policies_label }}</a></p>
-    {%- endif -%}
+    {%- assign pol_url = section.settings.policies_url | default: '/pages/policies' -%}
+    <p class="form-note"><a href="{{ pol_url }}">{{ section.settings.policies_label }}</a></p>
   </div>
 </section>
 
@@ -40,7 +39,7 @@
     { "type": "text", "id": "cta", "label": "Button label", "default": "Register" },
     { "type": "text", "id": "sold_out", "label": "Full text", "default": "This program is full. Write to be told when it runs again." },
     { "type": "text", "id": "policies_label", "label": "Policies link label", "default": "Fees, refunds, and continuing education policies" },
-    { "type": "url", "id": "policies_url", "label": "Policies link", "default": "/pages/policies" }
+    { "type": "url", "id": "policies_url", "label": "Policies link", "info": "Empty uses /pages/policies." }
   ]
 }
 {% endschema %}
