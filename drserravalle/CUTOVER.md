@@ -104,8 +104,9 @@ imported list and new signups land in the same segment.
       stored as plain mp4 files. The 11 larger ones (What the Doctor Is Reading films,
       book launch reels, MUSA essay reels) went through a staged upload and are real
       Video files.
-- [ ] Point the six article-body images (`logosig.png` in five posts, the images in
-      Recognizing the Signs of Suicide Risk) at their new-store copies.
+- [x] Article-body images repointed 12 Nov: `logosig.png` in five posts and the five
+      images in Recognizing the Signs of Suicide Risk now load from this store. No hidden
+      article references the CFBL CDN.
 - [ ] Move What the Doctor Is Reading from the CFBL Institute page into Clinical Notes
       or a section on Professional Education.
 - [x] Menus `drs-main`, `drs-footer-read`, `drs-footer-more` created 12 Nov. `main-menu` is left alone because the live Whisper theme reads it. Header order: Make It Make Sense, Essays, The Book,
@@ -113,9 +114,6 @@ imported list and new signups land in the same segment.
 - [ ] Featured image decision: the Santa post's image is a generated clinician
       (`Nano_Banana_2_-_A_female_psychologist...`). The hard rules forbid generated
       clinicians. Replace it before the post goes public on the new site.
-- [ ] Re-host the five body images still served from the CFBL CDN
-      (`logosig.png`, the `SEOon_*` images in the suicide-risk post) into Shopify Files
-      on the new store, so a cleanup on CFBL never breaks them.
 
 - [ ] Two small copy fixes, live on CFBL too:
       *Everyone Is Stressed* ends "Copyright 2026 Center for Balanced Living", which is

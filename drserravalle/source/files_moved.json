@@ -151,7 +151,7 @@
    "new_id": "gid://shopify/Video/34893653868662",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2049,7 +2049,7 @@
    "new_id": "gid://shopify/Video/34893653901430",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2215,7 +2215,7 @@
    "new_id": "gid://shopify/Video/34893653934198",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2228,7 +2228,7 @@
    "new_id": "gid://shopify/Video/34893653966966",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2250,7 +2250,7 @@
    "new_id": "gid://shopify/Video/34893653999734",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2263,7 +2263,7 @@
    "new_id": "gid://shopify/Video/34893654032502",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2276,7 +2276,7 @@
    "new_id": "gid://shopify/Video/34893654065270",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2460,7 +2460,7 @@
    "new_id": "gid://shopify/Video/34893654098038",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2473,7 +2473,7 @@
    "new_id": "gid://shopify/Video/34893654130806",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2486,7 +2486,7 @@
    "new_id": "gid://shopify/Video/34893654163574",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
@@ -2499,7 +2499,7 @@
    "new_id": "gid://shopify/Video/34893654196342",
    "new_type": "GenericFile",
    "new_url": null,
-   "status": "PROCESSING (staged video upload, 12 Nov)",
+   "status": "READY",
    "fileErrors": [
     "GENERIC_FILE_INVALID_SIZE"
    ],
