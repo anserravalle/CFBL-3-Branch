@@ -87,7 +87,6 @@
       "type": "drs-intro",
       "settings": {
         "image": "shopify://shop_images/Dr_Niki_MUSA.jpg",
-        "focal": "width:142%;height:142%;max-width:none;transform:translateY(-20%);",
         "heading": "Dr. Niki Serravalle",
         "bio": "<p>A licensed psychologist and the founder of Center for Balanced Living in Townsend, Delaware. Her work centers on psychological evaluation, trauma, and the training of other clinicians, built on more than two decades of clinical experience. She is the author of <em>The Stories We Told</em>.</p>",
         "quote": "A space where the clinical, the literary, and the personal meet on the page.",

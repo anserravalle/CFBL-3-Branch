@@ -341,3 +341,31 @@ p { margin: 0 0 1.1em; }
 .book-band .book > div:last-child { padding-top: 0; }
 .book-band .book { align-items: center; padding-bottom: 160px; }
 .site-foot { border-top: 0; border-image: none; }
+
+/* Intro as a Linktree-style card (Niki, 12 Nov): full, uncropped portrait dissolving
+   into an Oxblood ground, centered name, bio and why. The Oxblood then fades to Bone.
+   This makes the hero the page's one deep Oxblood moment; the book band goes light. */
+.intro { background: linear-gradient(180deg, var(--oxblood) 0%, var(--oxblood) 78%, var(--bone) 100%); padding: 56px 0 160px; color: var(--bone); }
+.intro__grid { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; }
+.intro__img { width: min(520px, 100%); aspect-ratio: auto; background: none; overflow: visible; margin: 0;
+  -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%); mask-image: linear-gradient(180deg, #000 62%, transparent 100%); }
+.intro__img img { width: 100%; height: auto; object-fit: initial; }
+.intro__copy { margin-top: -64px; position: relative; max-width: 40rem; }
+.intro__copy h1 { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; color: var(--bone); font-size: clamp(2.6rem, 5vw, 4rem); margin-bottom: .3em; }
+.intro__bio { color: rgba(241, 232, 216, .9); margin: 0 auto; }
+.intro__quote { margin: 32px auto; border-color: var(--ochre); }
+.intro__quote p { color: var(--bone); }
+.intro__quote cite { color: var(--ochre); }
+.intro__links { justify-content: center; }
+.intro__links .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; }
+.intro__links a:not(.btn) { color: var(--bone); }
+.tpl-index .doors { background: var(--bone); padding-top: 64px; }
+
+/* Book band goes light so Oxblood is not repeated at full depth */
+.blk.book-band { background: linear-gradient(180deg, var(--bone) 0, var(--parchment) 200px, var(--parchment) calc(100% - 180px), var(--deep-ink) 100%); color: var(--ink-0); padding-top: 200px; }
+.book-band h2 { color: var(--oxblood); }
+.book-band .meta { color: var(--walnut); }
+.book-band .book__sub { color: var(--walnut); }
+.book-band .book__excerpt { border-left-color: var(--oxblood); }
+.book-band .btn { background: var(--oxblood); border-color: var(--oxblood); color: var(--bone); }
+.book-band a:not(.btn) { color: var(--oxblood); }
