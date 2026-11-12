@@ -43,8 +43,7 @@
         "link1_label": "Read Make It Make Sense",
         "link1_url": "/blogs/make-it-make-sense",
         "link2_label": "About",
-        "link2_url": "/pages/about",
-        "focal": "width:142%;height:142%;max-width:none;transform:translateY(-20%);"
+        "link2_url": "/pages/about"
       }
     },
     "edu": {

@@ -134,14 +134,8 @@ imported list and new signups land in the same segment.
       "Dr. Niki Serravalle". The essay template hides the byline, so this only shows in
       feeds and admin. Pick one.
 
-- [ ] `Dr_Niki_MUSA.jpg` (office portrait, used as the home hero) shows a shelf sign
-      reading "...low-vibin' sketchy-ass energy..." above her shoulder, plus "#Believe" and
-      "Be Here Now" signs. The home hero crops them out (waist-up crop, set in the intro
-      section). A retouched file is still better before the photo is used anywhere else. Check other photos taken in the office
-      for the same sign.
-
-- [ ] Home hero quote is a stand-in from MUSA "Why I Write". Replace with Niki's own
-      line about her why for the whole site.
+- [x] Office portrait used uncropped in the home hero. The shelf signs are Niki's and stay (Niki, 12 Nov).
+- [x] Home hero quote is Niki's own published line from the MUSA page (confirmed 12 Nov).
 
 ## Cutover day, 1 December (in this order)
 
