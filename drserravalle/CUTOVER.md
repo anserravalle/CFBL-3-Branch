@@ -98,9 +98,14 @@ imported list and new signups land in the same segment.
       consent.
 - [x] Professional Education program rows filled 12 Nov (six rows, CE lines copied from
       the product records). Price and Register appear automatically once products go active.
-- [ ] Files: 285 of the 1,062 CFBL files move (`source/files_to_move.json`). Copy in
-      progress 12 Nov. Shopify will not import a video from its own video CDN as a
-      Video, so reels are stored as plain mp4 files with the same filenames.
+- [x] Files copied 12 Nov: 281 created, 4 skipped because the products already carry
+      them (`source/files_moved.json`). Filenames preserved exactly. Shopify will not
+      import a video from its own video CDN as a Video, so 45 reels under 20 MB are
+      stored as plain mp4 files. The 11 larger ones (What the Doctor Is Reading films,
+      book launch reels, MUSA essay reels) went through a staged upload and are real
+      Video files.
+- [ ] Point the six article-body images (`logosig.png` in five posts, the images in
+      Recognizing the Signs of Suicide Risk) at their new-store copies.
 - [ ] Move What the Doctor Is Reading from the CFBL Institute page into Clinical Notes
       or a section on Professional Education.
 - [x] Menus `drs-main`, `drs-footer-read`, `drs-footer-more` created 12 Nov. `main-menu` is left alone because the live Whisper theme reads it. Header order: Make It Make Sense, Essays, The Book,
