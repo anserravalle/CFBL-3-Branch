@@ -46,6 +46,16 @@ draft, and the theme is unpublished.
   EMDR Consultation, Clinical Supervision, Continuing Education Policies. Bodies in
   `import/pages.json`. Anything not in the record is marked `[NEEDS NIKI]`.
 
+## Palette: combined (Niki, 12 November 2026)
+
+One palette drawn from all three brand palettes, on every page: Bone #F1E8D8 ground,
+Ink #1F1A16 text, Walnut #4A4036 secondary, Ochre #C5A572 hairlines, Deep Ink #2A3530
+footer with Cream #EAE2D0 text. The three accents coexist: Cobalt #2B5275 for Make It
+Make Sense, Forest #3D5A52 for Professional Education, Oxblood #6E1F23 for Books +
+Essays. Fields: Sand, Sage Mist, Parchment. Type systems still differ by section.
+This deliberately overrides the Operating Manual's Books + Essays avoid list ("any
+CFBL or Institute color") for drserravalle.com. Social assets still follow the manual.
+
 ## How the theme decides the visual system
 
 `layout/drs.liquid` sets a body class, and `assets/drs.css` defines each system's

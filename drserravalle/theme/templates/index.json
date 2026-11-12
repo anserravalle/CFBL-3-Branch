@@ -23,7 +23,8 @@
             "eyebrow": "Every other week",
             "title": "Make It Make Sense",
             "text": "Psychology explained plainly, with the research named and the limits stated.",
-            "url": "/blogs/make-it-make-sense"
+            "url": "/blogs/make-it-make-sense",
+            "accent": "bridge"
           }
         },
         "d2": {
@@ -32,7 +33,8 @@
             "eyebrow": "Books + Essays",
             "title": "Essays and the book",
             "text": "The essays, and The Stories We Told.",
-            "url": "/blogs/essays"
+            "url": "/blogs/essays",
+            "accent": "essays"
           }
         },
         "d3": {
@@ -41,7 +43,8 @@
             "eyebrow": "Professional Education",
             "title": "Training for clinicians",
             "text": "Courses, workshops, consultation, and supervision for clinicians who want depth rather than a certificate.",
-            "url": "/pages/professional-education"
+            "url": "/pages/professional-education",
+            "accent": "edu"
           }
         }
       },

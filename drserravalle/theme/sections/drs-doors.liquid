@@ -2,7 +2,7 @@
   {%- if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif -%}
   <div class="doors__grid">
     {%- for block in section.blocks -%}
-      <a class="door" href="{{ block.settings.url }}" {{ block.shopify_attributes }}>
+      <a class="door acc-{{ block.settings.accent }}" href="{{ block.settings.url }}" {{ block.shopify_attributes }}>
         <div class="door__img">
           {%- if block.settings.image -%}{{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 33vw, 100vw' }}{%- endif -%}
         </div>
@@ -23,6 +23,7 @@
     "name": "Door",
     "settings": [
       { "type": "image_picker", "id": "image", "label": "Photograph" },
+      { "type": "select", "id": "accent", "label": "Accent", "default": "bridge", "options": [ { "value": "bridge", "label": "Cobalt, Make It Make Sense" }, { "value": "edu", "label": "Forest, Professional Education" }, { "value": "essays", "label": "Oxblood, Books + Essays" } ] },
       { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
       { "type": "text", "id": "title", "label": "Title" },
       { "type": "textarea", "id": "text", "label": "Text" },
