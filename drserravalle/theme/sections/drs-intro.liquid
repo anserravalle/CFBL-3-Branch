@@ -1,0 +1,46 @@
+{%- comment -%}
+  Home hero: Niki, her brief bio, and a quote about her why.
+  The quote must be Niki's own words. Never fill it with drafted copy.
+{%- endcomment -%}
+<section class="intro">
+  <div class="intro__grid wrap">
+    <figure class="intro__img">
+      {%- if section.settings.image -%}
+        {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 860px) 40vw, 100vw', alt: section.settings.image.alt | default: 'Dr. Niki Serravalle', style: section.settings.focal }}
+      {%- endif -%}
+    </figure>
+    <div class="intro__copy">
+      <h1>{{ section.settings.heading }}</h1>
+      {%- if section.settings.bio != blank %}<div class="intro__bio">{{ section.settings.bio }}</div>{% endif -%}
+      {%- if section.settings.quote != blank -%}
+        <blockquote class="intro__quote">
+          <p>{{ section.settings.quote }}</p>
+          {%- if section.settings.cite != blank %}<cite>{{ section.settings.cite }}</cite>{% endif -%}
+        </blockquote>
+      {%- endif -%}
+      <p class="intro__links">
+        {%- if section.settings.link1_label != blank %}<a class="btn" href="{{ section.settings.link1_url }}">{{ section.settings.link1_label }}</a>{% endif -%}
+        {%- if section.settings.link2_label != blank %}<a href="{{ section.settings.link2_url }}">{{ section.settings.link2_label }} &rarr;</a>{% endif -%}
+      </p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "DRS intro",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Portrait" },
+    { "type": "text", "id": "focal", "label": "Image crop (CSS)", "info": "Default crops Dr_Niki_MUSA.jpg so the shelf signs fall outside the frame.", "default": "width:142%;height:142%;max-width:none;transform:translateY(-20%);" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Dr. Niki Serravalle" },
+    { "type": "richtext", "id": "bio", "label": "Brief bio" },
+    { "type": "textarea", "id": "quote", "label": "Quote about her why", "info": "Niki's own words only." },
+    { "type": "text", "id": "cite", "label": "Attribution" },
+    { "type": "text", "id": "link1_label", "label": "Button label" },
+    { "type": "url", "id": "link1_url", "label": "Button link" },
+    { "type": "text", "id": "link2_label", "label": "Second link label" },
+    { "type": "url", "id": "link2_url", "label": "Second link" }
+  ],
+  "presets": [{ "name": "DRS intro" }]
+}
+{% endschema %}

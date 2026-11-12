@@ -1,17 +1,6 @@
 {
   "layout": "drs",
   "sections": {
-    "hero": {
-      "type": "drs-hero",
-      "settings": {
-        "eyebrow": "Psychologist, author, educator",
-        "heading": "Make it make sense.",
-        "text": "<p>Two decades of clinical work in trauma and psychological assessment, turned into writing for the people living it and training for the clinicians doing it.</p>",
-        "cta_label": "Read Make It Make Sense",
-        "cta_url": "/blogs/make-it-make-sense",
-        "image": "shopify://shop_images/Dr_Niki_MUSA.jpg"
-      }
-    },
     "doors": {
       "type": "drs-doors",
       "settings": {
@@ -93,10 +82,25 @@
         "count": 3,
         "lead": false
       }
+    },
+    "intro": {
+      "type": "drs-intro",
+      "settings": {
+        "image": "shopify://shop_images/Dr_Niki_MUSA.jpg",
+        "focal": "width:142%;height:142%;max-width:none;transform:translateY(-20%);",
+        "heading": "Dr. Niki Serravalle",
+        "bio": "<p>A licensed psychologist and the founder of Center for Balanced Living in Townsend, Delaware. Her work centers on psychological evaluation, trauma, and the training of other clinicians, built on more than two decades of clinical experience. She is the author of <em>The Stories We Told</em>.</p>",
+        "quote": "A space where the clinical, the literary, and the personal meet on the page.",
+        "cite": "Niki Serravalle, on why she writes",
+        "link1_label": "Read Make It Make Sense",
+        "link1_url": "/blogs/make-it-make-sense",
+        "link2_label": "About",
+        "link2_url": "/pages/about"
+      }
     }
   },
   "order": [
-    "hero",
+    "intro",
     "doors",
     "mims",
     "book",

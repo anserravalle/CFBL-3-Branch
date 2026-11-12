@@ -135,9 +135,13 @@ imported list and new signups land in the same segment.
       feeds and admin. Pick one.
 
 - [ ] `Dr_Niki_MUSA.jpg` (office portrait, used as the home hero) shows a shelf sign
-      reading "...low-vibin' sketchy-ass energy..." above her shoulder. Replace, retouch
-      or crop before the home page goes public. Check other photos taken in the office
+      reading "...low-vibin' sketchy-ass energy..." above her shoulder, plus "#Believe" and
+      "Be Here Now" signs. The home hero crops them out (waist-up crop, set in the intro
+      section). A retouched file is still better before the photo is used anywhere else. Check other photos taken in the office
       for the same sign.
+
+- [ ] Home hero quote is a stand-in from MUSA "Why I Write". Replace with Niki's own
+      line about her why for the whole site.
 
 ## Cutover day, 1 December (in this order)
 
