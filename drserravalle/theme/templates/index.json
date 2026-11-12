@@ -1,61 +1,19 @@
 {
   "layout": "drs",
   "sections": {
-    "doors": {
-      "type": "drs-doors",
-      "settings": {
-        "heading": ""
-      },
-      "blocks": {
-        "d1": {
-          "type": "door",
-          "settings": {
-            "eyebrow": "Every other week",
-            "title": "Make It Make Sense",
-            "text": "Psychology explained plainly, with the research named and the limits stated.",
-            "url": "/blogs/make-it-make-sense",
-            "accent": "bridge",
-            "image": "shopify://shop_images/MUSA_writing_desk.jpg"
-          }
-        },
-        "d2": {
-          "type": "door",
-          "settings": {
-            "eyebrow": "Books + Essays",
-            "title": "Essays and the book",
-            "text": "The essays, and The Stories We Told.",
-            "url": "/blogs/essays",
-            "accent": "essays",
-            "image": "shopify://shop_images/musa-phoenix-rising.jpg"
-          }
-        },
-        "d3": {
-          "type": "door",
-          "settings": {
-            "eyebrow": "Professional Education",
-            "title": "Training for clinicians",
-            "text": "Courses, workshops, consultation, and supervision for clinicians who want depth rather than a certificate.",
-            "url": "/pages/professional-education",
-            "accent": "edu",
-            "image": "shopify://shop_images/photo-1763098844932-7240ee8ff180.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "d1",
-        "d2",
-        "d3"
-      ]
-    },
     "mims": {
-      "type": "drs-latest",
+      "type": "drs-band",
       "settings": {
+        "color": "cobalt",
+        "from": "oxblood",
+        "eyebrow": "Every other week",
+        "heading": "Make It Make Sense",
+        "text": "<p>Psychology explained plainly, with the research named and the limits stated.</p>",
+        "link_label": "All posts",
+        "link_url": "/blogs/make-it-make-sense",
+        "image": "shopify://shop_images/MUSA_writing_desk.jpg",
         "blog": "make-it-make-sense",
-        "eyebrow": "Make It Make Sense",
-        "heading": "Recent",
-        "all_label": "All posts",
-        "count": 4,
-        "lead": true
+        "count": 3
       }
     },
     "book": {
@@ -67,20 +25,9 @@
         "excerpt": "<p>He dug around, pulled an old receipt from his pocket, and even ran out to his truck to find a pen. Right there on the back of that crumpled slip, he sketched a small house. Simple. Nestled in the woods.</p>",
         "buy_label": "Order the book",
         "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
-        "more_label": "About the book",
-        "more_url": "/pages/the-stories-we-told",
+        "more_label": "Read the essays",
+        "more_url": "/blogs/essays",
         "cover": "shopify://shop_images/MUSA_TheStoriesWeTold_Cover.png"
-      }
-    },
-    "essays": {
-      "type": "drs-latest",
-      "settings": {
-        "blog": "essays",
-        "eyebrow": "Books + Essays",
-        "heading": "Essays",
-        "all_label": "All essays",
-        "count": 3,
-        "lead": false
       }
     },
     "intro": {
@@ -94,15 +41,31 @@
         "link1_label": "Read Make It Make Sense",
         "link1_url": "/blogs/make-it-make-sense",
         "link2_label": "About",
-        "link2_url": "/pages/about"
+        "link2_url": "/pages/about",
+        "focal": "width:142%;height:142%;max-width:none;transform:translateY(-20%);"
+      }
+    },
+    "edu": {
+      "type": "drs-band",
+      "settings": {
+        "color": "forest",
+        "from": "cobalt",
+        "to_footer": true,
+        "flip": true,
+        "eyebrow": "Professional Education",
+        "heading": "Training for clinicians",
+        "text": "<p>Courses, workshops, consultation, and supervision for clinicians who want depth rather than a certificate. Every central claim is sorted as established, emerging, theoretical, or clinical wisdom.</p>",
+        "link_label": "See the programs",
+        "link_url": "/pages/professional-education",
+        "image": "shopify://shop_images/photo-1763098844932-7240ee8ff180.jpg",
+        "count": 0
       }
     }
   },
   "order": [
     "intro",
-    "doors",
-    "mims",
     "book",
-    "essays"
+    "mims",
+    "edu"
   ]
 }

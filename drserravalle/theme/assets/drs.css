@@ -369,3 +369,49 @@ p { margin: 0 0 1.1em; }
 .book-band .book__excerpt { border-left-color: var(--oxblood); }
 .book-band .btn { background: var(--oxblood); border-color: var(--oxblood); color: var(--bone); }
 .book-band a:not(.btn) { color: var(--oxblood); }
+
+/* Brand bands (Niki, 12 Nov): each home section sits on its own brand color and
+   fades into the next. Oxblood (Niki, the book, the essays) to Cobalt (Make It Make
+   Sense) to Forest (Professional Education) to Deep Ink (footer). The Oxblood to
+   Cobalt fade passes through Warm Gray #3D2D29 so the midpoint is not muddy violet. */
+.intro { background: var(--oxblood); padding-bottom: 72px; }
+.blk.book-band { background: var(--oxblood); color: var(--bone); padding-top: 24px; }
+.book-band h2, .book-band .meta { color: var(--bone); }
+.book-band .book__sub { color: rgba(241, 232, 216, .8); }
+.book-band .book__excerpt { border-left-color: var(--ochre); }
+.book-band .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; }
+.book-band a:not(.btn) { color: var(--ochre); }
+.book-band .book { padding-bottom: 96px; }
+
+.band { --c: var(--cobalt); --from: var(--c); --mid: var(--c); color: var(--bone); padding: 260px 0 112px;
+  background: linear-gradient(180deg, var(--from) 0, var(--mid) 130px, var(--c) 280px, var(--c) 100%); }
+.band--cobalt { --c: var(--cobalt); }
+.band--forest { --c: var(--forest); }
+.band--oxblood { --c: var(--oxblood); }
+.band-from--oxblood { --from: var(--oxblood); --mid: #3D2D29; }
+.band-from--cobalt { --from: var(--cobalt); --mid: color-mix(in srgb, var(--cobalt) 50%, var(--forest)); }
+.band-from--forest { --from: var(--forest); --mid: color-mix(in srgb, var(--forest) 50%, var(--c)); }
+.band-from--bone { --from: var(--bone); --mid: color-mix(in srgb, var(--bone) 50%, var(--c)); }
+.band-from--none { padding-top: 112px; }
+.band--to-footer { background: linear-gradient(180deg, var(--from) 0, var(--mid) 130px, var(--c) 280px, var(--c) calc(100% - 260px), var(--deep-ink) 100%); padding-bottom: 300px; }
+.band__grid { display: grid; grid-template-columns: 6fr 6fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.band__grid--flip .band__img { order: -1; }
+.band h2 { color: var(--bone); font-size: clamp(2.2rem, 4.4vw, 3.4rem); }
+.band .eyebrow { color: var(--ochre); }
+.band__text { font-size: 1.15rem; color: rgba(241, 232, 216, .9); max-width: 34rem; }
+.band .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; }
+.band__img { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; box-shadow: 0 24px 48px rgba(0, 0, 0, .28); }
+.band__img img { width: 100%; height: 100%; object-fit: cover; }
+.band__posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 72px; padding-top: 32px; border-top: 1px solid rgba(197, 165, 114, .5); }
+.band__post { color: var(--bone); text-decoration: none; }
+.band__post-img { aspect-ratio: 3 / 2; overflow: hidden; margin-bottom: 12px; background: rgba(0, 0, 0, .15); }
+.band__post-img img { width: 100%; height: 100%; object-fit: cover; }
+.band__post .meta { color: var(--ochre); }
+.band__post h3 { color: var(--bone); font-size: 1.25rem; margin-top: 6px; }
+.band__post:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.sys-bridge .band--forest h2, .sys-bridge .band--forest h3 { font-family: 'Cormorant SC', Georgia, serif; }
+@media (max-width: 860px) { .band__grid { grid-template-columns: 1fr; } .band__posts { grid-template-columns: 1fr; } .band { padding-top: 200px; } }
+.site-foot { margin-top: 0; }
+/* Temporary: while the portrait still shows the shelf signs, an inline crop is set.
+   The card frame needs a fixed ratio and clipping only when that crop is present. */
+.intro__img:has(img[style]) { aspect-ratio: 3 / 4; overflow: hidden; }
