@@ -415,3 +415,20 @@ p { margin: 0 0 1.1em; }
 /* Temporary: while the portrait still shows the shelf signs, an inline crop is set.
    The card frame needs a fixed ratio and clipping only when that crop is present. */
 .intro__img:has(img[style]) { aspect-ratio: 3 / 4; overflow: hidden; }
+
+/* Softer images (Niki, 12 Nov: "so square"). Photographs dissolve into the band
+   color instead of sitting on it in a box. The book cover stays crisp. */
+.band__img { aspect-ratio: 4 / 5; box-shadow: none; max-width: 520px; justify-self: center;
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 52%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 52%, transparent 100%); }
+.band__post-img { aspect-ratio: 4 / 5; border-radius: 18px; background: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 70%, transparent 100%); }
+.band__post h3 { margin-top: -6px; }
+.intro__img { -webkit-mask-image: radial-gradient(ellipse 80% 78% at 50% 42%, #000 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 78% at 50% 42%, #000 60%, transparent 100%); }
+.intro__copy { margin-top: -40px; }
+/* Stronger: photos melt into the band; thumbnails take an arched top */
+.band__img { -webkit-mask-image: radial-gradient(ellipse 58% 56% at 50% 48%, #000 34%, transparent 100%);
+  mask-image: radial-gradient(ellipse 58% 56% at 50% 48%, #000 34%, transparent 100%); }
+.band__post-img { border-radius: 999px 999px 0 0; -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%); mask-image: linear-gradient(180deg, #000 62%, transparent 100%); }
