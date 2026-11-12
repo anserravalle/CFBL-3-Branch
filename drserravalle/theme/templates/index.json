@@ -8,7 +8,8 @@
         "heading": "Make it make sense.",
         "text": "<p>Two decades of clinical work in trauma and psychological assessment, turned into writing for the people living it and training for the clinicians doing it.</p>",
         "cta_label": "Read Make It Make Sense",
-        "cta_url": "/blogs/make-it-make-sense"
+        "cta_url": "/blogs/make-it-make-sense",
+        "image": "shopify://shop_images/Dr_Niki_MUSA.jpg"
       }
     },
     "doors": {
@@ -24,7 +25,8 @@
             "title": "Make It Make Sense",
             "text": "Psychology explained plainly, with the research named and the limits stated.",
             "url": "/blogs/make-it-make-sense",
-            "accent": "bridge"
+            "accent": "bridge",
+            "image": "shopify://shop_images/MUSA_writing_desk.jpg"
           }
         },
         "d2": {
@@ -34,7 +36,8 @@
             "title": "Essays and the book",
             "text": "The essays, and The Stories We Told.",
             "url": "/blogs/essays",
-            "accent": "essays"
+            "accent": "essays",
+            "image": "shopify://shop_images/musa-phoenix-rising.jpg"
           }
         },
         "d3": {
@@ -44,7 +47,8 @@
             "title": "Training for clinicians",
             "text": "Courses, workshops, consultation, and supervision for clinicians who want depth rather than a certificate.",
             "url": "/pages/professional-education",
-            "accent": "edu"
+            "accent": "edu",
+            "image": "shopify://shop_images/photo-1763098844932-7240ee8ff180.jpg"
           }
         }
       },
@@ -75,7 +79,8 @@
         "buy_label": "Order the book",
         "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
         "more_label": "About the book",
-        "more_url": "/pages/the-stories-we-told"
+        "more_url": "/pages/the-stories-we-told",
+        "cover": "shopify://shop_images/MUSA_TheStoriesWeTold_Cover.png"
       }
     },
     "essays": {

@@ -8,7 +8,8 @@
         "title": "The Stories We Told",
         "subtitle": "The Dance Between a Codependent and a Compulsive Liar",
         "buy_label": "Order the book",
-        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ"
+        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
+        "cover": "shopify://shop_images/MUSA_TheStoriesWeTold_Cover.png"
       }
     },
     "main": {
