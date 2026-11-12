@@ -1,0 +1,42 @@
+{%- liquid
+  assign cat = section.settings.cat_bridge
+  if template.name == 'index'
+    assign cat = section.settings.cat_home
+  endif
+  if blog.handle == 'essays' or article.blog.handle == 'essays' or template.suffix contains 'book' or template.suffix contains 'musa' or template.suffix contains 'writing'
+    assign cat = section.settings.cat_essays
+  elsif blog.handle == 'clinical-notes' or article.blog.handle == 'clinical-notes' or product or template.suffix contains 'education' or template.suffix contains 'program' or template.suffix contains 'policies'
+    assign cat = section.settings.cat_edu
+  elsif template.suffix contains 'about' or template.suffix contains 'speaking'
+    assign cat = section.settings.cat_home
+  endif
+-%}
+<header class="site-head">
+  <div class="wrap">
+    <a class="idn" href="{{ routes.root_url }}">
+      <span class="idn__name">Dr. Niki Serravalle</span>
+      {%- if cat != blank %}<span class="idn__cat">{{ cat }}</span>{% endif -%}
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        {%- assign nav_links = linklists['drs-main'].links -%}{%- if section.settings.menu != blank -%}{%- assign nav_links = section.settings.menu.links -%}{%- endif -%}
+        {%- for link in nav_links -%}
+          <li><a href="{{ link.url }}"{% if link.active or link.child_active %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "DRS header",
+  "settings": [
+    { "type": "link_list", "id": "menu", "label": "Menu", "info": "Empty uses drs-main." },
+    { "type": "text", "id": "cat_home", "label": "Category line, home and about", "default": "Psychologist, author, educator" },
+    { "type": "text", "id": "cat_bridge", "label": "Category line, Make It Make Sense", "default": "Make It Make Sense" },
+    { "type": "text", "id": "cat_essays", "label": "Category line, writing", "default": "Books + Essays" },
+    { "type": "text", "id": "cat_edu", "label": "Category line, training", "default": "Professional Education" }
+  ]
+}
+{% endschema %}

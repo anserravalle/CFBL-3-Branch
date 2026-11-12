@@ -1,0 +1,23 @@
+{
+  "layout": "drs",
+  "sections": {
+    "book": {
+      "type": "drs-book",
+      "settings": {
+        "imprint": "MUSA",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance Between a Codependent and a Compulsive Liar",
+        "buy_label": "Order the book",
+        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ"
+      }
+    },
+    "main": {
+      "type": "drs-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "book",
+    "main"
+  ]
+}

@@ -1,0 +1,100 @@
+{%- paginate blog.articles by 24 -%}
+<header class="page-head {% if blog.handle == 'essays' %}measure{% else %}wrap{% endif %}">
+  <p class="eyebrow">{% if blog.handle == 'essays' %}Essays{% else %}{{ section.settings.eyebrow }}{% endif %}</p>
+  <h1>{% if blog.handle == 'essays' %}{{ section.settings.essays_title }}{% else %}{{ blog.title }}{% endif %}</h1>
+  {%- liquid
+    assign lede = section.settings.lede_default
+    if blog.handle == 'essays'
+      assign lede = section.settings.lede_essays
+    elsif blog.handle == 'make-it-make-sense'
+      assign lede = section.settings.lede_mims
+    elsif blog.handle == 'clinical-notes'
+      assign lede = section.settings.lede_notes
+    endif
+  -%}
+  {%- if lede != blank %}<p class="lede">{{ lede }}</p>{% endif -%}
+</header>
+
+{%- if blog.handle == 'essays' -%}
+  {%- comment -%} A contents page. Series are grouped, newest series first, parts in reading order. {%- endcomment -%}
+  <div class="measure">
+    {%- assign seen = '' -%}
+    {%- for a in blog.articles -%}
+      {%- assign s = a.metafields.custom.series.value -%}
+      {%- if s != blank -%}
+        {%- assign key = '|' | append: s | append: '|' -%}
+        {%- unless seen contains key -%}
+          {%- assign seen = seen | append: key -%}
+          {%- assign parts = blog.articles | sort: 'published_at' -%}
+          {%- assign first = nil -%}
+          {%- for p in parts -%}{%- if p.metafields.custom.series.value == s and first == nil -%}{%- assign first = p -%}{%- endif -%}{%- endfor -%}
+          <p class="series-label eyebrow">{{ first.title | split: ':' | first }}</p>
+          <ol class="contents">
+            {%- for p in parts -%}
+              {%- if p.metafields.custom.series.value == s -%}
+                <li>
+                  <span class="meta">{{ p.published_at | date: '%b %-d, %Y' }}</span>
+                  <a href="{{ p.url }}"><h3>{{ p.title | split: ': ' | last }}</h3>
+                  <p>{{ p.excerpt_or_content | strip_html | truncatewords: 26 }}</p></a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ol>
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- assign singles = 0 -%}
+    {%- for a in blog.articles -%}{%- if a.metafields.custom.series.value == blank -%}{%- assign singles = singles | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- if singles > 0 -%}
+      <p class="series-label eyebrow">Single essays</p>
+      <ol class="contents">
+        {%- for a in blog.articles -%}
+          {%- if a.metafields.custom.series.value == blank -%}
+            <li>
+              <span class="meta">{{ a.published_at | date: '%b %-d, %Y' }}</span>
+              <a href="{{ a.url }}"><h3>{{ a.title }}</h3><p>{{ a.excerpt_or_content | strip_html | truncatewords: 26 }}</p></a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ol>
+    {%- endif -%}
+  </div>
+{%- else -%}
+  <div class="wrap">
+    <div class="cards">
+      {%- for a in blog.articles -%}
+        <a class="card{% if forloop.first and paginate.current_page == 1 %} card--lead{% endif %}" href="{{ a.url }}">
+          <div class="card__img">
+            {%- if a.image -%}{{ a.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 66vw, 100vw', alt: '' }}{%- endif -%}
+          </div>
+          <span class="meta">{{ a.published_at | date: '%B %-d, %Y' }}</span>
+          <h3>{{ a.title }}</h3>
+          {%- if forloop.first and paginate.current_page == 1 -%}<p>{{ a.excerpt_or_content | strip_html | truncatewords: 40 }}</p>{%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+    {%- if paginate.pages > 1 -%}
+      <nav class="pagination" aria-label="Pages">
+        {%- if paginate.previous %}<a href="{{ paginate.previous.url }}">&larr; Newer</a>{% endif -%}
+        <span>{{ paginate.current_page }} of {{ paginate.pages }}</span>
+        {%- if paginate.next %}<a href="{{ paginate.next.url }}">Older &rarr;</a>{% endif -%}
+      </nav>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "DRS blog",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Dr. Niki Serravalle" },
+    { "type": "text", "id": "essays_title", "label": "Essays page title", "default": "Essays" },
+    { "type": "textarea", "id": "lede_essays", "label": "Essays lede", "default": "Writing on psychology, relationships, the moment, and the fragility of being human." },
+    { "type": "textarea", "id": "lede_mims", "label": "Make It Make Sense lede", "default": "Grounded, research-informed essays on psychology, therapy, and the cultural moment." },
+    { "type": "textarea", "id": "lede_notes", "label": "Clinical Notes lede", "default": "" },
+    { "type": "textarea", "id": "lede_default", "label": "Other blogs lede", "default": "" }
+  ]
+}
+{% endschema %}

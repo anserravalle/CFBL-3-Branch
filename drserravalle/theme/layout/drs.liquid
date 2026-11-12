@@ -1,0 +1,56 @@
+<!doctype html>
+{%- liquid
+  # Which internal visual system this page renders in.
+  # bridge = Core Dr. Niki (Make It Make Sense, home, about)
+  # essays = Books + Essays (essays, the book, MUSA imprint)
+  # edu    = Professional Education (Institute programs, Clinical Notes, policies)
+  assign sys = 'bridge'
+  if blog.handle == 'essays' or article.blog.handle == 'essays'
+    assign sys = 'essays'
+  elsif blog.handle == 'clinical-notes'
+    assign sys = 'edu'
+  elsif product
+    assign sys = 'edu'
+  endif
+  if template.suffix contains 'book' or template.suffix contains 'musa' or template.suffix contains 'writing'
+    assign sys = 'essays'
+  elsif template.suffix contains 'education' or template.suffix contains 'program' or template.suffix contains 'policies'
+    assign sys = 'edu'
+  endif
+  if template.suffix contains 'about' or template.suffix contains 'speaking'
+    assign sys = 'bridge'
+  endif
+-%}
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <title>{{ page_title }}{% unless page_title contains 'Serravalle' %} | Dr. Niki Serravalle{% endunless %}</title>
+  {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+  <meta property="og:site_name" content="Dr. Niki Serravalle">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  {%- if article.image %}<meta property="og:image" content="{{ article.image | image_url: width: 1200 }}">
+  {%- elsif page.metafields.custom.og_image %}<meta property="og:image" content="{{ page.metafields.custom.og_image | image_url: width: 1200 }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- case sys -%}
+    {%- when 'essays' -%}
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    {%- when 'edu' -%}
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    {%- else -%}
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=DM+Serif+Display&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  {%- endcase -%}
+  {{ 'drs.css' | asset_url | stylesheet_tag }}
+  {{ content_for_header }}
+</head>
+<body class="sys-{{ sys }} tpl-{{ template.name }}{% if template.suffix %} tpl-{{ template.name }}-{{ template.suffix }}{% endif %}">
+  <a class="skip" href="#main">Skip to content</a>
+  {% section 'drs-header' %}
+  <main id="main">
+    {{ content_for_layout }}
+  </main>
+  {% section 'drs-footer' %}
+</body>
+</html>

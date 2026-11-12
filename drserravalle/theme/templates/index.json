@@ -1,0 +1,97 @@
+{
+  "layout": "drs",
+  "sections": {
+    "hero": {
+      "type": "drs-hero",
+      "settings": {
+        "eyebrow": "Psychologist, author, educator",
+        "heading": "Make it make sense.",
+        "text": "<p>Two decades of clinical work in trauma and psychological assessment, turned into writing for the people living it and training for the clinicians doing it.</p>",
+        "cta_label": "Read Make It Make Sense",
+        "cta_url": "/blogs/make-it-make-sense"
+      }
+    },
+    "doors": {
+      "type": "drs-doors",
+      "settings": {
+        "heading": ""
+      },
+      "blocks": {
+        "d1": {
+          "type": "door",
+          "settings": {
+            "eyebrow": "Every other week",
+            "title": "Make It Make Sense",
+            "text": "Psychology explained plainly, with the research named and the limits stated.",
+            "url": "/blogs/make-it-make-sense"
+          }
+        },
+        "d2": {
+          "type": "door",
+          "settings": {
+            "eyebrow": "Books + Essays",
+            "title": "Essays and the book",
+            "text": "The essays, and The Stories We Told.",
+            "url": "/blogs/essays"
+          }
+        },
+        "d3": {
+          "type": "door",
+          "settings": {
+            "eyebrow": "Professional Education",
+            "title": "Training for clinicians",
+            "text": "Courses, workshops, consultation, and supervision for clinicians who want depth rather than a certificate.",
+            "url": "/pages/professional-education"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3"
+      ]
+    },
+    "mims": {
+      "type": "drs-latest",
+      "settings": {
+        "blog": "make-it-make-sense",
+        "eyebrow": "Make It Make Sense",
+        "heading": "Recent",
+        "all_label": "All posts",
+        "count": 4,
+        "lead": true
+      }
+    },
+    "book": {
+      "type": "drs-book",
+      "settings": {
+        "imprint": "MUSA",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance Between a Codependent and a Compulsive Liar",
+        "excerpt": "<p>He dug around, pulled an old receipt from his pocket, and even ran out to his truck to find a pen. Right there on the back of that crumpled slip, he sketched a small house. Simple. Nestled in the woods.</p>",
+        "buy_label": "Order the book",
+        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
+        "more_label": "About the book",
+        "more_url": "/pages/the-stories-we-told"
+      }
+    },
+    "essays": {
+      "type": "drs-latest",
+      "settings": {
+        "blog": "essays",
+        "eyebrow": "Books + Essays",
+        "heading": "Essays",
+        "all_label": "All essays",
+        "count": 3,
+        "lead": false
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "doors",
+    "mims",
+    "book",
+    "essays"
+  ]
+}

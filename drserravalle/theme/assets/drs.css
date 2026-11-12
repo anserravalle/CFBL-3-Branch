@@ -1,0 +1,246 @@
+/* drserravalle.com
+   One public identity, Dr. Niki Serravalle. Three internal systems, switched by body class.
+   No rainbow CFBL mark anywhere on this site. No pure black. */
+
+/* Core Dr. Niki, the bridge: borrows the navy and sand duotone */
+.sys-bridge {
+  --ground: #F5ECE1;
+  --field: #EED9C5;
+  --ink: #2B2420;
+  --head: #2B5275;
+  --accent: #2B5275;
+  --muted: #6B5D55;
+  --rule: rgba(43, 82, 117, .22);
+  --f-head: 'Cormorant SC', Georgia, serif;
+  --f-body: 'Lora', Georgia, serif;
+  --f-meta: 'Inter', system-ui, sans-serif;
+  --head-case: none;
+}
+/* Professional Education: a serious field guide */
+.sys-edu {
+  --ground: #F0EAE0;
+  --field: #EAE2D0;
+  --ink: #2A3530;
+  --head: #3D5A52;
+  --accent: #3D5A52;
+  --muted: #5E6F67;
+  --rule: rgba(61, 90, 82, .25);
+  --sage: #6F8F7A;
+  --mist: #B8C9BC;
+  --sky: #C2D7E9;
+  --f-head: 'Cormorant SC', Georgia, serif;
+  --f-body: 'Lora', Georgia, serif;
+  --f-meta: 'Inter', system-ui, sans-serif;
+}
+/* Books + Essays: a book page. Breaks from Cormorant on purpose. */
+.sys-essays {
+  --ground: #F1E8D8;
+  --field: #EDE0C8;
+  --ink: #1F1A16;
+  --head: #1F1A16;
+  --accent: #6E1F23;
+  --muted: #4A4036;
+  --rule: rgba(74, 64, 54, .28);
+  --ochre: #C5A572;
+  --f-head: 'DM Serif Display', Georgia, serif;
+  --f-body: 'EB Garamond', Georgia, serif;
+  --f-meta: 'EB Garamond', Georgia, serif;
+}
+
+/* A block can render in another system on any page */
+.blk { background: var(--ground); color: var(--ink); font-family: var(--f-body); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+.sys-essays { font-size: 1.25rem; line-height: 1.6; }
+.sys-essays .btn { background: var(--accent); border-color: var(--accent); color: var(--ground); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+h1, h2, h3 { font-family: var(--f-head); color: var(--head); font-weight: 500; line-height: 1.12; margin: 0 0 .5em; }
+.sys-essays h1, .sys-essays h2, .sys-essays h3 { font-weight: 400; }
+h1 { font-size: clamp(2.4rem, 5.5vw, 4.25rem); letter-spacing: -.005em; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); }
+h3 { font-size: 1.4rem; }
+p { margin: 0 0 1.1em; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--ground); padding: 8px 12px; z-index: 10; }
+
+.wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
+.measure { width: min(40rem, 100% - 32px); margin-inline: auto; }
+.meta, .eyebrow {
+  font-family: var(--f-meta);
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sys-essays .meta, .sys-essays .eyebrow { font-size: .95rem; letter-spacing: .04em; text-transform: none; font-style: italic; }
+.rule { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+
+/* Header: identity largest, category line underneath */
+.site-head { border-bottom: 1px solid var(--rule); background: var(--ground); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 0; flex-wrap: wrap; }
+.idn { text-decoration: none; color: var(--head); display: flex; flex-direction: column; line-height: 1.05; }
+.idn__name { font-family: var(--f-head); font-size: 1.65rem; }
+.sys-essays .idn__name { font-size: 1.55rem; }
+.idn__cat { font-family: var(--f-meta); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.sys-essays .idn__cat { text-transform: none; letter-spacing: .02em; font-style: italic; font-size: .95rem; }
+.nav { display: flex; gap: 22px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.nav a { font-family: var(--f-meta); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.sys-essays .nav a { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.nav a[aria-current] { color: var(--accent); border-bottom: 1px solid currentColor; }
+@media (max-width: 720px) { .nav { gap: 14px; } .site-head .wrap { padding: 16px 0; } }
+
+/* Footer */
+.site-foot { margin-top: 96px; border-top: 1px solid var(--rule); padding: 48px 0 40px; font-size: .95rem; }
+.site-foot__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+.site-foot ul { list-style: none; padding: 0; margin: 0; }
+.site-foot li { margin: 0 0 6px; }
+.site-foot a { color: var(--ink); text-decoration: none; }
+.site-foot a:hover { color: var(--accent); }
+.site-foot__practice { margin-top: 28px; color: var(--muted); font-size: .9rem; max-width: 34rem; }
+@media (max-width: 720px) { .site-foot__grid { grid-template-columns: 1fr; } }
+
+/* Signup */
+.signup { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.signup input[type=email] { flex: 1 1 220px; padding: 12px 14px; border: 1px solid var(--rule); background: #fff8; font: inherit; font-size: 1rem; color: var(--ink); }
+.btn, .signup button {
+  display: inline-block; padding: 12px 20px; border: 1px solid var(--accent); background: var(--accent); color: var(--ground);
+  font-family: var(--f-meta); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; cursor: pointer;
+}
+.sys-essays .btn, .sys-essays .signup button { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.btn--quiet { background: transparent; color: var(--accent); }
+.form-note { font-size: .9rem; color: var(--muted); margin-top: 8px; }
+
+/* Hero: photograph carries weight, type sits beside it, asymmetric */
+.hero { display: grid; grid-template-columns: 7fr 5fr; min-height: 560px; }
+.hero__img { position: relative; background: var(--field); overflow: hidden; }
+.hero__img img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.hero__copy { padding: clamp(32px, 6vw, 88px); display: flex; flex-direction: column; justify-content: flex-end; }
+.hero__copy p { font-size: 1.2rem; max-width: 30rem; }
+.hero--flip { grid-template-columns: 5fr 7fr; }
+.hero--flip .hero__img { order: 2; }
+@media (max-width: 860px) { .hero, .hero--flip { grid-template-columns: 1fr; } .hero__img { min-height: 340px; } .hero--flip .hero__img { order: 0; } }
+
+/* Doors: three destinations within the one identity */
+.doors { padding: 88px 0 24px; }
+.doors__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 32px; }
+.door { text-decoration: none; color: var(--ink); display: block; }
+.door__img { aspect-ratio: 4 / 5; background: var(--field); overflow: hidden; margin-bottom: 18px; }
+.door__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.door:hover .door__img img { transform: scale(1.02); }
+.door h3 { margin-bottom: .3em; }
+.door p { font-size: 1rem; color: var(--muted); }
+@media (max-width: 860px) { .doors__grid { grid-template-columns: 1fr; } .door__img { aspect-ratio: 3 / 2; } }
+
+/* Lists of writing */
+.latest { padding: 72px 0 0; }
+.latest__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; }
+.card { text-decoration: none; color: var(--ink); }
+.card__img { aspect-ratio: 3 / 2; background: var(--field); overflow: hidden; margin-bottom: 14px; }
+.card__img img { width: 100%; height: 100%; object-fit: cover; }
+.card h3 { font-size: 1.35rem; margin: 6px 0 8px; }
+.card p { font-size: 1rem; color: var(--muted); margin: 0; }
+.card--lead { grid-column: span 2; }
+.card--lead .card__img { aspect-ratio: 16 / 9; }
+.card--lead h3 { font-size: 2rem; }
+@media (max-width: 860px) { .cards { grid-template-columns: 1fr; } .card--lead { grid-column: auto; } }
+
+/* Essays index: a contents page, single column */
+.contents { list-style: none; padding: 0; margin: 0; }
+.contents li { display: grid; grid-template-columns: 7rem 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid var(--rule); }
+.contents h3 { margin: 0 0 4px; font-size: 1.6rem; }
+.contents a { color: var(--ink); text-decoration: none; }
+.contents a:hover h3 { color: var(--accent); }
+@media (max-width: 600px) { .contents li { grid-template-columns: 1fr; gap: 4px; } }
+.series-label { margin: 56px 0 4px; }
+
+/* Article */
+.art-head { padding: 72px 0 32px; }
+.art-head h1 { margin-top: 12px; }
+.art-img { margin: 0 auto 56px; width: min(1100px, 100% - 32px); }
+.art-img img { width: 100%; max-height: 72vh; object-fit: cover; }
+.prose { font-size: 1.15rem; }
+.sys-essays .prose { font-size: 1.3rem; }
+.prose h2 { font-size: 1.75rem; margin-top: 1.8em; }
+.prose h3 { margin-top: 1.6em; }
+.prose blockquote { margin: 2em 0; padding: 0 0 0 1.2em; border-left: 2px solid var(--accent); font-style: italic; }
+.prose img { margin: 2em 0; }
+.prose iframe { max-width: 100%; }
+.prose ul, .prose ol { padding-left: 1.2em; }
+/* Books + Essays: drop cap on the first paragraph */
+.sys-essays .prose > p:first-of-type::first-letter {
+  font-family: var(--f-head); float: left; font-size: 4.6em; line-height: .82; padding: .06em .1em 0 0; color: var(--accent);
+}
+.sys-essays .prose > p:first-child em:only-child { font-size: .9em; }
+/* pull quote with hairlines */
+.pull { font-family: var(--f-head); font-size: 1.9rem; line-height: 1.25; color: var(--accent); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 24px 0; margin: 2em 0; }
+
+.next-step { margin: 64px 0 0; padding: 28px 32px; background: var(--field); border-left: 3px solid var(--accent); }
+.next-step__title { font-family: var(--f-head); font-size: 1.6rem; color: var(--head); margin: 4px 0 8px; line-height: 1.2; }
+.next-step__links a { font-family: var(--f-meta); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; margin-right: 18px; }
+.disclaimer { font-size: .95rem; color: var(--muted); font-style: italic; margin-top: 48px; }
+
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.pager a { text-decoration: none; color: var(--ink); display: block; padding: 18px 0; }
+.pager a:hover .pager__t { color: var(--accent); }
+.pager__t { font-family: var(--f-head); font-size: 1.25rem; display: block; margin-top: 4px; line-height: 1.25; }
+.pager__r { text-align: right; }
+.series-next { margin-top: 56px; padding: 24px 28px; border: 1px solid var(--accent); }
+.series-next a { text-decoration: none; color: var(--ink); }
+.series-next .pager__t { color: var(--accent); }
+@media (max-width: 600px) { .pager { grid-template-columns: 1fr; } .pager__r { text-align: left; } }
+
+/* Page body */
+.page-head { padding: 80px 0 24px; }
+.page-head .lede { font-size: 1.3rem; color: var(--muted); max-width: 36rem; }
+.split { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 6vw, 88px); align-items: start; padding: 32px 0; }
+.split__img { background: var(--field); position: sticky; top: 24px; }
+.split__img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split__img { position: static; } }
+
+/* Book feature */
+.book { display: grid; grid-template-columns: 4fr 6fr; gap: clamp(32px, 6vw, 96px); align-items: center; padding: 96px 0; }
+.book__cover { background: var(--field); aspect-ratio: 2 / 3; overflow: hidden; box-shadow: 0 18px 40px rgba(31, 26, 22, .18); }
+.book__cover img { width: 100%; height: 100%; object-fit: cover; }
+.book__sub { font-style: italic; font-size: 1.35rem; color: var(--muted); margin-top: -.3em; }
+.book__excerpt { font-size: 1.15rem; border-left: 1px solid var(--rule); padding-left: 1.2em; margin: 1.6em 0; }
+@media (max-width: 860px) { .book { grid-template-columns: 1fr; padding: 56px 0; } .book__cover { max-width: 320px; } }
+
+/* Professional Education: evidence tiers */
+.tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 32px 0; }
+.tier { padding: 20px 20px 22px 0; }
+.tier + .tier { padding-left: 20px; border-left: 1px solid var(--rule); }
+.tier h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.tier p { font-size: .95rem; color: var(--muted); margin: 0; }
+@media (max-width: 860px) { .tiers { grid-template-columns: 1fr 1fr; } .tier:nth-child(3) { border-left: 0; padding-left: 0; } }
+.programs { list-style: none; padding: 0; margin: 0; }
+.program { display: grid; grid-template-columns: 3fr 6fr 2fr; gap: 28px; padding: 32px 0; border-top: 1px solid var(--rule); align-items: start; }
+.program__img { aspect-ratio: 4 / 3; background: var(--field); overflow: hidden; }
+.program__img img { width: 100%; height: 100%; object-fit: cover; }
+.program h3 { margin-bottom: 6px; }
+.program__facts { font-family: var(--f-meta); font-size: .85rem; color: var(--muted); }
+.program__facts strong { display: block; color: var(--ink); font-size: 1rem; font-weight: 500; }
+.ce { font-family: var(--f-meta); font-size: .8rem; letter-spacing: .04em; color: var(--head); background: var(--mist, var(--field)); display: inline-block; padding: 3px 8px; margin: 4px 0 10px; }
+@media (max-width: 860px) { .program { grid-template-columns: 1fr; } }
+
+/* Product (Institute registration) */
+.prod { display: grid; grid-template-columns: 6fr 5fr; gap: clamp(32px, 6vw, 80px); padding: 64px 0; align-items: start; }
+.prod__media img { width: 100%; }
+.prod__buy { position: sticky; top: 24px; }
+.prod__price { font-family: var(--f-meta); font-size: 1.1rem; margin: 8px 0 20px; }
+.prod select { width: 100%; padding: 10px; font: inherit; margin-bottom: 12px; border: 1px solid var(--rule); background: transparent; }
+@media (max-width: 860px) { .prod { grid-template-columns: 1fr; } .prod__buy { position: static; } }
+
+.pagination { display: flex; gap: 16px; justify-content: center; margin-top: 48px; font-family: var(--f-meta); font-size: .9rem; }

@@ -1,0 +1,35 @@
+<section class="doors wrap">
+  {%- if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif -%}
+  <div class="doors__grid">
+    {%- for block in section.blocks -%}
+      <a class="door" href="{{ block.settings.url }}" {{ block.shopify_attributes }}>
+        <div class="door__img">
+          {%- if block.settings.image -%}{{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 33vw, 100vw' }}{%- endif -%}
+        </div>
+        {%- if block.settings.eyebrow != blank %}<p class="eyebrow">{{ block.settings.eyebrow }}</p>{% endif -%}
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.text }}</p>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "DRS doors",
+  "settings": [{ "type": "text", "id": "heading", "label": "Heading" }],
+  "blocks": [{
+    "type": "door",
+    "name": "Door",
+    "settings": [
+      { "type": "image_picker", "id": "image", "label": "Photograph" },
+      { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+      { "type": "text", "id": "title", "label": "Title" },
+      { "type": "textarea", "id": "text", "label": "Text" },
+      { "type": "url", "id": "url", "label": "Link" }
+    ]
+  }],
+  "max_blocks": 3,
+  "presets": [{ "name": "DRS doors" }]
+}
+{% endschema %}

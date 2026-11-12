@@ -1,0 +1,151 @@
+# drserravalle.com: build state and cutover runbook
+
+Started 12 November 2026. Read `HANDOFF_2026-11-12.md` first for the decision itself.
+
+**Decision recorded 12 November 2026, Niki: the Institute moves by 1 December 2026,**
+before the Q1 promotion. Under the agreed rule, that means drserravalle.com must be
+able to sell the Q1 programs by 1 December, and the CFBL store stops selling them on
+the same day. Never both at once, never mid-promotion.
+
+## The two stores
+
+| | balancedlivingde.com | drserravalle.com |
+|---|---|---|
+| Store name | Center for Balanced Living | Dr. Niki Serravalle |
+| myshopify | (CFBL store) | `jjqgvb-pp.myshopify.com` |
+| Plan | | Basic |
+| Live theme | `CFBL v2.25 parent group links` | Whisper (Shopify default, untouched) |
+| Build theme | | **Horizon, unpublished**, `gid://shopify/OnlineStoreTheme/159294324854` |
+
+The Shopify connector serves one store at a time. Everything in this file marked
+**[CFBL]** needs the connector switched back to the CFBL store, which means Niki
+re-authorizes.
+
+## What exists on drserravalle.com now (12 Nov)
+
+Nothing below is visible to the public. Pages and articles are hidden, products are
+draft, and the theme is unpublished.
+
+- The four Shopify "Example product" listings, which were active and public, are now **draft**.
+- Blogs: `essays` (Essays), `make-it-make-sense` (Make It Make Sense), `clinical-notes`
+  (Clinical Notes). Comments closed on all three.
+- Article metafield definitions `custom.series` (text) and `custom.next_step` (JSON:
+  eyebrow, title, text, links `[{label, url}]`).
+- 30 articles imported **hidden**, original publish dates kept, tagged `migrated-from-cfbl`:
+  8 essays (both series), 22 Make It Make Sense. Source of truth for the import is
+  `source/articles_manifest.json`, scraped 12 Nov from the CFBL public storefront.
+- Link rewriting in the bodies: practice pages (`/pages/...`) became absolute
+  `https://balancedlivingde.com/pages/...` so the posts keep feeding the practice;
+  links between moving posts became local (`/blogs/make-it-make-sense/...`).
+- Every Make It Make Sense next-step card was recovered from the rendered CFBL page
+  and stored in `custom.next_step` with absolute CFBL URLs. The 988 card on Recognizing
+  the Signs of Suicide Risk keeps `tel:988` and its "call 911" line.
+- Theme build in `theme/` (layout `drs`, stylesheet, 10 sections, 11 templates),
+  uploaded to Horizon.
+- Pages, hidden: About, Speaking, The Stories We Told, MUSA, Professional Education,
+  EMDR Consultation, Clinical Supervision, Continuing Education Policies. Bodies in
+  `import/pages.json`. Anything not in the record is marked `[NEEDS NIKI]`.
+
+## How the theme decides the visual system
+
+`layout/drs.liquid` sets a body class, and `assets/drs.css` defines each system's
+tokens on that class.
+
+| Page | System | Category line |
+|---|---|---|
+| Home, About, Speaking, Make It Make Sense | `sys-bridge`, navy and sand duotone, Cormorant SC and Lora | Psychologist, author, educator / Make It Make Sense |
+| Essays, the book, MUSA (`page.book`, `page.musa`) | `sys-essays`, Bone, Oxblood, DM Serif Display, EB Garamond, drop cap | Books + Essays |
+| Professional Education, consultation, supervision, policies, products, Clinical Notes | `sys-edu`, Forest, Sage, Paper, Cormorant SC, Lora, Inter for metadata | Professional Education |
+
+Any block can render in another system by carrying `class="blk sys-essays"`. The book
+feature on the home page does this. The rainbow CFBL mark appears nowhere on this
+site, per Professional Education's avoid list. The footer carries one practice
+cross-link.
+
+The newsletter form tags subscribers `newsletter` plus a list tag by system:
+`list-mims`, `list-essays` or `list-institute`. `list-mims` matches the CFBL tag so the
+imported list and new signups land in the same segment.
+
+## Before 1 December: Niki only (Shopify admin, drserravalle.com)
+
+1. **Payments.** Settings, Payments: activate Shopify Payments. Without it the Institute
+   products cannot sell.
+2. **Store name** has a trailing space ("Dr. Niki Serravalle "). It shows at checkout. Settings, General.
+3. **Sender email** and domain authentication for drserravalle.com, so Make It Make Sense
+   email does not land in spam.
+4. **Refund policy.** Settings, Policies. It must say the same thing as the CE
+   policies page: full refund at 7 or more days in writing; inside 7 days, one free
+   transfer or a refund less 10 percent; none after the program begins.
+5. **Customer accounts** and the Whisper theme can stay as they are. Horizon replaces
+   Whisper at cutover.
+6. Review the hidden pages and the theme preview (Online Store, Themes, Horizon, Preview).
+
+## Before 1 December: Claude
+
+- [ ] **[CFBL]** Read every Institute product record (`descriptionHtml`, variants,
+      `inventoryQuantity`, `inventoryPolicy`, `tracked`) and recreate each on
+      drserravalle.com as **draft**, same handle, CE language copied exactly. Public
+      `products.json` is in `source/` as a cross-check, never as the record.
+- [ ] **[CFBL]** Check for Q1 orders. Each seat sold on CFBL reduces seats on the new
+      product by one. Those registrants stay served from CFBL.
+- [ ] **[CFBL]** Export customers tagged `list-mims` with marketing consent, then import
+      into drserravalle.com. Keep the consent column. Never import anyone who did not
+      consent.
+- [ ] Fill the Professional Education program rows (theme editor, `page.education`)
+      once the products exist.
+- [ ] Move What the Doctor Is Reading from the CFBL Institute page into Clinical Notes
+      or a section on Professional Education.
+- [x] Menus `drs-main`, `drs-footer-read`, `drs-footer-more` created 12 Nov. `main-menu` is left alone because the live Whisper theme reads it. Header order: Make It Make Sense, Essays, The Book,
+      Professional Education, About.
+- [ ] Featured image decision: the Santa post's image is a generated clinician
+      (`Nano_Banana_2_-_A_female_psychologist...`). The hard rules forbid generated
+      clinicians. Replace it before the post goes public on the new site.
+- [ ] Re-host the five body images still served from the CFBL CDN
+      (`logosig.png`, the `SEOon_*` images in the suicide-risk post) into Shopify Files
+      on the new store, so a cleanup on CFBL never breaks them.
+
+## Cutover day, 1 December (in this order)
+
+1. **drserravalle.com:** set the Institute products active. Publish the hidden pages
+   and articles. Publish Horizon (Niki: theme publishing is blocked for the connector).
+2. **[CFBL]** Set the CFBL Institute products to draft. Hide, do not delete, the moving
+   articles and pages. A Shopify redirect only fires when the old path returns 404.
+3. **[CFBL]** Rename the CFBL blog handles (`essays` to `essays-archive`,
+   `balanced-living-blog-make-it-make-sense` to `mims-archive`, `clinical-notes` to
+   `clinical-notes-archive`). An empty blog still renders, so its index never 404s,
+   and the redirect never fires, until the handle changes.
+4. **[CFBL]** Import `redirects-writing.csv` and `redirects-institute.csv` (Online
+   Store, Navigation, URL Redirects, Import). All targets are absolute drserravalle.com URLs.
+5. **[CFBL]** Main menu `main-menu-2026`: remove Writing and most of For Professionals,
+   add one link, "Dr. Serravalle", to `https://drserravalle.com`. Keep
+   `/pages/niki-serravalle` (team bio) and `/pages/credentials` on CFBL, and add a
+   drserravalle.com link to the bio.
+6. Spot-check: five old essay and Make It Make Sense URLs, every Institute product URL,
+   and the 988 card.
+7. **EMDRIA and NBCC.** The provider name stays CFBL Institute. The provider web address
+   changes. Send the notice (draft below) the same day.
+
+## Notice to EMDRIA and NBCC (draft, Niki sends)
+
+> Subject: CFBL Institute, change of provider web address
+>
+> CFBL Institute's program pages and continuing education policies have moved from
+> balancedlivingde.com to drserravalle.com, effective December 1, 2026. The provider
+> name, administrator, contact email, policies and programs are unchanged. Former
+> addresses redirect automatically.
+>
+> Policies: https://drserravalle.com/pages/policies
+> Programs: https://drserravalle.com/pages/professional-education
+>
+> [Provider number] / Angela Serravalle, PsyD, LPCMH, NCC
+
+Legal name on the signature because this is a credentialing communication.
+
+## Copy conflicts found during the build (decide, then fix CFBL too)
+
+- The CFBL Institute FAQ says a cancellation gets "a transfer or a credit toward a future
+  cohort." The published CE policies say otherwise (refund rules above). The new site
+  carries only the policies.
+- The CFBL consultation page says "EMDRIA approved trainer." Not repeated on the new site
+  until confirmed, since EMDR Basic Training is listed as in development.
+- The CFBL MUSA page still calls the book "forthcoming." It was published today.

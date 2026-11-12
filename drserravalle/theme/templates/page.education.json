@@ -1,0 +1,25 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "Professional Education"
+      }
+    },
+    "programs": {
+      "type": "drs-programs",
+      "settings": {
+        "eyebrow": "Winter and spring 2027",
+        "heading": "Programs",
+        "show_tiers": true
+      },
+      "blocks": {},
+      "block_order": []
+    }
+  },
+  "order": [
+    "main",
+    "programs"
+  ]
+}
