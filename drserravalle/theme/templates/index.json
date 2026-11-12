@@ -13,7 +13,9 @@
         "link_url": "/blogs/make-it-make-sense",
         "image": "shopify://shop_images/MUSA_writing_desk.jpg",
         "blog": "make-it-make-sense",
-        "count": 3
+        "count": 3,
+        "frame": "parchment",
+        "caption": "Make It Make Sense"
       }
     },
     "book": {
@@ -58,7 +60,10 @@
         "link_label": "See the programs",
         "link_url": "/pages/professional-education",
         "image": "shopify://shop_images/photo-1763098844932-7240ee8ff180.jpg",
-        "count": 0
+        "count": 0,
+        "frame": "textbook",
+        "caption": "Clinical reasoning, sorted by the strength of its evidence.",
+        "page_title": "Where a claim sits"
       }
     }
   },

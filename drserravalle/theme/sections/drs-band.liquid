@@ -4,15 +4,37 @@
 {%- endcomment -%}
 {%- assign b = blogs[section.settings.blog] -%}
 <section class="band band--{{ section.settings.color }} band-from--{{ section.settings.from }}{% if section.settings.to_footer %} band--to-footer{% endif %}">
-  <div class="wrap band__grid{% if section.settings.flip %} band__grid--flip{% endif %}">
+  <div class="wrap band__grid{% if section.settings.flip %} band__grid--flip{% endif %}{% if section.settings.frame == 'textbook' %} band__grid--textbook{% endif %}">
     <div class="band__copy">
       {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
       <h2>{{ section.settings.heading }}</h2>
       {%- if section.settings.text != blank %}<div class="band__text">{{ section.settings.text }}</div>{% endif -%}
       {%- if section.settings.link_label != blank %}<p><a class="btn" href="{{ section.settings.link_url }}">{{ section.settings.link_label }}</a></p>{% endif -%}
     </div>
-    <figure class="band__img">
-      {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 50vw, 100vw' }}{%- endif -%}
+    <figure class="band__img frame--{{ section.settings.frame }}">
+      {%- case section.settings.frame -%}
+        {%- when 'parchment' -%}
+          <div class="paper">
+            {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 40vw, 100vw' }}{%- endif -%}
+            {%- if section.settings.caption != blank %}<figcaption>{{ section.settings.caption }}</figcaption>{% endif -%}
+          </div>
+        {%- when 'textbook' -%}
+          <div class="tb">
+            <div class="tb__page tb__page--l">
+              <p class="eyebrow">{{ section.settings.page_title }}</p>
+              <p class="tb__tier"><strong>Established</strong><span>Replicated across independent samples. Stated plainly.</span></p>
+              <p class="tb__tier"><strong>Emerging</strong><span>Real data, thin replication. Used, and named as early.</span></p>
+              <p class="tb__tier"><strong>Theoretical</strong><span>Organizes observations. Scaffolding, not explanation.</span></p>
+              <p class="tb__tier"><strong>Clinical wisdom</strong><span>What experienced clinicians do. Often correct, rarely tested.</span></p>
+            </div>
+            <div class="tb__page tb__page--r">
+              {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 25vw, 50vw' }}{%- endif -%}
+              {%- if section.settings.caption != blank %}<figcaption>{{ section.settings.caption }}</figcaption>{% endif -%}
+            </div>
+          </div>
+        {%- else -%}
+          {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 50vw, 100vw' }}{%- endif -%}
+      {%- endcase -%}
     </figure>
   </div>
   {%- if b.articles_count > 0 -%}
@@ -50,6 +72,12 @@
     { "type": "text", "id": "link_label", "label": "Button label" },
     { "type": "url", "id": "link_url", "label": "Button link" },
     { "type": "image_picker", "id": "image", "label": "Photograph" },
+    { "type": "select", "id": "frame", "label": "Frame", "default": "none", "options": [
+      { "value": "none", "label": "None" },
+      { "value": "parchment", "label": "Parchment print (Make It Make Sense)" },
+      { "value": "textbook", "label": "Open textbook (Professional Education)" } ] },
+    { "type": "text", "id": "caption", "label": "Caption" },
+    { "type": "text", "id": "page_title", "label": "Textbook left page heading", "default": "Where a claim sits" },
     { "type": "blog", "id": "blog", "label": "Show latest posts from" },
     { "type": "range", "id": "count", "label": "Posts", "min": 0, "max": 6, "step": 1, "default": 3 }
   ],
