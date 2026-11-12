@@ -31,7 +31,7 @@ draft, and the theme is unpublished.
   (Clinical Notes). Comments closed on all three.
 - Article metafield definitions `custom.series` (text) and `custom.next_step` (JSON:
   eyebrow, title, text, links `[{label, url}]`).
-- 30 articles imported **hidden**, original publish dates kept, tagged `migrated-from-cfbl`:
+- 30 articles imported **hidden** (verified 12 Nov: 8 essays, 22 Make It Make Sense, all unpublished, images on the new store's CDN, metafields set), original publish dates kept, tagged `migrated-from-cfbl`:
   8 essays (both series), 22 Make It Make Sense. Source of truth for the import is
   `source/articles_manifest.json`, scraped 12 Nov from the CFBL public storefront.
 - Link rewriting in the bodies: practice pages (`/pages/...`) became absolute
@@ -42,7 +42,7 @@ draft, and the theme is unpublished.
   the Signs of Suicide Risk keeps `tel:988` and its "call 911" line.
 - Theme build in `theme/` (layout `drs`, stylesheet, 10 sections, 11 templates),
   uploaded to Horizon.
-- Pages, hidden: About, Speaking, The Stories We Told, MUSA, Professional Education,
+- Pages, hidden (verified 12 Nov): About, Speaking, The Stories We Told, MUSA, Professional Education,
   EMDR Consultation, Clinical Supervision, Continuing Education Policies. Bodies in
   `import/pages.json`. Anything not in the record is marked `[NEEDS NIKI]`.
 
@@ -103,6 +103,15 @@ imported list and new signups land in the same segment.
 - [ ] Re-host the five body images still served from the CFBL CDN
       (`logosig.png`, the `SEOon_*` images in the suicide-risk post) into Shopify Files
       on the new store, so a cleanup on CFBL never breaks them.
+
+- [ ] Two small copy fixes, live on CFBL too:
+      *Everyone Is Stressed* ends "Copyright 2026 Center for Balanced Living", which is
+      wrong on drserravalle.com. The summary of *The Difference Between Clinical and
+      Just Being Hard* ends "Written for real people in the MOT area," which looks
+      unintended.
+- [ ] Bylines: the four Courtroom essays read "Niki Serravalle", everything else
+      "Dr. Niki Serravalle". The essay template hides the byline, so this only shows in
+      feeds and admin. Pick one.
 
 ## Cutover day, 1 December (in this order)
 
