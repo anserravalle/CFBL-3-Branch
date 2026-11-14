@@ -510,3 +510,8 @@ p { margin: 0 0 1.1em; }
 .intro__hook { font-family: 'Caveat', 'Segoe Script', cursive; font-weight: 600; font-size: clamp(3rem, 7vw, 5.25rem); line-height: 1; color: var(--bone); margin: 8px 0 28px; transform: rotate(-3deg); text-align: center; }
 .intro__hook::after { content: ''; display: block; width: 46%; height: 3px; margin: 10px auto 0; background: var(--ochre); border-radius: 3px; transform: rotate(-.6deg); }
 @media (max-width: 860px) { .intro__hook { margin-bottom: 20px; } }
+
+/* Brand marks on the home bands (Niki, 14 Nov): the MUSA mark on the book band,
+   the CFBL Institute mark on the Professional Education band. Transparent PNGs. */
+.band__logo, .book__logo { display: block; width: 170px; height: auto; margin: 0 0 14px -10px; }
+@media (max-width: 860px) { .band__logo, .book__logo { width: 140px; } }

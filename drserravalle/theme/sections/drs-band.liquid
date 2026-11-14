@@ -6,6 +6,7 @@
 <section class="band band--{{ section.settings.color }} band-from--{{ section.settings.from }}{% if section.settings.to_footer %} band--to-footer{% endif %}">
   <div class="wrap band__grid{% if section.settings.flip %} band__grid--flip{% endif %}{% if section.settings.frame == 'textbook' %} band__grid--textbook{% endif %}">
     <div class="band__copy">
+      {%- if section.settings.logo -%}{{ section.settings.logo | image_url: width: 400 | image_tag: class: "band__logo", loading: "lazy", alt: section.settings.logo.alt }}{%- endif -%}
       {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
       <h2>{{ section.settings.heading }}</h2>
       {%- if section.settings.text != blank %}<div class="band__text">{{ section.settings.text }}</div>{% endif -%}
@@ -66,6 +67,7 @@
       { "value": "oxblood", "label": "Oxblood" } ] },
     { "type": "checkbox", "id": "to_footer", "label": "Fade into the footer", "default": false },
     { "type": "checkbox", "id": "flip", "label": "Photograph on the left", "default": false },
+    { "type": "image_picker", "id": "logo", "label": "Brand mark" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
     { "type": "text", "id": "heading", "label": "Heading" },
     { "type": "richtext", "id": "text", "label": "Text" },
