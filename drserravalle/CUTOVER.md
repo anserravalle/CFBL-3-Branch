@@ -182,3 +182,21 @@ Legal name on the signature because this is a credentialing communication.
 - The CFBL consultation page says "EMDRIA approved trainer." Not repeated on the new site
   until confirmed, since EMDR Basic Training is listed as in development.
 - The CFBL MUSA page still calls the book "forthcoming." It was published today.
+
+## Cutover moved up, 14 November 2026 (Niki: "shut the other pages down or archive")
+
+Done on drserravalle.com:
+- Live theme is `Horizon (SEO)`. Pages and 30 articles are public. Refund policy set by Niki.
+- Six Institute products set ACTIVE and published to Online Store: both Foundations
+  products, the ADHD differential workshop, the gender-diverse assessment workshop,
+  and both EMDR consultation products.
+- `nature-informed-emdr` stays DRAFT until EMDRIA approval is confirmed for March 5, 2027.
+
+Still to do on the CFBL store, blocked on Niki re-authorizing the Shopify connector for
+balancedlivingde.com:
+1. Check CFBL orders since 12 November for the moved products and reduce seats here if any sold.
+2. Set the six matching CFBL products to draft (leave Nature-Informed EMDR until the
+   EMDRIA question is answered).
+3. Hide the moved pages and articles, rename the three blog handles, import both redirect CSVs.
+4. Swap the CFBL main menu to one "Dr. Serravalle" link.
+Until step 2 is done the same seats are for sale on both sites.
