@@ -721,3 +721,9 @@ p { margin: 0 0 1.1em; }
 .teaser .notify__fine { color: rgba(241, 232, 216, .7); }
 .teaser .notify__ok { border-color: #E8CB96; background: rgba(241, 232, 216, .1); }
 .teaser__formintro { font-family: "EB Garamond", Georgia, serif; font-size: 1.4rem; color: rgba(241, 232, 216, .92); margin: 40px 0 0; padding-top: 30px; border-top: 1px solid rgba(241, 232, 216, .3); }
+
+/* Footer social links */
+.site-foot__social { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px; margin: 36px 0 0; padding-top: 26px; border-top: 1px solid rgba(234, 226, 208, .18); font-size: 1.05rem; }
+.site-foot__social .eyebrow { margin: 0; }
+.site-foot__social a { color: var(--cream); text-decoration: none; padding: 6px 0; }
+.site-foot__social a:hover { color: var(--ochre); text-decoration: underline; }
