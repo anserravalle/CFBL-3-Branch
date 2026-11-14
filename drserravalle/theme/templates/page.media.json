@@ -20,7 +20,8 @@
         "prompt": "Tell me a little about you",
         "note": "Please leave health information out of this form.",
         "button": "Send",
-        "thanks": "Thank you. Your message is on its way to me."
+        "thanks": "Thank you. Your message is on its way to me.",
+        "hook": "We all have a story to tell."
       }
     }
   },

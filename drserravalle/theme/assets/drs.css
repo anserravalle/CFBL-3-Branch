@@ -693,3 +693,6 @@ p { margin: 0 0 1.1em; }
 .teaser__ok { padding: 14px 16px; border-left: 3px solid #E8CB96; background: rgba(241, 232, 216, .1); margin: 0; font-size: 1.2rem; }
 .teaser__err { padding: 14px 16px; border-left: 3px solid #E8CB96; background: rgba(0, 0, 0, .2); }
 .tpl-page-media .site-foot { margin-top: 0; }
+.teaser__hook { font-family: "Allura", cursive; font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 1.1; color: #E8CB96; text-align: center; margin: 0 auto 44px; }
+.teaser { background: linear-gradient(180deg, var(--bone) 0, var(--oxblood) 130px, var(--oxblood) 100%); padding-top: 170px; }
+@media (max-width: 860px) { .teaser { padding-top: 160px; } }
