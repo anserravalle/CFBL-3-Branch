@@ -678,3 +678,18 @@ p { margin: 0 0 1.1em; }
 .teaser__text a { color: #E8CB96; }
 @media (max-width: 860px) { .teaser__grid { grid-template-columns: 1fr; } .teaser { padding-top: 120px; } }
 .tpl-page-book .site-foot { margin-top: 0; }
+
+/* Interest form inside a teaser */
+.teaser__grid:has(.teaser__form) { align-items: start; }
+.teaser__form { display: grid; gap: 18px; margin-top: 28px; }
+.teaser__row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 620px) { .teaser__row { grid-template-columns: 1fr; } }
+.teaser__form label { display: grid; gap: 8px; font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 1.15rem; color: #E8CB96; }
+.teaser__form input, .teaser__form textarea { width: 100%; padding: 13px 15px; border: 1px solid rgba(241, 232, 216, .45); border-radius: 8px; background: rgba(241, 232, 216, .08); font-family: "EB Garamond", Georgia, serif; font-style: normal; font-size: 1.2rem; color: var(--bone); }
+.teaser__form textarea { resize: vertical; }
+.teaser__form input:focus, .teaser__form textarea:focus { outline: 2px solid #E8CB96; outline-offset: 2px; }
+.teaser__form .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; cursor: pointer; }
+.teaser__note { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 1.05rem; color: rgba(241, 232, 216, .75); margin: 0; }
+.teaser__ok { padding: 14px 16px; border-left: 3px solid #E8CB96; background: rgba(241, 232, 216, .1); margin: 0; font-size: 1.2rem; }
+.teaser__err { padding: 14px 16px; border-left: 3px solid #E8CB96; background: rgba(0, 0, 0, .2); }
+.tpl-page-media .site-foot { margin-top: 0; }

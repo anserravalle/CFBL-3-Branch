@@ -1,4 +1,4 @@
-<section class="teaser">
+<section class="teaser" id="{{ section.settings.anchor | default: 'coming' }}">
   <div class="wrap teaser__grid">
     {%- if section.settings.image -%}
       <figure class="teaser__img">{{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 40vw, 100vw' }}</figure>
@@ -7,6 +7,24 @@
       {%- if section.settings.eyebrow != blank %}<p class="teaser__when">{{ section.settings.eyebrow }}</p>{% endif -%}
       <h2>{{ section.settings.heading }}</h2>
       {%- if section.settings.text != blank %}<div class="teaser__text">{{ section.settings.text }}</div>{% endif -%}
+      {%- if section.settings.show_form -%}
+        {%- form 'contact', class: 'teaser__form' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="teaser__ok" role="status">{{ section.settings.thanks }}</p>
+          {%- endif -%}
+          {%- if form.errors -%}
+            <div class="teaser__err" role="alert">{{ form.errors | default_errors }}</div>
+          {%- endif -%}
+          <input type="hidden" name="contact[topic]" value="{{ section.settings.topic }}">
+          <div class="teaser__row">
+            <label>Name<input type="text" name="contact[name]" autocomplete="name" value="{{ form.name }}"></label>
+            <label>Email<input type="email" name="contact[email]" autocomplete="email" required value="{{ form.email }}"></label>
+          </div>
+          <label>{{ section.settings.prompt }}<textarea name="contact[body]" rows="4" required>{{ form.body }}</textarea></label>
+          {%- if section.settings.note != blank %}<p class="teaser__note">{{ section.settings.note }}</p>{% endif -%}
+          <p><button type="submit" class="btn">{{ section.settings.button }}</button></p>
+        {%- endform -%}
+      {%- endif -%}
     </div>
   </div>
 </section>
@@ -18,7 +36,14 @@
     { "type": "image_picker", "id": "image", "label": "Photograph" },
     { "type": "text", "id": "eyebrow", "label": "Handwritten line", "default": "Coming summer 2027" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "The workbook" },
-    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A companion to <em>The Stories We Told</em>, on codependency.</p>" }
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A companion to <em>The Stories We Told</em>, on codependency.</p>" },
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "coming" },
+    { "type": "checkbox", "id": "show_form", "label": "Show an interest form", "default": false },
+    { "type": "text", "id": "topic", "label": "Form subject (shown in your email)", "default": "Interest form" },
+    { "type": "text", "id": "prompt", "label": "Message field label", "default": "Tell me a little about you" },
+    { "type": "text", "id": "note", "label": "Note above the button", "default": "Please leave health information out of this form." },
+    { "type": "text", "id": "button", "label": "Button label", "default": "Send" },
+    { "type": "text", "id": "thanks", "label": "Message after sending", "default": "Thank you. Your message is on its way to me." }
   ],
   "presets": [{ "name": "DRS teaser" }]
 }
