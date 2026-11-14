@@ -649,3 +649,20 @@ p { margin: 0 0 1.1em; }
 .contact__err { padding: 16px 18px; border-left: 3px solid var(--oxblood); background: rgba(110, 31, 35, .08); }
 .contact__aside { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--rule); font-size: 1.1rem; }
 .contact__aside + .contact__aside { margin-top: 20px; padding-top: 0; border-top: 0; }
+
+/* Essays contents: one feature per series */
+.series { margin: 0 0 96px; }
+.series:first-of-type { margin-top: -64px; position: relative; }
+.series__cover { display: block; background: #EDE0C8; padding: 12px 12px 12px; box-shadow: 0 22px 44px rgba(31, 26, 22, .22); }
+.series__cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.series__title { font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; margin: 36px 0 10px; }
+.series__title a { color: var(--oxblood); text-decoration: none; }
+.series__deck { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 1.35rem; color: var(--muted); margin: 0 0 8px; }
+.series__meta { margin: 0 0 28px; }
+.parts { list-style: none; margin: 0; padding: 0; counter-reset: part; border-top: 1px solid var(--rule); }
+.parts li { counter-increment: part; border-bottom: 1px solid var(--rule); }
+.parts a { display: grid; grid-template-columns: 3.2rem 1fr; column-gap: 12px; padding: 22px 0; color: var(--ink); text-decoration: none; }
+.parts a::before { content: counter(part); grid-row: span 2; font-family: "DM Serif Display", Georgia, serif; font-size: 2.6rem; line-height: 1; color: var(--ochre); }
+.parts h3 { font-family: "DM Serif Display", Georgia, serif; font-size: 1.45rem; line-height: 1.2; margin: 0 0 6px; }
+.parts p { font-family: "EB Garamond", Georgia, serif; font-size: 1.15rem; color: var(--muted); margin: 0; }
+.parts a:hover h3 { color: var(--oxblood); }

@@ -30,18 +30,33 @@
           {%- assign parts = blog.articles | sort: 'published_at' -%}
           {%- assign first = nil -%}
           {%- for p in parts -%}{%- if p.metafields.custom.series.value == s and first == nil -%}{%- assign first = p -%}{%- endif -%}{%- endfor -%}
-          <p class="series-label eyebrow">{{ first.title | split: ':' | first }}</p>
-          <ol class="contents">
-            {%- for p in parts -%}
-              {%- if p.metafields.custom.series.value == s -%}
-                <li>
-                  <span class="meta">{{ p.published_at | date: '%b %-d, %Y' }}</span>
-                  <a href="{{ p.url }}"><h3>{{ p.title | split: ': ' | last }}</h3>
-                  <p>{{ p.excerpt_or_content | strip_html | truncatewords: 26 }}</p></a>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          </ol>
+          {%- assign stitle = first.title | split: ':' | first -%}
+          {%- assign count = 0 -%}
+          {%- for p in parts -%}{%- if p.metafields.custom.series.value == s -%}{%- assign count = count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+          <section class="series">
+            <a class="series__cover" href="{{ first.url }}">
+              {%- if first.image -%}{{ first.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 44rem, 100vw', alt: '' }}{%- endif -%}
+            </a>
+            <h2 class="series__title"><a href="{{ first.url }}">{{ stitle }}</a></h2>
+            {%- if first.metafields.custom.series_deck.value != blank %}<p class="series__deck">{{ first.metafields.custom.series_deck.value }}</p>{% endif -%}
+            <p class="meta series__meta">{{ count }} parts · {{ first.published_at | date: '%B %Y' }}</p>
+            <ol class="parts">
+              {%- for p in parts -%}
+                {%- if p.metafields.custom.series.value == s -%}
+                  {%- assign pt = p.metafields.custom.part_title.value -%}
+                  {%- assign ex = p.excerpt_or_content | split: '<p><a class="read-more"' | first | replace: '</p>', ' ' | replace: '</h2>', ' ' | replace: '</h1>', ' ' | strip_html | strip -%}
+                  {%- if pt != blank and ex contains pt -%}{%- assign ex = ex | split: pt | last -%}{%- endif -%}
+                  {%- assign ex = ex | remove_first: stitle | strip -%}
+                  <li>
+                    <a href="{{ p.url }}">
+                      <h3>{% if pt != blank %}{{ pt }}{% else %}{{ p.title | split: ': ' | last }}{% endif %}</h3>
+                      <p>{{ ex | truncatewords: 20 }}</p>
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ol>
+          </section>
         {%- endunless -%}
       {%- endif -%}
     {%- endfor -%}
