@@ -24,10 +24,10 @@
           <div class="tb">
             <div class="tb__page tb__page--l">
               <p class="eyebrow">{{ section.settings.page_title }}</p>
-              <p class="tb__tier"><strong>Established</strong><span>{{ section.settings.tier1 }}</span></p>
-              <p class="tb__tier"><strong>Emerging</strong><span>{{ section.settings.tier2 }}</span></p>
-              <p class="tb__tier"><strong>Theoretical</strong><span>{{ section.settings.tier3 }}</span></p>
-              <p class="tb__tier"><strong>Clinical wisdom</strong><span>{{ section.settings.tier4 }}</span></p>
+              {%- if section.settings.label1 != blank %}<p class="tb__tier"><strong>{{ section.settings.label1 }}</strong><span>{{ section.settings.tier1 }}</span></p>{% endif -%}
+              {%- if section.settings.label2 != blank %}<p class="tb__tier"><strong>{{ section.settings.label2 }}</strong><span>{{ section.settings.tier2 }}</span></p>{% endif -%}
+              {%- if section.settings.label3 != blank %}<p class="tb__tier"><strong>{{ section.settings.label3 }}</strong><span>{{ section.settings.tier3 }}</span></p>{% endif -%}
+              {%- if section.settings.label4 != blank %}<p class="tb__tier"><strong>{{ section.settings.label4 }}</strong><span>{{ section.settings.tier4 }}</span></p>{% endif -%}
             </div>
             <div class="tb__page tb__page--r">
               {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 25vw, 50vw' }}{%- endif -%}
@@ -81,11 +81,15 @@
       { "value": "parchment", "label": "Parchment print (Make It Make Sense)" },
       { "value": "textbook", "label": "Open textbook (Professional Education)" } ] },
     { "type": "text", "id": "caption", "label": "Caption" },
-    { "type": "text", "id": "page_title", "label": "Textbook left page heading", "default": "Where a claim sits" },
-    { "type": "text", "id": "tier1", "label": "Textbook: Established", "default": "Replicated. Say it plainly." },
-    { "type": "text", "id": "tier2", "label": "Textbook: Emerging", "default": "Real data, thin replication." },
-    { "type": "text", "id": "tier3", "label": "Textbook: Theoretical", "default": "Scaffolding, not explanation." },
-    { "type": "text", "id": "tier4", "label": "Textbook: Clinical wisdom", "default": "Often right, rarely tested." },
+    { "type": "text", "id": "page_title", "label": "Textbook left page heading", "default": "What I teach from" },
+    { "type": "text", "id": "label1", "label": "Textbook entry 1: name", "default": "Trauma" },
+    { "type": "text", "id": "tier1", "label": "Textbook entry 1: a few words", "default": "Certified in EMDR and TF-CBT. More than twenty years of cases." },
+    { "type": "text", "id": "label2", "label": "Textbook entry 2: name", "default": "Psychological assessment" },
+    { "type": "text", "id": "tier2", "label": "Textbook entry 2: a few words", "default": "I give, score, and interpret the tests I teach." },
+    { "type": "text", "id": "label3", "label": "Textbook entry 3: name", "default": "Nature-based interventions" },
+    { "type": "text", "id": "tier3", "label": "Textbook entry 3: a few words", "default": "Certified in ecotherapy. The protocol does not change." },
+    { "type": "text", "id": "label4", "label": "Textbook entry 4: name", "default": "Integrative practice" },
+    { "type": "text", "id": "tier4", "label": "Textbook entry 4: a few words", "default": "Knowing each model well enough to decide in the moment." },
     { "type": "blog", "id": "blog", "label": "Show latest posts from" },
     { "type": "range", "id": "count", "label": "Posts", "min": 0, "max": 6, "step": 1, "default": 3 }
   ],
