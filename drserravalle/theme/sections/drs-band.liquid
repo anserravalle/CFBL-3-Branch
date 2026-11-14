@@ -43,7 +43,7 @@
     <div class="wrap band__posts">
       {%- for a in b.articles limit: section.settings.count -%}
         <a class="band__post" href="{{ a.url }}">
-          <div class="band__post-img">{%- if a.image -%}{{ a.image | image_url: width: 800 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}</div>
+          <div class="band__post-img">{%- if a.image -%}{{ a.image | image_url: width: 800 | image_tag: loading: 'lazy', alt: a.title }}{%- endif -%}</div>
           <span class="meta">{{ a.published_at | date: '%B %-d, %Y' }}</span>
           <h3>{{ a.title }}</h3>
         </a>

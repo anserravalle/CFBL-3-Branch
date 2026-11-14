@@ -35,7 +35,7 @@
           {%- for p in parts -%}{%- if p.metafields.custom.series.value == s -%}{%- assign count = count | plus: 1 -%}{%- endif -%}{%- endfor -%}
           <section class="series">
             <a class="series__cover" href="{{ first.url }}">
-              {%- if first.image -%}{{ first.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 44rem, 100vw', alt: '' }}{%- endif -%}
+              {%- if first.image -%}{{ first.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 44rem, 100vw', alt: stitle }}{%- endif -%}
             </a>
             <h2 class="series__title"><a href="{{ first.url }}">{{ stitle }}</a></h2>
             {%- if first.metafields.custom.series_deck.value != blank %}<p class="series__deck">{{ first.metafields.custom.series_deck.value }}</p>{% endif -%}
@@ -83,7 +83,7 @@
       {%- for a in blog.articles -%}
         <a class="card{% if forloop.first and paginate.current_page == 1 %} card--lead{% endif %}" href="{{ a.url }}">
           <div class="card__img">
-            {%- if a.image -%}{{ a.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 66vw, 100vw', alt: '' }}{%- endif -%}
+            {%- if a.image -%}{{ a.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 66vw, 100vw', alt: a.title }}{%- endif -%}
           </div>
           <span class="meta">{{ a.published_at | date: '%B %-d, %Y' }}</span>
           <h3>{{ a.title }}</h3>

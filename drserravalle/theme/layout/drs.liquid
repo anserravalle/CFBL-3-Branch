@@ -27,12 +27,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="G9n3uC-EKHD2qzg32_eGGGsPK3NV5jlTIx_bnc-4EAg">
   <link rel="canonical" href="{{ canonical_url }}">
-  <title>{{ page_title }}{% unless page_title contains 'Serravalle' %} | Dr. Niki Serravalle{% endunless %}</title>
-  {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+  {%- liquid
+    assign seo_title = page_title
+    assign seo_desc = page_description
+    if template.name == 'index'
+      assign seo_title = 'Dr. Niki Serravalle | Psychologist, Author, Educator'
+      if seo_desc == blank
+        assign seo_desc = 'Dr. Niki Serravalle is a clinical psychologist, author, and educator. Read Make It Make Sense, her essays, and The Stories We Told, and find training for clinicians.'
+      endif
+    endif
+    assign og_img = nil
+    if article.image
+      assign og_img = article.image
+    elsif page.metafields.custom.og_image
+      assign og_img = page.metafields.custom.og_image.value
+    elsif product.featured_image
+      assign og_img = product.featured_image
+    elsif settings.share_image
+      assign og_img = settings.share_image
+    endif
+    assign og_type = 'website'
+    if template.name == 'article'
+      assign og_type = 'article'
+    endif
+  -%}
+  <title>{{ seo_title }}{% unless seo_title contains 'Serravalle' %} | Dr. Niki Serravalle{% endunless %}</title>
+  {%- if seo_desc != blank %}<meta name="description" content="{{ seo_desc | strip_html | truncate: 160 | escape }}">{% endif %}
   <meta property="og:site_name" content="Dr. Niki Serravalle">
-  <meta property="og:title" content="{{ page_title | escape }}">
-  {%- if article.image %}<meta property="og:image" content="{{ article.image | image_url: width: 1200 }}">
-  {%- elsif page.metafields.custom.og_image %}<meta property="og:image" content="{{ page.metafields.custom.og_image | image_url: width: 1200 }}">{% endif %}
+  <meta property="og:type" content="{{ og_type }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:title" content="{{ seo_title | escape }}">
+  {%- if seo_desc != blank %}<meta property="og:description" content="{{ seo_desc | strip_html | truncate: 200 | escape }}">{% endif %}
+  {%- if og_img -%}
+    <meta property="og:image" content="https:{{ og_img | image_url: width: 1200 }}">
+    <meta name="twitter:card" content="summary_large_image">
+  {%- else -%}
+    <meta property="og:image" content="https:{{ '20261114_DRS_Niki_headshot_burgundy.png' | file_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+  {%- endif -%}
+  {%- if template.name == 'index' or template.suffix contains 'about' -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr. Niki Serravalle",
+      "honorificSuffix": "PsyD, LPCMH, NCC",
+      "jobTitle": "Clinical Psychologist",
+      "url": "https://drserravalle.com",
+      "image": {{ '20261114_DRS_Niki_headshot_burgundy.png' | file_url | prepend: 'https:' | json }},
+      "worksFor": { "@type": "Organization", "name": "Center for Balanced Living", "url": "https://balancedlivingde.com" },
+      "sameAs": ["https://linktr.ee/Drserravalle"]
+    }
+    </script>
+  {%- endif -%}
+  {%- if template.name == 'index' -%}
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "WebSite", "name": "Dr. Niki Serravalle", "url": "https://drserravalle.com" }
+    </script>
+  {%- endif -%}
+  {%- if template.name == 'article' -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": {{ article.title | json }},
+      "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+      "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+      "mainEntityOfPage": {{ canonical_url | json }},
+      {%- if article.image %}"image": {{ article.image | image_url: width: 1200 | prepend: 'https:' | json }},{% endif %}
+      "author": { "@type": "Person", "name": "Dr. Niki Serravalle", "url": "https://drserravalle.com/pages/about" },
+      "publisher": { "@type": "Person", "name": "Dr. Niki Serravalle" }
+    }
+    </script>
+  {%- endif -%}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {%- case sys -%}
