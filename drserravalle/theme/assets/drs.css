@@ -592,3 +592,7 @@ p { margin: 0 0 1.1em; }
   .tb__tier span { font-size: .74rem; line-height: 1.35; }
   .tb__page--r figcaption { font-size: .66rem; }
 }
+
+/* Two-line opening hook: each sentence on its own line. */
+.intro__hook span { display: block; }
+.intro__hook { font-size: clamp(3rem, 6.4vw, 5rem); line-height: 1.05; }
