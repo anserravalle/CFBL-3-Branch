@@ -703,3 +703,21 @@ p { margin: 0 0 1.1em; }
   .teaser:has(.teaser__hook) { background: linear-gradient(180deg, var(--bone) 0, var(--bone) 170px, var(--oxblood) 300px, var(--oxblood) 100%); padding-top: 40px; }
   .teaser:has(.teaser__hook) .teaser__hook { margin-bottom: 200px; }
 }
+
+/* One-field tagged signup */
+.notify { margin-top: 26px; }
+.notify__label { font-family: "EB Garamond", Georgia, serif; font-size: 1.25rem; margin: 0 0 12px; }
+.notify__row { display: flex; flex-wrap: wrap; gap: 10px; }
+.notify__row input { flex: 1 1 220px; padding: 13px 15px; border: 1px solid var(--rule); border-radius: 8px; background: #fffaf0; font: inherit; font-size: 1.05rem; color: var(--ink); }
+.notify__row .btn { border-radius: 8px; cursor: pointer; }
+.notify__fine { font-size: .95rem; font-style: italic; color: var(--muted); margin: 10px 0 0; }
+.notify__ok { padding: 14px 16px; border-left: 3px solid var(--ochre); background: rgba(197, 165, 114, .14); margin: 0; }
+.notify-block { padding: 8px 0 88px; }
+.notify-block .notify { border-top: 1px solid var(--rule); padding-top: 28px; }
+.teaser .notify__label { color: rgba(241, 232, 216, .92); }
+.teaser .notify__row input { background: rgba(241, 232, 216, .08); border-color: rgba(241, 232, 216, .45); color: var(--bone); font-family: "EB Garamond", Georgia, serif; font-size: 1.2rem; }
+.teaser .notify__row input::placeholder { color: rgba(241, 232, 216, .6); }
+.teaser .notify__row .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); }
+.teaser .notify__fine { color: rgba(241, 232, 216, .7); }
+.teaser .notify__ok { border-color: #E8CB96; background: rgba(241, 232, 216, .1); }
+.teaser__formintro { font-family: "EB Garamond", Georgia, serif; font-size: 1.4rem; color: rgba(241, 232, 216, .92); margin: 40px 0 0; padding-top: 30px; border-top: 1px solid rgba(241, 232, 216, .3); }
