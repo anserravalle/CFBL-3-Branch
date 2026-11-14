@@ -4,7 +4,8 @@
     "main": {
       "type": "drs-page",
       "settings": {
-        "eyebrow": "Professional Education"
+        "eyebrow": "Professional Education",
+        "image": "shopify://shop_images/B0A4F575-4E69-4C03-8E96-D5526962F4DA.png"
       }
     },
     "programs": {
