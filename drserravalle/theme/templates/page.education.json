@@ -98,10 +98,205 @@
         "p5",
         "p6"
       ]
+    },
+    "reading": {
+      "type": "drs-reading-shelf",
+      "blocks": {
+        "s_trauma": {
+          "type": "subject",
+          "settings": {
+            "name": "Trauma",
+            "subtitle": "across the modalities",
+            "dates": "September to October 2026",
+            "start": "2026-09-27"
+          }
+        },
+        "b_herman": {
+          "type": "book",
+          "settings": {
+            "title": "Trauma and Recovery",
+            "author": "Judith Herman",
+            "year": "1992",
+            "week": "1",
+            "release": "2026-09-27",
+            "video_link": "https://cdn.shopify.com/videos/c/vp/20cc74a124a44c67ab7d5fe5efb08019/20cc74a124a44c67ab7d5fe5efb08019.HD-720p-3.0Mbps-94949206.mp4",
+            "runtime": "1 min 30 sec",
+            "card": "shopify://shop_images/WTDIR_wk1_Herman.png",
+            "why": "<p>Herman called stage one safety and stabilization. We have newer language for it now, but the clinical problem she identified has not changed. Stage one is not teaching coping skills so that we can get to the work. It is the work. Most stuck cases are stage one problems being treated as stage two.</p>",
+            "hold": "<p>Many clients with complex histories can begin processing sooner than a strict phase model suggests (de Jongh et al., 2016).</p>",
+            "best_for": "<p>Clinicians early in trauma work, and anyone whose cases keep stalling once processing begins.</p>",
+            "tier": "clinical_wisdom",
+            "spine_title": "",
+            "spine_author": "Herman",
+            "color": "forest",
+            "height": 80,
+            "width": 66
+          }
+        },
+        "b_vdk": {
+          "type": "book",
+          "settings": {
+            "title": "The Body Keeps the Score",
+            "author": "Bessel van der Kolk",
+            "year": "2014",
+            "week": "2",
+            "release": "2026-10-04",
+            "video_link": "https://cdn.shopify.com/videos/c/vp/b1d344c57d904996ba0d9f71ef5a64cc/b1d344c57d904996ba0d9f71ef5a64cc.HD-720p-3.0Mbps-94949171.mp4",
+            "runtime": "1 min 33 sec",
+            "card": "shopify://shop_images/WTDIR_wk2_vanderKolk.png",
+            "why": "<p>It moved trauma beyond the idea that suffering lives only in thoughts and memories, and it made the body impossible to ignore. Still worth reading. Also worth arguing with.</p>",
+            "hold": "<p>The body carries patterns rather than stored files, and those patterns look different in every client. The book draws on polyvagal theory, which research is still testing (Grossman, 2023).</p>",
+            "best_for": "<p>Clinicians who need the body in the case conceptualization. Read it alongside a critique.</p>",
+            "tier": "emerging",
+            "spine_title": "",
+            "spine_author": "van der Kolk",
+            "color": "ink",
+            "height": 95,
+            "width": 78
+          }
+        },
+        "b_fisher": {
+          "type": "book",
+          "settings": {
+            "title": "Healing the Fragmented Selves of Trauma Survivors",
+            "author": "Janina Fisher",
+            "year": "2017",
+            "week": "3",
+            "release": "2026-10-11",
+            "video_link": "https://cdn.shopify.com/videos/c/vp/daa6e328150a411d99f35671a0b84fc9/daa6e328150a411d99f35671a0b84fc9.HD-720p-3.0Mbps-94949172.mp4",
+            "runtime": "1 min 44 sec",
+            "card": "shopify://shop_images/WTDIR_wk3_Fisher.png",
+            "why": "<p>Internal contradiction is not necessarily resistance. Fisher gives clinicians a way to work with the client who wants treatment and dreads every session, without turning that into pathology or noncompliance. We stop trying to make one part win.</p>",
+            "hold": "<p>Parts language is a useful clinical map. Research on the structure beneath it is still developing.</p>",
+            "best_for": "<p>Clinicians whose clients seem to get in the way of their own treatment.</p>",
+            "tier": "theoretical",
+            "spine_title": "Fragmented Selves",
+            "spine_author": "Fisher",
+            "color": "sage",
+            "height": 75,
+            "width": 60
+          }
+        },
+        "b_walker": {
+          "type": "book",
+          "settings": {
+            "title": "Complex PTSD: From Surviving to Thriving",
+            "author": "Pete Walker",
+            "year": "2013",
+            "week": "4",
+            "release": "2026-10-18",
+            "video_link": "https://cdn.shopify.com/videos/c/vp/ceb9ccf4831b48f3b4339410d801fa8b/ceb9ccf4831b48f3b4339410d801fa8b.HD-720p-3.0Mbps-94949173.mp4",
+            "runtime": "1 min 26 sec",
+            "card": "shopify://shop_images/WTDIR_wk4_PeteWalker.png",
+            "why": "<p>Some histories have no single event in the timeline. Walker gave us language for emotional flashbacks without a visual narrative: a client suddenly feels very young, ashamed, trapped or defective, and does not know why.</p>",
+            "hold": "<p>Not every difficult childhood is a trauma diagnosis. Complex PTSD is recognized in ICD-11, and the fawn response is a newer idea that research is still catching up to.</p>",
+            "best_for": "<p>Clinicians working with adults whose history is a developmental environment rather than an event. Readable for many clients as well.</p>",
+            "tier": "clinical_wisdom",
+            "spine_title": "Complex PTSD",
+            "spine_author": "Walker",
+            "color": "slate",
+            "height": 85,
+            "width": 70
+          }
+        },
+        "s_mindset": {
+          "type": "subject",
+          "settings": {
+            "name": "Mindset",
+            "subtitle": "acceptance and growth",
+            "dates": "October to November 2026",
+            "start": "2026-10-21"
+          }
+        },
+        "b_brach": {
+          "type": "book",
+          "settings": {
+            "title": "Radical Acceptance",
+            "author": "Tara Brach",
+            "year": "2003",
+            "week": "5",
+            "release": "2026-10-25",
+            "video_link": "https://cdn.shopify.com/videos/c/vp/d3d936688b9548a183ac285621e55ef2/d3d936688b9548a183ac285621e55ef2.HD-720p-2.1Mbps-96612094.mp4",
+            "runtime": "33 sec",
+            "card": "shopify://shop_images/WTDIR_tease_wk5_Brach.png",
+            "why": "<p>Not a manual and not a modality. A way of meeting what is here without judgment, which is harder than it sounds and more useful in the room than most techniques. Read it, then practice it.</p>",
+            "hold": "<p>It is a practice book rather than a treatment protocol, and its ideas share roots with acceptance-based therapies such as ACT and DBT.</p>",
+            "best_for": "<p>Clinicians building their own capacity to stay present with what they cannot fix.</p>",
+            "tier": "clinical_wisdom",
+            "spine_title": "",
+            "spine_author": "Brach",
+            "color": "clay",
+            "height": 85,
+            "width": 64
+          }
+        },
+        "b_dweck": {
+          "type": "book",
+          "settings": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "year": "2006",
+            "week": "6",
+            "release": "2026-11-01",
+            "video_link": "https://cdn.shopify.com/videos/c/vp/4b76596b28284589adc86fee2f35bea4/4b76596b28284589adc86fee2f35bea4.HD-720p-3.0Mbps-96612095.mp4",
+            "runtime": "31 sec",
+            "card": "shopify://shop_images/WTDIR_tease_wk6_Dweck.png",
+            "why": "<p>Not a treatment model. A way of thinking: the shift from a fixed to a growth mindset, and what changes when you apply it to business, sports, health care and relationships.</p>",
+            "hold": "<p>Growth mindset research shows real but modest effects, strongest for students who are struggling (Sisk et al., 2018; Yeager et al., 2019).</p>",
+            "best_for": "<p>Supervisors, educators, and clinicians who coach or teach.</p>",
+            "tier": "emerging",
+            "spine_title": "",
+            "spine_author": "Dweck",
+            "color": "linen",
+            "height": 75,
+            "width": 58
+          }
+        },
+        "s_testing": {
+          "type": "subject",
+          "settings": {
+            "name": "Psychological Testing",
+            "subtitle": "",
+            "dates": "Coming in November 2026",
+            "start": "2026-11-08"
+          }
+        }
+      },
+      "block_order": [
+        "s_trauma",
+        "b_herman",
+        "b_vdk",
+        "b_fisher",
+        "b_walker",
+        "s_mindset",
+        "b_brach",
+        "b_dweck",
+        "s_testing"
+      ],
+      "settings": {
+        "eyebrow": "A reading series for clinicians",
+        "heading": "What the Doctor\nIs Reading",
+        "intro": "<p>Not a book club. I have already read these. Each subject gets a shelf and each week gets one book: what it gets right, what to hold loosely, and <em>whether it belongs on your shelf</em>.</p>",
+        "tree_image": "shopify://shop_images/CFBL_wtdir_sculpture.png",
+        "tree_width": 380,
+        "tree_base": false,
+        "shelf_image": "shopify://shop_images/CFBL_wtdir_shelf_bg.jpg",
+        "tier_note": "<p>Every book is sorted by where its central claim sits: established, emerging, theoretical, or clinical wisdom. Clinical wisdom is not a dismissal. It is often right and simply has not been tested yet.</p>",
+        "follow_label": "A new book every Sunday",
+        "follow_link": "https://www.instagram.com/dr.nikiserravalle/",
+        "more_label": "",
+        "show_library": false,
+        "library_heading": "The library",
+        "library_note": "Every past subject stays on the shelf. Choose one to bring it back down.",
+        "release_hour": 13,
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
     "main",
-    "programs"
+    "programs",
+    "reading"
   ]
 }
