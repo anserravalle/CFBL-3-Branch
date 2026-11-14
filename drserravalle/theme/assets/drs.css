@@ -574,3 +574,21 @@ p { margin: 0 0 1.1em; }
 .intro__hook { font-size: clamp(3.4rem, 7.6vw, 5.8rem); transform: rotate(-2deg); }
 .band__hook, .book__hook { font-size: clamp(3rem, 6.2vw, 4.8rem); transform: rotate(-1.5deg); }
 .band__hook { top: 96px; }
+
+/* The quote reads as a quote (Niki, 14 Nov): a large opening mark, bigger type,
+   no hairline box, attribution under a short rule. */
+.intro__quote { border: 0; padding: 0; margin: 56px auto 44px; max-width: 38rem; position: relative; }
+.intro__quote::before { content: "\201C"; display: block; font-family: "DM Serif Display", Georgia, serif; font-size: 7rem; line-height: .6; height: 3.2rem; color: var(--ochre); }
+.intro__quote p { font-size: clamp(1.9rem, 3.3vw, 2.7rem); line-height: 1.22; margin-bottom: 20px; }
+.intro__quote cite { display: inline-block; padding-top: 14px; border-top: 1px solid var(--ochre); font-size: 1.05rem; letter-spacing: .02em; }
+
+/* Textbook: the plate no longer stretches to the page height, so the caption and
+   the facing page text stay inside the book. */
+.tb__page--r img { height: auto; }
+.tb__page { padding-bottom: 30px; }
+@media (max-width: 860px) {
+  .tb__page { padding: 16px 12px 18px; }
+  .tb__tier strong { font-size: 1rem; }
+  .tb__tier span { font-size: .74rem; line-height: 1.35; }
+  .tb__page--r figcaption { font-size: .66rem; }
+}
