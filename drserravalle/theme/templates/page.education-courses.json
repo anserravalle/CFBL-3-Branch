@@ -1,0 +1,40 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "Professional Education"
+      }
+    },
+    "programs": {
+      "type": "drs-programs",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Courses",
+        "show_tiers": false
+      },
+      "blocks": {
+        "p1": {
+          "type": "program",
+          "settings": {
+            "product": "foundations-of-trauma-therapy-12-week-integration-course",
+            "kicker": "Course",
+            "ce": "The founding cohort does not award continuing education credit.",
+            "summary": "<p>Each week reviews one family of trauma models and its core skills, then applies it alongside the models that came before.</p>",
+            "when": "January 13 to April 7, 2027",
+            "format": "Wednesdays, 5:00 to 6:00 PM Eastern. Live, virtual. No session February 17.",
+            "cta": "Register"
+          }
+        }
+      },
+      "block_order": [
+        "p1"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "programs"
+  ]
+}

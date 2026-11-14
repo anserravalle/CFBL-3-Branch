@@ -515,3 +515,30 @@ p { margin: 0 0 1.1em; }
    the CFBL Institute mark on the Professional Education band. Transparent PNGs. */
 .band__logo, .book__logo { display: block; width: 170px; height: auto; margin: 0 0 14px -10px; }
 @media (max-width: 860px) { .band__logo, .book__logo { width: 140px; } }
+
+/* Centered header with dropdowns (Niki, 14 Nov): her name centered, the menus
+   underneath. Site navigation is links plus disclosure buttons, not role=menu. */
+.site-head { position: relative; z-index: 30; }
+.site-head .wrap { flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 26px 0 0; }
+.idn { align-items: center; text-align: center; }
+.idn__name { font-size: 2.2rem; }
+.sys-essays .idn__name { font-size: 2.1rem; }
+.nav { justify-content: center; gap: 8px 44px; position: relative; }
+.nav__item { position: relative; }
+.nav__btn { font: inherit; font-family: var(--f-meta); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); background: none; border: 0; padding: 10px 0 18px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+.sys-essays .nav__btn { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.nav__btn::after { content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.nav__btn:hover, .nav__item--dd.is-open > .nav__btn, .nav__item--dd:focus-within > .nav__btn { color: var(--accent); }
+.nav > li > a { display: inline-block; padding: 10px 0 18px; }
+.nav__panel { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 240px; margin: 0; padding: 10px 0; list-style: none; background: var(--bone); border: 1px solid var(--rule); border-top: 3px solid var(--accent); box-shadow: 0 18px 36px rgba(31, 26, 22, .18); text-align: left; }
+.nav__item--dd:hover > .nav__panel, .nav__item--dd:focus-within > .nav__panel, .nav__item--dd.is-open > .nav__panel { display: block; }
+.nav__panel a { display: block; padding: 10px 22px; font-family: var(--f-body); font-size: 1.02rem; letter-spacing: 0; text-transform: none; color: var(--ink); text-decoration: none; }
+.nav__panel a:hover, .nav__panel a:focus-visible { background: var(--field); color: var(--accent); }
+.nav__panel a[aria-current] { border-bottom: 0; color: var(--accent); }
+@media (max-width: 720px) {
+  .site-head .wrap { padding-top: 18px; gap: 8px; }
+  .idn__name { font-size: 1.8rem; }
+  .nav { gap: 0 26px; width: 100%; }
+  .nav__item { position: static; }
+  .nav__panel { left: 0; right: 0; transform: none; min-width: 0; }
+}

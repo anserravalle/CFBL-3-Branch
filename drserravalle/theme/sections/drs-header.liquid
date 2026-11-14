@@ -18,21 +18,59 @@
       {%- if cat != blank %}<span class="idn__cat">{{ cat }}</span>{% endif -%}
     </a>
     <nav aria-label="Main">
-      <ul class="nav">
-        {%- assign nav_links = linklists['drs-main'].links -%}{%- if section.settings.menu != blank -%}{%- assign nav_links = section.settings.menu.links -%}{%- endif -%}
+      <ul class="nav" role="list">
+        {%- assign nav_links = linklists['drs-nav'].links -%}{%- if section.settings.menu != blank -%}{%- assign nav_links = section.settings.menu.links -%}{%- endif -%}
         {%- for link in nav_links -%}
-          <li><a href="{{ link.url }}"{% if link.active or link.child_active %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- if link.links.size > 0 -%}
+            <li class="nav__item nav__item--dd">
+              <button type="button" class="nav__btn" aria-expanded="false" aria-controls="drs-dd-{{ forloop.index }}">{{ link.title }}</button>
+              <ul class="nav__panel" id="drs-dd-{{ forloop.index }}" role="list">
+                {%- for child in link.links -%}
+                  <li><a href="{{ child.url }}"{% if child.active %} aria-current="page"{% endif %}>{{ child.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </li>
+          {%- else -%}
+            <li class="nav__item"><a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- endif -%}
         {%- endfor -%}
       </ul>
     </nav>
   </div>
 </header>
+<script>
+  (function () {
+    var items = document.querySelectorAll('.nav__item--dd');
+    function closeAll(except) {
+      items.forEach(function (li) {
+        if (li === except) return;
+        li.classList.remove('is-open');
+        li.querySelector('.nav__btn').setAttribute('aria-expanded', 'false');
+      });
+    }
+    items.forEach(function (li) {
+      var btn = li.querySelector('.nav__btn');
+      btn.addEventListener('click', function () {
+        var open = !li.classList.contains('is-open');
+        closeAll(li);
+        li.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.nav__item--dd')) closeAll(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      closeAll();
+      if (document.activeElement && document.activeElement.closest('.nav__item--dd')) document.activeElement.blur();
+    });
+  })();
+</script>
 
 {% schema %}
 {
   "name": "DRS header",
   "settings": [
-    { "type": "link_list", "id": "menu", "label": "Menu", "info": "Empty uses drs-main." },
+    { "type": "link_list", "id": "menu", "label": "Menu", "info": "Empty uses the DRS header (dropdowns) menu." },
     { "type": "text", "id": "cat_home", "label": "Category line, home and about", "default": "Psychologist, author, educator" },
     { "type": "text", "id": "cat_bridge", "label": "Category line, Make It Make Sense", "default": "Make It Make Sense" },
     { "type": "text", "id": "cat_essays", "label": "Category line, writing", "default": "Books + Essays" },
