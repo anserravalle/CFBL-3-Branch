@@ -21,7 +21,7 @@
       {%- endif -%}
       <p class="intro__links">
         {%- if section.settings.link1_label != blank %}<a class="btn" href="{{ section.settings.link1_url }}">{{ section.settings.link1_label }}</a>{% endif -%}
-        {%- if section.settings.link2_label != blank %}<a href="{{ section.settings.link2_url }}">{{ section.settings.link2_label }} &rarr;</a>{% endif -%}
+        {%- if section.settings.link2_label != blank %}<a class="btn btn--ghost" href="{{ section.settings.link2_url }}">{{ section.settings.link2_label }}</a>{% endif -%}
       </p>
     </div>
   </div>

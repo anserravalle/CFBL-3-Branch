@@ -542,3 +542,19 @@ p { margin: 0 0 1.1em; }
   .nav__item { position: static; }
   .nav__panel { left: 0; right: 0; transform: none; min-width: 0; }
 }
+
+/* Larger, easier-to-read navigation (Niki, 14 Nov: the phone menu was too small). */
+.nav__btn, .nav > li > a { font-size: .98rem; font-weight: 500; letter-spacing: .07em; }
+.sys-essays .nav__btn { font-size: 1.2rem; }
+.nav__panel a { font-size: 1.1rem; padding: 12px 24px; }
+@media (max-width: 720px) {
+  .idn__name { font-size: 2rem; }
+  .idn__cat { font-size: .8rem; }
+  .nav { gap: 0 8px; justify-content: space-between; padding: 0 4px; }
+  .nav__btn, .nav > li > a { font-size: 1.12rem; letter-spacing: .04em; min-height: 48px; padding: 12px 6px 14px; }
+  .sys-essays .nav__btn { font-size: 1.3rem; }
+  .nav__panel { border-left: 0; border-right: 0; padding: 6px 0 10px; }
+  .nav__panel a { font-size: 1.25rem; padding: 15px 22px; }
+}
+/* About me as a second button under the bio */
+.intro__links .btn--ghost { background: transparent; border-color: var(--bone); color: var(--bone); }
