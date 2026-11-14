@@ -7,7 +7,7 @@
     assign cat = section.settings.cat_essays
   elsif blog.handle == 'clinical-notes' or article.blog.handle == 'clinical-notes' or product or template.suffix contains 'education' or template.suffix contains 'program' or template.suffix contains 'policies'
     assign cat = section.settings.cat_edu
-  elsif template.suffix contains 'about' or template.suffix contains 'speaking'
+  elsif template.suffix contains 'about' or template.suffix contains 'speaking' or template.suffix contains 'contact'
     assign cat = section.settings.cat_home
   endif
 -%}

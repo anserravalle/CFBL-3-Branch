@@ -1,0 +1,54 @@
+<section class="inner-band inner-band--page">
+<header class="page-head measure">
+  {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
+  <h1>{{ page.title }}</h1>
+  {%- if section.settings.lede != blank %}<p class="lede">{{ section.settings.lede }}</p>{% endif -%}
+</header>
+</section>
+<div class="contact measure">
+  {%- if page.content != blank %}<div class="prose">{{ page.content }}</div>{% endif -%}
+  {%- form 'contact', class: 'contact__form' -%}
+    {%- if form.posted_successfully? -%}
+      <p class="contact__ok" role="status">{{ section.settings.thanks }}</p>
+    {%- endif -%}
+    {%- if form.errors -%}
+      <div class="contact__err" role="alert">{{ form.errors | default_errors }}</div>
+    {%- endif -%}
+    <div class="contact__row">
+      <label>Name<input type="text" name="contact[name]" autocomplete="name" value="{{ form.name }}"></label>
+      <label>Email<input type="email" name="contact[email]" autocomplete="email" required value="{{ form.email }}"></label>
+    </div>
+    <label>What is this about?
+      <select name="contact[topic]">
+        <option>Speaking</option>
+        <option>Media</option>
+        <option>Training</option>
+        <option>EMDR consultation</option>
+        <option>Clinical supervision</option>
+        <option>Publishing</option>
+        <option>Something else</option>
+      </select>
+    </label>
+    <label>Message<textarea name="contact[body]" rows="7" required>{{ form.body }}</textarea></label>
+    {%- if section.settings.privacy != blank %}<p class="contact__note">{{ section.settings.privacy }}</p>{% endif -%}
+    <p><button type="submit" class="btn">{{ section.settings.button }}</button></p>
+  {%- endform -%}
+  {%- if section.settings.practice != blank %}<div class="contact__aside">{{ section.settings.practice }}</div>{% endif -%}
+  {%- if section.settings.direct != blank %}<div class="contact__aside">{{ section.settings.direct }}</div>{% endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "DRS contact",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "textarea", "id": "lede", "label": "Lede", "default": "For speaking, media, training, and consultation." },
+    { "type": "text", "id": "privacy", "label": "Note above the button", "default": "Please leave health information out of this form." },
+    { "type": "text", "id": "button", "label": "Button label", "default": "Send" },
+    { "type": "text", "id": "thanks", "label": "Message after sending", "default": "Thank you. Your message is on its way to me." },
+    { "type": "richtext", "id": "practice", "label": "Therapy and evaluations note", "default": "<p><strong>Looking for therapy or an evaluation?</strong> That happens at my practice, <a href=\"https://balancedlivingde.com\">Center for Balanced Living</a>. The team there can talk with you about fit and availability.</p>" },
+    { "type": "richtext", "id": "direct", "label": "Direct contact line", "default": "<p>You can also write to <a href=\"mailto:drserravalle@gmail.com\">drserravalle@gmail.com</a>.</p>" }
+  ],
+  "presets": [{ "name": "DRS contact" }]
+}
+{% endschema %}

@@ -1,0 +1,12 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
