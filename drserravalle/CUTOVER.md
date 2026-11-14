@@ -200,3 +200,30 @@ balancedlivingde.com:
 3. Hide the moved pages and articles, rename the three blog handles, import both redirect CSVs.
 4. Swap the CFBL main menu to one "Dr. Serravalle" link.
 Until step 2 is done the same seats are for sale on both sites.
+
+## CFBL side completed, 14 November 2026
+
+No CFBL orders since 21 September, so no seats to reconcile.
+
+- 50 redirects created with `urlRedirectCreate` (both CSVs, minus `/blogs/clinical-notes`).
+  `/products/nature-informed-emdr` and its landing page point to
+  `https://drserravalle.com/pages/workshops` until the product there goes active.
+- Seven CFBL Institute products set to DRAFT.
+- Eleven pages hidden: cfbl-institute, professional-clinical-trainings, courses-certification,
+  consultation, clinical-supervision, cfbl-institute-policies, the Nature-Informed EMDR and
+  Foundations landing pages, musa-writing, the-stories-we-told, publications.
+- 22 Make It Make Sense articles and 8 essays hidden. Blog handles renamed to
+  `mims-archive` and `essays-archive`. Clinical Notes left alone (one unpublished template).
+- Menus: `main-menu-2026` is now Therapy, Evaluations, Our Team, Community, Contact Us,
+  Dr. Serravalle. `footer` swaps CFBL Institute for a drserravalle.com link.
+  `for-professionals` points to drserravalle.com. `about` drops Musa.
+- Verified by curl: 16 old addresses land on the right drserravalle.com page with 200.
+
+Draft theme `CFBL v2.26 streamlined` (189965467954), unpublished: home "Choose Your Path"
+now Therapy, Psychological Evaluations, Dr. Serravalle; Make It Make Sense feature and
+What the Doctor Is Reading shelf disabled. Live theme v2.25 still shows the old path
+cards and an empty blog feature until Niki publishes v2.26.
+
+Still open: export `list-mims` subscribers, EMDRIA/NBCC address notice, EMDRIA approval
+for March 5, `career-development` page still published, Parenting With Purpose is active
+and tagged Wellness Group, "Therapy in Middletown" page wording.
