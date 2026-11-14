@@ -1,0 +1,44 @@
+{%- comment -%}
+  Books + Essays. Signs as Dr. Niki Serravalle. MUSA may appear only as a quiet imprint line.
+  Never explain the piece. The excerpt does the work.
+{%- endcomment -%}
+<section class="blk sys-essays book-band">
+  {%- if section.settings.hook != blank %}<p class="book__hook">{{ section.settings.hook }}</p>{% endif %}
+  <div class="book wrap">
+    <div class="book__cover">
+      {%- if section.settings.cover -%}{{ section.settings.cover | image_url: width: 900 | image_tag: loading: 'lazy', alt: section.settings.title }}{%- endif -%}
+    </div>
+    <div>
+      {%- if section.settings.logo -%}{{ section.settings.logo | image_url: width: 400 | image_tag: class: "book__logo", loading: "lazy", alt: section.settings.logo.alt }}{%- elsif section.settings.imprint != blank %}<p class="meta">{{ section.settings.imprint }}</p>{% endif -%}
+      <h2>{{ section.settings.title }}</h2>
+      {%- if section.settings.subtitle != blank %}<p class="book__sub">{{ section.settings.subtitle }}</p>{% endif -%}
+      {%- if section.settings.excerpt != blank %}<div class="book__excerpt">{{ section.settings.excerpt }}</div>{% endif -%}
+      {%- if section.settings.text != blank %}{{ section.settings.text }}{% endif -%}
+      <p>
+        {%- if section.settings.buy_label != blank %}<a class="btn" href="{{ section.settings.buy_url }}">{{ section.settings.buy_label }}</a>{% endif -%}
+        {%- if section.settings.more_label != blank %} &nbsp; <a href="{{ section.settings.more_url }}">{{ section.settings.more_label }}</a>{% endif -%}
+      </p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "DRS book",
+  "settings": [
+    { "type": "image_picker", "id": "cover", "label": "Cover" },
+    { "type": "text", "id": "hook", "label": "Handwritten line above this section", "info": "Your own words. Leave empty to hide." },
+    { "type": "image_picker", "id": "logo", "label": "Brand mark", "info": "Shown instead of the imprint line." },
+    { "type": "text", "id": "imprint", "label": "Imprint line", "default": "MUSA" },
+    { "type": "text", "id": "title", "label": "Title", "default": "The Stories We Told" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "The Dance Between a Codependent and a Compulsive Liar" },
+    { "type": "richtext", "id": "excerpt", "label": "Excerpt" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "text", "id": "buy_label", "label": "Buy label", "default": "Order the book" },
+    { "type": "url", "id": "buy_url", "label": "Buy link" },
+    { "type": "text", "id": "more_label", "label": "Second link label" },
+    { "type": "url", "id": "more_url", "label": "Second link" }
+  ],
+  "presets": [{ "name": "DRS book" }]
+}
+{% endschema %}

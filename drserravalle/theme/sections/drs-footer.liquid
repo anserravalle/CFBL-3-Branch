@@ -1,0 +1,73 @@
+{%- liquid
+  assign list_tag = 'list-mims'
+  assign list_head = section.settings.head_mims
+  if blog.handle == 'essays' or article.blog.handle == 'essays' or template.suffix contains 'book' or template.suffix contains 'musa' or template.suffix contains 'writing'
+    assign list_tag = 'list-essays'
+    assign list_head = section.settings.head_essays
+  elsif blog.handle == 'clinical-notes' or article.blog.handle == 'clinical-notes' or product or template.suffix contains 'education' or template.suffix contains 'program' or template.suffix contains 'policies'
+    assign list_tag = 'list-institute'
+    assign list_head = section.settings.head_edu
+  endif
+-%}
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__grid">
+      <div>
+        <p class="eyebrow">Stay in touch</p>
+        <p>{{ list_head }}</p>
+        {%- form 'customer', class: 'signup-form', id: 'drs-signup' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter, {{ list_tag }}">
+          {%- if form.posted_successfully? -%}
+            <p class="form-note" role="status">Thank you. You are on the list.</p>
+          {%- else -%}
+            <div class="signup">
+              <label class="skip" for="drs-signup-email">Email address</label>
+              <input id="drs-signup-email" type="email" name="contact[email]" placeholder="Email address" autocomplete="email" required>
+              <button type="submit">Subscribe</button>
+            </div>
+            {%- if form.errors %}<div class="form-note" role="alert">{{ form.errors | default_errors }}</div>{% endif -%}
+            <p class="form-note">Your email is never shared.</p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+      <div>
+        <p class="eyebrow">Read</p>
+        <ul>
+          {%- assign la = linklists['drs-footer-read'].links -%}{%- if section.settings.menu_a != blank -%}{%- assign la = section.settings.menu_a.links -%}{%- endif -%}{%- for link in la -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">More</p>
+        <ul>
+          {%- assign lb = linklists['drs-footer-more'].links -%}{%- if section.settings.menu_b != blank -%}{%- assign lb = section.settings.menu_b.links -%}{%- endif -%}{%- for link in lb -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
+        </ul>
+      </div>
+    </div>
+    <p class="site-foot__social">
+      <span class="eyebrow">Follow</span>
+      <a href="https://instagram.com/dr.nikiserravalle" rel="me noopener" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/Dr.Serravalle" rel="me noopener" target="_blank">Facebook</a>
+      <a href="https://www.linkedin.com/in/dr-niki-serravalle-87103376" rel="me noopener" target="_blank">LinkedIn</a>
+      <a href="https://tiktok.com/@drserravalle" rel="me noopener" target="_blank">TikTok</a>
+      <a href="https://www.youtube.com/channel/UCajDa-DuAwQm1gnh4Xg1ZZA" rel="me noopener" target="_blank">YouTube</a>
+    </p>
+    {%- if section.settings.practice_note != blank -%}
+      <p class="site-foot__practice">{{ section.settings.practice_note }}</p>
+    {%- endif -%}
+    <p class="site-foot__practice">&copy; {{ 'now' | date: '%Y' }} Dr. Niki Serravalle</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "DRS footer",
+  "settings": [
+    { "type": "text", "id": "head_mims", "label": "Signup line, default", "default": "Make It Make Sense, every other week, in your inbox." },
+    { "type": "text", "id": "head_essays", "label": "Signup line, writing", "default": "New essays, now and then." },
+    { "type": "text", "id": "head_edu", "label": "Signup line, training", "default": "New trainings and consultation openings." },
+    { "type": "link_list", "id": "menu_a", "label": "Column one", "info": "Empty uses drs-footer-read." },
+    { "type": "link_list", "id": "menu_b", "label": "Column two", "info": "Empty uses drs-footer-more." },
+    { "type": "richtext", "id": "practice_note", "label": "Practice note", "default": "<p>Looking for therapy or a psychological evaluation? Dr. Serravalle's clinical practice is <a href=\"https://balancedlivingde.com\">Center for Balanced Living</a> in Townsend, Delaware.</p>" }
+  ]
+}
+{% endschema %}

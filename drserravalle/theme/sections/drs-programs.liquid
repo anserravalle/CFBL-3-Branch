@@ -1,0 +1,76 @@
+{%- comment -%}
+  Professional Education. Lead with the mechanism or the finding. No decoration that does not carry information.
+  CE language is entered per row, copied exactly from the product record. Never flatten approved and pending.
+{%- endcomment -%}
+<section class="wrap" style="padding-top: 56px;">
+  {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
+  {%- if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif -%}
+  {%- if section.settings.text != blank %}<div style="max-width: 40rem;">{{ section.settings.text }}</div>{% endif -%}
+
+  {%- if section.settings.show_tiers -%}
+    <div class="tiers" aria-label="How every claim is sorted">
+      <div class="tier"><h3>Established</h3><p>Replicated across independent samples. Stated plainly.</p></div>
+      <div class="tier"><h3>Emerging</h3><p>Real data, thin replication. Used, and named as early.</p></div>
+      <div class="tier"><h3>Theoretical</h3><p>Organizes observations. Scaffolding for the clinician, not an explanation for a client.</p></div>
+      <div class="tier"><h3>Clinical wisdom</h3><p>What experienced clinicians do and teach. Often correct, rarely tested.</p></div>
+    </div>
+  {%- endif -%}
+
+  <ul class="programs">
+    {%- for block in section.blocks -%}
+      {%- assign p = block.settings.product -%}
+      {%- assign url = block.settings.url | default: p.url -%}
+      <li class="program" {{ block.shopify_attributes }}>
+        <div class="program__img">
+          {%- if block.settings.image -%}{{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+          {%- elsif p.featured_image -%}{{ p.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}
+        </div>
+        <div>
+          {%- if block.settings.kicker != blank %}<p class="eyebrow">{{ block.settings.kicker }}</p>{% endif -%}
+          <h3><a href="{{ url }}" style="color: inherit; text-decoration: none;">{{ block.settings.title | default: p.title }}</a></h3>
+          {%- if block.settings.ce != blank %}<p class="ce">{{ block.settings.ce }}</p>{% endif -%}
+          {{ block.settings.summary }}
+        </div>
+        <div class="program__facts">
+          {%- if block.settings.when != blank %}<p><strong>{{ block.settings.when }}</strong>{{ block.settings.format }}</p>{% endif -%}
+          {%- if p != blank and p.available -%}
+            <p><strong>{{ p.price | money_without_trailing_zeros }}</strong>{% if p.variants.size > 1 %}from{% endif %}</p>
+            <p><a class="btn" href="{{ url }}">{{ block.settings.cta | default: 'Register' }}</a></p>
+          {%- elsif block.settings.unavailable != blank -%}
+            <p>{{ block.settings.unavailable }}</p>
+          {%- endif -%}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "DRS programs",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "checkbox", "id": "show_tiers", "label": "Show the four evidence tiers", "default": true }
+  ],
+  "blocks": [{
+    "type": "program",
+    "name": "Program",
+    "settings": [
+      { "type": "product", "id": "product", "label": "Product" },
+      { "type": "image_picker", "id": "image", "label": "Photograph", "info": "Assessment materials, teaching context. No wellness imagery." },
+      { "type": "text", "id": "kicker", "label": "Kicker", "info": "e.g. Workshop, Course, Consultation" },
+      { "type": "text", "id": "title", "label": "Title override" },
+      { "type": "text", "id": "ce", "label": "CE line", "info": "Copy exactly from the product record. Leave empty when there is no CE." },
+      { "type": "richtext", "id": "summary", "label": "Summary" },
+      { "type": "text", "id": "when", "label": "Date line" },
+      { "type": "text", "id": "format", "label": "Format line" },
+      { "type": "text", "id": "cta", "label": "Button label", "default": "Register" },
+      { "type": "url", "id": "url", "label": "Link override" },
+      { "type": "text", "id": "unavailable", "label": "Text when not on sale" }
+    ]
+  }],
+  "presets": [{ "name": "DRS programs" }]
+}
+{% endschema %}

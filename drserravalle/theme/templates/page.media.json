@@ -1,0 +1,37 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "Media"
+      }
+    },
+    "teaser": {
+      "type": "drs-teaser",
+      "settings": {
+        "image": "shopify://shop_images/20261114_DRS_Niki_path_selfie.png",
+        "eyebrow": "Coming summer 2027",
+        "heading": "The Stories We Told podcast",
+        "text": "",
+        "anchor": "podcast",
+        "show_form": true,
+        "topic": "The Stories We Told podcast: guest interest",
+        "prompt": "Tell me a little about you",
+        "note": "Please leave health information out of this form.",
+        "button": "Send",
+        "thanks": "Thank you. Your message is on its way to me.",
+        "hook": "We all have a story to tell.",
+        "notify": true,
+        "notify_label": "Leave your email and I will tell you when it launches.",
+        "notify_button": "Tell me",
+        "notify_tag": "interest-podcast",
+        "form_intro": "Want to be on it? Tell me."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "teaser"
+  ]
+}

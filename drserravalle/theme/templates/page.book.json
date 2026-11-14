@@ -1,0 +1,39 @@
+{
+  "layout": "drs",
+  "sections": {
+    "book": {
+      "type": "drs-book",
+      "settings": {
+        "imprint": "MUSA",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance Between a Codependent and a Compulsive Liar",
+        "buy_label": "Order the book",
+        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
+        "cover": "shopify://shop_images/324765AE-DC45-4525-8D0F-8B9D032EE925.png",
+        "text": "<p>The companion workbook on codependency is coming summer 2027.</p>"
+      }
+    },
+    "main": {
+      "type": "drs-page",
+      "settings": {}
+    },
+    "teaser": {
+      "type": "drs-teaser",
+      "settings": {
+        "image": "shopify://shop_images/20261114_DRS_path_autumn_cool.jpg",
+        "eyebrow": "Coming summer 2027",
+        "heading": "The workbook",
+        "text": "<p>A companion to <em>The Stories We Told</em>, on codependency.</p>",
+        "notify": true,
+        "notify_label": "Leave your email and I will tell you when it is out.",
+        "notify_button": "Tell me",
+        "notify_tag": "interest-workbook"
+      }
+    }
+  },
+  "order": [
+    "book",
+    "main",
+    "teaser"
+  ]
+}

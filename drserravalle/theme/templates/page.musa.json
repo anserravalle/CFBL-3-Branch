@@ -1,0 +1,15 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "MUSA",
+        "image": "shopify://shop_images/20261114_MUSA_banner_tree_centered.png"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

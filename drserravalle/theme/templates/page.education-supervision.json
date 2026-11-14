@@ -1,0 +1,15 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "Professional Education",
+        "image": "shopify://shop_images/20261114_DRS_Niki_headshot_burgundy.png"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "Professional Education",
+        "image": "shopify://shop_images/B0A4F575-4E69-4C03-8E96-D5526962F4DA.png"
+      }
+    },
+    "programs": {
+      "type": "drs-programs",
+      "settings": {
+        "eyebrow": "Winter and spring 2027",
+        "heading": "Programs",
+        "show_tiers": true
+      },
+      "blocks": {
+        "p1": {
+          "type": "program",
+          "settings": {
+            "product": "foundations-of-trauma-therapy-12-week-integration-course",
+            "kicker": "Course",
+            "ce": "The founding cohort does not award continuing education credit.",
+            "summary": "<p>Each week reviews one family of trauma models and its core skills, then applies it alongside the models that came before.</p>",
+            "when": "January 13 to April 7, 2027",
+            "format": "Wednesdays, 5:00 to 6:00 PM Eastern. Live, virtual. No session February 17.",
+            "cta": "Register"
+          }
+        },
+        "p2": {
+          "type": "program",
+          "settings": {
+            "product": "adhd-evaluation-diagnostic-reasoning-differential-and-defensible-findings",
+            "kicker": "Workshop",
+            "ce": "This workshop does not award continuing education credit.",
+            "summary": "<p>Whether the onset and cross-setting criteria are genuinely met, and whether the evidence supports the conclusion you are about to put in writing and sign. This intensive works through the reasoning rather than the checklist.</p>",
+            "when": "Friday, January 22, 2027",
+            "format": "1:00 to 4:00 PM Eastern. Live on Zoom.",
+            "cta": "Register"
+          }
+        },
+        "p3": {
+          "type": "program",
+          "settings": {
+            "product": "assessment-gender-diverse-clients",
+            "kicker": "Workshop",
+            "ce": "This workshop does not award continuing education credit.",
+            "summary": "<p>Assessment is often treated as neutral. It is not. Intake language, norm selection, instrument design, and interpretive habits can all reduce validity when a client is transgender or gender diverse.</p>",
+            "when": "Friday, February 5, 2027",
+            "format": "1:00 to 4:00 PM Eastern. Live on Zoom.",
+            "cta": "Register"
+          }
+        },
+        "p4": {
+          "type": "program",
+          "settings": {
+            "product": "nature-informed-emdr",
+            "kicker": "Workshop",
+            "ce": "EMDRIA Approved for 3 EMDRIA Credits.",
+            "summary": "<p>For EMDR clinicians who already know how to do the work and want to think more carefully about when and how nature-informed elements belong inside a standard EMDR case.</p>",
+            "when": "Friday, March 5, 2027",
+            "format": "1:00 to 4:00 PM Eastern. Live on Zoom. Credit requires live, real-time attendance.",
+            "cta": "Register",
+            "title": "Nature-Informed EMDR"
+          }
+        },
+        "p5": {
+          "type": "program",
+          "settings": {
+            "product": "emdr-consultation-individual",
+            "kicker": "Consultation",
+            "summary": "<p>Built on your cases rather than a curriculum you sit through. Hours documented for your EMDRIA certification application.</p>",
+            "when": "Ongoing",
+            "format": "Online, or in person in Townsend.",
+            "cta": "Register",
+            "title": "EMDR Consultation: Individual"
+          }
+        },
+        "p6": {
+          "type": "program",
+          "settings": {
+            "product": "emdr-consultation-group",
+            "kicker": "Consultation",
+            "summary": "<p>A small group of EMDR clinicians, each bringing cases. Group hours count toward certification within EMDRIA's limits for group consultation.</p>",
+            "when": "Ongoing",
+            "format": "Online, or in person in Townsend.",
+            "cta": "Register",
+            "title": "EMDR Consultation: Group"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "programs"
+  ]
+}

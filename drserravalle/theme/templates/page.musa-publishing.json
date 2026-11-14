@@ -1,0 +1,25 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "MUSA",
+        "image": "shopify://shop_images/20261114_MUSA_Niki_bookshelf_standing.jpg",
+        "caption": "Dr. Serravalle loves not only storytelling but reading."
+      }
+    },
+    "notify": {
+      "type": "drs-notify",
+      "settings": {
+        "label": "Leave your email and I will tell you when submissions open.",
+        "button": "Tell me",
+        "tag": "interest-publishing"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "notify"
+  ]
+}
