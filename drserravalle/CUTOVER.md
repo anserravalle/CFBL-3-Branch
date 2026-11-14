@@ -227,3 +227,16 @@ cards and an empty blog feature until Niki publishes v2.26.
 Still open: export `list-mims` subscribers, EMDRIA/NBCC address notice, EMDRIA approval
 for March 5, `career-development` page still published, Parenting With Purpose is active
 and tagged Wellness Group, "Therapy in Middletown" page wording.
+
+## What the Doctor Is Reading moved, 14 November 2026
+
+Section copied byte for byte from the CFBL live theme into `sections/drs-reading-shelf.liquid`
+(35,846 bytes, uploaded by staged upload plus `themeFilesUpsert` with a URL body). Content
+is in `source/wtdir/`. It sits last on `page.education.json` in draft theme
+`Horizon (reading shelf)` (159378243702). Eyebrow changed to "A reading series for
+clinicians"; the "See the full library" button removed. Films still load from the CFBL
+store's video CDN, so do not delete those files from the practice store.
+Open: the shelf sculpture image shows the rainbow CBL tree, which the Professional
+Education avoid list names. Niki's call.
+Publish order: `Horizon (reading shelf)` on drserravalle.com first, then
+`CFBL v2.26 streamlined` on the practice site.
