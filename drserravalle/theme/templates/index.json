@@ -14,7 +14,7 @@
         "link1_url": "/blogs/make-it-make-sense",
         "link2_label": "About me",
         "link2_url": "/pages/about",
-        "hook": "Make it make sense."
+        "hook": "Where psychology meets real life."
       }
     },
     "book": {
@@ -30,7 +30,8 @@
         "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
         "more_label": "Read my other writing",
         "more_url": "/blogs/essays",
-        "logo": "shopify://shop_images/20261114_MUSA_Logo_transparent.png"
+        "logo": "shopify://shop_images/20261114_MUSA_Logo_transparent.png",
+        "hook": "It’s finally time to tell the whole story."
       }
     },
     "mims": {
@@ -50,7 +51,8 @@
         "caption": "Make It Make Sense",
         "page_title": "Where a claim sits",
         "blog": "make-it-make-sense",
-        "count": 3
+        "count": 3,
+        "hook": "Make it make sense."
       }
     },
     "edu": {
@@ -71,7 +73,8 @@
         "page_title": "Where a claim sits",
         "blog": "",
         "count": 0,
-        "logo": "shopify://shop_images/20261114_INST_Logo_transparent.png"
+        "logo": "shopify://shop_images/20261114_INST_Logo_transparent.png",
+        "hook": "Depth rather than a certificate."
       }
     }
   },

@@ -558,3 +558,12 @@ p { margin: 0 0 1.1em; }
 }
 /* About me as a second button under the bio */
 .intro__links .btn--ghost { background: transparent; border-color: var(--bone); color: var(--bone); }
+
+/* A handwritten line opens every section (Niki, 14 Nov). On the bands it sits in
+   the fade between two colors. Same hand as the intro hook. */
+.band { position: relative; }
+.band__hook, .book__hook { font-family: "Caveat", "Segoe Script", cursive; font-weight: 600; font-size: clamp(2.5rem, 5.6vw, 4.2rem); line-height: 1.05; color: var(--bone); text-align: center; margin: 0; padding: 0 16px; transform: rotate(-2deg); }
+.band__hook { position: absolute; top: 104px; left: 0; right: 0; }
+.book__hook { padding-top: 8px; margin-bottom: 56px; }
+.blk.book-band { padding-top: 40px; }
+@media (max-width: 860px) { .band__hook { top: 76px; } .book__hook { margin-bottom: 36px; } }

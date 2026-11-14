@@ -3,6 +3,7 @@
   Never explain the piece. The excerpt does the work.
 {%- endcomment -%}
 <section class="blk sys-essays book-band">
+  {%- if section.settings.hook != blank %}<p class="book__hook">{{ section.settings.hook }}</p>{% endif %}
   <div class="book wrap">
     <div class="book__cover">
       {%- if section.settings.cover -%}{{ section.settings.cover | image_url: width: 900 | image_tag: loading: 'lazy', alt: section.settings.title }}{%- endif -%}
@@ -26,6 +27,7 @@
   "name": "DRS book",
   "settings": [
     { "type": "image_picker", "id": "cover", "label": "Cover" },
+    { "type": "text", "id": "hook", "label": "Handwritten line above this section", "info": "Your own words. Leave empty to hide." },
     { "type": "image_picker", "id": "logo", "label": "Brand mark", "info": "Shown instead of the imprint line." },
     { "type": "text", "id": "imprint", "label": "Imprint line", "default": "MUSA" },
     { "type": "text", "id": "title", "label": "Title", "default": "The Stories We Told" },
