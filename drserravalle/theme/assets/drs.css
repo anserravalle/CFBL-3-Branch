@@ -666,3 +666,15 @@ p { margin: 0 0 1.1em; }
 .parts h3 { font-family: "DM Serif Display", Georgia, serif; font-size: 1.45rem; line-height: 1.2; margin: 0 0 6px; }
 .parts p { font-family: "EB Garamond", Georgia, serif; font-size: 1.15rem; color: var(--muted); margin: 0; }
 .parts a:hover h3 { color: var(--oxblood); }
+
+/* Coming-soon teaser (book page) */
+.teaser { background: linear-gradient(180deg, var(--bone) 0%, var(--oxblood) 22%, var(--oxblood) 100%); color: var(--bone); padding: 150px 0 96px; margin-top: 48px; }
+.teaser__grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+.teaser__img { margin: 0; background: #EDE0C8; padding: 12px; box-shadow: 0 22px 44px rgba(0, 0, 0, .3); transform: rotate(-1.2deg); }
+.teaser__img img { display: block; width: 100%; height: auto; }
+.teaser__when { font-family: "Allura", cursive; font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.1; color: #E8CB96; margin: 0 0 10px; }
+.teaser h2 { font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.2rem, 6vw, 3.4rem); color: var(--bone); margin: 0 0 14px; }
+.teaser__text { font-family: "EB Garamond", Georgia, serif; font-size: 1.4rem; color: rgba(241, 232, 216, .92); }
+.teaser__text a { color: #E8CB96; }
+@media (max-width: 860px) { .teaser__grid { grid-template-columns: 1fr; } .teaser { padding-top: 120px; } }
+.tpl-page-book .site-foot { margin-top: 0; }

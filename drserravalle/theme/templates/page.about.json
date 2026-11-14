@@ -4,7 +4,8 @@
     "main": {
       "type": "drs-page",
       "settings": {
-        "eyebrow": "About"
+        "eyebrow": "About",
+        "image": "shopify://shop_images/20261114_DRS_Niki_leaning_tree.png"
       }
     }
   },
