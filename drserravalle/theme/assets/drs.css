@@ -505,8 +505,8 @@ p { margin: 0 0 1.1em; }
 .inner-band--short + .prod { margin-top: -60px; }
 .prod__buy { background: var(--bone); padding: 28px; box-shadow: 0 18px 40px rgba(0, 0, 0, .12); }
 
-/* Cream breath between the two reds (Niki, 12 Nov): the intro and the book band are
-   both Oxblood, so the intro fades out to Cream and the book band fades back in.
-   Padding keeps all type clear of the fade. */
-.intro { background: linear-gradient(180deg, var(--oxblood) 0, var(--oxblood) calc(100% - 240px), var(--cream) 100%); padding-bottom: 260px; }
-.blk.book-band { background: linear-gradient(180deg, var(--cream) 0, var(--oxblood) 240px, var(--oxblood) 100%); padding-top: 280px; }
+/* Intro hook (Niki, 14 Nov): one handwritten line that opens the page, above the
+   portrait. Caveat, chosen because it stays legible at size. */
+.intro__hook { font-family: 'Caveat', 'Segoe Script', cursive; font-weight: 600; font-size: clamp(3rem, 7vw, 5.25rem); line-height: 1; color: var(--bone); margin: 8px 0 28px; transform: rotate(-3deg); text-align: center; }
+.intro__hook::after { content: ''; display: block; width: 46%; height: 3px; margin: 10px auto 0; background: var(--ochre); border-radius: 3px; transform: rotate(-.6deg); }
+@media (max-width: 860px) { .intro__hook { margin-bottom: 20px; } }

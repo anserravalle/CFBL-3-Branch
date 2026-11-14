@@ -37,7 +37,7 @@
       {%- endcase -%}
     </figure>
   </div>
-  {%- if b.articles_count > 0 -%}
+  {%- if section.settings.blog != blank and section.settings.count > 0 and b.articles.size > 0 -%}
     <div class="wrap band__posts">
       {%- for a in b.articles limit: section.settings.count -%}
         <a class="band__post" href="{{ a.url }}">

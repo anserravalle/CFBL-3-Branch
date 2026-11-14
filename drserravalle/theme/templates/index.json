@@ -1,49 +1,55 @@
 {
   "layout": "drs",
   "sections": {
-    "mims": {
-      "type": "drs-band",
-      "settings": {
-        "color": "cobalt",
-        "from": "oxblood",
-        "eyebrow": "Every other week",
-        "heading": "Make It Make Sense",
-        "text": "<p>Psychology explained plainly, with the research named and the limits stated.</p>",
-        "link_label": "All posts",
-        "link_url": "/blogs/make-it-make-sense",
-        "image": "shopify://shop_images/MUSA_writing_desk.jpg",
-        "blog": "make-it-make-sense",
-        "count": 3,
-        "frame": "parchment",
-        "caption": "Make It Make Sense"
-      }
-    },
-    "book": {
-      "type": "drs-book",
-      "settings": {
-        "imprint": "MUSA",
-        "title": "The Stories We Told",
-        "subtitle": "The Dance Between a Codependent and a Compulsive Liar",
-        "excerpt": "<p>He dug around, pulled an old receipt from his pocket, and even ran out to his truck to find a pen. Right there on the back of that crumpled slip, he sketched a small house. Simple. Nestled in the woods.</p>",
-        "buy_label": "Order the book",
-        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
-        "more_label": "Read the essays",
-        "more_url": "/blogs/essays",
-        "cover": "shopify://shop_images/MUSA_TheStoriesWeTold_Cover.png"
-      }
-    },
     "intro": {
       "type": "drs-intro",
       "settings": {
         "image": "shopify://shop_images/Dr_Niki_MUSA.jpg",
+        "focal": "",
         "heading": "Dr. Niki Serravalle",
-        "bio": "<p>I am a psychologist in Townsend, Delaware, and the founder of Center for Balanced Living. For more than twenty years my work has been trauma and psychological evaluation. I write Make It Make Sense, I teach other clinicians, and I wrote a memoir called <em>The Stories We Told</em>.</p>",
+        "bio": "<p>I am a psychologist in Townsend, Delaware, and the founder of Center for Balanced Living.</p><p>For more than twenty years my clinical work has focused on treating trauma, alongside a personal passion for psychological evaluation.</p><p>I write Make It Make Sense, I teach other clinicians, and I wrote a memoir called <em>The Stories We Told</em>.</p>",
         "quote": "A space where the clinical, the literary, and the personal meet on the page.",
         "cite": "Niki Serravalle, on why she writes",
         "link1_label": "Read Make It Make Sense",
         "link1_url": "/blogs/make-it-make-sense",
         "link2_label": "About",
-        "link2_url": "/pages/about"
+        "link2_url": "/pages/about",
+        "hook": "Make it make sense."
+      }
+    },
+    "book": {
+      "type": "drs-book",
+      "settings": {
+        "cover": "shopify://shop_images/324765AE-DC45-4525-8D0F-8B9D032EE925.png",
+        "imprint": "MUSA",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance Between a Codependent and a Compulsive Liar",
+        "excerpt": "<p>He dug around, pulled an old receipt from his pocket, and even ran out to his truck to find a pen. Right there on the back of that crumpled slip, he sketched a small house. Simple. Nestled in the woods.</p>",
+        "text": "",
+        "buy_label": "Order the book",
+        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
+        "more_label": "Read my other writing",
+        "more_url": "/blogs/essays"
+      }
+    },
+    "mims": {
+      "type": "drs-band",
+      "settings": {
+        "color": "cobalt",
+        "from": "oxblood",
+        "to_footer": false,
+        "flip": false,
+        "eyebrow": "Every other week",
+        "heading": "Make It Make Sense",
+        "text": "<p>Discussions about psychology and the field.</p>",
+        "link_label": "All posts",
+        "link_url": "/blogs/make-it-make-sense",
+        "image": "shopify://shop_images/MUSA_writing_desk.jpg",
+        "frame": "parchment",
+        "caption": "Make It Make Sense",
+        "page_title": "Where a claim sits",
+        "blog": "make-it-make-sense",
+        "count": 3
       }
     },
     "edu": {
@@ -55,14 +61,15 @@
         "flip": true,
         "eyebrow": "Professional Education",
         "heading": "Training for clinicians",
-        "text": "<p>Courses, workshops, consultation, and supervision for clinicians who want depth rather than a certificate. Every central claim is sorted as established, emerging, theoretical, or clinical wisdom.</p>",
+        "text": "<p>Every clinician trained in a model eventually meets the client for whom it stops working. I build my trainings around that moment, for clinicians who want depth rather than a certificate.</p>",
         "link_label": "See the programs",
         "link_url": "/pages/professional-education",
         "image": "shopify://shop_images/photo-1763098844932-7240ee8ff180.jpg",
-        "count": 0,
         "frame": "textbook",
         "caption": "Clinical reasoning, sorted by the strength of its evidence.",
-        "page_title": "Where a claim sits"
+        "page_title": "Where a claim sits",
+        "blog": "",
+        "count": 0
       }
     }
   },
