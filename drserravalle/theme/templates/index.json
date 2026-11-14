@@ -70,12 +70,16 @@
         "link_url": "/pages/professional-education",
         "image": "shopify://shop_images/photo-1763098844932-7240ee8ff180.jpg",
         "frame": "textbook",
-        "caption": "Clinical reasoning, sorted by the strength of its evidence.",
-        "page_title": "Where a claim sits",
+        "caption": "",
+        "page_title": "How we think about evidence",
         "blog": "",
         "count": 0,
         "logo": "shopify://shop_images/20261114_INST_Logo_transparent.png",
-        "hook": "Depth rather than a certificate."
+        "hook": "Evidence informs practice. Curiosity deepens it.",
+        "tier1": "Replicated. Say it plainly.",
+        "tier2": "Real data, thin replication.",
+        "tier3": "Scaffolding, not explanation.",
+        "tier4": "Often right, rarely tested."
       }
     }
   },

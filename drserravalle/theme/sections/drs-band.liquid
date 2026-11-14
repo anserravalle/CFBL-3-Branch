@@ -24,10 +24,10 @@
           <div class="tb">
             <div class="tb__page tb__page--l">
               <p class="eyebrow">{{ section.settings.page_title }}</p>
-              <p class="tb__tier"><strong>Established</strong><span>Replicated across independent samples. Stated plainly.</span></p>
-              <p class="tb__tier"><strong>Emerging</strong><span>Real data, thin replication. Used, and named as early.</span></p>
-              <p class="tb__tier"><strong>Theoretical</strong><span>Organizes observations. Scaffolding, not explanation.</span></p>
-              <p class="tb__tier"><strong>Clinical wisdom</strong><span>What experienced clinicians do. Often correct, rarely tested.</span></p>
+              <p class="tb__tier"><strong>Established</strong><span>{{ section.settings.tier1 }}</span></p>
+              <p class="tb__tier"><strong>Emerging</strong><span>{{ section.settings.tier2 }}</span></p>
+              <p class="tb__tier"><strong>Theoretical</strong><span>{{ section.settings.tier3 }}</span></p>
+              <p class="tb__tier"><strong>Clinical wisdom</strong><span>{{ section.settings.tier4 }}</span></p>
             </div>
             <div class="tb__page tb__page--r">
               {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 25vw, 50vw' }}{%- endif -%}
@@ -82,6 +82,10 @@
       { "value": "textbook", "label": "Open textbook (Professional Education)" } ] },
     { "type": "text", "id": "caption", "label": "Caption" },
     { "type": "text", "id": "page_title", "label": "Textbook left page heading", "default": "Where a claim sits" },
+    { "type": "text", "id": "tier1", "label": "Textbook: Established", "default": "Replicated. Say it plainly." },
+    { "type": "text", "id": "tier2", "label": "Textbook: Emerging", "default": "Real data, thin replication." },
+    { "type": "text", "id": "tier3", "label": "Textbook: Theoretical", "default": "Scaffolding, not explanation." },
+    { "type": "text", "id": "tier4", "label": "Textbook: Clinical wisdom", "default": "Often right, rarely tested." },
     { "type": "blog", "id": "blog", "label": "Show latest posts from" },
     { "type": "range", "id": "count", "label": "Posts", "min": 0, "max": 6, "step": 1, "default": 3 }
   ],

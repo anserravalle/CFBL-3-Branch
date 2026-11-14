@@ -596,3 +596,26 @@ p { margin: 0 0 1.1em; }
 /* Two-line opening hook: each sentence on its own line. */
 .intro__hook span { display: block; }
 .intro__hook { font-size: clamp(3rem, 6.4vw, 5rem); line-height: 1.05; }
+
+/* Field-guide textbook (Niki, 14 Nov): fewer words, more room, readable on a phone.
+   The handwritten line now sits in normal flow so it can run to two lines. */
+.band:has(.band__hook) { padding-top: 120px; }
+.band__hook { position: static; margin: 0 auto 72px; max-width: 16em; text-wrap: balance; }
+.tb__page { padding: 34px 30px 36px; }
+.tb__page--l .eyebrow { font-family: "Cormorant SC", Georgia, serif; font-size: 1.05rem; letter-spacing: .12em; color: var(--forest); padding-bottom: 12px; margin-bottom: 18px; border-bottom: 1px solid var(--ochre); }
+.tb__tier { margin: 0 0 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(42, 53, 48, .12); }
+.tb__tier:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.tb__tier strong { font-family: "Lora", Georgia, serif; font-weight: 500; font-size: 1.3rem; letter-spacing: 0; }
+.tb__tier span { font-size: 1rem; line-height: 1.4; color: #2A3530; margin-top: 3px; }
+.frame--textbook { max-width: 700px; }
+@media (max-width: 860px) {
+  .band:has(.band__hook) { padding-top: 96px; }
+  .band__hook { margin-bottom: 44px; }
+  .tb { grid-template-columns: 1fr; transform: none; }
+  .tb__page { padding: 26px 24px 28px; }
+  .tb__page--l { border-radius: 3px 3px 0 0; background: #EAE2D0; }
+  .tb__page--r { border-radius: 0 0 3px 3px; background: #EAE2D0; padding-top: 0; }
+  .tb__tier strong { font-size: 1.35rem; }
+  .tb__tier span { font-size: 1.08rem; line-height: 1.4; }
+  .tb__page--l .eyebrow { font-size: 1.1rem; }
+}
