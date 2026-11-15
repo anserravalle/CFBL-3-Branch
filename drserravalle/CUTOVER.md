@@ -240,3 +240,16 @@ Open: the shelf sculpture image shows the rainbow CBL tree, which the Profession
 Education avoid list names. Niki's call.
 Publish order: `Horizon (reading shelf)` on drserravalle.com first, then
 `CFBL v2.26 streamlined` on the practice site.
+
+## Selling setup, 15 November 2026
+
+- Live theme on drserravalle.com is `Horizon (reading shelf)`; What the Doctor Is Reading is live there.
+- All nine program variants (seven products) set to `requiresShipping: false`. Checkout no
+  longer asks for a shipping address. Verified by adding a consultation session to a cart
+  and loading checkout; cart cleared, no order placed.
+- Checkout references Shopify Payments. Not verified by a real payment. Niki to run one
+  test purchase and refund it.
+- Variants are still `taxable: true`. Left as is; whether training tuition is taxable is
+  an accountant question.
+- CFBL still to do: remove the two out-of-date book pop-ups in the header group, post the
+  November Letters from the Practice with three links repointed to drserravalle.com.
