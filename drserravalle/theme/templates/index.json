@@ -1,0 +1,96 @@
+{
+  "layout": "drs",
+  "sections": {
+    "intro": {
+      "type": "drs-intro",
+      "settings": {
+        "image": "shopify://shop_images/Dr_Niki_MUSA.jpg",
+        "focal": "",
+        "heading": "Dr. Niki Serravalle",
+        "bio": "<p>I am a psychologist in Townsend, Delaware, and the founder of Center for Balanced Living.</p><p>For more than twenty years my clinical work has focused on treating trauma, alongside a personal passion for psychological evaluation.</p><p>I write Make It Make Sense, I teach other clinicians, and I wrote a memoir called <em>The Stories We Told</em>.</p>",
+        "quote": "A space where the clinical, the literary, and the personal meet on the page.",
+        "cite": "Niki Serravalle, on why she writes",
+        "link1_label": "Read Make It Make Sense",
+        "link1_url": "/blogs/make-it-make-sense",
+        "link2_label": "About me",
+        "link2_url": "/pages/about",
+        "hook": "Curious about people.",
+        "hook2": "Serious about understanding them."
+      }
+    },
+    "book": {
+      "type": "drs-book",
+      "settings": {
+        "cover": "shopify://shop_images/324765AE-DC45-4525-8D0F-8B9D032EE925.png",
+        "imprint": "MUSA",
+        "title": "The Stories We Told",
+        "subtitle": "The Dance Between a Codependent and a Compulsive Liar",
+        "excerpt": "<p>He dug around, pulled an old receipt from his pocket, and even ran out to his truck to find a pen. Right there on the back of that crumpled slip, he sketched a small house. Simple. Nestled in the woods.</p>",
+        "text": "",
+        "buy_label": "Order the book",
+        "buy_url": "https://amazon.com/dp/B0HPVXR9VZ",
+        "more_label": "Read my other writing",
+        "more_url": "/blogs/essays",
+        "logo": "shopify://shop_images/20261114_MUSA_Logo_transparent.png",
+        "hook": "It’s finally time to tell the whole story."
+      }
+    },
+    "mims": {
+      "type": "drs-band",
+      "settings": {
+        "color": "cobalt",
+        "from": "oxblood",
+        "to_footer": false,
+        "flip": false,
+        "eyebrow": "",
+        "heading": "Make It Make Sense",
+        "text": "<p>Discussions about psychology and the field.</p>",
+        "link_label": "All posts",
+        "link_url": "/blogs/make-it-make-sense",
+        "image": "shopify://shop_images/MUSA_writing_desk.jpg",
+        "frame": "parchment",
+        "caption": "Make It Make Sense",
+        "page_title": "Where a claim sits",
+        "blog": "make-it-make-sense",
+        "count": 3,
+        "hook": "I want to be honest…"
+      }
+    },
+    "edu": {
+      "type": "drs-band",
+      "settings": {
+        "color": "forest",
+        "from": "cobalt",
+        "to_footer": true,
+        "flip": true,
+        "eyebrow": "Professional Education",
+        "heading": "Training for clinicians",
+        "text": "<p>The training ends. The case does not.</p><p>I teach the part the field quietly leaves to experience: what to do when the model stops working. Bring the one you are stuck on.</p>",
+        "link_label": "See the programs",
+        "link_url": "/pages/professional-education",
+        "image": "shopify://shop_images/photo-1763098844932-7240ee8ff180.jpg",
+        "frame": "textbook",
+        "caption": "",
+        "page_title": "What I teach from",
+        "blog": "",
+        "count": 0,
+        "logo": "shopify://shop_images/20261114_INST_Logo_transparent.png",
+        "hook": "Evidence informs practice. Curiosity deepens it.",
+        "tier1": "Certified in EMDR and TF-CBT. More than twenty years of cases.",
+        "tier2": "I give, score, and interpret the tests I teach.",
+        "tier3": "Emerging research supports bringing nature into trauma treatment.",
+        "tier4": "Knowing each model well enough to decide in the moment.",
+        "label1": "Trauma",
+        "label2": "Psychological assessment",
+        "label3": "Nature-based interventions",
+        "label4": "Integrative practice"
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "book",
+    "mims",
+    "edu"
+  ]
+}

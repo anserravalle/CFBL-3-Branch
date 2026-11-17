@@ -1,0 +1,14 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "CFBL Institute"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

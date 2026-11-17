@@ -1,0 +1,28 @@
+<section class="inner-band inner-band--page">
+<header class="page-head {% if section.settings.image %}wrap{% else %}measure{% endif %}">
+  {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
+  <h1>{{ page.title }}</h1>
+  {%- if section.settings.lede != blank %}<p class="lede">{{ section.settings.lede }}</p>{% endif -%}
+</header>
+</section>
+{%- if section.settings.image -%}
+  <div class="split wrap">
+    <figure class="split__img">{{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'eager', sizes: '(min-width: 860px) 40vw, 100vw' }}{% if section.settings.caption != blank %}<figcaption>{{ section.settings.caption }}</figcaption>{% endif %}</figure>
+    <div class="prose">{{ page.content }}</div>
+  </div>
+{%- else -%}
+  <div class="prose measure">{{ page.content }}</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "DRS page",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "textarea", "id": "lede", "label": "Lede" },
+    { "type": "image_picker", "id": "image", "label": "Photograph", "info": "Optional. Sits beside the text." },
+    { "type": "text", "id": "caption", "label": "Photograph caption" }
+  ],
+  "presets": [{ "name": "DRS page" }]
+}
+{% endschema %}

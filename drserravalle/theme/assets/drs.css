@@ -1,0 +1,729 @@
+/* drserravalle.com
+   One public identity, Dr. Niki Serravalle. Three internal systems, switched by body class.
+   No rainbow CFBL mark anywhere on this site. No pure black. */
+
+/* One combined palette, drawn from all three brand palettes (Niki, 12 Nov 2026).
+   Shared base on every page: Bone ground, Ink text, Walnut secondary, Ochre hairlines.
+   All three accents coexist: Cobalt (Make It Make Sense), Forest (Professional
+   Education), Oxblood (Books + Essays). Each section leads with its own accent and
+   field color. Type systems still differ by section. */
+:root {
+  --bone: #F1E8D8; --parchment: #EDE0C8; --sand: #EED9C5; --cream: #EAE2D0;
+  --ink-0: #1F1A16; --walnut: #4A4036; --ochre: #C5A572; --deep-ink: #2A3530;
+  --cobalt: #2B5275; --ocean: #4E9FBF; --forest: #3D5A52; --sage: #6F8F7A;
+  --mist: #B8C9BC; --sky: #C2D7E9; --oxblood: #6E1F23;
+  --ground: var(--bone);
+  --ink: var(--ink-0);
+  --muted: var(--walnut);
+  --rule: rgba(197, 165, 114, .55);
+}
+/* Core Dr. Niki, the bridge */
+.sys-bridge {
+  --field: var(--sand);
+  --head: var(--cobalt);
+  --accent: var(--cobalt);
+  --f-head: 'Cormorant SC', Georgia, serif;
+  --f-body: 'Lora', Georgia, serif;
+  --f-meta: 'Inter', system-ui, sans-serif;
+}
+/* Professional Education: a serious field guide */
+.sys-edu {
+  --field: var(--mist);
+  --head: var(--forest);
+  --accent: var(--forest);
+  --f-head: 'Cormorant SC', Georgia, serif;
+  --f-body: 'Lora', Georgia, serif;
+  --f-meta: 'Inter', system-ui, sans-serif;
+}
+/* Books + Essays: a book page. Breaks from Cormorant on purpose. */
+.sys-essays {
+  --field: var(--parchment);
+  --head: var(--ink-0);
+  --accent: var(--oxblood);
+  --f-head: 'DM Serif Display', Georgia, serif;
+  --f-body: 'EB Garamond', Georgia, serif;
+  --f-meta: 'EB Garamond', Georgia, serif;
+}
+/* The three accents side by side, wherever the site shows all of itself */
+.acc-bridge { --accent: var(--cobalt); --head: var(--cobalt); }
+.acc-edu { --accent: var(--forest); --head: var(--forest); }
+.acc-essays { --accent: var(--oxblood); --head: var(--oxblood); }
+.door .eyebrow { color: var(--accent); }
+.door h3 { color: var(--head); }
+.door__img { border-bottom: 3px solid var(--accent); }
+
+/* A block can render in another system on any page */
+.blk { background: var(--field); color: var(--ink); font-family: var(--f-body); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+.sys-essays { font-size: 1.25rem; line-height: 1.6; }
+.sys-essays .btn { background: var(--accent); border-color: var(--accent); color: var(--ground); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+h1, h2, h3 { font-family: var(--f-head); color: var(--head); font-weight: 500; line-height: 1.12; margin: 0 0 .5em; }
+.sys-essays h1, .sys-essays h2, .sys-essays h3 { font-weight: 400; }
+h1 { font-size: clamp(2.4rem, 5.5vw, 4.25rem); letter-spacing: -.005em; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); }
+h3 { font-size: 1.4rem; }
+p { margin: 0 0 1.1em; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--ground); padding: 8px 12px; z-index: 10; }
+
+.wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
+.measure { width: min(40rem, 100% - 32px); margin-inline: auto; }
+.meta, .eyebrow {
+  font-family: var(--f-meta);
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sys-essays .meta, .sys-essays .eyebrow { font-size: .95rem; letter-spacing: .04em; text-transform: none; font-style: italic; }
+.rule { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+
+/* Header: identity largest, category line underneath */
+.site-head { border-bottom: 1px solid var(--rule); background: var(--ground); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 0; flex-wrap: wrap; }
+.idn { text-decoration: none; color: var(--head); display: flex; flex-direction: column; line-height: 1.05; }
+.idn__name { font-family: var(--f-head); font-size: 1.65rem; }
+.sys-essays .idn__name { font-size: 1.55rem; }
+.idn__cat { font-family: var(--f-meta); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.sys-essays .idn__cat { text-transform: none; letter-spacing: .02em; font-style: italic; font-size: .95rem; }
+.nav { display: flex; gap: 22px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.nav a { font-family: var(--f-meta); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.sys-essays .nav a { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.nav a[aria-current] { color: var(--accent); border-bottom: 1px solid currentColor; }
+@media (max-width: 720px) { .nav { gap: 14px; } .site-head .wrap { padding: 16px 0; } }
+
+/* Footer */
+.site-foot { margin-top: 96px; padding: 56px 0 40px; font-size: .95rem; background: var(--deep-ink); color: var(--cream);
+  border-top: 4px solid; border-image: linear-gradient(90deg, var(--cobalt) 0 33.33%, var(--forest) 33.33% 66.66%, var(--oxblood) 66.66% 100%) 1; }
+.site-foot .eyebrow { color: var(--ochre); }
+.site-foot .form-note { color: rgba(234, 226, 208, .72); }
+.site-foot .signup input[type=email] { background: rgba(234, 226, 208, .08); border-color: rgba(234, 226, 208, .3); color: var(--cream); }
+.site-foot .signup button { background: var(--ochre); border-color: var(--ochre); color: var(--deep-ink); }
+
+.site-foot__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+.site-foot ul { list-style: none; padding: 0; margin: 0; }
+.site-foot li { margin: 0 0 6px; }
+.site-foot a { color: var(--cream); text-decoration: none; }
+.site-foot a:hover { color: var(--ochre); }
+.site-foot__practice { margin-top: 28px; color: var(--muted); font-size: .9rem; max-width: 34rem; }
+@media (max-width: 720px) { .site-foot__grid { grid-template-columns: 1fr; } }
+
+/* Signup */
+.signup { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.signup input[type=email] { flex: 1 1 220px; padding: 12px 14px; border: 1px solid var(--rule); background: #fff8; font: inherit; font-size: 1rem; color: var(--ink); }
+.btn, .signup button {
+  display: inline-block; padding: 12px 20px; border: 1px solid var(--accent); background: var(--accent); color: var(--ground);
+  font-family: var(--f-meta); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; cursor: pointer;
+}
+.sys-essays .btn, .sys-essays .signup button { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.btn--quiet { background: transparent; color: var(--accent); }
+.form-note { font-size: .9rem; color: var(--muted); margin-top: 8px; }
+
+/* Hero: photograph carries weight, type sits beside it, asymmetric */
+.hero { display: grid; grid-template-columns: 7fr 5fr; min-height: 560px; }
+.hero__img { position: relative; background: var(--field); overflow: hidden; }
+.hero__img img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.hero__copy { padding: clamp(32px, 6vw, 88px); display: flex; flex-direction: column; justify-content: flex-end; }
+.hero__copy p { font-size: 1.2rem; max-width: 30rem; }
+.hero--flip { grid-template-columns: 5fr 7fr; }
+.hero--flip .hero__img { order: 2; }
+@media (max-width: 860px) { .hero, .hero--flip { grid-template-columns: 1fr; } .hero__img { min-height: 340px; } .hero--flip .hero__img { order: 0; } }
+
+/* Doors: three destinations within the one identity */
+.doors { padding: 88px 0 24px; }
+.doors__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 32px; }
+.door { text-decoration: none; color: var(--ink); display: block; }
+.door__img { aspect-ratio: 4 / 5; background: var(--field); overflow: hidden; margin-bottom: 18px; }
+.door__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.door:hover .door__img img { transform: scale(1.02); }
+.door h3 { margin-bottom: .3em; }
+.door p { font-size: 1rem; color: var(--muted); }
+@media (max-width: 860px) { .doors__grid { grid-template-columns: 1fr; } .door__img { aspect-ratio: 3 / 2; } }
+
+/* Lists of writing */
+.latest { padding: 72px 0 0; }
+.latest__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; }
+.card { text-decoration: none; color: var(--ink); }
+.card__img { aspect-ratio: 3 / 2; background: var(--field); overflow: hidden; margin-bottom: 14px; }
+.card__img img { width: 100%; height: 100%; object-fit: cover; }
+.card h3 { font-size: 1.35rem; margin: 6px 0 8px; }
+.card p { font-size: 1rem; color: var(--muted); margin: 0; }
+.card--lead { grid-column: span 2; }
+.card--lead .card__img { aspect-ratio: 16 / 9; }
+.card--lead h3 { font-size: 2rem; }
+@media (max-width: 860px) { .cards { grid-template-columns: 1fr; } .card--lead { grid-column: auto; } }
+
+/* Essays index: a contents page, single column */
+.contents { list-style: none; padding: 0; margin: 0; }
+.contents li { display: grid; grid-template-columns: 7rem 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid var(--rule); }
+.contents h3 { margin: 0 0 4px; font-size: 1.6rem; }
+.contents a { color: var(--ink); text-decoration: none; }
+.contents a:hover h3 { color: var(--accent); }
+@media (max-width: 600px) { .contents li { grid-template-columns: 1fr; gap: 4px; } }
+.series-label { margin: 56px 0 4px; }
+
+/* Article */
+.art-head { padding: 72px 0 32px; }
+.art-head h1 { margin-top: 12px; }
+.art-img { margin: 0 auto 56px; width: min(1100px, 100% - 32px); }
+.art-img img { width: 100%; max-height: 72vh; object-fit: cover; }
+.prose { font-size: 1.15rem; }
+.sys-essays .prose { font-size: 1.3rem; }
+.prose h2 { font-size: 1.75rem; margin-top: 1.8em; }
+.prose h3 { margin-top: 1.6em; }
+.prose blockquote { margin: 2em 0; padding: 0 0 0 1.2em; border-left: 2px solid var(--accent); font-style: italic; }
+.prose img { margin: 2em 0; }
+.prose iframe { max-width: 100%; }
+.prose ul, .prose ol { padding-left: 1.2em; }
+/* Books + Essays: drop cap on the first paragraph */
+.sys-essays .prose > p:first-of-type::first-letter {
+  font-family: var(--f-head); float: left; font-size: 4.6em; line-height: .82; padding: .06em .1em 0 0; color: var(--accent);
+}
+.sys-essays .prose > p:first-child em:only-child { font-size: .9em; }
+/* pull quote with hairlines */
+.pull { font-family: var(--f-head); font-size: 1.9rem; line-height: 1.25; color: var(--accent); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 24px 0; margin: 2em 0; }
+
+.next-step { margin: 64px 0 0; padding: 28px 32px; background: var(--field); border-left: 3px solid var(--accent); }
+.next-step__title { font-family: var(--f-head); font-size: 1.6rem; color: var(--head); margin: 4px 0 8px; line-height: 1.2; }
+.next-step__links a { font-family: var(--f-meta); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; margin-right: 18px; }
+.disclaimer { font-size: .95rem; color: var(--muted); font-style: italic; margin-top: 48px; }
+
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.pager a { text-decoration: none; color: var(--ink); display: block; padding: 18px 0; }
+.pager a:hover .pager__t { color: var(--accent); }
+.pager__t { font-family: var(--f-head); font-size: 1.25rem; display: block; margin-top: 4px; line-height: 1.25; }
+.pager__r { text-align: right; }
+.series-next { margin-top: 56px; padding: 24px 28px; border: 1px solid var(--accent); }
+.series-next a { text-decoration: none; color: var(--ink); }
+.series-next .pager__t { color: var(--accent); }
+@media (max-width: 600px) { .pager { grid-template-columns: 1fr; } .pager__r { text-align: left; } }
+
+/* Page body */
+.page-head { padding: 80px 0 24px; }
+.page-head .lede { font-size: 1.3rem; color: var(--muted); max-width: 36rem; }
+.split { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 6vw, 88px); align-items: start; padding: 32px 0; }
+.split__img { background: var(--field); position: sticky; top: 24px; }
+.split__img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split__img { position: static; } }
+
+/* Book feature */
+.book { display: grid; grid-template-columns: 4fr 6fr; gap: clamp(32px, 6vw, 96px); align-items: center; padding: 96px 0; }
+.book__cover { background: var(--field); aspect-ratio: 2 / 3; overflow: hidden; box-shadow: 0 18px 40px rgba(31, 26, 22, .18); }
+.book__cover img { width: 100%; height: 100%; object-fit: cover; }
+.book__sub { font-style: italic; font-size: 1.35rem; color: var(--muted); margin-top: -.3em; }
+.book__excerpt { font-size: 1.15rem; border-left: 1px solid var(--rule); padding-left: 1.2em; margin: 1.6em 0; }
+@media (max-width: 860px) { .book { grid-template-columns: 1fr; padding: 56px 0; } .book__cover { max-width: 320px; } }
+
+/* Professional Education: evidence tiers */
+.tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 32px 0; }
+.tier { padding: 20px 20px 22px 0; }
+.tier + .tier { padding-left: 20px; border-left: 1px solid var(--rule); }
+.tier h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.tier p { font-size: .95rem; color: var(--muted); margin: 0; }
+@media (max-width: 860px) { .tiers { grid-template-columns: 1fr 1fr; } .tier:nth-child(3) { border-left: 0; padding-left: 0; } }
+.programs { list-style: none; padding: 0; margin: 0; }
+.program { display: grid; grid-template-columns: 3fr 6fr 2fr; gap: 28px; padding: 32px 0; border-top: 1px solid var(--rule); align-items: start; }
+.program__img { aspect-ratio: 4 / 3; background: var(--field); overflow: hidden; }
+.program__img img { width: 100%; height: 100%; object-fit: cover; }
+.program h3 { margin-bottom: 6px; }
+.program__facts { font-family: var(--f-meta); font-size: .85rem; color: var(--muted); }
+.program__facts strong { display: block; color: var(--ink); font-size: 1rem; font-weight: 500; }
+.ce { font-family: var(--f-meta); font-size: .8rem; letter-spacing: .04em; color: var(--head); background: var(--mist, var(--field)); display: inline-block; padding: 3px 8px; margin: 4px 0 10px; }
+@media (max-width: 860px) { .program { grid-template-columns: 1fr; } }
+
+/* Product (Institute registration) */
+.prod { display: grid; grid-template-columns: 6fr 5fr; gap: clamp(32px, 6vw, 80px); padding: 64px 0; align-items: start; }
+.prod__media img { width: 100%; }
+.prod__buy { position: sticky; top: 24px; }
+.prod__price { font-family: var(--f-meta); font-size: 1.1rem; margin: 8px 0 20px; }
+.prod select { width: 100%; padding: 10px; font: inherit; margin-bottom: 12px; border: 1px solid var(--rule); background: transparent; }
+@media (max-width: 860px) { .prod { grid-template-columns: 1fr; } .prod__buy { position: static; } }
+
+.pagination { display: flex; gap: 16px; justify-content: center; margin-top: 48px; font-family: var(--f-meta); font-size: .9rem; }
+
+/* Footer practice note on the Deep Ink band (after the base rule so it wins) */
+.site-foot .site-foot__practice, .site-foot .site-foot__practice p { color: rgba(234, 226, 208, .78); }
+.site-foot .site-foot__practice a { color: var(--ochre); }
+
+/* Editorial composition (Niki, 12 Nov: "very beige", then "too rigid, looks like
+   slides"). Photography leads; accent color is a field the type sits on, overlapping
+   the image, never a box the content lives in. Asymmetric, staggered, layered. */
+
+/* Hero: photograph runs large, Cobalt card overlaps its edge */
+.hero { grid-template-columns: 8fr 4fr; min-height: 640px; align-items: end; }
+.hero__img { background: var(--sky); align-self: stretch; }
+.hero__copy { background: var(--cobalt); color: var(--bone); margin: 0 0 72px -140px; padding: 48px 48px 44px; position: relative; z-index: 1; justify-content: flex-start; }
+.hero__copy h1 { color: var(--bone); font-size: clamp(2.4rem, 4.6vw, 3.8rem); }
+.hero__copy .eyebrow { color: var(--ochre); }
+.hero__copy .btn { background: var(--ochre); border-color: var(--ochre); color: var(--deep-ink); }
+@media (max-width: 860px) { .hero__copy { margin: -64px 16px 0; padding: 32px 24px; } }
+
+/* Doors become an index: one lead, two staggered entries */
+.doors { padding-top: 112px; }
+.doors__grid { grid-template-columns: 7fr 5fr; gap: 56px 64px; align-items: start; }
+.door { background: none; color: var(--ink); padding: 0; }
+.door--lead { grid-row: span 2; }
+.door--side:nth-of-type(2) { margin-top: 120px; }
+.door__img { background: var(--field); border: 0; margin: 0; aspect-ratio: 3 / 2; }
+.door--lead .door__img { aspect-ratio: 4 / 5; }
+.door__txt { position: relative; background: var(--accent); color: var(--bone); padding: 24px 28px 26px; margin: -72px 0 0 40px; max-width: 30rem; }
+.door--side .door__txt { margin: -48px 32px 0 -28px; }
+.door .eyebrow { color: var(--ochre); padding: 0; }
+.door h3 { color: var(--bone); padding: 0; }
+.door p { color: rgba(241, 232, 216, .86); padding: 0; margin: 0; }
+.door--lead h3 { font-size: 2rem; }
+@media (max-width: 860px) {
+  .doors__grid { grid-template-columns: 1fr; }
+  .door--lead { grid-row: auto; }
+  .door--side:nth-of-type(2) { margin-top: 0; }
+  .door__txt, .door--side .door__txt { margin: -40px 16px 0; }
+}
+
+/* Book band: the cover breaks the band's top edge */
+.blk.book-band { background: var(--oxblood); color: var(--bone); margin-top: 200px; }
+.book-band .book { align-items: start; padding-top: 0; }
+.book-band .book__cover { margin-top: -120px; background: var(--parchment); box-shadow: 0 24px 48px rgba(0, 0, 0, .35); }
+.book-band .book > div:last-child { padding-top: 72px; }
+.book-band h2, .book-band .meta { color: var(--bone); }
+.book-band .book__sub { color: rgba(241, 232, 216, .8); }
+.book-band .book__excerpt { border-left-color: var(--ochre); }
+.book-band .btn { background: var(--ochre); border-color: var(--ochre); color: var(--ink-0); }
+.book-band a:not(.btn) { color: var(--ochre); }
+@media (max-width: 860px) { .book-band .book__cover { margin-top: -80px; } .book-band .book > div:last-child { padding-top: 0; } }
+.site-foot { margin-top: 0; }
+
+/* Restraint pass (Niki, 12 Nov: "visually overwhelming"). One saturated moment per
+   screen: Cobalt hero card, Oxblood book band, Deep Ink footer. Doors carry the three
+   accents as signals (rule and eyebrow), not as solid fields. */
+.hero__copy { max-width: 440px; padding: 40px 40px 36px; margin-bottom: 96px; justify-self: start; }
+.hero__copy h1 { font-size: clamp(2.2rem, 3.8vw, 3.2rem); }
+.hero__copy p { font-size: 1.08rem; }
+.doors { padding-top: 144px; padding-bottom: 32px; }
+.door__txt { background: var(--ground); color: var(--ink); border-top: 3px solid var(--accent); padding: 22px 26px 4px; }
+.door .eyebrow { color: var(--accent); }
+.door h3 { color: var(--head); }
+.door p { color: var(--muted); }
+.blk.book-band { margin-top: 240px; }
+
+/* Intro hero and ombre (Niki, 12 Nov): the hero is Niki, a brief bio and her why.
+   Sections fade into each other in long, low-contrast tonal ombre. No hard edges. */
+.intro { background: linear-gradient(180deg, var(--bone) 0%, var(--bone) 52%, var(--sand) 100%); padding: 56px 0 96px; }
+.intro__grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.intro__img { margin: 0; aspect-ratio: 3 / 4; overflow: hidden; background: var(--sand); }
+.intro__img img { width: 100%; height: 100%; object-fit: cover; }
+.intro__copy h1 { color: var(--cobalt); margin-bottom: .35em; }
+.intro__bio { font-size: 1.15rem; max-width: 34rem; color: var(--ink); }
+.intro__quote { margin: 36px 0 32px; padding: 22px 0; border-top: 1px solid var(--ochre); border-bottom: 1px solid var(--ochre); max-width: 34rem; }
+.intro__quote p { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.3; color: var(--oxblood); margin: 0 0 10px; }
+.intro__quote cite { font-family: 'EB Garamond', Georgia, serif; font-style: normal; font-size: 1rem; color: var(--walnut); }
+.intro__links { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.intro__links .btn { background: var(--cobalt); border-color: var(--cobalt); color: var(--bone); }
+@media (max-width: 860px) { .intro__grid { grid-template-columns: 1fr; } .intro__img { max-width: 420px; } }
+
+.tpl-index .doors { background: linear-gradient(180deg, var(--sand) 0%, var(--bone) 38%, var(--bone) 100%); margin: 0; padding-top: 112px; padding-bottom: 0; width: 100%; padding-inline: max(16px, calc((100% - 1200px) / 2)); }
+.blk.book-band { margin-top: 0; padding-top: 220px; background: linear-gradient(180deg, var(--bone) 0, var(--oxblood) 260px, var(--oxblood) calc(100% - 200px), var(--deep-ink) 100%); }
+.book-band .book__cover { margin-top: 0; }
+.book-band .book > div:last-child { padding-top: 0; }
+.book-band .book { align-items: center; padding-bottom: 160px; }
+.site-foot { border-top: 0; border-image: none; }
+
+/* Intro as a Linktree-style card (Niki, 12 Nov): full, uncropped portrait dissolving
+   into an Oxblood ground, centered name, bio and why. The Oxblood then fades to Bone.
+   This makes the hero the page's one deep Oxblood moment; the book band goes light. */
+.intro { background: linear-gradient(180deg, var(--oxblood) 0%, var(--oxblood) 78%, var(--bone) 100%); padding: 56px 0 160px; color: var(--bone); }
+.intro__grid { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; }
+.intro__img { width: min(520px, 100%); aspect-ratio: auto; background: none; overflow: visible; margin: 0;
+  -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%); mask-image: linear-gradient(180deg, #000 62%, transparent 100%); }
+.intro__img img { width: 100%; height: auto; object-fit: initial; }
+.intro__copy { margin-top: -64px; position: relative; max-width: 40rem; }
+.intro__copy h1 { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; color: var(--bone); font-size: clamp(2.6rem, 5vw, 4rem); margin-bottom: .3em; }
+.intro__bio { color: rgba(241, 232, 216, .9); margin: 0 auto; }
+.intro__quote { margin: 32px auto; border-color: var(--ochre); }
+.intro__quote p { color: var(--bone); }
+.intro__quote cite { color: var(--ochre); }
+.intro__links { justify-content: center; }
+.intro__links .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; }
+.intro__links a:not(.btn) { color: var(--bone); }
+.tpl-index .doors { background: var(--bone); padding-top: 64px; }
+
+/* Book band goes light so Oxblood is not repeated at full depth */
+.blk.book-band { background: linear-gradient(180deg, var(--bone) 0, var(--parchment) 200px, var(--parchment) calc(100% - 180px), var(--deep-ink) 100%); color: var(--ink-0); padding-top: 200px; }
+.book-band h2 { color: var(--oxblood); }
+.book-band .meta { color: var(--walnut); }
+.book-band .book__sub { color: var(--walnut); }
+.book-band .book__excerpt { border-left-color: var(--oxblood); }
+.book-band .btn { background: var(--oxblood); border-color: var(--oxblood); color: var(--bone); }
+.book-band a:not(.btn) { color: var(--oxblood); }
+
+/* Brand bands (Niki, 12 Nov): each home section sits on its own brand color and
+   fades into the next. Oxblood (Niki, the book, the essays) to Cobalt (Make It Make
+   Sense) to Forest (Professional Education) to Deep Ink (footer). The Oxblood to
+   Cobalt fade passes through Warm Gray #3D2D29 so the midpoint is not muddy violet. */
+.intro { background: var(--oxblood); padding-bottom: 72px; }
+.blk.book-band { background: var(--oxblood); color: var(--bone); padding-top: 24px; }
+.book-band h2, .book-band .meta { color: var(--bone); }
+.book-band .book__sub { color: rgba(241, 232, 216, .8); }
+.book-band .book__excerpt { border-left-color: var(--ochre); }
+.book-band .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; }
+.book-band a:not(.btn) { color: var(--ochre); }
+.book-band .book { padding-bottom: 96px; }
+
+.band { --c: var(--cobalt); --from: var(--c); --mid: var(--c); color: var(--bone); padding: 260px 0 112px;
+  background: linear-gradient(180deg, var(--from) 0, var(--mid) 130px, var(--c) 280px, var(--c) 100%); }
+.band--cobalt { --c: var(--cobalt); }
+.band--forest { --c: var(--forest); }
+.band--oxblood { --c: var(--oxblood); }
+.band-from--oxblood { --from: var(--oxblood); --mid: #3D2D29; }
+.band-from--cobalt { --from: var(--cobalt); --mid: color-mix(in srgb, var(--cobalt) 50%, var(--forest)); }
+.band-from--forest { --from: var(--forest); --mid: color-mix(in srgb, var(--forest) 50%, var(--c)); }
+.band-from--bone { --from: var(--bone); --mid: color-mix(in srgb, var(--bone) 50%, var(--c)); }
+.band-from--none { padding-top: 112px; }
+.band--to-footer { background: linear-gradient(180deg, var(--from) 0, var(--mid) 130px, var(--c) 280px, var(--c) calc(100% - 260px), var(--deep-ink) 100%); padding-bottom: 300px; }
+.band__grid { display: grid; grid-template-columns: 6fr 6fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.band__grid--flip .band__img { order: -1; }
+.band h2 { color: var(--bone); font-size: clamp(2.2rem, 4.4vw, 3.4rem); }
+.band .eyebrow { color: var(--ochre); }
+.band__text { font-size: 1.15rem; color: rgba(241, 232, 216, .9); max-width: 34rem; }
+.band .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; }
+.band__img { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; box-shadow: 0 24px 48px rgba(0, 0, 0, .28); }
+.band__img img { width: 100%; height: 100%; object-fit: cover; }
+.band__posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 72px; padding-top: 32px; border-top: 1px solid rgba(197, 165, 114, .5); }
+.band__post { color: var(--bone); text-decoration: none; }
+.band__post-img { aspect-ratio: 3 / 2; overflow: hidden; margin-bottom: 12px; background: rgba(0, 0, 0, .15); }
+.band__post-img img { width: 100%; height: 100%; object-fit: cover; }
+.band__post .meta { color: var(--ochre); }
+.band__post h3 { color: var(--bone); font-size: 1.25rem; margin-top: 6px; }
+.band__post:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.sys-bridge .band--forest h2, .sys-bridge .band--forest h3 { font-family: 'Cormorant SC', Georgia, serif; }
+@media (max-width: 860px) { .band__grid { grid-template-columns: 1fr; } .band__posts { grid-template-columns: 1fr; } .band { padding-top: 200px; } }
+.site-foot { margin-top: 0; }
+/* Temporary: while the portrait still shows the shelf signs, an inline crop is set.
+   The card frame needs a fixed ratio and clipping only when that crop is present. */
+.intro__img:has(img[style]) { aspect-ratio: 3 / 4; overflow: hidden; }
+
+/* Softer images (Niki, 12 Nov: "so square"). Photographs dissolve into the band
+   color instead of sitting on it in a box. The book cover stays crisp. */
+.band__img { aspect-ratio: 4 / 5; box-shadow: none; max-width: 520px; justify-self: center;
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 52%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 52%, transparent 100%); }
+.band__post-img { aspect-ratio: 4 / 5; border-radius: 18px; background: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 70%, transparent 100%); }
+.band__post h3 { margin-top: -6px; }
+.intro__img { -webkit-mask-image: radial-gradient(ellipse 80% 78% at 50% 42%, #000 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 78% at 50% 42%, #000 60%, transparent 100%); }
+.intro__copy { margin-top: -40px; }
+/* Stronger: photos melt into the band; thumbnails take an arched top */
+.band__img { -webkit-mask-image: radial-gradient(ellipse 58% 56% at 50% 48%, #000 34%, transparent 100%);
+  mask-image: radial-gradient(ellipse 58% 56% at 50% 48%, #000 34%, transparent 100%); }
+.band__post-img { border-radius: 999px 999px 0 0; -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%); mask-image: linear-gradient(180deg, #000 62%, transparent 100%); }
+
+
+/* Material frames (Niki, 12 Nov): each photo is framed by the material of its world.
+   Make It Make Sense: a parchment print with a deckled edge. Professional Education:
+   an open textbook, photo as the plate on the right page, the four evidence tiers on
+   the left page (the frame carries information). Photography still leads; no figure
+   numbers or ruled tables (that layout-led version was retired 2026-08-16). */
+.band__img.frame--parchment, .band__img.frame--textbook { -webkit-mask-image: none; mask-image: none; box-shadow: none; aspect-ratio: auto; overflow: visible; border-radius: 0; max-width: none; }
+.frame--parchment { filter: drop-shadow(0 22px 28px rgba(0, 0, 0, .38)); max-width: 500px; }
+.paper { background:
+    radial-gradient(ellipse at 20% 15%, rgba(255, 250, 238, .55), transparent 55%),
+    radial-gradient(ellipse at 85% 90%, rgba(150, 120, 80, .18), transparent 60%),
+    #EDE0C8;
+  padding: 22px 22px 64px; transform: rotate(-2.4deg); clip-path: polygon(0.00% 0.29%, 3.57% 0.14%, 7.14% 0.59%, 10.71% 0.07%, 14.29% 0.48%, 17.86% 0.33%, 21.43% 0.05%, 25.00% 0.46%, 28.57% 0.03%, 32.14% 0.39%, 35.71% 0.06%, 39.29% 0.08%, 42.86% 0.38%, 46.43% 0.74%, 50.00% 0.11%, 53.57% 0.20%, 57.14% 0.56%, 60.71% 0.85%, 64.29% 0.52%, 67.86% 0.36%, 71.43% 0.88%, 75.00% 0.04%, 78.57% 0.77%, 82.14% 0.26%, 85.71% 0.13%, 89.29% 0.11%, 92.86% 0.28%, 96.43% 0.73%, 100.00% 0.16%, 99.48% 0.00%, 99.42% 2.94%, 99.66% 5.88%, 99.51% 8.82%, 99.94% 11.76%, 99.95% 14.71%, 99.81% 17.65%, 99.39% 20.59%, 99.62% 23.53%, 99.72% 26.47%, 99.47% 29.41%, 99.59% 32.35%, 99.73% 35.29%, 99.29% 38.24%, 99.37% 41.18%, 99.78% 44.12%, 99.48% 47.06%, 99.53% 50.00%, 99.21% 52.94%, 99.34% 55.88%, 99.74% 58.82%, 99.12% 61.76%, 99.89% 64.71%, 99.62% 67.65%, 99.32% 70.59%, 99.86% 73.53%, 99.56% 76.47%, 99.96% 79.41%, 99.40% 82.35%, 99.31% 85.29%, 99.48% 88.24%, 99.21% 91.18%, 99.72% 94.12%, 99.37% 97.06%, 99.47% 100.00%, 100.00% 99.48%, 96.43% 99.59%, 92.86% 99.24%, 89.29% 99.15%, 85.71% 99.57%, 82.14% 99.40%, 78.57% 99.95%, 75.00% 99.37%, 71.43% 99.42%, 67.86% 99.11%, 64.29% 99.26%, 60.71% 99.74%, 57.14% 99.65%, 53.57% 99.40%, 50.00% 99.98%, 46.43% 99.58%, 42.86% 99.85%, 39.29% 99.89%, 35.71% 99.95%, 32.14% 99.31%, 28.57% 99.88%, 25.00% 99.78%, 21.43% 99.65%, 17.86% 99.22%, 14.29% 99.93%, 10.71% 99.60%, 7.14% 99.51%, 3.57% 99.20%, 0.00% 99.26%, 0.78% 100.00%, 0.25% 97.06%, 0.37% 94.12%, 0.32% 91.18%, 0.80% 88.24%, 0.86% 85.29%, 0.14% 82.35%, 0.16% 79.41%, 0.21% 76.47%, 0.21% 73.53%, 0.44% 70.59%, 0.53% 67.65%, 0.24% 64.71%, 0.00% 61.76%, 0.38% 58.82%, 0.33% 55.88%, 0.51% 52.94%, 0.86% 50.00%, 0.62% 47.06%, 0.46% 44.12%, 0.56% 41.18%, 0.61% 38.24%, 0.05% 35.29%, 0.81% 32.35%, 0.70% 29.41%, 0.79% 26.47%, 0.72% 23.53%, 0.35% 20.59%, 0.36% 17.65%, 0.09% 14.71%, 0.57% 11.76%, 0.06% 8.82%, 0.06% 5.88%, 0.19% 2.94%, 0.15% 0.00%); }
+.paper img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.paper figcaption { font-family: 'EB Garamond', Georgia, serif; font-style: italic; color: var(--walnut); font-size: 1.05rem; margin-top: 16px; text-align: center; }
+
+.frame--textbook { max-width: 640px; filter: drop-shadow(0 24px 30px rgba(0, 0, 0, .35)); }
+.tb { display: grid; grid-template-columns: 1fr 1fr; background: #24352F; padding: 9px 9px 13px; border-radius: 4px 4px 6px 6px; transform: rotate(1.2deg); }
+.tb__page { background: var(--cream); padding: 30px 26px 34px; color: var(--deep-ink); position: relative; min-height: 100%; }
+.tb__page--l { background: linear-gradient(90deg, #F0EAE0 0%, #EAE2D0 82%, #CFC4AF 100%); border-radius: 3px 0 0 3px; }
+.tb__page--r { background: linear-gradient(270deg, #F0EAE0 0%, #EAE2D0 82%, #CFC4AF 100%); border-radius: 0 3px 3px 0; }
+.tb__page--l .eyebrow { color: var(--forest); font-size: .68rem; margin-bottom: 14px; }
+.tb__tier { margin: 0 0 12px; }
+.tb__tier strong { display: block; font-family: 'Cormorant SC', Georgia, serif; font-weight: 600; font-size: 1.1rem; color: var(--forest); line-height: 1.1; }
+.tb__tier span { font-family: 'Lora', Georgia, serif; font-size: .78rem; line-height: 1.45; color: #3E4A44; }
+.tb__page--r img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border: 1px solid rgba(42, 53, 48, .25); }
+.tb__page--r figcaption { font-family: 'Inter', system-ui, sans-serif; font-size: .7rem; letter-spacing: .04em; color: #4F5D56; margin-top: 10px; line-height: 1.4; }
+.band__grid--textbook { grid-template-columns: 7fr 5fr; }
+@media (max-width: 860px) { .band__grid--textbook { grid-template-columns: 1fr; } .tb__page { padding: 18px 14px; } }
+
+/* Thumbnails: small parchment prints, alternately tipped */
+.band__post-img { border-radius: 0; -webkit-mask-image: none; mask-image: none; background: #EDE0C8; padding: 10px 10px 26px; aspect-ratio: auto; box-shadow: 0 14px 22px rgba(0, 0, 0, .3); transform: rotate(-1.2deg); }
+.band__post:nth-child(2) .band__post-img { transform: rotate(1deg); }
+.band__post:nth-child(3) .band__post-img { transform: rotate(-.6deg); }
+.band__post-img img { aspect-ratio: 4 / 3; width: 100%; object-fit: cover; }
+.band__post h3 { margin-top: 10px; }
+.tb__tier { line-height: 1.2; }
+.tb__tier span { display: block; line-height: 1.4; margin-top: 2px; }
+.tb__page { padding-bottom: 40px; }
+.tb__page--r figcaption { padding-bottom: 4px; }
+
+/* Inner pages carry the home page's language (Niki, 12 Nov: inner pages "look like
+   slides, boring"). A brand band at the top in the system color, title in Bone,
+   fading into the reading surface; the featured photo framed by its world's material,
+   overlapping the fade. Long reading stays on a light ground. */
+.sys-bridge { --band: var(--cobalt); }
+.sys-essays { --band: var(--oxblood); }
+.sys-edu { --band: var(--forest); }
+.inner-band { background: linear-gradient(180deg, var(--band) 0%, var(--band) 62%, var(--bone) 100%); color: var(--bone); padding-bottom: 24px; }
+.inner-band--page { padding-bottom: 120px; }
+.inner-band--short { height: 140px; padding: 0; }
+.inner-band h1, .inner-band .page-head h1 { color: var(--bone); }
+.inner-band .meta, .inner-band .eyebrow { color: var(--ochre); }
+.inner-band .lede { color: rgba(241, 232, 216, .88); }
+.inner-band .art-head { padding-top: 88px; }
+.inner-band .page-head { padding-top: 96px; }
+.art-img { width: min(820px, 100% - 32px); margin: 24px auto 72px; }
+.art-img__frame img { width: 100%; max-height: none; object-fit: cover; aspect-ratio: 3 / 2; display: block; }
+.art-img--paper { filter: drop-shadow(0 26px 30px rgba(0, 0, 0, .35)); }
+.art-img--paper .art-img__frame { background: radial-gradient(ellipse at 20% 15%, rgba(255, 250, 238, .55), transparent 55%), #EDE0C8; padding: 22px 22px 46px; transform: rotate(-1.4deg); }
+.art-img--print .art-img__frame { background: var(--bone); padding: 14px; transform: rotate(1deg); box-shadow: 0 26px 40px rgba(0, 0, 0, .35); }
+.sys-edu .art-img--paper .art-img__frame { background: var(--cream); transform: none; border: 1px solid rgba(42, 53, 48, .2); }
+/* Blog index: Make It Make Sense cards as parchment prints */
+.tpl-blog .card__img { background: #EDE0C8; padding: 10px 10px 24px; aspect-ratio: auto; box-shadow: 0 14px 22px rgba(0, 0, 0, .18); transform: rotate(-1deg); }
+.tpl-blog .card:nth-child(even) .card__img { transform: rotate(.9deg); }
+.tpl-blog .card__img img { aspect-ratio: 4 / 3; }
+.tpl-blog .card--lead .card__img img { aspect-ratio: 16 / 9; }
+.tpl-blog .cards { margin-top: -40px; position: relative; }
+/* Product page under a short Forest band */
+.inner-band--short + .prod { margin-top: -60px; }
+.prod__buy { background: var(--bone); padding: 28px; box-shadow: 0 18px 40px rgba(0, 0, 0, .12); }
+
+/* Intro hook (Niki, 14 Nov): one handwritten line that opens the page, above the
+   portrait. Caveat, chosen because it stays legible at size. */
+.intro__hook { font-family: 'Caveat', 'Segoe Script', cursive; font-weight: 600; font-size: clamp(3rem, 7vw, 5.25rem); line-height: 1; color: var(--bone); margin: 8px 0 28px; transform: rotate(-3deg); text-align: center; }
+.intro__hook::after { content: ''; display: block; width: 46%; height: 3px; margin: 10px auto 0; background: var(--ochre); border-radius: 3px; transform: rotate(-.6deg); }
+@media (max-width: 860px) { .intro__hook { margin-bottom: 20px; } }
+
+/* Brand marks on the home bands (Niki, 14 Nov): the MUSA mark on the book band,
+   the CFBL Institute mark on the Professional Education band. Transparent PNGs. */
+.band__logo, .book__logo { display: block; width: 170px; height: auto; margin: 0 0 14px -10px; }
+@media (max-width: 860px) { .band__logo, .book__logo { width: 140px; } }
+
+/* Centered header with dropdowns (Niki, 14 Nov): her name centered, the menus
+   underneath. Site navigation is links plus disclosure buttons, not role=menu. */
+.site-head { position: relative; z-index: 30; }
+.site-head .wrap { flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 26px 0 0; }
+.idn { align-items: center; text-align: center; }
+.idn__name { font-size: 2.2rem; }
+.sys-essays .idn__name { font-size: 2.1rem; }
+.nav { justify-content: center; gap: 8px 44px; position: relative; }
+.nav__item { position: relative; }
+.nav__btn { font: inherit; font-family: var(--f-meta); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); background: none; border: 0; padding: 10px 0 18px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+.sys-essays .nav__btn { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.nav__btn::after { content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.nav__btn:hover, .nav__item--dd.is-open > .nav__btn, .nav__item--dd:focus-within > .nav__btn { color: var(--accent); }
+.nav > li > a { display: inline-block; padding: 10px 0 18px; }
+.nav__panel { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 240px; margin: 0; padding: 10px 0; list-style: none; background: var(--bone); border: 1px solid var(--rule); border-top: 3px solid var(--accent); box-shadow: 0 18px 36px rgba(31, 26, 22, .18); text-align: left; }
+.nav__item--dd:hover > .nav__panel, .nav__item--dd:focus-within > .nav__panel, .nav__item--dd.is-open > .nav__panel { display: block; }
+.nav__panel a { display: block; padding: 10px 22px; font-family: var(--f-body); font-size: 1.02rem; letter-spacing: 0; text-transform: none; color: var(--ink); text-decoration: none; }
+.nav__panel a:hover, .nav__panel a:focus-visible { background: var(--field); color: var(--accent); }
+.nav__panel a[aria-current] { border-bottom: 0; color: var(--accent); }
+@media (max-width: 720px) {
+  .site-head .wrap { padding-top: 18px; gap: 8px; }
+  .idn__name { font-size: 1.8rem; }
+  .nav { gap: 0 26px; width: 100%; }
+  .nav__item { position: static; }
+  .nav__panel { left: 0; right: 0; transform: none; min-width: 0; }
+}
+
+/* Larger, easier-to-read navigation (Niki, 14 Nov: the phone menu was too small). */
+.nav__btn, .nav > li > a { font-size: .98rem; font-weight: 500; letter-spacing: .07em; }
+.sys-essays .nav__btn { font-size: 1.2rem; }
+.nav__panel a { font-size: 1.1rem; padding: 12px 24px; }
+@media (max-width: 720px) {
+  .idn__name { font-size: 2rem; }
+  .idn__cat { font-size: .8rem; }
+  .nav { gap: 0 8px; justify-content: space-between; padding: 0 4px; }
+  .nav__btn, .nav > li > a { font-size: 1.12rem; letter-spacing: .04em; min-height: 48px; padding: 12px 6px 14px; }
+  .sys-essays .nav__btn { font-size: 1.3rem; }
+  .nav__panel { border-left: 0; border-right: 0; padding: 6px 0 10px; }
+  .nav__panel a { font-size: 1.25rem; padding: 15px 22px; }
+}
+/* About me as a second button under the bio */
+.intro__links .btn--ghost { background: transparent; border-color: var(--bone); color: var(--bone); }
+
+/* A handwritten line opens every section (Niki, 14 Nov). On the bands it sits in
+   the fade between two colors. Same hand as the intro hook. */
+.band { position: relative; }
+.band__hook, .book__hook { font-family: "Caveat", "Segoe Script", cursive; font-weight: 600; font-size: clamp(2.5rem, 5.6vw, 4.2rem); line-height: 1.05; color: var(--bone); text-align: center; margin: 0; padding: 0 16px; transform: rotate(-2deg); }
+.band__hook { position: absolute; top: 104px; left: 0; right: 0; }
+.book__hook { padding-top: 8px; margin-bottom: 56px; }
+.blk.book-band { padding-top: 40px; }
+@media (max-width: 860px) { .band__hook { top: 76px; } .book__hook { margin-bottom: 36px; } }
+
+/* More polished hand (Niki, 14 Nov: Caveat read as cartoonish). Allura: a clean,
+   legible script. Replaces Caveat on every handwritten line. */
+.intro__hook, .band__hook, .book__hook { font-family: "Allura", "Snell Roundhand", cursive; font-weight: 400; letter-spacing: .01em; }
+.intro__hook { font-size: clamp(3.4rem, 7.6vw, 5.8rem); transform: rotate(-2deg); }
+.band__hook, .book__hook { font-size: clamp(3rem, 6.2vw, 4.8rem); transform: rotate(-1.5deg); }
+.band__hook { top: 96px; }
+
+/* The quote reads as a quote (Niki, 14 Nov): a large opening mark, bigger type,
+   no hairline box, attribution under a short rule. */
+.intro__quote { border: 0; padding: 0; margin: 56px auto 44px; max-width: 38rem; position: relative; }
+.intro__quote::before { content: "\201C"; display: block; font-family: "DM Serif Display", Georgia, serif; font-size: 7rem; line-height: .6; height: 3.2rem; color: var(--ochre); }
+.intro__quote p { font-size: clamp(1.9rem, 3.3vw, 2.7rem); line-height: 1.22; margin-bottom: 20px; }
+.intro__quote cite { display: inline-block; padding-top: 14px; border-top: 1px solid var(--ochre); font-size: 1.05rem; letter-spacing: .02em; }
+
+/* Textbook: the plate no longer stretches to the page height, so the caption and
+   the facing page text stay inside the book. */
+.tb__page--r img { height: auto; }
+.tb__page { padding-bottom: 30px; }
+@media (max-width: 860px) {
+  .tb__page { padding: 16px 12px 18px; }
+  .tb__tier strong { font-size: 1rem; }
+  .tb__tier span { font-size: .74rem; line-height: 1.35; }
+  .tb__page--r figcaption { font-size: .66rem; }
+}
+
+/* Two-line opening hook: each sentence on its own line. */
+.intro__hook span { display: block; }
+.intro__hook { font-size: clamp(3rem, 6.4vw, 5rem); line-height: 1.05; }
+
+/* Field-guide textbook (Niki, 14 Nov): fewer words, more room, readable on a phone.
+   The handwritten line now sits in normal flow so it can run to two lines. */
+.band:has(.band__hook) { padding-top: 120px; }
+.band__hook { position: static; margin: 0 auto 72px; max-width: 16em; text-wrap: balance; }
+.tb__page { padding: 34px 30px 36px; }
+.tb__page--l .eyebrow { font-family: "Cormorant SC", Georgia, serif; font-size: 1.05rem; letter-spacing: .12em; color: var(--forest); padding-bottom: 12px; margin-bottom: 18px; border-bottom: 1px solid var(--ochre); }
+.tb__tier { margin: 0 0 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(42, 53, 48, .12); }
+.tb__tier:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.tb__tier strong { font-family: "Lora", Georgia, serif; font-weight: 500; font-size: 1.3rem; letter-spacing: 0; }
+.tb__tier span { font-size: 1rem; line-height: 1.4; color: #2A3530; margin-top: 3px; }
+.frame--textbook { max-width: 700px; }
+@media (max-width: 860px) {
+  .band:has(.band__hook) { padding-top: 96px; }
+  .band__hook { margin-bottom: 44px; }
+  .tb { grid-template-columns: 1fr; transform: none; }
+  .tb__page { padding: 26px 24px 28px; }
+  .tb__page--l { border-radius: 3px 3px 0 0; background: #EAE2D0; }
+  .tb__page--r { border-radius: 0 0 3px 3px; background: #EAE2D0; padding-top: 0; }
+  .tb__tier strong { font-size: 1.35rem; }
+  .tb__tier span { font-size: 1.08rem; line-height: 1.4; }
+  .tb__page--l .eyebrow { font-size: 1.1rem; }
+}
+
+/* Page photograph: natural shape, with an optional caption (Publishing page). */
+.split__img { margin: 0; background: none; }
+.split__img img { aspect-ratio: auto; height: auto; box-shadow: 0 22px 44px rgba(31, 26, 22, .22); }
+.split__img figcaption { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 1.15rem; color: var(--muted); margin-top: 16px; text-align: center; }
+.split { padding-top: 0; margin-top: -72px; position: relative; }
+.split .prose { padding-top: 104px; }
+@media (max-width: 860px) { .split { margin-top: -48px; } .split .prose { padding-top: 8px; } }
+
+/* The name over the portrait in warm gold, lifted off the photograph. */
+.intro__copy h1 { color: #E8CB96; text-shadow: 0 2px 18px rgba(40, 8, 10, .75), 0 1px 2px rgba(40, 8, 10, .6); }
+
+/* Menu text takes the same color as the name above it (navy on the home page). */
+.nav__btn, .nav > li > a { color: var(--head); }
+
+/* Contact page */
+.contact { padding: 8px 0 96px; }
+.contact__form { display: grid; gap: 22px; margin-top: 8px; }
+.contact__row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 620px) { .contact__row { grid-template-columns: 1fr; } }
+.contact label { display: grid; gap: 8px; font-family: "Cormorant SC", Georgia, serif; font-size: 1.05rem; letter-spacing: .08em; color: var(--head); }
+.contact input, .contact select, .contact textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--rule); border-radius: 8px; background: #fffaf0; font-family: "Lora", Georgia, serif; font-size: 1.05rem; letter-spacing: 0; color: var(--ink); }
+.contact textarea { resize: vertical; min-height: 9rem; }
+.contact input:focus, .contact select:focus, .contact textarea:focus { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+.contact .btn { border-radius: 8px; cursor: pointer; }
+.contact__note { font-style: italic; color: var(--muted); margin: 0; }
+.contact__ok { padding: 16px 18px; border-left: 3px solid var(--forest); background: rgba(61, 90, 82, .1); margin: 0; }
+.contact__err { padding: 16px 18px; border-left: 3px solid var(--oxblood); background: rgba(110, 31, 35, .08); }
+.contact__aside { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--rule); font-size: 1.1rem; }
+.contact__aside + .contact__aside { margin-top: 20px; padding-top: 0; border-top: 0; }
+
+/* Essays contents: one feature per series */
+.series { margin: 0 0 96px; }
+.series:first-of-type { margin-top: -64px; position: relative; }
+.series__cover { display: block; background: #EDE0C8; padding: 12px 12px 12px; box-shadow: 0 22px 44px rgba(31, 26, 22, .22); }
+.series__cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.series__title { font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; margin: 36px 0 10px; }
+.series__title a { color: var(--oxblood); text-decoration: none; }
+.series__deck { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 1.35rem; color: var(--muted); margin: 0 0 8px; }
+.series__meta { margin: 0 0 28px; }
+.parts { list-style: none; margin: 0; padding: 0; counter-reset: part; border-top: 1px solid var(--rule); }
+.parts li { counter-increment: part; border-bottom: 1px solid var(--rule); }
+.parts a { display: grid; grid-template-columns: 3.2rem 1fr; column-gap: 12px; padding: 22px 0; color: var(--ink); text-decoration: none; }
+.parts a::before { content: counter(part); grid-row: span 2; font-family: "DM Serif Display", Georgia, serif; font-size: 2.6rem; line-height: 1; color: var(--ochre); }
+.parts h3 { font-family: "DM Serif Display", Georgia, serif; font-size: 1.45rem; line-height: 1.2; margin: 0 0 6px; }
+.parts p { font-family: "EB Garamond", Georgia, serif; font-size: 1.15rem; color: var(--muted); margin: 0; }
+.parts a:hover h3 { color: var(--oxblood); }
+
+/* Coming-soon teaser (book page) */
+.teaser { background: linear-gradient(180deg, var(--bone) 0%, var(--oxblood) 22%, var(--oxblood) 100%); color: var(--bone); padding: 150px 0 96px; margin-top: 48px; }
+.teaser__grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+.teaser__img { margin: 0; background: #EDE0C8; padding: 12px; box-shadow: 0 22px 44px rgba(0, 0, 0, .3); transform: rotate(-1.2deg); }
+.teaser__img img { display: block; width: 100%; height: auto; }
+.teaser__when { font-family: "Allura", cursive; font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.1; color: #E8CB96; margin: 0 0 10px; }
+.teaser h2 { font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.2rem, 6vw, 3.4rem); color: var(--bone); margin: 0 0 14px; }
+.teaser__text { font-family: "EB Garamond", Georgia, serif; font-size: 1.4rem; color: rgba(241, 232, 216, .92); }
+.teaser__text a { color: #E8CB96; }
+@media (max-width: 860px) { .teaser__grid { grid-template-columns: 1fr; } .teaser { padding-top: 120px; } }
+.tpl-page-book .site-foot { margin-top: 0; }
+
+/* Interest form inside a teaser */
+.teaser__grid:has(.teaser__form) { align-items: start; }
+.teaser__form { display: grid; gap: 18px; margin-top: 28px; }
+.teaser__row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 620px) { .teaser__row { grid-template-columns: 1fr; } }
+.teaser__form label { display: grid; gap: 8px; font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 1.15rem; color: #E8CB96; }
+.teaser__form input, .teaser__form textarea { width: 100%; padding: 13px 15px; border: 1px solid rgba(241, 232, 216, .45); border-radius: 8px; background: rgba(241, 232, 216, .08); font-family: "EB Garamond", Georgia, serif; font-style: normal; font-size: 1.2rem; color: var(--bone); }
+.teaser__form textarea { resize: vertical; }
+.teaser__form input:focus, .teaser__form textarea:focus { outline: 2px solid #E8CB96; outline-offset: 2px; }
+.teaser__form .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); border-radius: 8px; cursor: pointer; }
+.teaser__note { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 1.05rem; color: rgba(241, 232, 216, .75); margin: 0; }
+.teaser__ok { padding: 14px 16px; border-left: 3px solid #E8CB96; background: rgba(241, 232, 216, .1); margin: 0; font-size: 1.2rem; }
+.teaser__err { padding: 14px 16px; border-left: 3px solid #E8CB96; background: rgba(0, 0, 0, .2); }
+.tpl-page-media .site-foot { margin-top: 0; }
+.teaser__hook { font-family: "Allura", cursive; font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 1.1; color: #E8CB96; text-align: center; margin: 0 auto 44px; }
+.teaser { background: linear-gradient(180deg, var(--bone) 0, var(--oxblood) 130px, var(--oxblood) 100%); padding-top: 170px; }
+@media (max-width: 860px) { .teaser { padding-top: 160px; } }
+/* Handwritten line in blue ink on the cream, before the band turns red */
+.teaser:has(.teaser__hook) { background: linear-gradient(180deg, var(--bone) 0, var(--bone) 150px, var(--oxblood) 290px, var(--oxblood) 100%); padding-top: 48px; }
+.teaser:has(.teaser__hook) .teaser__hook { color: var(--cobalt); margin-bottom: 190px; }
+@media (max-width: 860px) {
+  .teaser:has(.teaser__hook) { background: linear-gradient(180deg, var(--bone) 0, var(--bone) 170px, var(--oxblood) 300px, var(--oxblood) 100%); padding-top: 40px; }
+  .teaser:has(.teaser__hook) .teaser__hook { margin-bottom: 200px; }
+}
+
+/* One-field tagged signup */
+.notify { margin-top: 26px; }
+.notify__label { font-family: "EB Garamond", Georgia, serif; font-size: 1.25rem; margin: 0 0 12px; }
+.notify__row { display: flex; flex-wrap: wrap; gap: 10px; }
+.notify__row input { flex: 1 1 220px; padding: 13px 15px; border: 1px solid var(--rule); border-radius: 8px; background: #fffaf0; font: inherit; font-size: 1.05rem; color: var(--ink); }
+.notify__row .btn { border-radius: 8px; cursor: pointer; }
+.notify__fine { font-size: .95rem; font-style: italic; color: var(--muted); margin: 10px 0 0; }
+.notify__ok { padding: 14px 16px; border-left: 3px solid var(--ochre); background: rgba(197, 165, 114, .14); margin: 0; }
+.notify-block { padding: 8px 0 88px; }
+.notify-block .notify { border-top: 1px solid var(--rule); padding-top: 28px; }
+.teaser .notify__label { color: rgba(241, 232, 216, .92); }
+.teaser .notify__row input { background: rgba(241, 232, 216, .08); border-color: rgba(241, 232, 216, .45); color: var(--bone); font-family: "EB Garamond", Georgia, serif; font-size: 1.2rem; }
+.teaser .notify__row input::placeholder { color: rgba(241, 232, 216, .6); }
+.teaser .notify__row .btn { background: var(--bone); border-color: var(--bone); color: var(--ink-0); }
+.teaser .notify__fine { color: rgba(241, 232, 216, .7); }
+.teaser .notify__ok { border-color: #E8CB96; background: rgba(241, 232, 216, .1); }
+.teaser__formintro { font-family: "EB Garamond", Georgia, serif; font-size: 1.4rem; color: rgba(241, 232, 216, .92); margin: 40px 0 0; padding-top: 30px; border-top: 1px solid rgba(241, 232, 216, .3); }
+
+/* Footer social links */
+.site-foot__social { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px; margin: 36px 0 0; padding-top: 26px; border-top: 1px solid rgba(234, 226, 208, .18); font-size: 1.05rem; }
+.site-foot__social .eyebrow { margin: 0; }
+.site-foot__social a { color: var(--cream); text-decoration: none; padding: 6px 0; }
+.site-foot__social a:hover { color: var(--ochre); text-decoration: underline; }

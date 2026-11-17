@@ -1,0 +1,12 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-product",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "Professional Education",
+        "image": "shopify://shop_images/E0CC7640-DAC0-45AD-B294-EAE3516C8D00.png"
+      }
+    },
+    "programs": {
+      "type": "drs-programs",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Book consultation",
+        "show_tiers": false
+      },
+      "blocks": {
+        "p5": {
+          "type": "program",
+          "settings": {
+            "product": "emdr-consultation-individual",
+            "kicker": "Consultation",
+            "summary": "<p>Built on your cases rather than a curriculum you sit through. Hours documented for your EMDRIA certification application.</p>",
+            "when": "Ongoing",
+            "format": "Online, or in person in Townsend.",
+            "cta": "Register",
+            "title": "EMDR Consultation: Individual"
+          }
+        },
+        "p6": {
+          "type": "program",
+          "settings": {
+            "product": "emdr-consultation-group",
+            "kicker": "Consultation",
+            "summary": "<p>A small group of EMDR clinicians, each bringing cases. Group hours count toward certification within EMDRIA's limits for group consultation.</p>",
+            "when": "Ongoing",
+            "format": "Online, or in person in Townsend.",
+            "cta": "Register",
+            "title": "EMDR Consultation: Group"
+          }
+        }
+      },
+      "block_order": [
+        "p5",
+        "p6"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "programs"
+  ]
+}

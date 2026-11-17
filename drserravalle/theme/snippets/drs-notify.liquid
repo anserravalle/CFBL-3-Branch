@@ -1,0 +1,17 @@
+{%- comment -%} One-field signup that tags the person. Params: tag, label, button, uid {%- endcomment -%}
+{%- assign fid = 'drs-notify-' | append: uid -%}
+{%- form 'customer', class: 'notify', id: fid -%}
+  <input type="hidden" name="contact[tags]" value="newsletter, {{ tag }}">
+  {%- if form.posted_successfully? -%}
+    <p class="notify__ok" role="status">Thank you. You are on the list.</p>
+  {%- else -%}
+    {%- if label != blank %}<p class="notify__label">{{ label }}</p>{% endif -%}
+    <div class="notify__row">
+      <label class="skip" for="{{ fid }}-email">Email address</label>
+      <input id="{{ fid }}-email" type="email" name="contact[email]" placeholder="Email address" autocomplete="email" required>
+      <button type="submit" class="btn">{{ button | default: 'Tell me' }}</button>
+    </div>
+    {%- if form.errors %}<div class="notify__err" role="alert">{{ form.errors | default_errors }}</div>{% endif -%}
+    <p class="notify__fine">Your email is never shared.</p>
+  {%- endif -%}
+{%- endform -%}

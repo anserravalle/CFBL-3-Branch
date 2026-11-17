@@ -1,0 +1,15 @@
+<div class="notify-block measure">
+  {%- render 'drs-notify', tag: section.settings.tag, label: section.settings.label, button: section.settings.button, uid: section.id -%}
+</div>
+
+{% schema %}
+{
+  "name": "DRS notify signup",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Line above the field", "default": "Leave your email and I will keep you posted." },
+    { "type": "text", "id": "button", "label": "Button label", "default": "Tell me" },
+    { "type": "text", "id": "tag", "label": "Tag added to the person", "default": "interest-general", "info": "Used to track who signed up for what." }
+  ],
+  "presets": [{ "name": "DRS notify signup" }]
+}
+{% endschema %}

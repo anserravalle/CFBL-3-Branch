@@ -1,0 +1,37 @@
+{%- assign b = blogs[section.settings.blog] -%}
+{%- if b.articles_count > 0 -%}
+<section class="latest wrap">
+  <div class="latest__head">
+    <div>
+      {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
+      <h2>{{ section.settings.heading | default: b.title }}</h2>
+    </div>
+    <a href="{{ b.url }}">{{ section.settings.all_label }} &rarr;</a>
+  </div>
+  <div class="cards">
+    {%- for a in b.articles limit: section.settings.count -%}
+      <a class="card{% if forloop.first and section.settings.lead %} card--lead{% endif %}" href="{{ a.url }}">
+        <div class="card__img">{%- if a.image -%}{{ a.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 33vw, 100vw', alt: '' }}{%- endif -%}</div>
+        <span class="meta">{{ a.published_at | date: '%B %-d, %Y' }}</span>
+        <h3>{{ a.title }}</h3>
+        {%- if forloop.first and section.settings.lead -%}<p>{{ a.excerpt_or_content | strip_html | truncatewords: 32 }}</p>{%- endif -%}
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "DRS latest writing",
+  "settings": [
+    { "type": "blog", "id": "blog", "label": "Blog" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "text", "id": "all_label", "label": "Link label", "default": "All posts" },
+    { "type": "range", "id": "count", "label": "Posts", "min": 2, "max": 9, "step": 1, "default": 4 },
+    { "type": "checkbox", "id": "lead", "label": "Lead with the newest", "default": true }
+  ],
+  "presets": [{ "name": "DRS latest writing" }]
+}
+{% endschema %}

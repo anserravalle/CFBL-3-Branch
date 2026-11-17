@@ -1,0 +1,404 @@
+{
+ "created": [
+  {
+   "filename": "20261105_CFBL_MIMS_NobodyAsked_v3.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/20261105_CFBL_MIMS_NobodyAsked_v3.jpg?v=1793547605",
+   "new_id": "gid://shopify/MediaImage/34899045744758",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/20261105_CFBL_MIMS_NobodyAsked_v3.jpg?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "20261105_CFBL_MIMS_NobodyAsked_v2.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/20261105_CFBL_MIMS_NobodyAsked_v2.jpg?v=1793502023",
+   "new_id": "gid://shopify/MediaImage/34899045777526",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/20261105_CFBL_MIMS_NobodyAsked_v2.jpg?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "TheStoriesWeTold_Niki_with_book.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/TheStoriesWeTold_Niki_with_book.jpg?v=1792941388",
+   "new_id": "gid://shopify/MediaImage/34899045810294",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/TheStoriesWeTold_Niki_with_book.jpg?v=1794538057",
+   "status": "READY"
+  },
+  {
+   "filename": "1024_CFBL_MissingSymptom.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/1024_CFBL_MissingSymptom.png?v=1792627369",
+   "new_id": "gid://shopify/MediaImage/34899045843062",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/1024_CFBL_MissingSymptom.png?v=1794538057",
+   "status": "READY"
+  },
+  {
+   "filename": "1022_CFBL_AfterSchool.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/1022_CFBL_AfterSchool.png?v=1792627369",
+   "new_id": "gid://shopify/MediaImage/34899045875830",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/1022_CFBL_AfterSchool.png?v=1794538057",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_photo_emdr_training.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_photo_emdr_training.jpg?v=1791912217",
+   "new_id": "gid://shopify/MediaImage/34899045908598",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_photo_emdr_training.jpg?v=1794538057",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_wtdir_shelf_bg.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_wtdir_shelf_bg.jpg?v=1791826537",
+   "new_id": "gid://shopify/MediaImage/34899045941366",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_wtdir_shelf_bg.jpg?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "20261011_CFBL_StressDisorder.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/20261011_CFBL_StressDisorder.png?v=1791302078",
+   "new_id": "gid://shopify/MediaImage/34899045974134",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/20261011_CFBL_StressDisorder.png?v=1794538057",
+   "status": "READY"
+  },
+  {
+   "filename": "institute-fall-education.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/institute-fall-education.jpg?v=1791057269",
+   "new_id": "gid://shopify/MediaImage/34899046006902",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/institute-fall-education.jpg?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "institute-first-cohort.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/institute-first-cohort.jpg?v=1791054085",
+   "new_id": "gid://shopify/MediaImage/34899046039670",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/institute-first-cohort.jpg?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "20261004_CFBL_stress-disorder_featured.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/20261004_CFBL_stress-disorder_featured.jpg?v=1790895709",
+   "new_id": "gid://shopify/MediaImage/34899046072438",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/20261004_CFBL_stress-disorder_featured.jpg?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "cfbl_consult_hours.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/cfbl_consult_hours.png?v=1790268542",
+   "new_id": "gid://shopify/MediaImage/34899046105206",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/cfbl_consult_hours.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "cfbl_consult_stuck_on.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/cfbl_consult_stuck_on.png?v=1790268542",
+   "new_id": "gid://shopify/MediaImage/34899046137974",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/cfbl_consult_stuck_on.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "cfbl_consult_training_ends.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/cfbl_consult_training_ends.png?v=1790268542",
+   "new_id": "gid://shopify/MediaImage/34899046170742",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/cfbl_consult_training_ends.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "cfbl_institute_emdr_consultation_card.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/cfbl_institute_emdr_consultation_card.png?v=1790264671",
+   "new_id": "gid://shopify/MediaImage/34899046203510",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/cfbl_institute_emdr_consultation_card.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_blog_c1_04_questions.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_blog_c1_04_questions.png?v=1789818046",
+   "new_id": "gid://shopify/MediaImage/34899046236278",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_blog_c1_04_questions.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_blog_c1_03_underdiagnosis.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_blog_c1_03_underdiagnosis.png?v=1789818046",
+   "new_id": "gid://shopify/MediaImage/34899046269046",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_blog_c1_03_underdiagnosis.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_blog_c1_02_document.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_blog_c1_02_document.png?v=1789818046",
+   "new_id": "gid://shopify/MediaImage/34899046301814",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_blog_c1_02_document.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_blog_c1_01_announce.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_blog_c1_01_announce.png?v=1789818046",
+   "new_id": "gid://shopify/MediaImage/34899046334582",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_blog_c1_01_announce.png?v=1794538056",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_BLOG_1203_adhd-sleep.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_BLOG_1203_adhd-sleep.png?v=1789648997",
+   "new_id": "gid://shopify/MediaImage/34899052593270",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_BLOG_1203_adhd-sleep.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_BLOG_1119_one-modality.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_BLOG_1119_one-modality.png?v=1789648997",
+   "new_id": "gid://shopify/MediaImage/34899052626038",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_BLOG_1119_one-modality.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_BLOG_1105_social-anxiety-vs-trauma.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_BLOG_1105_social-anxiety-vs-trauma.png?v=1789648997",
+   "new_id": "gid://shopify/MediaImage/34899052658806",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_BLOG_1105_social-anxiety-vs-trauma.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_BLOG_1022_rejection-sensitivity.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_BLOG_1022_rejection-sensitivity.png?v=1789648997",
+   "new_id": "gid://shopify/MediaImage/34899052691574",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_BLOG_1022_rejection-sensitivity.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_BLOG_1008_time-blindness.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_BLOG_1008_time-blindness.png?v=1789648997",
+   "new_id": "gid://shopify/MediaImage/34899052724342",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_BLOG_1008_time-blindness.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "CFBL_BLOG_0924_second-opinion.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/CFBL_BLOG_0924_second-opinion.png?v=1789648997",
+   "new_id": "gid://shopify/MediaImage/34899052757110",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/CFBL_BLOG_0924_second-opinion.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_08.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_08.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899052789878",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_08.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_07.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_07.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899052822646",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_07.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_06.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_06.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899052855414",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_06.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_05.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_05.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899052888182",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_05.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_04.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_04.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899052920950",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_04.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_03.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_03.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899052953718",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_03.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_02.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_02.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899052986486",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_02.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "0903_ADHD_B_01.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0903_ADHD_B_01.png?v=1788097699",
+   "new_id": "gid://shopify/MediaImage/34899053019254",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0903_ADHD_B_01.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "0830_CFBL_Foundations_GroupCard_B.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/0830_CFBL_Foundations_GroupCard_B.png?v=1787864673",
+   "new_id": "gid://shopify/MediaImage/34899053052022",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/0830_CFBL_Foundations_GroupCard_B.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "FOUNDATIONS_column_v4.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/FOUNDATIONS_column_v4.png?v=1787845426",
+   "new_id": "gid://shopify/MediaImage/34899053084790",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/FOUNDATIONS_column_v4.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "08-18_CFBL_AuDHD_Social_v2.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/08-18_CFBL_AuDHD_Social_v2.png?v=1787048655",
+   "new_id": "gid://shopify/MediaImage/34899053117558",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/08-18_CFBL_AuDHD_Social_v2.png?v=1794538085",
+   "status": "READY"
+  },
+  {
+   "filename": "08-19_CFBL_Carousel_AfterSchool_4of4.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/08-19_CFBL_Carousel_AfterSchool_4of4.png?v=1786925095",
+   "new_id": "gid://shopify/MediaImage/34899053150326",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/08-19_CFBL_Carousel_AfterSchool_4of4.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "08-19_CFBL_Carousel_AfterSchool_3of4.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/08-19_CFBL_Carousel_AfterSchool_3of4.png?v=1786925095",
+   "new_id": "gid://shopify/MediaImage/34899053183094",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/08-19_CFBL_Carousel_AfterSchool_3of4.png?v=1794538084",
+   "status": "READY"
+  },
+  {
+   "filename": "08-19_CFBL_Carousel_AfterSchool_2of4.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/08-19_CFBL_Carousel_AfterSchool_2of4.png?v=1786925095",
+   "new_id": "gid://shopify/MediaImage/34899056722038",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/08-19_CFBL_Carousel_AfterSchool_2of4.png?v=1794538100",
+   "status": "READY"
+  },
+  {
+   "filename": "08-19_CFBL_Carousel_AfterSchool_1of4.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/08-19_CFBL_Carousel_AfterSchool_1of4.png?v=1786925095",
+   "new_id": "gid://shopify/MediaImage/34899056754806",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/08-19_CFBL_Carousel_AfterSchool_1of4.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "08-18_CFBL_AuDHD_Social.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/08-18_CFBL_AuDHD_Social.png?v=1786925095",
+   "new_id": "gid://shopify/MediaImage/34899056787574",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/08-18_CFBL_AuDHD_Social.png?v=1794538100",
+   "status": "READY"
+  },
+  {
+   "filename": "estrangement-blog3.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/estrangement-blog3.png?v=1780967232",
+   "new_id": "gid://shopify/MediaImage/34899056820342",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/estrangement-blog3.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "of-a-psychologist-supervisor-consulting-with-a-student-about-emdr-practice.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/of-a-psychologist-supervisor-consulting-with-a-student-about-emdr-practice.png?v=1780247845",
+   "new_id": "gid://shopify/MediaImage/34899056853110",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/of-a-psychologist-supervisor-consulting-with-a-student-about-emdr-practice.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "emdria-basic-training.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/emdria-basic-training.png?v=1779557166",
+   "new_id": "gid://shopify/MediaImage/34899056885878",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/emdria-basic-training.png?v=1794538100",
+   "status": "READY"
+  },
+  {
+   "filename": "courses.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/courses.png?v=1779549225",
+   "new_id": "gid://shopify/MediaImage/34899056918646",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/courses.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "ADHD_or_Executive_Functioning_Disorder.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/ADHD_or_Executive_Functioning_Disorder.png?v=1779745629",
+   "new_id": "gid://shopify/MediaImage/34899056951414",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/ADHD_or_Executive_Functioning_Disorder.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "supervision.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/supervision.png?v=1779578681",
+   "new_id": "gid://shopify/MediaImage/34899056984182",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/supervision.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "supervision_2.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/supervision_2.png?v=1779673434",
+   "new_id": "gid://shopify/MediaImage/34899057016950",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/supervision_2.png?v=1794538100",
+   "status": "READY"
+  },
+  {
+   "filename": "psychology-workshops-in-a-professional-private-practice.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/psychology-workshops-in-a-professional-private-practice.png?v=1772826356",
+   "new_id": "gid://shopify/MediaImage/34899057049718",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/psychology-workshops-in-a-professional-private-practice.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "psychology-training.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/psychology-training.png?v=1772826123",
+   "new_id": "gid://shopify/MediaImage/34899057082486",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/psychology-training.png?v=1794538102",
+   "status": "READY"
+  },
+  {
+   "filename": "mental-health-courses.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/mental-health-courses.png?v=1772825824",
+   "new_id": "gid://shopify/MediaImage/34899057115254",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/mental-health-courses.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "PsychologyTrainingsandContinuingEducation.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/PsychologyTrainingsandContinuingEducation.png?v=1771017087",
+   "new_id": "gid://shopify/MediaImage/34899057148022",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/PsychologyTrainingsandContinuingEducation.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "SEOon_Presentation_-_Dual_Attention_in_EMDR.zip_-_8.png",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/SEOon_Presentation_-_Dual_Attention_in_EMDR.zip_-_8.png?v=1763406036",
+   "new_id": "gid://shopify/MediaImage/34899057180790",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/SEOon_Presentation_-_Dual_Attention_in_EMDR.zip_-_8.png?v=1794538101",
+   "status": "READY"
+  },
+  {
+   "filename": "SEOon_DPA_Convention_2025_Brochure_Page_1_5ef98270-ab38-4642-8885-f5f2a6f43b75.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/SEOon_DPA_Convention_2025_Brochure_Page_1_5ef98270-ab38-4642-8885-f5f2a6f43b75.jpg?v=1763390955",
+   "new_id": "gid://shopify/MediaImage/34899057213558",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/SEOon_DPA_Convention_2025_Brochure_Page_1_5ef98270-ab38-4642-8885-f5f2a6f43b75.jpg?v=1794538100",
+   "status": "READY"
+  },
+  {
+   "filename": "SEOon_DPA_Convention_2025_Brochure_Page_1.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/SEOon_DPA_Convention_2025_Brochure_Page_1.jpg?v=1763390901",
+   "new_id": "gid://shopify/MediaImage/34899057246326",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/SEOon_DPA_Convention_2025_Brochure_Page_1.jpg?v=1794538100",
+   "status": "READY"
+  },
+  {
+   "filename": "consultations.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/consultations.jpg?v=1718834869",
+   "new_id": "gid://shopify/MediaImage/34899057279094",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/consultations.jpg?v=1794538100",
+   "status": "READY"
+  },
+  {
+   "filename": "training.jpg",
+   "old_url": "https://cdn.shopify.com/s/files/1/0861/1528/7346/files/training.jpg?v=1711493113",
+   "new_id": "gid://shopify/MediaImage/34899057311862",
+   "new_url": "https://cdn.shopify.com/s/files/1/0733/0231/1030/files/training.jpg?v=1794538100",
+   "status": "READY"
+  }
+ ],
+ "skipped": []
+}

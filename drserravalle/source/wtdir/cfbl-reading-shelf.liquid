@@ -1,0 +1,527 @@
+{%- comment -%}
+  What the Doctor Is Reading. An interactive bookshelf.
+  Add a Subject block, then the Book blocks that belong to it, in order.
+  The shelf changes on its own: the current subject is the latest one whose
+  start date has arrived, and each book opens on its release date.
+{%- endcomment -%}
+{%- liquid
+  assign sid = section.id
+  assign today = 'now' | date: '%Y%m%d' | plus: 0
+  assign tree = section.settings.tree_image
+  assign bg = section.settings.shelf_image
+-%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" media="print" onload="this.media='all'">
+
+<section class="wr" id="wr-{{ sid }}" data-wr style="--wr-pt:{{ section.settings.padding_top }}px;--wr-pb:{{ section.settings.padding_bottom }}px;--wr-tw:{{ section.settings.tree_width }}px;" aria-labelledby="wr-h-{{ sid }}">
+  <div class="wr-pw">
+    <header class="wr-head">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="wr-meta">{{ section.settings.eyebrow }}</p>{%- endif -%}
+        <h2 id="wr-h-{{ sid }}">{{ section.settings.heading | newline_to_br }}</h2>
+      </div>
+      <div class="wr-intro">{{ section.settings.intro }}</div>
+    </header>
+
+    {%- comment -%} Shelves, one per subject {%- endcomment -%}
+    <div class="wr-sets">
+      {%- assign set_i = -1 -%}
+      {%- assign book_n = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'subject' -%}
+          {%- if set_i >= 0 -%}</div></div>{%- endif -%}
+          {%- assign set_i = set_i | plus: 1 -%}
+          {%- assign s_start = block.settings.start | remove: '-' | plus: 0 -%}
+          <div class="wr-set" data-set="{{ set_i }}" data-start="{{ s_start }}" {{ block.shopify_attributes }}>
+            <div class="wr-month">
+              <h3>{{ block.settings.name }}{%- if block.settings.subtitle != blank -%} <span>{{ block.settings.subtitle }}</span>{%- endif -%}</h3>
+              <p class="wr-meta">{{ block.settings.dates }}</p>
+            </div>
+            <div class="wr-shelf"{% if bg != blank %} style="--wr-bg:url('{{ bg | image_url: width: 1600 }}')"{% endif %}>
+              {%- if tree != blank -%}
+                <div class="wr-tree" aria-hidden="true"><img src="{{ tree | image_url: width: 900 }}" alt="" width="{{ section.settings.tree_width }}" height="{{ section.settings.tree_width | divided_by: tree.aspect_ratio | round }}" loading="lazy">{% if section.settings.tree_base %}<span></span>{% endif %}</div>
+              {%- endif -%}
+        {%- elsif block.type == 'book' and set_i >= 0 -%}
+          {%- liquid
+            assign book_n = book_n | plus: 1
+            assign rel = block.settings.release | remove: '-' | plus: 0
+            assign wk = block.settings.week | default: book_n
+            case block.settings.color
+              when 'ink'
+                assign c = '#1f2a26'
+              when 'sage'
+                assign c = '#7e8f6f'
+              when 'slate'
+                assign c = '#3e4f63'
+              when 'clay'
+                assign c = '#8b4a3c'
+              when 'linen'
+                assign c = '#c9b98f'
+              when 'cream'
+                assign c = '#e7dcc4'
+              else
+                assign c = '#33503f'
+            endcase
+          -%}
+              <button type="button" class="wr-spine wr-c-{{ block.settings.color }}{% if rel > today %} is-soon{% endif %}" data-book="{{ block.id }}" data-release="{{ rel }}"
+                style="--h:{{ block.settings.height }};--w:{{ block.settings.width }}px;--c:{{ c }};"
+                aria-label="Week {{ wk }}: {{ block.settings.title | escape }}, {{ block.settings.author | escape }}" aria-pressed="false" {{ block.shopify_attributes }}>
+                <span class="wr-flag">{% if rel > today %}Coming{% else %}Now open{% endif %}</span>
+                <span class="wr-wk">{{ wk | prepend: '0' | slice: -2, 2 }}</span>
+                <span class="wr-t">{{ block.settings.spine_title | default: block.settings.title }}</span>
+                <span class="wr-a">{{ block.settings.spine_author | default: block.settings.author }}</span>
+              </button>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if set_i >= 0 -%}</div></div>{%- endif -%}
+    </div>
+
+    {%- comment -%} The open book: one panel per book {%- endcomment -%}
+    <div class="wr-books" aria-live="polite">
+      {%- assign set_i = -1 -%}
+      {%- assign book_n = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'subject' -%}
+          {%- assign set_i = set_i | plus: 1 -%}
+        {%- elsif block.type == 'book' and set_i >= 0 -%}
+          {%- liquid
+            assign book_n = book_n | plus: 1
+            assign rel = block.settings.release | remove: '-' | plus: 0
+            assign wk = block.settings.week | default: book_n
+            assign vsrc = ''
+            if block.settings.video != blank
+              for s in block.settings.video.sources
+                if s.mime_type == 'video/mp4' and s.height <= 1080
+                  assign vsrc = s.url
+                endif
+              endfor
+            endif
+            if vsrc == ''
+              assign vsrc = block.settings.video_link
+            endif
+            assign card = block.settings.card
+            if card == blank and block.settings.video != blank
+              assign card = block.settings.video.preview_image
+            endif
+          -%}
+          <article class="wr-book{% if rel > today %} is-soon{% endif %}" data-book="{{ block.id }}" data-set="{{ set_i }}" data-release="{{ rel }}" hidden>
+            <div class="wr-media">
+              <div class="wr-frame">
+                {%- if card != blank -%}
+                  <img src="{{ card | image_url: width: 720 }}" alt="{{ card.alt | escape }}" width="360" height="{{ 360 | divided_by: card.aspect_ratio | round }}" loading="lazy">
+                {%- endif -%}
+                {%- if vsrc != blank -%}
+                  <button type="button" class="wr-play" data-src="{{ vsrc }}" aria-label="Play the film: {{ block.settings.title | escape }}"><span></span></button>
+                {%- endif -%}
+                <p class="wr-soon-note">Film on {{ block.settings.release | date: '%A, %B %-d' }}</p>
+              </div>
+              {%- if block.settings.runtime != blank -%}<p class="wr-meta wr-run">Film &middot; {{ block.settings.runtime }}</p>{%- endif -%}
+            </div>
+            <div class="wr-txt">
+              <p class="wr-meta">Week {{ wk }} &middot; {{ block.settings.release | date: '%B %-d, %Y' }}</p>
+              <h4>{{ block.settings.title }}</h4>
+              <p class="wr-by">{{ block.settings.author }}{% if block.settings.year != blank %}, {{ block.settings.year }}{% endif %}</p>
+              {%- if block.settings.why != blank -%}
+                <p class="wr-lbl">Why read it</p>
+                <div class="wr-body">{{ block.settings.why }}</div>
+              {%- endif -%}
+              {%- if block.settings.hold != blank -%}
+                <p class="wr-lbl">Worth knowing</p>
+                <div class="wr-body">{{ block.settings.hold }}</div>
+              {%- endif -%}
+              {%- if block.settings.best_for != blank -%}
+                <p class="wr-lbl">Best for</p>
+                <div class="wr-body">{{ block.settings.best_for }}</div>
+              {%- endif -%}
+              {%- if block.settings.tier != 'none' -%}
+                <div class="wr-scale" aria-label="Where its central claim sits: {{ block.settings.tier | replace: '_', ' ' }}">
+                  <p class="wr-lbl">Where its central claim sits</p>
+                  <div class="wr-tiers">
+                    <span{% if block.settings.tier == 'established' %} class="on"{% endif %}>Established</span>
+                    <span{% if block.settings.tier == 'emerging' %} class="on"{% endif %}>Emerging</span>
+                    <span{% if block.settings.tier == 'theoretical' %} class="on"{% endif %}>Theoretical</span>
+                    <span{% if block.settings.tier == 'clinical_wisdom' %} class="on"{% endif %}>Clinical wisdom</span>
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.tier_note != blank or section.settings.follow_link != blank or section.settings.more_link != blank -%}
+      <div class="wr-foot">
+        <div class="wr-note">{{ section.settings.tier_note }}</div>
+        <div class="wr-links">
+          {%- if section.settings.more_link != blank -%}
+            <a class="wr-follow wr-more" href="{{ section.settings.more_link }}">{{ section.settings.more_label }}</a>
+          {%- endif -%}
+          {%- if section.settings.follow_link != blank -%}
+            <a class="wr-follow" href="{{ section.settings.follow_link }}" target="_blank" rel="noopener">{{ section.settings.follow_label }}</a>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} The library: every subject, past, current and coming {%- endcomment -%}
+    {%- if section.settings.show_library -%}
+      <div class="wr-lib">
+        <h5>{{ section.settings.library_heading }}</h5>
+        <div class="wr-case">
+          {%- assign set_i = -1 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'subject' -%}
+              {%- if set_i >= 0 -%}</span><span class="wr-plaque"><b>{{ p_name }}</b>{{ p_dates }}</span></button>{%- endif -%}
+              {%- assign set_i = set_i | plus: 1 -%}
+              {%- assign s_start = block.settings.start | remove: '-' | plus: 0 -%}
+              {%- assign p_name = block.settings.name -%}
+              {%- assign p_dates = block.settings.dates -%}
+              <button type="button" class="wr-row{% if s_start > today %} is-soon{% endif %}" data-open-set="{{ set_i }}" data-start="{{ s_start }}" aria-label="{{ block.settings.name | escape }}, {{ block.settings.dates | escape }}"><span class="wr-mini">
+            {%- elsif block.type == 'book' and set_i >= 0 -%}
+              {%- liquid
+                case block.settings.color
+                  when 'ink'
+                    assign c = '#1f2a26'
+                  when 'sage'
+                    assign c = '#7e8f6f'
+                  when 'slate'
+                    assign c = '#3e4f63'
+                  when 'clay'
+                    assign c = '#8b4a3c'
+                  when 'linen'
+                    assign c = '#c9b98f'
+                  when 'cream'
+                    assign c = '#e7dcc4'
+                  else
+                    assign c = '#33503f'
+                endcase
+              -%}
+              <i style="--c:{{ c }};--h:{{ block.settings.height }}"></i>
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if set_i >= 0 -%}</span><span class="wr-plaque"><b>{{ p_name }}</b>{{ p_dates }}</span></button>{%- endif -%}
+        </div>
+        {%- if section.settings.library_note != blank -%}<p class="wr-libnote">{{ section.settings.library_note }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- style -%}
+  #wr-{{ sid }}{--forest:#3D5A52;--sage:#6F8F7A;--mist:#B8C9BC;--cream:#EAE2D0;--paper:#F0EAE0;--ink:#2A3530;--gold:#e6cf93;
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .16 0 0 0 0 .2 0 0 0 0 .18 .28 0 0 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-color:var(--paper);background-image:var(--grain);color:var(--ink);font-family:Lora,Georgia,serif;padding:var(--wr-pt) 0 var(--wr-pb)}
+  #wr-{{ sid }} *{box-sizing:border-box}
+  #wr-{{ sid }} .wr-pw{max-width:1200px;margin:0 auto;padding:0 40px}
+  #wr-{{ sid }} .wr-meta{font-family:Inter,"Source Sans Pro",Montserrat,sans-serif;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin:0}
+  #wr-{{ sid }} .wr-head{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;border-bottom:1px solid rgba(42,53,48,.25);padding-bottom:24px;margin-bottom:40px}
+  #wr-{{ sid }} .wr-head h2{font-family:"Cormorant SC",serif;font-weight:700;font-size:3.4rem;line-height:.95;margin:10px 0 0;color:var(--forest);letter-spacing:0}
+  #wr-{{ sid }} .wr-intro p{margin:0;font-size:1.02rem;line-height:1.65}
+  #wr-{{ sid }} .wr-intro em{color:var(--forest)}
+  #wr-{{ sid }} .wr-set{display:none}
+  #wr-{{ sid }} .wr-set.is-on{display:block}
+  #wr-{{ sid }}:not(.wr-ready) .wr-set:first-child{display:block}
+  #wr-{{ sid }} .wr-month{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:46px}
+  #wr-{{ sid }} .wr-month h3{margin:0;font-family:"Cormorant SC",serif;font-weight:600;font-size:1.9rem;color:var(--ink)}
+  #wr-{{ sid }} .wr-month h3 span{font-family:Lora,serif;font-style:italic;font-weight:400;font-size:1.15rem;color:var(--sage);margin-left:10px}
+
+  /* the shelf */
+  #wr-{{ sid }} .wr-shelf{position:relative;height:440px;display:flex;align-items:flex-end;gap:4px;padding:0 40px;border-radius:2px;
+    background:linear-gradient(rgba(228,220,203,.55),rgba(214,204,184,.6)),var(--wr-bg,linear-gradient(#e4dccb,#d6ccb8)) center 40%/cover;
+    box-shadow:inset 0 12px 24px rgba(60,48,36,.18),inset 0 -40px 50px rgba(60,48,36,.22)}
+  #wr-{{ sid }} .wr-shelf::after{content:"";position:absolute;left:0;right:0;bottom:-22px;height:22px;border-radius:2px;
+    background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 9px,rgba(255,255,255,.04) 9px 11px,transparent 11px 23px),linear-gradient(#8a6b4f,#6a4f39 55%,#4b3727);
+    box-shadow:0 14px 22px rgba(42,30,20,.35)}
+  #wr-{{ sid }} .wr-shelf::before{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.35);z-index:3}
+  #wr-{{ sid }} .wr-tree{position:relative;order:99;flex:0 0 auto;align-self:flex-end;margin-left:8px;width:var(--wr-tw);max-width:55%;z-index:2;display:flex;flex-direction:column;align-items:center;filter:drop-shadow(5px 6px 6px rgba(30,24,18,.3));pointer-events:none}
+  #wr-{{ sid }} .wr-tree img{width:100%;height:auto;display:block;margin-bottom:-3px}
+  #wr-{{ sid }} .wr-tree span{display:block;width:84px;height:18px;border-radius:40% 40% 4px 4px/60% 60% 4px 4px;background:linear-gradient(#7a5a40,#4b3727)}
+
+  #wr-{{ sid }} .wr-spine{position:relative;z-index:1;flex:0 0 auto;width:var(--w);height:calc(var(--h) * 4.3px);border:0;margin:0;cursor:pointer;
+    display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:20px 0 16px;color:var(--gold);
+    border-radius:4px 4px 1px 1px;background-color:var(--c);
+    background-image:linear-gradient(90deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.08) 9%,rgba(255,255,255,.16) 22%,rgba(255,255,255,.05) 40%,rgba(0,0,0,.06) 70%,rgba(0,0,0,.4) 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .02' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+    box-shadow:3px 0 6px rgba(30,24,18,.35),-1px 0 0 rgba(0,0,0,.25);transition:transform .35s ease,box-shadow .35s ease}
+  #wr-{{ sid }} .wr-spine::before{content:"";position:absolute;left:0;right:0;top:34px;height:2px;background:rgba(214,186,120,.55);box-shadow:0 5px 0 rgba(214,186,120,.35)}
+  #wr-{{ sid }} .wr-spine:hover{transform:translateY(-10px)}
+  #wr-{{ sid }} .wr-spine:focus-visible{outline:2px solid var(--forest);outline-offset:4px}
+  #wr-{{ sid }} .wr-spine[aria-pressed="true"]{transform:translateY(-26px) rotate(-1.2deg);box-shadow:6px 14px 22px rgba(30,24,18,.45),-1px 0 0 rgba(0,0,0,.25)}
+  #wr-{{ sid }} .wr-t{writing-mode:vertical-rl;transform:rotate(180deg);font-family:"Cormorant SC",serif;font-weight:600;font-size:1.18rem;letter-spacing:.05em;white-space:nowrap;
+    text-shadow:0 1px 0 rgba(0,0,0,.45),0 -1px 0 rgba(255,240,200,.15)}
+  #wr-{{ sid }} .wr-a{writing-mode:vertical-rl;transform:rotate(180deg);font-family:Inter,Montserrat,sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;opacity:.9;white-space:nowrap}
+  #wr-{{ sid }} .wr-wk{font-family:Inter,Montserrat,sans-serif;font-size:.58rem;letter-spacing:.12em;opacity:.75}
+  #wr-{{ sid }} .wr-c-sage,#wr-{{ sid }} .wr-c-sage *{color:#f3ead2}
+  #wr-{{ sid }} .wr-c-linen,#wr-{{ sid }} .wr-c-cream{color:var(--ink)}
+  #wr-{{ sid }} .wr-c-linen .wr-t,#wr-{{ sid }} .wr-c-cream .wr-t{text-shadow:none}
+  #wr-{{ sid }} .wr-flag{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-family:Inter,Montserrat,sans-serif;font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);white-space:nowrap;opacity:0;transition:opacity .3s}
+  #wr-{{ sid }} .wr-spine[aria-pressed="true"] .wr-flag{opacity:1}
+  #wr-{{ sid }} .wr-spine.is-soon{filter:saturate(.55) brightness(1.08);opacity:.78}
+  #wr-{{ sid }} .wr-spine.is-soon .wr-flag{opacity:1;color:var(--sage)}
+  #wr-{{ sid }} .wr-spine.is-soon[aria-pressed="true"] .wr-flag{color:var(--forest)}
+
+  /* the open book */
+  #wr-{{ sid }} .wr-books{margin-top:64px}
+  #wr-{{ sid }} .wr-book{background:#fffaf2;border:1px solid rgba(42,53,48,.18);box-shadow:0 22px 40px rgba(42,53,48,.16);padding:22px;display:grid;grid-template-columns:300px 1fr;gap:34px}
+  #wr-{{ sid }} .wr-book[hidden]{display:none}
+  #wr-{{ sid }} .wr-frame{position:relative;background:linear-gradient(160deg,#3f564f,#1f2a26);border-radius:2px;overflow:hidden}
+  #wr-{{ sid }} .wr-frame img{display:block;width:100%;height:auto}
+  #wr-{{ sid }} .wr-frame video{display:block;width:100%;aspect-ratio:9/16;background:#1f2a26;object-fit:contain}
+  #wr-{{ sid }} .wr-play{position:absolute;inset:0;border:0;background:linear-gradient(transparent 55%,rgba(31,42,38,.35));cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+  #wr-{{ sid }} .wr-play span{width:70px;height:70px;border-radius:50%;background:rgba(240,234,224,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:transform .25s}
+  #wr-{{ sid }} .wr-play span::before{content:"";border-left:19px solid var(--forest);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px}
+  #wr-{{ sid }} .wr-play:hover span{transform:scale(1.06)}
+  #wr-{{ sid }} .wr-play:focus-visible{outline:2px solid var(--paper);outline-offset:-6px}
+  #wr-{{ sid }} .wr-soon-note{display:none;position:absolute;left:0;right:0;bottom:0;margin:0;padding:12px 14px;background:rgba(31,42,38,.86);color:var(--paper);font-family:Inter,Montserrat,sans-serif;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+  #wr-{{ sid }} .wr-book.is-soon .wr-soon-note{display:block}
+  #wr-{{ sid }} .wr-book.is-soon .wr-play{display:none}
+  #wr-{{ sid }} .wr-run{margin-top:10px}
+  #wr-{{ sid }} .wr-txt{display:flex;flex-direction:column}
+  #wr-{{ sid }} .wr-txt > .wr-meta{margin-bottom:10px}
+  #wr-{{ sid }} .wr-txt h4{margin:0;font-family:"Cormorant SC",serif;font-weight:700;font-size:2.1rem;line-height:1.02;color:var(--ink);letter-spacing:0}
+  #wr-{{ sid }} .wr-by{margin:6px 0 20px;font-style:italic;color:var(--sage)}
+  #wr-{{ sid }} .wr-lbl{font-family:Inter,Montserrat,sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin:0 0 6px}
+  #wr-{{ sid }} .wr-body{margin:0 0 18px;font-size:.95rem;line-height:1.65}
+  #wr-{{ sid }} .wr-body p{margin:0 0 .7em}
+  #wr-{{ sid }} .wr-body p:last-child{margin:0}
+  #wr-{{ sid }} .wr-scale{margin-top:auto;padding-top:16px;border-top:1px solid rgba(42,53,48,.15)}
+  #wr-{{ sid }} .wr-tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+  #wr-{{ sid }} .wr-tiers span{font-family:Inter,Montserrat,sans-serif;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:8px 2px;background:var(--cream);color:#6b756f}
+  #wr-{{ sid }} .wr-tiers span.on{background:var(--forest);color:var(--paper)}
+
+  #wr-{{ sid }} .wr-foot{display:flex;justify-content:space-between;align-items:center;gap:32px;margin-top:26px}
+  #wr-{{ sid }} .wr-note p{margin:0;font-size:.88rem;line-height:1.6;color:#4a5550;max-width:640px}
+  #wr-{{ sid }} .wr-links{display:flex;gap:24px;flex-wrap:wrap;align-items:center;flex:none}
+  #wr-{{ sid }} .wr-follow{flex:none;font-family:Inter,Montserrat,sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);text-decoration:none;border-bottom:1px solid var(--forest);padding-bottom:3px}
+  #wr-{{ sid }} .wr-follow.wr-more{background:var(--forest);color:var(--paper);border:0;padding:13px 20px}
+  #wr-{{ sid }} .wr-follow.wr-more:hover{background:var(--ink)}
+
+  /* the library */
+  #wr-{{ sid }} .wr-lib{margin-top:72px}
+  #wr-{{ sid }} .wr-lib h5{margin:0 0 18px;font-family:"Cormorant SC",serif;font-weight:600;font-size:1.5rem;color:var(--forest);letter-spacing:0}
+  #wr-{{ sid }} .wr-case{background:linear-gradient(#5a4231,#47331f);padding:16px 16px 4px;border-radius:3px;box-shadow:0 18px 30px rgba(42,30,20,.3);display:grid;grid-template-columns:repeat(3,1fr);column-gap:16px}
+  #wr-{{ sid }} .wr-row{position:relative;height:118px;margin:0 0 12px;border:0;width:100%;text-align:left;cursor:pointer;font:inherit;
+    background:linear-gradient(#e4dccb,#d4c9b3);box-shadow:inset 0 10px 18px rgba(60,48,36,.25);display:flex;align-items:flex-end;padding:0 14px}
+  #wr-{{ sid }} .wr-row::after{content:"";position:absolute;left:-8px;right:-8px;bottom:-12px;height:12px;background:linear-gradient(#8a6b4f,#5e4430)}
+  #wr-{{ sid }} .wr-mini{display:flex;align-items:flex-end;gap:2px;height:100%}
+  #wr-{{ sid }} .wr-mini i{display:block;width:16px;height:calc(var(--h) * .92px);border-radius:2px 2px 0 0;background-color:var(--c);background-image:linear-gradient(90deg,rgba(0,0,0,.4),rgba(255,255,255,.15) 25%,rgba(0,0,0,.05) 60%,rgba(0,0,0,.4))}
+  #wr-{{ sid }} .wr-plaque{position:absolute;right:12px;bottom:10px;background:#f3ead2;border:1px solid #b89a5c;padding:6px 10px;font-family:Inter,Montserrat,sans-serif;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--forest);box-shadow:0 2px 4px rgba(0,0,0,.2);max-width:62%}
+  #wr-{{ sid }} .wr-plaque b{display:block;font-family:"Cormorant SC",serif;font-weight:600;font-size:1rem;letter-spacing:.02em;text-transform:none;color:var(--ink)}
+  #wr-{{ sid }} .wr-row.is-on .wr-plaque{border-color:var(--forest);box-shadow:0 0 0 2px var(--forest)}
+  #wr-{{ sid }} .wr-row.is-soon{cursor:default}
+  #wr-{{ sid }} .wr-row.is-soon .wr-mini i{opacity:.35}
+  #wr-{{ sid }} .wr-row.is-soon .wr-plaque{opacity:.7;border-style:dashed}
+  #wr-{{ sid }} .wr-row:not(.is-soon):hover .wr-plaque{transform:translateY(-2px)}
+  #wr-{{ sid }} .wr-row:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
+  #wr-{{ sid }} .wr-libnote{margin:14px 0 0;font-size:.88rem;font-style:italic;color:#4a5550}
+
+  @media (max-width: 989px){
+    #wr-{{ sid }} .wr-head{grid-template-columns:1fr;gap:14px}
+    #wr-{{ sid }} .wr-book{grid-template-columns:240px 1fr;gap:24px}
+    #wr-{{ sid }} .wr-case{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 749px){
+    #wr-{{ sid }}{padding:calc(var(--wr-pt) * .65) 0 calc(var(--wr-pb) * .65)}
+    #wr-{{ sid }} .wr-pw{padding:0 16px}
+    #wr-{{ sid }} .wr-head h2{font-size:2.5rem}
+    #wr-{{ sid }} .wr-month{display:block;margin-bottom:40px}
+    #wr-{{ sid }} .wr-month h3{font-size:1.5rem}
+    #wr-{{ sid }} .wr-month h3 span{display:block;margin:4px 0 0}
+    #wr-{{ sid }} .wr-month .wr-meta{margin-top:6px}
+    #wr-{{ sid }} .wr-shelf{height:320px;padding:0 8px;gap:2px}
+    #wr-{{ sid }} .wr-spine{width:calc(var(--w) * .58);height:calc(var(--h) * 2.8px);padding:12px 0}
+    #wr-{{ sid }} .wr-spine::before{top:26px}
+    #wr-{{ sid }} .wr-t{font-size:.84rem}
+    #wr-{{ sid }} .wr-spine:not([aria-pressed="true"]) .wr-flag{opacity:0}
+    #wr-{{ sid }} .wr-media{max-width:280px}
+    #wr-{{ sid }} .wr-a{display:none}
+    #wr-{{ sid }} .wr-flag{font-size:.5rem;top:-24px}
+    #wr-{{ sid }} .wr-tree{width:calc(var(--wr-tw) * .4);margin-left:4px}
+    #wr-{{ sid }} .wr-tree span{width:44px;height:10px}
+    #wr-{{ sid }} .wr-books{margin-top:52px}
+    #wr-{{ sid }} .wr-book{grid-template-columns:1fr;padding:14px;gap:20px}
+    #wr-{{ sid }} .wr-media{width:100%;margin:0 auto}
+    #wr-{{ sid }} .wr-txt h4{font-size:1.8rem}
+    #wr-{{ sid }} .wr-foot{flex-direction:column;align-items:flex-start;gap:16px}
+    #wr-{{ sid }} .wr-case{grid-template-columns:1fr;padding:12px 12px 2px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #wr-{{ sid }} .wr-spine,#wr-{{ sid }} .wr-play span{transition:none}
+  }
+{%- endstyle -%}
+
+<script>
+(function(){
+  var root = document.getElementById('wr-{{ sid }}');
+  if (!root || root.dataset.wrInit) return;
+  root.dataset.wrInit = '1';
+  var RELEASE_HOUR = {{ section.settings.release_hour | default: 13 }};
+
+  // Today in Eastern time, as YYYYMMDD and hour, so the shelf turns over with the posts.
+  function eastern(){
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', hour12:false}).formatToParts(new Date());
+      var o = {}; parts.forEach(function(p){ o[p.type] = p.value; });
+      return { day: parseInt(o.year + o.month + o.day, 10), hour: parseInt(o.hour, 10) % 24 };
+    } catch(e) {
+      var d = new Date();
+      return { day: d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate(), hour: d.getHours() };
+    }
+  }
+  var now = eastern();
+  var params = new URLSearchParams(location.search);
+  if (params.get('shelf_date')) { now = { day: parseInt(params.get('shelf_date').replace(/\D/g,''), 10), hour: 23 }; }
+  function released(r){ r = parseInt(r, 10) || 0; return r < now.day || (r === now.day && now.hour >= RELEASE_HOUR); }
+  function started(s){ s = parseInt(s, 10) || 0; return s <= now.day; }
+
+  var sets = Array.prototype.slice.call(root.querySelectorAll('.wr-set'));
+  var books = Array.prototype.slice.call(root.querySelectorAll('.wr-book'));
+  var rows = Array.prototype.slice.call(root.querySelectorAll('.wr-row'));
+
+  root.querySelectorAll('.wr-spine,.wr-book').forEach(function(el){
+    el.classList.toggle('is-soon', !released(el.dataset.release));
+  });
+  root.querySelectorAll('.wr-spine').forEach(function(s){
+    var f = s.querySelector('.wr-flag'); if (f) f.textContent = s.classList.contains('is-soon') ? 'Coming' : 'Now open';
+  });
+  rows.forEach(function(r){ r.classList.toggle('is-soon', !started(r.dataset.start) || !r.querySelector('.wr-mini i')); if (r.classList.contains('is-soon')) r.setAttribute('aria-disabled','true'); });
+
+  function stopVideos(){ root.querySelectorAll('video').forEach(function(v){ v.pause(); }); }
+
+  function openBook(id){
+    stopVideos();
+    books.forEach(function(b){ b.hidden = b.dataset.book !== id; });
+    root.querySelectorAll('.wr-spine').forEach(function(s){ s.setAttribute('aria-pressed', s.dataset.book === id ? 'true' : 'false'); });
+  }
+
+  function openSet(i, scroll){
+    var set = sets[i]; if (!set) return;
+    sets.forEach(function(s){ s.classList.toggle('is-on', s === set); });
+    rows.forEach(function(r){ r.classList.toggle('is-on', r.dataset.openSet === String(i)); });
+    var spines = Array.prototype.slice.call(set.querySelectorAll('.wr-spine'));
+    var pick = null;
+    spines.forEach(function(s){ if (released(s.dataset.release)) pick = s; });
+    if (!pick) pick = spines[0];
+    if (pick) openBook(pick.dataset.book); else books.forEach(function(b){ b.hidden = true; });
+    if (scroll) set.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+  }
+
+  // Current subject: the latest one whose start date has arrived.
+  var current = 0;
+  sets.forEach(function(s, i){ if (started(s.dataset.start) && s.querySelector('.wr-spine')) current = i; });
+  root.classList.add('wr-ready');
+  openSet(current, false);
+
+  root.addEventListener('click', function(e){
+    var spine = e.target.closest('.wr-spine');
+    if (spine) { openBook(spine.dataset.book); return; }
+    var play = e.target.closest('.wr-play');
+    if (play) {
+      var frame = play.parentNode;
+      var v = document.createElement('video');
+      v.src = play.dataset.src; v.controls = true; v.playsInline = true; v.setAttribute('playsinline','');
+      v.preload = 'auto';
+      var img = frame.querySelector('img'); if (img) v.poster = img.currentSrc || img.src;
+      frame.innerHTML = ''; frame.appendChild(v);
+      stopVideos(); v.play().catch(function(){});
+      return;
+    }
+    var row = e.target.closest('.wr-row');
+    if (row && !row.classList.contains('is-soon')) openSet(parseInt(row.dataset.openSet, 10), true);
+  });
+
+  if (window.Shopify && Shopify.designMode) {
+    document.addEventListener('shopify:block:select', function(e){
+      var t = e.target;
+      if (t.classList && t.classList.contains('wr-spine')) { var s = t.closest('.wr-set'); openSet(sets.indexOf(s), false); openBook(t.dataset.book); }
+      else if (t.classList && t.classList.contains('wr-set')) openSet(sets.indexOf(t), false);
+    });
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Doctor is reading shelf",
+  "tag": "div",
+  "class": "section-wr",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small line above the title", "default": "CFBL Institute · A reading series for clinicians" },
+    { "type": "textarea", "id": "heading", "label": "Title", "default": "What the Doctor\nIs Reading" },
+    { "type": "richtext", "id": "intro", "label": "Introduction", "default": "<p>Not a book club. I have already read these. Each subject gets a shelf and each week gets one book: what it gets right, what to hold loosely, and <em>whether it belongs on your shelf</em>.</p>" },
+    { "type": "image_picker", "id": "tree_image", "label": "Shelf decoration (the tree)" },
+    { "type": "range", "id": "tree_width", "label": "Decoration width", "min": 120, "max": 520, "step": 10, "unit": "px", "default": 380 },
+    { "type": "checkbox", "id": "tree_base", "label": "Add a small wooden base under it", "default": false },
+    { "type": "image_picker", "id": "shelf_image", "label": "Shelf background photo", "info": "Shown softened behind the books." },
+    { "type": "richtext", "id": "tier_note", "label": "Note under the open book", "default": "<p>Every book is sorted by where its central claim sits: established, emerging, theoretical, or clinical wisdom. Clinical wisdom is not a dismissal. It is often right and simply has not been tested yet.</p>" },
+    { "type": "text", "id": "follow_label", "label": "Follow link label", "default": "A new book every Sunday" },
+    { "type": "url", "id": "follow_link", "label": "Follow link" },
+    { "type": "text", "id": "more_label", "label": "Button label", "default": "See the full library" },
+    { "type": "url", "id": "more_link", "label": "Button link", "info": "Use on the home page to send readers to the Institute page." },
+    { "type": "header", "content": "The library" },
+    { "type": "checkbox", "id": "show_library", "label": "Show the library of past subjects", "default": true },
+    { "type": "text", "id": "library_heading", "label": "Library heading", "default": "The library" },
+    { "type": "text", "id": "library_note", "label": "Library note", "default": "Every past subject stays on the shelf. Choose one to bring it back down." },
+    { "type": "header", "content": "Timing" },
+    { "type": "range", "id": "release_hour", "label": "Hour each book opens (Eastern)", "min": 0, "max": 23, "step": 1, "default": 13, "info": "Matches the 1:00 pm Sunday post." },
+    { "type": "range", "id": "padding_top", "label": "Top spacing", "min": 0, "max": 160, "step": 8, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom spacing", "min": 0, "max": 160, "step": 8, "unit": "px", "default": 96 }
+  ],
+  "blocks": [
+    {
+      "type": "subject",
+      "name": "Subject (a shelf)",
+      "settings": [
+        { "type": "paragraph", "content": "Add the books for this subject directly below it." },
+        { "type": "text", "id": "name", "label": "Subject", "default": "Trauma" },
+        { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "across the modalities" },
+        { "type": "text", "id": "dates", "label": "Dates shown", "default": "September to October 2026" },
+        { "type": "text", "id": "start", "label": "Shelf goes up on (YYYY-MM-DD)", "default": "2026-09-27", "info": "The newest subject whose date has arrived becomes the top shelf." }
+      ]
+    },
+    {
+      "type": "book",
+      "name": "Book",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Book title" },
+        { "type": "text", "id": "author", "label": "Author", "default": "Author" },
+        { "type": "text", "id": "year", "label": "Year" },
+        { "type": "text", "id": "week", "label": "Week number", "info": "Leave blank to count automatically." },
+        { "type": "text", "id": "release", "label": "Film goes out on (YYYY-MM-DD)", "default": "2026-11-08", "info": "Before this date the book shows as coming." },
+        { "type": "header", "content": "Film" },
+        { "type": "video", "id": "video", "label": "Film from Shopify Files" },
+        { "type": "text", "id": "video_link", "label": "Or paste the film link", "info": "Used only when no film is chosen above." },
+        { "type": "text", "id": "runtime", "label": "Length shown", "info": "For example: 1 min 30 sec" },
+        { "type": "image_picker", "id": "card", "label": "Cover card", "info": "Shown before the film plays." },
+        { "type": "header", "content": "Notes" },
+        { "type": "richtext", "id": "why", "label": "Why read it" },
+        { "type": "richtext", "id": "hold", "label": "Worth knowing" },
+        { "type": "richtext", "id": "best_for", "label": "Best for" },
+        { "type": "select", "id": "tier", "label": "Where its central claim sits", "default": "none", "options": [
+          { "value": "none", "label": "Do not show" },
+          { "value": "established", "label": "Established" },
+          { "value": "emerging", "label": "Emerging" },
+          { "value": "theoretical", "label": "Theoretical" },
+          { "value": "clinical_wisdom", "label": "Clinical wisdom" }
+        ]},
+        { "type": "header", "content": "Spine" },
+        { "type": "text", "id": "spine_title", "label": "Short title for the spine", "info": "Leave blank to use the full title." },
+        { "type": "text", "id": "spine_author", "label": "Name on the spine", "info": "Usually the last name." },
+        { "type": "select", "id": "color", "label": "Cloth color", "default": "forest", "options": [
+          { "value": "forest", "label": "Forest" },
+          { "value": "ink", "label": "Ink" },
+          { "value": "sage", "label": "Sage" },
+          { "value": "slate", "label": "Slate" },
+          { "value": "clay", "label": "Clay" },
+          { "value": "linen", "label": "Linen" },
+          { "value": "cream", "label": "Cream" }
+        ]},
+        { "type": "range", "id": "height", "label": "Height", "min": 60, "max": 100, "step": 5, "unit": "%", "default": 85 },
+        { "type": "range", "id": "width", "label": "Thickness", "min": 44, "max": 84, "step": 2, "unit": "px", "default": 62 }
+      ]
+    }
+  ],
+  "max_blocks": 50,
+  "presets": [ { "name": "Doctor is reading shelf" } ]
+}
+{% endschema %}

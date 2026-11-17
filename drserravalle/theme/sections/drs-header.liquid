@@ -1,0 +1,80 @@
+{%- liquid
+  assign cat = section.settings.cat_bridge
+  if template.name == 'index'
+    assign cat = section.settings.cat_home
+  endif
+  if blog.handle == 'essays' or article.blog.handle == 'essays' or template.suffix contains 'book' or template.suffix contains 'musa' or template.suffix contains 'writing'
+    assign cat = section.settings.cat_essays
+  elsif blog.handle == 'clinical-notes' or article.blog.handle == 'clinical-notes' or product or template.suffix contains 'education' or template.suffix contains 'program' or template.suffix contains 'policies'
+    assign cat = section.settings.cat_edu
+  elsif template.suffix contains 'about' or template.suffix contains 'speaking' or template.suffix contains 'contact'
+    assign cat = section.settings.cat_home
+  endif
+-%}
+<header class="site-head">
+  <div class="wrap">
+    <a class="idn" href="{{ routes.root_url }}">
+      <span class="idn__name">Dr. Niki Serravalle</span>
+      {%- if cat != blank %}<span class="idn__cat">{{ cat }}</span>{% endif -%}
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav" role="list">
+        {%- assign nav_links = linklists['drs-nav'].links -%}{%- if section.settings.menu != blank -%}{%- assign nav_links = section.settings.menu.links -%}{%- endif -%}
+        {%- for link in nav_links -%}
+          {%- if link.links.size > 0 -%}
+            <li class="nav__item nav__item--dd">
+              <button type="button" class="nav__btn" aria-expanded="false" aria-controls="drs-dd-{{ forloop.index }}">{{ link.title }}</button>
+              <ul class="nav__panel" id="drs-dd-{{ forloop.index }}" role="list">
+                {%- for child in link.links -%}
+                  <li><a href="{{ child.url }}"{% if child.active %} aria-current="page"{% endif %}>{{ child.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </li>
+          {%- else -%}
+            <li class="nav__item"><a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  (function () {
+    var items = document.querySelectorAll('.nav__item--dd');
+    function closeAll(except) {
+      items.forEach(function (li) {
+        if (li === except) return;
+        li.classList.remove('is-open');
+        li.querySelector('.nav__btn').setAttribute('aria-expanded', 'false');
+      });
+    }
+    items.forEach(function (li) {
+      var btn = li.querySelector('.nav__btn');
+      btn.addEventListener('click', function () {
+        var open = !li.classList.contains('is-open');
+        closeAll(li);
+        li.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.nav__item--dd')) closeAll(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      closeAll();
+      if (document.activeElement && document.activeElement.closest('.nav__item--dd')) document.activeElement.blur();
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "DRS header",
+  "settings": [
+    { "type": "link_list", "id": "menu", "label": "Menu", "info": "Empty uses the DRS header (dropdowns) menu." },
+    { "type": "text", "id": "cat_home", "label": "Category line, home and about", "default": "Psychologist, author, educator" },
+    { "type": "text", "id": "cat_bridge", "label": "Category line, Make It Make Sense", "default": "Make It Make Sense" },
+    { "type": "text", "id": "cat_essays", "label": "Category line, writing", "default": "Books + Essays" },
+    { "type": "text", "id": "cat_edu", "label": "Category line, training", "default": "Professional Education" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,68 @@
+{
+  "layout": "drs",
+  "sections": {
+    "main": {
+      "type": "drs-page",
+      "settings": {
+        "eyebrow": "Professional Education",
+        "image": "shopify://shop_images/CC79DB42-3C59-49A5-A635-8EACCAF3F2B3.png"
+      }
+    },
+    "programs": {
+      "type": "drs-programs",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Workshops",
+        "show_tiers": false
+      },
+      "blocks": {
+        "p2": {
+          "type": "program",
+          "settings": {
+            "product": "adhd-evaluation-diagnostic-reasoning-differential-and-defensible-findings",
+            "kicker": "Workshop",
+            "ce": "This workshop does not award continuing education credit.",
+            "summary": "<p>Whether the onset and cross-setting criteria are genuinely met, and whether the evidence supports the conclusion you are about to put in writing and sign. This intensive works through the reasoning rather than the checklist.</p>",
+            "when": "Friday, January 22, 2027",
+            "format": "1:00 to 4:00 PM Eastern. Live on Zoom.",
+            "cta": "Register"
+          }
+        },
+        "p3": {
+          "type": "program",
+          "settings": {
+            "product": "assessment-gender-diverse-clients",
+            "kicker": "Workshop",
+            "ce": "This workshop does not award continuing education credit.",
+            "summary": "<p>Assessment is often treated as neutral. It is not. Intake language, norm selection, instrument design, and interpretive habits can all reduce validity when a client is transgender or gender diverse.</p>",
+            "when": "Friday, February 5, 2027",
+            "format": "1:00 to 4:00 PM Eastern. Live on Zoom.",
+            "cta": "Register"
+          }
+        },
+        "p4": {
+          "type": "program",
+          "settings": {
+            "product": "nature-informed-emdr",
+            "kicker": "Workshop",
+            "ce": "EMDRIA Approved for 3 EMDRIA Credits.",
+            "summary": "<p>For EMDR clinicians who already know how to do the work and want to think more carefully about when and how nature-informed elements belong inside a standard EMDR case.</p>",
+            "when": "Friday, March 5, 2027",
+            "format": "1:00 to 4:00 PM Eastern. Live on Zoom. Credit requires live, real-time attendance.",
+            "cta": "Register",
+            "title": "Nature-Informed EMDR"
+          }
+        }
+      },
+      "block_order": [
+        "p2",
+        "p3",
+        "p4"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "programs"
+  ]
+}

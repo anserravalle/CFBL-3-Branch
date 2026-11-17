@@ -1,0 +1,46 @@
+{%- assign current = product.selected_or_first_available_variant -%}
+<section class="inner-band inner-band--short"></section>
+<section class="prod wrap">
+  <div class="prod__media">
+    {%- if product.featured_image -%}
+      {{ product.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', sizes: '(min-width: 860px) 55vw, 100vw', alt: product.featured_image.alt | default: product.title }}
+    {%- endif -%}
+    <div class="prose" style="margin-top: 40px;">{{ product.description }}</div>
+  </div>
+  <div class="prod__buy">
+    <p class="eyebrow">{{ product.type }}</p>
+    <h1 style="font-size: clamp(2rem, 4vw, 3rem);">{{ product.title }}</h1>
+    <p class="prod__price">{{ current.price | money }}</p>
+    {%- form 'product', product -%}
+      {%- if product.has_only_default_variant -%}
+        <input type="hidden" name="id" value="{{ current.id }}">
+      {%- else -%}
+        <label class="meta" for="drs-variant">Option</label>
+        <select id="drs-variant" name="id">
+          {%- for v in product.variants -%}
+            <option value="{{ v.id }}"{% if v == current %} selected{% endif %}{% unless v.available %} disabled{% endunless %}>{{ v.title }} &middot; {{ v.price | money }}{% unless v.available %} (full){% endunless %}</option>
+          {%- endfor -%}
+        </select>
+      {%- endif -%}
+      {%- if current.available -%}
+        <button class="btn" type="submit" name="checkout" value="1" style="width: 100%;">{{ section.settings.cta }}</button>
+      {%- else -%}
+        <p>{{ section.settings.sold_out }}</p>
+      {%- endif -%}
+    {%- endform -%}
+    {%- assign pol_url = section.settings.policies_url | default: '/pages/policies' -%}
+    <p class="form-note"><a href="{{ pol_url }}">{{ section.settings.policies_label }}</a></p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "DRS product",
+  "settings": [
+    { "type": "text", "id": "cta", "label": "Button label", "default": "Register" },
+    { "type": "text", "id": "sold_out", "label": "Full text", "default": "This program is full. Write to be told when it runs again." },
+    { "type": "text", "id": "policies_label", "label": "Policies link label", "default": "Fees, refunds, and continuing education policies" },
+    { "type": "url", "id": "policies_url", "label": "Policies link", "info": "Empty uses /pages/policies." }
+  ]
+}
+{% endschema %}

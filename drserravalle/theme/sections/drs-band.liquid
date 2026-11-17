@@ -1,0 +1,98 @@
+{%- comment -%}
+  A home-page band in one brand color. Its top fades in from the previous band's
+  color, so sections ombre into each other with no hard edges.
+{%- endcomment -%}
+{%- assign b = blogs[section.settings.blog] -%}
+<section class="band band--{{ section.settings.color }} band-from--{{ section.settings.from }}{% if section.settings.to_footer %} band--to-footer{% endif %}">
+  {%- if section.settings.hook != blank %}<p class="band__hook">{{ section.settings.hook }}</p>{% endif %}
+  <div class="wrap band__grid{% if section.settings.flip %} band__grid--flip{% endif %}{% if section.settings.frame == 'textbook' %} band__grid--textbook{% endif %}">
+    <div class="band__copy">
+      {%- if section.settings.logo -%}{{ section.settings.logo | image_url: width: 400 | image_tag: class: "band__logo", loading: "lazy", alt: section.settings.logo.alt }}{%- endif -%}
+      {%- if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif -%}
+      <h2>{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank %}<div class="band__text">{{ section.settings.text }}</div>{% endif -%}
+      {%- if section.settings.link_label != blank %}<p><a class="btn" href="{{ section.settings.link_url }}">{{ section.settings.link_label }}</a></p>{% endif -%}
+    </div>
+    <figure class="band__img frame--{{ section.settings.frame }}">
+      {%- case section.settings.frame -%}
+        {%- when 'parchment' -%}
+          <div class="paper">
+            {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 40vw, 100vw' }}{%- endif -%}
+            {%- if section.settings.caption != blank %}<figcaption>{{ section.settings.caption }}</figcaption>{% endif -%}
+          </div>
+        {%- when 'textbook' -%}
+          <div class="tb">
+            <div class="tb__page tb__page--l">
+              <p class="eyebrow">{{ section.settings.page_title }}</p>
+              {%- if section.settings.label1 != blank %}<p class="tb__tier"><strong>{{ section.settings.label1 }}</strong><span>{{ section.settings.tier1 }}</span></p>{% endif -%}
+              {%- if section.settings.label2 != blank %}<p class="tb__tier"><strong>{{ section.settings.label2 }}</strong><span>{{ section.settings.tier2 }}</span></p>{% endif -%}
+              {%- if section.settings.label3 != blank %}<p class="tb__tier"><strong>{{ section.settings.label3 }}</strong><span>{{ section.settings.tier3 }}</span></p>{% endif -%}
+              {%- if section.settings.label4 != blank %}<p class="tb__tier"><strong>{{ section.settings.label4 }}</strong><span>{{ section.settings.tier4 }}</span></p>{% endif -%}
+            </div>
+            <div class="tb__page tb__page--r">
+              {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 25vw, 50vw' }}{%- endif -%}
+              {%- if section.settings.caption != blank %}<figcaption>{{ section.settings.caption }}</figcaption>{% endif -%}
+            </div>
+          </div>
+        {%- else -%}
+          {%- if section.settings.image -%}{{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 860px) 50vw, 100vw' }}{%- endif -%}
+      {%- endcase -%}
+    </figure>
+  </div>
+  {%- if section.settings.blog != blank and section.settings.count > 0 and b.articles.size > 0 -%}
+    <div class="wrap band__posts">
+      {%- for a in b.articles limit: section.settings.count -%}
+        <a class="band__post" href="{{ a.url }}">
+          <div class="band__post-img">{%- if a.image -%}{{ a.image | image_url: width: 800 | image_tag: loading: 'lazy', alt: a.title }}{%- endif -%}</div>
+          <span class="meta">{{ a.published_at | date: '%B %-d, %Y' }}</span>
+          <h3>{{ a.title }}</h3>
+        </a>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "DRS band",
+  "settings": [
+    { "type": "select", "id": "color", "label": "Band color", "default": "cobalt", "options": [
+      { "value": "cobalt", "label": "Cobalt, Make It Make Sense" },
+      { "value": "forest", "label": "Forest, Professional Education" },
+      { "value": "oxblood", "label": "Oxblood, Books + Essays" } ] },
+    { "type": "select", "id": "from", "label": "Fades in from", "default": "oxblood", "options": [
+      { "value": "none", "label": "No fade" },
+      { "value": "bone", "label": "Bone" },
+      { "value": "cobalt", "label": "Cobalt" },
+      { "value": "forest", "label": "Forest" },
+      { "value": "oxblood", "label": "Oxblood" } ] },
+    { "type": "checkbox", "id": "to_footer", "label": "Fade into the footer", "default": false },
+    { "type": "checkbox", "id": "flip", "label": "Photograph on the left", "default": false },
+    { "type": "text", "id": "hook", "label": "Handwritten line above this section", "info": "Your own words. Leave empty to hide." },
+    { "type": "image_picker", "id": "logo", "label": "Brand mark" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "text", "id": "link_label", "label": "Button label" },
+    { "type": "url", "id": "link_url", "label": "Button link" },
+    { "type": "image_picker", "id": "image", "label": "Photograph" },
+    { "type": "select", "id": "frame", "label": "Frame", "default": "none", "options": [
+      { "value": "none", "label": "None" },
+      { "value": "parchment", "label": "Parchment print (Make It Make Sense)" },
+      { "value": "textbook", "label": "Open textbook (Professional Education)" } ] },
+    { "type": "text", "id": "caption", "label": "Caption" },
+    { "type": "text", "id": "page_title", "label": "Textbook left page heading", "default": "What I teach from" },
+    { "type": "text", "id": "label1", "label": "Textbook entry 1: name", "default": "Trauma" },
+    { "type": "text", "id": "tier1", "label": "Textbook entry 1: a few words", "default": "Certified in EMDR and TF-CBT. More than twenty years of cases." },
+    { "type": "text", "id": "label2", "label": "Textbook entry 2: name", "default": "Psychological assessment" },
+    { "type": "text", "id": "tier2", "label": "Textbook entry 2: a few words", "default": "I give, score, and interpret the tests I teach." },
+    { "type": "text", "id": "label3", "label": "Textbook entry 3: name", "default": "Nature-based interventions" },
+    { "type": "text", "id": "tier3", "label": "Textbook entry 3: a few words", "default": "Certified in ecotherapy. The protocol does not change." },
+    { "type": "text", "id": "label4", "label": "Textbook entry 4: name", "default": "Integrative practice" },
+    { "type": "text", "id": "tier4", "label": "Textbook entry 4: a few words", "default": "Knowing each model well enough to decide in the moment." },
+    { "type": "blog", "id": "blog", "label": "Show latest posts from" },
+    { "type": "range", "id": "count", "label": "Posts", "min": 0, "max": 6, "step": 1, "default": 3 }
+  ],
+  "presets": [{ "name": "DRS band" }]
+}
+{% endschema %}

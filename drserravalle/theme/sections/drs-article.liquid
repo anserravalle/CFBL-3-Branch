@@ -1,0 +1,92 @@
+{%- liquid
+  assign series = article.metafields.custom.series.value
+  assign ns = article.metafields.custom.next_step.value
+  assign is_essay = false
+  if blog.handle == 'essays'
+    assign is_essay = true
+  endif
+-%}
+<article>
+  <section class="inner-band">
+    <header class="art-head measure">
+      <p class="meta">
+        {%- if is_essay -%}
+          {{ article.published_at | date: '%B %-d, %Y' }}
+        {%- else -%}
+          {{ blog.title }} &middot; {{ article.published_at | date: '%B %-d, %Y' }}
+        {%- endif -%}
+      </p>
+      <h1>{{ article.title }}</h1>
+      {%- unless is_essay %}<p class="meta">By {{ article.author }}</p>{% endunless -%}
+    </header>
+    {%- if article.image -%}
+      <figure class="art-img art-img--{% if is_essay %}print{% else %}paper{% endif %}">
+        <div class="art-img__frame">
+          {{ article.image | image_url: width: 1800 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 900px) 820px, 100vw', alt: article.image.alt }}
+        </div>
+      </figure>
+    {%- endif -%}
+  </section>
+
+  <div class="prose measure">
+    {{ article.content }}
+  </div>
+
+  <div class="measure">
+    {%- if section.settings.disclaimer != blank and is_essay == false -%}
+      <p class="disclaimer">{{ section.settings.disclaimer }}</p>
+    {%- endif -%}
+
+    {%- if ns != blank and ns.title != blank -%}
+      <aside class="next-step" aria-label="Next step">
+        {%- if ns.eyebrow != blank %}<p class="eyebrow">{{ ns.eyebrow }}</p>{% endif -%}
+        <p class="next-step__title">{{ ns.title }}</p>
+        {%- if ns.text != blank %}<p>{{ ns.text }}</p>{% endif -%}
+        <p class="next-step__links">
+          {%- for l in ns.links -%}
+            <a href="{{ l.url }}">{{ l.label }}{% if forloop.first %} &rarr;{% endif %}</a>
+          {%- endfor -%}
+        </p>
+      </aside>
+    {%- endif -%}
+
+    {%- if series != blank -%}
+      {%- liquid
+        assign next_in_series = nil
+        assign found = false
+        assign ordered = blog.articles | sort: 'published_at'
+        for a in ordered
+          if found and next_in_series == nil and a.metafields.custom.series.value == series
+            assign next_in_series = a
+          endif
+          if a.id == article.id
+            assign found = true
+          endif
+        endfor
+      -%}
+      {%- if next_in_series -%}
+        <nav class="series-next" aria-label="Continue the series">
+          <a href="{{ next_in_series.url }}"><span class="eyebrow">Continue the series</span><span class="pager__t">{{ next_in_series.title }} &rarr;</span></a>
+        </nav>
+      {%- endif -%}
+    {%- endif -%}
+
+    <nav class="pager" aria-label="More from {{ blog.title }}">
+      {%- if blog.previous_article -%}
+        <a href="{{ blog.previous_article.url }}"><span class="eyebrow">&larr; Earlier</span><span class="pager__t">{{ blog.previous_article.title }}</span></a>
+      {%- else -%}<span></span>{%- endif -%}
+      {%- if blog.next_article -%}
+        <a class="pager__r" href="{{ blog.next_article.url }}"><span class="eyebrow">Later &rarr;</span><span class="pager__t">{{ blog.next_article.title }}</span></a>
+      {%- endif -%}
+    </nav>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "DRS article",
+  "settings": [
+    { "type": "text", "id": "disclaimer", "label": "Disclaimer under posts (not essays)", "info": "Make It Make Sense posts already end with their own disclaimer." }
+  ]
+}
+{% endschema %}
